@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qdirmodel.h
@@ -66,7 +64,7 @@ func (*QDirModel) NewFromPointer(cthis unsafe.Pointer) *QDirModel {
 	return NewQDirModelFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:56
+// /usr/include/qt/QtWidgets/qdirmodel.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -80,7 +78,7 @@ func (this *QDirModel) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:68
+// /usr/include/qt/QtWidgets/qdirmodel.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDirModel(const QStringList &, QDir::Filters, QDir::SortFlags, QObject *)
@@ -107,7 +105,7 @@ func NewQDirModel(nameFilters qtcore.QStringList_ITF, filters int, sort int, par
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:68
+// /usr/include/qt/QtWidgets/qdirmodel.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDirModel(const QStringList &, QDir::Filters, QDir::SortFlags, QObject *)
@@ -132,7 +130,7 @@ func NewQDirModelp(nameFilters qtcore.QStringList_ITF, filters int, sort int) *Q
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:70
+// /usr/include/qt/QtWidgets/qdirmodel.h:71
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDirModel(QObject *)
@@ -155,7 +153,7 @@ func NewQDirModel1(parent qtcore.QObject_ITF /*777 QObject **/) *QDirModel {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:70
+// /usr/include/qt/QtWidgets/qdirmodel.h:71
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDirModel(QObject *)
@@ -176,7 +174,7 @@ func NewQDirModel1p() *QDirModel {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:71
+// /usr/include/qt/QtWidgets/qdirmodel.h:72
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDirModel()
@@ -191,7 +189,7 @@ func DeleteQDirModel(this *QDirModel) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:73
+// /usr/include/qt/QtWidgets/qdirmodel.h:74
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex index(int, int, const QModelIndex &) const
@@ -213,7 +211,7 @@ func (this *QDirModel) Index(row int, column int, parent qtcore.QModelIndex_ITF)
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:73
+// /usr/include/qt/QtWidgets/qdirmodel.h:74
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex index(int, int, const QModelIndex &) const
@@ -233,7 +231,7 @@ func (this *QDirModel) Indexp(row int, column int) *qtcore.QModelIndex /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:118
+// /usr/include/qt/QtWidgets/qdirmodel.h:119
 // index:1
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex index(const QString &, int) const
@@ -253,7 +251,7 @@ func (this *QDirModel) Index1(path string, column int) *qtcore.QModelIndex /*123
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:118
+// /usr/include/qt/QtWidgets/qdirmodel.h:119
 // index:1
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex index(const QString &, int) const
@@ -275,7 +273,7 @@ func (this *QDirModel) Index1p(path string) *qtcore.QModelIndex /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:74
+// /usr/include/qt/QtWidgets/qdirmodel.h:75
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex parent(const QModelIndex &) const
@@ -297,7 +295,7 @@ func (this *QDirModel) Parent(child qtcore.QModelIndex_ITF) *qtcore.QModelIndex 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:76
+// /usr/include/qt/QtWidgets/qdirmodel.h:77
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int rowCount(const QModelIndex &) const
@@ -317,7 +315,7 @@ func (this *QDirModel) RowCount(parent qtcore.QModelIndex_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:76
+// /usr/include/qt/QtWidgets/qdirmodel.h:77
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int rowCount(const QModelIndex &) const
@@ -335,7 +333,7 @@ func (this *QDirModel) RowCountp() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:77
+// /usr/include/qt/QtWidgets/qdirmodel.h:78
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int columnCount(const QModelIndex &) const
@@ -355,7 +353,7 @@ func (this *QDirModel) ColumnCount(parent qtcore.QModelIndex_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:77
+// /usr/include/qt/QtWidgets/qdirmodel.h:78
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int columnCount(const QModelIndex &) const
@@ -373,7 +371,7 @@ func (this *QDirModel) ColumnCountp() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:79
+// /usr/include/qt/QtWidgets/qdirmodel.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(const QModelIndex &, int) const
@@ -397,7 +395,7 @@ func (this *QDirModel) Data(index qtcore.QModelIndex_ITF, role int) *qtcore.QVar
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:79
+// /usr/include/qt/QtWidgets/qdirmodel.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(const QModelIndex &, int) const
@@ -423,7 +421,7 @@ func (this *QDirModel) Datap(index qtcore.QModelIndex_ITF) *qtcore.QVariant /*12
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:80
+// /usr/include/qt/QtWidgets/qdirmodel.h:81
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setData(const QModelIndex &, const QVariant &, int)
@@ -449,7 +447,7 @@ func (this *QDirModel) SetData(index qtcore.QModelIndex_ITF, value qtcore.QVaria
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:80
+// /usr/include/qt/QtWidgets/qdirmodel.h:81
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setData(const QModelIndex &, const QVariant &, int)
@@ -477,7 +475,7 @@ func (this *QDirModel) SetDatap(index qtcore.QModelIndex_ITF, value qtcore.QVari
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:82
+// /usr/include/qt/QtWidgets/qdirmodel.h:83
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant headerData(int, Qt::Orientation, int) const
@@ -495,7 +493,7 @@ func (this *QDirModel) HeaderData(section int, orientation int, role int) *qtcor
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:82
+// /usr/include/qt/QtWidgets/qdirmodel.h:83
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant headerData(int, Qt::Orientation, int) const
@@ -515,7 +513,7 @@ func (this *QDirModel) HeaderDatap(section int, orientation int) *qtcore.QVarian
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:84
+// /usr/include/qt/QtWidgets/qdirmodel.h:85
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool hasChildren(const QModelIndex &) const
@@ -535,7 +533,7 @@ func (this *QDirModel) HasChildren(index qtcore.QModelIndex_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:84
+// /usr/include/qt/QtWidgets/qdirmodel.h:85
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool hasChildren(const QModelIndex &) const
@@ -553,7 +551,7 @@ func (this *QDirModel) HasChildrenp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:85
+// /usr/include/qt/QtWidgets/qdirmodel.h:86
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::ItemFlags flags(const QModelIndex &) const
@@ -575,7 +573,7 @@ func (this *QDirModel) Flags(index qtcore.QModelIndex_ITF) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:87
+// /usr/include/qt/QtWidgets/qdirmodel.h:88
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void sort(int, Qt::SortOrder)
@@ -590,7 +588,7 @@ func (this *QDirModel) Sort(column int, order int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:87
+// /usr/include/qt/QtWidgets/qdirmodel.h:88
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void sort(int, Qt::SortOrder)
@@ -607,7 +605,7 @@ func (this *QDirModel) Sortp(column int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:89
+// /usr/include/qt/QtWidgets/qdirmodel.h:90
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QStringList mimeTypes() const
@@ -625,7 +623,7 @@ func (this *QDirModel) MimeTypes() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:91
+// /usr/include/qt/QtWidgets/qdirmodel.h:92
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool dropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &)
@@ -653,7 +651,7 @@ func (this *QDirModel) DropMimeData(data qtcore.QMimeData_ITF /*777 const QMimeD
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:93
+// /usr/include/qt/QtWidgets/qdirmodel.h:94
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::DropActions supportedDropActions() const
@@ -671,7 +669,7 @@ func (this *QDirModel) SupportedDropActions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:97
+// /usr/include/qt/QtWidgets/qdirmodel.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconProvider(QFileIconProvider *)
@@ -690,7 +688,7 @@ func (this *QDirModel) SetIconProvider(provider QFileIconProvider_ITF /*777 QFil
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:98
+// /usr/include/qt/QtWidgets/qdirmodel.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QFileIconProvider * iconProvider() const
@@ -706,7 +704,7 @@ func (this *QDirModel) IconProvider() *QFileIconProvider /*777 QFileIconProvider
 	return /*==*/ NewQFileIconProviderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:100
+// /usr/include/qt/QtWidgets/qdirmodel.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNameFilters(const QStringList &)
@@ -725,7 +723,7 @@ func (this *QDirModel) SetNameFilters(filters qtcore.QStringList_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:101
+// /usr/include/qt/QtWidgets/qdirmodel.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList nameFilters() const
@@ -743,7 +741,7 @@ func (this *QDirModel) NameFilters() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:103
+// /usr/include/qt/QtWidgets/qdirmodel.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFilter(QDir::Filters)
@@ -760,7 +758,7 @@ func (this *QDirModel) SetFilter(filters int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:104
+// /usr/include/qt/QtWidgets/qdirmodel.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDir::Filters filter() const
@@ -776,7 +774,7 @@ func (this *QDirModel) Filter() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:106
+// /usr/include/qt/QtWidgets/qdirmodel.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSorting(QDir::SortFlags)
@@ -791,7 +789,7 @@ func (this *QDirModel) SetSorting(sort int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:107
+// /usr/include/qt/QtWidgets/qdirmodel.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDir::SortFlags sorting() const
@@ -807,7 +805,7 @@ func (this *QDirModel) Sorting() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:109
+// /usr/include/qt/QtWidgets/qdirmodel.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setResolveSymlinks(bool)
@@ -820,7 +818,7 @@ func (this *QDirModel) SetResolveSymlinks(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:110
+// /usr/include/qt/QtWidgets/qdirmodel.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool resolveSymlinks() const
@@ -834,7 +832,7 @@ func (this *QDirModel) ResolveSymlinks() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:112
+// /usr/include/qt/QtWidgets/qdirmodel.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setReadOnly(bool)
@@ -847,7 +845,7 @@ func (this *QDirModel) SetReadOnly(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:113
+// /usr/include/qt/QtWidgets/qdirmodel.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isReadOnly() const
@@ -861,7 +859,7 @@ func (this *QDirModel) IsReadOnly() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:115
+// /usr/include/qt/QtWidgets/qdirmodel.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLazyChildCount(bool)
@@ -874,7 +872,7 @@ func (this *QDirModel) SetLazyChildCount(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:116
+// /usr/include/qt/QtWidgets/qdirmodel.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool lazyChildCount() const
@@ -888,7 +886,7 @@ func (this *QDirModel) LazyChildCount() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:120
+// /usr/include/qt/QtWidgets/qdirmodel.h:121
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isDir(const QModelIndex &) const
@@ -906,7 +904,7 @@ func (this *QDirModel) IsDir(index qtcore.QModelIndex_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:121
+// /usr/include/qt/QtWidgets/qdirmodel.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex mkdir(const QModelIndex &, const QString &)
@@ -928,7 +926,7 @@ func (this *QDirModel) Mkdir(parent qtcore.QModelIndex_ITF, name string) *qtcore
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:122
+// /usr/include/qt/QtWidgets/qdirmodel.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool rmdir(const QModelIndex &)
@@ -950,7 +948,7 @@ func (this *QDirModel) Rmdir(index qtcore.QModelIndex_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:123
+// /usr/include/qt/QtWidgets/qdirmodel.h:124
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool remove(const QModelIndex &)
@@ -972,7 +970,7 @@ func (this *QDirModel) Remove(index qtcore.QModelIndex_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:125
+// /usr/include/qt/QtWidgets/qdirmodel.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString filePath(const QModelIndex &) const
@@ -993,7 +991,7 @@ func (this *QDirModel) FilePath(index qtcore.QModelIndex_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:126
+// /usr/include/qt/QtWidgets/qdirmodel.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString fileName(const QModelIndex &) const
@@ -1014,7 +1012,7 @@ func (this *QDirModel) FileName(index qtcore.QModelIndex_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:127
+// /usr/include/qt/QtWidgets/qdirmodel.h:128
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIcon fileIcon(const QModelIndex &) const
@@ -1034,7 +1032,7 @@ func (this *QDirModel) FileIcon(index qtcore.QModelIndex_ITF) *qtgui.QIcon /*123
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:128
+// /usr/include/qt/QtWidgets/qdirmodel.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QFileInfo fileInfo(const QModelIndex &) const
@@ -1058,7 +1056,7 @@ func (this *QDirModel) FileInfo(index qtcore.QModelIndex_ITF) *qtcore.QFileInfo 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:133
+// /usr/include/qt/QtWidgets/qdirmodel.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void refresh(const QModelIndex &)
@@ -1075,7 +1073,7 @@ func (this *QDirModel) Refresh(parent qtcore.QModelIndex_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdirmodel.h:133
+// /usr/include/qt/QtWidgets/qdirmodel.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void refresh(const QModelIndex &)

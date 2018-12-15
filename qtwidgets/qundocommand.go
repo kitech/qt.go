@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qundostack.h
@@ -68,7 +66,7 @@ func (*QUndoCommand) NewFromPointer(cthis unsafe.Pointer) *QUndoCommand {
 	return NewQUndoCommandFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:60
+// /usr/include/qt/QtWidgets/qundostack.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QUndoCommand(QUndoCommand *)
@@ -91,7 +89,7 @@ func NewQUndoCommand(parent QUndoCommand_ITF /*777 QUndoCommand **/) *QUndoComma
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:60
+// /usr/include/qt/QtWidgets/qundostack.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QUndoCommand(QUndoCommand *)
@@ -112,7 +110,7 @@ func NewQUndoCommandp() *QUndoCommand {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:61
+// /usr/include/qt/QtWidgets/qundostack.h:62
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QUndoCommand(const QString &, QUndoCommand *)
@@ -137,7 +135,7 @@ func NewQUndoCommand1(text string, parent QUndoCommand_ITF /*777 QUndoCommand **
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:61
+// /usr/include/qt/QtWidgets/qundostack.h:62
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QUndoCommand(const QString &, QUndoCommand *)
@@ -160,7 +158,7 @@ func NewQUndoCommand1p(text string) *QUndoCommand {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:62
+// /usr/include/qt/QtWidgets/qundostack.h:63
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QUndoCommand()
@@ -175,7 +173,7 @@ func DeleteQUndoCommand(this *QUndoCommand) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:64
+// /usr/include/qt/QtWidgets/qundostack.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void undo()
@@ -194,7 +192,7 @@ func (this *QUndoCommand) Undo() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:65
+// /usr/include/qt/QtWidgets/qundostack.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void redo()
@@ -213,7 +211,7 @@ func (this *QUndoCommand) Redo() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:67
+// /usr/include/qt/QtWidgets/qundostack.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text() const
@@ -232,7 +230,7 @@ func (this *QUndoCommand) Text() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:68
+// /usr/include/qt/QtWidgets/qundostack.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString actionText() const
@@ -249,7 +247,7 @@ func (this *QUndoCommand) ActionText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:69
+// /usr/include/qt/QtWidgets/qundostack.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setText(const QString &)
@@ -264,7 +262,7 @@ func (this *QUndoCommand) SetText(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:71
+// /usr/include/qt/QtWidgets/qundostack.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isObsolete() const
@@ -278,7 +276,7 @@ func (this *QUndoCommand) IsObsolete() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:72
+// /usr/include/qt/QtWidgets/qundostack.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setObsolete(bool)
@@ -291,7 +289,7 @@ func (this *QUndoCommand) SetObsolete(obsolete bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:74
+// /usr/include/qt/QtWidgets/qundostack.h:75
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int id() const
@@ -305,7 +303,7 @@ func (this *QUndoCommand) Id() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:75
+// /usr/include/qt/QtWidgets/qundostack.h:76
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool mergeWith(const QUndoCommand *)
@@ -323,7 +321,7 @@ func (this *QUndoCommand) MergeWith(other QUndoCommand_ITF /*777 const QUndoComm
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:77
+// /usr/include/qt/QtWidgets/qundostack.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int childCount() const
@@ -337,7 +335,7 @@ func (this *QUndoCommand) ChildCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qundostack.h:78
+// /usr/include/qt/QtWidgets/qundostack.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QUndoCommand * child(int) const

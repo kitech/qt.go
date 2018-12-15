@@ -64,7 +64,7 @@ func (*QMutexLocker) NewFromPointer(cthis unsafe.Pointer) *QMutexLocker {
 	return NewQMutexLockerFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qmutex.h:199
+// /usr/include/qt/QtCore/qmutex.h:193
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QMutexLocker(QBasicMutex *)
@@ -87,7 +87,7 @@ func NewQMutexLocker(m QBasicMutex_ITF /*777 QBasicMutex **/) *QMutexLocker {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qmutex.h:213
+// /usr/include/qt/QtCore/qmutex.h:207
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QMutexLocker()
@@ -102,7 +102,7 @@ func DeleteQMutexLocker(this *QMutexLocker) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qmutex.h:215
+// /usr/include/qt/QtCore/qmutex.h:209
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void unlock()
@@ -117,7 +117,7 @@ func (this *QMutexLocker) Unlock() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qmutex.h:223
+// /usr/include/qt/QtCore/qmutex.h:217
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void relock()
@@ -130,7 +130,7 @@ func (this *QMutexLocker) Relock() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qmutex.h:238
+// /usr/include/qt/QtCore/qmutex.h:232
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QMutex * mutex() const

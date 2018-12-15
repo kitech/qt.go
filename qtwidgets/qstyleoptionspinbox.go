@@ -64,7 +64,7 @@ func (*QStyleOptionSpinBox) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionSp
 	return NewQStyleOptionSpinBoxFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:552
+// /usr/include/qt/QtWidgets/qstyleoption.h:541
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionSpinBox()
@@ -83,7 +83,7 @@ func NewQStyleOptionSpinBox() *QStyleOptionSpinBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:556
+// /usr/include/qt/QtWidgets/qstyleoption.h:545
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionSpinBox(int)

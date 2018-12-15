@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qtablewidget.h
@@ -68,7 +66,7 @@ func (*QTableWidgetItem) NewFromPointer(cthis unsafe.Pointer) *QTableWidgetItem 
 	return NewQTableWidgetItemFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:82
+// /usr/include/qt/QtWidgets/qtablewidget.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTableWidgetItem(int)
@@ -87,7 +85,7 @@ func NewQTableWidgetItem(type_ int) *QTableWidgetItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:82
+// /usr/include/qt/QtWidgets/qtablewidget.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTableWidgetItem(int)
@@ -108,7 +106,7 @@ func NewQTableWidgetItemp() *QTableWidgetItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:83
+// /usr/include/qt/QtWidgets/qtablewidget.h:85
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTableWidgetItem(const QString &, int)
@@ -129,7 +127,7 @@ func NewQTableWidgetItem1(text string, type_ int) *QTableWidgetItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:83
+// /usr/include/qt/QtWidgets/qtablewidget.h:85
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTableWidgetItem(const QString &, int)
@@ -152,7 +150,7 @@ func NewQTableWidgetItem1p(text string) *QTableWidgetItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:84
+// /usr/include/qt/QtWidgets/qtablewidget.h:86
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QTableWidgetItem(const QIcon &, const QString &, int)
@@ -177,7 +175,7 @@ func NewQTableWidgetItem2(icon qtgui.QIcon_ITF, text string, type_ int) *QTableW
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:84
+// /usr/include/qt/QtWidgets/qtablewidget.h:86
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QTableWidgetItem(const QIcon &, const QString &, int)
@@ -204,7 +202,7 @@ func NewQTableWidgetItem2p(icon qtgui.QIcon_ITF, text string) *QTableWidgetItem 
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:86
+// /usr/include/qt/QtWidgets/qtablewidget.h:88
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTableWidgetItem()
@@ -219,7 +217,7 @@ func DeleteQTableWidgetItem(this *QTableWidgetItem) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:88
+// /usr/include/qt/QtWidgets/qtablewidget.h:90
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QTableWidgetItem * clone() const
@@ -233,7 +231,7 @@ func (this *QTableWidgetItem) Clone() *QTableWidgetItem /*777 QTableWidgetItem *
 	return /*==*/ NewQTableWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:90
+// /usr/include/qt/QtWidgets/qtablewidget.h:92
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QTableWidget * tableWidget() const
@@ -247,7 +245,7 @@ func (this *QTableWidgetItem) TableWidget() *QTableWidget /*777 QTableWidget **/
 	return /*==*/ NewQTableWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:92
+// /usr/include/qt/QtWidgets/qtablewidget.h:94
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int row() const
@@ -261,7 +259,7 @@ func (this *QTableWidgetItem) Row() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:93
+// /usr/include/qt/QtWidgets/qtablewidget.h:95
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int column() const
@@ -275,7 +273,7 @@ func (this *QTableWidgetItem) Column() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:95
+// /usr/include/qt/QtWidgets/qtablewidget.h:97
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setSelected(bool)
@@ -288,7 +286,7 @@ func (this *QTableWidgetItem) SetSelected(select_ bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:96
+// /usr/include/qt/QtWidgets/qtablewidget.h:98
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isSelected() const
@@ -302,7 +300,7 @@ func (this *QTableWidgetItem) IsSelected() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:98
+// /usr/include/qt/QtWidgets/qtablewidget.h:100
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::ItemFlags flags() const
@@ -316,7 +314,7 @@ func (this *QTableWidgetItem) Flags() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:99
+// /usr/include/qt/QtWidgets/qtablewidget.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlags(Qt::ItemFlags)
@@ -329,7 +327,7 @@ func (this *QTableWidgetItem) SetFlags(flags int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:101
+// /usr/include/qt/QtWidgets/qtablewidget.h:103
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString text() const
@@ -346,7 +344,7 @@ func (this *QTableWidgetItem) Text() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:103
+// /usr/include/qt/QtWidgets/qtablewidget.h:105
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setText(const QString &)
@@ -361,7 +359,7 @@ func (this *QTableWidgetItem) SetText(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:105
+// /usr/include/qt/QtWidgets/qtablewidget.h:107
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QIcon icon() const
@@ -377,7 +375,7 @@ func (this *QTableWidgetItem) Icon() *qtgui.QIcon /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:107
+// /usr/include/qt/QtWidgets/qtablewidget.h:109
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
@@ -394,7 +392,7 @@ func (this *QTableWidgetItem) SetIcon(icon qtgui.QIcon_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:109
+// /usr/include/qt/QtWidgets/qtablewidget.h:111
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString statusTip() const
@@ -411,7 +409,7 @@ func (this *QTableWidgetItem) StatusTip() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:111
+// /usr/include/qt/QtWidgets/qtablewidget.h:113
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setStatusTip(const QString &)
@@ -426,7 +424,7 @@ func (this *QTableWidgetItem) SetStatusTip(statusTip string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:114
+// /usr/include/qt/QtWidgets/qtablewidget.h:116
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString toolTip() const
@@ -443,7 +441,7 @@ func (this *QTableWidgetItem) ToolTip() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:116
+// /usr/include/qt/QtWidgets/qtablewidget.h:118
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setToolTip(const QString &)
@@ -458,7 +456,7 @@ func (this *QTableWidgetItem) SetToolTip(toolTip string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:120
+// /usr/include/qt/QtWidgets/qtablewidget.h:122
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString whatsThis() const
@@ -475,7 +473,7 @@ func (this *QTableWidgetItem) WhatsThis() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:122
+// /usr/include/qt/QtWidgets/qtablewidget.h:124
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setWhatsThis(const QString &)
@@ -490,7 +488,7 @@ func (this *QTableWidgetItem) SetWhatsThis(whatsThis string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:125
+// /usr/include/qt/QtWidgets/qtablewidget.h:127
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QFont font() const
@@ -506,7 +504,7 @@ func (this *QTableWidgetItem) Font() *qtgui.QFont /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:127
+// /usr/include/qt/QtWidgets/qtablewidget.h:129
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
@@ -523,7 +521,7 @@ func (this *QTableWidgetItem) SetFont(font qtgui.QFont_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:129
+// /usr/include/qt/QtWidgets/qtablewidget.h:131
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int textAlignment() const
@@ -537,7 +535,7 @@ func (this *QTableWidgetItem) TextAlignment() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:131
+// /usr/include/qt/QtWidgets/qtablewidget.h:133
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTextAlignment(int)
@@ -550,7 +548,7 @@ func (this *QTableWidgetItem) SetTextAlignment(alignment int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:134
+// /usr/include/qt/QtWidgets/qtablewidget.h:136
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QColor backgroundColor() const
@@ -566,7 +564,7 @@ func (this *QTableWidgetItem) BackgroundColor() *qtgui.QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:136
+// /usr/include/qt/QtWidgets/qtablewidget.h:138
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBackgroundColor(const QColor &)
@@ -583,7 +581,7 @@ func (this *QTableWidgetItem) SetBackgroundColor(color qtgui.QColor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:139
+// /usr/include/qt/QtWidgets/qtablewidget.h:141
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QBrush background() const
@@ -599,7 +597,7 @@ func (this *QTableWidgetItem) Background() *qtgui.QBrush /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:141
+// /usr/include/qt/QtWidgets/qtablewidget.h:143
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBackground(const QBrush &)
@@ -616,7 +614,7 @@ func (this *QTableWidgetItem) SetBackground(brush qtgui.QBrush_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:144
+// /usr/include/qt/QtWidgets/qtablewidget.h:146
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QColor textColor() const
@@ -632,7 +630,7 @@ func (this *QTableWidgetItem) TextColor() *qtgui.QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:146
+// /usr/include/qt/QtWidgets/qtablewidget.h:148
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTextColor(const QColor &)
@@ -649,7 +647,7 @@ func (this *QTableWidgetItem) SetTextColor(color qtgui.QColor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:149
+// /usr/include/qt/QtWidgets/qtablewidget.h:151
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QBrush foreground() const
@@ -665,7 +663,7 @@ func (this *QTableWidgetItem) Foreground() *qtgui.QBrush /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:151
+// /usr/include/qt/QtWidgets/qtablewidget.h:153
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setForeground(const QBrush &)
@@ -682,7 +680,7 @@ func (this *QTableWidgetItem) SetForeground(brush qtgui.QBrush_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:154
+// /usr/include/qt/QtWidgets/qtablewidget.h:156
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::CheckState checkState() const
@@ -696,7 +694,7 @@ func (this *QTableWidgetItem) CheckState() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:156
+// /usr/include/qt/QtWidgets/qtablewidget.h:158
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setCheckState(Qt::CheckState)
@@ -709,7 +707,7 @@ func (this *QTableWidgetItem) SetCheckState(state int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:159
+// /usr/include/qt/QtWidgets/qtablewidget.h:161
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
@@ -725,7 +723,7 @@ func (this *QTableWidgetItem) SizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:161
+// /usr/include/qt/QtWidgets/qtablewidget.h:163
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setSizeHint(const QSize &)
@@ -742,7 +740,7 @@ func (this *QTableWidgetItem) SetSizeHint(size qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:164
+// /usr/include/qt/QtWidgets/qtablewidget.h:166
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(int) const
@@ -758,7 +756,7 @@ func (this *QTableWidgetItem) Data(role int) *qtcore.QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:165
+// /usr/include/qt/QtWidgets/qtablewidget.h:167
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setData(int, const QVariant &)
@@ -775,7 +773,7 @@ func (this *QTableWidgetItem) SetData(role int, value qtcore.QVariant_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:167
+// /usr/include/qt/QtWidgets/qtablewidget.h:169
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool operator<(const QTableWidgetItem &) const
@@ -793,7 +791,7 @@ func (this *QTableWidgetItem) Operator_less_than(other QTableWidgetItem_ITF) boo
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:170
+// /usr/include/qt/QtWidgets/qtablewidget.h:172
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void read(QDataStream &)
@@ -810,7 +808,7 @@ func (this *QTableWidgetItem) Read(in qtcore.QDataStream_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:171
+// /usr/include/qt/QtWidgets/qtablewidget.h:173
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void write(QDataStream &) const
@@ -827,7 +825,7 @@ func (this *QTableWidgetItem) Write(out_ qtcore.QDataStream_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:173
+// /usr/include/qt/QtWidgets/qtablewidget.h:175
 // index:0
 // Public Visibility=Default Availability=Available
 // [48] QTableWidgetItem & operator=(const QTableWidgetItem &)
@@ -847,7 +845,7 @@ func (this *QTableWidgetItem) Operator_equal(other QTableWidgetItem_ITF) *QTable
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:175
+// /usr/include/qt/QtWidgets/qtablewidget.h:177
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int type() const

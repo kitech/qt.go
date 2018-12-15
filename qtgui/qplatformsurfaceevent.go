@@ -63,7 +63,7 @@ func (*QPlatformSurfaceEvent) NewFromPointer(cthis unsafe.Pointer) *QPlatformSur
 	return NewQPlatformSurfaceEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:451
+// /usr/include/qt/QtGui/qevent.h:444
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPlatformSurfaceEvent(QPlatformSurfaceEvent::SurfaceEventType)
@@ -82,7 +82,7 @@ func NewQPlatformSurfaceEvent(surfaceEventType int) *QPlatformSurfaceEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:452
+// /usr/include/qt/QtGui/qevent.h:445
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPlatformSurfaceEvent()
@@ -97,7 +97,7 @@ func DeleteQPlatformSurfaceEvent(this *QPlatformSurfaceEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:454
+// /usr/include/qt/QtGui/qevent.h:447
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QPlatformSurfaceEvent::SurfaceEventType surfaceEventType() const

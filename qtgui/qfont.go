@@ -65,7 +65,7 @@ func (*QFont) NewFromPointer(cthis unsafe.Pointer) *QFont {
 	return NewQFontFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qfont.h:170
+// /usr/include/qt/QtGui/qfont.h:162
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFont()
@@ -86,7 +86,7 @@ func NewQFont() *QFont {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qfont.h:171
+// /usr/include/qt/QtGui/qfont.h:163
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QFont(const QString &, int, int, bool)
@@ -109,7 +109,7 @@ func NewQFont1(family string, pointSize int, weight int, italic bool) *QFont {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qfont.h:171
+// /usr/include/qt/QtGui/qfont.h:163
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QFont(const QString &, int, int, bool)
@@ -138,7 +138,7 @@ func NewQFont1p(family string) *QFont {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qfont.h:171
+// /usr/include/qt/QtGui/qfont.h:163
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QFont(const QString &, int, int, bool)
@@ -165,7 +165,7 @@ func NewQFont1p1(family string, pointSize int) *QFont {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qfont.h:171
+// /usr/include/qt/QtGui/qfont.h:163
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QFont(const QString &, int, int, bool)
@@ -190,7 +190,7 @@ func NewQFont1p2(family string, pointSize int, weight int) *QFont {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qfont.h:172
+// /usr/include/qt/QtGui/qfont.h:164
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QFont(const QFont &, QPaintDevice *)
@@ -219,7 +219,7 @@ func NewQFont2(arg0 QFont_ITF, pd QPaintDevice_ITF /*777 QPaintDevice **/) *QFon
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qfont.h:174
+// /usr/include/qt/QtGui/qfont.h:166
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QFont()
@@ -234,7 +234,7 @@ func DeleteQFont(this *QFont) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qfont.h:176
+// /usr/include/qt/QtGui/qfont.h:168
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QFont &)
@@ -253,7 +253,7 @@ func (this *QFont) Swap(other QFont_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:179
+// /usr/include/qt/QtGui/qfont.h:171
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString family() const
@@ -272,7 +272,7 @@ func (this *QFont) Family() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qfont.h:180
+// /usr/include/qt/QtGui/qfont.h:172
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFamily(const QString &)
@@ -291,13 +291,13 @@ func (this *QFont) SetFamily(arg0 string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:182
+// /usr/include/qt/QtGui/qfont.h:174
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString styleName() const
 
 /*
-Returns the requested font style name. This can be used to match the font with irregular styles (that can't be normalized in other style properties).
+Returns the requested font style name, it will be used to match the font with irregular styles (that can't be normalized in other style properties). It depends on system font support, thus only works for macOS and X11 so far. On Windows irregular styles will be added as separate font families so there is no need for this.
 
 This function was introduced in  Qt 4.8.
 
@@ -312,15 +312,13 @@ func (this *QFont) StyleName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qfont.h:183
+// /usr/include/qt/QtGui/qfont.h:175
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStyleName(const QString &)
 
 /*
-Sets the style name of the font to styleName. When set, other style properties like style() and weight() will be ignored for font matching, though they may be simulated afterwards if supported by the platform's font engine.
-
-Due to the lower quality of artificially simulated styles, and the lack of full cross platform support, it is not recommended to use matching by style name together with matching by style properties
+Sets the style name of the font to styleName. When set, other style properties like style() and weight() will be ignored for font matching.
 
 This function was introduced in  Qt 4.8.
 
@@ -333,7 +331,7 @@ func (this *QFont) SetStyleName(arg0 string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:185
+// /usr/include/qt/QtGui/qfont.h:177
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int pointSize() const
@@ -349,7 +347,7 @@ func (this *QFont) PointSize() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qfont.h:186
+// /usr/include/qt/QtGui/qfont.h:178
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPointSize(int)
@@ -364,7 +362,7 @@ func (this *QFont) SetPointSize(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:187
+// /usr/include/qt/QtGui/qfont.h:179
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal pointSizeF() const
@@ -380,7 +378,7 @@ func (this *QFont) PointSizeF() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qfont.h:188
+// /usr/include/qt/QtGui/qfont.h:180
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPointSizeF(qreal)
@@ -395,7 +393,7 @@ func (this *QFont) SetPointSizeF(arg0 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:190
+// /usr/include/qt/QtGui/qfont.h:182
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int pixelSize() const
@@ -411,7 +409,7 @@ func (this *QFont) PixelSize() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qfont.h:191
+// /usr/include/qt/QtGui/qfont.h:183
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPixelSize(int)
@@ -428,7 +426,7 @@ func (this *QFont) SetPixelSize(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:193
+// /usr/include/qt/QtGui/qfont.h:185
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int weight() const
@@ -444,15 +442,13 @@ func (this *QFont) Weight() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qfont.h:194
+// /usr/include/qt/QtGui/qfont.h:186
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWeight(int)
 
 /*
 Sets the weight of the font to weight, using the scale defined by QFont::Weight enumeration.
-
-Note: If styleName() is set, this value may be ignored for font selection.
 
 See also weight() and QFontInfo.
 */
@@ -461,7 +457,7 @@ func (this *QFont) SetWeight(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:196
+// /usr/include/qt/QtGui/qfont.h:188
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool bold() const
@@ -477,7 +473,7 @@ func (this *QFont) Bold() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qfont.h:197
+// /usr/include/qt/QtGui/qfont.h:189
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBold(bool)
@@ -487,8 +483,6 @@ If enable is true sets the font's weight to QFont::Bold; otherwise sets the weig
 
 For finer boldness control use setWeight().
 
-Note: If styleName() is set, this value may be ignored, or if supported on the platform, the font artificially embolded.
-
 See also bold() and setWeight().
 */
 func (this *QFont) SetBold(arg0 bool) {
@@ -496,7 +490,7 @@ func (this *QFont) SetBold(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:199
+// /usr/include/qt/QtGui/qfont.h:191
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStyle(QFont::Style)
@@ -511,7 +505,7 @@ func (this *QFont) SetStyle(style int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:200
+// /usr/include/qt/QtGui/qfont.h:192
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QFont::Style style() const
@@ -527,7 +521,7 @@ func (this *QFont) Style() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:202
+// /usr/include/qt/QtGui/qfont.h:194
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool italic() const
@@ -543,15 +537,13 @@ func (this *QFont) Italic() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qfont.h:203
+// /usr/include/qt/QtGui/qfont.h:195
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setItalic(bool)
 
 /*
 Sets the style() of the font to QFont::StyleItalic if enable is true; otherwise the style is set to QFont::StyleNormal.
-
-Note: If styleName() is set, this value may be ignored, or if supported on the platform, the font may be rendered tilted instead of picking a designed italic font-variant.
 
 See also italic() and QFontInfo.
 */
@@ -560,7 +552,7 @@ func (this *QFont) SetItalic(b bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:205
+// /usr/include/qt/QtGui/qfont.h:197
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool underline() const
@@ -576,7 +568,7 @@ func (this *QFont) Underline() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qfont.h:206
+// /usr/include/qt/QtGui/qfont.h:198
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setUnderline(bool)
@@ -591,7 +583,7 @@ func (this *QFont) SetUnderline(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:208
+// /usr/include/qt/QtGui/qfont.h:200
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool overline() const
@@ -607,7 +599,7 @@ func (this *QFont) Overline() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qfont.h:209
+// /usr/include/qt/QtGui/qfont.h:201
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOverline(bool)
@@ -622,7 +614,7 @@ func (this *QFont) SetOverline(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:211
+// /usr/include/qt/QtGui/qfont.h:203
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool strikeOut() const
@@ -638,7 +630,7 @@ func (this *QFont) StrikeOut() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qfont.h:212
+// /usr/include/qt/QtGui/qfont.h:204
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStrikeOut(bool)
@@ -653,7 +645,7 @@ func (this *QFont) SetStrikeOut(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:214
+// /usr/include/qt/QtGui/qfont.h:206
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool fixedPitch() const
@@ -669,7 +661,7 @@ func (this *QFont) FixedPitch() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qfont.h:215
+// /usr/include/qt/QtGui/qfont.h:207
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFixedPitch(bool)
@@ -684,7 +676,7 @@ func (this *QFont) SetFixedPitch(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:217
+// /usr/include/qt/QtGui/qfont.h:209
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool kerning() const
@@ -700,7 +692,7 @@ func (this *QFont) Kerning() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qfont.h:218
+// /usr/include/qt/QtGui/qfont.h:210
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKerning(bool)
@@ -717,7 +709,7 @@ func (this *QFont) SetKerning(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:220
+// /usr/include/qt/QtGui/qfont.h:212
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QFont::StyleHint styleHint() const
@@ -735,7 +727,7 @@ func (this *QFont) StyleHint() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:221
+// /usr/include/qt/QtGui/qfont.h:213
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QFont::StyleStrategy styleStrategy() const
@@ -753,7 +745,7 @@ func (this *QFont) StyleStrategy() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:222
+// /usr/include/qt/QtGui/qfont.h:214
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStyleHint(QFont::StyleHint, QFont::StyleStrategy)
@@ -772,7 +764,7 @@ func (this *QFont) SetStyleHint(arg0 int, arg1 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:222
+// /usr/include/qt/QtGui/qfont.h:214
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStyleHint(QFont::StyleHint, QFont::StyleStrategy)
@@ -793,7 +785,7 @@ func (this *QFont) SetStyleHintp(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:223
+// /usr/include/qt/QtGui/qfont.h:215
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStyleStrategy(QFont::StyleStrategy)
@@ -808,7 +800,7 @@ func (this *QFont) SetStyleStrategy(s int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:225
+// /usr/include/qt/QtGui/qfont.h:217
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int stretch() const
@@ -824,7 +816,7 @@ func (this *QFont) Stretch() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qfont.h:226
+// /usr/include/qt/QtGui/qfont.h:218
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStretch(int)
@@ -845,7 +837,7 @@ func (this *QFont) SetStretch(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:228
+// /usr/include/qt/QtGui/qfont.h:220
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal letterSpacing() const
@@ -863,7 +855,7 @@ func (this *QFont) LetterSpacing() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qfont.h:229
+// /usr/include/qt/QtGui/qfont.h:221
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QFont::SpacingType letterSpacingType() const
@@ -881,7 +873,7 @@ func (this *QFont) LetterSpacingType() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:230
+// /usr/include/qt/QtGui/qfont.h:222
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLetterSpacing(QFont::SpacingType, qreal)
@@ -900,7 +892,7 @@ func (this *QFont) SetLetterSpacing(type_ int, spacing float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:232
+// /usr/include/qt/QtGui/qfont.h:224
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal wordSpacing() const
@@ -918,7 +910,7 @@ func (this *QFont) WordSpacing() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qfont.h:233
+// /usr/include/qt/QtGui/qfont.h:225
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWordSpacing(qreal)
@@ -939,7 +931,7 @@ func (this *QFont) SetWordSpacing(spacing float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:235
+// /usr/include/qt/QtGui/qfont.h:227
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCapitalization(QFont::Capitalization)
@@ -958,7 +950,7 @@ func (this *QFont) SetCapitalization(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:236
+// /usr/include/qt/QtGui/qfont.h:228
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QFont::Capitalization capitalization() const
@@ -976,7 +968,7 @@ func (this *QFont) Capitalization() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:238
+// /usr/include/qt/QtGui/qfont.h:230
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHintingPreference(QFont::HintingPreference)
@@ -995,7 +987,7 @@ func (this *QFont) SetHintingPreference(hintingPreference int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:239
+// /usr/include/qt/QtGui/qfont.h:231
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QFont::HintingPreference hintingPreference() const
@@ -1013,7 +1005,7 @@ func (this *QFont) HintingPreference() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:242
+// /usr/include/qt/QtGui/qfont.h:234
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool rawMode() const
@@ -1027,7 +1019,7 @@ func (this *QFont) RawMode() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qfont.h:243
+// /usr/include/qt/QtGui/qfont.h:235
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRawMode(bool)
@@ -1040,7 +1032,7 @@ func (this *QFont) SetRawMode(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:247
+// /usr/include/qt/QtGui/qfont.h:239
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool exactMatch() const
@@ -1056,7 +1048,7 @@ func (this *QFont) ExactMatch() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qfont.h:249
+// /usr/include/qt/QtGui/qfont.h:241
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QFont & operator=(const QFont &)
@@ -1076,7 +1068,7 @@ func (this *QFont) Operator_equal(arg0 QFont_ITF) *QFont {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qfont.h:256
+// /usr/include/qt/QtGui/qfont.h:248
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] QFont & operator=(QFont &&)
@@ -1092,7 +1084,7 @@ func (this *QFont) Operator_equal1(other unsafe.Pointer /*333*/) *QFont {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qfont.h:250
+// /usr/include/qt/QtGui/qfont.h:242
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QFont &) const
@@ -1110,7 +1102,7 @@ func (this *QFont) Operator_equal_equal(arg0 QFont_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qfont.h:251
+// /usr/include/qt/QtGui/qfont.h:243
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator!=(const QFont &) const
@@ -1128,7 +1120,7 @@ func (this *QFont) Operator_not_equal(arg0 QFont_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qfont.h:252
+// /usr/include/qt/QtGui/qfont.h:244
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator<(const QFont &) const
@@ -1146,7 +1138,7 @@ func (this *QFont) Operator_less_than(arg0 QFont_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qfont.h:254
+// /usr/include/qt/QtGui/qfont.h:246
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isCopyOf(const QFont &) const
@@ -1166,7 +1158,7 @@ func (this *QFont) IsCopyOf(arg0 QFont_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qfont.h:262
+// /usr/include/qt/QtGui/qfont.h:254
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRawName(const QString &)
@@ -1181,7 +1173,7 @@ func (this *QFont) SetRawName(arg0 string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qfont.h:263
+// /usr/include/qt/QtGui/qfont.h:255
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString rawName() const
@@ -1198,7 +1190,7 @@ func (this *QFont) RawName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qfont.h:266
+// /usr/include/qt/QtGui/qfont.h:258
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString key() const
@@ -1217,7 +1209,7 @@ func (this *QFont) Key() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qfont.h:268
+// /usr/include/qt/QtGui/qfont.h:260
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString() const
@@ -1236,7 +1228,7 @@ func (this *QFont) ToString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qfont.h:269
+// /usr/include/qt/QtGui/qfont.h:261
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool fromString(const QString &)
@@ -1254,7 +1246,7 @@ func (this *QFont) FromString(arg0 string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qfont.h:271
+// /usr/include/qt/QtGui/qfont.h:263
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString substitute(const QString &)
@@ -1284,7 +1276,7 @@ func QFont_Substitute(arg0 string) string {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qfont.h:272
+// /usr/include/qt/QtGui/qfont.h:264
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList substitutes(const QString &)
@@ -1311,7 +1303,7 @@ func QFont_Substitutes(arg0 string) *qtcore.QStringList /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qfont.h:273
+// /usr/include/qt/QtGui/qfont.h:265
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList substitutions()
@@ -1334,7 +1326,7 @@ func QFont_Substitutions() *qtcore.QStringList /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qfont.h:274
+// /usr/include/qt/QtGui/qfont.h:266
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void insertSubstitution(const QString &, const QString &)
@@ -1357,7 +1349,7 @@ func QFont_InsertSubstitution(arg0 string, arg1 string) {
 	nilthis.InsertSubstitution(arg0, arg1)
 }
 
-// /usr/include/qt/QtGui/qfont.h:275
+// /usr/include/qt/QtGui/qfont.h:267
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void insertSubstitutions(const QString &, const QStringList &)
@@ -1382,7 +1374,7 @@ func QFont_InsertSubstitutions(arg0 string, arg1 qtcore.QStringList_ITF) {
 	nilthis.InsertSubstitutions(arg0, arg1)
 }
 
-// /usr/include/qt/QtGui/qfont.h:276
+// /usr/include/qt/QtGui/qfont.h:268
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void removeSubstitutions(const QString &)
@@ -1405,7 +1397,7 @@ func QFont_RemoveSubstitutions(arg0 string) {
 	nilthis.RemoveSubstitutions(arg0)
 }
 
-// /usr/include/qt/QtGui/qfont.h:280
+// /usr/include/qt/QtGui/qfont.h:272
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void initialize()
@@ -1422,7 +1414,7 @@ func QFont_Initialize() {
 	nilthis.Initialize()
 }
 
-// /usr/include/qt/QtGui/qfont.h:281
+// /usr/include/qt/QtGui/qfont.h:273
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void cleanup()
@@ -1439,7 +1431,7 @@ func QFont_Cleanup() {
 	nilthis.Cleanup()
 }
 
-// /usr/include/qt/QtGui/qfont.h:282
+// /usr/include/qt/QtGui/qfont.h:274
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void cacheStatistics()
@@ -1456,7 +1448,7 @@ func QFont_CacheStatistics() {
 	nilthis.CacheStatistics()
 }
 
-// /usr/include/qt/QtGui/qfont.h:284
+// /usr/include/qt/QtGui/qfont.h:276
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString defaultFamily() const
@@ -1475,7 +1467,7 @@ func (this *QFont) DefaultFamily() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qfont.h:285
+// /usr/include/qt/QtGui/qfont.h:277
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString lastResortFamily() const
@@ -1496,7 +1488,7 @@ func (this *QFont) LastResortFamily() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qfont.h:286
+// /usr/include/qt/QtGui/qfont.h:278
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString lastResortFont() const
@@ -1519,7 +1511,7 @@ func (this *QFont) LastResortFont() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qfont.h:288
+// /usr/include/qt/QtGui/qfont.h:280
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QFont resolve(const QFont &) const
@@ -1539,7 +1531,7 @@ func (this *QFont) Resolve(arg0 QFont_ITF) *QFont /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qfont.h:289
+// /usr/include/qt/QtGui/qfont.h:281
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [4] uint resolve() const
@@ -1553,7 +1545,7 @@ func (this *QFont) Resolve1() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtGui/qfont.h:290
+// /usr/include/qt/QtGui/qfont.h:282
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [-2] void resolve(uint)
@@ -1711,9 +1703,6 @@ const QFont__ForceIntegerMetrics QFont__StyleStrategy = 1024
 const QFont__NoSubpixelAntialias QFont__StyleStrategy = 2048
 
 //
-const QFont__PreferNoShaping QFont__StyleStrategy = 4096
-
-//
 const QFont__NoFontMerging QFont__StyleStrategy = 32768
 
 func (this *QFont) StyleStrategyItemName(val int) string {
@@ -1742,8 +1731,6 @@ func (this *QFont) StyleStrategyItemName(val int) string {
 		return "ForceIntegerMetrics"
 	case QFont__NoSubpixelAntialias: // 2048
 		return "NoSubpixelAntialias"
-	case QFont__PreferNoShaping: // 4096
-		return "PreferNoShaping"
 	case QFont__NoFontMerging: // 32768
 		return "NoFontMerging"
 	default:

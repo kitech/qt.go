@@ -79,7 +79,7 @@ func DeleteQObjectData(this *QObjectData) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qobject.h:113
+// /usr/include/qt/QtCore/qobject.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMetaObject * dynamicMetaObject() const

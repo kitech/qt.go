@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qfiledialog.h
@@ -81,7 +79,7 @@ func (*QFileDialog) NewFromPointer(cthis unsafe.Pointer) *QFileDialog {
 	return NewQFileDialogFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:63
+// /usr/include/qt/QtWidgets/qfiledialog.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -95,7 +93,7 @@ func (this *QFileDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:100
+// /usr/include/qt/QtWidgets/qfiledialog.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFileDialog(QWidget *, Qt::WindowFlags)
@@ -118,7 +116,7 @@ func NewQFileDialog(parent QWidget_ITF /*777 QWidget **/, f int) *QFileDialog {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:101
+// /usr/include/qt/QtWidgets/qfiledialog.h:103
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QFileDialog(QWidget *, const QString &, const QString &, const QString &)
@@ -147,7 +145,7 @@ func NewQFileDialog1(parent QWidget_ITF /*777 QWidget **/, caption string, direc
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:101
+// /usr/include/qt/QtWidgets/qfiledialog.h:103
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QFileDialog(QWidget *, const QString &, const QString &, const QString &)
@@ -174,7 +172,7 @@ func NewQFileDialog1p() *QFileDialog {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:101
+// /usr/include/qt/QtWidgets/qfiledialog.h:103
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QFileDialog(QWidget *, const QString &, const QString &, const QString &)
@@ -203,7 +201,7 @@ func NewQFileDialog1p1(parent QWidget_ITF /*777 QWidget **/) *QFileDialog {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:101
+// /usr/include/qt/QtWidgets/qfiledialog.h:103
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QFileDialog(QWidget *, const QString &, const QString &, const QString &)
@@ -232,7 +230,7 @@ func NewQFileDialog1p2(parent QWidget_ITF /*777 QWidget **/, caption string) *QF
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:101
+// /usr/include/qt/QtWidgets/qfiledialog.h:103
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QFileDialog(QWidget *, const QString &, const QString &, const QString &)
@@ -261,7 +259,7 @@ func NewQFileDialog1p3(parent QWidget_ITF /*777 QWidget **/, caption string, dir
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:105
+// /usr/include/qt/QtWidgets/qfiledialog.h:107
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFileDialog()
@@ -276,7 +274,7 @@ func DeleteQFileDialog(this *QFileDialog) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:107
+// /usr/include/qt/QtWidgets/qfiledialog.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDirectory(const QString &)
@@ -295,7 +293,7 @@ func (this *QFileDialog) SetDirectory(directory string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:108
+// /usr/include/qt/QtWidgets/qfiledialog.h:110
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setDirectory(const QDir &)
@@ -316,7 +314,7 @@ func (this *QFileDialog) SetDirectory1(directory qtcore.QDir_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:109
+// /usr/include/qt/QtWidgets/qfiledialog.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDir directory() const
@@ -334,7 +332,7 @@ func (this *QFileDialog) Directory() *qtcore.QDir /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:111
+// /usr/include/qt/QtWidgets/qfiledialog.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDirectoryUrl(const QUrl &)
@@ -359,7 +357,7 @@ func (this *QFileDialog) SetDirectoryUrl(directory qtcore.QUrl_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:112
+// /usr/include/qt/QtWidgets/qfiledialog.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl directoryUrl() const
@@ -379,7 +377,7 @@ func (this *QFileDialog) DirectoryUrl() *qtcore.QUrl /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:114
+// /usr/include/qt/QtWidgets/qfiledialog.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void selectFile(const QString &)
@@ -396,7 +394,7 @@ func (this *QFileDialog) SelectFile(filename string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:115
+// /usr/include/qt/QtWidgets/qfiledialog.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList selectedFiles() const
@@ -414,7 +412,7 @@ func (this *QFileDialog) SelectedFiles() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:117
+// /usr/include/qt/QtWidgets/qfiledialog.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void selectUrl(const QUrl &)
@@ -437,7 +435,7 @@ func (this *QFileDialog) SelectUrl(url qtcore.QUrl_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:118
+// /usr/include/qt/QtWidgets/qfiledialog.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] QList<QUrl> selectedUrls() const
@@ -456,7 +454,7 @@ func (this *QFileDialog) SelectedUrls() *qtcore.QUrlList /*lll*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:120
+// /usr/include/qt/QtWidgets/qfiledialog.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNameFilterDetailsVisible(bool)
@@ -469,7 +467,7 @@ func (this *QFileDialog) SetNameFilterDetailsVisible(enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:121
+// /usr/include/qt/QtWidgets/qfiledialog.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNameFilterDetailsVisible() const
@@ -483,7 +481,7 @@ func (this *QFileDialog) IsNameFilterDetailsVisible() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:123
+// /usr/include/qt/QtWidgets/qfiledialog.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNameFilter(const QString &)
@@ -510,7 +508,7 @@ func (this *QFileDialog) SetNameFilter(filter string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:124
+// /usr/include/qt/QtWidgets/qfiledialog.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNameFilters(const QStringList &)
@@ -547,7 +545,7 @@ func (this *QFileDialog) SetNameFilters(filters qtcore.QStringList_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:125
+// /usr/include/qt/QtWidgets/qfiledialog.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList nameFilters() const
@@ -567,7 +565,7 @@ func (this *QFileDialog) NameFilters() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:126
+// /usr/include/qt/QtWidgets/qfiledialog.h:128
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void selectNameFilter(const QString &)
@@ -586,7 +584,7 @@ func (this *QFileDialog) SelectNameFilter(filter string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:127
+// /usr/include/qt/QtWidgets/qfiledialog.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString selectedMimeTypeFilter() const
@@ -605,7 +603,7 @@ func (this *QFileDialog) SelectedMimeTypeFilter() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:128
+// /usr/include/qt/QtWidgets/qfiledialog.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString selectedNameFilter() const
@@ -626,7 +624,7 @@ func (this *QFileDialog) SelectedNameFilter() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:131
+// /usr/include/qt/QtWidgets/qfiledialog.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMimeTypeFilters(const QStringList &)
@@ -665,7 +663,7 @@ func (this *QFileDialog) SetMimeTypeFilters(filters qtcore.QStringList_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:132
+// /usr/include/qt/QtWidgets/qfiledialog.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList mimeTypeFilters() const
@@ -685,7 +683,7 @@ func (this *QFileDialog) MimeTypeFilters() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:133
+// /usr/include/qt/QtWidgets/qfiledialog.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void selectMimeTypeFilter(const QString &)
@@ -702,7 +700,7 @@ func (this *QFileDialog) SelectMimeTypeFilter(filter string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:136
+// /usr/include/qt/QtWidgets/qfiledialog.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDir::Filters filter() const
@@ -720,7 +718,7 @@ func (this *QFileDialog) Filter() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:137
+// /usr/include/qt/QtWidgets/qfiledialog.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFilter(QDir::Filters)
@@ -737,7 +735,7 @@ func (this *QFileDialog) SetFilter(filters int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:139
+// /usr/include/qt/QtWidgets/qfiledialog.h:141
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setViewMode(QFileDialog::ViewMode)
@@ -750,7 +748,7 @@ func (this *QFileDialog) SetViewMode(mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:140
+// /usr/include/qt/QtWidgets/qfiledialog.h:142
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QFileDialog::ViewMode viewMode() const
@@ -764,7 +762,7 @@ func (this *QFileDialog) ViewMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:142
+// /usr/include/qt/QtWidgets/qfiledialog.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFileMode(QFileDialog::FileMode)
@@ -777,7 +775,7 @@ func (this *QFileDialog) SetFileMode(mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:143
+// /usr/include/qt/QtWidgets/qfiledialog.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QFileDialog::FileMode fileMode() const
@@ -791,7 +789,7 @@ func (this *QFileDialog) FileMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:145
+// /usr/include/qt/QtWidgets/qfiledialog.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAcceptMode(QFileDialog::AcceptMode)
@@ -804,7 +802,7 @@ func (this *QFileDialog) SetAcceptMode(mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:146
+// /usr/include/qt/QtWidgets/qfiledialog.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QFileDialog::AcceptMode acceptMode() const
@@ -818,7 +816,7 @@ func (this *QFileDialog) AcceptMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:148
+// /usr/include/qt/QtWidgets/qfiledialog.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setReadOnly(bool)
@@ -831,7 +829,7 @@ func (this *QFileDialog) SetReadOnly(enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:149
+// /usr/include/qt/QtWidgets/qfiledialog.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isReadOnly() const
@@ -845,7 +843,7 @@ func (this *QFileDialog) IsReadOnly() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:151
+// /usr/include/qt/QtWidgets/qfiledialog.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setResolveSymlinks(bool)
@@ -858,7 +856,7 @@ func (this *QFileDialog) SetResolveSymlinks(enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:152
+// /usr/include/qt/QtWidgets/qfiledialog.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool resolveSymlinks() const
@@ -872,7 +870,7 @@ func (this *QFileDialog) ResolveSymlinks() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:155
+// /usr/include/qt/QtWidgets/qfiledialog.h:157
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] QList<QUrl> sidebarUrls() const
@@ -891,7 +889,7 @@ func (this *QFileDialog) SidebarUrls() *qtcore.QUrlList /*lll*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:157
+// /usr/include/qt/QtWidgets/qfiledialog.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray saveState() const
@@ -911,7 +909,7 @@ func (this *QFileDialog) SaveState() *qtcore.QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:158
+// /usr/include/qt/QtWidgets/qfiledialog.h:160
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool restoreState(const QByteArray &)
@@ -935,7 +933,7 @@ func (this *QFileDialog) RestoreState(state qtcore.QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:160
+// /usr/include/qt/QtWidgets/qfiledialog.h:162
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setConfirmOverwrite(bool)
@@ -948,7 +946,7 @@ func (this *QFileDialog) SetConfirmOverwrite(enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:161
+// /usr/include/qt/QtWidgets/qfiledialog.h:163
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool confirmOverwrite() const
@@ -962,7 +960,7 @@ func (this *QFileDialog) ConfirmOverwrite() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:163
+// /usr/include/qt/QtWidgets/qfiledialog.h:165
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultSuffix(const QString &)
@@ -977,7 +975,7 @@ func (this *QFileDialog) SetDefaultSuffix(suffix string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:164
+// /usr/include/qt/QtWidgets/qfiledialog.h:166
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString defaultSuffix() const
@@ -994,7 +992,7 @@ func (this *QFileDialog) DefaultSuffix() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:166
+// /usr/include/qt/QtWidgets/qfiledialog.h:168
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHistory(const QStringList &)
@@ -1013,7 +1011,7 @@ func (this *QFileDialog) SetHistory(paths qtcore.QStringList_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:167
+// /usr/include/qt/QtWidgets/qfiledialog.h:169
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList history() const
@@ -1031,7 +1029,7 @@ func (this *QFileDialog) History() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:169
+// /usr/include/qt/QtWidgets/qfiledialog.h:171
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemDelegate(QAbstractItemDelegate *)
@@ -1054,7 +1052,7 @@ func (this *QFileDialog) SetItemDelegate(delegate QAbstractItemDelegate_ITF /*77
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:170
+// /usr/include/qt/QtWidgets/qfiledialog.h:172
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractItemDelegate * itemDelegate() const
@@ -1070,7 +1068,7 @@ func (this *QFileDialog) ItemDelegate() *QAbstractItemDelegate /*777 QAbstractIt
 	return /*==*/ NewQAbstractItemDelegateFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:172
+// /usr/include/qt/QtWidgets/qfiledialog.h:174
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconProvider(QFileIconProvider *)
@@ -1089,7 +1087,7 @@ func (this *QFileDialog) SetIconProvider(provider QFileIconProvider_ITF /*777 QF
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:173
+// /usr/include/qt/QtWidgets/qfiledialog.h:175
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QFileIconProvider * iconProvider() const
@@ -1105,7 +1103,7 @@ func (this *QFileDialog) IconProvider() *QFileIconProvider /*777 QFileIconProvid
 	return /*==*/ NewQFileIconProviderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:175
+// /usr/include/qt/QtWidgets/qfiledialog.h:177
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLabelText(QFileDialog::DialogLabel, const QString &)
@@ -1122,7 +1120,7 @@ func (this *QFileDialog) SetLabelText(label int, text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:176
+// /usr/include/qt/QtWidgets/qfiledialog.h:178
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString labelText(QFileDialog::DialogLabel) const
@@ -1141,7 +1139,7 @@ func (this *QFileDialog) LabelText(label int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:178
+// /usr/include/qt/QtWidgets/qfiledialog.h:180
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSupportedSchemes(const QStringList &)
@@ -1158,7 +1156,7 @@ func (this *QFileDialog) SetSupportedSchemes(schemes qtcore.QStringList_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:179
+// /usr/include/qt/QtWidgets/qfiledialog.h:181
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList supportedSchemes() const
@@ -1174,7 +1172,7 @@ func (this *QFileDialog) SupportedSchemes() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:182
+// /usr/include/qt/QtWidgets/qfiledialog.h:184
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProxyModel(QAbstractProxyModel *)
@@ -1197,7 +1195,7 @@ func (this *QFileDialog) SetProxyModel(model qtcore.QAbstractProxyModel_ITF /*77
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:183
+// /usr/include/qt/QtWidgets/qfiledialog.h:185
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractProxyModel * proxyModel() const
@@ -1213,7 +1211,7 @@ func (this *QFileDialog) ProxyModel() *qtcore.QAbstractProxyModel /*777 QAbstrac
 	return qtcore.NewQAbstractProxyModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:186
+// /usr/include/qt/QtWidgets/qfiledialog.h:188
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(QFileDialog::Option, bool)
@@ -1230,7 +1228,7 @@ func (this *QFileDialog) SetOption(option int, on bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:186
+// /usr/include/qt/QtWidgets/qfiledialog.h:188
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(QFileDialog::Option, bool)
@@ -1249,7 +1247,7 @@ func (this *QFileDialog) SetOptionp(option int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:187
+// /usr/include/qt/QtWidgets/qfiledialog.h:189
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool testOption(QFileDialog::Option) const
@@ -1267,7 +1265,7 @@ func (this *QFileDialog) TestOption(option int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:188
+// /usr/include/qt/QtWidgets/qfiledialog.h:190
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOptions(QFileDialog::Options)
@@ -1280,7 +1278,7 @@ func (this *QFileDialog) SetOptions(options int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:189
+// /usr/include/qt/QtWidgets/qfiledialog.h:191
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QFileDialog::Options options() const
@@ -1294,7 +1292,7 @@ func (this *QFileDialog) Options() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:192
+// /usr/include/qt/QtWidgets/qfiledialog.h:194
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void open(QObject *, const char *)
@@ -1319,7 +1317,7 @@ func (this *QFileDialog) Open(receiver qtcore.QObject_ITF /*777 QObject **/, mem
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:193
+// /usr/include/qt/QtWidgets/qfiledialog.h:195
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setVisible(bool)
@@ -1332,7 +1330,7 @@ func (this *QFileDialog) SetVisible(visible bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:196
+// /usr/include/qt/QtWidgets/qfiledialog.h:198
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void fileSelected(const QString &)
@@ -1349,7 +1347,7 @@ func (this *QFileDialog) FileSelected(file string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:197
+// /usr/include/qt/QtWidgets/qfiledialog.h:199
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void filesSelected(const QStringList &)
@@ -1368,7 +1366,7 @@ func (this *QFileDialog) FilesSelected(files qtcore.QStringList_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:198
+// /usr/include/qt/QtWidgets/qfiledialog.h:200
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentChanged(const QString &)
@@ -1385,7 +1383,7 @@ func (this *QFileDialog) CurrentChanged(path string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:199
+// /usr/include/qt/QtWidgets/qfiledialog.h:201
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void directoryEntered(const QString &)
@@ -1402,7 +1400,7 @@ func (this *QFileDialog) DirectoryEntered(directory string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:201
+// /usr/include/qt/QtWidgets/qfiledialog.h:203
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void urlSelected(const QUrl &)
@@ -1423,7 +1421,7 @@ func (this *QFileDialog) UrlSelected(url qtcore.QUrl_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:203
+// /usr/include/qt/QtWidgets/qfiledialog.h:205
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentUrlChanged(const QUrl &)
@@ -1444,7 +1442,7 @@ func (this *QFileDialog) CurrentUrlChanged(url qtcore.QUrl_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:204
+// /usr/include/qt/QtWidgets/qfiledialog.h:206
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void directoryUrlEntered(const QUrl &)
@@ -1463,7 +1461,7 @@ func (this *QFileDialog) DirectoryUrlEntered(directory qtcore.QUrl_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:206
+// /usr/include/qt/QtWidgets/qfiledialog.h:208
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void filterSelected(const QString &)
@@ -1480,7 +1478,7 @@ func (this *QFileDialog) FilterSelected(filter string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:210
+// /usr/include/qt/QtWidgets/qfiledialog.h:212
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getOpenFileName(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -1544,7 +1542,7 @@ func QFileDialog_GetOpenFileName(parent QWidget_ITF /*777 QWidget **/, caption s
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:210
+// /usr/include/qt/QtWidgets/qfiledialog.h:212
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getOpenFileName(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -1603,7 +1601,7 @@ func (this *QFileDialog) GetOpenFileNamep() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:210
+// /usr/include/qt/QtWidgets/qfiledialog.h:212
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getOpenFileName(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -1664,7 +1662,7 @@ func (this *QFileDialog) GetOpenFileNamep1(parent QWidget_ITF /*777 QWidget **/)
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:210
+// /usr/include/qt/QtWidgets/qfiledialog.h:212
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getOpenFileName(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -1725,7 +1723,7 @@ func (this *QFileDialog) GetOpenFileNamep2(parent QWidget_ITF /*777 QWidget **/,
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:210
+// /usr/include/qt/QtWidgets/qfiledialog.h:212
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getOpenFileName(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -1786,7 +1784,7 @@ func (this *QFileDialog) GetOpenFileNamep3(parent QWidget_ITF /*777 QWidget **/,
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:210
+// /usr/include/qt/QtWidgets/qfiledialog.h:212
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getOpenFileName(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -1847,7 +1845,7 @@ func (this *QFileDialog) GetOpenFileNamep4(parent QWidget_ITF /*777 QWidget **/,
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:210
+// /usr/include/qt/QtWidgets/qfiledialog.h:212
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getOpenFileName(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -1908,7 +1906,7 @@ func (this *QFileDialog) GetOpenFileNamep5(parent QWidget_ITF /*777 QWidget **/,
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:217
+// /usr/include/qt/QtWidgets/qfiledialog.h:219
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getOpenFileUrl(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -1959,7 +1957,7 @@ func QFileDialog_GetOpenFileUrl(parent QWidget_ITF /*777 QWidget **/, caption st
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:217
+// /usr/include/qt/QtWidgets/qfiledialog.h:219
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getOpenFileUrl(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -2001,7 +1999,7 @@ func (this *QFileDialog) GetOpenFileUrlp() *qtcore.QUrl /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:217
+// /usr/include/qt/QtWidgets/qfiledialog.h:219
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getOpenFileUrl(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -2045,7 +2043,7 @@ func (this *QFileDialog) GetOpenFileUrlp1(parent QWidget_ITF /*777 QWidget **/) 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:217
+// /usr/include/qt/QtWidgets/qfiledialog.h:219
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getOpenFileUrl(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -2089,7 +2087,7 @@ func (this *QFileDialog) GetOpenFileUrlp2(parent QWidget_ITF /*777 QWidget **/, 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:217
+// /usr/include/qt/QtWidgets/qfiledialog.h:219
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getOpenFileUrl(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -2135,7 +2133,7 @@ func (this *QFileDialog) GetOpenFileUrlp3(parent QWidget_ITF /*777 QWidget **/, 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:217
+// /usr/include/qt/QtWidgets/qfiledialog.h:219
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getOpenFileUrl(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -2181,7 +2179,7 @@ func (this *QFileDialog) GetOpenFileUrlp4(parent QWidget_ITF /*777 QWidget **/, 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:217
+// /usr/include/qt/QtWidgets/qfiledialog.h:219
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getOpenFileUrl(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -2227,7 +2225,7 @@ func (this *QFileDialog) GetOpenFileUrlp5(parent QWidget_ITF /*777 QWidget **/, 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:217
+// /usr/include/qt/QtWidgets/qfiledialog.h:219
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getOpenFileUrl(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -2271,7 +2269,7 @@ func (this *QFileDialog) GetOpenFileUrlp6(parent QWidget_ITF /*777 QWidget **/, 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:225
+// /usr/include/qt/QtWidgets/qfiledialog.h:227
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getSaveFileName(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -2337,7 +2335,7 @@ func QFileDialog_GetSaveFileName(parent QWidget_ITF /*777 QWidget **/, caption s
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:225
+// /usr/include/qt/QtWidgets/qfiledialog.h:227
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getSaveFileName(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -2398,7 +2396,7 @@ func (this *QFileDialog) GetSaveFileNamep() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:225
+// /usr/include/qt/QtWidgets/qfiledialog.h:227
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getSaveFileName(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -2461,7 +2459,7 @@ func (this *QFileDialog) GetSaveFileNamep1(parent QWidget_ITF /*777 QWidget **/)
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:225
+// /usr/include/qt/QtWidgets/qfiledialog.h:227
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getSaveFileName(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -2524,7 +2522,7 @@ func (this *QFileDialog) GetSaveFileNamep2(parent QWidget_ITF /*777 QWidget **/,
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:225
+// /usr/include/qt/QtWidgets/qfiledialog.h:227
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getSaveFileName(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -2587,7 +2585,7 @@ func (this *QFileDialog) GetSaveFileNamep3(parent QWidget_ITF /*777 QWidget **/,
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:225
+// /usr/include/qt/QtWidgets/qfiledialog.h:227
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getSaveFileName(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -2650,7 +2648,7 @@ func (this *QFileDialog) GetSaveFileNamep4(parent QWidget_ITF /*777 QWidget **/,
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:225
+// /usr/include/qt/QtWidgets/qfiledialog.h:227
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getSaveFileName(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -2713,7 +2711,7 @@ func (this *QFileDialog) GetSaveFileNamep5(parent QWidget_ITF /*777 QWidget **/,
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:232
+// /usr/include/qt/QtWidgets/qfiledialog.h:234
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getSaveFileUrl(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -2764,7 +2762,7 @@ func QFileDialog_GetSaveFileUrl(parent QWidget_ITF /*777 QWidget **/, caption st
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:232
+// /usr/include/qt/QtWidgets/qfiledialog.h:234
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getSaveFileUrl(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -2806,7 +2804,7 @@ func (this *QFileDialog) GetSaveFileUrlp() *qtcore.QUrl /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:232
+// /usr/include/qt/QtWidgets/qfiledialog.h:234
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getSaveFileUrl(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -2850,7 +2848,7 @@ func (this *QFileDialog) GetSaveFileUrlp1(parent QWidget_ITF /*777 QWidget **/) 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:232
+// /usr/include/qt/QtWidgets/qfiledialog.h:234
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getSaveFileUrl(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -2894,7 +2892,7 @@ func (this *QFileDialog) GetSaveFileUrlp2(parent QWidget_ITF /*777 QWidget **/, 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:232
+// /usr/include/qt/QtWidgets/qfiledialog.h:234
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getSaveFileUrl(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -2940,7 +2938,7 @@ func (this *QFileDialog) GetSaveFileUrlp3(parent QWidget_ITF /*777 QWidget **/, 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:232
+// /usr/include/qt/QtWidgets/qfiledialog.h:234
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getSaveFileUrl(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -2986,7 +2984,7 @@ func (this *QFileDialog) GetSaveFileUrlp4(parent QWidget_ITF /*777 QWidget **/, 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:232
+// /usr/include/qt/QtWidgets/qfiledialog.h:234
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getSaveFileUrl(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -3032,7 +3030,7 @@ func (this *QFileDialog) GetSaveFileUrlp5(parent QWidget_ITF /*777 QWidget **/, 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:232
+// /usr/include/qt/QtWidgets/qfiledialog.h:234
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getSaveFileUrl(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -3076,7 +3074,7 @@ func (this *QFileDialog) GetSaveFileUrlp6(parent QWidget_ITF /*777 QWidget **/, 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:240
+// /usr/include/qt/QtWidgets/qfiledialog.h:242
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getExistingDirectory(QWidget *, const QString &, const QString &, QFileDialog::Options)
@@ -3130,7 +3128,7 @@ func QFileDialog_GetExistingDirectory(parent QWidget_ITF /*777 QWidget **/, capt
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:240
+// /usr/include/qt/QtWidgets/qfiledialog.h:242
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getExistingDirectory(QWidget *, const QString &, const QString &, QFileDialog::Options)
@@ -3179,7 +3177,7 @@ func (this *QFileDialog) GetExistingDirectoryp() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:240
+// /usr/include/qt/QtWidgets/qfiledialog.h:242
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getExistingDirectory(QWidget *, const QString &, const QString &, QFileDialog::Options)
@@ -3230,7 +3228,7 @@ func (this *QFileDialog) GetExistingDirectoryp1(parent QWidget_ITF /*777 QWidget
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:240
+// /usr/include/qt/QtWidgets/qfiledialog.h:242
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getExistingDirectory(QWidget *, const QString &, const QString &, QFileDialog::Options)
@@ -3281,7 +3279,7 @@ func (this *QFileDialog) GetExistingDirectoryp2(parent QWidget_ITF /*777 QWidget
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:240
+// /usr/include/qt/QtWidgets/qfiledialog.h:242
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString getExistingDirectory(QWidget *, const QString &, const QString &, QFileDialog::Options)
@@ -3332,7 +3330,7 @@ func (this *QFileDialog) GetExistingDirectoryp3(parent QWidget_ITF /*777 QWidget
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:245
+// /usr/include/qt/QtWidgets/qfiledialog.h:247
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getExistingDirectoryUrl(QWidget *, const QString &, const QUrl &, QFileDialog::Options, const QStringList &)
@@ -3379,7 +3377,7 @@ func QFileDialog_GetExistingDirectoryUrl(parent QWidget_ITF /*777 QWidget **/, c
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:245
+// /usr/include/qt/QtWidgets/qfiledialog.h:247
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getExistingDirectoryUrl(QWidget *, const QString &, const QUrl &, QFileDialog::Options, const QStringList &)
@@ -3417,7 +3415,7 @@ func (this *QFileDialog) GetExistingDirectoryUrlp() *qtcore.QUrl /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:245
+// /usr/include/qt/QtWidgets/qfiledialog.h:247
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getExistingDirectoryUrl(QWidget *, const QString &, const QUrl &, QFileDialog::Options, const QStringList &)
@@ -3457,7 +3455,7 @@ func (this *QFileDialog) GetExistingDirectoryUrlp1(parent QWidget_ITF /*777 QWid
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:245
+// /usr/include/qt/QtWidgets/qfiledialog.h:247
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getExistingDirectoryUrl(QWidget *, const QString &, const QUrl &, QFileDialog::Options, const QStringList &)
@@ -3497,7 +3495,7 @@ func (this *QFileDialog) GetExistingDirectoryUrlp2(parent QWidget_ITF /*777 QWid
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:245
+// /usr/include/qt/QtWidgets/qfiledialog.h:247
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getExistingDirectoryUrl(QWidget *, const QString &, const QUrl &, QFileDialog::Options, const QStringList &)
@@ -3539,7 +3537,7 @@ func (this *QFileDialog) GetExistingDirectoryUrlp3(parent QWidget_ITF /*777 QWid
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:245
+// /usr/include/qt/QtWidgets/qfiledialog.h:247
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QUrl getExistingDirectoryUrl(QWidget *, const QString &, const QUrl &, QFileDialog::Options, const QStringList &)
@@ -3579,7 +3577,7 @@ func (this *QFileDialog) GetExistingDirectoryUrlp4(parent QWidget_ITF /*777 QWid
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:251
+// /usr/include/qt/QtWidgets/qfiledialog.h:253
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList getOpenFileNames(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -3642,7 +3640,7 @@ func QFileDialog_GetOpenFileNames(parent QWidget_ITF /*777 QWidget **/, caption 
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:251
+// /usr/include/qt/QtWidgets/qfiledialog.h:253
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList getOpenFileNames(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -3700,7 +3698,7 @@ func (this *QFileDialog) GetOpenFileNamesp() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:251
+// /usr/include/qt/QtWidgets/qfiledialog.h:253
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList getOpenFileNames(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -3760,7 +3758,7 @@ func (this *QFileDialog) GetOpenFileNamesp1(parent QWidget_ITF /*777 QWidget **/
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:251
+// /usr/include/qt/QtWidgets/qfiledialog.h:253
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList getOpenFileNames(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -3820,7 +3818,7 @@ func (this *QFileDialog) GetOpenFileNamesp2(parent QWidget_ITF /*777 QWidget **/
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:251
+// /usr/include/qt/QtWidgets/qfiledialog.h:253
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList getOpenFileNames(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -3880,7 +3878,7 @@ func (this *QFileDialog) GetOpenFileNamesp3(parent QWidget_ITF /*777 QWidget **/
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:251
+// /usr/include/qt/QtWidgets/qfiledialog.h:253
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList getOpenFileNames(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -3940,7 +3938,7 @@ func (this *QFileDialog) GetOpenFileNamesp4(parent QWidget_ITF /*777 QWidget **/
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:251
+// /usr/include/qt/QtWidgets/qfiledialog.h:253
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList getOpenFileNames(QWidget *, const QString &, const QString &, const QString &, QString *, QFileDialog::Options)
@@ -4000,7 +3998,7 @@ func (this *QFileDialog) GetOpenFileNamesp5(parent QWidget_ITF /*777 QWidget **/
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:258
+// /usr/include/qt/QtWidgets/qfiledialog.h:260
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] QList<QUrl> getOpenFileUrls(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -4050,7 +4048,7 @@ func QFileDialog_GetOpenFileUrls(parent QWidget_ITF /*777 QWidget **/, caption s
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:258
+// /usr/include/qt/QtWidgets/qfiledialog.h:260
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] QList<QUrl> getOpenFileUrls(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -4091,7 +4089,7 @@ func (this *QFileDialog) GetOpenFileUrlsp() *qtcore.QUrlList /*lll*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:258
+// /usr/include/qt/QtWidgets/qfiledialog.h:260
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] QList<QUrl> getOpenFileUrls(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -4134,7 +4132,7 @@ func (this *QFileDialog) GetOpenFileUrlsp1(parent QWidget_ITF /*777 QWidget **/)
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:258
+// /usr/include/qt/QtWidgets/qfiledialog.h:260
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] QList<QUrl> getOpenFileUrls(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -4177,7 +4175,7 @@ func (this *QFileDialog) GetOpenFileUrlsp2(parent QWidget_ITF /*777 QWidget **/,
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:258
+// /usr/include/qt/QtWidgets/qfiledialog.h:260
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] QList<QUrl> getOpenFileUrls(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -4222,7 +4220,7 @@ func (this *QFileDialog) GetOpenFileUrlsp3(parent QWidget_ITF /*777 QWidget **/,
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:258
+// /usr/include/qt/QtWidgets/qfiledialog.h:260
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] QList<QUrl> getOpenFileUrls(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -4267,7 +4265,7 @@ func (this *QFileDialog) GetOpenFileUrlsp4(parent QWidget_ITF /*777 QWidget **/,
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:258
+// /usr/include/qt/QtWidgets/qfiledialog.h:260
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] QList<QUrl> getOpenFileUrls(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -4312,7 +4310,7 @@ func (this *QFileDialog) GetOpenFileUrlsp5(parent QWidget_ITF /*777 QWidget **/,
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:258
+// /usr/include/qt/QtWidgets/qfiledialog.h:260
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] QList<QUrl> getOpenFileUrls(QWidget *, const QString &, const QUrl &, const QString &, QString *, QFileDialog::Options, const QStringList &)
@@ -4355,7 +4353,7 @@ func (this *QFileDialog) GetOpenFileUrlsp6(parent QWidget_ITF /*777 QWidget **/,
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:269
+// /usr/include/qt/QtWidgets/qfiledialog.h:271
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void done(int)
@@ -4368,7 +4366,7 @@ func (this *QFileDialog) Done(result int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:270
+// /usr/include/qt/QtWidgets/qfiledialog.h:272
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void accept()
@@ -4381,7 +4379,7 @@ func (this *QFileDialog) Accept() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:271
+// /usr/include/qt/QtWidgets/qfiledialog.h:273
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)

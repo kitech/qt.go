@@ -383,7 +383,7 @@ The palette may be changed according to the current GUI style in QStyle::polish(
 
 Warning: Do not use this function in conjunction with Qt Style Sheets. When using style sheets, the palette of a widget can be customized using the "color", "background-color", "selection-color", "selection-background-color" and "alternate-background-color".
 
-Note: Some styles do not use the palette for all drawing, for instance, if they make use of native theme engines. This is the case for the Windows Vista and macOS styles.
+Note: Some styles do not use the palette for all drawing, for instance, if they make use of native theme engines. This is the case for the Windows XP, Windows Vista, and macOS styles.
 
 See also QWidget::setPalette(), palette(), and QStyle::polish().
 */
@@ -416,7 +416,7 @@ The palette may be changed according to the current GUI style in QStyle::polish(
 
 Warning: Do not use this function in conjunction with Qt Style Sheets. When using style sheets, the palette of a widget can be customized using the "color", "background-color", "selection-color", "selection-background-color" and "alternate-background-color".
 
-Note: Some styles do not use the palette for all drawing, for instance, if they make use of native theme engines. This is the case for the Windows Vista and macOS styles.
+Note: Some styles do not use the palette for all drawing, for instance, if they make use of native theme engines. This is the case for the Windows XP, Windows Vista, and macOS styles.
 
 See also QWidget::setPalette(), palette(), and QStyle::polish().
 */

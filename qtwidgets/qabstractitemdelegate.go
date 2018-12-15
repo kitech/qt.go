@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qabstractitemdelegate.h
@@ -66,7 +64,7 @@ func (*QAbstractItemDelegate) NewFromPointer(cthis unsafe.Pointer) *QAbstractIte
 	return NewQAbstractItemDelegateFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:60
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -80,7 +78,7 @@ func (this *QAbstractItemDelegate) MetaObject() *qtcore.QMetaObject /*777 const 
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:72
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractItemDelegate(QObject *)
@@ -103,7 +101,7 @@ func NewQAbstractItemDelegate(parent qtcore.QObject_ITF /*777 QObject **/) *QAbs
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:72
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractItemDelegate(QObject *)
@@ -124,7 +122,7 @@ func NewQAbstractItemDelegatep() *QAbstractItemDelegate {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:73
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:74
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractItemDelegate()
@@ -139,7 +137,7 @@ func DeleteQAbstractItemDelegate(this *QAbstractItemDelegate) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:76
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:77
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionViewItem &, const QModelIndex &) const
@@ -166,7 +164,7 @@ func (this *QAbstractItemDelegate) Paint(painter qtgui.QPainter_ITF /*777 QPaint
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:80
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:81
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint(const QStyleOptionViewItem &, const QModelIndex &) const
@@ -192,7 +190,7 @@ func (this *QAbstractItemDelegate) SizeHint(option QStyleOptionViewItem_ITF, ind
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:84
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:85
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QWidget * createEditor(QWidget *, const QStyleOptionViewItem &, const QModelIndex &) const
@@ -224,7 +222,7 @@ func (this *QAbstractItemDelegate) CreateEditor(parent QWidget_ITF /*777 QWidget
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:88
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:89
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void destroyEditor(QWidget *, const QModelIndex &) const
@@ -249,7 +247,7 @@ func (this *QAbstractItemDelegate) DestroyEditor(editor QWidget_ITF /*777 QWidge
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:90
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:91
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setEditorData(QWidget *, const QModelIndex &) const
@@ -274,7 +272,7 @@ func (this *QAbstractItemDelegate) SetEditorData(editor QWidget_ITF /*777 QWidge
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:92
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:93
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setModelData(QWidget *, QAbstractItemModel *, const QModelIndex &) const
@@ -303,7 +301,7 @@ func (this *QAbstractItemDelegate) SetModelData(editor QWidget_ITF /*777 QWidget
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:96
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:97
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void updateEditorGeometry(QWidget *, const QStyleOptionViewItem &, const QModelIndex &) const
@@ -330,7 +328,7 @@ func (this *QAbstractItemDelegate) UpdateEditorGeometry(editor QWidget_ITF /*777
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:101
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:102
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool editorEvent(QEvent *, QAbstractItemModel *, const QStyleOptionViewItem &, const QModelIndex &)
@@ -364,7 +362,7 @@ func (this *QAbstractItemDelegate) EditorEvent(event qtcore.QEvent_ITF /*777 QEv
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:106
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:107
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString elidedText(const QFontMetrics &, int, Qt::TextElideMode, const QString &)
@@ -392,7 +390,7 @@ func QAbstractItemDelegate_ElidedText(fontMetrics qtgui.QFontMetrics_ITF, width 
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:109
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:110
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool helpEvent(QHelpEvent *, QAbstractItemView *, const QStyleOptionViewItem &, const QModelIndex &)
@@ -430,7 +428,7 @@ func (this *QAbstractItemDelegate) HelpEvent(event qtgui.QHelpEvent_ITF /*777 QH
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:117
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void commitData(QWidget *)
@@ -447,7 +445,7 @@ func (this *QAbstractItemDelegate) CommitData(editor QWidget_ITF /*777 QWidget *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:118
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void closeEditor(QWidget *, QAbstractItemDelegate::EndEditHint)
@@ -468,7 +466,7 @@ func (this *QAbstractItemDelegate) CloseEditor(editor QWidget_ITF /*777 QWidget 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:118
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void closeEditor(QWidget *, QAbstractItemDelegate::EndEditHint)
@@ -491,7 +489,7 @@ func (this *QAbstractItemDelegate) CloseEditorp(editor QWidget_ITF /*777 QWidget
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:119
+// /usr/include/qt/QtWidgets/qabstractitemdelegate.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sizeHintChanged(const QModelIndex &)

@@ -417,7 +417,7 @@ The URL is run through a conformance test. Every part of the URL must conform to
 
   bool checkUrl(const QUrl &url) {
       if (!url.isValid()) {
-          qDebug("Invalid URL: %s", qUtf8Printable(url.toString()));
+          qDebug(QString("Invalid URL: %1").arg(url.toString()));
           return false;
       }
 
@@ -1125,8 +1125,6 @@ func (this *QUrl) Resolved(relative QUrl_ITF) *QUrl /*123*/ {
 Returns true if the URL is relative; otherwise returns false. A URL is relative reference if its scheme is undefined; this function is therefore equivalent to calling scheme().isEmpty().
 
 Relative references are defined in RFC 3986 section 4.2.
-
-See also Relative URLs vs Relative Paths.
 */
 func (this *QUrl) IsRelative() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK4QUrl10isRelativeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1184,42 +1182,6 @@ This function also accepts paths with a doubled leading slash (or backslash) to 
 
 An empty localFile leads to an empty URL (since Qt 5.4).
 
-
-  qDebug() << QUrl::fromLocalFile("file.txt");            // QUrl("file:file.txt")
-  qDebug() << QUrl::fromLocalFile("/home/user/file.txt"); // QUrl("file:///home/user/file.txt")
-  qDebug() << QUrl::fromLocalFile("file:file.txt");       // doesn't make sense; expects path, not url with scheme
-
-
-
-In the first line in snippet above, a file URL is constructed from a local, relative path. A file URL with a relative path only makes sense if there is a base URL to resolve it against. For example:
-
-
-  QUrl url = QUrl::fromLocalFile("file.txt");
-  QUrl baseUrl = QUrl("file:/home/user/");
-  // wrong: prints QUrl("file:file.txt"), as url already has a scheme
-  qDebug() << baseUrl.resolved(url);
-
-
-
-To resolve such a URL, it's necessary to remove the scheme beforehand:
-
-
-  // correct: prints QUrl("file:///home/user/file.txt")
-  url.setScheme(QString());
-  qDebug() << baseUrl.resolved(url);
-
-
-
-For this reason, it is better to use a relative URL (that is, no scheme) for relative file paths:
-
-
-  QUrl url = QUrl("file.txt");
-  QUrl baseUrl = QUrl("file:/home/user/");
-  // prints QUrl("file:///home/user/file.txt")
-  qDebug() << baseUrl.resolved(url);
-
-
-
 See also toLocalFile(), isLocalFile(), and QDir::toNativeSeparators().
 */
 func (this *QUrl) FromLocalFile(localfile string) *QUrl /*123*/ {
@@ -1246,13 +1208,6 @@ func QUrl_FromLocalFile(localfile string) *QUrl /*123*/ {
 Returns the path of this URL formatted as a local file path. The path returned will use forward slashes, even if it was originally created from one with backslashes.
 
 If this URL contains a non-empty hostname, it will be encoded in the returned value in the form found on SMB networks (for example, "//servername/path/to/file.txt").
-
-
-  qDebug() << QUrl("file:file.txt").toLocalFile();            // "file:file.txt"
-  qDebug() << QUrl("file:/home/user/file.txt").toLocalFile(); // "file:///home/user/file.txt"
-  qDebug() << QUrl("file.txt").toLocalFile();                 // ""; wasn't a local file as it had no scheme
-
-
 
 Note: if the path component of this URL contains a non-UTF-8 binary sequence (such as %80), the behaviour of this function is undefined.
 
@@ -1355,8 +1310,6 @@ func (this *QUrl) Operator_not_equal(url QUrl_ITF) bool {
 
 /*
 Returns a decoded copy of input. input is first decoded from percent encoding, then converted from UTF-8 to unicode.
-
-Note: Given invalid input (such as a string containing the sequence "%G5", which is not a valid hexadecimal number) the output will be invalid as well. As an example: the sequence "%G5" could be decoded to 'W'.
 */
 func (this *QUrl) FromPercentEncoding(arg0 QByteArray_ITF) string {
 	var convArg0 unsafe.Pointer

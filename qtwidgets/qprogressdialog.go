@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qprogressdialog.h
@@ -91,7 +89,7 @@ func (*QProgressDialog) NewFromPointer(cthis unsafe.Pointer) *QProgressDialog {
 	return NewQProgressDialogFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:59
+// /usr/include/qt/QtWidgets/qprogressdialog.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -105,7 +103,7 @@ func (this *QProgressDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:71
+// /usr/include/qt/QtWidgets/qprogressdialog.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QProgressDialog(QWidget *, Qt::WindowFlags)
@@ -141,7 +139,7 @@ func NewQProgressDialog(parent QWidget_ITF /*777 QWidget **/, flags int) *QProgr
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:71
+// /usr/include/qt/QtWidgets/qprogressdialog.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QProgressDialog(QWidget *, Qt::WindowFlags)
@@ -177,7 +175,7 @@ func NewQProgressDialogp() *QProgressDialog {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:71
+// /usr/include/qt/QtWidgets/qprogressdialog.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QProgressDialog(QWidget *, Qt::WindowFlags)
@@ -215,7 +213,7 @@ func NewQProgressDialogp1(parent QWidget_ITF /*777 QWidget **/) *QProgressDialog
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:72
+// /usr/include/qt/QtWidgets/qprogressdialog.h:73
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QProgressDialog(const QString &, const QString &, int, int, QWidget *, Qt::WindowFlags)
@@ -255,7 +253,7 @@ func NewQProgressDialog1(labelText string, cancelButtonText string, minimum int,
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:72
+// /usr/include/qt/QtWidgets/qprogressdialog.h:73
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QProgressDialog(const QString &, const QString &, int, int, QWidget *, Qt::WindowFlags)
@@ -295,7 +293,7 @@ func NewQProgressDialog1p(labelText string, cancelButtonText string, minimum int
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:72
+// /usr/include/qt/QtWidgets/qprogressdialog.h:73
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QProgressDialog(const QString &, const QString &, int, int, QWidget *, Qt::WindowFlags)
@@ -337,7 +335,7 @@ func NewQProgressDialog1p1(labelText string, cancelButtonText string, minimum in
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:75
+// /usr/include/qt/QtWidgets/qprogressdialog.h:76
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QProgressDialog()
@@ -352,7 +350,7 @@ func DeleteQProgressDialog(this *QProgressDialog) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:77
+// /usr/include/qt/QtWidgets/qprogressdialog.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLabel(QLabel *)
@@ -371,7 +369,7 @@ func (this *QProgressDialog) SetLabel(label QLabel_ITF /*777 QLabel **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:78
+// /usr/include/qt/QtWidgets/qprogressdialog.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCancelButton(QPushButton *)
@@ -390,7 +388,7 @@ func (this *QProgressDialog) SetCancelButton(button QPushButton_ITF /*777 QPushB
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:79
+// /usr/include/qt/QtWidgets/qprogressdialog.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBar(QProgressBar *)
@@ -407,7 +405,7 @@ func (this *QProgressDialog) SetBar(bar QProgressBar_ITF /*777 QProgressBar **/)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:81
+// /usr/include/qt/QtWidgets/qprogressdialog.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool wasCanceled() const
@@ -421,7 +419,7 @@ func (this *QProgressDialog) WasCanceled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:83
+// /usr/include/qt/QtWidgets/qprogressdialog.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int minimum() const
@@ -435,7 +433,7 @@ func (this *QProgressDialog) Minimum() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:84
+// /usr/include/qt/QtWidgets/qprogressdialog.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int maximum() const
@@ -449,7 +447,7 @@ func (this *QProgressDialog) Maximum() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:86
+// /usr/include/qt/QtWidgets/qprogressdialog.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int value() const
@@ -463,7 +461,7 @@ func (this *QProgressDialog) Value() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:88
+// /usr/include/qt/QtWidgets/qprogressdialog.h:89
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
@@ -481,7 +479,7 @@ func (this *QProgressDialog) SizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:90
+// /usr/include/qt/QtWidgets/qprogressdialog.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString labelText() const
@@ -498,7 +496,7 @@ func (this *QProgressDialog) LabelText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:91
+// /usr/include/qt/QtWidgets/qprogressdialog.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int minimumDuration() const
@@ -512,7 +510,7 @@ func (this *QProgressDialog) MinimumDuration() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:93
+// /usr/include/qt/QtWidgets/qprogressdialog.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAutoReset(bool)
@@ -525,7 +523,7 @@ func (this *QProgressDialog) SetAutoReset(reset bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:94
+// /usr/include/qt/QtWidgets/qprogressdialog.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool autoReset() const
@@ -539,7 +537,7 @@ func (this *QProgressDialog) AutoReset() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:95
+// /usr/include/qt/QtWidgets/qprogressdialog.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAutoClose(bool)
@@ -552,7 +550,7 @@ func (this *QProgressDialog) SetAutoClose(close bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:96
+// /usr/include/qt/QtWidgets/qprogressdialog.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool autoClose() const
@@ -566,7 +564,7 @@ func (this *QProgressDialog) AutoClose() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:99
+// /usr/include/qt/QtWidgets/qprogressdialog.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void open(QObject *, const char *)
@@ -591,7 +589,7 @@ func (this *QProgressDialog) Open(receiver qtcore.QObject_ITF /*777 QObject **/,
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:102
+// /usr/include/qt/QtWidgets/qprogressdialog.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cancel()
@@ -604,7 +602,7 @@ func (this *QProgressDialog) Cancel() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:103
+// /usr/include/qt/QtWidgets/qprogressdialog.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reset()
@@ -619,7 +617,7 @@ func (this *QProgressDialog) Reset() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:104
+// /usr/include/qt/QtWidgets/qprogressdialog.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximum(int)
@@ -632,7 +630,7 @@ func (this *QProgressDialog) SetMaximum(maximum int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:105
+// /usr/include/qt/QtWidgets/qprogressdialog.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimum(int)
@@ -645,7 +643,7 @@ func (this *QProgressDialog) SetMinimum(minimum int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:106
+// /usr/include/qt/QtWidgets/qprogressdialog.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRange(int, int)
@@ -664,7 +662,7 @@ func (this *QProgressDialog) SetRange(minimum int, maximum int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:107
+// /usr/include/qt/QtWidgets/qprogressdialog.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setValue(int)
@@ -677,7 +675,7 @@ func (this *QProgressDialog) SetValue(progress int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:108
+// /usr/include/qt/QtWidgets/qprogressdialog.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLabelText(const QString &)
@@ -692,7 +690,7 @@ func (this *QProgressDialog) SetLabelText(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:109
+// /usr/include/qt/QtWidgets/qprogressdialog.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCancelButtonText(const QString &)
@@ -709,7 +707,7 @@ func (this *QProgressDialog) SetCancelButtonText(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:110
+// /usr/include/qt/QtWidgets/qprogressdialog.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumDuration(int)
@@ -722,7 +720,7 @@ func (this *QProgressDialog) SetMinimumDuration(ms int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:113
+// /usr/include/qt/QtWidgets/qprogressdialog.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void canceled()
@@ -737,7 +735,7 @@ func (this *QProgressDialog) Canceled() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:116
+// /usr/include/qt/QtWidgets/qprogressdialog.h:117
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
@@ -754,7 +752,7 @@ func (this *QProgressDialog) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QRes
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:117
+// /usr/include/qt/QtWidgets/qprogressdialog.h:118
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void closeEvent(QCloseEvent *)
@@ -771,7 +769,7 @@ func (this *QProgressDialog) CloseEvent(event qtgui.QCloseEvent_ITF /*777 QClose
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:118
+// /usr/include/qt/QtWidgets/qprogressdialog.h:119
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
@@ -788,7 +786,7 @@ func (this *QProgressDialog) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:119
+// /usr/include/qt/QtWidgets/qprogressdialog.h:120
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
@@ -805,7 +803,7 @@ func (this *QProgressDialog) ShowEvent(event qtgui.QShowEvent_ITF /*777 QShowEve
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressdialog.h:122
+// /usr/include/qt/QtWidgets/qprogressdialog.h:123
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void forceShow()

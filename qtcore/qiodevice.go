@@ -981,33 +981,7 @@ func (this *QIODevice) Peek1(maxlen int64) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:139
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] qint64 skip(qint64)
-
-/*
-Skips up to maxSize bytes from the device. Returns the number of bytes actually skipped, or -1 on error.
-
-This function does not wait and only discards the data that is already available for reading.
-
-If the device is opened in text mode, end-of-line terminators are translated to '\n' symbols and count as a single byte identically to the read() and peek() behavior.
-
-This function works for all devices, including sequential ones that cannot seek(). It is optimized to skip unwanted data after a peek() call.
-
-For random-access devices, skip() can be used to seek forward from the current position. Negative maxSize values are not allowed.
-
-This function was introduced in  Qt 5.10.
-
-See also peek(), seek(), and read().
-*/
-func (this *QIODevice) Skip(maxSize int64) int64 {
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QIODevice4skipEx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), maxSize)
-	qtrt.ErrPrint(err, rv)
-	return int64(rv) // 222
-}
-
-// /usr/include/qt/QtCore/qiodevice.h:141
+// /usr/include/qt/QtCore/qiodevice.h:140
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool waitForReadyRead(int)
@@ -1033,7 +1007,7 @@ func (this *QIODevice) WaitForReadyRead(msecs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:142
+// /usr/include/qt/QtCore/qiodevice.h:141
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool waitForBytesWritten(int)
@@ -1059,7 +1033,7 @@ func (this *QIODevice) WaitForBytesWritten(msecs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:144
+// /usr/include/qt/QtCore/qiodevice.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ungetChar(char)
@@ -1076,7 +1050,7 @@ func (this *QIODevice) UngetChar(c byte) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:145
+// /usr/include/qt/QtCore/qiodevice.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool putChar(char)
@@ -1092,7 +1066,7 @@ func (this *QIODevice) PutChar(c byte) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:146
+// /usr/include/qt/QtCore/qiodevice.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool getChar(char *)
@@ -1110,7 +1084,7 @@ func (this *QIODevice) GetChar(c string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:148
+// /usr/include/qt/QtCore/qiodevice.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString errorString() const
@@ -1129,7 +1103,7 @@ func (this *QIODevice) ErrorString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:152
+// /usr/include/qt/QtCore/qiodevice.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void readyRead()
@@ -1148,7 +1122,7 @@ func (this *QIODevice) ReadyRead() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:153
+// /usr/include/qt/QtCore/qiodevice.h:152
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void channelReadyRead(int)
@@ -1167,7 +1141,7 @@ func (this *QIODevice) ChannelReadyRead(channel int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:154
+// /usr/include/qt/QtCore/qiodevice.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void bytesWritten(qint64)
@@ -1184,7 +1158,7 @@ func (this *QIODevice) BytesWritten(bytes int64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:155
+// /usr/include/qt/QtCore/qiodevice.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void channelBytesWritten(int, qint64)
@@ -1203,7 +1177,7 @@ func (this *QIODevice) ChannelBytesWritten(channel int, bytes int64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:156
+// /usr/include/qt/QtCore/qiodevice.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void aboutToClose()
@@ -1216,7 +1190,7 @@ func (this *QIODevice) AboutToClose() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:157
+// /usr/include/qt/QtCore/qiodevice.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void readChannelFinished()
@@ -1233,7 +1207,7 @@ func (this *QIODevice) ReadChannelFinished() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:166
+// /usr/include/qt/QtCore/qiodevice.h:165
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [8] qint64 readData(char *, qint64)
@@ -1259,7 +1233,7 @@ func (this *QIODevice) ReadData(data string, maxlen int64) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:167
+// /usr/include/qt/QtCore/qiodevice.h:166
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] qint64 readLineData(char *, qint64)
@@ -1281,7 +1255,7 @@ func (this *QIODevice) ReadLineData(data string, maxlen int64) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:168
+// /usr/include/qt/QtCore/qiodevice.h:167
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [8] qint64 writeData(const char *, qint64)
@@ -1303,7 +1277,7 @@ func (this *QIODevice) WriteData(data string, len_ int64) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:170
+// /usr/include/qt/QtCore/qiodevice.h:169
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setOpenMode(QIODevice::OpenMode)
@@ -1318,7 +1292,7 @@ func (this *QIODevice) SetOpenMode(openMode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qiodevice.h:172
+// /usr/include/qt/QtCore/qiodevice.h:171
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setErrorString(const QString &)

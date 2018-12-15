@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 25
+// extern C begin: 23
 */
 // import "C"
 import "unsafe"
@@ -234,7 +234,7 @@ func (this *QFile) SetFileName(name string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfile.h:88
+// /usr/include/qt/QtCore/qfile.h:87
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QByteArray encodeName(const QString &)
@@ -259,7 +259,7 @@ func QFile_EncodeName(fileName string) *QByteArray /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qfile.h:92
+// /usr/include/qt/QtCore/qfile.h:91
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QString decodeName(const QByteArray &)
@@ -287,7 +287,7 @@ func QFile_DecodeName(localFileName QByteArray_ITF) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qfile.h:97
+// /usr/include/qt/QtCore/qfile.h:96
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [8] QString decodeName(const char *)
@@ -313,7 +313,7 @@ func QFile_DecodeName1(localFileName string) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qfile.h:107
+// /usr/include/qt/QtCore/qfile.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool exists() const
@@ -329,7 +329,7 @@ func (this *QFile) Exists() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfile.h:108
+// /usr/include/qt/QtCore/qfile.h:107
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool exists(const QString &)
@@ -352,7 +352,7 @@ func QFile_Exists1(fileName string) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qfile.h:110
+// /usr/include/qt/QtCore/qfile.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString readLink() const
@@ -369,7 +369,7 @@ func (this *QFile) ReadLink() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qfile.h:111
+// /usr/include/qt/QtCore/qfile.h:110
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QString readLink(const QString &)
@@ -393,7 +393,7 @@ func QFile_ReadLink1(fileName string) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qfile.h:112
+// /usr/include/qt/QtCore/qfile.h:111
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString symLinkTarget() const
@@ -414,7 +414,7 @@ func (this *QFile) SymLinkTarget() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qfile.h:113
+// /usr/include/qt/QtCore/qfile.h:112
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [8] QString symLinkTarget(const QString &)
@@ -442,7 +442,7 @@ func QFile_SymLinkTarget1(fileName string) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qfile.h:115
+// /usr/include/qt/QtCore/qfile.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool remove()
@@ -460,7 +460,7 @@ func (this *QFile) Remove() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfile.h:116
+// /usr/include/qt/QtCore/qfile.h:115
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool remove(const QString &)
@@ -485,7 +485,7 @@ func QFile_Remove1(fileName string) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qfile.h:118
+// /usr/include/qt/QtCore/qfile.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool rename(const QString &)
@@ -509,7 +509,7 @@ func (this *QFile) Rename(newName string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfile.h:119
+// /usr/include/qt/QtCore/qfile.h:118
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool rename(const QString &, const QString &)
@@ -540,7 +540,7 @@ func QFile_Rename1(oldName string, newName string) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qfile.h:121
+// /usr/include/qt/QtCore/qfile.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool link(const QString &)
@@ -562,7 +562,7 @@ func (this *QFile) Link(newName string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfile.h:122
+// /usr/include/qt/QtCore/qfile.h:121
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool link(const QString &, const QString &)
@@ -591,7 +591,7 @@ func QFile_Link1(oldname string, newName string) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qfile.h:124
+// /usr/include/qt/QtCore/qfile.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool copy(const QString &)
@@ -613,7 +613,7 @@ func (this *QFile) Copy(newName string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfile.h:125
+// /usr/include/qt/QtCore/qfile.h:124
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool copy(const QString &, const QString &)
@@ -642,7 +642,7 @@ func QFile_Copy1(fileName string, newName string) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qfile.h:127
+// /usr/include/qt/QtCore/qfile.h:126
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool open(QIODevice::OpenMode)
@@ -664,7 +664,7 @@ func (this *QFile) Open(flags int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfile.h:129
+// /usr/include/qt/QtCore/qfile.h:128
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool open(int, QIODevice::OpenMode, QFileDevice::FileHandleFlags)
@@ -686,7 +686,7 @@ func (this *QFile) Open1(fd int, ioFlags int, handleFlags int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfile.h:129
+// /usr/include/qt/QtCore/qfile.h:128
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool open(int, QIODevice::OpenMode, QFileDevice::FileHandleFlags)
@@ -710,7 +710,7 @@ func (this *QFile) Open1p(fd int, ioFlags int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfile.h:131
+// /usr/include/qt/QtCore/qfile.h:130
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] qint64 size() const
@@ -724,7 +724,7 @@ func (this *QFile) Size() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qfile.h:133
+// /usr/include/qt/QtCore/qfile.h:132
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool resize(qint64)
@@ -738,7 +738,7 @@ func (this *QFile) Resize(sz int64) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfile.h:134
+// /usr/include/qt/QtCore/qfile.h:133
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool resize(const QString &, qint64)
@@ -759,7 +759,7 @@ func QFile_Resize1(filename string, sz int64) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qfile.h:136
+// /usr/include/qt/QtCore/qfile.h:135
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QFileDevice::Permissions permissions() const
@@ -775,7 +775,7 @@ func (this *QFile) Permissions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qfile.h:137
+// /usr/include/qt/QtCore/qfile.h:136
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] QFileDevice::Permissions permissions(const QString &)
@@ -798,7 +798,7 @@ func QFile_Permissions1(filename string) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qfile.h:138
+// /usr/include/qt/QtCore/qfile.h:137
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setPermissions(QFileDevice::Permissions)
@@ -818,7 +818,7 @@ func (this *QFile) SetPermissions(permissionSpec int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfile.h:139
+// /usr/include/qt/QtCore/qfile.h:138
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool setPermissions(const QString &, QFileDevice::Permissions)

@@ -658,26 +658,7 @@ func (this *QQmlEngine) SetOutputWarningsToStandardError(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:148
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void retranslate()
-
-/*
-Refreshes all binding expressions that use strings marked for translation.
-
-Call this function after you have installed a new translator with QCoreApplication::installTranslator, to ensure that your user-interface shows up-to-date translations.
-
-Note: Due to a limitation in the implementation, this function refreshes all the engine's bindings, not only those that use strings marked for translation. This may be optimized in a future release.
-
-This function was introduced in  Qt 5.10.
-*/
-func (this *QQmlEngine) Retranslate() {
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QQmlEngine11retranslateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtQml/qqmlengine.h:151
+// /usr/include/qt/QtQml/qqmlengine.h:147
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QQmlContext * contextForObject(const QObject *)
@@ -704,7 +685,7 @@ func QQmlEngine_ContextForObject(arg0 qtcore.QObject_ITF /*777 const QObject **/
 	return rv
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:152
+// /usr/include/qt/QtQml/qqmlengine.h:148
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setContextForObject(QObject *, QQmlContext *)
@@ -733,7 +714,7 @@ func QQmlEngine_SetContextForObject(arg0 qtcore.QObject_ITF /*777 QObject **/, a
 	nilthis.SetContextForObject(arg0, arg1)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:155
+// /usr/include/qt/QtQml/qqmlengine.h:151
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setObjectOwnership(QObject *, QQmlEngine::ObjectOwnership)
@@ -756,7 +737,7 @@ func QQmlEngine_SetObjectOwnership(arg0 qtcore.QObject_ITF /*777 QObject **/, ar
 	nilthis.SetObjectOwnership(arg0, arg1)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:156
+// /usr/include/qt/QtQml/qqmlengine.h:152
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QQmlEngine::ObjectOwnership objectOwnership(QObject *)
@@ -781,7 +762,7 @@ func QQmlEngine_ObjectOwnership(arg0 qtcore.QObject_ITF /*777 QObject **/) int {
 	return rv
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:159
+// /usr/include/qt/QtQml/qqmlengine.h:155
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -799,7 +780,7 @@ func (this *QQmlEngine) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:162
+// /usr/include/qt/QtQml/qqmlengine.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void quit()
@@ -814,7 +795,7 @@ func (this *QQmlEngine) Quit() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlengine.h:163
+// /usr/include/qt/QtQml/qqmlengine.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void exit(int)

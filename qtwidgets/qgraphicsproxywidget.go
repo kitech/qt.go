@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicsproxywidget.h
@@ -216,7 +214,7 @@ func (*QGraphicsProxyWidget) NewFromPointer(cthis unsafe.Pointer) *QGraphicsProx
 	return NewQGraphicsProxyWidgetFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:54
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -230,7 +228,7 @@ func (this *QGraphicsProxyWidget) MetaObject() *qtcore.QMetaObject /*777 const Q
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:56
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:57
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsProxyWidget(QGraphicsItem *, Qt::WindowFlags)
@@ -253,7 +251,7 @@ func NewQGraphicsProxyWidget(parent QGraphicsItem_ITF /*777 QGraphicsItem **/, w
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:56
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:57
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsProxyWidget(QGraphicsItem *, Qt::WindowFlags)
@@ -276,7 +274,7 @@ func NewQGraphicsProxyWidgetp() *QGraphicsProxyWidget {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:56
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:57
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsProxyWidget(QGraphicsItem *, Qt::WindowFlags)
@@ -301,7 +299,7 @@ func NewQGraphicsProxyWidgetp1(parent QGraphicsItem_ITF /*777 QGraphicsItem **/)
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:57
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsProxyWidget()
@@ -316,7 +314,7 @@ func DeleteQGraphicsProxyWidget(this *QGraphicsProxyWidget) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:59
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidget(QWidget *)
@@ -347,7 +345,7 @@ func (this *QGraphicsProxyWidget) SetWidget(widget QWidget_ITF /*777 QWidget **/
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:60
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * widget() const
@@ -363,7 +361,7 @@ func (this *QGraphicsProxyWidget) Widget() *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:62
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:63
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF subWidgetRect(const QWidget *) const
@@ -387,7 +385,7 @@ func (this *QGraphicsProxyWidget) SubWidgetRect(widget QWidget_ITF /*777 const Q
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:64
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRectF &)
@@ -404,7 +402,7 @@ func (this *QGraphicsProxyWidget) SetGeometry(rect qtcore.QRectF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:66
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
@@ -429,7 +427,7 @@ func (this *QGraphicsProxyWidget) Paint(painter qtgui.QPainter_ITF /*777 QPainte
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:71
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:72
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int type() const
@@ -443,7 +441,7 @@ func (this *QGraphicsProxyWidget) Type() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:73
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsProxyWidget * createProxyForChildWidget(QWidget *)
@@ -469,7 +467,7 @@ func (this *QGraphicsProxyWidget) CreateProxyForChildWidget(child QWidget_ITF /*
 	return /*==*/ NewQGraphicsProxyWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:76
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:77
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant itemChange(QGraphicsItem::GraphicsItemChange, const QVariant &)
@@ -489,7 +487,7 @@ func (this *QGraphicsProxyWidget) ItemChange(change int, value qtcore.QVariant_I
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:78
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:79
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -507,7 +505,7 @@ func (this *QGraphicsProxyWidget) Event(event qtcore.QEvent_ITF /*777 QEvent **/
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:79
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:80
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
@@ -529,7 +527,7 @@ func (this *QGraphicsProxyWidget) EventFilter(object qtcore.QObject_ITF /*777 QO
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:81
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:82
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
@@ -546,7 +544,7 @@ func (this *QGraphicsProxyWidget) ShowEvent(event qtgui.QShowEvent_ITF /*777 QSh
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:82
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:83
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
@@ -563,7 +561,7 @@ func (this *QGraphicsProxyWidget) HideEvent(event qtgui.QHideEvent_ITF /*777 QHi
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:85
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:86
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QGraphicsSceneContextMenuEvent *)
@@ -580,7 +578,7 @@ func (this *QGraphicsProxyWidget) ContextMenuEvent(event QGraphicsSceneContextMe
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:89
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:90
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragEnterEvent(QGraphicsSceneDragDropEvent *)
@@ -597,7 +595,7 @@ func (this *QGraphicsProxyWidget) DragEnterEvent(event QGraphicsSceneDragDropEve
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:90
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:91
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragLeaveEvent(QGraphicsSceneDragDropEvent *)
@@ -614,7 +612,7 @@ func (this *QGraphicsProxyWidget) DragLeaveEvent(event QGraphicsSceneDragDropEve
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:91
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:92
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragMoveEvent(QGraphicsSceneDragDropEvent *)
@@ -631,7 +629,7 @@ func (this *QGraphicsProxyWidget) DragMoveEvent(event QGraphicsSceneDragDropEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:92
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:93
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QGraphicsSceneDragDropEvent *)
@@ -648,7 +646,7 @@ func (this *QGraphicsProxyWidget) DropEvent(event QGraphicsSceneDragDropEvent_IT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:95
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:96
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hoverEnterEvent(QGraphicsSceneHoverEvent *)
@@ -665,7 +663,7 @@ func (this *QGraphicsProxyWidget) HoverEnterEvent(event QGraphicsSceneHoverEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:96
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:97
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hoverLeaveEvent(QGraphicsSceneHoverEvent *)
@@ -682,7 +680,7 @@ func (this *QGraphicsProxyWidget) HoverLeaveEvent(event QGraphicsSceneHoverEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:97
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:98
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hoverMoveEvent(QGraphicsSceneHoverEvent *)
@@ -699,7 +697,7 @@ func (this *QGraphicsProxyWidget) HoverMoveEvent(event QGraphicsSceneHoverEvent_
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:98
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:99
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void grabMouseEvent(QEvent *)
@@ -716,7 +714,7 @@ func (this *QGraphicsProxyWidget) GrabMouseEvent(event qtcore.QEvent_ITF /*777 Q
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:99
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:100
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void ungrabMouseEvent(QEvent *)
@@ -733,7 +731,7 @@ func (this *QGraphicsProxyWidget) UngrabMouseEvent(event qtcore.QEvent_ITF /*777
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:101
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:102
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QGraphicsSceneMouseEvent *)
@@ -750,7 +748,7 @@ func (this *QGraphicsProxyWidget) MouseMoveEvent(event QGraphicsSceneMouseEvent_
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:102
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:103
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QGraphicsSceneMouseEvent *)
@@ -767,7 +765,7 @@ func (this *QGraphicsProxyWidget) MousePressEvent(event QGraphicsSceneMouseEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:103
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:104
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QGraphicsSceneMouseEvent *)
@@ -784,7 +782,7 @@ func (this *QGraphicsProxyWidget) MouseReleaseEvent(event QGraphicsSceneMouseEve
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:104
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:105
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *)
@@ -801,7 +799,7 @@ func (this *QGraphicsProxyWidget) MouseDoubleClickEvent(event QGraphicsSceneMous
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:106
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:107
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QGraphicsSceneWheelEvent *)
@@ -818,7 +816,7 @@ func (this *QGraphicsProxyWidget) WheelEvent(event QGraphicsSceneWheelEvent_ITF 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:109
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:110
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
@@ -835,7 +833,7 @@ func (this *QGraphicsProxyWidget) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:110
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:111
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
@@ -852,7 +850,7 @@ func (this *QGraphicsProxyWidget) KeyReleaseEvent(event qtgui.QKeyEvent_ITF /*77
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:112
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:113
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
@@ -869,7 +867,7 @@ func (this *QGraphicsProxyWidget) FocusInEvent(event qtgui.QFocusEvent_ITF /*777
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:113
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:114
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
@@ -886,7 +884,7 @@ func (this *QGraphicsProxyWidget) FocusOutEvent(event qtgui.QFocusEvent_ITF /*77
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:114
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:115
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool focusNextPrevChild(bool)
@@ -900,7 +898,7 @@ func (this *QGraphicsProxyWidget) FocusNextPrevChild(next bool) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:116
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:117
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant inputMethodQuery(Qt::InputMethodQuery) const
@@ -916,7 +914,7 @@ func (this *QGraphicsProxyWidget) InputMethodQuery(query int) *qtcore.QVariant /
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:117
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:118
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void inputMethodEvent(QInputMethodEvent *)
@@ -933,7 +931,7 @@ func (this *QGraphicsProxyWidget) InputMethodEvent(event qtgui.QInputMethodEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:119
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:120
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &) const
@@ -953,7 +951,7 @@ func (this *QGraphicsProxyWidget) SizeHint(which int, constraint qtcore.QSizeF_I
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:119
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:120
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &) const
@@ -971,7 +969,7 @@ func (this *QGraphicsProxyWidget) SizeHintp(which int) *qtcore.QSizeF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:120
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:121
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QGraphicsSceneResizeEvent *)
@@ -988,7 +986,7 @@ func (this *QGraphicsProxyWidget) ResizeEvent(event QGraphicsSceneResizeEvent_IT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:123
+// /usr/include/qt/QtWidgets/qgraphicsproxywidget.h:124
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QGraphicsProxyWidget * newProxyWidget(const QWidget *)

@@ -63,7 +63,7 @@ func (*QHideEvent) NewFromPointer(cthis unsafe.Pointer) *QHideEvent {
 	return NewQHideEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:501
+// /usr/include/qt/QtGui/qevent.h:494
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QHideEvent()
@@ -82,7 +82,7 @@ func NewQHideEvent() *QHideEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:502
+// /usr/include/qt/QtGui/qevent.h:495
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QHideEvent()

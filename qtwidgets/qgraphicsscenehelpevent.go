@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h
@@ -66,7 +64,7 @@ func (*QGraphicsSceneHelpEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphicsS
 	return NewQGraphicsSceneHelpEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:234
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:235
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneHelpEvent(QEvent::Type)
@@ -85,7 +83,7 @@ func NewQGraphicsSceneHelpEvent(type_ int) *QGraphicsSceneHelpEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:234
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:235
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneHelpEvent(QEvent::Type)
@@ -106,7 +104,7 @@ func NewQGraphicsSceneHelpEventp() *QGraphicsSceneHelpEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:235
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:236
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsSceneHelpEvent()
@@ -121,7 +119,7 @@ func DeleteQGraphicsSceneHelpEvent(this *QGraphicsSceneHelpEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:237
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:238
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF scenePos() const
@@ -137,7 +135,7 @@ func (this *QGraphicsSceneHelpEvent) ScenePos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:238
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:239
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScenePos(const QPointF &)
@@ -154,7 +152,7 @@ func (this *QGraphicsSceneHelpEvent) SetScenePos(pos qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:240
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:241
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint screenPos() const
@@ -170,7 +168,7 @@ func (this *QGraphicsSceneHelpEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:241
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:242
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScreenPos(const QPoint &)

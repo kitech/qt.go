@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qbuttongroup.h
@@ -66,7 +64,7 @@ func (*QButtonGroup) NewFromPointer(cthis unsafe.Pointer) *QButtonGroup {
 	return NewQButtonGroupFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:56
+// /usr/include/qt/QtWidgets/qbuttongroup.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -80,7 +78,7 @@ func (this *QButtonGroup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:60
+// /usr/include/qt/QtWidgets/qbuttongroup.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QButtonGroup(QObject *)
@@ -105,7 +103,7 @@ func NewQButtonGroup(parent qtcore.QObject_ITF /*777 QObject **/) *QButtonGroup 
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:60
+// /usr/include/qt/QtWidgets/qbuttongroup.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QButtonGroup(QObject *)
@@ -128,7 +126,7 @@ func NewQButtonGroupp() *QButtonGroup {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:61
+// /usr/include/qt/QtWidgets/qbuttongroup.h:62
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QButtonGroup()
@@ -143,7 +141,7 @@ func DeleteQButtonGroup(this *QButtonGroup) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:63
+// /usr/include/qt/QtWidgets/qbuttongroup.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setExclusive(bool)
@@ -156,7 +154,7 @@ func (this *QButtonGroup) SetExclusive(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:64
+// /usr/include/qt/QtWidgets/qbuttongroup.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool exclusive() const
@@ -170,7 +168,7 @@ func (this *QButtonGroup) Exclusive() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:66
+// /usr/include/qt/QtWidgets/qbuttongroup.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addButton(QAbstractButton *, int)
@@ -189,7 +187,7 @@ func (this *QButtonGroup) AddButton(arg0 QAbstractButton_ITF /*777 QAbstractButt
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:66
+// /usr/include/qt/QtWidgets/qbuttongroup.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addButton(QAbstractButton *, int)
@@ -210,7 +208,7 @@ func (this *QButtonGroup) AddButtonp(arg0 QAbstractButton_ITF /*777 QAbstractBut
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:67
+// /usr/include/qt/QtWidgets/qbuttongroup.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeButton(QAbstractButton *)
@@ -229,7 +227,7 @@ func (this *QButtonGroup) RemoveButton(arg0 QAbstractButton_ITF /*777 QAbstractB
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:71
+// /usr/include/qt/QtWidgets/qbuttongroup.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractButton * checkedButton() const
@@ -245,7 +243,7 @@ func (this *QButtonGroup) CheckedButton() *QAbstractButton /*777 QAbstractButton
 	return /*==*/ NewQAbstractButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:74
+// /usr/include/qt/QtWidgets/qbuttongroup.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractButton * button(int) const
@@ -261,7 +259,7 @@ func (this *QButtonGroup) Button(id int) *QAbstractButton /*777 QAbstractButton 
 	return /*==*/ NewQAbstractButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:75
+// /usr/include/qt/QtWidgets/qbuttongroup.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setId(QAbstractButton *, int)
@@ -282,7 +280,7 @@ func (this *QButtonGroup) SetId(button QAbstractButton_ITF /*777 QAbstractButton
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:76
+// /usr/include/qt/QtWidgets/qbuttongroup.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int id(QAbstractButton *) const
@@ -304,7 +302,7 @@ func (this *QButtonGroup) Id(button QAbstractButton_ITF /*777 QAbstractButton **
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:77
+// /usr/include/qt/QtWidgets/qbuttongroup.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int checkedId() const
@@ -322,7 +320,7 @@ func (this *QButtonGroup) CheckedId() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:80
+// /usr/include/qt/QtWidgets/qbuttongroup.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void buttonClicked(QAbstractButton *)
@@ -330,10 +328,10 @@ func (this *QButtonGroup) CheckedId() int {
 /*
 This signal is emitted when the given button is clicked. A button is clicked when it is first pressed and then released, when its shortcut key is typed, or when QAbstractButton::click() or QAbstractButton::animateClick() is programmatically called.
 
-Note: Signal buttonClicked is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal buttonClicked is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(buttonGroup, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonClicked),
+  connect(buttonGroup, static_cast<void(QButtonGroup::*)(QAbstractButton *)>(&QButtonGroup::buttonClicked),
       [=](QAbstractButton *button){ /-* ... *-/ });
 
 
@@ -349,7 +347,7 @@ func (this *QButtonGroup) ButtonClicked(arg0 QAbstractButton_ITF /*777 QAbstract
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:81
+// /usr/include/qt/QtWidgets/qbuttongroup.h:82
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void buttonClicked(int)
@@ -357,10 +355,10 @@ func (this *QButtonGroup) ButtonClicked(arg0 QAbstractButton_ITF /*777 QAbstract
 /*
 This signal is emitted when the given button is clicked. A button is clicked when it is first pressed and then released, when its shortcut key is typed, or when QAbstractButton::click() or QAbstractButton::animateClick() is programmatically called.
 
-Note: Signal buttonClicked is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal buttonClicked is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(buttonGroup, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonClicked),
+  connect(buttonGroup, static_cast<void(QButtonGroup::*)(QAbstractButton *)>(&QButtonGroup::buttonClicked),
       [=](QAbstractButton *button){ /-* ... *-/ });
 
 
@@ -372,7 +370,7 @@ func (this *QButtonGroup) ButtonClicked1(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:82
+// /usr/include/qt/QtWidgets/qbuttongroup.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void buttonPressed(QAbstractButton *)
@@ -380,10 +378,10 @@ func (this *QButtonGroup) ButtonClicked1(arg0 int) {
 /*
 This signal is emitted when the given button is pressed down.
 
-Note: Signal buttonPressed is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal buttonPressed is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(buttonGroup, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonPressed),
+  connect(buttonGroup, static_cast<void(QButtonGroup::*)(QAbstractButton *)>(&QButtonGroup::buttonPressed),
       [=](QAbstractButton *button){ /-* ... *-/ });
 
 
@@ -401,7 +399,7 @@ func (this *QButtonGroup) ButtonPressed(arg0 QAbstractButton_ITF /*777 QAbstract
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:83
+// /usr/include/qt/QtWidgets/qbuttongroup.h:84
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void buttonPressed(int)
@@ -409,10 +407,10 @@ func (this *QButtonGroup) ButtonPressed(arg0 QAbstractButton_ITF /*777 QAbstract
 /*
 This signal is emitted when the given button is pressed down.
 
-Note: Signal buttonPressed is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal buttonPressed is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(buttonGroup, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonPressed),
+  connect(buttonGroup, static_cast<void(QButtonGroup::*)(QAbstractButton *)>(&QButtonGroup::buttonPressed),
       [=](QAbstractButton *button){ /-* ... *-/ });
 
 
@@ -426,7 +424,7 @@ func (this *QButtonGroup) ButtonPressed1(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:84
+// /usr/include/qt/QtWidgets/qbuttongroup.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void buttonReleased(QAbstractButton *)
@@ -434,10 +432,10 @@ func (this *QButtonGroup) ButtonPressed1(arg0 int) {
 /*
 This signal is emitted when the given button is released.
 
-Note: Signal buttonReleased is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal buttonReleased is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(buttonGroup, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonReleased),
+  connect(buttonGroup, static_cast<void(QButtonGroup::*)(QAbstractButton *)>(&QButtonGroup::buttonReleased),
       [=](QAbstractButton *button){ /-* ... *-/ });
 
 
@@ -455,7 +453,7 @@ func (this *QButtonGroup) ButtonReleased(arg0 QAbstractButton_ITF /*777 QAbstrac
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:85
+// /usr/include/qt/QtWidgets/qbuttongroup.h:86
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void buttonReleased(int)
@@ -463,10 +461,10 @@ func (this *QButtonGroup) ButtonReleased(arg0 QAbstractButton_ITF /*777 QAbstrac
 /*
 This signal is emitted when the given button is released.
 
-Note: Signal buttonReleased is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal buttonReleased is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(buttonGroup, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonReleased),
+  connect(buttonGroup, static_cast<void(QButtonGroup::*)(QAbstractButton *)>(&QButtonGroup::buttonReleased),
       [=](QAbstractButton *button){ /-* ... *-/ });
 
 
@@ -480,7 +478,7 @@ func (this *QButtonGroup) ButtonReleased1(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:86
+// /usr/include/qt/QtWidgets/qbuttongroup.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void buttonToggled(QAbstractButton *, bool)
@@ -488,10 +486,10 @@ func (this *QButtonGroup) ButtonReleased1(arg0 int) {
 /*
 This signal is emitted when the given button is toggled. checked is true if the button is checked, or false if the button is unchecked.
 
-Note: Signal buttonToggled is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal buttonToggled is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(buttonGroup, QOverload<QAbstractButton *, bool>::of(&QButtonGroup::buttonToggled),
+  connect(buttonGroup, static_cast<void(QButtonGroup::*)(QAbstractButton *, bool)>(&QButtonGroup::buttonToggled),
       [=](QAbstractButton *button, bool checked){ /-* ... *-/ });
 
 
@@ -509,7 +507,7 @@ func (this *QButtonGroup) ButtonToggled(arg0 QAbstractButton_ITF /*777 QAbstract
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qbuttongroup.h:87
+// /usr/include/qt/QtWidgets/qbuttongroup.h:88
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void buttonToggled(int, bool)
@@ -517,10 +515,10 @@ func (this *QButtonGroup) ButtonToggled(arg0 QAbstractButton_ITF /*777 QAbstract
 /*
 This signal is emitted when the given button is toggled. checked is true if the button is checked, or false if the button is unchecked.
 
-Note: Signal buttonToggled is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal buttonToggled is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(buttonGroup, QOverload<QAbstractButton *, bool>::of(&QButtonGroup::buttonToggled),
+  connect(buttonGroup, static_cast<void(QButtonGroup::*)(QAbstractButton *, bool)>(&QButtonGroup::buttonToggled),
       [=](QAbstractButton *button, bool checked){ /-* ... *-/ });
 
 

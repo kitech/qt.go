@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h
@@ -68,7 +66,7 @@ func (*QGraphicsSceneDragDropEvent) NewFromPointer(cthis unsafe.Pointer) *QGraph
 	return NewQGraphicsSceneDragDropEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:252
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:253
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneDragDropEvent(QEvent::Type)
@@ -87,7 +85,7 @@ func NewQGraphicsSceneDragDropEvent(type_ int) *QGraphicsSceneDragDropEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:252
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:253
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneDragDropEvent(QEvent::Type)
@@ -108,7 +106,7 @@ func NewQGraphicsSceneDragDropEventp() *QGraphicsSceneDragDropEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:253
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:254
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsSceneDragDropEvent()
@@ -123,7 +121,7 @@ func DeleteQGraphicsSceneDragDropEvent(this *QGraphicsSceneDragDropEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:255
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:256
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF pos() const
@@ -139,7 +137,7 @@ func (this *QGraphicsSceneDragDropEvent) Pos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:256
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:257
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPos(const QPointF &)
@@ -156,7 +154,7 @@ func (this *QGraphicsSceneDragDropEvent) SetPos(pos qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:258
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:259
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF scenePos() const
@@ -172,7 +170,7 @@ func (this *QGraphicsSceneDragDropEvent) ScenePos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:259
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:260
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScenePos(const QPointF &)
@@ -189,7 +187,7 @@ func (this *QGraphicsSceneDragDropEvent) SetScenePos(pos qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:261
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:262
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint screenPos() const
@@ -205,7 +203,7 @@ func (this *QGraphicsSceneDragDropEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:262
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:263
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScreenPos(const QPoint &)
@@ -222,7 +220,7 @@ func (this *QGraphicsSceneDragDropEvent) SetScreenPos(pos qtcore.QPoint_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:264
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:265
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::MouseButtons buttons() const
@@ -236,7 +234,7 @@ func (this *QGraphicsSceneDragDropEvent) Buttons() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:265
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:266
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setButtons(Qt::MouseButtons)
@@ -249,7 +247,7 @@ func (this *QGraphicsSceneDragDropEvent) SetButtons(buttons int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:267
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:268
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::KeyboardModifiers modifiers() const
@@ -263,7 +261,7 @@ func (this *QGraphicsSceneDragDropEvent) Modifiers() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:268
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:269
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setModifiers(Qt::KeyboardModifiers)
@@ -276,7 +274,7 @@ func (this *QGraphicsSceneDragDropEvent) SetModifiers(modifiers int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:270
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:271
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::DropActions possibleActions() const
@@ -290,7 +288,7 @@ func (this *QGraphicsSceneDragDropEvent) PossibleActions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:271
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:272
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPossibleActions(Qt::DropActions)
@@ -303,7 +301,7 @@ func (this *QGraphicsSceneDragDropEvent) SetPossibleActions(actions int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:273
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:274
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::DropAction proposedAction() const
@@ -317,7 +315,7 @@ func (this *QGraphicsSceneDragDropEvent) ProposedAction() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:274
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:275
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProposedAction(Qt::DropAction)
@@ -330,7 +328,7 @@ func (this *QGraphicsSceneDragDropEvent) SetProposedAction(action int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:275
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:276
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void acceptProposedAction()
@@ -343,7 +341,7 @@ func (this *QGraphicsSceneDragDropEvent) AcceptProposedAction() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:277
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:278
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::DropAction dropAction() const
@@ -357,7 +355,7 @@ func (this *QGraphicsSceneDragDropEvent) DropAction() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:278
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:279
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDropAction(Qt::DropAction)
@@ -370,7 +368,7 @@ func (this *QGraphicsSceneDragDropEvent) SetDropAction(action int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:280
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:281
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * source() const
@@ -384,7 +382,7 @@ func (this *QGraphicsSceneDragDropEvent) Source() *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:281
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:282
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSource(QWidget *)
@@ -401,7 +399,7 @@ func (this *QGraphicsSceneDragDropEvent) SetSource(source QWidget_ITF /*777 QWid
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:283
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:284
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QMimeData * mimeData() const
@@ -415,7 +413,7 @@ func (this *QGraphicsSceneDragDropEvent) MimeData() *qtcore.QMimeData /*777 cons
 	return qtcore.NewQMimeDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:284
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:285
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMimeData(const QMimeData *)

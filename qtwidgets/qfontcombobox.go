@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qfontcombobox.h
@@ -71,7 +69,7 @@ func (*QFontComboBox) NewFromPointer(cthis unsafe.Pointer) *QFontComboBox {
 	return NewQFontComboBoxFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qfontcombobox.h:55
+// /usr/include/qt/QtWidgets/qfontcombobox.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -85,7 +83,7 @@ func (this *QFontComboBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qfontcombobox.h:61
+// /usr/include/qt/QtWidgets/qfontcombobox.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFontComboBox(QWidget *)
@@ -108,7 +106,7 @@ func NewQFontComboBox(parent QWidget_ITF /*777 QWidget **/) *QFontComboBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qfontcombobox.h:61
+// /usr/include/qt/QtWidgets/qfontcombobox.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFontComboBox(QWidget *)
@@ -129,7 +127,7 @@ func NewQFontComboBoxp() *QFontComboBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qfontcombobox.h:62
+// /usr/include/qt/QtWidgets/qfontcombobox.h:63
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFontComboBox()
@@ -144,7 +142,7 @@ func DeleteQFontComboBox(this *QFontComboBox) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qfontcombobox.h:64
+// /usr/include/qt/QtWidgets/qfontcombobox.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWritingSystem(QFontDatabase::WritingSystem)
@@ -157,7 +155,7 @@ func (this *QFontComboBox) SetWritingSystem(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfontcombobox.h:65
+// /usr/include/qt/QtWidgets/qfontcombobox.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QFontDatabase::WritingSystem writingSystem() const
@@ -171,7 +169,7 @@ func (this *QFontComboBox) WritingSystem() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qfontcombobox.h:77
+// /usr/include/qt/QtWidgets/qfontcombobox.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFontFilters(QFontComboBox::FontFilters)
@@ -184,7 +182,7 @@ func (this *QFontComboBox) SetFontFilters(filters int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfontcombobox.h:78
+// /usr/include/qt/QtWidgets/qfontcombobox.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QFontComboBox::FontFilters fontFilters() const
@@ -198,7 +196,7 @@ func (this *QFontComboBox) FontFilters() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qfontcombobox.h:80
+// /usr/include/qt/QtWidgets/qfontcombobox.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QFont currentFont() const
@@ -214,7 +212,7 @@ func (this *QFontComboBox) CurrentFont() *qtgui.QFont /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfontcombobox.h:81
+// /usr/include/qt/QtWidgets/qfontcombobox.h:82
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
@@ -230,7 +228,7 @@ func (this *QFontComboBox) SizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfontcombobox.h:84
+// /usr/include/qt/QtWidgets/qfontcombobox.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentFont(const QFont &)
@@ -247,7 +245,7 @@ func (this *QFontComboBox) SetCurrentFont(f qtgui.QFont_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfontcombobox.h:87
+// /usr/include/qt/QtWidgets/qfontcombobox.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentFontChanged(const QFont &)
@@ -268,7 +266,7 @@ func (this *QFontComboBox) CurrentFontChanged(f qtgui.QFont_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfontcombobox.h:90
+// /usr/include/qt/QtWidgets/qfontcombobox.h:91
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)

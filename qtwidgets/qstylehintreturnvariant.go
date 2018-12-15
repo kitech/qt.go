@@ -64,7 +64,7 @@ func (*QStyleHintReturnVariant) NewFromPointer(cthis unsafe.Pointer) *QStyleHint
 	return NewQStyleHintReturnVariantFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:733
+// /usr/include/qt/QtWidgets/qstyleoption.h:722
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleHintReturnVariant()
@@ -83,7 +83,7 @@ func NewQStyleHintReturnVariant() *QStyleHintReturnVariant {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:734
+// /usr/include/qt/QtWidgets/qstyleoption.h:723
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QStyleHintReturnVariant()

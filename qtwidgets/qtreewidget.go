@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qtreewidget.h
@@ -101,7 +99,7 @@ func (*QTreeWidget) NewFromPointer(cthis unsafe.Pointer) *QTreeWidget {
 	return NewQTreeWidgetFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:257
+// /usr/include/qt/QtWidgets/qtreewidget.h:258
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -115,7 +113,7 @@ func (this *QTreeWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:264
+// /usr/include/qt/QtWidgets/qtreewidget.h:265
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTreeWidget(QWidget *)
@@ -138,7 +136,7 @@ func NewQTreeWidget(parent QWidget_ITF /*777 QWidget **/) *QTreeWidget {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:264
+// /usr/include/qt/QtWidgets/qtreewidget.h:265
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTreeWidget(QWidget *)
@@ -159,7 +157,7 @@ func NewQTreeWidgetp() *QTreeWidget {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:265
+// /usr/include/qt/QtWidgets/qtreewidget.h:266
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTreeWidget()
@@ -174,7 +172,7 @@ func DeleteQTreeWidget(this *QTreeWidget) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:267
+// /usr/include/qt/QtWidgets/qtreewidget.h:268
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int columnCount() const
@@ -188,7 +186,7 @@ func (this *QTreeWidget) ColumnCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:268
+// /usr/include/qt/QtWidgets/qtreewidget.h:269
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColumnCount(int)
@@ -201,7 +199,7 @@ func (this *QTreeWidget) SetColumnCount(columns int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:270
+// /usr/include/qt/QtWidgets/qtreewidget.h:271
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTreeWidgetItem * invisibleRootItem() const
@@ -219,7 +217,7 @@ func (this *QTreeWidget) InvisibleRootItem() *QTreeWidgetItem /*777 QTreeWidgetI
 	return /*==*/ NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:271
+// /usr/include/qt/QtWidgets/qtreewidget.h:272
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTreeWidgetItem * topLevelItem(int) const
@@ -235,7 +233,7 @@ func (this *QTreeWidget) TopLevelItem(index int) *QTreeWidgetItem /*777 QTreeWid
 	return /*==*/ NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:272
+// /usr/include/qt/QtWidgets/qtreewidget.h:273
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int topLevelItemCount() const
@@ -249,7 +247,7 @@ func (this *QTreeWidget) TopLevelItemCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:273
+// /usr/include/qt/QtWidgets/qtreewidget.h:274
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertTopLevelItem(int, QTreeWidgetItem *)
@@ -270,7 +268,7 @@ func (this *QTreeWidget) InsertTopLevelItem(index int, item QTreeWidgetItem_ITF 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:274
+// /usr/include/qt/QtWidgets/qtreewidget.h:275
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addTopLevelItem(QTreeWidgetItem *)
@@ -291,7 +289,7 @@ func (this *QTreeWidget) AddTopLevelItem(item QTreeWidgetItem_ITF /*777 QTreeWid
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:275
+// /usr/include/qt/QtWidgets/qtreewidget.h:276
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTreeWidgetItem * takeTopLevelItem(int)
@@ -307,7 +305,7 @@ func (this *QTreeWidget) TakeTopLevelItem(index int) *QTreeWidgetItem /*777 QTre
 	return /*==*/ NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:276
+// /usr/include/qt/QtWidgets/qtreewidget.h:277
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOfTopLevelItem(QTreeWidgetItem *) const
@@ -327,7 +325,7 @@ func (this *QTreeWidget) IndexOfTopLevelItem(item QTreeWidgetItem_ITF /*777 QTre
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:281
+// /usr/include/qt/QtWidgets/qtreewidget.h:282
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTreeWidgetItem * headerItem() const
@@ -343,7 +341,7 @@ func (this *QTreeWidget) HeaderItem() *QTreeWidgetItem /*777 QTreeWidgetItem **/
 	return /*==*/ NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:282
+// /usr/include/qt/QtWidgets/qtreewidget.h:283
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHeaderItem(QTreeWidgetItem *)
@@ -364,7 +362,7 @@ func (this *QTreeWidget) SetHeaderItem(item QTreeWidgetItem_ITF /*777 QTreeWidge
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:283
+// /usr/include/qt/QtWidgets/qtreewidget.h:284
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHeaderLabels(const QStringList &)
@@ -385,7 +383,7 @@ func (this *QTreeWidget) SetHeaderLabels(labels qtcore.QStringList_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:284
+// /usr/include/qt/QtWidgets/qtreewidget.h:285
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setHeaderLabel(const QString &)
@@ -402,7 +400,7 @@ func (this *QTreeWidget) SetHeaderLabel(label string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:286
+// /usr/include/qt/QtWidgets/qtreewidget.h:287
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTreeWidgetItem * currentItem() const
@@ -418,7 +416,7 @@ func (this *QTreeWidget) CurrentItem() *QTreeWidgetItem /*777 QTreeWidgetItem **
 	return /*==*/ NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:287
+// /usr/include/qt/QtWidgets/qtreewidget.h:288
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentColumn() const
@@ -436,7 +434,7 @@ func (this *QTreeWidget) CurrentColumn() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:288
+// /usr/include/qt/QtWidgets/qtreewidget.h:289
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentItem(QTreeWidgetItem *)
@@ -457,7 +455,7 @@ func (this *QTreeWidget) SetCurrentItem(item QTreeWidgetItem_ITF /*777 QTreeWidg
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:289
+// /usr/include/qt/QtWidgets/qtreewidget.h:290
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentItem(QTreeWidgetItem *, int)
@@ -478,7 +476,7 @@ func (this *QTreeWidget) SetCurrentItem1(item QTreeWidgetItem_ITF /*777 QTreeWid
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:290
+// /usr/include/qt/QtWidgets/qtreewidget.h:291
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentItem(QTreeWidgetItem *, int, QItemSelectionModel::SelectionFlags)
@@ -499,7 +497,7 @@ func (this *QTreeWidget) SetCurrentItem2(item QTreeWidgetItem_ITF /*777 QTreeWid
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:292
+// /usr/include/qt/QtWidgets/qtreewidget.h:293
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTreeWidgetItem * itemAt(const QPoint &) const
@@ -519,7 +517,7 @@ func (this *QTreeWidget) ItemAt(p qtcore.QPoint_ITF) *QTreeWidgetItem /*777 QTre
 	return /*==*/ NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:293
+// /usr/include/qt/QtWidgets/qtreewidget.h:294
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QTreeWidgetItem * itemAt(int, int) const
@@ -535,7 +533,7 @@ func (this *QTreeWidget) ItemAt1(x int, y int) *QTreeWidgetItem /*777 QTreeWidge
 	return /*==*/ NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:294
+// /usr/include/qt/QtWidgets/qtreewidget.h:295
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect visualItemRect(const QTreeWidgetItem *) const
@@ -557,7 +555,7 @@ func (this *QTreeWidget) VisualItemRect(item QTreeWidgetItem_ITF /*777 const QTr
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:296
+// /usr/include/qt/QtWidgets/qtreewidget.h:297
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int sortColumn() const
@@ -575,7 +573,7 @@ func (this *QTreeWidget) SortColumn() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:297
+// /usr/include/qt/QtWidgets/qtreewidget.h:298
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sortItems(int, Qt::SortOrder)
@@ -590,7 +588,7 @@ func (this *QTreeWidget) SortItems(column int, order int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:299
+// /usr/include/qt/QtWidgets/qtreewidget.h:300
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void editItem(QTreeWidgetItem *, int)
@@ -607,7 +605,7 @@ func (this *QTreeWidget) EditItem(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:299
+// /usr/include/qt/QtWidgets/qtreewidget.h:300
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void editItem(QTreeWidgetItem *, int)
@@ -626,7 +624,7 @@ func (this *QTreeWidget) EditItemp(item QTreeWidgetItem_ITF /*777 QTreeWidgetIte
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:300
+// /usr/include/qt/QtWidgets/qtreewidget.h:301
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void openPersistentEditor(QTreeWidgetItem *, int)
@@ -634,7 +632,7 @@ func (this *QTreeWidget) EditItemp(item QTreeWidgetItem_ITF /*777 QTreeWidgetIte
 /*
 Opens a persistent editor for the item in the given column.
 
-See also closePersistentEditor() and isPersistentEditorOpen().
+See also closePersistentEditor().
 */
 func (this *QTreeWidget) OpenPersistentEditor(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) {
 	var convArg0 unsafe.Pointer
@@ -645,7 +643,7 @@ func (this *QTreeWidget) OpenPersistentEditor(item QTreeWidgetItem_ITF /*777 QTr
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:300
+// /usr/include/qt/QtWidgets/qtreewidget.h:301
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void openPersistentEditor(QTreeWidgetItem *, int)
@@ -653,7 +651,7 @@ func (this *QTreeWidget) OpenPersistentEditor(item QTreeWidgetItem_ITF /*777 QTr
 /*
 Opens a persistent editor for the item in the given column.
 
-See also closePersistentEditor() and isPersistentEditorOpen().
+See also closePersistentEditor().
 */
 func (this *QTreeWidget) OpenPersistentEditorp(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) {
 	var convArg0 unsafe.Pointer
@@ -666,7 +664,7 @@ func (this *QTreeWidget) OpenPersistentEditorp(item QTreeWidgetItem_ITF /*777 QT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:301
+// /usr/include/qt/QtWidgets/qtreewidget.h:302
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void closePersistentEditor(QTreeWidgetItem *, int)
@@ -676,7 +674,7 @@ Closes the persistent editor for the item in the given column.
 
 This function has no effect if no persistent editor is open for this combination of item and column.
 
-See also openPersistentEditor() and isPersistentEditorOpen().
+See also openPersistentEditor().
 */
 func (this *QTreeWidget) ClosePersistentEditor(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) {
 	var convArg0 unsafe.Pointer
@@ -687,7 +685,7 @@ func (this *QTreeWidget) ClosePersistentEditor(item QTreeWidgetItem_ITF /*777 QT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:301
+// /usr/include/qt/QtWidgets/qtreewidget.h:302
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void closePersistentEditor(QTreeWidgetItem *, int)
@@ -697,7 +695,7 @@ Closes the persistent editor for the item in the given column.
 
 This function has no effect if no persistent editor is open for this combination of item and column.
 
-See also openPersistentEditor() and isPersistentEditorOpen().
+See also openPersistentEditor().
 */
 func (this *QTreeWidget) ClosePersistentEditorp(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) {
 	var convArg0 unsafe.Pointer
@@ -710,53 +708,7 @@ func (this *QTreeWidget) ClosePersistentEditorp(item QTreeWidgetItem_ITF /*777 Q
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:303
-// index:0
-// Public Visibility=Default Availability=Available
-// [1] bool isPersistentEditorOpen(QTreeWidgetItem *, int) const
-
-/*
-Returns whether a persistent editor is open for item item in column column.
-
-This function was introduced in  Qt 5.10.
-
-See also openPersistentEditor() and closePersistentEditor().
-*/
-func (this *QTreeWidget) IsPersistentEditorOpen(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/, column int) bool {
-	var convArg0 unsafe.Pointer
-	if item != nil && item.QTreeWidgetItem_PTR() != nil {
-		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget22isPersistentEditorOpenEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtWidgets/qtreewidget.h:303
-// index:0
-// Public Visibility=Default Availability=Available
-// [1] bool isPersistentEditorOpen(QTreeWidgetItem *, int) const
-
-/*
-Returns whether a persistent editor is open for item item in column column.
-
-This function was introduced in  Qt 5.10.
-
-See also openPersistentEditor() and closePersistentEditor().
-*/
-func (this *QTreeWidget) IsPersistentEditorOpenp(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem **/) bool {
-	var convArg0 unsafe.Pointer
-	if item != nil && item.QTreeWidgetItem_PTR() != nil {
-		convArg0 = item.QTreeWidgetItem_PTR().GetCthis()
-	}
-	// arg: 1, int=Int, =Invalid, , Invalid
-	column := int(0)
-	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTreeWidget22isPersistentEditorOpenEP15QTreeWidgetItemi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, column)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtWidgets/qtreewidget.h:305
+// /usr/include/qt/QtWidgets/qtreewidget.h:304
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * itemWidget(QTreeWidgetItem *, int) const
@@ -778,7 +730,7 @@ func (this *QTreeWidget) ItemWidget(item QTreeWidgetItem_ITF /*777 QTreeWidgetIt
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:306
+// /usr/include/qt/QtWidgets/qtreewidget.h:305
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemWidget(QTreeWidgetItem *, int, QWidget *)
@@ -811,7 +763,7 @@ func (this *QTreeWidget) SetItemWidget(item QTreeWidgetItem_ITF /*777 QTreeWidge
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:307
+// /usr/include/qt/QtWidgets/qtreewidget.h:306
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void removeItemWidget(QTreeWidgetItem *, int)
@@ -830,7 +782,7 @@ func (this *QTreeWidget) RemoveItemWidget(item QTreeWidgetItem_ITF /*777 QTreeWi
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:309
+// /usr/include/qt/QtWidgets/qtreewidget.h:308
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isItemSelected(const QTreeWidgetItem *) const
@@ -848,7 +800,7 @@ func (this *QTreeWidget) IsItemSelected(item QTreeWidgetItem_ITF /*777 const QTr
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:310
+// /usr/include/qt/QtWidgets/qtreewidget.h:309
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemSelected(const QTreeWidgetItem *, bool)
@@ -865,7 +817,7 @@ func (this *QTreeWidget) SetItemSelected(item QTreeWidgetItem_ITF /*777 const QT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:315
+// /usr/include/qt/QtWidgets/qtreewidget.h:314
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isItemHidden(const QTreeWidgetItem *) const
@@ -883,7 +835,7 @@ func (this *QTreeWidget) IsItemHidden(item QTreeWidgetItem_ITF /*777 const QTree
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:316
+// /usr/include/qt/QtWidgets/qtreewidget.h:315
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemHidden(const QTreeWidgetItem *, bool)
@@ -900,7 +852,7 @@ func (this *QTreeWidget) SetItemHidden(item QTreeWidgetItem_ITF /*777 const QTre
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:318
+// /usr/include/qt/QtWidgets/qtreewidget.h:317
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isItemExpanded(const QTreeWidgetItem *) const
@@ -918,7 +870,7 @@ func (this *QTreeWidget) IsItemExpanded(item QTreeWidgetItem_ITF /*777 const QTr
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:319
+// /usr/include/qt/QtWidgets/qtreewidget.h:318
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemExpanded(const QTreeWidgetItem *, bool)
@@ -935,7 +887,7 @@ func (this *QTreeWidget) SetItemExpanded(item QTreeWidgetItem_ITF /*777 const QT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:321
+// /usr/include/qt/QtWidgets/qtreewidget.h:320
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isFirstItemColumnSpanned(const QTreeWidgetItem *) const
@@ -957,7 +909,7 @@ func (this *QTreeWidget) IsFirstItemColumnSpanned(item QTreeWidgetItem_ITF /*777
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:322
+// /usr/include/qt/QtWidgets/qtreewidget.h:321
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFirstItemColumnSpanned(const QTreeWidgetItem *, bool)
@@ -978,7 +930,7 @@ func (this *QTreeWidget) SetFirstItemColumnSpanned(item QTreeWidgetItem_ITF /*77
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:324
+// /usr/include/qt/QtWidgets/qtreewidget.h:323
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTreeWidgetItem * itemAbove(const QTreeWidgetItem *) const
@@ -998,7 +950,7 @@ func (this *QTreeWidget) ItemAbove(item QTreeWidgetItem_ITF /*777 const QTreeWid
 	return /*==*/ NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:325
+// /usr/include/qt/QtWidgets/qtreewidget.h:324
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTreeWidgetItem * itemBelow(const QTreeWidgetItem *) const
@@ -1018,7 +970,7 @@ func (this *QTreeWidget) ItemBelow(item QTreeWidgetItem_ITF /*777 const QTreeWid
 	return /*==*/ NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:327
+// /usr/include/qt/QtWidgets/qtreewidget.h:326
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setSelectionModel(QItemSelectionModel *)
@@ -1035,7 +987,7 @@ func (this *QTreeWidget) SetSelectionModel(selectionModel qtcore.QItemSelectionM
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:330
+// /usr/include/qt/QtWidgets/qtreewidget.h:329
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void scrollToItem(const QTreeWidgetItem *, QAbstractItemView::ScrollHint)
@@ -1054,7 +1006,7 @@ func (this *QTreeWidget) ScrollToItem(item QTreeWidgetItem_ITF /*777 const QTree
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:330
+// /usr/include/qt/QtWidgets/qtreewidget.h:329
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void scrollToItem(const QTreeWidgetItem *, QAbstractItemView::ScrollHint)
@@ -1075,7 +1027,7 @@ func (this *QTreeWidget) ScrollToItemp(item QTreeWidgetItem_ITF /*777 const QTre
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:332
+// /usr/include/qt/QtWidgets/qtreewidget.h:331
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void expandItem(const QTreeWidgetItem *)
@@ -1094,7 +1046,7 @@ func (this *QTreeWidget) ExpandItem(item QTreeWidgetItem_ITF /*777 const QTreeWi
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:333
+// /usr/include/qt/QtWidgets/qtreewidget.h:332
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void collapseItem(const QTreeWidgetItem *)
@@ -1113,7 +1065,7 @@ func (this *QTreeWidget) CollapseItem(item QTreeWidgetItem_ITF /*777 const QTree
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:334
+// /usr/include/qt/QtWidgets/qtreewidget.h:333
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
@@ -1130,7 +1082,7 @@ func (this *QTreeWidget) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:337
+// /usr/include/qt/QtWidgets/qtreewidget.h:336
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemPressed(QTreeWidgetItem *, int)
@@ -1149,7 +1101,7 @@ func (this *QTreeWidget) ItemPressed(item QTreeWidgetItem_ITF /*777 QTreeWidgetI
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:338
+// /usr/include/qt/QtWidgets/qtreewidget.h:337
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemClicked(QTreeWidgetItem *, int)
@@ -1168,7 +1120,7 @@ func (this *QTreeWidget) ItemClicked(item QTreeWidgetItem_ITF /*777 QTreeWidgetI
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:339
+// /usr/include/qt/QtWidgets/qtreewidget.h:338
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemDoubleClicked(QTreeWidgetItem *, int)
@@ -1187,7 +1139,7 @@ func (this *QTreeWidget) ItemDoubleClicked(item QTreeWidgetItem_ITF /*777 QTreeW
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:340
+// /usr/include/qt/QtWidgets/qtreewidget.h:339
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemActivated(QTreeWidgetItem *, int)
@@ -1206,7 +1158,7 @@ func (this *QTreeWidget) ItemActivated(item QTreeWidgetItem_ITF /*777 QTreeWidge
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:341
+// /usr/include/qt/QtWidgets/qtreewidget.h:340
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemEntered(QTreeWidgetItem *, int)
@@ -1223,7 +1175,7 @@ func (this *QTreeWidget) ItemEntered(item QTreeWidgetItem_ITF /*777 QTreeWidgetI
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:342
+// /usr/include/qt/QtWidgets/qtreewidget.h:341
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemChanged(QTreeWidgetItem *, int)
@@ -1240,7 +1192,7 @@ func (this *QTreeWidget) ItemChanged(item QTreeWidgetItem_ITF /*777 QTreeWidgetI
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:343
+// /usr/include/qt/QtWidgets/qtreewidget.h:342
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemExpanded(QTreeWidgetItem *)
@@ -1261,7 +1213,7 @@ func (this *QTreeWidget) ItemExpanded(item QTreeWidgetItem_ITF /*777 QTreeWidget
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:344
+// /usr/include/qt/QtWidgets/qtreewidget.h:343
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemCollapsed(QTreeWidgetItem *)
@@ -1282,7 +1234,7 @@ func (this *QTreeWidget) ItemCollapsed(item QTreeWidgetItem_ITF /*777 QTreeWidge
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:345
+// /usr/include/qt/QtWidgets/qtreewidget.h:344
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentItemChanged(QTreeWidgetItem *, QTreeWidgetItem *)
@@ -1305,7 +1257,7 @@ func (this *QTreeWidget) CurrentItemChanged(current QTreeWidgetItem_ITF /*777 QT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:346
+// /usr/include/qt/QtWidgets/qtreewidget.h:345
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemSelectionChanged()
@@ -1318,7 +1270,7 @@ func (this *QTreeWidget) ItemSelectionChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:349
+// /usr/include/qt/QtWidgets/qtreewidget.h:348
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -1336,7 +1288,7 @@ func (this *QTreeWidget) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:350
+// /usr/include/qt/QtWidgets/qtreewidget.h:349
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QStringList mimeTypes() const
@@ -1354,7 +1306,7 @@ func (this *QTreeWidget) MimeTypes() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:356
+// /usr/include/qt/QtWidgets/qtreewidget.h:355
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool dropMimeData(QTreeWidgetItem *, int, const QMimeData *, Qt::DropAction)
@@ -1380,7 +1332,7 @@ func (this *QTreeWidget) DropMimeData(parent QTreeWidgetItem_ITF /*777 QTreeWidg
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:358
+// /usr/include/qt/QtWidgets/qtreewidget.h:357
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] Qt::DropActions supportedDropActions() const
@@ -1396,7 +1348,7 @@ func (this *QTreeWidget) SupportedDropActions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:367
+// /usr/include/qt/QtWidgets/qtreewidget.h:360
 // index:0
 // Protected Visibility=Default Availability=Available
 // [24] QModelIndex indexFromItem(const QTreeWidgetItem *, int) const
@@ -1420,7 +1372,7 @@ func (this *QTreeWidget) IndexFromItem(item QTreeWidgetItem_ITF /*777 const QTre
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:367
+// /usr/include/qt/QtWidgets/qtreewidget.h:360
 // index:0
 // Protected Visibility=Default Availability=Available
 // [24] QModelIndex indexFromItem(const QTreeWidgetItem *, int) const
@@ -1446,7 +1398,7 @@ func (this *QTreeWidget) IndexFromItemp(item QTreeWidgetItem_ITF /*777 const QTr
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:368
+// /usr/include/qt/QtWidgets/qtreewidget.h:361
 // index:1
 // Protected Visibility=Default Availability=Available
 // [24] QModelIndex indexFromItem(QTreeWidgetItem *, int) const
@@ -1470,7 +1422,7 @@ func (this *QTreeWidget) IndexFromItem1(item QTreeWidgetItem_ITF /*777 QTreeWidg
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:368
+// /usr/include/qt/QtWidgets/qtreewidget.h:361
 // index:1
 // Protected Visibility=Default Availability=Available
 // [24] QModelIndex indexFromItem(QTreeWidgetItem *, int) const
@@ -1496,7 +1448,7 @@ func (this *QTreeWidget) IndexFromItem1p(item QTreeWidgetItem_ITF /*777 QTreeWid
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:369
+// /usr/include/qt/QtWidgets/qtreewidget.h:362
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QTreeWidgetItem * itemFromIndex(const QModelIndex &) const
@@ -1516,7 +1468,7 @@ func (this *QTreeWidget) ItemFromIndex(index qtcore.QModelIndex_ITF) *QTreeWidge
 	return /*==*/ NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:373
+// /usr/include/qt/QtWidgets/qtreewidget.h:364
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QDropEvent *)

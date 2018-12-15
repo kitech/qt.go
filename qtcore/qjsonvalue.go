@@ -348,42 +348,7 @@ func (this *QJsonValue) Operator_equal(other QJsonValue_ITF) *QJsonValue {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:105
-// index:1
-// Public inline Visibility=Default Availability=Available
-// [24] QJsonValue & operator=(QJsonValue &&)
-
-/*
-
- */
-func (this *QJsonValue) Operator_equal1(other unsafe.Pointer /*333*/) *QJsonValue {
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonValueaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonValue)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qjsonvalue.h:111
-// index:0
-// Public inline Visibility=Default Availability=Available
-// [-2] void swap(QJsonValue &)
-
-/*
-Swaps the value other with this. This operation is very fast and never fails.
-
-This function was introduced in  Qt 5.10.
-*/
-func (this *QJsonValue) Swap(other QJsonValue_ITF) {
-	var convArg0 unsafe.Pointer
-	if other != nil && other.QJsonValue_PTR() != nil {
-		convArg0 = other.QJsonValue_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonValue4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtCore/qjsonvalue.h:118
+// /usr/include/qt/QtCore/qjsonvalue.h:95
 // index:0
 // Public static Visibility=Default Availability=Available
 // [24] QJsonValue fromVariant(const QVariant &)
@@ -449,7 +414,7 @@ func QJsonValue_FromVariant(variant QVariant_ITF) *QJsonValue /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:119
+// /usr/include/qt/QtCore/qjsonvalue.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant toVariant() const
@@ -479,7 +444,7 @@ func (this *QJsonValue) ToVariant() *QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:121
+// /usr/include/qt/QtCore/qjsonvalue.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QJsonValue::Type type() const
@@ -495,7 +460,7 @@ func (this *QJsonValue) Type() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:122
+// /usr/include/qt/QtCore/qjsonvalue.h:99
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull() const
@@ -509,7 +474,7 @@ func (this *QJsonValue) IsNull() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:123
+// /usr/include/qt/QtCore/qjsonvalue.h:100
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isBool() const
@@ -525,7 +490,7 @@ func (this *QJsonValue) IsBool() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:124
+// /usr/include/qt/QtCore/qjsonvalue.h:101
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isDouble() const
@@ -541,7 +506,7 @@ func (this *QJsonValue) IsDouble() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:125
+// /usr/include/qt/QtCore/qjsonvalue.h:102
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isString() const
@@ -557,7 +522,7 @@ func (this *QJsonValue) IsString() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:126
+// /usr/include/qt/QtCore/qjsonvalue.h:103
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isArray() const
@@ -573,7 +538,7 @@ func (this *QJsonValue) IsArray() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:127
+// /usr/include/qt/QtCore/qjsonvalue.h:104
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isObject() const
@@ -589,7 +554,7 @@ func (this *QJsonValue) IsObject() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:128
+// /usr/include/qt/QtCore/qjsonvalue.h:105
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isUndefined() const
@@ -603,7 +568,7 @@ func (this *QJsonValue) IsUndefined() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:130
+// /usr/include/qt/QtCore/qjsonvalue.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool toBool(bool) const
@@ -619,7 +584,7 @@ func (this *QJsonValue) ToBool(defaultValue bool) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:130
+// /usr/include/qt/QtCore/qjsonvalue.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool toBool(bool) const
@@ -637,7 +602,7 @@ func (this *QJsonValue) ToBoolp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:131
+// /usr/include/qt/QtCore/qjsonvalue.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int toInt(int) const
@@ -653,7 +618,7 @@ func (this *QJsonValue) ToInt(defaultValue int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:131
+// /usr/include/qt/QtCore/qjsonvalue.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int toInt(int) const
@@ -671,7 +636,7 @@ func (this *QJsonValue) ToIntp() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:132
+// /usr/include/qt/QtCore/qjsonvalue.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double toDouble(double) const
@@ -687,7 +652,7 @@ func (this *QJsonValue) ToDouble(defaultValue float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:132
+// /usr/include/qt/QtCore/qjsonvalue.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double toDouble(double) const
@@ -705,7 +670,7 @@ func (this *QJsonValue) ToDoublep() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:133
+// /usr/include/qt/QtCore/qjsonvalue.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString() const
@@ -726,7 +691,7 @@ func (this *QJsonValue) ToString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:134
+// /usr/include/qt/QtCore/qjsonvalue.h:111
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString toString(const QString &) const
@@ -749,7 +714,7 @@ func (this *QJsonValue) ToString1(defaultValue string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:135
+// /usr/include/qt/QtCore/qjsonvalue.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QJsonArray toArray() const
@@ -767,7 +732,7 @@ func (this *QJsonValue) ToArray() *QJsonArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:136
+// /usr/include/qt/QtCore/qjsonvalue.h:113
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QJsonArray toArray(const QJsonArray &) const
@@ -789,7 +754,7 @@ func (this *QJsonValue) ToArray1(defaultValue QJsonArray_ITF) *QJsonArray /*123*
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:137
+// /usr/include/qt/QtCore/qjsonvalue.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QJsonObject toObject() const
@@ -807,7 +772,7 @@ func (this *QJsonValue) ToObject() *QJsonObject /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:138
+// /usr/include/qt/QtCore/qjsonvalue.h:115
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QJsonObject toObject(const QJsonObject &) const
@@ -829,61 +794,7 @@ func (this *QJsonValue) ToObject1(defaultValue QJsonObject_ITF) *QJsonObject /*1
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:140
-// index:0
-// Public Visibility=Default Availability=Available
-// [24] const QJsonValue operator[](const QString &) const
-
-/*
-
- */
-func (this *QJsonValue) Operator_get_index(key string) *QJsonValue /*123*/ {
-	var tmpArg0 = NewQString5(key)
-	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonValueixERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonValue)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qjsonvalue.h:141
-// index:1
-// Public Visibility=Default Availability=Available
-// [24] const QJsonValue operator[](QLatin1String) const
-
-/*
-
- */
-func (this *QJsonValue) Operator_get_index1(key QLatin1String_ITF /*123*/) *QJsonValue /*123*/ {
-	var convArg0 unsafe.Pointer
-	if key != nil && key.QLatin1String_PTR() != nil {
-		convArg0 = key.QLatin1String_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonValueixE13QLatin1String", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonValue)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qjsonvalue.h:142
-// index:2
-// Public Visibility=Default Availability=Available
-// [24] const QJsonValue operator[](int) const
-
-/*
-
- */
-func (this *QJsonValue) Operator_get_index2(i int) *QJsonValue /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK10QJsonValueixEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQJsonValueFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonValue)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qjsonvalue.h:144
+// /usr/include/qt/QtCore/qjsonvalue.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QJsonValue &) const
@@ -901,7 +812,7 @@ func (this *QJsonValue) Operator_equal_equal(other QJsonValue_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonvalue.h:145
+// /usr/include/qt/QtCore/qjsonvalue.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator!=(const QJsonValue &) const

@@ -70,7 +70,7 @@ func (*QOperatingSystemVersion) NewFromPointer(cthis unsafe.Pointer) *QOperating
 // [-2] void QOperatingSystemVersion(QOperatingSystemVersion::OSType, int, int, int)
 
 /*
-Constructs a QOperatingSystemVersion consisting of the OS type osType, and major, minor, and micro version numbers vmajor, vminor and vmicro, respectively.
+Copy constructor.
 */
 func (*QOperatingSystemVersion) NewForInherit(osType int, vmajor int, vminor int, vmicro int) *QOperatingSystemVersion {
 	return NewQOperatingSystemVersion(osType, vmajor, vminor, vmicro)
@@ -89,7 +89,7 @@ func NewQOperatingSystemVersion(osType int, vmajor int, vminor int, vmicro int) 
 // [-2] void QOperatingSystemVersion(QOperatingSystemVersion::OSType, int, int, int)
 
 /*
-Constructs a QOperatingSystemVersion consisting of the OS type osType, and major, minor, and micro version numbers vmajor, vminor and vmicro, respectively.
+Copy constructor.
 */
 func (*QOperatingSystemVersion) NewForInheritp(osType int, vmajor int) *QOperatingSystemVersion {
 	return NewQOperatingSystemVersionp(osType, vmajor)
@@ -112,7 +112,7 @@ func NewQOperatingSystemVersionp(osType int, vmajor int) *QOperatingSystemVersio
 // [-2] void QOperatingSystemVersion(QOperatingSystemVersion::OSType, int, int, int)
 
 /*
-Constructs a QOperatingSystemVersion consisting of the OS type osType, and major, minor, and micro version numbers vmajor, vminor and vmicro, respectively.
+Copy constructor.
 */
 func (*QOperatingSystemVersion) NewForInheritp1(osType int, vmajor int, vminor int) *QOperatingSystemVersion {
 	return NewQOperatingSystemVersionp1(osType, vmajor, vminor)
@@ -134,8 +134,6 @@ func NewQOperatingSystemVersionp1(osType int, vmajor int, vminor int) *QOperatin
 
 /*
 Returns a QOperatingSystemVersion indicating the current OS and its version number.
-
-See also currentType().
 */
 func (this *QOperatingSystemVersion) Current() *QOperatingSystemVersion /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN23QOperatingSystemVersion7currentEv", qtrt.FFI_TYPE_POINTER)
@@ -151,27 +149,6 @@ func QOperatingSystemVersion_Current() *QOperatingSystemVersion /*123*/ {
 }
 
 // /usr/include/qt/QtCore/qoperatingsystemversion.h:95
-// index:0
-// Public static inline Visibility=Default Availability=Available
-// [4] QOperatingSystemVersion::OSType currentType()
-
-/*
-Returns the current OS type without constructing a QOperatingSystemVersion instance.
-
-See also current().
-*/
-func (this *QOperatingSystemVersion) CurrentType() int {
-	rv, err := qtrt.InvokeQtFunc6("_ZN23QOperatingSystemVersion11currentTypeEv", qtrt.FFI_TYPE_POINTER)
-	qtrt.ErrPrint(err, rv)
-	return int(rv)
-}
-func QOperatingSystemVersion_CurrentType() int {
-	var nilthis *QOperatingSystemVersion
-	rv := nilthis.CurrentType()
-	return rv
-}
-
-// /usr/include/qt/QtCore/qoperatingsystemversion.h:114
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int majorVersion() const
@@ -191,7 +168,7 @@ func (this *QOperatingSystemVersion) MajorVersion() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qoperatingsystemversion.h:115
+// /usr/include/qt/QtCore/qoperatingsystemversion.h:96
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int minorVersion() const
@@ -211,7 +188,7 @@ func (this *QOperatingSystemVersion) MinorVersion() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qoperatingsystemversion.h:116
+// /usr/include/qt/QtCore/qoperatingsystemversion.h:97
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int microVersion() const
@@ -231,7 +208,7 @@ func (this *QOperatingSystemVersion) MicroVersion() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qoperatingsystemversion.h:118
+// /usr/include/qt/QtCore/qoperatingsystemversion.h:99
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int segmentCount() const
@@ -245,7 +222,7 @@ func (this *QOperatingSystemVersion) SegmentCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qoperatingsystemversion.h:124
+// /usr/include/qt/QtCore/qoperatingsystemversion.h:103
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QOperatingSystemVersion::OSType type() const
@@ -261,7 +238,7 @@ func (this *QOperatingSystemVersion) Type() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qoperatingsystemversion.h:125
+// /usr/include/qt/QtCore/qoperatingsystemversion.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const

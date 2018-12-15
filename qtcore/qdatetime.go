@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 31
+// extern C begin: 30
 */
 // import "C"
 import "unsafe"
@@ -64,7 +64,7 @@ func (*QDateTime) NewFromPointer(cthis unsafe.Pointer) *QDateTime {
 	return NewQDateTimeFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:261
+// /usr/include/qt/QtCore/qdatetime.h:251
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDateTime()
@@ -85,7 +85,7 @@ func NewQDateTime() *QDateTime {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:262
+// /usr/include/qt/QtCore/qdatetime.h:252
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDateTime(const QDate &)
@@ -110,7 +110,7 @@ func NewQDateTime1(arg0 QDate_ITF) *QDateTime {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:263
+// /usr/include/qt/QtCore/qdatetime.h:253
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QDateTime(const QDate &, const QTime &, Qt::TimeSpec)
@@ -139,7 +139,7 @@ func NewQDateTime2(arg0 QDate_ITF, arg1 QTime_ITF, spec int) *QDateTime {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:263
+// /usr/include/qt/QtCore/qdatetime.h:253
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QDateTime(const QDate &, const QTime &, Qt::TimeSpec)
@@ -170,7 +170,7 @@ func NewQDateTime2p(arg0 QDate_ITF, arg1 QTime_ITF) *QDateTime {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:265
+// /usr/include/qt/QtCore/qdatetime.h:255
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QDateTime(const QDate &, const QTime &, Qt::TimeSpec, int)
@@ -199,7 +199,7 @@ func NewQDateTime3(date QDate_ITF, time QTime_ITF, spec int, offsetSeconds int) 
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:267
+// /usr/include/qt/QtCore/qdatetime.h:257
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QDateTime(const QDate &, const QTime &, const QTimeZone &)
@@ -232,7 +232,7 @@ func NewQDateTime4(date QDate_ITF, time QTime_ITF, timeZone QTimeZone_ITF) *QDat
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:271
+// /usr/include/qt/QtCore/qdatetime.h:261
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QDateTime()
@@ -247,7 +247,7 @@ func DeleteQDateTime(this *QDateTime) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:274
+// /usr/include/qt/QtCore/qdatetime.h:264
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QDateTime & operator=(QDateTime &&)
@@ -263,7 +263,7 @@ func (this *QDateTime) Operator_equal(other unsafe.Pointer /*333*/) *QDateTime {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:276
+// /usr/include/qt/QtCore/qdatetime.h:266
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QDateTime & operator=(const QDateTime &)
@@ -283,7 +283,7 @@ func (this *QDateTime) Operator_equal1(other QDateTime_ITF) *QDateTime {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:278
+// /usr/include/qt/QtCore/qdatetime.h:268
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QDateTime &)
@@ -302,7 +302,7 @@ func (this *QDateTime) Swap(other QDateTime_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:280
+// /usr/include/qt/QtCore/qdatetime.h:270
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNull() const
@@ -318,7 +318,7 @@ func (this *QDateTime) IsNull() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:281
+// /usr/include/qt/QtCore/qdatetime.h:271
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -336,7 +336,7 @@ func (this *QDateTime) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:283
+// /usr/include/qt/QtCore/qdatetime.h:273
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDate date() const
@@ -354,7 +354,7 @@ func (this *QDateTime) Date() *QDate /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:284
+// /usr/include/qt/QtCore/qdatetime.h:274
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QTime time() const
@@ -372,7 +372,7 @@ func (this *QDateTime) Time() *QTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:285
+// /usr/include/qt/QtCore/qdatetime.h:275
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::TimeSpec timeSpec() const
@@ -388,7 +388,7 @@ func (this *QDateTime) TimeSpec() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:286
+// /usr/include/qt/QtCore/qdatetime.h:276
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int offsetFromUtc() const
@@ -414,7 +414,7 @@ func (this *QDateTime) OffsetFromUtc() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:288
+// /usr/include/qt/QtCore/qdatetime.h:278
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTimeZone timeZone() const
@@ -436,7 +436,7 @@ func (this *QDateTime) TimeZone() *QTimeZone /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:290
+// /usr/include/qt/QtCore/qdatetime.h:280
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString timeZoneAbbreviation() const
@@ -467,7 +467,7 @@ func (this *QDateTime) TimeZoneAbbreviation() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:291
+// /usr/include/qt/QtCore/qdatetime.h:281
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isDaylightTime() const
@@ -487,7 +487,7 @@ func (this *QDateTime) IsDaylightTime() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:293
+// /usr/include/qt/QtCore/qdatetime.h:283
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 toMSecsSinceEpoch() const
@@ -509,7 +509,7 @@ func (this *QDateTime) ToMSecsSinceEpoch() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:294
+// /usr/include/qt/QtCore/qdatetime.h:284
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 toSecsSinceEpoch() const
@@ -531,7 +531,7 @@ func (this *QDateTime) ToSecsSinceEpoch() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:296
+// /usr/include/qt/QtCore/qdatetime.h:286
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDate(const QDate &)
@@ -550,7 +550,7 @@ func (this *QDateTime) SetDate(date QDate_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:297
+// /usr/include/qt/QtCore/qdatetime.h:287
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTime(const QTime &)
@@ -575,7 +575,7 @@ func (this *QDateTime) SetTime(time QTime_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:298
+// /usr/include/qt/QtCore/qdatetime.h:288
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTimeSpec(Qt::TimeSpec)
@@ -608,7 +608,7 @@ func (this *QDateTime) SetTimeSpec(spec int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:299
+// /usr/include/qt/QtCore/qdatetime.h:289
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOffsetFromUtc(int)
@@ -629,7 +629,7 @@ func (this *QDateTime) SetOffsetFromUtc(offsetSeconds int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:301
+// /usr/include/qt/QtCore/qdatetime.h:291
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTimeZone(const QTimeZone &)
@@ -652,7 +652,7 @@ func (this *QDateTime) SetTimeZone(toZone QTimeZone_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:303
+// /usr/include/qt/QtCore/qdatetime.h:293
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMSecsSinceEpoch(qint64)
@@ -671,7 +671,7 @@ func (this *QDateTime) SetMSecsSinceEpoch(msecs int64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:304
+// /usr/include/qt/QtCore/qdatetime.h:294
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSecsSinceEpoch(qint64)
@@ -688,7 +688,7 @@ func (this *QDateTime) SetSecsSinceEpoch(secs int64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:307
+// /usr/include/qt/QtCore/qdatetime.h:297
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString(Qt::DateFormat) const
@@ -722,10 +722,10 @@ Hthe hour without a leading zero (0 to 23, even with AM/PM display)
 HHthe hour with a leading zero (00 to 23, even with AM/PM display)
 mthe minute without a leading zero (0 to 59)
 mmthe minute with a leading zero (00 to 59)
-sthe whole second without a leading zero (0 to 59)
-ssthe whole second with a leading zero where applicable (00 to 59)
-zthe fractional part of the second, to go after a decimal point, without trailing zeroes (0 to 999). Thus "s.z" reports the seconds to full available (millisecond) precision without trailing zeroes.
-zzzthe fractional part of the second, to millisecond precision, including trailing zeroes where applicable (000 to 999).
+sthe second without a leading zero (0 to 59)
+ssthe second with a leading zero (00 to 59)
+zthe milliseconds without leading zeroes (0 to 999)
+zzzthe milliseconds with leading zeroes (000 to 999)
 AP or Ause AM/PM display. A/AP will be replaced by either "AM" or "PM".
 ap or ause am/pm display. a/ap will be replaced by either "am" or "pm".
 tthe timezone (for example "CEST")
@@ -733,14 +733,13 @@ tthe timezone (for example "CEST")
 
 All other input characters will be ignored. Any sequence of characters that are enclosed in single quotes will be treated as text and not be used as an expression. Two consecutive single quotes ("''") are replaced by a singlequote in the output. Formats without separators (e.g. "HHmm") are currently not supported.
 
-Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09.120):
+Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09):
 
 
  FormatResult
 dd.MM.yyyy21.05.2001
 ddd MMMM d yyTue May 21 01
-hh:mm:ss.zzz14:13:09.120
-hh:mm:ss.z14:13:09.12
+hh:mm:ss.zzz14:13:09.042
 h:m:s ap2:13:9 pm
 
 
@@ -757,7 +756,7 @@ func (this *QDateTime) ToString(f int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:307
+// /usr/include/qt/QtCore/qdatetime.h:297
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString(Qt::DateFormat) const
@@ -791,10 +790,10 @@ Hthe hour without a leading zero (0 to 23, even with AM/PM display)
 HHthe hour with a leading zero (00 to 23, even with AM/PM display)
 mthe minute without a leading zero (0 to 59)
 mmthe minute with a leading zero (00 to 59)
-sthe whole second without a leading zero (0 to 59)
-ssthe whole second with a leading zero where applicable (00 to 59)
-zthe fractional part of the second, to go after a decimal point, without trailing zeroes (0 to 999). Thus "s.z" reports the seconds to full available (millisecond) precision without trailing zeroes.
-zzzthe fractional part of the second, to millisecond precision, including trailing zeroes where applicable (000 to 999).
+sthe second without a leading zero (0 to 59)
+ssthe second with a leading zero (00 to 59)
+zthe milliseconds without leading zeroes (0 to 999)
+zzzthe milliseconds with leading zeroes (000 to 999)
 AP or Ause AM/PM display. A/AP will be replaced by either "AM" or "PM".
 ap or ause am/pm display. a/ap will be replaced by either "am" or "pm".
 tthe timezone (for example "CEST")
@@ -802,14 +801,13 @@ tthe timezone (for example "CEST")
 
 All other input characters will be ignored. Any sequence of characters that are enclosed in single quotes will be treated as text and not be used as an expression. Two consecutive single quotes ("''") are replaced by a singlequote in the output. Formats without separators (e.g. "HHmm") are currently not supported.
 
-Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09.120):
+Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09):
 
 
  FormatResult
 dd.MM.yyyy21.05.2001
 ddd MMMM d yyTue May 21 01
-hh:mm:ss.zzz14:13:09.120
-hh:mm:ss.z14:13:09.12
+hh:mm:ss.zzz14:13:09.042
 h:m:s ap2:13:9 pm
 
 
@@ -828,7 +826,7 @@ func (this *QDateTime) ToStringp() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:309
+// /usr/include/qt/QtCore/qdatetime.h:298
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString toString(const QString &) const
@@ -862,10 +860,10 @@ Hthe hour without a leading zero (0 to 23, even with AM/PM display)
 HHthe hour with a leading zero (00 to 23, even with AM/PM display)
 mthe minute without a leading zero (0 to 59)
 mmthe minute with a leading zero (00 to 59)
-sthe whole second without a leading zero (0 to 59)
-ssthe whole second with a leading zero where applicable (00 to 59)
-zthe fractional part of the second, to go after a decimal point, without trailing zeroes (0 to 999). Thus "s.z" reports the seconds to full available (millisecond) precision without trailing zeroes.
-zzzthe fractional part of the second, to millisecond precision, including trailing zeroes where applicable (000 to 999).
+sthe second without a leading zero (0 to 59)
+ssthe second with a leading zero (00 to 59)
+zthe milliseconds without leading zeroes (0 to 999)
+zzzthe milliseconds with leading zeroes (000 to 999)
 AP or Ause AM/PM display. A/AP will be replaced by either "AM" or "PM".
 ap or ause am/pm display. a/ap will be replaced by either "am" or "pm".
 tthe timezone (for example "CEST")
@@ -873,14 +871,13 @@ tthe timezone (for example "CEST")
 
 All other input characters will be ignored. Any sequence of characters that are enclosed in single quotes will be treated as text and not be used as an expression. Two consecutive single quotes ("''") are replaced by a singlequote in the output. Formats without separators (e.g. "HHmm") are currently not supported.
 
-Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09.120):
+Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09):
 
 
  FormatResult
 dd.MM.yyyy21.05.2001
 ddd MMMM d yyTue May 21 01
-hh:mm:ss.zzz14:13:09.120
-hh:mm:ss.z14:13:09.12
+hh:mm:ss.zzz14:13:09.042
 h:m:s ap2:13:9 pm
 
 
@@ -899,80 +896,7 @@ func (this *QDateTime) ToString1(format string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:311
-// index:2
-// Public Visibility=Default Availability=Available
-// [8] QString toString(QStringView) const
-
-/*
-Returns the datetime as a string. The format parameter determines the format of the result string.
-
-These expressions may be used for the date:
-
-
- ExpressionOutput
-dthe day as number without a leading zero (1 to 31)
-ddthe day as number with a leading zero (01 to 31)
-dddthe abbreviated localized day name (e.g. 'Mon' to 'Sun'). Uses the system locale to localize the name, i.e. QLocale::system().
-ddddthe long localized day name (e.g. 'Monday' to 'Sunday'). Uses the system locale to localize the name, i.e. QLocale::system().
-Mthe month as number without a leading zero (1-12)
-MMthe month as number with a leading zero (01-12)
-MMMthe abbreviated localized month name (e.g. 'Jan' to 'Dec'). Uses the system locale to localize the name, i.e. QLocale::system().
-MMMMthe long localized month name (e.g. 'January' to 'December'). Uses the system locale to localize the name, i.e. QLocale::system().
-yythe year as two digit number (00-99)
-yyyythe year as four digit number
-
-
-These expressions may be used for the time:
-
-
- ExpressionOutput
-hthe hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)
-hhthe hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)
-Hthe hour without a leading zero (0 to 23, even with AM/PM display)
-HHthe hour with a leading zero (00 to 23, even with AM/PM display)
-mthe minute without a leading zero (0 to 59)
-mmthe minute with a leading zero (00 to 59)
-sthe whole second without a leading zero (0 to 59)
-ssthe whole second with a leading zero where applicable (00 to 59)
-zthe fractional part of the second, to go after a decimal point, without trailing zeroes (0 to 999). Thus "s.z" reports the seconds to full available (millisecond) precision without trailing zeroes.
-zzzthe fractional part of the second, to millisecond precision, including trailing zeroes where applicable (000 to 999).
-AP or Ause AM/PM display. A/AP will be replaced by either "AM" or "PM".
-ap or ause am/pm display. a/ap will be replaced by either "am" or "pm".
-tthe timezone (for example "CEST")
-
-
-All other input characters will be ignored. Any sequence of characters that are enclosed in single quotes will be treated as text and not be used as an expression. Two consecutive single quotes ("''") are replaced by a singlequote in the output. Formats without separators (e.g. "HHmm") are currently not supported.
-
-Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09.120):
-
-
- FormatResult
-dd.MM.yyyy21.05.2001
-ddd MMMM d yyTue May 21 01
-hh:mm:ss.zzz14:13:09.120
-hh:mm:ss.z14:13:09.12
-h:m:s ap2:13:9 pm
-
-
-If the datetime is invalid, an empty string will be returned.
-
-See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
-*/
-func (this *QDateTime) ToString2(format QStringView_ITF /*123*/) string {
-	var convArg0 unsafe.Pointer
-	if format != nil && format.QStringView_PTR() != nil {
-		convArg0 = format.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK9QDateTime8toStringE11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qdatetime.h:313
+// /usr/include/qt/QtCore/qdatetime.h:300
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime addDays(qint64) const
@@ -992,7 +916,7 @@ func (this *QDateTime) AddDays(days int64) *QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:314
+// /usr/include/qt/QtCore/qdatetime.h:301
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime addMonths(int) const
@@ -1012,7 +936,7 @@ func (this *QDateTime) AddMonths(months int) *QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:315
+// /usr/include/qt/QtCore/qdatetime.h:302
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime addYears(int) const
@@ -1032,7 +956,7 @@ func (this *QDateTime) AddYears(years int) *QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:316
+// /usr/include/qt/QtCore/qdatetime.h:303
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime addSecs(qint64) const
@@ -1052,7 +976,7 @@ func (this *QDateTime) AddSecs(secs int64) *QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:317
+// /usr/include/qt/QtCore/qdatetime.h:304
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime addMSecs(qint64) const
@@ -1072,7 +996,7 @@ func (this *QDateTime) AddMSecs(msecs int64) *QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:319
+// /usr/include/qt/QtCore/qdatetime.h:306
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime toTimeSpec(Qt::TimeSpec) const
@@ -1105,7 +1029,7 @@ func (this *QDateTime) ToTimeSpec(spec int) *QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:320
+// /usr/include/qt/QtCore/qdatetime.h:307
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QDateTime toLocalTime() const
@@ -1134,7 +1058,7 @@ func (this *QDateTime) ToLocalTime() *QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:321
+// /usr/include/qt/QtCore/qdatetime.h:308
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QDateTime toUTC() const
@@ -1163,7 +1087,7 @@ func (this *QDateTime) ToUTC() *QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:322
+// /usr/include/qt/QtCore/qdatetime.h:309
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime toOffsetFromUtc(int) const
@@ -1185,7 +1109,7 @@ func (this *QDateTime) ToOffsetFromUtc(offsetSeconds int) *QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:324
+// /usr/include/qt/QtCore/qdatetime.h:311
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime toTimeZone(const QTimeZone &) const
@@ -1209,7 +1133,7 @@ func (this *QDateTime) ToTimeZone(toZone QTimeZone_ITF) *QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:327
+// /usr/include/qt/QtCore/qdatetime.h:314
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 daysTo(const QDateTime &) const
@@ -1247,7 +1171,7 @@ func (this *QDateTime) DaysTo(arg0 QDateTime_ITF) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:328
+// /usr/include/qt/QtCore/qdatetime.h:315
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 secsTo(const QDateTime &) const
@@ -1280,7 +1204,7 @@ func (this *QDateTime) SecsTo(arg0 QDateTime_ITF) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:329
+// /usr/include/qt/QtCore/qdatetime.h:316
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 msecsTo(const QDateTime &) const
@@ -1304,7 +1228,7 @@ func (this *QDateTime) MsecsTo(arg0 QDateTime_ITF) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:331
+// /usr/include/qt/QtCore/qdatetime.h:318
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QDateTime &) const
@@ -1322,7 +1246,7 @@ func (this *QDateTime) Operator_equal_equal(other QDateTime_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:332
+// /usr/include/qt/QtCore/qdatetime.h:319
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QDateTime &) const
@@ -1340,7 +1264,7 @@ func (this *QDateTime) Operator_not_equal(other QDateTime_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:333
+// /usr/include/qt/QtCore/qdatetime.h:320
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator<(const QDateTime &) const
@@ -1358,7 +1282,7 @@ func (this *QDateTime) Operator_less_than(other QDateTime_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:334
+// /usr/include/qt/QtCore/qdatetime.h:321
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<=(const QDateTime &) const
@@ -1376,7 +1300,7 @@ func (this *QDateTime) Operator_less_than_equal(other QDateTime_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:335
+// /usr/include/qt/QtCore/qdatetime.h:322
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>(const QDateTime &) const
@@ -1394,7 +1318,7 @@ func (this *QDateTime) Operator_greater_than(other QDateTime_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:336
+// /usr/include/qt/QtCore/qdatetime.h:323
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>=(const QDateTime &) const
@@ -1412,7 +1336,7 @@ func (this *QDateTime) Operator_greater_than_equal(other QDateTime_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:339
+// /usr/include/qt/QtCore/qdatetime.h:326
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setUtcOffset(int)
@@ -1425,7 +1349,7 @@ func (this *QDateTime) SetUtcOffset(seconds int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:340
+// /usr/include/qt/QtCore/qdatetime.h:327
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int utcOffset() const
@@ -1439,7 +1363,7 @@ func (this *QDateTime) UtcOffset() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:343
+// /usr/include/qt/QtCore/qdatetime.h:330
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime currentDateTime()
@@ -1462,7 +1386,7 @@ func QDateTime_CurrentDateTime() *QDateTime /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:344
+// /usr/include/qt/QtCore/qdatetime.h:331
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime currentDateTimeUtc()
@@ -1487,7 +1411,7 @@ func QDateTime_CurrentDateTimeUtc() *QDateTime /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:346
+// /usr/include/qt/QtCore/qdatetime.h:333
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime fromString(const QString &, Qt::DateFormat)
@@ -1514,7 +1438,7 @@ func QDateTime_FromString(s string, f int) *QDateTime /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:346
+// /usr/include/qt/QtCore/qdatetime.h:333
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime fromString(const QString &, Qt::DateFormat)
@@ -1538,7 +1462,7 @@ func (this *QDateTime) FromStringp(s string) *QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:347
+// /usr/include/qt/QtCore/qdatetime.h:334
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime fromString(const QString &, const QString &)
@@ -1567,7 +1491,7 @@ func QDateTime_FromString1(s string, format string) *QDateTime /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:351
+// /usr/include/qt/QtCore/qdatetime.h:338
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] uint toTime_t() const
@@ -1581,7 +1505,7 @@ func (this *QDateTime) ToTime_t() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:352
+// /usr/include/qt/QtCore/qdatetime.h:339
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTime_t(uint)
@@ -1594,7 +1518,7 @@ func (this *QDateTime) SetTime_t(secsSince1Jan1970UTC uint) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:353
+// /usr/include/qt/QtCore/qdatetime.h:340
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime fromTime_t(uint)
@@ -1615,7 +1539,7 @@ func QDateTime_FromTime_t(secsSince1Jan1970UTC uint) *QDateTime /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:354
+// /usr/include/qt/QtCore/qdatetime.h:341
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime fromTime_t(uint, Qt::TimeSpec, int)
@@ -1636,7 +1560,7 @@ func QDateTime_FromTime_t1(secsSince1Jan1970UTC uint, spec int, offsetFromUtc in
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:354
+// /usr/include/qt/QtCore/qdatetime.h:341
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime fromTime_t(uint, Qt::TimeSpec, int)
@@ -1654,7 +1578,7 @@ func (this *QDateTime) FromTime_t1p(secsSince1Jan1970UTC uint, spec int) *QDateT
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:356
+// /usr/include/qt/QtCore/qdatetime.h:343
 // index:2
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime fromTime_t(uint, const QTimeZone &)
@@ -1679,7 +1603,7 @@ func QDateTime_FromTime_t2(secsSince1Jan1970UTC uint, timeZone QTimeZone_ITF) *Q
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:359
+// /usr/include/qt/QtCore/qdatetime.h:346
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime fromMSecsSinceEpoch(qint64)
@@ -1706,7 +1630,7 @@ func QDateTime_FromMSecsSinceEpoch(msecs int64) *QDateTime /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:361
+// /usr/include/qt/QtCore/qdatetime.h:348
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime fromMSecsSinceEpoch(qint64, Qt::TimeSpec, int)
@@ -1733,7 +1657,7 @@ func QDateTime_FromMSecsSinceEpoch1(msecs int64, spec int, offsetFromUtc int) *Q
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:361
+// /usr/include/qt/QtCore/qdatetime.h:348
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime fromMSecsSinceEpoch(qint64, Qt::TimeSpec, int)
@@ -1757,7 +1681,7 @@ func (this *QDateTime) FromMSecsSinceEpoch1p(msecs int64, spec int) *QDateTime /
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:365
+// /usr/include/qt/QtCore/qdatetime.h:352
 // index:2
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime fromMSecsSinceEpoch(qint64, const QTimeZone &)
@@ -1788,7 +1712,7 @@ func QDateTime_FromMSecsSinceEpoch2(msecs int64, timeZone QTimeZone_ITF) *QDateT
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:362
+// /usr/include/qt/QtCore/qdatetime.h:349
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime fromSecsSinceEpoch(qint64, Qt::TimeSpec, int)
@@ -1819,7 +1743,7 @@ func QDateTime_FromSecsSinceEpoch(secs int64, spe int, offsetFromUtc int) *QDate
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:362
+// /usr/include/qt/QtCore/qdatetime.h:349
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime fromSecsSinceEpoch(qint64, Qt::TimeSpec, int)
@@ -1849,7 +1773,7 @@ func (this *QDateTime) FromSecsSinceEpochp(secs int64) *QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:362
+// /usr/include/qt/QtCore/qdatetime.h:349
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime fromSecsSinceEpoch(qint64, Qt::TimeSpec, int)
@@ -1877,7 +1801,7 @@ func (this *QDateTime) FromSecsSinceEpochp1(secs int64, spe int) *QDateTime /*12
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:366
+// /usr/include/qt/QtCore/qdatetime.h:353
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QDateTime fromSecsSinceEpoch(qint64, const QTimeZone &)
@@ -1912,7 +1836,7 @@ func QDateTime_FromSecsSinceEpoch1(secs int64, timeZone QTimeZone_ITF) *QDateTim
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:369
+// /usr/include/qt/QtCore/qdatetime.h:356
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] qint64 currentMSecsSinceEpoch()
@@ -1935,7 +1859,7 @@ func QDateTime_CurrentMSecsSinceEpoch() int64 {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:370
+// /usr/include/qt/QtCore/qdatetime.h:357
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] qint64 currentSecsSinceEpoch()

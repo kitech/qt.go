@@ -63,7 +63,7 @@ func (*QFileOpenEvent) NewFromPointer(cthis unsafe.Pointer) *QFileOpenEvent {
 	return NewQFileOpenEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:738
+// /usr/include/qt/QtGui/qevent.h:731
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFileOpenEvent(const QString &)
@@ -84,7 +84,7 @@ func NewQFileOpenEvent(file string) *QFileOpenEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:739
+// /usr/include/qt/QtGui/qevent.h:732
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QFileOpenEvent(const QUrl &)
@@ -107,7 +107,7 @@ func NewQFileOpenEvent1(url qtcore.QUrl_ITF) *QFileOpenEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:740
+// /usr/include/qt/QtGui/qevent.h:733
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFileOpenEvent()
@@ -122,7 +122,7 @@ func DeleteQFileOpenEvent(this *QFileOpenEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:742
+// /usr/include/qt/QtGui/qevent.h:735
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString file() const
@@ -139,7 +139,7 @@ func (this *QFileOpenEvent) File() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qevent.h:743
+// /usr/include/qt/QtGui/qevent.h:736
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QUrl url() const
@@ -155,7 +155,7 @@ func (this *QFileOpenEvent) Url() *qtcore.QUrl /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:744
+// /usr/include/qt/QtGui/qevent.h:737
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool openFile(QFile &, QIODevice::OpenMode) const

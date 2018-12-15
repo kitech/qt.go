@@ -150,29 +150,29 @@ func Operator_or76(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtMultimedia/qcamera.h:272
-// index:49
+// /usr/include/qt/QtMultimedia/qcamera.h:269
+// index:43
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QCamera::FrameRateRange &, const QCamera::FrameRateRange &)
 
 /*
 
  */
-func Operator_not_equal49(r1 int, r2 int) bool {
+func Operator_not_equal43(r1 int, r2 int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZneRKN7QCamera14FrameRateRangeES2_", qtrt.FFI_TYPE_POINTER, &r1, &r2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 // /usr/include/qt/QtMultimedia/qcameraviewfindersettings.h:96
-// index:50
+// index:44
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QCameraViewfinderSettings &, const QCameraViewfinderSettings &)
 
 /*
 
  */
-func Operator_not_equal50(lhs QCameraViewfinderSettings_ITF, rhs QCameraViewfinderSettings_ITF) bool {
+func Operator_not_equal44(lhs QCameraViewfinderSettings_ITF, rhs QCameraViewfinderSettings_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if lhs != nil && lhs.QCameraViewfinderSettings_PTR() != nil {
 		convArg0 = lhs.QCameraViewfinderSettings_PTR().GetCthis()
@@ -187,14 +187,14 @@ func Operator_not_equal50(lhs QCameraViewfinderSettings_ITF, rhs QCameraViewfind
 }
 
 // /usr/include/qt/QtMultimedia/qmediatimerange.h:77
-// index:51
+// index:45
 // Invalid Visibility=Default Availability=Available
 // [1] bool operator!=(const QMediaTimeInterval &, const QMediaTimeInterval &)
 
 /*
 
  */
-func Operator_not_equal51(arg0 QMediaTimeInterval_ITF, arg1 QMediaTimeInterval_ITF) bool {
+func Operator_not_equal45(arg0 QMediaTimeInterval_ITF, arg1 QMediaTimeInterval_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMediaTimeInterval_PTR() != nil {
 		convArg0 = arg0.QMediaTimeInterval_PTR().GetCthis()
@@ -209,14 +209,14 @@ func Operator_not_equal51(arg0 QMediaTimeInterval_ITF, arg1 QMediaTimeInterval_I
 }
 
 // /usr/include/qt/QtMultimedia/qmediatimerange.h:121
-// index:52
+// index:46
 // Invalid Visibility=Default Availability=Available
 // [1] bool operator!=(const QMediaTimeRange &, const QMediaTimeRange &)
 
 /*
 
  */
-func Operator_not_equal52(arg0 QMediaTimeRange_ITF, arg1 QMediaTimeRange_ITF) bool {
+func Operator_not_equal46(arg0 QMediaTimeRange_ITF, arg1 QMediaTimeRange_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMediaTimeRange_PTR() != nil {
 		convArg0 = arg0.QMediaTimeRange_PTR().GetCthis()
@@ -255,28 +255,28 @@ func Operator_minus16(arg0 QMediaTimeRange_ITF, arg1 QMediaTimeRange_ITF) *QMedi
 }
 
 // /usr/include/qt/QtMultimedia/qcamera.h:264
-// index:51
+// index:45
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(const QCamera::FrameRateRange &, const QCamera::FrameRateRange &)
 
 /*
 
  */
-func Operator_equal_equal51(r1 int, r2 int) bool {
+func Operator_equal_equal45(r1 int, r2 int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZeqRKN7QCamera14FrameRateRangeES2_", qtrt.FFI_TYPE_POINTER, &r1, &r2)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
 
 // /usr/include/qt/QtMultimedia/qmediatimerange.h:76
-// index:52
+// index:46
 // Invalid Visibility=Default Availability=Available
 // [1] bool operator==(const QMediaTimeInterval &, const QMediaTimeInterval &)
 
 /*
 
  */
-func Operator_equal_equal52(arg0 QMediaTimeInterval_ITF, arg1 QMediaTimeInterval_ITF) bool {
+func Operator_equal_equal46(arg0 QMediaTimeInterval_ITF, arg1 QMediaTimeInterval_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMediaTimeInterval_PTR() != nil {
 		convArg0 = arg0.QMediaTimeInterval_PTR().GetCthis()
@@ -291,14 +291,14 @@ func Operator_equal_equal52(arg0 QMediaTimeInterval_ITF, arg1 QMediaTimeInterval
 }
 
 // /usr/include/qt/QtMultimedia/qmediatimerange.h:120
-// index:53
+// index:47
 // Invalid Visibility=Default Availability=Available
 // [1] bool operator==(const QMediaTimeRange &, const QMediaTimeRange &)
 
 /*
 
  */
-func Operator_equal_equal53(arg0 QMediaTimeRange_ITF, arg1 QMediaTimeRange_ITF) bool {
+func Operator_equal_equal47(arg0 QMediaTimeRange_ITF, arg1 QMediaTimeRange_ITF) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QMediaTimeRange_PTR() != nil {
 		convArg0 = arg0.QMediaTimeRange_PTR().GetCthis()
@@ -349,14 +349,14 @@ func ConvertVolume(volume float64, from int, to int) float64 {
 }
 
 // /usr/include/qt/QtMultimedia/qcameraviewfindersettings.h:94
-// index:58
+// index:54
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QCameraViewfinderSettings &, QCameraViewfinderSettings &)
 
 /*
 Swaps this viewfinder settings object with other. This function is very fast and never fails.
 */
-func Swap58(value1 QCameraViewfinderSettings_ITF, value2 QCameraViewfinderSettings_ITF) {
+func Swap54(value1 QCameraViewfinderSettings_ITF, value2 QCameraViewfinderSettings_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QCameraViewfinderSettings_PTR() != nil {
 		convArg0 = value1.QCameraViewfinderSettings_PTR().GetCthis()

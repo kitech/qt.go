@@ -18,7 +18,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 11
+// extern C begin: 8
 */
 // import "C"
 import "unsafe"
@@ -63,7 +63,7 @@ func (*QKeyEvent) NewFromPointer(cthis unsafe.Pointer) *QKeyEvent {
 	return NewQKeyEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:338
+// /usr/include/qt/QtGui/qevent.h:331
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QKeyEvent(QEvent::Type, int, Qt::KeyboardModifiers, const QString &, bool, ushort)
@@ -84,7 +84,7 @@ func NewQKeyEvent(type_ int, key int, modifiers int, text string, autorep bool, 
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:338
+// /usr/include/qt/QtGui/qevent.h:331
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QKeyEvent(QEvent::Type, int, Qt::KeyboardModifiers, const QString &, bool, ushort)
@@ -109,7 +109,7 @@ func NewQKeyEventp(type_ int, key int, modifiers int) *QKeyEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:338
+// /usr/include/qt/QtGui/qevent.h:331
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QKeyEvent(QEvent::Type, int, Qt::KeyboardModifiers, const QString &, bool, ushort)
@@ -134,7 +134,7 @@ func NewQKeyEventp1(type_ int, key int, modifiers int, text string) *QKeyEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:338
+// /usr/include/qt/QtGui/qevent.h:331
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QKeyEvent(QEvent::Type, int, Qt::KeyboardModifiers, const QString &, bool, ushort)
@@ -157,7 +157,7 @@ func NewQKeyEventp2(type_ int, key int, modifiers int, text string, autorep bool
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:340
+// /usr/include/qt/QtGui/qevent.h:333
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QKeyEvent(QEvent::Type, int, Qt::KeyboardModifiers, quint32, quint32, quint32, const QString &, bool, ushort)
@@ -178,7 +178,7 @@ func NewQKeyEvent1(type_ int, key int, modifiers int, nativeScanCode uint, nativ
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:340
+// /usr/include/qt/QtGui/qevent.h:333
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QKeyEvent(QEvent::Type, int, Qt::KeyboardModifiers, quint32, quint32, quint32, const QString &, bool, ushort)
@@ -203,7 +203,7 @@ func NewQKeyEvent1p(type_ int, key int, modifiers int, nativeScanCode uint, nati
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:340
+// /usr/include/qt/QtGui/qevent.h:333
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QKeyEvent(QEvent::Type, int, Qt::KeyboardModifiers, quint32, quint32, quint32, const QString &, bool, ushort)
@@ -228,7 +228,7 @@ func NewQKeyEvent1p1(type_ int, key int, modifiers int, nativeScanCode uint, nat
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:340
+// /usr/include/qt/QtGui/qevent.h:333
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QKeyEvent(QEvent::Type, int, Qt::KeyboardModifiers, quint32, quint32, quint32, const QString &, bool, ushort)
@@ -251,7 +251,7 @@ func NewQKeyEvent1p2(type_ int, key int, modifiers int, nativeScanCode uint, nat
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:343
+// /usr/include/qt/QtGui/qevent.h:336
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QKeyEvent()
@@ -266,7 +266,7 @@ func DeleteQKeyEvent(this *QKeyEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:345
+// /usr/include/qt/QtGui/qevent.h:338
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int key() const
@@ -280,7 +280,7 @@ func (this *QKeyEvent) Key() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:347
+// /usr/include/qt/QtGui/qevent.h:340
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool matches(QKeySequence::StandardKey) const
@@ -294,7 +294,7 @@ func (this *QKeyEvent) Matches(key int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qevent.h:349
+// /usr/include/qt/QtGui/qevent.h:342
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::KeyboardModifiers modifiers() const
@@ -308,7 +308,7 @@ func (this *QKeyEvent) Modifiers() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:350
+// /usr/include/qt/QtGui/qevent.h:343
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString text() const
@@ -325,7 +325,7 @@ func (this *QKeyEvent) Text() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qevent.h:351
+// /usr/include/qt/QtGui/qevent.h:344
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isAutoRepeat() const
@@ -339,7 +339,7 @@ func (this *QKeyEvent) IsAutoRepeat() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qevent.h:352
+// /usr/include/qt/QtGui/qevent.h:345
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int count() const
@@ -353,7 +353,7 @@ func (this *QKeyEvent) Count() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:354
+// /usr/include/qt/QtGui/qevent.h:347
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] quint32 nativeScanCode() const
@@ -367,7 +367,7 @@ func (this *QKeyEvent) NativeScanCode() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtGui/qevent.h:355
+// /usr/include/qt/QtGui/qevent.h:348
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] quint32 nativeVirtualKey() const
@@ -381,7 +381,7 @@ func (this *QKeyEvent) NativeVirtualKey() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtGui/qevent.h:356
+// /usr/include/qt/QtGui/qevent.h:349
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] quint32 nativeModifiers() const

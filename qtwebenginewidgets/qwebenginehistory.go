@@ -75,7 +75,7 @@ func (*QWebEngineHistory) NewFromPointer(cthis unsafe.Pointer) *QWebEngineHistor
 	return NewQWebEngineHistoryFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:87
+// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
@@ -88,7 +88,7 @@ func (this *QWebEngineHistory) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:93
+// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool canGoBack() const
@@ -102,7 +102,7 @@ func (this *QWebEngineHistory) CanGoBack() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:94
+// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool canGoForward() const
@@ -116,7 +116,7 @@ func (this *QWebEngineHistory) CanGoForward() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:96
+// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void back()
@@ -129,7 +129,7 @@ func (this *QWebEngineHistory) Back() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:97
+// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void forward()
@@ -142,7 +142,7 @@ func (this *QWebEngineHistory) Forward() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:98
+// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void goToItem(const QWebEngineHistoryItem &)
@@ -159,7 +159,7 @@ func (this *QWebEngineHistory) GoToItem(item QWebEngineHistoryItem_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:100
+// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWebEngineHistoryItem backItem() const
@@ -175,7 +175,7 @@ func (this *QWebEngineHistory) BackItem() *QWebEngineHistoryItem /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:101
+// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWebEngineHistoryItem currentItem() const
@@ -191,7 +191,7 @@ func (this *QWebEngineHistory) CurrentItem() *QWebEngineHistoryItem /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:102
+// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWebEngineHistoryItem forwardItem() const
@@ -207,7 +207,7 @@ func (this *QWebEngineHistory) ForwardItem() *QWebEngineHistoryItem /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:103
+// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWebEngineHistoryItem itemAt(int) const
@@ -223,7 +223,7 @@ func (this *QWebEngineHistory) ItemAt(i int) *QWebEngineHistoryItem /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:105
+// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentItemIndex() const
@@ -237,7 +237,7 @@ func (this *QWebEngineHistory) CurrentItemIndex() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:107
+// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int count() const

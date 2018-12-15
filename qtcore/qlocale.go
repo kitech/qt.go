@@ -64,7 +64,7 @@ func (*QLocale) NewFromPointer(cthis unsafe.Pointer) *QLocale {
 	return NewQLocaleFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qlocale.h:929
+// /usr/include/qt/QtCore/qlocale.h:916
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QLocale()
@@ -85,7 +85,7 @@ func NewQLocale() *QLocale {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qlocale.h:930
+// /usr/include/qt/QtCore/qlocale.h:917
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QLocale(const QString &)
@@ -108,7 +108,7 @@ func NewQLocale1(name string) *QLocale {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qlocale.h:931
+// /usr/include/qt/QtCore/qlocale.h:918
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QLocale(QLocale::Language, QLocale::Country)
@@ -129,7 +129,7 @@ func NewQLocale2(language int, country int) *QLocale {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qlocale.h:931
+// /usr/include/qt/QtCore/qlocale.h:918
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QLocale(QLocale::Language, QLocale::Country)
@@ -152,7 +152,7 @@ func NewQLocale2p(language int) *QLocale {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qlocale.h:932
+// /usr/include/qt/QtCore/qlocale.h:919
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QLocale(QLocale::Language, QLocale::Script, QLocale::Country)
@@ -173,7 +173,7 @@ func NewQLocale3(language int, script int, country int) *QLocale {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qlocale.h:935
+// /usr/include/qt/QtCore/qlocale.h:922
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QLocale & operator=(QLocale &&)
@@ -189,7 +189,7 @@ func (this *QLocale) Operator_equal(other unsafe.Pointer /*333*/) *QLocale {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:937
+// /usr/include/qt/QtCore/qlocale.h:924
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QLocale & operator=(const QLocale &)
@@ -209,7 +209,7 @@ func (this *QLocale) Operator_equal1(other QLocale_ITF) *QLocale {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:938
+// /usr/include/qt/QtCore/qlocale.h:925
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QLocale()
@@ -224,7 +224,7 @@ func DeleteQLocale(this *QLocale) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qlocale.h:940
+// /usr/include/qt/QtCore/qlocale.h:927
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QLocale &)
@@ -243,7 +243,7 @@ func (this *QLocale) Swap(other QLocale_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qlocale.h:942
+// /usr/include/qt/QtCore/qlocale.h:929
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QLocale::Language language() const
@@ -259,7 +259,7 @@ func (this *QLocale) Language() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qlocale.h:943
+// /usr/include/qt/QtCore/qlocale.h:930
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QLocale::Script script() const
@@ -277,7 +277,7 @@ func (this *QLocale) Script() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qlocale.h:944
+// /usr/include/qt/QtCore/qlocale.h:931
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QLocale::Country country() const
@@ -293,7 +293,7 @@ func (this *QLocale) Country() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qlocale.h:945
+// /usr/include/qt/QtCore/qlocale.h:932
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const
@@ -314,7 +314,7 @@ func (this *QLocale) Name() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:947
+// /usr/include/qt/QtCore/qlocale.h:934
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString bcp47Name() const
@@ -339,7 +339,7 @@ func (this *QLocale) Bcp47Name() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:948
+// /usr/include/qt/QtCore/qlocale.h:935
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString nativeLanguageName() const
@@ -360,7 +360,7 @@ func (this *QLocale) NativeLanguageName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:949
+// /usr/include/qt/QtCore/qlocale.h:936
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString nativeCountryName() const
@@ -381,7 +381,7 @@ func (this *QLocale) NativeCountryName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:952
+// /usr/include/qt/QtCore/qlocale.h:938
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] short toShort(const QString &, bool *) const
@@ -405,7 +405,7 @@ func (this *QLocale) ToShort(s string, ok *bool) int16 {
 	return qtrt.Cretval2go("int16", rv).(int16) // 1111
 }
 
-// /usr/include/qt/QtCore/qlocale.h:952
+// /usr/include/qt/QtCore/qlocale.h:938
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] short toShort(const QString &, bool *) const
@@ -431,7 +431,7 @@ func (this *QLocale) ToShortp(s string) int16 {
 	return qtrt.Cretval2go("int16", rv).(int16) // 1111
 }
 
-// /usr/include/qt/QtCore/qlocale.h:961
+// /usr/include/qt/QtCore/qlocale.h:947
 // index:1
 // Public Visibility=Default Availability=Available
 // [2] short toShort(const QStringRef &, bool *) const
@@ -457,7 +457,7 @@ func (this *QLocale) ToShort1(s QStringRef_ITF, ok *bool) int16 {
 	return qtrt.Cretval2go("int16", rv).(int16) // 1111
 }
 
-// /usr/include/qt/QtCore/qlocale.h:961
+// /usr/include/qt/QtCore/qlocale.h:947
 // index:1
 // Public Visibility=Default Availability=Available
 // [2] short toShort(const QStringRef &, bool *) const
@@ -485,61 +485,7 @@ func (this *QLocale) ToShort1p(s QStringRef_ITF) int16 {
 	return qtrt.Cretval2go("int16", rv).(int16) // 1111
 }
 
-// /usr/include/qt/QtCore/qlocale.h:971
-// index:2
-// Public Visibility=Default Availability=Available
-// [2] short toShort(QStringView, bool *) const
-
-/*
-Returns the short int represented by the localized string s.
-
-If the conversion fails the function returns 0.
-
-If ok is not 0, failure is reported by setting *ok to false, and success by setting *ok to true.
-
-This function ignores leading and trailing whitespace.
-
-See also toUShort() and toString().
-*/
-func (this *QLocale) ToShort2(s QStringView_ITF /*123*/, ok *bool) int16 {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toShortE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
-	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("int16", rv).(int16) // 1111
-}
-
-// /usr/include/qt/QtCore/qlocale.h:971
-// index:2
-// Public Visibility=Default Availability=Available
-// [2] short toShort(QStringView, bool *) const
-
-/*
-Returns the short int represented by the localized string s.
-
-If the conversion fails the function returns 0.
-
-If ok is not 0, failure is reported by setting *ok to false, and success by setting *ok to true.
-
-This function ignores leading and trailing whitespace.
-
-See also toUShort() and toString().
-*/
-func (this *QLocale) ToShort2p(s QStringView_ITF /*123*/) int16 {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	// arg: 1, bool *=Pointer, =Invalid, , Invalid
-	var ok unsafe.Pointer
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toShortE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
-	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("int16", rv).(int16) // 1111
-}
-
-// /usr/include/qt/QtCore/qlocale.h:953
+// /usr/include/qt/QtCore/qlocale.h:939
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] ushort toUShort(const QString &, bool *) const
@@ -563,7 +509,7 @@ func (this *QLocale) ToUShort(s string, ok *bool) uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qlocale.h:953
+// /usr/include/qt/QtCore/qlocale.h:939
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] ushort toUShort(const QString &, bool *) const
@@ -589,7 +535,7 @@ func (this *QLocale) ToUShortp(s string) uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qlocale.h:962
+// /usr/include/qt/QtCore/qlocale.h:948
 // index:1
 // Public Visibility=Default Availability=Available
 // [2] ushort toUShort(const QStringRef &, bool *) const
@@ -615,7 +561,7 @@ func (this *QLocale) ToUShort1(s QStringRef_ITF, ok *bool) uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qlocale.h:962
+// /usr/include/qt/QtCore/qlocale.h:948
 // index:1
 // Public Visibility=Default Availability=Available
 // [2] ushort toUShort(const QStringRef &, bool *) const
@@ -643,61 +589,7 @@ func (this *QLocale) ToUShort1p(s QStringRef_ITF) uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qlocale.h:972
-// index:2
-// Public Visibility=Default Availability=Available
-// [2] ushort toUShort(QStringView, bool *) const
-
-/*
-Returns the unsigned short int represented by the localized string s.
-
-If the conversion fails the function returns 0.
-
-If ok is not 0, failure is reported by setting *ok to false, and success by setting *ok to true.
-
-This function ignores leading and trailing whitespace.
-
-See also toShort() and toString().
-*/
-func (this *QLocale) ToUShort2(s QStringView_ITF /*123*/, ok *bool) uint16 {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toUShortE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
-	qtrt.ErrPrint(err, rv)
-	return uint16(rv) // 222
-}
-
-// /usr/include/qt/QtCore/qlocale.h:972
-// index:2
-// Public Visibility=Default Availability=Available
-// [2] ushort toUShort(QStringView, bool *) const
-
-/*
-Returns the unsigned short int represented by the localized string s.
-
-If the conversion fails the function returns 0.
-
-If ok is not 0, failure is reported by setting *ok to false, and success by setting *ok to true.
-
-This function ignores leading and trailing whitespace.
-
-See also toShort() and toString().
-*/
-func (this *QLocale) ToUShort2p(s QStringView_ITF /*123*/) uint16 {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	// arg: 1, bool *=Pointer, =Invalid, , Invalid
-	var ok unsafe.Pointer
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toUShortE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
-	qtrt.ErrPrint(err, rv)
-	return uint16(rv) // 222
-}
-
-// /usr/include/qt/QtCore/qlocale.h:954
+// /usr/include/qt/QtCore/qlocale.h:940
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int toInt(const QString &, bool *) const
@@ -721,7 +613,7 @@ func (this *QLocale) ToInt(s string, ok *bool) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qlocale.h:954
+// /usr/include/qt/QtCore/qlocale.h:940
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int toInt(const QString &, bool *) const
@@ -747,7 +639,7 @@ func (this *QLocale) ToIntp(s string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qlocale.h:963
+// /usr/include/qt/QtCore/qlocale.h:949
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int toInt(const QStringRef &, bool *) const
@@ -773,7 +665,7 @@ func (this *QLocale) ToInt1(s QStringRef_ITF, ok *bool) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qlocale.h:963
+// /usr/include/qt/QtCore/qlocale.h:949
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int toInt(const QStringRef &, bool *) const
@@ -801,61 +693,7 @@ func (this *QLocale) ToInt1p(s QStringRef_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qlocale.h:973
-// index:2
-// Public Visibility=Default Availability=Available
-// [4] int toInt(QStringView, bool *) const
-
-/*
-Returns the int represented by the localized string s.
-
-If the conversion fails the function returns 0.
-
-If ok is not 0, failure is reported by setting *ok to false, and success by setting *ok to true.
-
-This function ignores leading and trailing whitespace.
-
-See also toUInt() and toString().
-*/
-func (this *QLocale) ToInt2(s QStringView_ITF /*123*/, ok *bool) int {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale5toIntE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
-	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
-}
-
-// /usr/include/qt/QtCore/qlocale.h:973
-// index:2
-// Public Visibility=Default Availability=Available
-// [4] int toInt(QStringView, bool *) const
-
-/*
-Returns the int represented by the localized string s.
-
-If the conversion fails the function returns 0.
-
-If ok is not 0, failure is reported by setting *ok to false, and success by setting *ok to true.
-
-This function ignores leading and trailing whitespace.
-
-See also toUInt() and toString().
-*/
-func (this *QLocale) ToInt2p(s QStringView_ITF /*123*/) int {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	// arg: 1, bool *=Pointer, =Invalid, , Invalid
-	var ok unsafe.Pointer
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale5toIntE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
-	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
-}
-
-// /usr/include/qt/QtCore/qlocale.h:955
+// /usr/include/qt/QtCore/qlocale.h:941
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] uint toUInt(const QString &, bool *) const
@@ -879,7 +717,7 @@ func (this *QLocale) ToUInt(s string, ok *bool) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qlocale.h:955
+// /usr/include/qt/QtCore/qlocale.h:941
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] uint toUInt(const QString &, bool *) const
@@ -905,7 +743,7 @@ func (this *QLocale) ToUIntp(s string) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qlocale.h:964
+// /usr/include/qt/QtCore/qlocale.h:950
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] uint toUInt(const QStringRef &, bool *) const
@@ -931,7 +769,7 @@ func (this *QLocale) ToUInt1(s QStringRef_ITF, ok *bool) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qlocale.h:964
+// /usr/include/qt/QtCore/qlocale.h:950
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] uint toUInt(const QStringRef &, bool *) const
@@ -959,61 +797,7 @@ func (this *QLocale) ToUInt1p(s QStringRef_ITF) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qlocale.h:974
-// index:2
-// Public Visibility=Default Availability=Available
-// [4] uint toUInt(QStringView, bool *) const
-
-/*
-Returns the unsigned int represented by the localized string s.
-
-If the conversion fails the function returns 0.
-
-If ok is not 0, failure is reported by setting *ok to false, and success by setting *ok to true.
-
-This function ignores leading and trailing whitespace.
-
-See also toInt() and toString().
-*/
-func (this *QLocale) ToUInt2(s QStringView_ITF /*123*/, ok *bool) uint {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toUIntE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
-	qtrt.ErrPrint(err, rv)
-	return uint(rv) // 222
-}
-
-// /usr/include/qt/QtCore/qlocale.h:974
-// index:2
-// Public Visibility=Default Availability=Available
-// [4] uint toUInt(QStringView, bool *) const
-
-/*
-Returns the unsigned int represented by the localized string s.
-
-If the conversion fails the function returns 0.
-
-If ok is not 0, failure is reported by setting *ok to false, and success by setting *ok to true.
-
-This function ignores leading and trailing whitespace.
-
-See also toInt() and toString().
-*/
-func (this *QLocale) ToUInt2p(s QStringView_ITF /*123*/) uint {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	// arg: 1, bool *=Pointer, =Invalid, , Invalid
-	var ok unsafe.Pointer
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale6toUIntE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
-	qtrt.ErrPrint(err, rv)
-	return uint(rv) // 222
-}
-
-// /usr/include/qt/QtCore/qlocale.h:956
+// /usr/include/qt/QtCore/qlocale.h:942
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qlonglong toLongLong(const QString &, bool *) const
@@ -1037,7 +821,7 @@ func (this *QLocale) ToLongLong(s string, ok *bool) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qlocale.h:956
+// /usr/include/qt/QtCore/qlocale.h:942
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qlonglong toLongLong(const QString &, bool *) const
@@ -1063,7 +847,7 @@ func (this *QLocale) ToLongLongp(s string) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qlocale.h:965
+// /usr/include/qt/QtCore/qlocale.h:951
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] qlonglong toLongLong(const QStringRef &, bool *) const
@@ -1089,7 +873,7 @@ func (this *QLocale) ToLongLong1(s QStringRef_ITF, ok *bool) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qlocale.h:965
+// /usr/include/qt/QtCore/qlocale.h:951
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] qlonglong toLongLong(const QStringRef &, bool *) const
@@ -1117,61 +901,7 @@ func (this *QLocale) ToLongLong1p(s QStringRef_ITF) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qlocale.h:975
-// index:2
-// Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(QStringView, bool *) const
-
-/*
-Returns the long long int represented by the localized string s.
-
-If the conversion fails the function returns 0.
-
-If ok is not 0, failure is reported by setting *ok to false, and success by setting *ok to true.
-
-This function ignores leading and trailing whitespace.
-
-See also toInt(), toULongLong(), toDouble(), and toString().
-*/
-func (this *QLocale) ToLongLong2(s QStringView_ITF /*123*/, ok *bool) int64 {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toLongLongE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
-	qtrt.ErrPrint(err, rv)
-	return int64(rv) // 222
-}
-
-// /usr/include/qt/QtCore/qlocale.h:975
-// index:2
-// Public Visibility=Default Availability=Available
-// [8] qlonglong toLongLong(QStringView, bool *) const
-
-/*
-Returns the long long int represented by the localized string s.
-
-If the conversion fails the function returns 0.
-
-If ok is not 0, failure is reported by setting *ok to false, and success by setting *ok to true.
-
-This function ignores leading and trailing whitespace.
-
-See also toInt(), toULongLong(), toDouble(), and toString().
-*/
-func (this *QLocale) ToLongLong2p(s QStringView_ITF /*123*/) int64 {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	// arg: 1, bool *=Pointer, =Invalid, , Invalid
-	var ok unsafe.Pointer
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale10toLongLongE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
-	qtrt.ErrPrint(err, rv)
-	return int64(rv) // 222
-}
-
-// /usr/include/qt/QtCore/qlocale.h:957
+// /usr/include/qt/QtCore/qlocale.h:943
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qulonglong toULongLong(const QString &, bool *) const
@@ -1195,7 +925,7 @@ func (this *QLocale) ToULongLong(s string, ok *bool) uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qlocale.h:957
+// /usr/include/qt/QtCore/qlocale.h:943
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qulonglong toULongLong(const QString &, bool *) const
@@ -1221,7 +951,7 @@ func (this *QLocale) ToULongLongp(s string) uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qlocale.h:966
+// /usr/include/qt/QtCore/qlocale.h:952
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] qulonglong toULongLong(const QStringRef &, bool *) const
@@ -1247,7 +977,7 @@ func (this *QLocale) ToULongLong1(s QStringRef_ITF, ok *bool) uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qlocale.h:966
+// /usr/include/qt/QtCore/qlocale.h:952
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] qulonglong toULongLong(const QStringRef &, bool *) const
@@ -1275,61 +1005,7 @@ func (this *QLocale) ToULongLong1p(s QStringRef_ITF) uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qlocale.h:976
-// index:2
-// Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(QStringView, bool *) const
-
-/*
-Returns the unsigned long long int represented by the localized string s.
-
-If the conversion fails the function returns 0.
-
-If ok is not 0, failure is reported by setting *ok to false, and success by setting *ok to true.
-
-This function ignores leading and trailing whitespace.
-
-See also toLongLong(), toInt(), toDouble(), and toString().
-*/
-func (this *QLocale) ToULongLong2(s QStringView_ITF /*123*/, ok *bool) uint64 {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11toULongLongE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
-	qtrt.ErrPrint(err, rv)
-	return uint64(rv) // 222
-}
-
-// /usr/include/qt/QtCore/qlocale.h:976
-// index:2
-// Public Visibility=Default Availability=Available
-// [8] qulonglong toULongLong(QStringView, bool *) const
-
-/*
-Returns the unsigned long long int represented by the localized string s.
-
-If the conversion fails the function returns 0.
-
-If ok is not 0, failure is reported by setting *ok to false, and success by setting *ok to true.
-
-This function ignores leading and trailing whitespace.
-
-See also toLongLong(), toInt(), toDouble(), and toString().
-*/
-func (this *QLocale) ToULongLong2p(s QStringView_ITF /*123*/) uint64 {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	// arg: 1, bool *=Pointer, =Invalid, , Invalid
-	var ok unsafe.Pointer
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale11toULongLongE11QStringViewPb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, ok)
-	qtrt.ErrPrint(err, rv)
-	return uint64(rv) // 222
-}
-
-// /usr/include/qt/QtCore/qlocale.h:958
+// /usr/include/qt/QtCore/qlocale.h:944
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float toFloat(const QString &, bool *) const
@@ -1351,7 +1027,7 @@ func (this *QLocale) ToFloat(s string, ok *bool) float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qlocale.h:958
+// /usr/include/qt/QtCore/qlocale.h:944
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float toFloat(const QString &, bool *) const
@@ -1375,7 +1051,7 @@ func (this *QLocale) ToFloatp(s string) float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qlocale.h:967
+// /usr/include/qt/QtCore/qlocale.h:953
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] float toFloat(const QStringRef &, bool *) const
@@ -1399,7 +1075,7 @@ func (this *QLocale) ToFloat1(s QStringRef_ITF, ok *bool) float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qlocale.h:967
+// /usr/include/qt/QtCore/qlocale.h:953
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] float toFloat(const QStringRef &, bool *) const
@@ -1425,57 +1101,7 @@ func (this *QLocale) ToFloat1p(s QStringRef_ITF) float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qlocale.h:977
-// index:2
-// Public Visibility=Default Availability=Available
-// [4] float toFloat(QStringView, bool *) const
-
-/*
-Returns the float represented by the localized string s, or 0.0 if the conversion failed.
-
-If ok is not 0, reports failure by setting *ok to false and success by setting *ok to true.
-
-This function ignores leading and trailing whitespace.
-
-See also toDouble(), toInt(), and toString().
-*/
-func (this *QLocale) ToFloat2(s QStringView_ITF /*123*/, ok *bool) float32 {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toFloatE11QStringViewPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, ok)
-	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("float32", rv).(float32) // 1111
-}
-
-// /usr/include/qt/QtCore/qlocale.h:977
-// index:2
-// Public Visibility=Default Availability=Available
-// [4] float toFloat(QStringView, bool *) const
-
-/*
-Returns the float represented by the localized string s, or 0.0 if the conversion failed.
-
-If ok is not 0, reports failure by setting *ok to false and success by setting *ok to true.
-
-This function ignores leading and trailing whitespace.
-
-See also toDouble(), toInt(), and toString().
-*/
-func (this *QLocale) ToFloat2p(s QStringView_ITF /*123*/) float32 {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	// arg: 1, bool *=Pointer, =Invalid, , Invalid
-	var ok unsafe.Pointer
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale7toFloatE11QStringViewPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, ok)
-	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("float32", rv).(float32) // 1111
-}
-
-// /usr/include/qt/QtCore/qlocale.h:959
+// /usr/include/qt/QtCore/qlocale.h:945
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double toDouble(const QString &, bool *) const
@@ -1519,7 +1145,7 @@ func (this *QLocale) ToDouble(s string, ok *bool) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qlocale.h:959
+// /usr/include/qt/QtCore/qlocale.h:945
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double toDouble(const QString &, bool *) const
@@ -1565,7 +1191,7 @@ func (this *QLocale) ToDoublep(s string) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qlocale.h:968
+// /usr/include/qt/QtCore/qlocale.h:954
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] double toDouble(const QStringRef &, bool *) const
@@ -1611,7 +1237,7 @@ func (this *QLocale) ToDouble1(s QStringRef_ITF, ok *bool) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qlocale.h:968
+// /usr/include/qt/QtCore/qlocale.h:954
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] double toDouble(const QStringRef &, bool *) const
@@ -1659,101 +1285,7 @@ func (this *QLocale) ToDouble1p(s QStringRef_ITF) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qlocale.h:978
-// index:2
-// Public Visibility=Default Availability=Available
-// [8] double toDouble(QStringView, bool *) const
-
-/*
-Returns the double represented by the localized string s, or 0.0 if the conversion failed.
-
-If ok is not 0, reports failure by setting *ok to false and success by setting *ok to true.
-
-Unlike QString::toDouble(), this function does not use the 'C' locale if the string cannot be interpreted in this locale.
-
-
-  bool ok;
-  double d;
-
-  QLocale c(QLocale::C);
-  d = c.toDouble( "1234.56", &ok );  // ok == true, d == 1234.56
-  d = c.toDouble( "1,234.56", &ok ); // ok == true, d == 1234.56
-  d = c.toDouble( "1234,56", &ok );  // ok == false
-
-  QLocale german(QLocale::German);
-  d = german.toDouble( "1234,56", &ok );  // ok == true, d == 1234.56
-  d = german.toDouble( "1.234,56", &ok ); // ok == true, d == 1234.56
-  d = german.toDouble( "1234.56", &ok );  // ok == false
-
-  d = german.toDouble( "1.234", &ok );    // ok == true, d == 1234.0
-
-
-
-Notice that the last conversion returns 1234.0, because '.' is the thousands group separator in the German locale.
-
-This function ignores leading and trailing whitespace.
-
-See also toFloat(), toInt(), and toString().
-*/
-func (this *QLocale) ToDouble2(s QStringView_ITF /*123*/, ok *bool) float64 {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toDoubleE11QStringViewPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, ok)
-	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("float64", rv).(float64) // 1111
-}
-
-// /usr/include/qt/QtCore/qlocale.h:978
-// index:2
-// Public Visibility=Default Availability=Available
-// [8] double toDouble(QStringView, bool *) const
-
-/*
-Returns the double represented by the localized string s, or 0.0 if the conversion failed.
-
-If ok is not 0, reports failure by setting *ok to false and success by setting *ok to true.
-
-Unlike QString::toDouble(), this function does not use the 'C' locale if the string cannot be interpreted in this locale.
-
-
-  bool ok;
-  double d;
-
-  QLocale c(QLocale::C);
-  d = c.toDouble( "1234.56", &ok );  // ok == true, d == 1234.56
-  d = c.toDouble( "1,234.56", &ok ); // ok == true, d == 1234.56
-  d = c.toDouble( "1234,56", &ok );  // ok == false
-
-  QLocale german(QLocale::German);
-  d = german.toDouble( "1234,56", &ok );  // ok == true, d == 1234.56
-  d = german.toDouble( "1.234,56", &ok ); // ok == true, d == 1234.56
-  d = german.toDouble( "1234.56", &ok );  // ok == false
-
-  d = german.toDouble( "1.234", &ok );    // ok == true, d == 1234.0
-
-
-
-Notice that the last conversion returns 1234.0, because '.' is the thousands group separator in the German locale.
-
-This function ignores leading and trailing whitespace.
-
-See also toFloat(), toInt(), and toString().
-*/
-func (this *QLocale) ToDouble2p(s QStringView_ITF /*123*/) float64 {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	// arg: 1, bool *=Pointer, =Invalid, , Invalid
-	var ok unsafe.Pointer
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toDoubleE11QStringViewPb", qtrt.FFI_TYPE_DOUBLE, this.GetCthis(), convArg0, ok)
-	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("float64", rv).(float64) // 1111
-}
-
-// /usr/include/qt/QtCore/qlocale.h:980
+// /usr/include/qt/QtCore/qlocale.h:956
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString(qlonglong) const
@@ -1772,7 +1304,7 @@ func (this *QLocale) ToString(i int64) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:981
+// /usr/include/qt/QtCore/qlocale.h:957
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString toString(qulonglong) const
@@ -1791,7 +1323,7 @@ func (this *QLocale) ToString1(i uint64) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:982
+// /usr/include/qt/QtCore/qlocale.h:958
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [8] QString toString(short) const
@@ -1810,7 +1342,7 @@ func (this *QLocale) ToString2(i int16) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:983
+// /usr/include/qt/QtCore/qlocale.h:959
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [8] QString toString(ushort) const
@@ -1829,7 +1361,7 @@ func (this *QLocale) ToString3(i uint16) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:984
+// /usr/include/qt/QtCore/qlocale.h:960
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [8] QString toString(int) const
@@ -1848,7 +1380,7 @@ func (this *QLocale) ToString4(i int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:985
+// /usr/include/qt/QtCore/qlocale.h:961
 // index:5
 // Public inline Visibility=Default Availability=Available
 // [8] QString toString(uint) const
@@ -1867,7 +1399,7 @@ func (this *QLocale) ToString5(i uint) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:986
+// /usr/include/qt/QtCore/qlocale.h:962
 // index:6
 // Public Visibility=Default Availability=Available
 // [8] QString toString(double, char, int) const
@@ -1886,7 +1418,7 @@ func (this *QLocale) ToString6(i float64, f byte, prec int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:986
+// /usr/include/qt/QtCore/qlocale.h:962
 // index:6
 // Public Visibility=Default Availability=Available
 // [8] QString toString(double, char, int) const
@@ -1909,7 +1441,7 @@ func (this *QLocale) ToString6p(i float64) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:986
+// /usr/include/qt/QtCore/qlocale.h:962
 // index:6
 // Public Visibility=Default Availability=Available
 // [8] QString toString(double, char, int) const
@@ -1930,7 +1462,7 @@ func (this *QLocale) ToString6p1(i float64, f byte) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:987
+// /usr/include/qt/QtCore/qlocale.h:963
 // index:7
 // Public inline Visibility=Default Availability=Available
 // [8] QString toString(float, char, int) const
@@ -1949,7 +1481,7 @@ func (this *QLocale) ToString7(i float32, f byte, prec int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:987
+// /usr/include/qt/QtCore/qlocale.h:963
 // index:7
 // Public inline Visibility=Default Availability=Available
 // [8] QString toString(float, char, int) const
@@ -1972,7 +1504,7 @@ func (this *QLocale) ToString7p(i float32) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:987
+// /usr/include/qt/QtCore/qlocale.h:963
 // index:7
 // Public inline Visibility=Default Availability=Available
 // [8] QString toString(float, char, int) const
@@ -1993,7 +1525,7 @@ func (this *QLocale) ToString7p1(i float32, f byte) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:990
+// /usr/include/qt/QtCore/qlocale.h:964
 // index:8
 // Public Visibility=Default Availability=Available
 // [8] QString toString(const QDate &, const QString &) const
@@ -2018,8 +1550,56 @@ func (this *QLocale) ToString8(date QDate_ITF, formatStr string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:991
+// /usr/include/qt/QtCore/qlocale.h:965
 // index:9
+// Public Visibility=Default Availability=Available
+// [8] QString toString(const QDate &, QLocale::FormatType) const
+
+/*
+Returns a localized string representation of i.
+
+See also toLongLong().
+*/
+func (this *QLocale) ToString9(date QDate_ITF, format int) string {
+	var convArg0 unsafe.Pointer
+	if date != nil && date.QDate_PTR() != nil {
+		convArg0 = date.QDate_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDateNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qlocale.h:965
+// index:9
+// Public Visibility=Default Availability=Available
+// [8] QString toString(const QDate &, QLocale::FormatType) const
+
+/*
+Returns a localized string representation of i.
+
+See also toLongLong().
+*/
+func (this *QLocale) ToString9p(date QDate_ITF) string {
+	var convArg0 unsafe.Pointer
+	if date != nil && date.QDate_PTR() != nil {
+		convArg0 = date.QDate_PTR().GetCthis()
+	}
+	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
+	format := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDateNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qlocale.h:966
+// index:10
 // Public Visibility=Default Availability=Available
 // [8] QString toString(const QTime &, const QString &) const
 
@@ -2028,7 +1608,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString9(time QTime_ITF, formatStr string) string {
+func (this *QLocale) ToString10(time QTime_ITF, formatStr string) string {
 	var convArg0 unsafe.Pointer
 	if time != nil && time.QTime_PTR() != nil {
 		convArg0 = time.QTime_PTR().GetCthis()
@@ -2043,8 +1623,104 @@ func (this *QLocale) ToString9(time QTime_ITF, formatStr string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:992
-// index:10
+// /usr/include/qt/QtCore/qlocale.h:967
+// index:11
+// Public Visibility=Default Availability=Available
+// [8] QString toString(const QTime &, QLocale::FormatType) const
+
+/*
+Returns a localized string representation of i.
+
+See also toLongLong().
+*/
+func (this *QLocale) ToString11(time QTime_ITF, format int) string {
+	var convArg0 unsafe.Pointer
+	if time != nil && time.QTime_PTR() != nil {
+		convArg0 = time.QTime_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTimeNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qlocale.h:967
+// index:11
+// Public Visibility=Default Availability=Available
+// [8] QString toString(const QTime &, QLocale::FormatType) const
+
+/*
+Returns a localized string representation of i.
+
+See also toLongLong().
+*/
+func (this *QLocale) ToString11p(time QTime_ITF) string {
+	var convArg0 unsafe.Pointer
+	if time != nil && time.QTime_PTR() != nil {
+		convArg0 = time.QTime_PTR().GetCthis()
+	}
+	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
+	format := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTimeNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qlocale.h:968
+// index:12
+// Public Visibility=Default Availability=Available
+// [8] QString toString(const QDateTime &, QLocale::FormatType) const
+
+/*
+Returns a localized string representation of i.
+
+See also toLongLong().
+*/
+func (this *QLocale) ToString12(dateTime QDateTime_ITF, format int) string {
+	var convArg0 unsafe.Pointer
+	if dateTime != nil && dateTime.QDateTime_PTR() != nil {
+		convArg0 = dateTime.QDateTime_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTimeNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qlocale.h:968
+// index:12
+// Public Visibility=Default Availability=Available
+// [8] QString toString(const QDateTime &, QLocale::FormatType) const
+
+/*
+Returns a localized string representation of i.
+
+See also toLongLong().
+*/
+func (this *QLocale) ToString12p(dateTime QDateTime_ITF) string {
+	var convArg0 unsafe.Pointer
+	if dateTime != nil && dateTime.QDateTime_PTR() != nil {
+		convArg0 = dateTime.QDateTime_PTR().GetCthis()
+	}
+	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
+	format := 0
+	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTimeNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
+	qtrt.ErrPrint(err, rv)
+	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	/*==*/ DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtCore/qlocale.h:969
+// index:13
 // Public Visibility=Default Availability=Available
 // [8] QString toString(const QDateTime &, const QString &) const
 
@@ -2053,7 +1729,7 @@ Returns a localized string representation of i.
 
 See also toLongLong().
 */
-func (this *QLocale) ToString10(dateTime QDateTime_ITF, format string) string {
+func (this *QLocale) ToString13(dateTime QDateTime_ITF, format string) string {
 	var convArg0 unsafe.Pointer
 	if dateTime != nil && dateTime.QDateTime_PTR() != nil {
 		convArg0 = dateTime.QDateTime_PTR().GetCthis()
@@ -2068,232 +1744,7 @@ func (this *QLocale) ToString10(dateTime QDateTime_ITF, format string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:994
-// index:11
-// Public Visibility=Default Availability=Available
-// [8] QString toString(const QDate &, QStringView) const
-
-/*
-Returns a localized string representation of i.
-
-See also toLongLong().
-*/
-func (this *QLocale) ToString11(date QDate_ITF, formatStr QStringView_ITF /*123*/) string {
-	var convArg0 unsafe.Pointer
-	if date != nil && date.QDate_PTR() != nil {
-		convArg0 = date.QDate_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if formatStr != nil && formatStr.QStringView_PTR() != nil {
-		convArg1 = formatStr.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDate11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qlocale.h:995
-// index:12
-// Public Visibility=Default Availability=Available
-// [8] QString toString(const QTime &, QStringView) const
-
-/*
-Returns a localized string representation of i.
-
-See also toLongLong().
-*/
-func (this *QLocale) ToString12(time QTime_ITF, formatStr QStringView_ITF /*123*/) string {
-	var convArg0 unsafe.Pointer
-	if time != nil && time.QTime_PTR() != nil {
-		convArg0 = time.QTime_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if formatStr != nil && formatStr.QStringView_PTR() != nil {
-		convArg1 = formatStr.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTime11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qlocale.h:996
-// index:13
-// Public Visibility=Default Availability=Available
-// [8] QString toString(const QDateTime &, QStringView) const
-
-/*
-Returns a localized string representation of i.
-
-See also toLongLong().
-*/
-func (this *QLocale) ToString13(dateTime QDateTime_ITF, format QStringView_ITF /*123*/) string {
-	var convArg0 unsafe.Pointer
-	if dateTime != nil && dateTime.QDateTime_PTR() != nil {
-		convArg0 = dateTime.QDateTime_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if format != nil && format.QStringView_PTR() != nil {
-		convArg1 = format.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTime11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qlocale.h:997
-// index:14
-// Public Visibility=Default Availability=Available
-// [8] QString toString(const QDate &, QLocale::FormatType) const
-
-/*
-Returns a localized string representation of i.
-
-See also toLongLong().
-*/
-func (this *QLocale) ToString14(date QDate_ITF, format int) string {
-	var convArg0 unsafe.Pointer
-	if date != nil && date.QDate_PTR() != nil {
-		convArg0 = date.QDate_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDateNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qlocale.h:997
-// index:14
-// Public Visibility=Default Availability=Available
-// [8] QString toString(const QDate &, QLocale::FormatType) const
-
-/*
-Returns a localized string representation of i.
-
-See also toLongLong().
-*/
-func (this *QLocale) ToString14p(date QDate_ITF) string {
-	var convArg0 unsafe.Pointer
-	if date != nil && date.QDate_PTR() != nil {
-		convArg0 = date.QDate_PTR().GetCthis()
-	}
-	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
-	format := 0
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QDateNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qlocale.h:998
-// index:15
-// Public Visibility=Default Availability=Available
-// [8] QString toString(const QTime &, QLocale::FormatType) const
-
-/*
-Returns a localized string representation of i.
-
-See also toLongLong().
-*/
-func (this *QLocale) ToString15(time QTime_ITF, format int) string {
-	var convArg0 unsafe.Pointer
-	if time != nil && time.QTime_PTR() != nil {
-		convArg0 = time.QTime_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTimeNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qlocale.h:998
-// index:15
-// Public Visibility=Default Availability=Available
-// [8] QString toString(const QTime &, QLocale::FormatType) const
-
-/*
-Returns a localized string representation of i.
-
-See also toLongLong().
-*/
-func (this *QLocale) ToString15p(time QTime_ITF) string {
-	var convArg0 unsafe.Pointer
-	if time != nil && time.QTime_PTR() != nil {
-		convArg0 = time.QTime_PTR().GetCthis()
-	}
-	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
-	format := 0
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK5QTimeNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qlocale.h:999
-// index:16
-// Public Visibility=Default Availability=Available
-// [8] QString toString(const QDateTime &, QLocale::FormatType) const
-
-/*
-Returns a localized string representation of i.
-
-See also toLongLong().
-*/
-func (this *QLocale) ToString16(dateTime QDateTime_ITF, format int) string {
-	var convArg0 unsafe.Pointer
-	if dateTime != nil && dateTime.QDateTime_PTR() != nil {
-		convArg0 = dateTime.QDateTime_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTimeNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qlocale.h:999
-// index:16
-// Public Visibility=Default Availability=Available
-// [8] QString toString(const QDateTime &, QLocale::FormatType) const
-
-/*
-Returns a localized string representation of i.
-
-See also toLongLong().
-*/
-func (this *QLocale) ToString16p(dateTime QDateTime_ITF) string {
-	var convArg0 unsafe.Pointer
-	if dateTime != nil && dateTime.QDateTime_PTR() != nil {
-		convArg0 = dateTime.QDateTime_PTR().GetCthis()
-	}
-	// arg: 1, QLocale::FormatType=Enum, QLocale::FormatType=Enum, , Invalid
-	format := 0
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QLocale8toStringERK9QDateTimeNS_10FormatTypeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, format)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qlocale.h:1001
+// /usr/include/qt/QtCore/qlocale.h:971
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString dateFormat(QLocale::FormatType) const
@@ -2316,7 +1767,7 @@ func (this *QLocale) DateFormat(format int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1001
+// /usr/include/qt/QtCore/qlocale.h:971
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString dateFormat(QLocale::FormatType) const
@@ -2341,7 +1792,7 @@ func (this *QLocale) DateFormatp() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1002
+// /usr/include/qt/QtCore/qlocale.h:972
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString timeFormat(QLocale::FormatType) const
@@ -2364,7 +1815,7 @@ func (this *QLocale) TimeFormat(format int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1002
+// /usr/include/qt/QtCore/qlocale.h:972
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString timeFormat(QLocale::FormatType) const
@@ -2389,7 +1840,7 @@ func (this *QLocale) TimeFormatp() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1003
+// /usr/include/qt/QtCore/qlocale.h:973
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString dateTimeFormat(QLocale::FormatType) const
@@ -2412,7 +1863,7 @@ func (this *QLocale) DateTimeFormat(format int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1003
+// /usr/include/qt/QtCore/qlocale.h:973
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString dateTimeFormat(QLocale::FormatType) const
@@ -2437,7 +1888,7 @@ func (this *QLocale) DateTimeFormatp() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1005
+// /usr/include/qt/QtCore/qlocale.h:975
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDate toDate(const QString &, QLocale::FormatType) const
@@ -2461,7 +1912,7 @@ func (this *QLocale) ToDate(string string, arg1 int) *QDate /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1005
+// /usr/include/qt/QtCore/qlocale.h:975
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDate toDate(const QString &, QLocale::FormatType) const
@@ -2487,7 +1938,7 @@ func (this *QLocale) ToDatep(string string) *QDate /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1008
+// /usr/include/qt/QtCore/qlocale.h:978
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QDate toDate(const QString &, const QString &) const
@@ -2513,7 +1964,7 @@ func (this *QLocale) ToDate1(string string, format string) *QDate /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1006
+// /usr/include/qt/QtCore/qlocale.h:976
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QTime toTime(const QString &, QLocale::FormatType) const
@@ -2537,7 +1988,7 @@ func (this *QLocale) ToTime(string string, arg1 int) *QTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1006
+// /usr/include/qt/QtCore/qlocale.h:976
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QTime toTime(const QString &, QLocale::FormatType) const
@@ -2563,7 +2014,7 @@ func (this *QLocale) ToTimep(string string) *QTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1009
+// /usr/include/qt/QtCore/qlocale.h:979
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] QTime toTime(const QString &, const QString &) const
@@ -2589,7 +2040,7 @@ func (this *QLocale) ToTime1(string string, format string) *QTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1007
+// /usr/include/qt/QtCore/qlocale.h:977
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime toDateTime(const QString &, QLocale::FormatType) const
@@ -2613,7 +2064,7 @@ func (this *QLocale) ToDateTime(string string, format int) *QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1007
+// /usr/include/qt/QtCore/qlocale.h:977
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime toDateTime(const QString &, QLocale::FormatType) const
@@ -2639,7 +2090,7 @@ func (this *QLocale) ToDateTimep(string string) *QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1010
+// /usr/include/qt/QtCore/qlocale.h:980
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QDateTime toDateTime(const QString &, const QString &) const
@@ -2665,7 +2116,7 @@ func (this *QLocale) ToDateTime1(string string, format string) *QDateTime /*123*
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1015
+// /usr/include/qt/QtCore/qlocale.h:985
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] QChar decimalPoint() const
@@ -2683,7 +2134,7 @@ func (this *QLocale) DecimalPoint() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1016
+// /usr/include/qt/QtCore/qlocale.h:986
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] QChar groupSeparator() const
@@ -2701,7 +2152,7 @@ func (this *QLocale) GroupSeparator() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1017
+// /usr/include/qt/QtCore/qlocale.h:987
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] QChar percent() const
@@ -2719,7 +2170,7 @@ func (this *QLocale) Percent() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1018
+// /usr/include/qt/QtCore/qlocale.h:988
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] QChar zeroDigit() const
@@ -2737,7 +2188,7 @@ func (this *QLocale) ZeroDigit() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1019
+// /usr/include/qt/QtCore/qlocale.h:989
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] QChar negativeSign() const
@@ -2755,7 +2206,7 @@ func (this *QLocale) NegativeSign() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1020
+// /usr/include/qt/QtCore/qlocale.h:990
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] QChar positiveSign() const
@@ -2773,7 +2224,7 @@ func (this *QLocale) PositiveSign() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1021
+// /usr/include/qt/QtCore/qlocale.h:991
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] QChar exponential() const
@@ -2791,7 +2242,7 @@ func (this *QLocale) Exponential() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1023
+// /usr/include/qt/QtCore/qlocale.h:993
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString monthName(int, QLocale::FormatType) const
@@ -2812,7 +2263,7 @@ func (this *QLocale) MonthName(arg0 int, format int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1023
+// /usr/include/qt/QtCore/qlocale.h:993
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString monthName(int, QLocale::FormatType) const
@@ -2835,7 +2286,7 @@ func (this *QLocale) MonthNamep(arg0 int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1024
+// /usr/include/qt/QtCore/qlocale.h:994
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString standaloneMonthName(int, QLocale::FormatType) const
@@ -2858,7 +2309,7 @@ func (this *QLocale) StandaloneMonthName(arg0 int, format int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1024
+// /usr/include/qt/QtCore/qlocale.h:994
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString standaloneMonthName(int, QLocale::FormatType) const
@@ -2883,7 +2334,7 @@ func (this *QLocale) StandaloneMonthNamep(arg0 int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1025
+// /usr/include/qt/QtCore/qlocale.h:995
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString dayName(int, QLocale::FormatType) const
@@ -2904,7 +2355,7 @@ func (this *QLocale) DayName(arg0 int, format int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1025
+// /usr/include/qt/QtCore/qlocale.h:995
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString dayName(int, QLocale::FormatType) const
@@ -2927,7 +2378,7 @@ func (this *QLocale) DayNamep(arg0 int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1026
+// /usr/include/qt/QtCore/qlocale.h:996
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString standaloneDayName(int, QLocale::FormatType) const
@@ -2950,7 +2401,7 @@ func (this *QLocale) StandaloneDayName(arg0 int, format int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1026
+// /usr/include/qt/QtCore/qlocale.h:996
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString standaloneDayName(int, QLocale::FormatType) const
@@ -2975,7 +2426,7 @@ func (this *QLocale) StandaloneDayNamep(arg0 int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1028
+// /usr/include/qt/QtCore/qlocale.h:998
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::DayOfWeek firstDayOfWeek() const
@@ -2991,7 +2442,7 @@ func (this *QLocale) FirstDayOfWeek() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1031
+// /usr/include/qt/QtCore/qlocale.h:1001
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString amText() const
@@ -3012,7 +2463,7 @@ func (this *QLocale) AmText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1032
+// /usr/include/qt/QtCore/qlocale.h:1002
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString pmText() const
@@ -3033,7 +2484,7 @@ func (this *QLocale) PmText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1034
+// /usr/include/qt/QtCore/qlocale.h:1004
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QLocale::MeasurementSystem measurementSystem() const
@@ -3049,7 +2500,7 @@ func (this *QLocale) MeasurementSystem() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1036
+// /usr/include/qt/QtCore/qlocale.h:1006
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::LayoutDirection textDirection() const
@@ -3065,7 +2516,7 @@ func (this *QLocale) TextDirection() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1038
+// /usr/include/qt/QtCore/qlocale.h:1008
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toUpper(const QString &) const
@@ -3090,7 +2541,7 @@ func (this *QLocale) ToUpper(str string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1039
+// /usr/include/qt/QtCore/qlocale.h:1009
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toLower(const QString &) const
@@ -3115,7 +2566,7 @@ func (this *QLocale) ToLower(str string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1041
+// /usr/include/qt/QtCore/qlocale.h:1011
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString currencySymbol(QLocale::CurrencySymbolFormat) const
@@ -3134,7 +2585,7 @@ func (this *QLocale) CurrencySymbol(arg0 int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1041
+// /usr/include/qt/QtCore/qlocale.h:1011
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString currencySymbol(QLocale::CurrencySymbolFormat) const
@@ -3155,7 +2606,7 @@ func (this *QLocale) CurrencySymbolp() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1042
+// /usr/include/qt/QtCore/qlocale.h:1012
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toCurrencyString(qlonglong, const QString &) const
@@ -3178,7 +2629,7 @@ func (this *QLocale) ToCurrencyString(arg0 int64, symbol string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1042
+// /usr/include/qt/QtCore/qlocale.h:1012
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toCurrencyString(qlonglong, const QString &) const
@@ -3201,7 +2652,7 @@ func (this *QLocale) ToCurrencyStringp(arg0 int64) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1043
+// /usr/include/qt/QtCore/qlocale.h:1013
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString toCurrencyString(qulonglong, const QString &) const
@@ -3224,7 +2675,7 @@ func (this *QLocale) ToCurrencyString1(arg0 uint64, symbol string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1043
+// /usr/include/qt/QtCore/qlocale.h:1013
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString toCurrencyString(qulonglong, const QString &) const
@@ -3247,7 +2698,7 @@ func (this *QLocale) ToCurrencyString1p(arg0 uint64) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1044
+// /usr/include/qt/QtCore/qlocale.h:1014
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [8] QString toCurrencyString(short, const QString &) const
@@ -3270,7 +2721,7 @@ func (this *QLocale) ToCurrencyString2(arg0 int16, symbol string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1044
+// /usr/include/qt/QtCore/qlocale.h:1014
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [8] QString toCurrencyString(short, const QString &) const
@@ -3293,7 +2744,7 @@ func (this *QLocale) ToCurrencyString2p(arg0 int16) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1045
+// /usr/include/qt/QtCore/qlocale.h:1015
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [8] QString toCurrencyString(ushort, const QString &) const
@@ -3316,7 +2767,7 @@ func (this *QLocale) ToCurrencyString3(arg0 uint16, symbol string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1045
+// /usr/include/qt/QtCore/qlocale.h:1015
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [8] QString toCurrencyString(ushort, const QString &) const
@@ -3339,7 +2790,7 @@ func (this *QLocale) ToCurrencyString3p(arg0 uint16) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1046
+// /usr/include/qt/QtCore/qlocale.h:1016
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [8] QString toCurrencyString(int, const QString &) const
@@ -3362,7 +2813,7 @@ func (this *QLocale) ToCurrencyString4(arg0 int, symbol string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1046
+// /usr/include/qt/QtCore/qlocale.h:1016
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [8] QString toCurrencyString(int, const QString &) const
@@ -3385,7 +2836,7 @@ func (this *QLocale) ToCurrencyString4p(arg0 int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1047
+// /usr/include/qt/QtCore/qlocale.h:1017
 // index:5
 // Public inline Visibility=Default Availability=Available
 // [8] QString toCurrencyString(uint, const QString &) const
@@ -3408,7 +2859,7 @@ func (this *QLocale) ToCurrencyString5(arg0 uint, symbol string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1047
+// /usr/include/qt/QtCore/qlocale.h:1017
 // index:5
 // Public inline Visibility=Default Availability=Available
 // [8] QString toCurrencyString(uint, const QString &) const
@@ -3431,7 +2882,7 @@ func (this *QLocale) ToCurrencyString5p(arg0 uint) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1053
+// /usr/include/qt/QtCore/qlocale.h:1023
 // index:6
 // Public Visibility=Default Availability=Available
 // [8] QString toCurrencyString(double, const QString &) const
@@ -3454,7 +2905,7 @@ func (this *QLocale) ToCurrencyString6(arg0 float64, symbol string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1053
+// /usr/include/qt/QtCore/qlocale.h:1023
 // index:6
 // Public Visibility=Default Availability=Available
 // [8] QString toCurrencyString(double, const QString &) const
@@ -3477,7 +2928,7 @@ func (this *QLocale) ToCurrencyString6p(arg0 float64) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1054
+// /usr/include/qt/QtCore/qlocale.h:1024
 // index:7
 // Public Visibility=Default Availability=Available
 // [8] QString toCurrencyString(double, const QString &, int) const
@@ -3500,7 +2951,7 @@ func (this *QLocale) ToCurrencyString7(arg0 float64, symbol string, precision in
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1055
+// /usr/include/qt/QtCore/qlocale.h:1025
 // index:8
 // Public inline Visibility=Default Availability=Available
 // [8] QString toCurrencyString(float, const QString &) const
@@ -3523,7 +2974,7 @@ func (this *QLocale) ToCurrencyString8(i float32, symbol string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1055
+// /usr/include/qt/QtCore/qlocale.h:1025
 // index:8
 // Public inline Visibility=Default Availability=Available
 // [8] QString toCurrencyString(float, const QString &) const
@@ -3546,7 +2997,7 @@ func (this *QLocale) ToCurrencyString8p(i float32) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1057
+// /usr/include/qt/QtCore/qlocale.h:1027
 // index:9
 // Public inline Visibility=Default Availability=Available
 // [8] QString toCurrencyString(float, const QString &, int) const
@@ -3569,70 +3020,7 @@ func (this *QLocale) ToCurrencyString9(i float32, symbol string, precision int) 
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1061
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] QString formattedDataSize(qint64, int, QLocale::DataSizeFormats)
-
-/*
-Converts a size in bytes to a human-readable localized string, comprising a number and a quantified unit. The quantifier is chosen such that the number is at least one, and as small as possible. For example if bytes is 16384, precision is 2, and format is DataSizeIecFormat (the default), this function returns "16.00 KiB"; for 1330409069609 bytes it returns "1.21 GiB"; and so on. If format is DataSizeIecFormat or DataSizeTraditionalFormat, the given number of bytes is divided by a power of 1024, with result less than 1024; for DataSizeSIFormat, it is divided by a power of 1000, with result less than 1000. DataSizeIecFormat uses the new IEC standard quantifiers Ki, Mi and so on, whereas DataSizeSIFormat uses the older SI quantifiers k, M, etc., and DataSizeTraditionalFormat abuses them.
-
-This function was introduced in  Qt 5.10.
-*/
-func (this *QLocale) FormattedDataSize(bytes int64, precision int, format int) string {
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocale17formattedDataSizeExi6QFlagsINS_14DataSizeFormatEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), bytes, precision, format)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qlocale.h:1061
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] QString formattedDataSize(qint64, int, QLocale::DataSizeFormats)
-
-/*
-Converts a size in bytes to a human-readable localized string, comprising a number and a quantified unit. The quantifier is chosen such that the number is at least one, and as small as possible. For example if bytes is 16384, precision is 2, and format is DataSizeIecFormat (the default), this function returns "16.00 KiB"; for 1330409069609 bytes it returns "1.21 GiB"; and so on. If format is DataSizeIecFormat or DataSizeTraditionalFormat, the given number of bytes is divided by a power of 1024, with result less than 1024; for DataSizeSIFormat, it is divided by a power of 1000, with result less than 1000. DataSizeIecFormat uses the new IEC standard quantifiers Ki, Mi and so on, whereas DataSizeSIFormat uses the older SI quantifiers k, M, etc., and DataSizeTraditionalFormat abuses them.
-
-This function was introduced in  Qt 5.10.
-*/
-func (this *QLocale) FormattedDataSizep(bytes int64) string {
-	// arg: 1, int=Int, =Invalid, , Invalid
-	precision := int(2)
-	// arg: 2, QLocale::DataSizeFormats=Typedef, QLocale::DataSizeFormats=Typedef, QFlags<QLocale::DataSizeFormat>, Unexposed
-	format := 0
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocale17formattedDataSizeExi6QFlagsINS_14DataSizeFormatEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), bytes, precision, format)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qlocale.h:1061
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] QString formattedDataSize(qint64, int, QLocale::DataSizeFormats)
-
-/*
-Converts a size in bytes to a human-readable localized string, comprising a number and a quantified unit. The quantifier is chosen such that the number is at least one, and as small as possible. For example if bytes is 16384, precision is 2, and format is DataSizeIecFormat (the default), this function returns "16.00 KiB"; for 1330409069609 bytes it returns "1.21 GiB"; and so on. If format is DataSizeIecFormat or DataSizeTraditionalFormat, the given number of bytes is divided by a power of 1024, with result less than 1024; for DataSizeSIFormat, it is divided by a power of 1000, with result less than 1000. DataSizeIecFormat uses the new IEC standard quantifiers Ki, Mi and so on, whereas DataSizeSIFormat uses the older SI quantifiers k, M, etc., and DataSizeTraditionalFormat abuses them.
-
-This function was introduced in  Qt 5.10.
-*/
-func (this *QLocale) FormattedDataSizep1(bytes int64, precision int) string {
-	// arg: 2, QLocale::DataSizeFormats=Typedef, QLocale::DataSizeFormats=Typedef, QFlags<QLocale::DataSizeFormat>, Unexposed
-	format := 0
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QLocale17formattedDataSizeExi6QFlagsINS_14DataSizeFormatEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), bytes, precision, format)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qlocale.h:1063
+// /usr/include/qt/QtCore/qlocale.h:1031
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList uiLanguages() const
@@ -3658,7 +3046,7 @@ func (this *QLocale) UiLanguages() *QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1065
+// /usr/include/qt/QtCore/qlocale.h:1033
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QLocale &) const
@@ -3676,7 +3064,7 @@ func (this *QLocale) Operator_equal_equal(other QLocale_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1066
+// /usr/include/qt/QtCore/qlocale.h:1034
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator!=(const QLocale &) const
@@ -3694,7 +3082,7 @@ func (this *QLocale) Operator_not_equal(other QLocale_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1068
+// /usr/include/qt/QtCore/qlocale.h:1036
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString languageToString(QLocale::Language)
@@ -3718,7 +3106,7 @@ func QLocale_LanguageToString(language int) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1069
+// /usr/include/qt/QtCore/qlocale.h:1037
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString countryToString(QLocale::Country)
@@ -3742,7 +3130,7 @@ func QLocale_CountryToString(country int) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1070
+// /usr/include/qt/QtCore/qlocale.h:1038
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString scriptToString(QLocale::Script)
@@ -3768,7 +3156,7 @@ func QLocale_ScriptToString(script int) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1071
+// /usr/include/qt/QtCore/qlocale.h:1039
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setDefault(const QLocale &)
@@ -3795,7 +3183,7 @@ func QLocale_SetDefault(locale QLocale_ITF) {
 	nilthis.SetDefault(locale)
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1073
+// /usr/include/qt/QtCore/qlocale.h:1041
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QLocale c()
@@ -3818,7 +3206,7 @@ func QLocale_C() *QLocale /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1074
+// /usr/include/qt/QtCore/qlocale.h:1042
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QLocale system()
@@ -3843,7 +3231,7 @@ func QLocale_System() *QLocale /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1079
+// /usr/include/qt/QtCore/qlocale.h:1047
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNumberOptions(QLocale::NumberOptions)
@@ -3860,7 +3248,7 @@ func (this *QLocale) SetNumberOptions(options int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1080
+// /usr/include/qt/QtCore/qlocale.h:1048
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QLocale::NumberOptions numberOptions() const
@@ -3880,7 +3268,7 @@ func (this *QLocale) NumberOptions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1083
+// /usr/include/qt/QtCore/qlocale.h:1051
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString quoteString(const QString &, QLocale::QuotationStyle) const
@@ -3901,7 +3289,7 @@ func (this *QLocale) QuoteString(str string, style int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1083
+// /usr/include/qt/QtCore/qlocale.h:1051
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString quoteString(const QString &, QLocale::QuotationStyle) const
@@ -3924,7 +3312,7 @@ func (this *QLocale) QuoteStringp(str string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1084
+// /usr/include/qt/QtCore/qlocale.h:1052
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString quoteString(const QStringRef &, QLocale::QuotationStyle) const
@@ -3947,7 +3335,7 @@ func (this *QLocale) QuoteString1(str QStringRef_ITF, style int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1084
+// /usr/include/qt/QtCore/qlocale.h:1052
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString quoteString(const QStringRef &, QLocale::QuotationStyle) const
@@ -3972,7 +3360,7 @@ func (this *QLocale) QuoteString1p(str QStringRef_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qlocale.h:1086
+// /usr/include/qt/QtCore/qlocale.h:1054
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString createSeparatedList(const QStringList &) const
@@ -8216,48 +7604,6 @@ func (this *QLocale) CurrencySymbolFormatItemName(val int) string {
 func QLocale_CurrencySymbolFormatItemName(val int) string {
 	var nilthis *QLocale
 	return nilthis.CurrencySymbolFormatItemName(val)
-}
-
-/*
-
-
- */
-type QLocale__DataSizeFormat = int
-
-//
-const QLocale__DataSizeBase1000 QLocale__DataSizeFormat = 1
-
-//
-const QLocale__DataSizeSIQuantifiers QLocale__DataSizeFormat = 2
-
-//
-const QLocale__DataSizeIecFormat QLocale__DataSizeFormat = 0
-
-//
-const QLocale__DataSizeTraditionalFormat QLocale__DataSizeFormat = 2
-
-//
-const QLocale__DataSizeSIFormat QLocale__DataSizeFormat = 3
-
-func (this *QLocale) DataSizeFormatItemName(val int) string {
-	switch val {
-	case QLocale__DataSizeBase1000: // 1
-		return "DataSizeBase1000"
-	case QLocale__DataSizeSIQuantifiers: // 2
-		return "DataSizeSIQuantifiers,DataSizeTraditionalFormat"
-	case QLocale__DataSizeIecFormat: // 0
-		return "DataSizeIecFormat"
-		// case QLocale__DataSizeTraditionalFormat: // 2
-		// return ""
-	case QLocale__DataSizeSIFormat: // 3
-		return "DataSizeSIFormat"
-	default:
-		return fmt.Sprintf("%d", val)
-	}
-}
-func QLocale_DataSizeFormatItemName(val int) string {
-	var nilthis *QLocale
-	return nilthis.DataSizeFormatItemName(val)
 }
 
 /*

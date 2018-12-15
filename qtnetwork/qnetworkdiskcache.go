@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtnetwork
 
 // /usr/include/qt/QtNetwork/qnetworkdiskcache.h
@@ -70,7 +68,7 @@ func (*QNetworkDiskCache) NewFromPointer(cthis unsafe.Pointer) *QNetworkDiskCach
 	return NewQNetworkDiskCacheFromPointer(cthis)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:53
+// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -84,7 +82,7 @@ func (this *QNetworkDiskCache) MetaObject() *qtcore.QMetaObject /*777 const QMet
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:56
+// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:57
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkDiskCache(QObject *)
@@ -107,7 +105,7 @@ func NewQNetworkDiskCache(parent qtcore.QObject_ITF /*777 QObject **/) *QNetwork
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:56
+// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:57
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkDiskCache(QObject *)
@@ -128,7 +126,7 @@ func NewQNetworkDiskCachep() *QNetworkDiskCache {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:57
+// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QNetworkDiskCache()
@@ -143,7 +141,7 @@ func DeleteQNetworkDiskCache(this *QNetworkDiskCache) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:59
+// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString cacheDirectory() const
@@ -162,7 +160,7 @@ func (this *QNetworkDiskCache) CacheDirectory() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:60
+// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCacheDirectory(const QString &)
@@ -183,7 +181,7 @@ func (this *QNetworkDiskCache) SetCacheDirectory(cacheDir string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:62
+// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:63
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 maximumCacheSize() const
@@ -199,7 +197,7 @@ func (this *QNetworkDiskCache) MaximumCacheSize() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:63
+// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximumCacheSize(qint64)
@@ -216,7 +214,7 @@ func (this *QNetworkDiskCache) SetMaximumCacheSize(size int64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:65
+// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] qint64 cacheSize() const
@@ -230,7 +228,7 @@ func (this *QNetworkDiskCache) CacheSize() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:66
+// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QNetworkCacheMetaData metaData(const QUrl &)
@@ -250,7 +248,7 @@ func (this *QNetworkDiskCache) MetaData(url qtcore.QUrl_ITF) *QNetworkCacheMetaD
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:67
+// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:68
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void updateMetaData(const QNetworkCacheMetaData &)
@@ -267,7 +265,7 @@ func (this *QNetworkDiskCache) UpdateMetaData(metaData QNetworkCacheMetaData_ITF
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:68
+// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:69
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QIODevice * data(const QUrl &)
@@ -285,7 +283,7 @@ func (this *QNetworkDiskCache) Data(url qtcore.QUrl_ITF) *qtcore.QIODevice /*777
 	return qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:69
+// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:70
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool remove(const QUrl &)
@@ -303,7 +301,7 @@ func (this *QNetworkDiskCache) Remove(url qtcore.QUrl_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:70
+// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:71
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QIODevice * prepare(const QNetworkCacheMetaData &)
@@ -321,7 +319,7 @@ func (this *QNetworkDiskCache) Prepare(metaData QNetworkCacheMetaData_ITF) *qtco
 	return qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:73
+// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QNetworkCacheMetaData fileMetaData(const QString &) const
@@ -341,7 +339,7 @@ func (this *QNetworkDiskCache) FileMetaData(fileName string) *QNetworkCacheMetaD
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:76
+// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:77
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void clear()
@@ -354,7 +352,7 @@ func (this *QNetworkDiskCache) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:79
+// /usr/include/qt/QtNetwork/qnetworkdiskcache.h:80
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] qint64 expire()

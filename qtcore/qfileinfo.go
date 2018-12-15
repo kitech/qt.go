@@ -767,7 +767,7 @@ Returns the path of the object's parent directory as a QDir object.
 
 Note: The QDir returned always corresponds to the object's parent directory, even if the QFileInfo represents a directory.
 
-For each of the following, dir() returns the QDir "~/examples/191697".
+For each of the following, dir() returns a QDir for "~/examples/191697".
 
 
       QFileInfo fileInfo1("~/examples/191697/.");
@@ -776,7 +776,7 @@ For each of the following, dir() returns the QDir "~/examples/191697".
 
 
 
-For each of the following, dir() returns the QDir ".".
+For each of the following, dir() returns a QDir for ".".
 
 
       QFileInfo fileInfo4(".");
@@ -987,11 +987,9 @@ func (this *QFileInfo) IsDir() bool {
 // [1] bool isSymLink() const
 
 /*
-Returns true if this object points to a symbolic link; otherwise returns false.
+Returns true if this object points to a symbolic link (or to a shortcut on Windows); otherwise returns false.
 
-Symbolic links exist on Unix (including macOS and iOS) and Windows and are typically created by the ln -s or mklink commands, respectively. Opening a symbolic link effectively opens the link's target.
-
-In addition, true will be returned for shortcuts (*.lnk files) on Windows. Opening those will open the .lnk file itself.
+On Unix (including macOS and iOS), opening a symlink effectively opens the link's target. On Windows, it opens the .lnk file itself.
 
 Example:
 
@@ -1067,7 +1065,7 @@ func (this *QFileInfo) ReadLink() string {
 // [8] QString symLinkTarget() const
 
 /*
-Returns the absolute path to the file or directory a symbolic link points to, or an empty string if the object isn't a symbolic link.
+Returns the absolute path to the file or directory a symlink (or shortcut on Windows) points to, or a an empty string if the object isn't a symbolic link.
 
 This name may not represent an existing file; it is only a string. QFileInfo::exists() returns true if the symlink points to an existing file.
 
@@ -1225,14 +1223,20 @@ func (this *QFileInfo) Size() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qfileinfo.h:135
+// /usr/include/qt/QtCore/qfileinfo.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime created() const
 
 /*
+Returns the date and local time when the file was created.
 
- */
+On most Unix systems, this function returns the time of the last status change. A status change occurs when the file is created, but it also occurs whenever the user writes or sets inode information (for example, changing the file permissions).
+
+If neither creation time nor "last status change" time are not available, returns the same as lastModified().
+
+See also lastModified() and lastRead().
+*/
 func (this *QFileInfo) Created() *QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo7createdEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -1241,49 +1245,7 @@ func (this *QFileInfo) Created() *QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qfileinfo.h:137
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] QDateTime birthTime() const
-
-/*
-Returns the date and time when the file was created / born.
-
-If the file birth time is not available, this function returns an invalid QDateTime.
-
-This function was introduced in  Qt 5.10.
-
-See also lastModified(), lastRead(), and metadataChangeTime().
-*/
-func (this *QFileInfo) BirthTime() *QDateTime /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo9birthTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDateTime)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qfileinfo.h:138
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] QDateTime metadataChangeTime() const
-
-/*
-Returns the date and time when the file metadata was changed. A metadata change occurs when the file is created, but it also occurs whenever the user writes or sets inode information (for example, changing the file permissions).
-
-This function was introduced in  Qt 5.10.
-
-See also lastModified() and lastRead().
-*/
-func (this *QFileInfo) MetadataChangeTime() *QDateTime /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo18metadataChangeTimeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDateTime)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qfileinfo.h:139
+// /usr/include/qt/QtCore/qfileinfo.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime lastModified() const
@@ -1291,7 +1253,7 @@ func (this *QFileInfo) MetadataChangeTime() *QDateTime /*123*/ {
 /*
 Returns the date and local time when the file was last modified.
 
-See also birthTime(), lastRead(), metadataChangeTime(), and fileTime().
+See also created() and lastRead().
 */
 func (this *QFileInfo) LastModified() *QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo12lastModifiedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1301,7 +1263,7 @@ func (this *QFileInfo) LastModified() *QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qfileinfo.h:140
+// /usr/include/qt/QtCore/qfileinfo.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime lastRead() const
@@ -1311,7 +1273,7 @@ Returns the date and local time when the file was last read (accessed).
 
 On platforms where this information is not available, returns the same as lastModified().
 
-See also birthTime(), lastModified(), metadataChangeTime(), and fileTime().
+See also created() and lastModified().
 */
 func (this *QFileInfo) LastRead() *QDateTime /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo8lastReadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1321,27 +1283,7 @@ func (this *QFileInfo) LastRead() *QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qfileinfo.h:141
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] QDateTime fileTime(QFile::FileTime) const
-
-/*
-Returns the file time specified by time. If the time cannot be determined, an invalid date time is returned.
-
-This function was introduced in  Qt 5.10.
-
-See also QFile::FileTime and QDateTime::isValid().
-*/
-func (this *QFileInfo) FileTime(time int) *QDateTime /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK9QFileInfo8fileTimeEN11QFileDevice8FileTimeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), time)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDateTime)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qfileinfo.h:143
+// /usr/include/qt/QtCore/qfileinfo.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool caching() const
@@ -1357,7 +1299,7 @@ func (this *QFileInfo) Caching() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfileinfo.h:144
+// /usr/include/qt/QtCore/qfileinfo.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCaching(bool)

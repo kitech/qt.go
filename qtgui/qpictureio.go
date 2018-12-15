@@ -65,7 +65,7 @@ func (*QPictureIO) NewFromPointer(cthis unsafe.Pointer) *QPictureIO {
 	return NewQPictureIOFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qpicture.h:134
+// /usr/include/qt/QtGui/qpicture.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPictureIO()
@@ -84,7 +84,7 @@ func NewQPictureIO() *QPictureIO {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qpicture.h:135
+// /usr/include/qt/QtGui/qpicture.h:133
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPictureIO(QIODevice *, const char *)
@@ -109,7 +109,7 @@ func NewQPictureIO1(ioDevice qtcore.QIODevice_ITF /*777 QIODevice **/, format st
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qpicture.h:136
+// /usr/include/qt/QtGui/qpicture.h:134
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QPictureIO(const QString &, const char *)
@@ -132,7 +132,7 @@ func NewQPictureIO2(fileName string, format string) *QPictureIO {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qpicture.h:137
+// /usr/include/qt/QtGui/qpicture.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QPictureIO()
@@ -147,7 +147,7 @@ func DeleteQPictureIO(this *QPictureIO) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qpicture.h:139
+// /usr/include/qt/QtGui/qpicture.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] const QPicture & picture() const
@@ -163,7 +163,7 @@ func (this *QPictureIO) Picture() *QPicture {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpicture.h:140
+// /usr/include/qt/QtGui/qpicture.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int status() const
@@ -177,7 +177,7 @@ func (this *QPictureIO) Status() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qpicture.h:141
+// /usr/include/qt/QtGui/qpicture.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const char * format() const
@@ -191,7 +191,7 @@ func (this *QPictureIO) Format() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtGui/qpicture.h:142
+// /usr/include/qt/QtGui/qpicture.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIODevice * ioDevice() const
@@ -205,7 +205,7 @@ func (this *QPictureIO) IoDevice() *qtcore.QIODevice /*777 QIODevice **/ {
 	return qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qpicture.h:143
+// /usr/include/qt/QtGui/qpicture.h:141
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString fileName() const
@@ -222,7 +222,7 @@ func (this *QPictureIO) FileName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qpicture.h:144
+// /usr/include/qt/QtGui/qpicture.h:142
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int quality() const
@@ -236,7 +236,7 @@ func (this *QPictureIO) Quality() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qpicture.h:145
+// /usr/include/qt/QtGui/qpicture.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString description() const
@@ -253,7 +253,7 @@ func (this *QPictureIO) Description() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qpicture.h:146
+// /usr/include/qt/QtGui/qpicture.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const char * parameters() const
@@ -267,7 +267,7 @@ func (this *QPictureIO) Parameters() string {
 	return qtrt.GoStringI(rv)
 }
 
-// /usr/include/qt/QtGui/qpicture.h:147
+// /usr/include/qt/QtGui/qpicture.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float gamma() const
@@ -281,7 +281,7 @@ func (this *QPictureIO) Gamma() float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtGui/qpicture.h:149
+// /usr/include/qt/QtGui/qpicture.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPicture(const QPicture &)
@@ -298,7 +298,7 @@ func (this *QPictureIO) SetPicture(arg0 QPicture_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpicture.h:150
+// /usr/include/qt/QtGui/qpicture.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStatus(int)
@@ -311,7 +311,7 @@ func (this *QPictureIO) SetStatus(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpicture.h:151
+// /usr/include/qt/QtGui/qpicture.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const char *)
@@ -326,7 +326,7 @@ func (this *QPictureIO) SetFormat(arg0 string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpicture.h:152
+// /usr/include/qt/QtGui/qpicture.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIODevice(QIODevice *)
@@ -343,7 +343,7 @@ func (this *QPictureIO) SetIODevice(arg0 qtcore.QIODevice_ITF /*777 QIODevice **
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpicture.h:153
+// /usr/include/qt/QtGui/qpicture.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFileName(const QString &)
@@ -358,7 +358,7 @@ func (this *QPictureIO) SetFileName(arg0 string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpicture.h:154
+// /usr/include/qt/QtGui/qpicture.h:152
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setQuality(int)
@@ -371,7 +371,7 @@ func (this *QPictureIO) SetQuality(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpicture.h:155
+// /usr/include/qt/QtGui/qpicture.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDescription(const QString &)
@@ -386,7 +386,7 @@ func (this *QPictureIO) SetDescription(arg0 string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpicture.h:156
+// /usr/include/qt/QtGui/qpicture.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setParameters(const char *)
@@ -401,7 +401,7 @@ func (this *QPictureIO) SetParameters(arg0 string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpicture.h:157
+// /usr/include/qt/QtGui/qpicture.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setGamma(float)
@@ -414,7 +414,7 @@ func (this *QPictureIO) SetGamma(arg0 float32) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpicture.h:159
+// /usr/include/qt/QtGui/qpicture.h:157
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool read()
@@ -428,7 +428,7 @@ func (this *QPictureIO) Read() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qpicture.h:160
+// /usr/include/qt/QtGui/qpicture.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool write()
@@ -442,7 +442,7 @@ func (this *QPictureIO) Write() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qpicture.h:162
+// /usr/include/qt/QtGui/qpicture.h:160
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray pictureFormat(const QString &)
@@ -465,7 +465,7 @@ func QPictureIO_PictureFormat(fileName string) *qtcore.QByteArray /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qpicture.h:163
+// /usr/include/qt/QtGui/qpicture.h:161
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray pictureFormat(QIODevice *)

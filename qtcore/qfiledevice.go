@@ -77,7 +77,7 @@ func (*QFileDevice) NewFromPointer(cthis unsafe.Pointer) *QFileDevice {
 	return NewQFileDeviceFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:54
+// /usr/include/qt/QtCore/qfiledevice.h:53
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -91,7 +91,7 @@ func (this *QFileDevice) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:98
+// /usr/include/qt/QtCore/qfiledevice.h:90
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFileDevice()
@@ -106,7 +106,7 @@ func DeleteQFileDevice(this *QFileDevice) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:100
+// /usr/include/qt/QtCore/qfiledevice.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QFileDevice::FileError error() const
@@ -124,7 +124,7 @@ func (this *QFileDevice) Error() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:101
+// /usr/include/qt/QtCore/qfiledevice.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void unsetError()
@@ -139,7 +139,7 @@ func (this *QFileDevice) UnsetError() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:103
+// /usr/include/qt/QtCore/qfiledevice.h:95
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void close()
@@ -156,7 +156,7 @@ func (this *QFileDevice) Close() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:105
+// /usr/include/qt/QtCore/qfiledevice.h:97
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isSequential() const
@@ -176,7 +176,7 @@ func (this *QFileDevice) IsSequential() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:107
+// /usr/include/qt/QtCore/qfiledevice.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int handle() const
@@ -196,7 +196,7 @@ func (this *QFileDevice) Handle() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:108
+// /usr/include/qt/QtCore/qfiledevice.h:100
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString fileName() const
@@ -213,7 +213,7 @@ func (this *QFileDevice) FileName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:110
+// /usr/include/qt/QtCore/qfiledevice.h:102
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] qint64 pos() const
@@ -227,7 +227,7 @@ func (this *QFileDevice) Pos() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:111
+// /usr/include/qt/QtCore/qfiledevice.h:103
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool seek(qint64)
@@ -245,7 +245,7 @@ func (this *QFileDevice) Seek(offset int64) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:112
+// /usr/include/qt/QtCore/qfiledevice.h:104
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool atEnd() const
@@ -263,7 +263,7 @@ func (this *QFileDevice) AtEnd() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:113
+// /usr/include/qt/QtCore/qfiledevice.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool flush()
@@ -277,7 +277,7 @@ func (this *QFileDevice) Flush() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:115
+// /usr/include/qt/QtCore/qfiledevice.h:107
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] qint64 size() const
@@ -295,15 +295,13 @@ func (this *QFileDevice) Size() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:117
+// /usr/include/qt/QtCore/qfiledevice.h:109
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool resize(qint64)
 
 /*
 Sets the file size (in bytes) sz. Returns true if the resize succeeds; false otherwise. If sz is larger than the file currently is, the new bytes will be set to 0; if sz is smaller, the file is simply truncated.
-
-Warning: This function can fail if the file doesn't exist.
 
 See also size().
 */
@@ -313,7 +311,7 @@ func (this *QFileDevice) Resize(sz int64) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:118
+// /usr/include/qt/QtCore/qfiledevice.h:110
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QFileDevice::Permissions permissions() const
@@ -329,7 +327,7 @@ func (this *QFileDevice) Permissions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:119
+// /usr/include/qt/QtCore/qfiledevice.h:111
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setPermissions(QFileDevice::Permissions)
@@ -347,7 +345,7 @@ func (this *QFileDevice) SetPermissions(permissionSpec int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:127
+// /usr/include/qt/QtCore/qfiledevice.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] uchar * map(qint64, qint64, QFileDevice::MemoryMapFlags)
@@ -369,7 +367,7 @@ func (this *QFileDevice) Map(offset int64, size int64, flags int) unsafe.Pointer
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:127
+// /usr/include/qt/QtCore/qfiledevice.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] uchar * map(qint64, qint64, QFileDevice::MemoryMapFlags)
@@ -393,7 +391,7 @@ func (this *QFileDevice) Mapp(offset int64, size int64) unsafe.Pointer /*666*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:128
+// /usr/include/qt/QtCore/qfiledevice.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool unmap(uchar *)
@@ -411,51 +409,7 @@ func (this *QFileDevice) Unmap(address unsafe.Pointer /*666*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:130
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] QDateTime fileTime(QFileDevice::FileTime) const
-
-/*
-Returns the file time specified by time. If the time cannot be determined return QDateTime() (an invalid date time).
-
-This function was introduced in  Qt 5.10.
-
-See also setFileTime(), FileTime, and QDateTime::isValid().
-*/
-func (this *QFileDevice) FileTime(time int) *QDateTime /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK11QFileDevice8fileTimeENS_8FileTimeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), time)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQDateTimeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQDateTime)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qfiledevice.h:131
-// index:0
-// Public Visibility=Default Availability=Available
-// [1] bool setFileTime(const QDateTime &, QFileDevice::FileTime)
-
-/*
-Sets the file time specified by fileTime to newDate, returning true if successful; otherwise returns false.
-
-Note: The file must be open to use this function.
-
-This function was introduced in  Qt 5.10.
-
-See also fileTime() and FileTime.
-*/
-func (this *QFileDevice) SetFileTime(newDate QDateTime_ITF, fileTime int) bool {
-	var convArg0 unsafe.Pointer
-	if newDate != nil && newDate.QDateTime_PTR() != nil {
-		convArg0 = newDate.QDateTime_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QFileDevice11setFileTimeERK9QDateTimeNS_8FileTimeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fileTime)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtCore/qfiledevice.h:134
+// /usr/include/qt/QtCore/qfiledevice.h:123
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QFileDevice()
@@ -474,7 +428,7 @@ func NewQFileDevice() *QFileDevice {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:138
+// /usr/include/qt/QtCore/qfiledevice.h:127
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QFileDevice(QObject *)
@@ -497,7 +451,7 @@ func NewQFileDevice1(parent QObject_ITF /*777 QObject **/) *QFileDevice {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:142
+// /usr/include/qt/QtCore/qfiledevice.h:131
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] qint64 readData(char *, qint64)
@@ -513,7 +467,7 @@ func (this *QFileDevice) ReadData(data string, maxlen int64) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:143
+// /usr/include/qt/QtCore/qfiledevice.h:132
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] qint64 writeData(const char *, qint64)
@@ -529,7 +483,7 @@ func (this *QFileDevice) WriteData(data string, len_ int64) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qfiledevice.h:144
+// /usr/include/qt/QtCore/qfiledevice.h:133
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] qint64 readLineData(char *, qint64)
@@ -603,38 +557,6 @@ func (this *QFileDevice) FileErrorItemName(val int) string {
 func QFileDevice_FileErrorItemName(val int) string {
 	var nilthis *QFileDevice
 	return nilthis.FileErrorItemName(val)
-}
-
-/*
-This enum is used by the fileTime() and setFileTime() functions.
-
-
-
-This enum was introduced or modified in  Qt 5.10.
-
-See also setFileTime(), fileTime(), and QFileInfo::fileTime().
-
-*/
-type QFileDevice__FileTime = int
-
-// When the file was most recently accessed (e.g. read or written to).
-const QFileDevice__FileAccessTime QFileDevice__FileTime = 0
-
-// When the file was created (may not be not supported on UNIX).
-const QFileDevice__FileBirthTime QFileDevice__FileTime = 1
-
-// When the file's metadata was last changed.
-const QFileDevice__FileMetadataChangeTime QFileDevice__FileTime = 2
-
-// When the file was most recently modified.
-const QFileDevice__FileModificationTime QFileDevice__FileTime = 3
-
-func (this *QFileDevice) FileTimeItemName(val int) string {
-	return qtrt.GetClassEnumItemName(this, val)
-}
-func QFileDevice_FileTimeItemName(val int) string {
-	var nilthis *QFileDevice
-	return nilthis.FileTimeItemName(val)
 }
 
 /*

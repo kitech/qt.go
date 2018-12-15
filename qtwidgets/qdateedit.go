@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qdatetimeedit.h
@@ -66,7 +64,7 @@ func (*QDateEdit) NewFromPointer(cthis unsafe.Pointer) *QDateEdit {
 	return NewQDateEditFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qdatetimeedit.h:217
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:218
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -80,7 +78,7 @@ func (this *QDateEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qdatetimeedit.h:220
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:221
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDateEdit(QWidget *)
@@ -103,7 +101,7 @@ func NewQDateEdit(parent QWidget_ITF /*777 QWidget **/) *QDateEdit {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdatetimeedit.h:220
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:221
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDateEdit(QWidget *)
@@ -124,7 +122,7 @@ func NewQDateEditp() *QDateEdit {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdatetimeedit.h:221
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:222
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDateEdit(const QDate &, QWidget *)
@@ -151,7 +149,7 @@ func NewQDateEdit1(date qtcore.QDate_ITF, parent QWidget_ITF /*777 QWidget **/) 
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdatetimeedit.h:221
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:222
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDateEdit(const QDate &, QWidget *)
@@ -176,7 +174,7 @@ func NewQDateEdit1p(date qtcore.QDate_ITF) *QDateEdit {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdatetimeedit.h:222
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:223
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDateEdit()
@@ -191,7 +189,7 @@ func DeleteQDateEdit(this *QDateEdit) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qdatetimeedit.h:225
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:226
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void userDateChanged(const QDate &)

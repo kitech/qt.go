@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qtoolbox.h
@@ -91,7 +89,7 @@ func (*QToolBox) NewFromPointer(cthis unsafe.Pointer) *QToolBox {
 	return NewQToolBoxFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:55
+// /usr/include/qt/QtWidgets/qtoolbox.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -105,7 +103,7 @@ func (this *QToolBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject *
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:60
+// /usr/include/qt/QtWidgets/qtoolbox.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QToolBox(QWidget *, Qt::WindowFlags)
@@ -128,7 +126,7 @@ func NewQToolBox(parent QWidget_ITF /*777 QWidget **/, f int) *QToolBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:60
+// /usr/include/qt/QtWidgets/qtoolbox.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QToolBox(QWidget *, Qt::WindowFlags)
@@ -151,7 +149,7 @@ func NewQToolBoxp() *QToolBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:60
+// /usr/include/qt/QtWidgets/qtoolbox.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QToolBox(QWidget *, Qt::WindowFlags)
@@ -176,7 +174,7 @@ func NewQToolBoxp1(parent QWidget_ITF /*777 QWidget **/) *QToolBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:61
+// /usr/include/qt/QtWidgets/qtoolbox.h:62
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QToolBox()
@@ -191,7 +189,7 @@ func DeleteQToolBox(this *QToolBox) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:63
+// /usr/include/qt/QtWidgets/qtoolbox.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int addItem(QWidget *, const QString &)
@@ -211,7 +209,7 @@ func (this *QToolBox) AddItem(widget QWidget_ITF /*777 QWidget **/, text string)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:64
+// /usr/include/qt/QtWidgets/qtoolbox.h:65
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int addItem(QWidget *, const QIcon &, const QString &)
@@ -235,7 +233,7 @@ func (this *QToolBox) AddItem1(widget QWidget_ITF /*777 QWidget **/, icon qtgui.
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:65
+// /usr/include/qt/QtWidgets/qtoolbox.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int insertItem(int, QWidget *, const QString &)
@@ -255,7 +253,7 @@ func (this *QToolBox) InsertItem(index int, widget QWidget_ITF /*777 QWidget **/
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:66
+// /usr/include/qt/QtWidgets/qtoolbox.h:67
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int insertItem(int, QWidget *, const QIcon &, const QString &)
@@ -279,7 +277,7 @@ func (this *QToolBox) InsertItem1(index int, widget QWidget_ITF /*777 QWidget **
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:68
+// /usr/include/qt/QtWidgets/qtoolbox.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeItem(int)
@@ -292,7 +290,7 @@ func (this *QToolBox) RemoveItem(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:70
+// /usr/include/qt/QtWidgets/qtoolbox.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemEnabled(int, bool)
@@ -307,7 +305,7 @@ func (this *QToolBox) SetItemEnabled(index int, enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:71
+// /usr/include/qt/QtWidgets/qtoolbox.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isItemEnabled(int) const
@@ -321,7 +319,7 @@ func (this *QToolBox) IsItemEnabled(index int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:73
+// /usr/include/qt/QtWidgets/qtoolbox.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemText(int, const QString &)
@@ -340,7 +338,7 @@ func (this *QToolBox) SetItemText(index int, text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:74
+// /usr/include/qt/QtWidgets/qtoolbox.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString itemText(int) const
@@ -359,7 +357,7 @@ func (this *QToolBox) ItemText(index int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:76
+// /usr/include/qt/QtWidgets/qtoolbox.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemIcon(int, const QIcon &)
@@ -378,7 +376,7 @@ func (this *QToolBox) SetItemIcon(index int, icon qtgui.QIcon_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:77
+// /usr/include/qt/QtWidgets/qtoolbox.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIcon itemIcon(int) const
@@ -396,7 +394,7 @@ func (this *QToolBox) ItemIcon(index int) *qtgui.QIcon /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:80
+// /usr/include/qt/QtWidgets/qtoolbox.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemToolTip(int, const QString &)
@@ -413,7 +411,7 @@ func (this *QToolBox) SetItemToolTip(index int, toolTip string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:81
+// /usr/include/qt/QtWidgets/qtoolbox.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString itemToolTip(int) const
@@ -432,7 +430,7 @@ func (this *QToolBox) ItemToolTip(index int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:84
+// /usr/include/qt/QtWidgets/qtoolbox.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentIndex() const
@@ -446,7 +444,7 @@ func (this *QToolBox) CurrentIndex() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:85
+// /usr/include/qt/QtWidgets/qtoolbox.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * currentWidget() const
@@ -462,7 +460,7 @@ func (this *QToolBox) CurrentWidget() *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:86
+// /usr/include/qt/QtWidgets/qtoolbox.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * widget(int) const
@@ -476,7 +474,7 @@ func (this *QToolBox) Widget(index int) *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:87
+// /usr/include/qt/QtWidgets/qtoolbox.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QWidget *) const
@@ -494,7 +492,7 @@ func (this *QToolBox) IndexOf(widget QWidget_ITF /*777 QWidget **/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:88
+// /usr/include/qt/QtWidgets/qtoolbox.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int count() const
@@ -508,7 +506,7 @@ func (this *QToolBox) Count() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:91
+// /usr/include/qt/QtWidgets/qtoolbox.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentIndex(int)
@@ -521,7 +519,7 @@ func (this *QToolBox) SetCurrentIndex(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:92
+// /usr/include/qt/QtWidgets/qtoolbox.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentWidget(QWidget *)
@@ -540,7 +538,7 @@ func (this *QToolBox) SetCurrentWidget(widget QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:95
+// /usr/include/qt/QtWidgets/qtoolbox.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentChanged(int)
@@ -555,7 +553,7 @@ func (this *QToolBox) CurrentChanged(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:98
+// /usr/include/qt/QtWidgets/qtoolbox.h:99
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -573,7 +571,7 @@ func (this *QToolBox) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:99
+// /usr/include/qt/QtWidgets/qtoolbox.h:100
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void itemInserted(int)
@@ -588,7 +586,7 @@ func (this *QToolBox) ItemInserted(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:100
+// /usr/include/qt/QtWidgets/qtoolbox.h:101
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void itemRemoved(int)
@@ -603,7 +601,7 @@ func (this *QToolBox) ItemRemoved(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:101
+// /usr/include/qt/QtWidgets/qtoolbox.h:102
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
@@ -620,7 +618,7 @@ func (this *QToolBox) ShowEvent(e qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbox.h:102
+// /usr/include/qt/QtWidgets/qtoolbox.h:103
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)

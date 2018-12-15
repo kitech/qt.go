@@ -877,7 +877,7 @@ Warning: If the image is not detached, this will cause the data to be copied.
 
 This function was introduced in  Qt 5.9.
 
-See also hasAlphaChannel() and convertToFormat().
+See also isDetached(), hasAlphaChannel(), and convertToFormat().
 */
 func (this *QImage) ReinterpretAsFormat(f int) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage19reinterpretAsFormatENS_6FormatE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), f)
@@ -1115,7 +1115,7 @@ Returns a pointer to the first pixel data. This is equivalent to scanLine(0).
 
 Note that QImage uses implicit data sharing. This function performs a deep copy of the shared pixel data, thus ensuring that this QImage is the only one using the current return value.
 
-See also scanLine(), sizeInBytes(), and constBits().
+See also scanLine(), byteCount(), and constBits().
 */
 func (this *QImage) Bits() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QImage4bitsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1133,7 +1133,7 @@ Returns a pointer to the first pixel data. This is equivalent to scanLine(0).
 
 Note that QImage uses implicit data sharing. This function performs a deep copy of the shared pixel data, thus ensuring that this QImage is the only one using the current return value.
 
-See also scanLine(), sizeInBytes(), and constBits().
+See also scanLine(), byteCount(), and constBits().
 */
 func (this *QImage) Bits1() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage4bitsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1161,39 +1161,25 @@ func (this *QImage) ConstBits() unsafe.Pointer /*666*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtGui/qimage.h:218
+// /usr/include/qt/QtGui/qimage.h:217
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int byteCount() const
 
 /*
+Returns the number of bytes occupied by the image data.
 
- */
+This function was introduced in  Qt 4.6.
+
+See also bytesPerLine(), bits(), and Image Information.
+*/
 func (this *QImage) ByteCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage9byteCountEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qimage.h:220
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] qsizetype sizeInBytes() const
-
-/*
-Returns the image data size in bytes.
-
-This function was introduced in  Qt 5.10.
-
-See also byteCount(), bytesPerLine(), bits(), and Image Information.
-*/
-func (this *QImage) SizeInBytes() int64 {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK6QImage11sizeInBytesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return int64(rv) // 222
-}
-
-// /usr/include/qt/QtGui/qimage.h:222
+// /usr/include/qt/QtGui/qimage.h:219
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] uchar * scanLine(int)
@@ -1213,7 +1199,7 @@ func (this *QImage) ScanLine(arg0 int) unsafe.Pointer /*666*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtGui/qimage.h:223
+// /usr/include/qt/QtGui/qimage.h:220
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] const uchar * scanLine(int) const
@@ -1233,7 +1219,7 @@ func (this *QImage) ScanLine1(arg0 int) unsafe.Pointer /*666*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtGui/qimage.h:224
+// /usr/include/qt/QtGui/qimage.h:221
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const uchar * constScanLine(int) const
@@ -1255,7 +1241,7 @@ func (this *QImage) ConstScanLine(arg0 int) unsafe.Pointer /*666*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtGui/qimage.h:225
+// /usr/include/qt/QtGui/qimage.h:222
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int bytesPerLine() const
@@ -1263,7 +1249,7 @@ func (this *QImage) ConstScanLine(arg0 int) unsafe.Pointer /*666*/ {
 /*
 Returns the number of bytes per image scanline.
 
-This is equivalent to sizeInBytes() / height() if height() is non-zero.
+This is equivalent to byteCount() / height().
 
 See also scanLine().
 */
@@ -1273,7 +1259,7 @@ func (this *QImage) BytesPerLine() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qimage.h:227
+// /usr/include/qt/QtGui/qimage.h:224
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool valid(int, int) const
@@ -1289,7 +1275,7 @@ func (this *QImage) Valid(x int, y int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimage.h:228
+// /usr/include/qt/QtGui/qimage.h:225
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool valid(const QPoint &) const
@@ -1309,7 +1295,7 @@ func (this *QImage) Valid1(pt qtcore.QPoint_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimage.h:230
+// /usr/include/qt/QtGui/qimage.h:227
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int pixelIndex(int, int) const
@@ -1327,7 +1313,7 @@ func (this *QImage) PixelIndex(x int, y int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qimage.h:231
+// /usr/include/qt/QtGui/qimage.h:228
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int pixelIndex(const QPoint &) const
@@ -1349,7 +1335,7 @@ func (this *QImage) PixelIndex1(pt qtcore.QPoint_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qimage.h:233
+// /usr/include/qt/QtGui/qimage.h:230
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QRgb pixel(int, int) const
@@ -1369,7 +1355,7 @@ func (this *QImage) Pixel(x int, y int) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtGui/qimage.h:234
+// /usr/include/qt/QtGui/qimage.h:231
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] QRgb pixel(const QPoint &) const
@@ -1393,7 +1379,7 @@ func (this *QImage) Pixel1(pt qtcore.QPoint_ITF) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtGui/qimage.h:236
+// /usr/include/qt/QtGui/qimage.h:233
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPixel(int, int, uint)
@@ -1414,7 +1400,7 @@ func (this *QImage) SetPixel(x int, y int, index_or_rgb uint) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimage.h:237
+// /usr/include/qt/QtGui/qimage.h:234
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setPixel(const QPoint &, uint)
@@ -1439,7 +1425,7 @@ func (this *QImage) SetPixel1(pt qtcore.QPoint_ITF, index_or_rgb uint) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimage.h:239
+// /usr/include/qt/QtGui/qimage.h:236
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor pixelColor(int, int) const
@@ -1463,7 +1449,7 @@ func (this *QImage) PixelColor(x int, y int) *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:240
+// /usr/include/qt/QtGui/qimage.h:237
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QColor pixelColor(const QPoint &) const
@@ -1491,7 +1477,7 @@ func (this *QImage) PixelColor1(pt qtcore.QPoint_ITF) *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:242
+// /usr/include/qt/QtGui/qimage.h:239
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPixelColor(int, int, const QColor &)
@@ -1516,7 +1502,7 @@ func (this *QImage) SetPixelColor(x int, y int, c QColor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimage.h:243
+// /usr/include/qt/QtGui/qimage.h:240
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setPixelColor(const QPoint &, const QColor &)
@@ -1545,7 +1531,7 @@ func (this *QImage) SetPixelColor1(pt qtcore.QPoint_ITF, c QColor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimage.h:252
+// /usr/include/qt/QtGui/qimage.h:249
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal devicePixelRatio() const
@@ -1565,7 +1551,7 @@ func (this *QImage) DevicePixelRatio() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qimage.h:253
+// /usr/include/qt/QtGui/qimage.h:250
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDevicePixelRatio(qreal)
@@ -1586,7 +1572,7 @@ func (this *QImage) SetDevicePixelRatio(scaleFactor float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimage.h:255
+// /usr/include/qt/QtGui/qimage.h:252
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void fill(uint)
@@ -1605,7 +1591,7 @@ func (this *QImage) Fill(pixel uint) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimage.h:256
+// /usr/include/qt/QtGui/qimage.h:253
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void fill(const QColor &)
@@ -1628,7 +1614,7 @@ func (this *QImage) Fill1(color QColor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimage.h:257
+// /usr/include/qt/QtGui/qimage.h:254
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void fill(Qt::GlobalColor)
@@ -1647,7 +1633,7 @@ func (this *QImage) Fill2(color int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimage.h:260
+// /usr/include/qt/QtGui/qimage.h:257
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasAlphaChannel() const
@@ -1663,7 +1649,7 @@ func (this *QImage) HasAlphaChannel() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimage.h:261
+// /usr/include/qt/QtGui/qimage.h:258
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAlphaChannel(const QImage &)
@@ -1680,7 +1666,7 @@ func (this *QImage) SetAlphaChannel(alphaChannel QImage_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimage.h:262
+// /usr/include/qt/QtGui/qimage.h:259
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage alphaChannel() const
@@ -1696,7 +1682,7 @@ func (this *QImage) AlphaChannel() *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:263
+// /usr/include/qt/QtGui/qimage.h:260
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage createAlphaMask(Qt::ImageConversionFlags) const
@@ -1718,7 +1704,7 @@ func (this *QImage) CreateAlphaMask(flags int) *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:263
+// /usr/include/qt/QtGui/qimage.h:260
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage createAlphaMask(Qt::ImageConversionFlags) const
@@ -1742,7 +1728,7 @@ func (this *QImage) CreateAlphaMaskp() *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:265
+// /usr/include/qt/QtGui/qimage.h:262
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage createHeuristicMask(bool) const
@@ -1768,7 +1754,7 @@ func (this *QImage) CreateHeuristicMask(clipTight bool) *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:265
+// /usr/include/qt/QtGui/qimage.h:262
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage createHeuristicMask(bool) const
@@ -1796,7 +1782,7 @@ func (this *QImage) CreateHeuristicMaskp() *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:267
+// /usr/include/qt/QtGui/qimage.h:264
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage createMaskFromColor(QRgb, Qt::MaskMode) const
@@ -1814,7 +1800,7 @@ func (this *QImage) CreateMaskFromColor(color uint, mode int) *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:267
+// /usr/include/qt/QtGui/qimage.h:264
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage createMaskFromColor(QRgb, Qt::MaskMode) const
@@ -1834,7 +1820,7 @@ func (this *QImage) CreateMaskFromColorp(color uint) *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:269
+// /usr/include/qt/QtGui/qimage.h:266
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] QImage scaled(int, int, Qt::AspectRatioMode, Qt::TransformationMode) const
@@ -1862,7 +1848,7 @@ func (this *QImage) Scaled(w int, h int, aspectMode int, mode int) *QImage /*123
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:269
+// /usr/include/qt/QtGui/qimage.h:266
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] QImage scaled(int, int, Qt::AspectRatioMode, Qt::TransformationMode) const
@@ -1894,7 +1880,7 @@ func (this *QImage) Scaledp(w int, h int) *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:269
+// /usr/include/qt/QtGui/qimage.h:266
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] QImage scaled(int, int, Qt::AspectRatioMode, Qt::TransformationMode) const
@@ -1924,7 +1910,7 @@ func (this *QImage) Scaledp1(w int, h int, aspectMode int) *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:272
+// /usr/include/qt/QtGui/qimage.h:269
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QImage scaled(const QSize &, Qt::AspectRatioMode, Qt::TransformationMode) const
@@ -1956,7 +1942,7 @@ func (this *QImage) Scaled1(s qtcore.QSize_ITF, aspectMode int, mode int) *QImag
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:272
+// /usr/include/qt/QtGui/qimage.h:269
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QImage scaled(const QSize &, Qt::AspectRatioMode, Qt::TransformationMode) const
@@ -1992,7 +1978,7 @@ func (this *QImage) Scaled1p(s qtcore.QSize_ITF) *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:272
+// /usr/include/qt/QtGui/qimage.h:269
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QImage scaled(const QSize &, Qt::AspectRatioMode, Qt::TransformationMode) const
@@ -2026,7 +2012,7 @@ func (this *QImage) Scaled1p1(s qtcore.QSize_ITF, aspectMode int) *QImage /*123*
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:274
+// /usr/include/qt/QtGui/qimage.h:271
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage scaledToWidth(int, Qt::TransformationMode) const
@@ -2048,7 +2034,7 @@ func (this *QImage) ScaledToWidth(w int, mode int) *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:274
+// /usr/include/qt/QtGui/qimage.h:271
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage scaledToWidth(int, Qt::TransformationMode) const
@@ -2072,7 +2058,7 @@ func (this *QImage) ScaledToWidthp(w int) *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:275
+// /usr/include/qt/QtGui/qimage.h:272
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage scaledToHeight(int, Qt::TransformationMode) const
@@ -2094,7 +2080,7 @@ func (this *QImage) ScaledToHeight(h int, mode int) *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:275
+// /usr/include/qt/QtGui/qimage.h:272
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage scaledToHeight(int, Qt::TransformationMode) const
@@ -2118,7 +2104,7 @@ func (this *QImage) ScaledToHeightp(h int) *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:276
+// /usr/include/qt/QtGui/qimage.h:273
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage transformed(const QMatrix &, Qt::TransformationMode) const
@@ -2142,7 +2128,7 @@ func (this *QImage) Transformed(matrix QMatrix_ITF, mode int) *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:276
+// /usr/include/qt/QtGui/qimage.h:273
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QImage transformed(const QMatrix &, Qt::TransformationMode) const
@@ -2168,7 +2154,7 @@ func (this *QImage) Transformedp(matrix QMatrix_ITF) *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:278
+// /usr/include/qt/QtGui/qimage.h:275
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QImage transformed(const QTransform &, Qt::TransformationMode) const
@@ -2192,7 +2178,7 @@ func (this *QImage) Transformed1(matrix QTransform_ITF, mode int) *QImage /*123*
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:278
+// /usr/include/qt/QtGui/qimage.h:275
 // index:1
 // Public Visibility=Default Availability=Available
 // [32] QImage transformed(const QTransform &, Qt::TransformationMode) const
@@ -2218,7 +2204,7 @@ func (this *QImage) Transformed1p(matrix QTransform_ITF) *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:277
+// /usr/include/qt/QtGui/qimage.h:274
 // index:0
 // Public static Visibility=Default Availability=Available
 // [48] QMatrix trueMatrix(const QMatrix &, int, int)
@@ -2247,7 +2233,7 @@ func QImage_TrueMatrix(arg0 QMatrix_ITF, w int, h int) *QMatrix /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qimage.h:279
+// /usr/include/qt/QtGui/qimage.h:276
 // index:1
 // Public static Visibility=Default Availability=Available
 // [88] QTransform trueMatrix(const QTransform &, int, int)
@@ -2276,7 +2262,7 @@ func QImage_TrueMatrix1(arg0 QTransform_ITF, w int, h int) *QTransform /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qimage.h:281
+// /usr/include/qt/QtGui/qimage.h:278
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] QImage mirrored(bool, bool) const
@@ -2296,7 +2282,7 @@ func (this *QImage) Mirrored(horizontally bool, vertically bool) *QImage /*123*/
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:281
+// /usr/include/qt/QtGui/qimage.h:278
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] QImage mirrored(bool, bool) const
@@ -2320,7 +2306,7 @@ func (this *QImage) Mirroredp() *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:281
+// /usr/include/qt/QtGui/qimage.h:278
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] QImage mirrored(bool, bool) const
@@ -2342,7 +2328,7 @@ func (this *QImage) Mirroredp1(horizontally bool) *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:283
+// /usr/include/qt/QtGui/qimage.h:280
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [32] QImage && mirrored(bool, bool)
@@ -2360,7 +2346,7 @@ func (this *QImage) Mirrored1(horizontally bool, vertically bool) unsafe.Pointer
 	return unsafe.Pointer(uintptr(rv)) //777
 }
 
-// /usr/include/qt/QtGui/qimage.h:283
+// /usr/include/qt/QtGui/qimage.h:280
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [32] QImage && mirrored(bool, bool)
@@ -2382,7 +2368,7 @@ func (this *QImage) Mirrored1p() unsafe.Pointer /*333*/ {
 	return unsafe.Pointer(uintptr(rv)) //777
 }
 
-// /usr/include/qt/QtGui/qimage.h:283
+// /usr/include/qt/QtGui/qimage.h:280
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [32] QImage && mirrored(bool, bool)
@@ -2402,7 +2388,7 @@ func (this *QImage) Mirrored1p1(horizontally bool) unsafe.Pointer /*333*/ {
 	return unsafe.Pointer(uintptr(rv)) //777
 }
 
-// /usr/include/qt/QtGui/qimage.h:285
+// /usr/include/qt/QtGui/qimage.h:282
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] QImage rgbSwapped() const
@@ -2422,7 +2408,7 @@ func (this *QImage) RgbSwapped() *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:287
+// /usr/include/qt/QtGui/qimage.h:284
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [32] QImage && rgbSwapped()
@@ -2440,7 +2426,7 @@ func (this *QImage) RgbSwapped1() unsafe.Pointer /*333*/ {
 	return unsafe.Pointer(uintptr(rv)) //777
 }
 
-// /usr/include/qt/QtGui/qimage.h:293
+// /usr/include/qt/QtGui/qimage.h:290
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void invertPixels(QImage::InvertMode)
@@ -2461,7 +2447,7 @@ func (this *QImage) InvertPixels(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimage.h:293
+// /usr/include/qt/QtGui/qimage.h:290
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void invertPixels(QImage::InvertMode)
@@ -2484,7 +2470,7 @@ func (this *QImage) InvertPixelsp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimage.h:296
+// /usr/include/qt/QtGui/qimage.h:293
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool load(QIODevice *, const char *)
@@ -2492,7 +2478,7 @@ func (this *QImage) InvertPixelsp() {
 /*
 Loads an image from the file with the given fileName. Returns true if the image was successfully loaded; otherwise invalidates the image and returns false.
 
-The loader attempts to read the image using the specified format, e.g., PNG or JPG. If format is not specified (which is the default), it is auto-detected based on the file's suffix and header. For details, see {QImageReader::setAutoDetectImageFormat()}{QImageReader}.
+The loader attempts to read the image using the specified format, e.g., PNG or JPG. If format is not specified (which is the default), the loader probes the file for a header to guess the file format.
 
 The file name can either refer to an actual file on disk or to one of the application's embedded resources. See the Resource System overview for details on how to embed images and other resource files in the application's executable.
 
@@ -2510,7 +2496,7 @@ func (this *QImage) Load(device qtcore.QIODevice_ITF /*777 QIODevice **/, format
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimage.h:297
+// /usr/include/qt/QtGui/qimage.h:294
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool load(const QString &, const char *)
@@ -2518,7 +2504,7 @@ func (this *QImage) Load(device qtcore.QIODevice_ITF /*777 QIODevice **/, format
 /*
 Loads an image from the file with the given fileName. Returns true if the image was successfully loaded; otherwise invalidates the image and returns false.
 
-The loader attempts to read the image using the specified format, e.g., PNG or JPG. If format is not specified (which is the default), it is auto-detected based on the file's suffix and header. For details, see {QImageReader::setAutoDetectImageFormat()}{QImageReader}.
+The loader attempts to read the image using the specified format, e.g., PNG or JPG. If format is not specified (which is the default), the loader probes the file for a header to guess the file format.
 
 The file name can either refer to an actual file on disk or to one of the application's embedded resources. See the Resource System overview for details on how to embed images and other resource files in the application's executable.
 
@@ -2534,7 +2520,7 @@ func (this *QImage) Load1(fileName string, format string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimage.h:297
+// /usr/include/qt/QtGui/qimage.h:294
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool load(const QString &, const char *)
@@ -2542,7 +2528,7 @@ func (this *QImage) Load1(fileName string, format string) bool {
 /*
 Loads an image from the file with the given fileName. Returns true if the image was successfully loaded; otherwise invalidates the image and returns false.
 
-The loader attempts to read the image using the specified format, e.g., PNG or JPG. If format is not specified (which is the default), it is auto-detected based on the file's suffix and header. For details, see {QImageReader::setAutoDetectImageFormat()}{QImageReader}.
+The loader attempts to read the image using the specified format, e.g., PNG or JPG. If format is not specified (which is the default), the loader probes the file for a header to guess the file format.
 
 The file name can either refer to an actual file on disk or to one of the application's embedded resources. See the Resource System overview for details on how to embed images and other resource files in the application's executable.
 
@@ -2558,7 +2544,7 @@ func (this *QImage) Load1p(fileName string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimage.h:298
+// /usr/include/qt/QtGui/qimage.h:295
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool loadFromData(const uchar *, int, const char *)
@@ -2578,7 +2564,7 @@ func (this *QImage) LoadFromData(buf unsafe.Pointer /*666*/, len_ int, format st
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimage.h:298
+// /usr/include/qt/QtGui/qimage.h:295
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool loadFromData(const uchar *, int, const char *)
@@ -2598,7 +2584,7 @@ func (this *QImage) LoadFromDatap(buf unsafe.Pointer /*666*/, len_ int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimage.h:299
+// /usr/include/qt/QtGui/qimage.h:296
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool loadFromData(const QByteArray &, const char *)
@@ -2622,7 +2608,7 @@ func (this *QImage) LoadFromData1(data qtcore.QByteArray_ITF, aformat string) bo
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimage.h:299
+// /usr/include/qt/QtGui/qimage.h:296
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool loadFromData(const QByteArray &, const char *)
@@ -2646,7 +2632,7 @@ func (this *QImage) LoadFromData1p(data qtcore.QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimage.h:302
+// /usr/include/qt/QtGui/qimage.h:299
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool save(const QString &, const char *, int) const
@@ -2670,7 +2656,7 @@ func (this *QImage) Save(fileName string, format string, quality int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimage.h:302
+// /usr/include/qt/QtGui/qimage.h:299
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool save(const QString &, const char *, int) const
@@ -2696,7 +2682,7 @@ func (this *QImage) Savep(fileName string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimage.h:302
+// /usr/include/qt/QtGui/qimage.h:299
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool save(const QString &, const char *, int) const
@@ -2722,7 +2708,7 @@ func (this *QImage) Savep1(fileName string, format string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimage.h:303
+// /usr/include/qt/QtGui/qimage.h:300
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool save(QIODevice *, const char *, int) const
@@ -2748,7 +2734,7 @@ func (this *QImage) Save1(device qtcore.QIODevice_ITF /*777 QIODevice **/, forma
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimage.h:303
+// /usr/include/qt/QtGui/qimage.h:300
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool save(QIODevice *, const char *, int) const
@@ -2776,7 +2762,7 @@ func (this *QImage) Save1p(device qtcore.QIODevice_ITF /*777 QIODevice **/) bool
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimage.h:303
+// /usr/include/qt/QtGui/qimage.h:300
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool save(QIODevice *, const char *, int) const
@@ -2804,15 +2790,15 @@ func (this *QImage) Save1p1(device qtcore.QIODevice_ITF /*777 QIODevice **/, for
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimage.h:305
+// /usr/include/qt/QtGui/qimage.h:302
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QImage fromData(const uchar *, int, const char *)
 
 /*
-Constructs a QImage from the first size bytes of the given binary data. The loader attempts to read the image using the specified format. If format is not specified (which is the default), the loader probes the data for a header to guess the file format.
+Constructs a QImage from the first size bytes of the given binary data. The loader attempts to read the image using the specified format. If format is not specified (which is the default), the loader probes the file for a header to guess the file format. binary data. The loader attempts to read the image, either using the optional image format specified or by determining the image format from the data.
 
-If format is specified, it must be one of the values returned by QImageReader::supportedImageFormats().
+If format is not specified (which is the default), the loader probes the file for a header to determine the file format. If format is specified, it must be one of the values returned by QImageReader::supportedImageFormats().
 
 If the loading of the image fails, the image returned will be a null image.
 
@@ -2833,15 +2819,15 @@ func QImage_FromData(data unsafe.Pointer /*666*/, size int, format string) *QIma
 	return rv
 }
 
-// /usr/include/qt/QtGui/qimage.h:305
+// /usr/include/qt/QtGui/qimage.h:302
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QImage fromData(const uchar *, int, const char *)
 
 /*
-Constructs a QImage from the first size bytes of the given binary data. The loader attempts to read the image using the specified format. If format is not specified (which is the default), the loader probes the data for a header to guess the file format.
+Constructs a QImage from the first size bytes of the given binary data. The loader attempts to read the image using the specified format. If format is not specified (which is the default), the loader probes the file for a header to guess the file format. binary data. The loader attempts to read the image, either using the optional image format specified or by determining the image format from the data.
 
-If format is specified, it must be one of the values returned by QImageReader::supportedImageFormats().
+If format is not specified (which is the default), the loader probes the file for a header to determine the file format. If format is specified, it must be one of the values returned by QImageReader::supportedImageFormats().
 
 If the loading of the image fails, the image returned will be a null image.
 
@@ -2857,15 +2843,15 @@ func (this *QImage) FromDatap(data unsafe.Pointer /*666*/, size int) *QImage /*1
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:306
+// /usr/include/qt/QtGui/qimage.h:303
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [32] QImage fromData(const QByteArray &, const char *)
 
 /*
-Constructs a QImage from the first size bytes of the given binary data. The loader attempts to read the image using the specified format. If format is not specified (which is the default), the loader probes the data for a header to guess the file format.
+Constructs a QImage from the first size bytes of the given binary data. The loader attempts to read the image using the specified format. If format is not specified (which is the default), the loader probes the file for a header to guess the file format. binary data. The loader attempts to read the image, either using the optional image format specified or by determining the image format from the data.
 
-If format is specified, it must be one of the values returned by QImageReader::supportedImageFormats().
+If format is not specified (which is the default), the loader probes the file for a header to determine the file format. If format is specified, it must be one of the values returned by QImageReader::supportedImageFormats().
 
 If the loading of the image fails, the image returned will be a null image.
 
@@ -2890,15 +2876,15 @@ func QImage_FromData1(data qtcore.QByteArray_ITF, format string) *QImage /*123*/
 	return rv
 }
 
-// /usr/include/qt/QtGui/qimage.h:306
+// /usr/include/qt/QtGui/qimage.h:303
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [32] QImage fromData(const QByteArray &, const char *)
 
 /*
-Constructs a QImage from the first size bytes of the given binary data. The loader attempts to read the image using the specified format. If format is not specified (which is the default), the loader probes the data for a header to guess the file format.
+Constructs a QImage from the first size bytes of the given binary data. The loader attempts to read the image using the specified format. If format is not specified (which is the default), the loader probes the file for a header to guess the file format. binary data. The loader attempts to read the image, either using the optional image format specified or by determining the image format from the data.
 
-If format is specified, it must be one of the values returned by QImageReader::supportedImageFormats().
+If format is not specified (which is the default), the loader probes the file for a header to determine the file format. If format is specified, it must be one of the values returned by QImageReader::supportedImageFormats().
 
 If the loading of the image fails, the image returned will be a null image.
 
@@ -2918,7 +2904,7 @@ func (this *QImage) FromData1p(data qtcore.QByteArray_ITF) *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:312
+// /usr/include/qt/QtGui/qimage.h:309
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 cacheKey() const
@@ -2934,7 +2920,7 @@ func (this *QImage) CacheKey() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtGui/qimage.h:314
+// /usr/include/qt/QtGui/qimage.h:311
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QPaintEngine * paintEngine() const
@@ -2948,7 +2934,7 @@ func (this *QImage) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 	return /*==*/ NewQPaintEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qimage.h:317
+// /usr/include/qt/QtGui/qimage.h:314
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int dotsPerMeterX() const
@@ -2964,7 +2950,7 @@ func (this *QImage) DotsPerMeterX() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qimage.h:318
+// /usr/include/qt/QtGui/qimage.h:315
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int dotsPerMeterY() const
@@ -2980,7 +2966,7 @@ func (this *QImage) DotsPerMeterY() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qimage.h:319
+// /usr/include/qt/QtGui/qimage.h:316
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDotsPerMeterX(int)
@@ -2997,7 +2983,7 @@ func (this *QImage) SetDotsPerMeterX(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimage.h:320
+// /usr/include/qt/QtGui/qimage.h:317
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDotsPerMeterY(int)
@@ -3014,7 +3000,7 @@ func (this *QImage) SetDotsPerMeterY(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimage.h:321
+// /usr/include/qt/QtGui/qimage.h:318
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint offset() const
@@ -3032,7 +3018,7 @@ func (this *QImage) Offset() *qtcore.QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:322
+// /usr/include/qt/QtGui/qimage.h:319
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOffset(const QPoint &)
@@ -3051,7 +3037,7 @@ func (this *QImage) SetOffset(arg0 qtcore.QPoint_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimage.h:324
+// /usr/include/qt/QtGui/qimage.h:321
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList textKeys() const
@@ -3071,7 +3057,7 @@ func (this *QImage) TextKeys() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:325
+// /usr/include/qt/QtGui/qimage.h:322
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text(const QString &) const
@@ -3092,7 +3078,7 @@ func (this *QImage) Text(key string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qimage.h:325
+// /usr/include/qt/QtGui/qimage.h:322
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text(const QString &) const
@@ -3113,7 +3099,7 @@ func (this *QImage) Textp() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qimage.h:326
+// /usr/include/qt/QtGui/qimage.h:323
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setText(const QString &, const QString &)
@@ -3148,7 +3134,7 @@ func (this *QImage) SetText(key string, value string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimage.h:328
+// /usr/include/qt/QtGui/qimage.h:325
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPixelFormat pixelFormat() const
@@ -3164,7 +3150,7 @@ func (this *QImage) PixelFormat() *QPixelFormat /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:329
+// /usr/include/qt/QtGui/qimage.h:326
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QPixelFormat toPixelFormat(QImage::Format)
@@ -3185,7 +3171,7 @@ func QImage_ToPixelFormat(format int) *QPixelFormat /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qimage.h:330
+// /usr/include/qt/QtGui/qimage.h:327
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QImage::Format toImageFormat(QPixelFormat)
@@ -3208,7 +3194,7 @@ func QImage_ToImageFormat(format QPixelFormat_ITF /*123*/) int {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qimage.h:352
+// /usr/include/qt/QtGui/qimage.h:349
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] int metric(QPaintDevice::PaintDeviceMetric) const
@@ -3222,7 +3208,7 @@ func (this *QImage) Metric(metric int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qimage.h:353
+// /usr/include/qt/QtGui/qimage.h:350
 // index:0
 // Protected Visibility=Default Availability=Available
 // [32] QImage mirrored_helper(bool, bool) const
@@ -3238,7 +3224,7 @@ func (this *QImage) Mirrored_helper(horizontal bool, vertical bool) *QImage /*12
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:354
+// /usr/include/qt/QtGui/qimage.h:351
 // index:0
 // Protected Visibility=Default Availability=Available
 // [32] QImage rgbSwapped_helper() const
@@ -3254,7 +3240,7 @@ func (this *QImage) RgbSwapped_helper() *QImage /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:355
+// /usr/include/qt/QtGui/qimage.h:352
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void mirrored_inplace(bool, bool)
@@ -3267,7 +3253,7 @@ func (this *QImage) Mirrored_inplace(horizontal bool, vertical bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimage.h:356
+// /usr/include/qt/QtGui/qimage.h:353
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void rgbSwapped_inplace()
@@ -3280,7 +3266,7 @@ func (this *QImage) RgbSwapped_inplace() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimage.h:357
+// /usr/include/qt/QtGui/qimage.h:354
 // index:0
 // Protected Visibility=Default Availability=Available
 // [32] QImage convertToFormat_helper(QImage::Format, Qt::ImageConversionFlags) const
@@ -3296,7 +3282,7 @@ func (this *QImage) ConvertToFormat_helper(format int, flags int) *QImage /*123*
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimage.h:358
+// /usr/include/qt/QtGui/qimage.h:355
 // index:0
 // Protected Visibility=Default Availability=Available
 // [1] bool convertToFormat_inplace(QImage::Format, Qt::ImageConversionFlags)
@@ -3310,7 +3296,7 @@ func (this *QImage) ConvertToFormat_inplace(format int, flags int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimage.h:359
+// /usr/include/qt/QtGui/qimage.h:356
 // index:0
 // Protected Visibility=Default Availability=Available
 // [32] QImage smoothScaled(int, int) const

@@ -72,7 +72,7 @@ func (*QTextCodec) NewFromPointer(cthis unsafe.Pointer) *QTextCodec {
 /*
 Searches all installed QTextCodec objects and returns the one which best matches name; the match is case-insensitive. Returns 0 if no codec matching the name name could be found.
 
-Note: This function is thread-safe.
+Note: This function is thread-safe
 */
 func (this *QTextCodec) CodecForName(name QByteArray_ITF) *QTextCodec /*777 QTextCodec **/ {
 	var convArg0 unsafe.Pointer
@@ -97,7 +97,7 @@ func QTextCodec_CodecForName(name QByteArray_ITF) *QTextCodec /*777 QTextCodec *
 /*
 Searches all installed QTextCodec objects and returns the one which best matches name; the match is case-insensitive. Returns 0 if no codec matching the name name could be found.
 
-Note: This function is thread-safe.
+Note: This function is thread-safe
 */
 func (this *QTextCodec) CodecForName1(name string) *QTextCodec /*777 QTextCodec **/ {
 	var convArg0 = qtrt.CString(name)
@@ -120,7 +120,7 @@ func QTextCodec_CodecForName1(name string) *QTextCodec /*777 QTextCodec **/ {
 /*
 Returns the QTextCodec which matches the MIBenum mib.
 
-Note: This function is thread-safe.
+Note: This function is thread-safe
 */
 func (this *QTextCodec) CodecForMib(mib int) *QTextCodec /*777 QTextCodec **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QTextCodec11codecForMibEi", qtrt.FFI_TYPE_POINTER, mib)
@@ -145,7 +145,7 @@ On Windows, the codec will be based on a system locale. On Unix systems, the cod
 
 Note that in these cases the codec's name will be "System".
 
-Note: This function is thread-safe.
+Note: This function is thread-safe
 
 See also setCodecForLocale().
 */
@@ -321,7 +321,7 @@ func (this *QTextCodec) CanEncode(arg0 QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:83
+// /usr/include/qt/QtCore/qtextcodec.h:82
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool canEncode(const QString &) const
@@ -337,25 +337,7 @@ func (this *QTextCodec) CanEncode1(arg0 string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:85
-// index:2
-// Public Visibility=Default Availability=Available
-// [1] bool canEncode(QStringView) const
-
-/*
-Returns true if the Unicode character ch can be fully encoded with this codec; otherwise returns false.
-*/
-func (this *QTextCodec) CanEncode2(arg0 QStringView_ITF /*123*/) bool {
-	var convArg0 unsafe.Pointer
-	if arg0 != nil && arg0.QStringView_PTR() != nil {
-		convArg0 = arg0.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextCodec9canEncodeE11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtCore/qtextcodec.h:87
+// /usr/include/qt/QtCore/qtextcodec.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toUnicode(const QByteArray &) const
@@ -376,7 +358,7 @@ func (this *QTextCodec) ToUnicode(arg0 QByteArray_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:88
+// /usr/include/qt/QtCore/qtextcodec.h:85
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString toUnicode(const char *) const
@@ -395,7 +377,7 @@ func (this *QTextCodec) ToUnicode1(chars string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:90
+// /usr/include/qt/QtCore/qtextcodec.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray fromUnicode(const QString &) const
@@ -413,27 +395,7 @@ func (this *QTextCodec) FromUnicode(uc string) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:92
-// index:1
-// Public Visibility=Default Availability=Available
-// [8] QByteArray fromUnicode(QStringView) const
-
-/*
-Converts str from Unicode to the encoding of this codec, and returns the result in a QByteArray.
-*/
-func (this *QTextCodec) FromUnicode1(uc QStringView_ITF /*123*/) *QByteArray /*123*/ {
-	var convArg0 unsafe.Pointer
-	if uc != nil && uc.QStringView_PTR() != nil {
-		convArg0 = uc.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTextCodec11fromUnicodeE11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qtextcodec.h:119
+// /usr/include/qt/QtCore/qtextcodec.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextDecoder * makeDecoder(QTextCodec::ConversionFlags) const
@@ -451,7 +413,7 @@ func (this *QTextCodec) MakeDecoder(flags int) *QTextDecoder /*777 QTextDecoder 
 	return /*==*/ NewQTextDecoderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:119
+// /usr/include/qt/QtCore/qtextcodec.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextDecoder * makeDecoder(QTextCodec::ConversionFlags) const
@@ -471,7 +433,7 @@ func (this *QTextCodec) MakeDecoderp() *QTextDecoder /*777 QTextDecoder **/ {
 	return /*==*/ NewQTextDecoderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:120
+// /usr/include/qt/QtCore/qtextcodec.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextEncoder * makeEncoder(QTextCodec::ConversionFlags) const
@@ -489,7 +451,7 @@ func (this *QTextCodec) MakeEncoder(flags int) *QTextEncoder /*777 QTextEncoder 
 	return /*==*/ NewQTextEncoderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:120
+// /usr/include/qt/QtCore/qtextcodec.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextEncoder * makeEncoder(QTextCodec::ConversionFlags) const
@@ -509,7 +471,7 @@ func (this *QTextCodec) MakeEncoderp() *QTextEncoder /*777 QTextEncoder **/ {
 	return /*==*/ NewQTextEncoderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:122
+// /usr/include/qt/QtCore/qtextcodec.h:116
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QByteArray name() const
@@ -527,7 +489,7 @@ func (this *QTextCodec) Name() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:124
+// /usr/include/qt/QtCore/qtextcodec.h:118
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int mibEnum() const
@@ -541,7 +503,7 @@ func (this *QTextCodec) MibEnum() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:130
+// /usr/include/qt/QtCore/qtextcodec.h:124
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextCodec()
@@ -560,7 +522,7 @@ func NewQTextCodec() *QTextCodec {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:131
+// /usr/include/qt/QtCore/qtextcodec.h:125
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void ~QTextCodec()

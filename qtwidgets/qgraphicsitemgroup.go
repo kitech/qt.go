@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h
@@ -66,7 +64,7 @@ func (*QGraphicsItemGroup) NewFromPointer(cthis unsafe.Pointer) *QGraphicsItemGr
 	return NewQGraphicsItemGroupFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:1004
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:1005
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsItemGroup(QGraphicsItem *)
@@ -89,7 +87,7 @@ func NewQGraphicsItemGroup(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QG
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:1004
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:1005
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsItemGroup(QGraphicsItem *)
@@ -110,7 +108,7 @@ func NewQGraphicsItemGroupp() *QGraphicsItemGroup {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:1005
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:1006
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsItemGroup()
@@ -125,7 +123,7 @@ func DeleteQGraphicsItemGroup(this *QGraphicsItemGroup) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:1007
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:1008
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addToGroup(QGraphicsItem *)
@@ -142,7 +140,7 @@ func (this *QGraphicsItemGroup) AddToGroup(item QGraphicsItem_ITF /*777 QGraphic
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:1008
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:1009
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeFromGroup(QGraphicsItem *)
@@ -159,7 +157,7 @@ func (this *QGraphicsItemGroup) RemoveFromGroup(item QGraphicsItem_ITF /*777 QGr
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:1010
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:1011
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF boundingRect() const
@@ -197,7 +195,7 @@ func (this *QGraphicsItemGroup) BoundingRect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:1011
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:1012
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
@@ -246,7 +244,7 @@ func (this *QGraphicsItemGroup) Paint(painter qtgui.QPainter_ITF /*777 QPainter 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:1011
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:1012
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
@@ -293,7 +291,7 @@ func (this *QGraphicsItemGroup) Paintp(painter qtgui.QPainter_ITF /*777 QPainter
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:1013
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:1014
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isObscuredBy(const QGraphicsItem *) const
@@ -317,7 +315,7 @@ func (this *QGraphicsItemGroup) IsObscuredBy(item QGraphicsItem_ITF /*777 const 
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:1014
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:1015
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QPainterPath opaqueArea() const
@@ -339,7 +337,7 @@ func (this *QGraphicsItemGroup) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:1017
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:1018
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int type() const

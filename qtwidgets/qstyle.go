@@ -386,7 +386,7 @@ func (this *QStyle) DrawItemPixmap(painter qtgui.QPainter_ITF /*777 QPainter **/
 /*
 Returns the style's standard palette.
 
-Note that on systems that support system colors, the style's standard palette is not used. In particular, the Windows Vista and Mac styles do not use the standard palette, but make use of native theme engines. With these styles, you should not set the palette with QApplication::setPalette().
+Note that on systems that support system colors, the style's standard palette is not used. In particular, the Windows XP, Vista, and Mac styles do not use the standard palette, but make use of native theme engines. With these styles, you should not set the palette with QApplication::setPalette().
 
 See also QApplication::setPalette().
 */
@@ -1180,7 +1180,7 @@ func (this *QStyle) SizeFromContentsp(ct int, opt QStyleOption_ITF /*777 const Q
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:748
+// /usr/include/qt/QtWidgets/qstyle.h:746
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
@@ -1208,7 +1208,7 @@ func (this *QStyle) StyleHint(stylehint int, opt QStyleOption_ITF /*777 const QS
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:748
+// /usr/include/qt/QtWidgets/qstyle.h:746
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
@@ -1230,7 +1230,7 @@ func (this *QStyle) StyleHintp(stylehint int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:748
+// /usr/include/qt/QtWidgets/qstyle.h:746
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
@@ -1254,7 +1254,7 @@ func (this *QStyle) StyleHintp1(stylehint int, opt QStyleOption_ITF /*777 const 
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:748
+// /usr/include/qt/QtWidgets/qstyle.h:746
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int styleHint(QStyle::StyleHint, const QStyleOption *, const QWidget *, QStyleHintReturn *) const
@@ -1280,7 +1280,7 @@ func (this *QStyle) StyleHintp2(stylehint int, opt QStyleOption_ITF /*777 const 
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:828
+// /usr/include/qt/QtWidgets/qstyle.h:826
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [32] QPixmap standardPixmap(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
@@ -1304,7 +1304,7 @@ func (this *QStyle) StandardPixmap(standardPixmap int, opt QStyleOption_ITF /*77
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:828
+// /usr/include/qt/QtWidgets/qstyle.h:826
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [32] QPixmap standardPixmap(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
@@ -1324,7 +1324,7 @@ func (this *QStyle) StandardPixmapp(standardPixmap int) *qtgui.QPixmap /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:828
+// /usr/include/qt/QtWidgets/qstyle.h:826
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [32] QPixmap standardPixmap(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
@@ -1346,7 +1346,7 @@ func (this *QStyle) StandardPixmapp1(standardPixmap int, opt QStyleOption_ITF /*
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:831
+// /usr/include/qt/QtWidgets/qstyle.h:829
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QIcon standardIcon(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
@@ -1374,7 +1374,7 @@ func (this *QStyle) StandardIcon(standardIcon int, option QStyleOption_ITF /*777
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:831
+// /usr/include/qt/QtWidgets/qstyle.h:829
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QIcon standardIcon(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
@@ -1398,7 +1398,7 @@ func (this *QStyle) StandardIconp(standardIcon int) *qtgui.QIcon /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:831
+// /usr/include/qt/QtWidgets/qstyle.h:829
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QIcon standardIcon(QStyle::StandardPixmap, const QStyleOption *, const QWidget *) const
@@ -1424,7 +1424,7 @@ func (this *QStyle) StandardIconp1(standardIcon int, option QStyleOption_ITF /*7
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:834
+// /usr/include/qt/QtWidgets/qstyle.h:832
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [32] QPixmap generatedIconPixmap(QIcon::Mode, const QPixmap &, const QStyleOption *) const
@@ -1454,7 +1454,7 @@ func (this *QStyle) GeneratedIconPixmap(iconMode int, pixmap qtgui.QPixmap_ITF, 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:837
+// /usr/include/qt/QtWidgets/qstyle.h:835
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QRect visualRect(Qt::LayoutDirection, const QRect &, const QRect &)
@@ -1487,7 +1487,7 @@ func QStyle_VisualRect(direction int, boundingRect qtcore.QRect_ITF, logicalRect
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:839
+// /usr/include/qt/QtWidgets/qstyle.h:837
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QPoint visualPos(Qt::LayoutDirection, const QRect &, const QPoint &)
@@ -1518,7 +1518,7 @@ func QStyle_VisualPos(direction int, boundingRect qtcore.QRect_ITF, logicalPos q
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:841
+// /usr/include/qt/QtWidgets/qstyle.h:839
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int sliderPositionFromValue(int, int, int, int, bool)
@@ -1543,7 +1543,7 @@ func QStyle_SliderPositionFromValue(min int, max int, val int, space int, upside
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:841
+// /usr/include/qt/QtWidgets/qstyle.h:839
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int sliderPositionFromValue(int, int, int, int, bool)
@@ -1565,7 +1565,7 @@ func (this *QStyle) SliderPositionFromValuep(min int, max int, val int, space in
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:843
+// /usr/include/qt/QtWidgets/qstyle.h:841
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int sliderValueFromPosition(int, int, int, int, bool)
@@ -1590,7 +1590,7 @@ func QStyle_SliderValueFromPosition(min int, max int, pos int, space int, upside
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:843
+// /usr/include/qt/QtWidgets/qstyle.h:841
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int sliderValueFromPosition(int, int, int, int, bool)
@@ -1612,7 +1612,7 @@ func (this *QStyle) SliderValueFromPositionp(min int, max int, pos int, space in
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:845
+// /usr/include/qt/QtWidgets/qstyle.h:843
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] Qt::Alignment visualAlignment(Qt::LayoutDirection, Qt::Alignment)
@@ -1635,7 +1635,7 @@ func QStyle_VisualAlignment(direction int, alignment int) int {
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:846
+// /usr/include/qt/QtWidgets/qstyle.h:844
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QRect alignedRect(Qt::LayoutDirection, Qt::Alignment, const QSize &, const QRect &)
@@ -1664,7 +1664,7 @@ func QStyle_AlignedRect(direction int, alignment int, size qtcore.QSize_ITF, rec
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:849
+// /usr/include/qt/QtWidgets/qstyle.h:847
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int layoutSpacing(QSizePolicy::ControlType, QSizePolicy::ControlType, Qt::Orientation, const QStyleOption *, const QWidget *) const
@@ -1692,7 +1692,7 @@ func (this *QStyle) LayoutSpacing(control1 int, control2 int, orientation int, o
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:849
+// /usr/include/qt/QtWidgets/qstyle.h:847
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int layoutSpacing(QSizePolicy::ControlType, QSizePolicy::ControlType, Qt::Orientation, const QStyleOption *, const QWidget *) const
@@ -1716,7 +1716,7 @@ func (this *QStyle) LayoutSpacingp(control1 int, control2 int, orientation int) 
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:849
+// /usr/include/qt/QtWidgets/qstyle.h:847
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int layoutSpacing(QSizePolicy::ControlType, QSizePolicy::ControlType, Qt::Orientation, const QStyleOption *, const QWidget *) const
@@ -1742,7 +1742,7 @@ func (this *QStyle) LayoutSpacingp1(control1 int, control2 int, orientation int,
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:852
+// /usr/include/qt/QtWidgets/qstyle.h:850
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int combinedLayoutSpacing(QSizePolicy::ControlTypes, QSizePolicy::ControlTypes, Qt::Orientation, QStyleOption *, QWidget *) const
@@ -1772,7 +1772,7 @@ func (this *QStyle) CombinedLayoutSpacing(controls1 int, controls2 int, orientat
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:852
+// /usr/include/qt/QtWidgets/qstyle.h:850
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int combinedLayoutSpacing(QSizePolicy::ControlTypes, QSizePolicy::ControlTypes, Qt::Orientation, QStyleOption *, QWidget *) const
@@ -1798,7 +1798,7 @@ func (this *QStyle) CombinedLayoutSpacingp(controls1 int, controls2 int, orienta
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:852
+// /usr/include/qt/QtWidgets/qstyle.h:850
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int combinedLayoutSpacing(QSizePolicy::ControlTypes, QSizePolicy::ControlTypes, Qt::Orientation, QStyleOption *, QWidget *) const
@@ -1826,7 +1826,7 @@ func (this *QStyle) CombinedLayoutSpacingp1(controls1 int, controls2 int, orient
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:856
+// /usr/include/qt/QtWidgets/qstyle.h:854
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QStyle * proxy() const
@@ -3254,7 +3254,7 @@ QStyle::SH_ToolBox_SelectedPageTitleBold?Boldness of the selected page title in 
 QStyle::SH_LineEdit_PasswordCharacter?The Unicode character to be used for passwords.
 QStyle::SH_Table_GridLineColor?The RGB value of the grid for a table.
 QStyle::SH_UnderlineShortcut?Whether shortcuts are underlined.
-QStyle::SH_SpellCheckUnderlineStyle?Obsolete. Use SpellCheckUnderlineStyle hint in QPlatformTheme instead.
+QStyle::SH_SpellCheckUnderlineStyle?A QTextCharFormat::UnderlineStyle value that specifies the way misspelled words should be underlined.
 QStyle::SH_SpinBox_AnimateButton?Animate a click when up or down is pressed in a spin box.
 QStyle::SH_SpinBox_KeyPressAutoRepeatRate?Auto-repeat interval for spinbox key presses.
 QStyle::SH_SpinBox_ClickAutoRepeatRate?Auto-repeat interval for spinbox mouse clicks.
@@ -3307,7 +3307,6 @@ QStyle::SH_ScrollBar_Transient?Determines if the style supports transient scroll
 QStyle::SH_Menu_SupportsSections?Determines if the style displays sections in menus or treat them as plain separators. Sections are separators with a text and icon hint.
 QStyle::SH_ToolTip_WakeUpDelay?Determines the delay before a tooltip is shown, in milliseconds.
 QStyle::SH_ToolTip_FallAsleepDelay?Determines the delay (in milliseconds) before a new wake time is needed when a tooltip is shown (notice: shown, not hidden). When a new wake isn't needed, a user-requested tooltip will be shown nearly instantly.
-QStyle::SH_Widget_Animate?Deprecated. Use SH_Widget_Animation_Duration instead.
 
 
 See also styleHint().
@@ -3656,12 +3655,6 @@ const QStyle__SH_Menu_SubMenuDontStartSloppyOnLeave QStyle__StyleHint = 111
 
 //
 const QStyle__SH_ItemView_ScrollMode QStyle__StyleHint = 112
-
-//
-const QStyle__SH_TitleBar_ShowToolTipsOnButtons QStyle__StyleHint = 113
-
-//
-const QStyle__SH_Widget_Animation_Duration QStyle__StyleHint = 114
 
 //
 const QStyle__SH_CustomBase QStyle__StyleHint = -268435456

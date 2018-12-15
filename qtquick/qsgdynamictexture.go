@@ -66,7 +66,7 @@ func (*QSGDynamicTexture) NewFromPointer(cthis unsafe.Pointer) *QSGDynamicTextur
 	return NewQSGDynamicTextureFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:131
+// /usr/include/qt/QtQuick/qsgtexture.h:130
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -80,7 +80,7 @@ func (this *QSGDynamicTexture) MetaObject() *qtcore.QMetaObject /*777 const QMet
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:133
+// /usr/include/qt/QtQuick/qsgtexture.h:132
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool updateTexture()

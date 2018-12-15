@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicslinearlayout.h
@@ -66,7 +64,7 @@ func (*QGraphicsLinearLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLin
 	return NewQGraphicsLinearLayoutFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:56
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:57
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLinearLayout(QGraphicsLayoutItem *)
@@ -89,7 +87,7 @@ func NewQGraphicsLinearLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayo
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:56
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:57
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLinearLayout(QGraphicsLayoutItem *)
@@ -110,7 +108,7 @@ func NewQGraphicsLinearLayoutp() *QGraphicsLinearLayout {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:57
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:58
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLinearLayout(Qt::Orientation, QGraphicsLayoutItem *)
@@ -133,7 +131,7 @@ func NewQGraphicsLinearLayout1(orientation int, parent QGraphicsLayoutItem_ITF /
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:57
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:58
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLinearLayout(Qt::Orientation, QGraphicsLayoutItem *)
@@ -154,7 +152,7 @@ func NewQGraphicsLinearLayout1p(orientation int) *QGraphicsLinearLayout {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:58
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsLinearLayout()
@@ -169,7 +167,7 @@ func DeleteQGraphicsLinearLayout(this *QGraphicsLinearLayout) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:60
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOrientation(Qt::Orientation)
@@ -184,7 +182,7 @@ func (this *QGraphicsLinearLayout) SetOrientation(orientation int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:61
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Orientation orientation() const
@@ -200,7 +198,7 @@ func (this *QGraphicsLinearLayout) Orientation() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:63
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:64
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void addItem(QGraphicsLayoutItem *)
@@ -217,7 +215,7 @@ func (this *QGraphicsLinearLayout) AddItem(item QGraphicsLayoutItem_ITF /*777 QG
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:64
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:65
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void addStretch(int)
@@ -230,7 +228,7 @@ func (this *QGraphicsLinearLayout) AddStretch(stretch int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:64
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:65
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void addStretch(int)
@@ -245,7 +243,7 @@ func (this *QGraphicsLinearLayout) AddStretchp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:66
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertItem(int, QGraphicsLayoutItem *)
@@ -264,7 +262,7 @@ func (this *QGraphicsLinearLayout) InsertItem(index int, item QGraphicsLayoutIte
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:67
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertStretch(int, int)
@@ -279,7 +277,7 @@ func (this *QGraphicsLinearLayout) InsertStretch(index int, stretch int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:67
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertStretch(int, int)
@@ -296,7 +294,7 @@ func (this *QGraphicsLinearLayout) InsertStretchp(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:69
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeItem(QGraphicsLayoutItem *)
@@ -315,7 +313,7 @@ func (this *QGraphicsLinearLayout) RemoveItem(item QGraphicsLayoutItem_ITF /*777
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:70
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:71
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void removeAt(int)
@@ -332,7 +330,7 @@ func (this *QGraphicsLinearLayout) RemoveAt(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:72
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSpacing(qreal)
@@ -347,7 +345,7 @@ func (this *QGraphicsLinearLayout) SetSpacing(spacing float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:73
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal spacing() const
@@ -363,7 +361,7 @@ func (this *QGraphicsLinearLayout) Spacing() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:74
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemSpacing(int, qreal)
@@ -378,7 +376,7 @@ func (this *QGraphicsLinearLayout) SetItemSpacing(index int, spacing float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:75
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal itemSpacing(int) const
@@ -394,7 +392,7 @@ func (this *QGraphicsLinearLayout) ItemSpacing(index int) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:77
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStretchFactor(QGraphicsLayoutItem *, int)
@@ -415,7 +413,7 @@ func (this *QGraphicsLinearLayout) SetStretchFactor(item QGraphicsLayoutItem_ITF
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:78
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int stretchFactor(QGraphicsLayoutItem *) const
@@ -435,7 +433,7 @@ func (this *QGraphicsLinearLayout) StretchFactor(item QGraphicsLayoutItem_ITF /*
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:80
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAlignment(QGraphicsLayoutItem *, Qt::Alignment)
@@ -454,7 +452,7 @@ func (this *QGraphicsLinearLayout) SetAlignment(item QGraphicsLayoutItem_ITF /*7
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:81
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Alignment alignment(QGraphicsLayoutItem *) const
@@ -476,7 +474,7 @@ func (this *QGraphicsLinearLayout) Alignment(item QGraphicsLayoutItem_ITF /*777 
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:83
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:84
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRectF &)
@@ -493,7 +491,7 @@ func (this *QGraphicsLinearLayout) SetGeometry(rect qtcore.QRectF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:85
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:86
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int count() const
@@ -507,7 +505,7 @@ func (this *QGraphicsLinearLayout) Count() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:86
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:87
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QGraphicsLayoutItem * itemAt(int) const
@@ -523,7 +521,7 @@ func (this *QGraphicsLinearLayout) ItemAt(index int) *QGraphicsLayoutItem /*777 
 	return /*==*/ NewQGraphicsLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:88
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:89
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void invalidate()
@@ -536,7 +534,7 @@ func (this *QGraphicsLinearLayout) Invalidate() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:89
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:90
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &) const
@@ -556,7 +554,7 @@ func (this *QGraphicsLinearLayout) SizeHint(which int, constraint qtcore.QSizeF_
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:89
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:90
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &) const
@@ -574,7 +572,7 @@ func (this *QGraphicsLinearLayout) SizeHintp(which int) *qtcore.QSizeF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:95
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void dump(int) const
@@ -587,7 +585,7 @@ func (this *QGraphicsLinearLayout) Dump(indent int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:95
+// /usr/include/qt/QtWidgets/qgraphicslinearlayout.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void dump(int) const

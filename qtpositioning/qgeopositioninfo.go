@@ -115,7 +115,7 @@ func NewQGeoPositionInfo1(coordinate QGeoCoordinate_ITF, updateTime qtcore.QDate
 	return gothis
 }
 
-// /usr/include/qt/QtPositioning/qgeopositioninfo.h:68
+// /usr/include/qt/QtPositioning/qgeopositioninfo.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QGeoPositionInfo()
@@ -130,7 +130,7 @@ func DeleteQGeoPositionInfo(this *QGeoPositionInfo) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtPositioning/qgeopositioninfo.h:70
+// /usr/include/qt/QtPositioning/qgeopositioninfo.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGeoPositionInfo & operator=(const QGeoPositionInfo &)
@@ -150,7 +150,7 @@ func (this *QGeoPositionInfo) Operator_equal(other QGeoPositionInfo_ITF) *QGeoPo
 	return rv2
 }
 
-// /usr/include/qt/QtPositioning/qgeopositioninfo.h:72
+// /usr/include/qt/QtPositioning/qgeopositioninfo.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QGeoPositionInfo &) const
@@ -168,7 +168,7 @@ func (this *QGeoPositionInfo) Operator_equal_equal(other QGeoPositionInfo_ITF) b
 	return rv != 0
 }
 
-// /usr/include/qt/QtPositioning/qgeopositioninfo.h:73
+// /usr/include/qt/QtPositioning/qgeopositioninfo.h:72
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QGeoPositionInfo &) const
@@ -186,7 +186,7 @@ func (this *QGeoPositionInfo) Operator_not_equal(other QGeoPositionInfo_ITF) boo
 	return rv != 0
 }
 
-// /usr/include/qt/QtPositioning/qgeopositioninfo.h:77
+// /usr/include/qt/QtPositioning/qgeopositioninfo.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -202,7 +202,7 @@ func (this *QGeoPositionInfo) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtPositioning/qgeopositioninfo.h:79
+// /usr/include/qt/QtPositioning/qgeopositioninfo.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTimestamp(const QDateTime &)
@@ -223,7 +223,7 @@ func (this *QGeoPositionInfo) SetTimestamp(timestamp qtcore.QDateTime_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtPositioning/qgeopositioninfo.h:80
+// /usr/include/qt/QtPositioning/qgeopositioninfo.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime timestamp() const
@@ -243,7 +243,7 @@ func (this *QGeoPositionInfo) Timestamp() *qtcore.QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtPositioning/qgeopositioninfo.h:82
+// /usr/include/qt/QtPositioning/qgeopositioninfo.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCoordinate(const QGeoCoordinate &)
@@ -262,7 +262,7 @@ func (this *QGeoPositionInfo) SetCoordinate(coordinate QGeoCoordinate_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtPositioning/qgeopositioninfo.h:83
+// /usr/include/qt/QtPositioning/qgeopositioninfo.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGeoCoordinate coordinate() const
@@ -282,7 +282,7 @@ func (this *QGeoPositionInfo) Coordinate() *QGeoCoordinate /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtPositioning/qgeopositioninfo.h:85
+// /usr/include/qt/QtPositioning/qgeopositioninfo.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAttribute(QGeoPositionInfo::Attribute, qreal)
@@ -297,7 +297,7 @@ func (this *QGeoPositionInfo) SetAttribute(attribute int, value float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtPositioning/qgeopositioninfo.h:86
+// /usr/include/qt/QtPositioning/qgeopositioninfo.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal attribute(QGeoPositionInfo::Attribute) const
@@ -317,7 +317,7 @@ func (this *QGeoPositionInfo) Attribute(attribute int) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtPositioning/qgeopositioninfo.h:87
+// /usr/include/qt/QtPositioning/qgeopositioninfo.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeAttribute(QGeoPositionInfo::Attribute)
@@ -330,7 +330,7 @@ func (this *QGeoPositionInfo) RemoveAttribute(attribute int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtPositioning/qgeopositioninfo.h:88
+// /usr/include/qt/QtPositioning/qgeopositioninfo.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasAttribute(QGeoPositionInfo::Attribute) const

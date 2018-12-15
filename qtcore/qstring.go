@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 52
+// extern C begin: 0
 */
 // import "C"
 import "unsafe"
@@ -212,7 +212,7 @@ func NewQString4(latin1 QLatin1String_ITF /*123*/) *QString {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qstring.h:682
+// /usr/include/qt/QtCore/qstring.h:658
 // index:5
 // Public inline Visibility=Default Availability=Available
 // [-2] void QString(const char *)
@@ -235,7 +235,7 @@ func NewQString5(ch string) *QString {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qstring.h:685
+// /usr/include/qt/QtCore/qstring.h:661
 // index:6
 // Public inline Visibility=Default Availability=Available
 // [-2] void QString(const QByteArray &)
@@ -260,7 +260,7 @@ func NewQString6(a QByteArray_ITF) *QString {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qstring.h:811
+// /usr/include/qt/QtCore/qstring.h:786
 // index:7
 // Public Visibility=Default Availability=Available
 // [-2] void QString(int, Qt::Initialization)
@@ -374,7 +374,7 @@ func (this *QString) Operator_equal3(other unsafe.Pointer /*333*/) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:688
+// /usr/include/qt/QtCore/qstring.h:664
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [8] QString & operator=(const char *)
@@ -393,7 +393,7 @@ func (this *QString) Operator_equal4(ch string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:690
+// /usr/include/qt/QtCore/qstring.h:666
 // index:5
 // Public inline Visibility=Default Availability=Available
 // [8] QString & operator=(const QByteArray &)
@@ -414,7 +414,7 @@ func (this *QString) Operator_equal5(a QByteArray_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:692
+// /usr/include/qt/QtCore/qstring.h:668
 // index:6
 // Public inline Visibility=Default Availability=Available
 // [8] QString & operator=(char)
@@ -456,7 +456,7 @@ func (this *QString) Swap(other string) {
 /*
 Returns the number of characters in this string.
 
-The last character in the string is at position size() - 1.
+The last character in the string is at position size() - 1. In addition, QString ensures that the character at position size() is always '\0', so that you can use the return value of data() and constData() as arguments to functions that expect '\0'-terminated strings.
 
 Example:
 
@@ -465,6 +465,7 @@ Example:
   int n = str.size();         // n == 5
   str.data()[0];              // returns 'W'
   str.data()[4];              // returns 'd'
+  str.data()[5];              // returns '\0'
 
 
 
@@ -494,7 +495,7 @@ func (this *QString) Count() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:335
+// /usr/include/qt/QtCore/qstring.h:324
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int count(QChar, Qt::CaseSensitivity) const
@@ -516,7 +517,7 @@ func (this *QString) Count1(c QChar_ITF /*123*/, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:335
+// /usr/include/qt/QtCore/qstring.h:324
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int count(QChar, Qt::CaseSensitivity) const
@@ -540,7 +541,7 @@ func (this *QString) Count1p(c QChar_ITF /*123*/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:336
+// /usr/include/qt/QtCore/qstring.h:325
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int count(const QString &, Qt::CaseSensitivity) const
@@ -560,7 +561,7 @@ func (this *QString) Count2(s string, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:336
+// /usr/include/qt/QtCore/qstring.h:325
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int count(const QString &, Qt::CaseSensitivity) const
@@ -582,7 +583,7 @@ func (this *QString) Count2p(s string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:337
+// /usr/include/qt/QtCore/qstring.h:326
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int count(const QStringRef &, Qt::CaseSensitivity) const
@@ -604,7 +605,7 @@ func (this *QString) Count3(s QStringRef_ITF, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:337
+// /usr/include/qt/QtCore/qstring.h:326
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int count(const QStringRef &, Qt::CaseSensitivity) const
@@ -628,7 +629,7 @@ func (this *QString) Count3p(s QStringRef_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:343
+// /usr/include/qt/QtCore/qstring.h:332
 // index:4
 // Public Visibility=Default Availability=Available
 // [4] int count(const QRegExp &) const
@@ -650,7 +651,7 @@ func (this *QString) Count4(arg0 QRegExp_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:357
+// /usr/include/qt/QtCore/qstring.h:346
 // index:5
 // Public Visibility=Default Availability=Available
 // [4] int count(const QRegularExpression &) const
@@ -1009,11 +1010,9 @@ func (this *QString) Squeeze() {
 // [8] const QChar * unicode() const
 
 /*
-Returns a Unicode representation of the string. The result remains valid until the string is modified.
+Returns a '\0'-terminated Unicode representation of the string. The result remains valid until the string is modified.
 
-Note: The returned string may not be '\0'-terminated. Use size() to determine the length of the array.
-
-See also setUnicode(), utf16(), and fromRawData().
+See also setUnicode() and utf16().
 */
 func (this *QString) Unicode() *QChar /*777 const QChar **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7unicodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1027,9 +1026,7 @@ func (this *QString) Unicode() *QChar /*777 const QChar **/ {
 // [8] QChar * data()
 
 /*
-Returns a pointer to the data stored in the QString. The pointer can be used to access and modify the characters that compose the string.
-
-Unlike constData() and unicode(), the returned data is always '\0'-terminated.
+Returns a pointer to the data stored in the QString. The pointer can be used to access and modify the characters that compose the string. For convenience, the data is '\0'-terminated.
 
 Example:
 
@@ -1059,9 +1056,7 @@ func (this *QString) Data() *QChar /*777 QChar **/ {
 // [8] const QChar * data() const
 
 /*
-Returns a pointer to the data stored in the QString. The pointer can be used to access and modify the characters that compose the string.
-
-Unlike constData() and unicode(), the returned data is always '\0'-terminated.
+Returns a pointer to the data stored in the QString. The pointer can be used to access and modify the characters that compose the string. For convenience, the data is '\0'-terminated.
 
 Example:
 
@@ -1091,13 +1086,11 @@ func (this *QString) Data1() *QChar /*777 const QChar **/ {
 // [8] const QChar * constData() const
 
 /*
-Returns a pointer to the data stored in the QString. The pointer can be used to access the characters that compose the string.
+Returns a pointer to the data stored in the QString. The pointer can be used to access the characters that compose the string. For convenience, the data is '\0'-terminated.
 
 Note that the pointer remains valid only as long as the string is not modified.
 
-Note: The returned string may not be '\0'-terminated. Use size() to determine the length of the array.
-
-See also data(), operator[](), and fromRawData().
+See also data() and operator[]().
 */
 func (this *QString) ConstData() *QChar /*777 const QChar **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString9constDataEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -1249,102 +1242,6 @@ func (this *QString) Operator_get_index3(i uint) *QCharRef /*123*/ {
 
 // /usr/include/qt/QtCore/qstring.h:264
 // index:0
-// Public inline Visibility=Default Availability=Available
-// [2] QChar front() const
-
-/*
-Returns the first character in the string. Same as at(0).
-
-This function is provided for STL compatibility.
-
-Warning: Calling this function on an empty string constitutes undefined behavior.
-
-This function was introduced in  Qt 5.10.
-
-See also back(), at(), and operator[]().
-*/
-func (this *QString) Front() *QChar /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5frontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qstring.h:265
-// index:1
-// Public inline Visibility=Default Availability=Available
-// [16] QCharRef front()
-
-/*
-Returns the first character in the string. Same as at(0).
-
-This function is provided for STL compatibility.
-
-Warning: Calling this function on an empty string constitutes undefined behavior.
-
-This function was introduced in  Qt 5.10.
-
-See also back(), at(), and operator[]().
-*/
-func (this *QString) Front1() *QCharRef /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QString5frontEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQCharRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQCharRef)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qstring.h:266
-// index:0
-// Public inline Visibility=Default Availability=Available
-// [2] QChar back() const
-
-/*
-Returns the last character in the string. Same as at(size() - 1).
-
-This function is provided for STL compatibility.
-
-Warning: Calling this function on an empty string constitutes undefined behavior.
-
-This function was introduced in  Qt 5.10.
-
-See also front(), at(), and operator[]().
-*/
-func (this *QString) Back() *QChar /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString4backEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQCharFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQChar)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qstring.h:267
-// index:1
-// Public inline Visibility=Default Availability=Available
-// [16] QCharRef back()
-
-/*
-Returns the last character in the string. Same as at(size() - 1).
-
-This function is provided for STL compatibility.
-
-Warning: Calling this function on an empty string constitutes undefined behavior.
-
-This function was introduced in  Qt 5.10.
-
-See also front(), at(), and operator[]().
-*/
-func (this *QString) Back1() *QCharRef /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QString4backEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQCharRefFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQCharRef)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qstring.h:269
-// index:0
 // Public Visibility=Default Availability=Available
 // [8] QString arg(qlonglong, int, int, QChar) const
 
@@ -1384,7 +1281,7 @@ func (this *QString) Arg(a int64, fieldwidth int, base int, fillChar QChar_ITF /
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:269
+// /usr/include/qt/QtCore/qstring.h:264
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString arg(qlonglong, int, int, QChar) const
@@ -1427,7 +1324,7 @@ func (this *QString) Argp(a int64) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:269
+// /usr/include/qt/QtCore/qstring.h:264
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString arg(qlonglong, int, int, QChar) const
@@ -1468,7 +1365,7 @@ func (this *QString) Argp1(a int64, fieldwidth int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:269
+// /usr/include/qt/QtCore/qstring.h:264
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString arg(qlonglong, int, int, QChar) const
@@ -1507,7 +1404,7 @@ func (this *QString) Argp2(a int64, fieldwidth int, base int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:271
+// /usr/include/qt/QtCore/qstring.h:266
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString arg(qulonglong, int, int, QChar) const
@@ -1548,7 +1445,7 @@ func (this *QString) Arg1(a uint64, fieldwidth int, base int, fillChar QChar_ITF
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:271
+// /usr/include/qt/QtCore/qstring.h:266
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString arg(qulonglong, int, int, QChar) const
@@ -1591,7 +1488,7 @@ func (this *QString) Arg1p(a uint64) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:271
+// /usr/include/qt/QtCore/qstring.h:266
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString arg(qulonglong, int, int, QChar) const
@@ -1632,7 +1529,7 @@ func (this *QString) Arg1p1(a uint64, fieldwidth int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:271
+// /usr/include/qt/QtCore/qstring.h:266
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString arg(qulonglong, int, int, QChar) const
@@ -1671,7 +1568,7 @@ func (this *QString) Arg1p2(a uint64, fieldwidth int, base int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:273
+// /usr/include/qt/QtCore/qstring.h:268
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QString arg(long, int, int, QChar) const
@@ -1712,7 +1609,7 @@ func (this *QString) Arg2(a int, fieldwidth int, base int, fillChar QChar_ITF /*
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:273
+// /usr/include/qt/QtCore/qstring.h:268
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QString arg(long, int, int, QChar) const
@@ -1755,7 +1652,7 @@ func (this *QString) Arg2p(a int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:273
+// /usr/include/qt/QtCore/qstring.h:268
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QString arg(long, int, int, QChar) const
@@ -1796,7 +1693,7 @@ func (this *QString) Arg2p1(a int, fieldwidth int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:273
+// /usr/include/qt/QtCore/qstring.h:268
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QString arg(long, int, int, QChar) const
@@ -1835,7 +1732,7 @@ func (this *QString) Arg2p2(a int, fieldwidth int, base int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:275
+// /usr/include/qt/QtCore/qstring.h:270
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QString arg(ulong, int, int, QChar) const
@@ -1876,7 +1773,7 @@ func (this *QString) Arg3(a uint, fieldwidth int, base int, fillChar QChar_ITF /
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:275
+// /usr/include/qt/QtCore/qstring.h:270
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QString arg(ulong, int, int, QChar) const
@@ -1919,7 +1816,7 @@ func (this *QString) Arg3p(a uint) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:275
+// /usr/include/qt/QtCore/qstring.h:270
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QString arg(ulong, int, int, QChar) const
@@ -1960,7 +1857,7 @@ func (this *QString) Arg3p1(a uint, fieldwidth int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:275
+// /usr/include/qt/QtCore/qstring.h:270
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QString arg(ulong, int, int, QChar) const
@@ -1999,7 +1896,7 @@ func (this *QString) Arg3p2(a uint, fieldwidth int, base int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:277
+// /usr/include/qt/QtCore/qstring.h:272
 // index:4
 // Public Visibility=Default Availability=Available
 // [8] QString arg(int, int, int, QChar) const
@@ -2040,7 +1937,7 @@ func (this *QString) Arg4(a int, fieldWidth int, base int, fillChar QChar_ITF /*
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:277
+// /usr/include/qt/QtCore/qstring.h:272
 // index:4
 // Public Visibility=Default Availability=Available
 // [8] QString arg(int, int, int, QChar) const
@@ -2083,7 +1980,7 @@ func (this *QString) Arg4p(a int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:277
+// /usr/include/qt/QtCore/qstring.h:272
 // index:4
 // Public Visibility=Default Availability=Available
 // [8] QString arg(int, int, int, QChar) const
@@ -2124,7 +2021,7 @@ func (this *QString) Arg4p1(a int, fieldWidth int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:277
+// /usr/include/qt/QtCore/qstring.h:272
 // index:4
 // Public Visibility=Default Availability=Available
 // [8] QString arg(int, int, int, QChar) const
@@ -2163,7 +2060,7 @@ func (this *QString) Arg4p2(a int, fieldWidth int, base int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:279
+// /usr/include/qt/QtCore/qstring.h:274
 // index:5
 // Public Visibility=Default Availability=Available
 // [8] QString arg(uint, int, int, QChar) const
@@ -2204,7 +2101,7 @@ func (this *QString) Arg5(a uint, fieldWidth int, base int, fillChar QChar_ITF /
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:279
+// /usr/include/qt/QtCore/qstring.h:274
 // index:5
 // Public Visibility=Default Availability=Available
 // [8] QString arg(uint, int, int, QChar) const
@@ -2247,7 +2144,7 @@ func (this *QString) Arg5p(a uint) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:279
+// /usr/include/qt/QtCore/qstring.h:274
 // index:5
 // Public Visibility=Default Availability=Available
 // [8] QString arg(uint, int, int, QChar) const
@@ -2288,7 +2185,7 @@ func (this *QString) Arg5p1(a uint, fieldWidth int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:279
+// /usr/include/qt/QtCore/qstring.h:274
 // index:5
 // Public Visibility=Default Availability=Available
 // [8] QString arg(uint, int, int, QChar) const
@@ -2327,7 +2224,7 @@ func (this *QString) Arg5p2(a uint, fieldWidth int, base int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:281
+// /usr/include/qt/QtCore/qstring.h:276
 // index:6
 // Public Visibility=Default Availability=Available
 // [8] QString arg(short, int, int, QChar) const
@@ -2368,7 +2265,7 @@ func (this *QString) Arg6(a int16, fieldWidth int, base int, fillChar QChar_ITF 
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:281
+// /usr/include/qt/QtCore/qstring.h:276
 // index:6
 // Public Visibility=Default Availability=Available
 // [8] QString arg(short, int, int, QChar) const
@@ -2411,7 +2308,7 @@ func (this *QString) Arg6p(a int16) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:281
+// /usr/include/qt/QtCore/qstring.h:276
 // index:6
 // Public Visibility=Default Availability=Available
 // [8] QString arg(short, int, int, QChar) const
@@ -2452,7 +2349,7 @@ func (this *QString) Arg6p1(a int16, fieldWidth int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:281
+// /usr/include/qt/QtCore/qstring.h:276
 // index:6
 // Public Visibility=Default Availability=Available
 // [8] QString arg(short, int, int, QChar) const
@@ -2491,7 +2388,7 @@ func (this *QString) Arg6p2(a int16, fieldWidth int, base int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:283
+// /usr/include/qt/QtCore/qstring.h:278
 // index:7
 // Public Visibility=Default Availability=Available
 // [8] QString arg(ushort, int, int, QChar) const
@@ -2532,7 +2429,7 @@ func (this *QString) Arg7(a uint16, fieldWidth int, base int, fillChar QChar_ITF
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:283
+// /usr/include/qt/QtCore/qstring.h:278
 // index:7
 // Public Visibility=Default Availability=Available
 // [8] QString arg(ushort, int, int, QChar) const
@@ -2575,7 +2472,7 @@ func (this *QString) Arg7p(a uint16) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:283
+// /usr/include/qt/QtCore/qstring.h:278
 // index:7
 // Public Visibility=Default Availability=Available
 // [8] QString arg(ushort, int, int, QChar) const
@@ -2616,7 +2513,7 @@ func (this *QString) Arg7p1(a uint16, fieldWidth int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:283
+// /usr/include/qt/QtCore/qstring.h:278
 // index:7
 // Public Visibility=Default Availability=Available
 // [8] QString arg(ushort, int, int, QChar) const
@@ -2655,7 +2552,7 @@ func (this *QString) Arg7p2(a uint16, fieldWidth int, base int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:285
+// /usr/include/qt/QtCore/qstring.h:280
 // index:8
 // Public Visibility=Default Availability=Available
 // [8] QString arg(double, int, char, int, QChar) const
@@ -2696,7 +2593,7 @@ func (this *QString) Arg8(a float64, fieldWidth int, fmt_ byte, prec int, fillCh
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:285
+// /usr/include/qt/QtCore/qstring.h:280
 // index:8
 // Public Visibility=Default Availability=Available
 // [8] QString arg(double, int, char, int, QChar) const
@@ -2741,7 +2638,7 @@ func (this *QString) Arg8p(a float64) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:285
+// /usr/include/qt/QtCore/qstring.h:280
 // index:8
 // Public Visibility=Default Availability=Available
 // [8] QString arg(double, int, char, int, QChar) const
@@ -2784,7 +2681,7 @@ func (this *QString) Arg8p1(a float64, fieldWidth int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:285
+// /usr/include/qt/QtCore/qstring.h:280
 // index:8
 // Public Visibility=Default Availability=Available
 // [8] QString arg(double, int, char, int, QChar) const
@@ -2825,7 +2722,7 @@ func (this *QString) Arg8p2(a float64, fieldWidth int, fmt_ byte) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:285
+// /usr/include/qt/QtCore/qstring.h:280
 // index:8
 // Public Visibility=Default Availability=Available
 // [8] QString arg(double, int, char, int, QChar) const
@@ -2864,7 +2761,7 @@ func (this *QString) Arg8p3(a float64, fieldWidth int, fmt_ byte, prec int) stri
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:287
+// /usr/include/qt/QtCore/qstring.h:282
 // index:9
 // Public Visibility=Default Availability=Available
 // [8] QString arg(char, int, QChar) const
@@ -2905,7 +2802,7 @@ func (this *QString) Arg9(a byte, fieldWidth int, fillChar QChar_ITF /*123*/) st
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:287
+// /usr/include/qt/QtCore/qstring.h:282
 // index:9
 // Public Visibility=Default Availability=Available
 // [8] QString arg(char, int, QChar) const
@@ -2946,7 +2843,7 @@ func (this *QString) Arg9p(a byte) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:287
+// /usr/include/qt/QtCore/qstring.h:282
 // index:9
 // Public Visibility=Default Availability=Available
 // [8] QString arg(char, int, QChar) const
@@ -2985,7 +2882,7 @@ func (this *QString) Arg9p1(a byte, fieldWidth int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:289
+// /usr/include/qt/QtCore/qstring.h:284
 // index:10
 // Public Visibility=Default Availability=Available
 // [8] QString arg(QChar, int, QChar) const
@@ -3030,7 +2927,7 @@ func (this *QString) Arg10(a QChar_ITF /*123*/, fieldWidth int, fillChar QChar_I
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:289
+// /usr/include/qt/QtCore/qstring.h:284
 // index:10
 // Public Visibility=Default Availability=Available
 // [8] QString arg(QChar, int, QChar) const
@@ -3075,7 +2972,7 @@ func (this *QString) Arg10p(a QChar_ITF /*123*/) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:289
+// /usr/include/qt/QtCore/qstring.h:284
 // index:10
 // Public Visibility=Default Availability=Available
 // [8] QString arg(QChar, int, QChar) const
@@ -3118,7 +3015,7 @@ func (this *QString) Arg10p1(a QChar_ITF /*123*/, fieldWidth int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:292
+// /usr/include/qt/QtCore/qstring.h:286
 // index:11
 // Public Visibility=Default Availability=Available
 // [8] QString arg(const QString &, int, QChar) const
@@ -3161,7 +3058,7 @@ func (this *QString) Arg11(a string, fieldWidth int, fillChar QChar_ITF /*123*/)
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:292
+// /usr/include/qt/QtCore/qstring.h:286
 // index:11
 // Public Visibility=Default Availability=Available
 // [8] QString arg(const QString &, int, QChar) const
@@ -3204,7 +3101,7 @@ func (this *QString) Arg11p(a string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:292
+// /usr/include/qt/QtCore/qstring.h:286
 // index:11
 // Public Visibility=Default Availability=Available
 // [8] QString arg(const QString &, int, QChar) const
@@ -3245,274 +3142,8 @@ func (this *QString) Arg11p1(a string, fieldWidth int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:295
+// /usr/include/qt/QtCore/qstring.h:288
 // index:12
-// Public Visibility=Default Availability=Available
-// [8] QString arg(QStringView, int, QChar) const
-
-/*
-Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
-
-fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
-
-This example shows how we might create a status string for reporting progress while processing a list of files:
-
-
-  QString i;           // current file's number
-  QString total;       // number of files to process
-  QString fileName;    // current file's name
-
-  QString status = QString("Processing file %1 of %2: %3")
-                  .arg(i).arg(total).arg(fileName);
-
-
-
-First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
-
-One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
-
-If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
-*/
-func (this *QString) Arg12(a QStringView_ITF /*123*/, fieldWidth int, fillChar QChar_ITF /*123*/) string {
-	var convArg0 unsafe.Pointer
-	if a != nil && a.QStringView_PTR() != nil {
-		convArg0 = a.QStringView_PTR().GetCthis()
-	}
-	var convArg2 unsafe.Pointer
-	if fillChar != nil && fillChar.QChar_PTR() != nil {
-		convArg2 = fillChar.QChar_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argE11QStringViewi5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fieldWidth, convArg2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qstring.h:295
-// index:12
-// Public Visibility=Default Availability=Available
-// [8] QString arg(QStringView, int, QChar) const
-
-/*
-Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
-
-fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
-
-This example shows how we might create a status string for reporting progress while processing a list of files:
-
-
-  QString i;           // current file's number
-  QString total;       // number of files to process
-  QString fileName;    // current file's name
-
-  QString status = QString("Processing file %1 of %2: %3")
-                  .arg(i).arg(total).arg(fileName);
-
-
-
-First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
-
-One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
-
-If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
-*/
-func (this *QString) Arg12p(a QStringView_ITF /*123*/) string {
-	var convArg0 unsafe.Pointer
-	if a != nil && a.QStringView_PTR() != nil {
-		convArg0 = a.QStringView_PTR().GetCthis()
-	}
-	// arg: 1, int=Int, =Invalid, , Invalid
-	fieldWidth := int(0)
-	// arg: 2, QChar=Record, QChar=Record, , Invalid
-	var convArg2 = NewQChar8(' ')
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argE11QStringViewi5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fieldWidth, convArg2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qstring.h:295
-// index:12
-// Public Visibility=Default Availability=Available
-// [8] QString arg(QStringView, int, QChar) const
-
-/*
-Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
-
-fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
-
-This example shows how we might create a status string for reporting progress while processing a list of files:
-
-
-  QString i;           // current file's number
-  QString total;       // number of files to process
-  QString fileName;    // current file's name
-
-  QString status = QString("Processing file %1 of %2: %3")
-                  .arg(i).arg(total).arg(fileName);
-
-
-
-First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
-
-One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
-
-If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
-*/
-func (this *QString) Arg12p1(a QStringView_ITF /*123*/, fieldWidth int) string {
-	var convArg0 unsafe.Pointer
-	if a != nil && a.QStringView_PTR() != nil {
-		convArg0 = a.QStringView_PTR().GetCthis()
-	}
-	// arg: 2, QChar=Record, QChar=Record, , Invalid
-	var convArg2 = NewQChar8(' ')
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argE11QStringViewi5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fieldWidth, convArg2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qstring.h:297
-// index:13
-// Public Visibility=Default Availability=Available
-// [8] QString arg(QLatin1String, int, QChar) const
-
-/*
-Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
-
-fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
-
-This example shows how we might create a status string for reporting progress while processing a list of files:
-
-
-  QString i;           // current file's number
-  QString total;       // number of files to process
-  QString fileName;    // current file's name
-
-  QString status = QString("Processing file %1 of %2: %3")
-                  .arg(i).arg(total).arg(fileName);
-
-
-
-First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
-
-One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
-
-If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
-*/
-func (this *QString) Arg13(a QLatin1String_ITF /*123*/, fieldWidth int, fillChar QChar_ITF /*123*/) string {
-	var convArg0 unsafe.Pointer
-	if a != nil && a.QLatin1String_PTR() != nil {
-		convArg0 = a.QLatin1String_PTR().GetCthis()
-	}
-	var convArg2 unsafe.Pointer
-	if fillChar != nil && fillChar.QChar_PTR() != nil {
-		convArg2 = fillChar.QChar_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argE13QLatin1Stringi5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fieldWidth, convArg2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qstring.h:297
-// index:13
-// Public Visibility=Default Availability=Available
-// [8] QString arg(QLatin1String, int, QChar) const
-
-/*
-Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
-
-fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
-
-This example shows how we might create a status string for reporting progress while processing a list of files:
-
-
-  QString i;           // current file's number
-  QString total;       // number of files to process
-  QString fileName;    // current file's name
-
-  QString status = QString("Processing file %1 of %2: %3")
-                  .arg(i).arg(total).arg(fileName);
-
-
-
-First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
-
-One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
-
-If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
-*/
-func (this *QString) Arg13p(a QLatin1String_ITF /*123*/) string {
-	var convArg0 unsafe.Pointer
-	if a != nil && a.QLatin1String_PTR() != nil {
-		convArg0 = a.QLatin1String_PTR().GetCthis()
-	}
-	// arg: 1, int=Int, =Invalid, , Invalid
-	fieldWidth := int(0)
-	// arg: 2, QChar=Record, QChar=Record, , Invalid
-	var convArg2 = NewQChar8(' ')
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argE13QLatin1Stringi5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fieldWidth, convArg2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qstring.h:297
-// index:13
-// Public Visibility=Default Availability=Available
-// [8] QString arg(QLatin1String, int, QChar) const
-
-/*
-Returns a copy of this string with the lowest numbered place marker replaced by string a, i.e., %1, %2, ..., %99.
-
-fieldWidth specifies the minimum amount of space that argument a shall occupy. If a requires less space than fieldWidth, it is padded to fieldWidth with character fillChar. A positive fieldWidth produces right-aligned text. A negative fieldWidth produces left-aligned text.
-
-This example shows how we might create a status string for reporting progress while processing a list of files:
-
-
-  QString i;           // current file's number
-  QString total;       // number of files to process
-  QString fileName;    // current file's name
-
-  QString status = QString("Processing file %1 of %2: %3")
-                  .arg(i).arg(total).arg(fileName);
-
-
-
-First, arg(i) replaces %1. Then arg(total) replaces %2. Finally, arg(fileName) replaces %3.
-
-One advantage of using arg() over asprintf() is that the order of the numbered place markers can change, if the application's strings are translated into other languages, but each arg() will still replace the lowest numbered unreplaced place marker, no matter where it appears. Also, if place marker %i appears more than once in the string, the arg() replaces all of them.
-
-If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
-*/
-func (this *QString) Arg13p1(a QLatin1String_ITF /*123*/, fieldWidth int) string {
-	var convArg0 unsafe.Pointer
-	if a != nil && a.QLatin1String_PTR() != nil {
-		convArg0 = a.QLatin1String_PTR().GetCthis()
-	}
-	// arg: 2, QChar=Record, QChar=Record, , Invalid
-	var convArg2 = NewQChar8(' ')
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3argE13QLatin1Stringi5QChar", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, fieldWidth, convArg2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qstring.h:299
-// index:14
 // Public Visibility=Default Availability=Available
 // [8] QString arg(const QString &, const QString &) const
 
@@ -3539,7 +3170,7 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
-func (this *QString) Arg14(a1 string, a2 string) string {
+func (this *QString) Arg12(a1 string, a2 string) string {
 	var tmpArg0 = NewQString5(a1)
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString5(a2)
@@ -3552,8 +3183,8 @@ func (this *QString) Arg14(a1 string, a2 string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:300
-// index:15
+// /usr/include/qt/QtCore/qstring.h:289
+// index:13
 // Public Visibility=Default Availability=Available
 // [8] QString arg(const QString &, const QString &, const QString &) const
 
@@ -3580,7 +3211,7 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
-func (this *QString) Arg15(a1 string, a2 string, a3 string) string {
+func (this *QString) Arg13(a1 string, a2 string, a3 string) string {
 	var tmpArg0 = NewQString5(a1)
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString5(a2)
@@ -3595,8 +3226,8 @@ func (this *QString) Arg15(a1 string, a2 string, a3 string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:301
-// index:16
+// /usr/include/qt/QtCore/qstring.h:290
+// index:14
 // Public Visibility=Default Availability=Available
 // [8] QString arg(const QString &, const QString &, const QString &, const QString &) const
 
@@ -3623,7 +3254,7 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
-func (this *QString) Arg16(a1 string, a2 string, a3 string, a4 string) string {
+func (this *QString) Arg14(a1 string, a2 string, a3 string, a4 string) string {
 	var tmpArg0 = NewQString5(a1)
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString5(a2)
@@ -3640,8 +3271,8 @@ func (this *QString) Arg16(a1 string, a2 string, a3 string, a4 string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:303
-// index:17
+// /usr/include/qt/QtCore/qstring.h:292
+// index:15
 // Public Visibility=Default Availability=Available
 // [8] QString arg(const QString &, const QString &, const QString &, const QString &, const QString &) const
 
@@ -3668,7 +3299,7 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
-func (this *QString) Arg17(a1 string, a2 string, a3 string, a4 string, a5 string) string {
+func (this *QString) Arg15(a1 string, a2 string, a3 string, a4 string, a5 string) string {
 	var tmpArg0 = NewQString5(a1)
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString5(a2)
@@ -3687,8 +3318,8 @@ func (this *QString) Arg17(a1 string, a2 string, a3 string, a4 string, a5 string
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:305
-// index:18
+// /usr/include/qt/QtCore/qstring.h:294
+// index:16
 // Public Visibility=Default Availability=Available
 // [8] QString arg(const QString &, const QString &, const QString &, const QString &, const QString &, const QString &) const
 
@@ -3715,7 +3346,7 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
-func (this *QString) Arg18(a1 string, a2 string, a3 string, a4 string, a5 string, a6 string) string {
+func (this *QString) Arg16(a1 string, a2 string, a3 string, a4 string, a5 string, a6 string) string {
 	var tmpArg0 = NewQString5(a1)
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString5(a2)
@@ -3736,8 +3367,8 @@ func (this *QString) Arg18(a1 string, a2 string, a3 string, a4 string, a5 string
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:307
-// index:19
+// /usr/include/qt/QtCore/qstring.h:296
+// index:17
 // Public Visibility=Default Availability=Available
 // [8] QString arg(const QString &, const QString &, const QString &, const QString &, const QString &, const QString &, const QString &) const
 
@@ -3764,7 +3395,7 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
-func (this *QString) Arg19(a1 string, a2 string, a3 string, a4 string, a5 string, a6 string, a7 string) string {
+func (this *QString) Arg17(a1 string, a2 string, a3 string, a4 string, a5 string, a6 string, a7 string) string {
 	var tmpArg0 = NewQString5(a1)
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString5(a2)
@@ -3787,8 +3418,8 @@ func (this *QString) Arg19(a1 string, a2 string, a3 string, a4 string, a5 string
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:310
-// index:20
+// /usr/include/qt/QtCore/qstring.h:299
+// index:18
 // Public Visibility=Default Availability=Available
 // [8] QString arg(const QString &, const QString &, const QString &, const QString &, const QString &, const QString &, const QString &, const QString &) const
 
@@ -3815,7 +3446,7 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
-func (this *QString) Arg20(a1 string, a2 string, a3 string, a4 string, a5 string, a6 string, a7 string, a8 string) string {
+func (this *QString) Arg18(a1 string, a2 string, a3 string, a4 string, a5 string, a6 string, a7 string, a8 string) string {
 	var tmpArg0 = NewQString5(a1)
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString5(a2)
@@ -3840,8 +3471,8 @@ func (this *QString) Arg20(a1 string, a2 string, a3 string, a4 string, a5 string
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:313
-// index:21
+// /usr/include/qt/QtCore/qstring.h:302
+// index:19
 // Public Visibility=Default Availability=Available
 // [8] QString arg(const QString &, const QString &, const QString &, const QString &, const QString &, const QString &, const QString &, const QString &, const QString &) const
 
@@ -3868,7 +3499,7 @@ One advantage of using arg() over asprintf() is that the order of the numbered p
 
 If there is no unreplaced place marker remaining, a warning message is output and the result is undefined. Place marker numbers must be in the range 1 to 99.
 */
-func (this *QString) Arg21(a1 string, a2 string, a3 string, a4 string, a5 string, a6 string, a7 string, a8 string, a9 string) string {
+func (this *QString) Arg19(a1 string, a2 string, a3 string, a4 string, a5 string, a6 string, a7 string, a8 string, a9 string) string {
 	var tmpArg0 = NewQString5(a1)
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = NewQString5(a2)
@@ -3895,7 +3526,7 @@ func (this *QString) Arg21(a1 string, a2 string, a3 string, a4 string, a5 string
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:322
+// /usr/include/qt/QtCore/qstring.h:311
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QChar, int, Qt::CaseSensitivity) const
@@ -3931,7 +3562,7 @@ func (this *QString) IndexOf(c QChar_ITF /*123*/, from int, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:322
+// /usr/include/qt/QtCore/qstring.h:311
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QChar, int, Qt::CaseSensitivity) const
@@ -3971,7 +3602,7 @@ func (this *QString) IndexOfp(c QChar_ITF /*123*/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:322
+// /usr/include/qt/QtCore/qstring.h:311
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QChar, int, Qt::CaseSensitivity) const
@@ -4009,7 +3640,7 @@ func (this *QString) IndexOfp1(c QChar_ITF /*123*/, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:323
+// /usr/include/qt/QtCore/qstring.h:312
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QString &, int, Qt::CaseSensitivity) const
@@ -4043,7 +3674,7 @@ func (this *QString) IndexOf1(s string, from int, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:323
+// /usr/include/qt/QtCore/qstring.h:312
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QString &, int, Qt::CaseSensitivity) const
@@ -4081,7 +3712,7 @@ func (this *QString) IndexOf1p(s string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:323
+// /usr/include/qt/QtCore/qstring.h:312
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QString &, int, Qt::CaseSensitivity) const
@@ -4117,7 +3748,7 @@ func (this *QString) IndexOf1p1(s string, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:324
+// /usr/include/qt/QtCore/qstring.h:313
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QLatin1String, int, Qt::CaseSensitivity) const
@@ -4153,7 +3784,7 @@ func (this *QString) IndexOf2(s QLatin1String_ITF /*123*/, from int, cs int) int
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:324
+// /usr/include/qt/QtCore/qstring.h:313
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QLatin1String, int, Qt::CaseSensitivity) const
@@ -4193,7 +3824,7 @@ func (this *QString) IndexOf2p(s QLatin1String_ITF /*123*/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:324
+// /usr/include/qt/QtCore/qstring.h:313
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QLatin1String, int, Qt::CaseSensitivity) const
@@ -4231,7 +3862,7 @@ func (this *QString) IndexOf2p1(s QLatin1String_ITF /*123*/, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:325
+// /usr/include/qt/QtCore/qstring.h:314
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QStringRef &, int, Qt::CaseSensitivity) const
@@ -4267,7 +3898,7 @@ func (this *QString) IndexOf3(s QStringRef_ITF, from int, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:325
+// /usr/include/qt/QtCore/qstring.h:314
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QStringRef &, int, Qt::CaseSensitivity) const
@@ -4307,7 +3938,7 @@ func (this *QString) IndexOf3p(s QStringRef_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:325
+// /usr/include/qt/QtCore/qstring.h:314
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QStringRef &, int, Qt::CaseSensitivity) const
@@ -4345,7 +3976,7 @@ func (this *QString) IndexOf3p1(s QStringRef_ITF, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:340
+// /usr/include/qt/QtCore/qstring.h:329
 // index:4
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QRegExp &, int) const
@@ -4381,7 +4012,7 @@ func (this *QString) IndexOf4(arg0 QRegExp_ITF, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:340
+// /usr/include/qt/QtCore/qstring.h:329
 // index:4
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QRegExp &, int) const
@@ -4419,7 +4050,7 @@ func (this *QString) IndexOf4p(arg0 QRegExp_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:345
+// /usr/include/qt/QtCore/qstring.h:334
 // index:5
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QRegExp &, int) const
@@ -4455,7 +4086,7 @@ func (this *QString) IndexOf5(arg0 QRegExp_ITF, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:345
+// /usr/include/qt/QtCore/qstring.h:334
 // index:5
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QRegExp &, int) const
@@ -4493,7 +4124,7 @@ func (this *QString) IndexOf5p(arg0 QRegExp_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:351
+// /usr/include/qt/QtCore/qstring.h:340
 // index:6
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QRegularExpression &, int) const
@@ -4529,7 +4160,7 @@ func (this *QString) IndexOf6(re QRegularExpression_ITF, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:351
+// /usr/include/qt/QtCore/qstring.h:340
 // index:6
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QRegularExpression &, int) const
@@ -4567,7 +4198,7 @@ func (this *QString) IndexOf6p(re QRegularExpression_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:352
+// /usr/include/qt/QtCore/qstring.h:341
 // index:7
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(const QRegularExpression &, int, QRegularExpressionMatch *) const
@@ -4607,7 +4238,7 @@ func (this *QString) IndexOf7(re QRegularExpression_ITF, from int, rmatch QRegul
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:326
+// /usr/include/qt/QtCore/qstring.h:315
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(QChar, int, Qt::CaseSensitivity) const
@@ -4641,7 +4272,7 @@ func (this *QString) LastIndexOf(c QChar_ITF /*123*/, from int, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:326
+// /usr/include/qt/QtCore/qstring.h:315
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(QChar, int, Qt::CaseSensitivity) const
@@ -4679,7 +4310,7 @@ func (this *QString) LastIndexOfp(c QChar_ITF /*123*/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:326
+// /usr/include/qt/QtCore/qstring.h:315
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(QChar, int, Qt::CaseSensitivity) const
@@ -4715,7 +4346,7 @@ func (this *QString) LastIndexOfp1(c QChar_ITF /*123*/, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:327
+// /usr/include/qt/QtCore/qstring.h:316
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QString &, int, Qt::CaseSensitivity) const
@@ -4747,7 +4378,7 @@ func (this *QString) LastIndexOf1(s string, from int, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:327
+// /usr/include/qt/QtCore/qstring.h:316
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QString &, int, Qt::CaseSensitivity) const
@@ -4783,7 +4414,7 @@ func (this *QString) LastIndexOf1p(s string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:327
+// /usr/include/qt/QtCore/qstring.h:316
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QString &, int, Qt::CaseSensitivity) const
@@ -4817,7 +4448,7 @@ func (this *QString) LastIndexOf1p1(s string, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:328
+// /usr/include/qt/QtCore/qstring.h:317
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(QLatin1String, int, Qt::CaseSensitivity) const
@@ -4851,7 +4482,7 @@ func (this *QString) LastIndexOf2(s QLatin1String_ITF /*123*/, from int, cs int)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:328
+// /usr/include/qt/QtCore/qstring.h:317
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(QLatin1String, int, Qt::CaseSensitivity) const
@@ -4889,7 +4520,7 @@ func (this *QString) LastIndexOf2p(s QLatin1String_ITF /*123*/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:328
+// /usr/include/qt/QtCore/qstring.h:317
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(QLatin1String, int, Qt::CaseSensitivity) const
@@ -4925,7 +4556,7 @@ func (this *QString) LastIndexOf2p1(s QLatin1String_ITF /*123*/, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:329
+// /usr/include/qt/QtCore/qstring.h:318
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QStringRef &, int, Qt::CaseSensitivity) const
@@ -4959,7 +4590,7 @@ func (this *QString) LastIndexOf3(s QStringRef_ITF, from int, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:329
+// /usr/include/qt/QtCore/qstring.h:318
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QStringRef &, int, Qt::CaseSensitivity) const
@@ -4997,7 +4628,7 @@ func (this *QString) LastIndexOf3p(s QStringRef_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:329
+// /usr/include/qt/QtCore/qstring.h:318
 // index:3
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QStringRef &, int, Qt::CaseSensitivity) const
@@ -5033,7 +4664,7 @@ func (this *QString) LastIndexOf3p1(s QStringRef_ITF, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:341
+// /usr/include/qt/QtCore/qstring.h:330
 // index:4
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QRegExp &, int) const
@@ -5067,7 +4698,7 @@ func (this *QString) LastIndexOf4(arg0 QRegExp_ITF, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:341
+// /usr/include/qt/QtCore/qstring.h:330
 // index:4
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QRegExp &, int) const
@@ -5103,7 +4734,7 @@ func (this *QString) LastIndexOf4p(arg0 QRegExp_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:346
+// /usr/include/qt/QtCore/qstring.h:335
 // index:5
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(QRegExp &, int) const
@@ -5137,7 +4768,7 @@ func (this *QString) LastIndexOf5(arg0 QRegExp_ITF, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:346
+// /usr/include/qt/QtCore/qstring.h:335
 // index:5
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(QRegExp &, int) const
@@ -5173,7 +4804,7 @@ func (this *QString) LastIndexOf5p(arg0 QRegExp_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:353
+// /usr/include/qt/QtCore/qstring.h:342
 // index:6
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QRegularExpression &, int) const
@@ -5207,7 +4838,7 @@ func (this *QString) LastIndexOf6(re QRegularExpression_ITF, from int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:353
+// /usr/include/qt/QtCore/qstring.h:342
 // index:6
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QRegularExpression &, int) const
@@ -5243,7 +4874,7 @@ func (this *QString) LastIndexOf6p(re QRegularExpression_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:354
+// /usr/include/qt/QtCore/qstring.h:343
 // index:7
 // Public Visibility=Default Availability=Available
 // [4] int lastIndexOf(const QRegularExpression &, int, QRegularExpressionMatch *) const
@@ -5281,7 +4912,7 @@ func (this *QString) LastIndexOf7(re QRegularExpression_ITF, from int, rmatch QR
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:331
+// /usr/include/qt/QtCore/qstring.h:320
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(QChar, Qt::CaseSensitivity) const
@@ -5311,7 +4942,7 @@ func (this *QString) Contains(c QChar_ITF /*123*/, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:331
+// /usr/include/qt/QtCore/qstring.h:320
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(QChar, Qt::CaseSensitivity) const
@@ -5343,7 +4974,7 @@ func (this *QString) Containsp(c QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:332
+// /usr/include/qt/QtCore/qstring.h:321
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const QString &, Qt::CaseSensitivity) const
@@ -5371,7 +5002,7 @@ func (this *QString) Contains1(s string, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:332
+// /usr/include/qt/QtCore/qstring.h:321
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const QString &, Qt::CaseSensitivity) const
@@ -5401,7 +5032,7 @@ func (this *QString) Contains1p(s string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:333
+// /usr/include/qt/QtCore/qstring.h:322
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(QLatin1String, Qt::CaseSensitivity) const
@@ -5431,7 +5062,7 @@ func (this *QString) Contains2(s QLatin1String_ITF /*123*/, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:333
+// /usr/include/qt/QtCore/qstring.h:322
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(QLatin1String, Qt::CaseSensitivity) const
@@ -5463,7 +5094,7 @@ func (this *QString) Contains2p(s QLatin1String_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:334
+// /usr/include/qt/QtCore/qstring.h:323
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const QStringRef &, Qt::CaseSensitivity) const
@@ -5493,7 +5124,7 @@ func (this *QString) Contains3(s QStringRef_ITF, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:334
+// /usr/include/qt/QtCore/qstring.h:323
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const QStringRef &, Qt::CaseSensitivity) const
@@ -5525,7 +5156,7 @@ func (this *QString) Contains3p(s QStringRef_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:342
+// /usr/include/qt/QtCore/qstring.h:331
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(const QRegExp &) const
@@ -5555,7 +5186,7 @@ func (this *QString) Contains4(rx QRegExp_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:347
+// /usr/include/qt/QtCore/qstring.h:336
 // index:5
 // Public inline Visibility=Default Availability=Available
 // [1] bool contains(QRegExp &) const
@@ -5585,7 +5216,7 @@ func (this *QString) Contains5(rx QRegExp_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:355
+// /usr/include/qt/QtCore/qstring.h:344
 // index:6
 // Public Visibility=Default Availability=Available
 // [1] bool contains(const QRegularExpression &) const
@@ -5615,7 +5246,7 @@ func (this *QString) Contains6(re QRegularExpression_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:356
+// /usr/include/qt/QtCore/qstring.h:345
 // index:7
 // Public Visibility=Default Availability=Available
 // [1] bool contains(const QRegularExpression &, QRegularExpressionMatch *) const
@@ -5649,7 +5280,7 @@ func (this *QString) Contains7(re QRegularExpression_ITF, match_ QRegularExpress
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:369
+// /usr/include/qt/QtCore/qstring.h:358
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString section(QChar, int, int, QString::SectionFlags) const
@@ -5696,7 +5327,7 @@ func (this *QString) Section(sep QChar_ITF /*123*/, start int, end_ int, flags i
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:369
+// /usr/include/qt/QtCore/qstring.h:358
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString section(QChar, int, int, QString::SectionFlags) const
@@ -5747,7 +5378,7 @@ func (this *QString) Sectionp(sep QChar_ITF /*123*/, start int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:369
+// /usr/include/qt/QtCore/qstring.h:358
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString section(QChar, int, int, QString::SectionFlags) const
@@ -5796,7 +5427,7 @@ func (this *QString) Sectionp1(sep QChar_ITF /*123*/, start int, end_ int) strin
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:370
+// /usr/include/qt/QtCore/qstring.h:359
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString section(const QString &, int, int, QString::SectionFlags) const
@@ -5841,7 +5472,7 @@ func (this *QString) Section1(in_sep string, start int, end_ int, flags int) str
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:370
+// /usr/include/qt/QtCore/qstring.h:359
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString section(const QString &, int, int, QString::SectionFlags) const
@@ -5890,7 +5521,7 @@ func (this *QString) Section1p(in_sep string, start int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:370
+// /usr/include/qt/QtCore/qstring.h:359
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString section(const QString &, int, int, QString::SectionFlags) const
@@ -5937,7 +5568,7 @@ func (this *QString) Section1p1(in_sep string, start int, end_ int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:372
+// /usr/include/qt/QtCore/qstring.h:361
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QString section(const QRegExp &, int, int, QString::SectionFlags) const
@@ -5984,7 +5615,7 @@ func (this *QString) Section2(reg QRegExp_ITF, start int, end_ int, flags int) s
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:372
+// /usr/include/qt/QtCore/qstring.h:361
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QString section(const QRegExp &, int, int, QString::SectionFlags) const
@@ -6035,7 +5666,7 @@ func (this *QString) Section2p(reg QRegExp_ITF, start int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:372
+// /usr/include/qt/QtCore/qstring.h:361
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QString section(const QRegExp &, int, int, QString::SectionFlags) const
@@ -6084,7 +5715,7 @@ func (this *QString) Section2p1(reg QRegExp_ITF, start int, end_ int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:375
+// /usr/include/qt/QtCore/qstring.h:364
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QString section(const QRegularExpression &, int, int, QString::SectionFlags) const
@@ -6131,7 +5762,7 @@ func (this *QString) Section3(re QRegularExpression_ITF, start int, end_ int, fl
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:375
+// /usr/include/qt/QtCore/qstring.h:364
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QString section(const QRegularExpression &, int, int, QString::SectionFlags) const
@@ -6182,7 +5813,7 @@ func (this *QString) Section3p(re QRegularExpression_ITF, start int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:375
+// /usr/include/qt/QtCore/qstring.h:364
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QString section(const QRegularExpression &, int, int, QString::SectionFlags) const
@@ -6231,7 +5862,7 @@ func (this *QString) Section3p1(re QRegularExpression_ITF, start int, end_ int) 
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:377
+// /usr/include/qt/QtCore/qstring.h:366
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString left(int) const
@@ -6247,7 +5878,7 @@ The entire string is returned if n is greater than or equal to size(), or less t
 
 
 
-See also right(), mid(), startsWith(), chopped(), chop(), and truncate().
+See also right(), mid(), and startsWith().
 */
 func (this *QString) Left(n int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString4leftEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
@@ -6258,7 +5889,7 @@ func (this *QString) Left(n int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:378
+// /usr/include/qt/QtCore/qstring.h:367
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString right(int) const
@@ -6274,7 +5905,7 @@ The entire string is returned if n is greater than or equal to size(), or less t
 
 
 
-See also left(), mid(), endsWith(), chopped(), chop(), and truncate().
+See also left(), mid(), and endsWith().
 */
 func (this *QString) Right(n int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString5rightEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
@@ -6285,7 +5916,7 @@ func (this *QString) Right(n int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:379
+// /usr/include/qt/QtCore/qstring.h:368
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString mid(int, int) const
@@ -6304,7 +5935,7 @@ Example:
 
 
 
-See also left(), right(), chopped(), chop(), and truncate().
+See also left() and right().
 */
 func (this *QString) Mid(position int, n int) string {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString3midEii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), position, n)
@@ -6315,7 +5946,7 @@ func (this *QString) Mid(position int, n int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:379
+// /usr/include/qt/QtCore/qstring.h:368
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString mid(int, int) const
@@ -6334,7 +5965,7 @@ Example:
 
 
 
-See also left(), right(), chopped(), chop(), and truncate().
+See also left() and right().
 */
 func (this *QString) Midp(position int) string {
 	// arg: 1, int=Int, =Invalid, , Invalid
@@ -6347,30 +5978,7 @@ func (this *QString) Midp(position int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:380
-// index:0
-// Public inline Visibility=Default Availability=Available
-// [8] QString chopped(int) const
-
-/*
-Returns a substring that contains the size() - len leftmost characters of this string.
-
-Note: The behavior is undefined if len is negative or greater than size().
-
-This function was introduced in  Qt 5.10.
-
-See also endsWith(), left(), right(), mid(), chop(), and truncate().
-*/
-func (this *QString) Chopped(n int) string {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString7choppedEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qstring.h:384
+// /usr/include/qt/QtCore/qstring.h:369
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QStringRef leftRef(int) const
@@ -6398,7 +6006,7 @@ func (this *QString) LeftRef(n int) *QStringRef /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:385
+// /usr/include/qt/QtCore/qstring.h:370
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QStringRef rightRef(int) const
@@ -6426,7 +6034,7 @@ func (this *QString) RightRef(n int) *QStringRef /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:386
+// /usr/include/qt/QtCore/qstring.h:371
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QStringRef midRef(int, int) const
@@ -6459,7 +6067,7 @@ func (this *QString) MidRef(position int, n int) *QStringRef /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:386
+// /usr/include/qt/QtCore/qstring.h:371
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QStringRef midRef(int, int) const
@@ -6494,7 +6102,7 @@ func (this *QString) MidRefp(position int) *QStringRef /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:389
+// /usr/include/qt/QtCore/qstring.h:373
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(const QString &, Qt::CaseSensitivity) const
@@ -6521,7 +6129,7 @@ func (this *QString) StartsWith(s string, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:389
+// /usr/include/qt/QtCore/qstring.h:373
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(const QString &, Qt::CaseSensitivity) const
@@ -6550,7 +6158,7 @@ func (this *QString) StartsWithp(s string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:390
+// /usr/include/qt/QtCore/qstring.h:374
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(const QStringRef &, Qt::CaseSensitivity) const
@@ -6579,7 +6187,7 @@ func (this *QString) StartsWith1(s QStringRef_ITF, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:390
+// /usr/include/qt/QtCore/qstring.h:374
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(const QStringRef &, Qt::CaseSensitivity) const
@@ -6610,68 +6218,8 @@ func (this *QString) StartsWith1p(s QStringRef_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:392
+// /usr/include/qt/QtCore/qstring.h:375
 // index:2
-// Public inline Visibility=Default Availability=Available
-// [1] bool startsWith(QStringView, Qt::CaseSensitivity) const
-
-/*
-Returns true if the string starts with s; otherwise returns false.
-
-If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
-
-
-  QString str = "Bananas";
-  str.startsWith("Ban");     // returns true
-  str.startsWith("Car");     // returns false
-
-
-
-See also endsWith().
-*/
-func (this *QString) StartsWith2(s QStringView_ITF /*123*/, cs int) bool {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString10startsWithE11QStringViewN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtCore/qstring.h:392
-// index:2
-// Public inline Visibility=Default Availability=Available
-// [1] bool startsWith(QStringView, Qt::CaseSensitivity) const
-
-/*
-Returns true if the string starts with s; otherwise returns false.
-
-If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
-
-
-  QString str = "Bananas";
-  str.startsWith("Ban");     // returns true
-  str.startsWith("Car");     // returns false
-
-
-
-See also endsWith().
-*/
-func (this *QString) StartsWith2p(s QStringView_ITF /*123*/) bool {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
-	cs := 0
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString10startsWithE11QStringViewN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtCore/qstring.h:394
-// index:3
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(QLatin1String, Qt::CaseSensitivity) const
 
@@ -6689,7 +6237,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also endsWith().
 */
-func (this *QString) StartsWith3(s QLatin1String_ITF /*123*/, cs int) bool {
+func (this *QString) StartsWith2(s QLatin1String_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -6699,8 +6247,8 @@ func (this *QString) StartsWith3(s QLatin1String_ITF /*123*/, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:394
-// index:3
+// /usr/include/qt/QtCore/qstring.h:375
+// index:2
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(QLatin1String, Qt::CaseSensitivity) const
 
@@ -6718,7 +6266,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also endsWith().
 */
-func (this *QString) StartsWith3p(s QLatin1String_ITF /*123*/) bool {
+func (this *QString) StartsWith2p(s QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -6730,8 +6278,8 @@ func (this *QString) StartsWith3p(s QLatin1String_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:395
-// index:4
+// /usr/include/qt/QtCore/qstring.h:376
+// index:3
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(QChar, Qt::CaseSensitivity) const
 
@@ -6749,7 +6297,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also endsWith().
 */
-func (this *QString) StartsWith4(c QChar_ITF /*123*/, cs int) bool {
+func (this *QString) StartsWith3(c QChar_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
@@ -6759,8 +6307,8 @@ func (this *QString) StartsWith4(c QChar_ITF /*123*/, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:395
-// index:4
+// /usr/include/qt/QtCore/qstring.h:376
+// index:3
 // Public Visibility=Default Availability=Available
 // [1] bool startsWith(QChar, Qt::CaseSensitivity) const
 
@@ -6778,7 +6326,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also endsWith().
 */
-func (this *QString) StartsWith4p(c QChar_ITF /*123*/) bool {
+func (this *QString) StartsWith3p(c QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
@@ -6790,7 +6338,7 @@ func (this *QString) StartsWith4p(c QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:398
+// /usr/include/qt/QtCore/qstring.h:377
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(const QString &, Qt::CaseSensitivity) const
@@ -6817,7 +6365,7 @@ func (this *QString) EndsWith(s string, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:398
+// /usr/include/qt/QtCore/qstring.h:377
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(const QString &, Qt::CaseSensitivity) const
@@ -6846,7 +6394,7 @@ func (this *QString) EndsWithp(s string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:399
+// /usr/include/qt/QtCore/qstring.h:378
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(const QStringRef &, Qt::CaseSensitivity) const
@@ -6875,7 +6423,7 @@ func (this *QString) EndsWith1(s QStringRef_ITF, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:399
+// /usr/include/qt/QtCore/qstring.h:378
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(const QStringRef &, Qt::CaseSensitivity) const
@@ -6906,68 +6454,8 @@ func (this *QString) EndsWith1p(s QStringRef_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:401
+// /usr/include/qt/QtCore/qstring.h:379
 // index:2
-// Public inline Visibility=Default Availability=Available
-// [1] bool endsWith(QStringView, Qt::CaseSensitivity) const
-
-/*
-Returns true if the string ends with s; otherwise returns false.
-
-If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
-
-
-  QString str = "Bananas";
-  str.endsWith("anas");         // returns true
-  str.endsWith("pple");         // returns false
-
-
-
-See also startsWith().
-*/
-func (this *QString) EndsWith2(s QStringView_ITF /*123*/, cs int) bool {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8endsWithE11QStringViewN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtCore/qstring.h:401
-// index:2
-// Public inline Visibility=Default Availability=Available
-// [1] bool endsWith(QStringView, Qt::CaseSensitivity) const
-
-/*
-Returns true if the string ends with s; otherwise returns false.
-
-If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise the search is case insensitive.
-
-
-  QString str = "Bananas";
-  str.endsWith("anas");         // returns true
-  str.endsWith("pple");         // returns false
-
-
-
-See also startsWith().
-*/
-func (this *QString) EndsWith2p(s QStringView_ITF /*123*/) bool {
-	var convArg0 unsafe.Pointer
-	if s != nil && s.QStringView_PTR() != nil {
-		convArg0 = s.QStringView_PTR().GetCthis()
-	}
-	// arg: 1, Qt::CaseSensitivity=Elaborated, Qt::CaseSensitivity=Enum, , Invalid
-	cs := 0
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QString8endsWithE11QStringViewN2Qt15CaseSensitivityE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, cs)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtCore/qstring.h:403
-// index:3
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(QLatin1String, Qt::CaseSensitivity) const
 
@@ -6985,7 +6473,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also startsWith().
 */
-func (this *QString) EndsWith3(s QLatin1String_ITF /*123*/, cs int) bool {
+func (this *QString) EndsWith2(s QLatin1String_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -6995,8 +6483,8 @@ func (this *QString) EndsWith3(s QLatin1String_ITF /*123*/, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:403
-// index:3
+// /usr/include/qt/QtCore/qstring.h:379
+// index:2
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(QLatin1String, Qt::CaseSensitivity) const
 
@@ -7014,7 +6502,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also startsWith().
 */
-func (this *QString) EndsWith3p(s QLatin1String_ITF /*123*/) bool {
+func (this *QString) EndsWith2p(s QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if s != nil && s.QLatin1String_PTR() != nil {
 		convArg0 = s.QLatin1String_PTR().GetCthis()
@@ -7026,8 +6514,8 @@ func (this *QString) EndsWith3p(s QLatin1String_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:404
-// index:4
+// /usr/include/qt/QtCore/qstring.h:380
+// index:3
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(QChar, Qt::CaseSensitivity) const
 
@@ -7045,7 +6533,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also startsWith().
 */
-func (this *QString) EndsWith4(c QChar_ITF /*123*/, cs int) bool {
+func (this *QString) EndsWith3(c QChar_ITF /*123*/, cs int) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
@@ -7055,8 +6543,8 @@ func (this *QString) EndsWith4(c QChar_ITF /*123*/, cs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:404
-// index:4
+// /usr/include/qt/QtCore/qstring.h:380
+// index:3
 // Public Visibility=Default Availability=Available
 // [1] bool endsWith(QChar, Qt::CaseSensitivity) const
 
@@ -7074,7 +6562,7 @@ If cs is Qt::CaseSensitive (default), the search is case sensitive; otherwise th
 
 See also startsWith().
 */
-func (this *QString) EndsWith4p(c QChar_ITF /*123*/) bool {
+func (this *QString) EndsWith3p(c QChar_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if c != nil && c.QChar_PTR() != nil {
 		convArg0 = c.QChar_PTR().GetCthis()
@@ -7086,7 +6574,7 @@ func (this *QString) EndsWith4p(c QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:406
+// /usr/include/qt/QtCore/qstring.h:382
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString leftJustified(int, QChar, bool) const
@@ -7125,7 +6613,7 @@ func (this *QString) LeftJustified(width int, fill QChar_ITF /*123*/, trunc bool
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:406
+// /usr/include/qt/QtCore/qstring.h:382
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString leftJustified(int, QChar, bool) const
@@ -7164,7 +6652,7 @@ func (this *QString) LeftJustifiedp(width int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:406
+// /usr/include/qt/QtCore/qstring.h:382
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString leftJustified(int, QChar, bool) const
@@ -7205,7 +6693,7 @@ func (this *QString) LeftJustifiedp1(width int, fill QChar_ITF /*123*/) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:407
+// /usr/include/qt/QtCore/qstring.h:383
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString rightJustified(int, QChar, bool) const
@@ -7244,7 +6732,7 @@ func (this *QString) RightJustified(width int, fill QChar_ITF /*123*/, trunc boo
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:407
+// /usr/include/qt/QtCore/qstring.h:383
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString rightJustified(int, QChar, bool) const
@@ -7283,7 +6771,7 @@ func (this *QString) RightJustifiedp(width int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:407
+// /usr/include/qt/QtCore/qstring.h:383
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString rightJustified(int, QChar, bool) const
@@ -7324,7 +6812,7 @@ func (this *QString) RightJustifiedp1(width int, fill QChar_ITF /*123*/) string 
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:417
+// /usr/include/qt/QtCore/qstring.h:393
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString toLower() const
@@ -7351,7 +6839,7 @@ func (this *QString) ToLower() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:419
+// /usr/include/qt/QtCore/qstring.h:395
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QString toLower()
@@ -7378,7 +6866,7 @@ func (this *QString) ToLower1() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:421
+// /usr/include/qt/QtCore/qstring.h:397
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString toUpper() const
@@ -7405,7 +6893,7 @@ func (this *QString) ToUpper() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:423
+// /usr/include/qt/QtCore/qstring.h:399
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QString toUpper()
@@ -7432,7 +6920,7 @@ func (this *QString) ToUpper1() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:425
+// /usr/include/qt/QtCore/qstring.h:401
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString toCaseFolded() const
@@ -7449,7 +6937,7 @@ func (this *QString) ToCaseFolded() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:427
+// /usr/include/qt/QtCore/qstring.h:403
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QString toCaseFolded()
@@ -7466,7 +6954,7 @@ func (this *QString) ToCaseFolded1() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:429
+// /usr/include/qt/QtCore/qstring.h:405
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString trimmed() const
@@ -7498,7 +6986,7 @@ func (this *QString) Trimmed() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:431
+// /usr/include/qt/QtCore/qstring.h:407
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QString trimmed()
@@ -7530,7 +7018,7 @@ func (this *QString) Trimmed1() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:433
+// /usr/include/qt/QtCore/qstring.h:409
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString simplified() const
@@ -7560,7 +7048,7 @@ func (this *QString) Simplified() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:435
+// /usr/include/qt/QtCore/qstring.h:411
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QString simplified()
@@ -7590,7 +7078,7 @@ func (this *QString) Simplified1() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:447
+// /usr/include/qt/QtCore/qstring.h:423
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toHtmlEscaped() const
@@ -7618,7 +7106,7 @@ func (this *QString) ToHtmlEscaped() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:465
+// /usr/include/qt/QtCore/qstring.h:441
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString & operator+=(QChar)
@@ -7639,7 +7127,7 @@ func (this *QString) Operator_add_equal(c QChar_ITF /*123*/) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:473
+// /usr/include/qt/QtCore/qstring.h:449
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QString & operator+=(QChar::SpecialCharacter)
@@ -7656,7 +7144,7 @@ func (this *QString) Operator_add_equal1(c int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:474
+// /usr/include/qt/QtCore/qstring.h:450
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [8] QString & operator+=(const QString &)
@@ -7675,7 +7163,7 @@ func (this *QString) Operator_add_equal2(s string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:475
+// /usr/include/qt/QtCore/qstring.h:451
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [8] QString & operator+=(const QStringRef &)
@@ -7696,7 +7184,7 @@ func (this *QString) Operator_add_equal3(s QStringRef_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:476
+// /usr/include/qt/QtCore/qstring.h:452
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [8] QString & operator+=(QLatin1String)
@@ -7717,7 +7205,7 @@ func (this *QString) Operator_add_equal4(s QLatin1String_ITF /*123*/) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:708
+// /usr/include/qt/QtCore/qstring.h:684
 // index:5
 // Public inline Visibility=Default Availability=Available
 // [8] QString & operator+=(const char *)
@@ -7736,7 +7224,7 @@ func (this *QString) Operator_add_equal5(s string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:710
+// /usr/include/qt/QtCore/qstring.h:686
 // index:6
 // Public inline Visibility=Default Availability=Available
 // [8] QString & operator+=(const QByteArray &)
@@ -7757,7 +7245,7 @@ func (this *QString) Operator_add_equal6(s QByteArray_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:712
+// /usr/include/qt/QtCore/qstring.h:688
 // index:7
 // Public inline Visibility=Default Availability=Available
 // [8] QString & operator+=(char)
@@ -7774,7 +7262,7 @@ func (this *QString) Operator_add_equal7(c byte) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:478
+// /usr/include/qt/QtCore/qstring.h:454
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString & remove(int, int)
@@ -7802,7 +7290,7 @@ func (this *QString) Remove(i int, len_ int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:479
+// /usr/include/qt/QtCore/qstring.h:455
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString & remove(QChar, Qt::CaseSensitivity)
@@ -7834,7 +7322,7 @@ func (this *QString) Remove1(c QChar_ITF /*123*/, cs int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:479
+// /usr/include/qt/QtCore/qstring.h:455
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString & remove(QChar, Qt::CaseSensitivity)
@@ -7868,7 +7356,7 @@ func (this *QString) Remove1p(c QChar_ITF /*123*/) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:480
+// /usr/include/qt/QtCore/qstring.h:456
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QString & remove(const QString &, Qt::CaseSensitivity)
@@ -7898,7 +7386,7 @@ func (this *QString) Remove2(s string, cs int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:480
+// /usr/include/qt/QtCore/qstring.h:456
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QString & remove(const QString &, Qt::CaseSensitivity)
@@ -7930,7 +7418,7 @@ func (this *QString) Remove2p(s string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:495
+// /usr/include/qt/QtCore/qstring.h:471
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [8] QString & remove(const QRegExp &)
@@ -7962,7 +7450,7 @@ func (this *QString) Remove3(rx QRegExp_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:500
+// /usr/include/qt/QtCore/qstring.h:476
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [8] QString & remove(const QRegularExpression &)
@@ -7994,7 +7482,7 @@ func (this *QString) Remove4(re QRegularExpression_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:481
+// /usr/include/qt/QtCore/qstring.h:457
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(int, int, QChar)
@@ -8029,7 +7517,7 @@ func (this *QString) Replace(i int, len_ int, after QChar_ITF /*123*/) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:482
+// /usr/include/qt/QtCore/qstring.h:458
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(int, int, const QChar *, int)
@@ -8064,7 +7552,7 @@ func (this *QString) Replace1(i int, len_ int, s QChar_ITF /*777 const QChar **/
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:483
+// /usr/include/qt/QtCore/qstring.h:459
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(int, int, const QString &)
@@ -8097,7 +7585,7 @@ func (this *QString) Replace2(i int, len_ int, after string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:484
+// /usr/include/qt/QtCore/qstring.h:460
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(QChar, QChar, Qt::CaseSensitivity)
@@ -8136,7 +7624,7 @@ func (this *QString) Replace3(before QChar_ITF /*123*/, after QChar_ITF /*123*/,
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:484
+// /usr/include/qt/QtCore/qstring.h:460
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(QChar, QChar, Qt::CaseSensitivity)
@@ -8177,7 +7665,7 @@ func (this *QString) Replace3p(before QChar_ITF /*123*/, after QChar_ITF /*123*/
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:485
+// /usr/include/qt/QtCore/qstring.h:461
 // index:4
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(const QChar *, int, const QChar *, int, Qt::CaseSensitivity)
@@ -8216,7 +7704,7 @@ func (this *QString) Replace4(before QChar_ITF /*777 const QChar **/, blen int, 
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:485
+// /usr/include/qt/QtCore/qstring.h:461
 // index:4
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(const QChar *, int, const QChar *, int, Qt::CaseSensitivity)
@@ -8257,7 +7745,7 @@ func (this *QString) Replace4p(before QChar_ITF /*777 const QChar **/, blen int,
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:486
+// /usr/include/qt/QtCore/qstring.h:462
 // index:5
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(QLatin1String, QLatin1String, Qt::CaseSensitivity)
@@ -8296,7 +7784,7 @@ func (this *QString) Replace5(before QLatin1String_ITF /*123*/, after QLatin1Str
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:486
+// /usr/include/qt/QtCore/qstring.h:462
 // index:5
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(QLatin1String, QLatin1String, Qt::CaseSensitivity)
@@ -8337,7 +7825,7 @@ func (this *QString) Replace5p(before QLatin1String_ITF /*123*/, after QLatin1St
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:487
+// /usr/include/qt/QtCore/qstring.h:463
 // index:6
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(QLatin1String, const QString &, Qt::CaseSensitivity)
@@ -8374,7 +7862,7 @@ func (this *QString) Replace6(before QLatin1String_ITF /*123*/, after string, cs
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:487
+// /usr/include/qt/QtCore/qstring.h:463
 // index:6
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(QLatin1String, const QString &, Qt::CaseSensitivity)
@@ -8413,7 +7901,7 @@ func (this *QString) Replace6p(before QLatin1String_ITF /*123*/, after string) s
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:488
+// /usr/include/qt/QtCore/qstring.h:464
 // index:7
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(const QString &, QLatin1String, Qt::CaseSensitivity)
@@ -8450,7 +7938,7 @@ func (this *QString) Replace7(before string, after QLatin1String_ITF /*123*/, cs
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:488
+// /usr/include/qt/QtCore/qstring.h:464
 // index:7
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(const QString &, QLatin1String, Qt::CaseSensitivity)
@@ -8489,7 +7977,7 @@ func (this *QString) Replace7p(before string, after QLatin1String_ITF /*123*/) s
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:489
+// /usr/include/qt/QtCore/qstring.h:465
 // index:8
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(const QString &, const QString &, Qt::CaseSensitivity)
@@ -8524,7 +8012,7 @@ func (this *QString) Replace8(before string, after string, cs int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:489
+// /usr/include/qt/QtCore/qstring.h:465
 // index:8
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(const QString &, const QString &, Qt::CaseSensitivity)
@@ -8561,7 +8049,7 @@ func (this *QString) Replace8p(before string, after string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:491
+// /usr/include/qt/QtCore/qstring.h:467
 // index:9
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(QChar, const QString &, Qt::CaseSensitivity)
@@ -8598,7 +8086,7 @@ func (this *QString) Replace9(c QChar_ITF /*123*/, after string, cs int) string 
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:491
+// /usr/include/qt/QtCore/qstring.h:467
 // index:9
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(QChar, const QString &, Qt::CaseSensitivity)
@@ -8637,7 +8125,7 @@ func (this *QString) Replace9p(c QChar_ITF /*123*/, after string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:492
+// /usr/include/qt/QtCore/qstring.h:468
 // index:10
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(QChar, QLatin1String, Qt::CaseSensitivity)
@@ -8676,7 +8164,7 @@ func (this *QString) Replace10(c QChar_ITF /*123*/, after QLatin1String_ITF /*12
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:492
+// /usr/include/qt/QtCore/qstring.h:468
 // index:10
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(QChar, QLatin1String, Qt::CaseSensitivity)
@@ -8717,7 +8205,7 @@ func (this *QString) Replace10p(c QChar_ITF /*123*/, after QLatin1String_ITF /*1
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:494
+// /usr/include/qt/QtCore/qstring.h:470
 // index:11
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(const QRegExp &, const QString &)
@@ -8754,7 +8242,7 @@ func (this *QString) Replace11(rx QRegExp_ITF, after string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:499
+// /usr/include/qt/QtCore/qstring.h:475
 // index:12
 // Public Visibility=Default Availability=Available
 // [8] QString & replace(const QRegularExpression &, const QString &)
@@ -8791,7 +8279,7 @@ func (this *QString) Replace12(re QRegularExpression_ITF, after string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:506
+// /usr/include/qt/QtCore/qstring.h:482
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList split(const QString &, QString::SplitBehavior, Qt::CaseSensitivity) const
@@ -8813,24 +8301,6 @@ Example:
 
   QStringList list2 = str.split(',', QString::SkipEmptyParts);
   // list2: [ "a", "b", "c" ]
-
-
-
-If sep is empty, split() returns an empty string, followed by each of the string's characters, followed by another empty string:
-
-
-  QString str = "abc";
-  auto parts = str.split("");
-  // parts: {"", "a", "b", "c", ""}
-
-
-
-To understand this behavior, recall that the empty string matches everywhere, so the above is qualitatively the same as:
-
-
-  QString str = "/a/b/c/";
-  auto parts = str.split('/');
-  // parts: {"", "a", "b", "c", ""}
 
 
 
@@ -8846,7 +8316,7 @@ func (this *QString) Split(sep string, behavior int, cs int) *QStringList /*123*
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:506
+// /usr/include/qt/QtCore/qstring.h:482
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList split(const QString &, QString::SplitBehavior, Qt::CaseSensitivity) const
@@ -8868,24 +8338,6 @@ Example:
 
   QStringList list2 = str.split(',', QString::SkipEmptyParts);
   // list2: [ "a", "b", "c" ]
-
-
-
-If sep is empty, split() returns an empty string, followed by each of the string's characters, followed by another empty string:
-
-
-  QString str = "abc";
-  auto parts = str.split("");
-  // parts: {"", "a", "b", "c", ""}
-
-
-
-To understand this behavior, recall that the empty string matches everywhere, so the above is qualitatively the same as:
-
-
-  QString str = "/a/b/c/";
-  auto parts = str.split('/');
-  // parts: {"", "a", "b", "c", ""}
 
 
 
@@ -8905,7 +8357,7 @@ func (this *QString) Splitp(sep string) *QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:506
+// /usr/include/qt/QtCore/qstring.h:482
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList split(const QString &, QString::SplitBehavior, Qt::CaseSensitivity) const
@@ -8930,24 +8382,6 @@ Example:
 
 
 
-If sep is empty, split() returns an empty string, followed by each of the string's characters, followed by another empty string:
-
-
-  QString str = "abc";
-  auto parts = str.split("");
-  // parts: {"", "a", "b", "c", ""}
-
-
-
-To understand this behavior, recall that the empty string matches everywhere, so the above is qualitatively the same as:
-
-
-  QString str = "/a/b/c/";
-  auto parts = str.split('/');
-  // parts: {"", "a", "b", "c", ""}
-
-
-
 See also QStringList::join() and section().
 */
 func (this *QString) Splitp1(sep string, behavior int) *QStringList /*123*/ {
@@ -8962,7 +8396,7 @@ func (this *QString) Splitp1(sep string, behavior int) *QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:510
+// /usr/include/qt/QtCore/qstring.h:486
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QStringList split(QChar, QString::SplitBehavior, Qt::CaseSensitivity) const
@@ -8984,24 +8418,6 @@ Example:
 
   QStringList list2 = str.split(',', QString::SkipEmptyParts);
   // list2: [ "a", "b", "c" ]
-
-
-
-If sep is empty, split() returns an empty string, followed by each of the string's characters, followed by another empty string:
-
-
-  QString str = "abc";
-  auto parts = str.split("");
-  // parts: {"", "a", "b", "c", ""}
-
-
-
-To understand this behavior, recall that the empty string matches everywhere, so the above is qualitatively the same as:
-
-
-  QString str = "/a/b/c/";
-  auto parts = str.split('/');
-  // parts: {"", "a", "b", "c", ""}
 
 
 
@@ -9019,7 +8435,7 @@ func (this *QString) Split1(sep QChar_ITF /*123*/, behavior int, cs int) *QStrin
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:510
+// /usr/include/qt/QtCore/qstring.h:486
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QStringList split(QChar, QString::SplitBehavior, Qt::CaseSensitivity) const
@@ -9041,24 +8457,6 @@ Example:
 
   QStringList list2 = str.split(',', QString::SkipEmptyParts);
   // list2: [ "a", "b", "c" ]
-
-
-
-If sep is empty, split() returns an empty string, followed by each of the string's characters, followed by another empty string:
-
-
-  QString str = "abc";
-  auto parts = str.split("");
-  // parts: {"", "a", "b", "c", ""}
-
-
-
-To understand this behavior, recall that the empty string matches everywhere, so the above is qualitatively the same as:
-
-
-  QString str = "/a/b/c/";
-  auto parts = str.split('/');
-  // parts: {"", "a", "b", "c", ""}
 
 
 
@@ -9080,7 +8478,7 @@ func (this *QString) Split1p(sep QChar_ITF /*123*/) *QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:510
+// /usr/include/qt/QtCore/qstring.h:486
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QStringList split(QChar, QString::SplitBehavior, Qt::CaseSensitivity) const
@@ -9105,24 +8503,6 @@ Example:
 
 
 
-If sep is empty, split() returns an empty string, followed by each of the string's characters, followed by another empty string:
-
-
-  QString str = "abc";
-  auto parts = str.split("");
-  // parts: {"", "a", "b", "c", ""}
-
-
-
-To understand this behavior, recall that the empty string matches everywhere, so the above is qualitatively the same as:
-
-
-  QString str = "/a/b/c/";
-  auto parts = str.split('/');
-  // parts: {"", "a", "b", "c", ""}
-
-
-
 See also QStringList::join() and section().
 */
 func (this *QString) Split1p1(sep QChar_ITF /*123*/, behavior int) *QStringList /*123*/ {
@@ -9139,7 +8519,7 @@ func (this *QString) Split1p1(sep QChar_ITF /*123*/, behavior int) *QStringList 
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:515
+// /usr/include/qt/QtCore/qstring.h:491
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QStringList split(const QRegExp &, QString::SplitBehavior) const
@@ -9161,24 +8541,6 @@ Example:
 
   QStringList list2 = str.split(',', QString::SkipEmptyParts);
   // list2: [ "a", "b", "c" ]
-
-
-
-If sep is empty, split() returns an empty string, followed by each of the string's characters, followed by another empty string:
-
-
-  QString str = "abc";
-  auto parts = str.split("");
-  // parts: {"", "a", "b", "c", ""}
-
-
-
-To understand this behavior, recall that the empty string matches everywhere, so the above is qualitatively the same as:
-
-
-  QString str = "/a/b/c/";
-  auto parts = str.split('/');
-  // parts: {"", "a", "b", "c", ""}
 
 
 
@@ -9196,7 +8558,7 @@ func (this *QString) Split2(sep QRegExp_ITF, behavior int) *QStringList /*123*/ 
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:515
+// /usr/include/qt/QtCore/qstring.h:491
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QStringList split(const QRegExp &, QString::SplitBehavior) const
@@ -9218,24 +8580,6 @@ Example:
 
   QStringList list2 = str.split(',', QString::SkipEmptyParts);
   // list2: [ "a", "b", "c" ]
-
-
-
-If sep is empty, split() returns an empty string, followed by each of the string's characters, followed by another empty string:
-
-
-  QString str = "abc";
-  auto parts = str.split("");
-  // parts: {"", "a", "b", "c", ""}
-
-
-
-To understand this behavior, recall that the empty string matches everywhere, so the above is qualitatively the same as:
-
-
-  QString str = "/a/b/c/";
-  auto parts = str.split('/');
-  // parts: {"", "a", "b", "c", ""}
 
 
 
@@ -9255,7 +8599,7 @@ func (this *QString) Split2p(sep QRegExp_ITF) *QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:519
+// /usr/include/qt/QtCore/qstring.h:495
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QStringList split(const QRegularExpression &, QString::SplitBehavior) const
@@ -9277,24 +8621,6 @@ Example:
 
   QStringList list2 = str.split(',', QString::SkipEmptyParts);
   // list2: [ "a", "b", "c" ]
-
-
-
-If sep is empty, split() returns an empty string, followed by each of the string's characters, followed by another empty string:
-
-
-  QString str = "abc";
-  auto parts = str.split("");
-  // parts: {"", "a", "b", "c", ""}
-
-
-
-To understand this behavior, recall that the empty string matches everywhere, so the above is qualitatively the same as:
-
-
-  QString str = "/a/b/c/";
-  auto parts = str.split('/');
-  // parts: {"", "a", "b", "c", ""}
 
 
 
@@ -9312,7 +8638,7 @@ func (this *QString) Split3(sep QRegularExpression_ITF, behavior int) *QStringLi
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:519
+// /usr/include/qt/QtCore/qstring.h:495
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QStringList split(const QRegularExpression &, QString::SplitBehavior) const
@@ -9334,24 +8660,6 @@ Example:
 
   QStringList list2 = str.split(',', QString::SkipEmptyParts);
   // list2: [ "a", "b", "c" ]
-
-
-
-If sep is empty, split() returns an empty string, followed by each of the string's characters, followed by another empty string:
-
-
-  QString str = "abc";
-  auto parts = str.split("");
-  // parts: {"", "a", "b", "c", ""}
-
-
-
-To understand this behavior, recall that the empty string matches everywhere, so the above is qualitatively the same as:
-
-
-  QString str = "/a/b/c/";
-  auto parts = str.split('/');
-  // parts: {"", "a", "b", "c", ""}
 
 
 
@@ -9371,7 +8679,7 @@ func (this *QString) Split3p(sep QRegularExpression_ITF) *QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:528
+// /usr/include/qt/QtCore/qstring.h:504
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString normalized(QString::NormalizationForm, QChar::UnicodeVersion) const
@@ -9388,7 +8696,7 @@ func (this *QString) Normalized(mode int, version int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:528
+// /usr/include/qt/QtCore/qstring.h:504
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString normalized(QString::NormalizationForm, QChar::UnicodeVersion) const
@@ -9407,7 +8715,7 @@ func (this *QString) Normalizedp(mode int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:530
+// /usr/include/qt/QtCore/qstring.h:506
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString repeated(int) const
@@ -9436,7 +8744,7 @@ func (this *QString) Repeated(times int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:532
+// /usr/include/qt/QtCore/qstring.h:508
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const ushort * utf16() const
@@ -9454,7 +8762,7 @@ func (this *QString) Utf16() unsafe.Pointer /*666*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qstring.h:535
+// /usr/include/qt/QtCore/qstring.h:511
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toLatin1() const
@@ -9464,7 +8772,7 @@ Returns a Latin-1 representation of the string as a QByteArray.
 
 The returned byte array is undefined if the string contains non-Latin1 characters. Those characters may be suppressed or replaced with a question mark.
 
-See also fromLatin1(), toUtf8(), toLocal8Bit(), QTextCodec, and qConvertToLatin1().
+See also fromLatin1(), toUtf8(), toLocal8Bit(), and QTextCodec.
 */
 func (this *QString) ToLatin1() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNKR7QString8toLatin1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -9474,7 +8782,7 @@ func (this *QString) ToLatin1() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:537
+// /usr/include/qt/QtCore/qstring.h:513
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toLatin1()
@@ -9484,7 +8792,7 @@ Returns a Latin-1 representation of the string as a QByteArray.
 
 The returned byte array is undefined if the string contains non-Latin1 characters. Those characters may be suppressed or replaced with a question mark.
 
-See also fromLatin1(), toUtf8(), toLocal8Bit(), QTextCodec, and qConvertToLatin1().
+See also fromLatin1(), toUtf8(), toLocal8Bit(), and QTextCodec.
 */
 func (this *QString) ToLatin11() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNO7QString8toLatin1Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -9494,7 +8802,7 @@ func (this *QString) ToLatin11() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:539
+// /usr/include/qt/QtCore/qstring.h:515
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toUtf8() const
@@ -9504,7 +8812,7 @@ Returns a UTF-8 representation of the string as a QByteArray.
 
 UTF-8 is a Unicode codec and can represent all characters in a Unicode string like QString.
 
-See also fromUtf8(), toLatin1(), toLocal8Bit(), QTextCodec, and qConvertToUtf8().
+See also fromUtf8(), toLatin1(), toLocal8Bit(), and QTextCodec.
 */
 func (this *QString) ToUtf8() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNKR7QString6toUtf8Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -9514,7 +8822,7 @@ func (this *QString) ToUtf8() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:541
+// /usr/include/qt/QtCore/qstring.h:517
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toUtf8()
@@ -9524,7 +8832,7 @@ Returns a UTF-8 representation of the string as a QByteArray.
 
 UTF-8 is a Unicode codec and can represent all characters in a Unicode string like QString.
 
-See also fromUtf8(), toLatin1(), toLocal8Bit(), QTextCodec, and qConvertToUtf8().
+See also fromUtf8(), toLatin1(), toLocal8Bit(), and QTextCodec.
 */
 func (this *QString) ToUtf81() *QByteArray /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNO7QString6toUtf8Ev", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -9534,7 +8842,7 @@ func (this *QString) ToUtf81() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:543
+// /usr/include/qt/QtCore/qstring.h:519
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toLocal8Bit() const
@@ -9556,7 +8864,7 @@ func (this *QString) ToLocal8Bit() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:545
+// /usr/include/qt/QtCore/qstring.h:521
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toLocal8Bit()
@@ -9578,7 +8886,7 @@ func (this *QString) ToLocal8Bit1() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:555
+// /usr/include/qt/QtCore/qstring.h:531
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QString fromLatin1(const char *, int)
@@ -9606,7 +8914,7 @@ func QString_FromLatin1(str string, size int) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:555
+// /usr/include/qt/QtCore/qstring.h:531
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QString fromLatin1(const char *, int)
@@ -9631,7 +8939,7 @@ func (this *QString) FromLatin1p(str string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:568
+// /usr/include/qt/QtCore/qstring.h:544
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [8] QString fromLatin1(const QByteArray &)
@@ -9661,7 +8969,7 @@ func QString_FromLatin11(str QByteArray_ITF) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:560
+// /usr/include/qt/QtCore/qstring.h:536
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QString fromUtf8(const char *, int)
@@ -9693,7 +9001,7 @@ func QString_FromUtf8(str string, size int) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:560
+// /usr/include/qt/QtCore/qstring.h:536
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QString fromUtf8(const char *, int)
@@ -9722,7 +9030,7 @@ func (this *QString) FromUtf8p(str string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:570
+// /usr/include/qt/QtCore/qstring.h:546
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [8] QString fromUtf8(const QByteArray &)
@@ -9756,7 +9064,7 @@ func QString_FromUtf81(str QByteArray_ITF) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:564
+// /usr/include/qt/QtCore/qstring.h:540
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QString fromLocal8Bit(const char *, int)
@@ -9786,7 +9094,7 @@ func QString_FromLocal8Bit(str string, size int) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:564
+// /usr/include/qt/QtCore/qstring.h:540
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QString fromLocal8Bit(const char *, int)
@@ -9813,7 +9121,7 @@ func (this *QString) FromLocal8Bitp(str string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:572
+// /usr/include/qt/QtCore/qstring.h:548
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [8] QString fromLocal8Bit(const QByteArray &)
@@ -9845,7 +9153,7 @@ func QString_FromLocal8Bit1(str QByteArray_ITF) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:574
+// /usr/include/qt/QtCore/qstring.h:550
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString fromUtf16(const ushort *, int)
@@ -9877,7 +9185,7 @@ func QString_FromUtf16(arg0 unsafe.Pointer /*666*/, size int) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:574
+// /usr/include/qt/QtCore/qstring.h:550
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString fromUtf16(const ushort *, int)
@@ -9906,7 +9214,7 @@ func (this *QString) FromUtf16p(arg0 unsafe.Pointer /*666*/) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:579
+// /usr/include/qt/QtCore/qstring.h:555
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [8] QString fromUtf16(const char16_t *, int)
@@ -9938,7 +9246,7 @@ func QString_FromUtf161(str unsafe.Pointer /*666*/, size int) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:579
+// /usr/include/qt/QtCore/qstring.h:555
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [8] QString fromUtf16(const char16_t *, int)
@@ -9967,7 +9275,7 @@ func (this *QString) FromUtf161p(str unsafe.Pointer /*666*/) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:575
+// /usr/include/qt/QtCore/qstring.h:551
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString fromUcs4(const uint *, int)
@@ -9995,7 +9303,7 @@ func QString_FromUcs4(arg0 unsafe.Pointer /*666*/, size int) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:575
+// /usr/include/qt/QtCore/qstring.h:551
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString fromUcs4(const uint *, int)
@@ -10020,7 +9328,7 @@ func (this *QString) FromUcs4p(arg0 unsafe.Pointer /*666*/) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:581
+// /usr/include/qt/QtCore/qstring.h:557
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [8] QString fromUcs4(const char32_t *, int)
@@ -10048,7 +9356,7 @@ func QString_FromUcs41(str unsafe.Pointer /*666*/, size int) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:581
+// /usr/include/qt/QtCore/qstring.h:557
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [8] QString fromUcs4(const char32_t *, int)
@@ -10073,7 +9381,7 @@ func (this *QString) FromUcs41p(str unsafe.Pointer /*666*/) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:576
+// /usr/include/qt/QtCore/qstring.h:552
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString fromRawData(const QChar *, int)
@@ -10121,7 +9429,7 @@ func QString_FromRawData(arg0 QChar_ITF /*777 const QChar **/, size int) string 
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:594
+// /usr/include/qt/QtCore/qstring.h:570
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int toWCharArray(wchar_t *) const
@@ -10145,7 +9453,7 @@ func (this *QString) ToWCharArray(array unsafe.Pointer /*666*/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:595
+// /usr/include/qt/QtCore/qstring.h:571
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QString fromWCharArray(const wchar_t *, int)
@@ -10173,7 +9481,7 @@ func QString_FromWCharArray(string unsafe.Pointer /*666*/, size int) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:595
+// /usr/include/qt/QtCore/qstring.h:571
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QString fromWCharArray(const wchar_t *, int)
@@ -10198,7 +9506,7 @@ func (this *QString) FromWCharArrayp(string unsafe.Pointer /*666*/) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:597
+// /usr/include/qt/QtCore/qstring.h:573
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString & setRawData(const QChar *, int)
@@ -10225,7 +9533,7 @@ func (this *QString) SetRawData(unicode QChar_ITF /*777 const QChar **/, size in
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:598
+// /usr/include/qt/QtCore/qstring.h:574
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString & setUnicode(const QChar *, int)
@@ -10250,7 +9558,7 @@ func (this *QString) SetUnicode(unicode QChar_ITF /*777 const QChar **/, size in
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:599
+// /usr/include/qt/QtCore/qstring.h:575
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString & setUtf16(const ushort *, int)
@@ -10273,7 +9581,7 @@ func (this *QString) SetUtf16(utf16 unsafe.Pointer /*666*/, size int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:601
+// /usr/include/qt/QtCore/qstring.h:577
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int compare(const QString &, Qt::CaseSensitivity) const
@@ -10304,7 +9612,7 @@ func (this *QString) Compare(s string, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:601
+// /usr/include/qt/QtCore/qstring.h:577
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int compare(const QString &, Qt::CaseSensitivity) const
@@ -10337,7 +9645,7 @@ func (this *QString) Comparep(s string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:602
+// /usr/include/qt/QtCore/qstring.h:578
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int compare(QLatin1String, Qt::CaseSensitivity) const
@@ -10370,7 +9678,7 @@ func (this *QString) Compare1(other QLatin1String_ITF /*123*/, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:602
+// /usr/include/qt/QtCore/qstring.h:578
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int compare(QLatin1String, Qt::CaseSensitivity) const
@@ -10405,7 +9713,7 @@ func (this *QString) Compare1p(other QLatin1String_ITF /*123*/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:604
+// /usr/include/qt/QtCore/qstring.h:580
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [4] int compare(const QString &, const QString &, Qt::CaseSensitivity)
@@ -10443,7 +9751,7 @@ func QString_Compare2(s1 string, s2 string, cs int) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:604
+// /usr/include/qt/QtCore/qstring.h:580
 // index:2
 // Public static inline Visibility=Default Availability=Available
 // [4] int compare(const QString &, const QString &, Qt::CaseSensitivity)
@@ -10478,7 +9786,7 @@ func (this *QString) Compare2p(s1 string, s2 string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:608
+// /usr/include/qt/QtCore/qstring.h:584
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [4] int compare(const QString &, QLatin1String, Qt::CaseSensitivity)
@@ -10518,7 +9826,7 @@ func QString_Compare3(s1 string, s2 QLatin1String_ITF /*123*/, cs int) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:608
+// /usr/include/qt/QtCore/qstring.h:584
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [4] int compare(const QString &, QLatin1String, Qt::CaseSensitivity)
@@ -10555,7 +9863,7 @@ func (this *QString) Compare3p(s1 string, s2 QLatin1String_ITF /*123*/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:611
+// /usr/include/qt/QtCore/qstring.h:587
 // index:4
 // Public static inline Visibility=Default Availability=Available
 // [4] int compare(QLatin1String, const QString &, Qt::CaseSensitivity)
@@ -10595,7 +9903,7 @@ func QString_Compare4(s1 QLatin1String_ITF /*123*/, s2 string, cs int) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:611
+// /usr/include/qt/QtCore/qstring.h:587
 // index:4
 // Public static inline Visibility=Default Availability=Available
 // [4] int compare(QLatin1String, const QString &, Qt::CaseSensitivity)
@@ -10632,7 +9940,7 @@ func (this *QString) Compare4p(s1 QLatin1String_ITF /*123*/, s2 string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:615
+// /usr/include/qt/QtCore/qstring.h:591
 // index:5
 // Public inline Visibility=Default Availability=Available
 // [4] int compare(const QStringRef &, Qt::CaseSensitivity) const
@@ -10665,7 +9973,7 @@ func (this *QString) Compare5(s QStringRef_ITF, cs int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:615
+// /usr/include/qt/QtCore/qstring.h:591
 // index:5
 // Public inline Visibility=Default Availability=Available
 // [4] int compare(const QStringRef &, Qt::CaseSensitivity) const
@@ -10700,7 +10008,7 @@ func (this *QString) Compare5p(s QStringRef_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:616
+// /usr/include/qt/QtCore/qstring.h:592
 // index:6
 // Public static Visibility=Default Availability=Available
 // [4] int compare(const QString &, const QStringRef &, Qt::CaseSensitivity)
@@ -10740,7 +10048,7 @@ func QString_Compare6(s1 string, s2 QStringRef_ITF, arg2 int) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:616
+// /usr/include/qt/QtCore/qstring.h:592
 // index:6
 // Public static Visibility=Default Availability=Available
 // [4] int compare(const QString &, const QStringRef &, Qt::CaseSensitivity)
@@ -10777,7 +10085,7 @@ func (this *QString) Compare6p(s1 string, s2 QStringRef_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:619
+// /usr/include/qt/QtCore/qstring.h:595
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int localeAwareCompare(const QString &) const
@@ -10799,7 +10107,7 @@ func (this *QString) LocaleAwareCompare(s string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:620
+// /usr/include/qt/QtCore/qstring.h:596
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [4] int localeAwareCompare(const QString &, const QString &)
@@ -10828,7 +10136,7 @@ func QString_LocaleAwareCompare1(s1 string, s2 string) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:623
+// /usr/include/qt/QtCore/qstring.h:599
 // index:2
 // Public Visibility=Default Availability=Available
 // [4] int localeAwareCompare(const QStringRef &) const
@@ -10852,7 +10160,7 @@ func (this *QString) LocaleAwareCompare2(s QStringRef_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:624
+// /usr/include/qt/QtCore/qstring.h:600
 // index:3
 // Public static Visibility=Default Availability=Available
 // [4] int localeAwareCompare(const QString &, const QStringRef &)
@@ -10883,7 +10191,7 @@ func QString_LocaleAwareCompare3(s1 string, s2 QStringRef_ITF) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:627
+// /usr/include/qt/QtCore/qstring.h:603
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] short toShort(bool *, int) const
@@ -10916,7 +10224,7 @@ func (this *QString) ToShort(ok *bool, base int) int16 {
 	return qtrt.Cretval2go("int16", rv).(int16) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:627
+// /usr/include/qt/QtCore/qstring.h:603
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] short toShort(bool *, int) const
@@ -10953,7 +10261,7 @@ func (this *QString) ToShortp() int16 {
 	return qtrt.Cretval2go("int16", rv).(int16) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:627
+// /usr/include/qt/QtCore/qstring.h:603
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] short toShort(bool *, int) const
@@ -10988,7 +10296,7 @@ func (this *QString) ToShortp1(ok *bool) int16 {
 	return qtrt.Cretval2go("int16", rv).(int16) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:628
+// /usr/include/qt/QtCore/qstring.h:604
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] ushort toUShort(bool *, int) const
@@ -11021,7 +10329,7 @@ func (this *QString) ToUShort(ok *bool, base int) uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:628
+// /usr/include/qt/QtCore/qstring.h:604
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] ushort toUShort(bool *, int) const
@@ -11058,7 +10366,7 @@ func (this *QString) ToUShortp() uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:628
+// /usr/include/qt/QtCore/qstring.h:604
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] ushort toUShort(bool *, int) const
@@ -11093,7 +10401,7 @@ func (this *QString) ToUShortp1(ok *bool) uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:629
+// /usr/include/qt/QtCore/qstring.h:605
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int toInt(bool *, int) const
@@ -11125,7 +10433,7 @@ func (this *QString) ToInt(ok *bool, base int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:629
+// /usr/include/qt/QtCore/qstring.h:605
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int toInt(bool *, int) const
@@ -11161,7 +10469,7 @@ func (this *QString) ToIntp() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:629
+// /usr/include/qt/QtCore/qstring.h:605
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int toInt(bool *, int) const
@@ -11195,7 +10503,7 @@ func (this *QString) ToIntp1(ok *bool) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:630
+// /usr/include/qt/QtCore/qstring.h:606
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] uint toUInt(bool *, int) const
@@ -11228,7 +10536,7 @@ func (this *QString) ToUInt(ok *bool, base int) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:630
+// /usr/include/qt/QtCore/qstring.h:606
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] uint toUInt(bool *, int) const
@@ -11265,7 +10573,7 @@ func (this *QString) ToUIntp() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:630
+// /usr/include/qt/QtCore/qstring.h:606
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] uint toUInt(bool *, int) const
@@ -11300,7 +10608,7 @@ func (this *QString) ToUIntp1(ok *bool) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:631
+// /usr/include/qt/QtCore/qstring.h:607
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] long toLong(bool *, int) const
@@ -11333,7 +10641,7 @@ func (this *QString) ToLong(ok *bool, base int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:631
+// /usr/include/qt/QtCore/qstring.h:607
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] long toLong(bool *, int) const
@@ -11370,7 +10678,7 @@ func (this *QString) ToLongp() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:631
+// /usr/include/qt/QtCore/qstring.h:607
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] long toLong(bool *, int) const
@@ -11405,7 +10713,7 @@ func (this *QString) ToLongp1(ok *bool) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:632
+// /usr/include/qt/QtCore/qstring.h:608
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] ulong toULong(bool *, int) const
@@ -11438,7 +10746,7 @@ func (this *QString) ToULong(ok *bool, base int) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:632
+// /usr/include/qt/QtCore/qstring.h:608
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] ulong toULong(bool *, int) const
@@ -11475,7 +10783,7 @@ func (this *QString) ToULongp() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:632
+// /usr/include/qt/QtCore/qstring.h:608
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] ulong toULong(bool *, int) const
@@ -11510,7 +10818,7 @@ func (this *QString) ToULongp1(ok *bool) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:633
+// /usr/include/qt/QtCore/qstring.h:609
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qlonglong toLongLong(bool *, int) const
@@ -11543,7 +10851,7 @@ func (this *QString) ToLongLong(ok *bool, base int) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:633
+// /usr/include/qt/QtCore/qstring.h:609
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qlonglong toLongLong(bool *, int) const
@@ -11580,7 +10888,7 @@ func (this *QString) ToLongLongp() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:633
+// /usr/include/qt/QtCore/qstring.h:609
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qlonglong toLongLong(bool *, int) const
@@ -11615,7 +10923,7 @@ func (this *QString) ToLongLongp1(ok *bool) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:634
+// /usr/include/qt/QtCore/qstring.h:610
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qulonglong toULongLong(bool *, int) const
@@ -11648,7 +10956,7 @@ func (this *QString) ToULongLong(ok *bool, base int) uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:634
+// /usr/include/qt/QtCore/qstring.h:610
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qulonglong toULongLong(bool *, int) const
@@ -11685,7 +10993,7 @@ func (this *QString) ToULongLongp() uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:634
+// /usr/include/qt/QtCore/qstring.h:610
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qulonglong toULongLong(bool *, int) const
@@ -11720,7 +11028,7 @@ func (this *QString) ToULongLongp1(ok *bool) uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstring.h:635
+// /usr/include/qt/QtCore/qstring.h:611
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float toFloat(bool *) const
@@ -11752,7 +11060,7 @@ func (this *QString) ToFloat(ok *bool) float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:635
+// /usr/include/qt/QtCore/qstring.h:611
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float toFloat(bool *) const
@@ -11786,7 +11094,7 @@ func (this *QString) ToFloatp() float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:636
+// /usr/include/qt/QtCore/qstring.h:612
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double toDouble(bool *) const
@@ -11838,7 +11146,7 @@ func (this *QString) ToDouble(ok *bool) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:636
+// /usr/include/qt/QtCore/qstring.h:612
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double toDouble(bool *) const
@@ -11892,7 +11200,7 @@ func (this *QString) ToDoublep() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qstring.h:638
+// /usr/include/qt/QtCore/qstring.h:614
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(short, int)
@@ -11919,7 +11227,7 @@ func (this *QString) SetNum(arg0 int16, base int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:638
+// /usr/include/qt/QtCore/qstring.h:614
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(short, int)
@@ -11948,7 +11256,7 @@ func (this *QString) SetNump(arg0 int16) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:639
+// /usr/include/qt/QtCore/qstring.h:615
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(ushort, int)
@@ -11975,7 +11283,7 @@ func (this *QString) SetNum1(arg0 uint16, base int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:639
+// /usr/include/qt/QtCore/qstring.h:615
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(ushort, int)
@@ -12004,7 +11312,7 @@ func (this *QString) SetNum1p(arg0 uint16) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:640
+// /usr/include/qt/QtCore/qstring.h:616
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(int, int)
@@ -12031,7 +11339,7 @@ func (this *QString) SetNum2(arg0 int, base int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:640
+// /usr/include/qt/QtCore/qstring.h:616
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(int, int)
@@ -12060,7 +11368,7 @@ func (this *QString) SetNum2p(arg0 int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:641
+// /usr/include/qt/QtCore/qstring.h:617
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(uint, int)
@@ -12087,7 +11395,7 @@ func (this *QString) SetNum3(arg0 uint, base int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:641
+// /usr/include/qt/QtCore/qstring.h:617
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(uint, int)
@@ -12116,7 +11424,7 @@ func (this *QString) SetNum3p(arg0 uint) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:642
+// /usr/include/qt/QtCore/qstring.h:618
 // index:4
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(long, int)
@@ -12143,7 +11451,7 @@ func (this *QString) SetNum4(arg0 int, base int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:642
+// /usr/include/qt/QtCore/qstring.h:618
 // index:4
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(long, int)
@@ -12172,7 +11480,7 @@ func (this *QString) SetNum4p(arg0 int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:643
+// /usr/include/qt/QtCore/qstring.h:619
 // index:5
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(ulong, int)
@@ -12199,7 +11507,7 @@ func (this *QString) SetNum5(arg0 uint, base int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:643
+// /usr/include/qt/QtCore/qstring.h:619
 // index:5
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(ulong, int)
@@ -12228,7 +11536,7 @@ func (this *QString) SetNum5p(arg0 uint) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:644
+// /usr/include/qt/QtCore/qstring.h:620
 // index:6
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(qlonglong, int)
@@ -12255,7 +11563,7 @@ func (this *QString) SetNum6(arg0 int64, base int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:644
+// /usr/include/qt/QtCore/qstring.h:620
 // index:6
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(qlonglong, int)
@@ -12284,7 +11592,7 @@ func (this *QString) SetNum6p(arg0 int64) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:645
+// /usr/include/qt/QtCore/qstring.h:621
 // index:7
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(qulonglong, int)
@@ -12311,7 +11619,7 @@ func (this *QString) SetNum7(arg0 uint64, base int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:645
+// /usr/include/qt/QtCore/qstring.h:621
 // index:7
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(qulonglong, int)
@@ -12340,7 +11648,7 @@ func (this *QString) SetNum7p(arg0 uint64) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:646
+// /usr/include/qt/QtCore/qstring.h:622
 // index:8
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(float, char, int)
@@ -12367,7 +11675,7 @@ func (this *QString) SetNum8(arg0 float32, f byte, prec int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:646
+// /usr/include/qt/QtCore/qstring.h:622
 // index:8
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(float, char, int)
@@ -12398,7 +11706,7 @@ func (this *QString) SetNum8p(arg0 float32) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:646
+// /usr/include/qt/QtCore/qstring.h:622
 // index:8
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(float, char, int)
@@ -12427,7 +11735,7 @@ func (this *QString) SetNum8p1(arg0 float32, f byte) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:647
+// /usr/include/qt/QtCore/qstring.h:623
 // index:9
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(double, char, int)
@@ -12454,7 +11762,7 @@ func (this *QString) SetNum9(arg0 float64, f byte, prec int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:647
+// /usr/include/qt/QtCore/qstring.h:623
 // index:9
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(double, char, int)
@@ -12485,7 +11793,7 @@ func (this *QString) SetNum9p(arg0 float64) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:647
+// /usr/include/qt/QtCore/qstring.h:623
 // index:9
 // Public Visibility=Default Availability=Available
 // [8] QString & setNum(double, char, int)
@@ -12514,7 +11822,7 @@ func (this *QString) SetNum9p1(arg0 float64, f byte) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:649
+// /usr/include/qt/QtCore/qstring.h:625
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString number(int, int)
@@ -12549,7 +11857,7 @@ func QString_Number(arg0 int, base int) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:649
+// /usr/include/qt/QtCore/qstring.h:625
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString number(int, int)
@@ -12581,7 +11889,7 @@ func (this *QString) Numberp(arg0 int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:650
+// /usr/include/qt/QtCore/qstring.h:626
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QString number(uint, int)
@@ -12616,7 +11924,7 @@ func QString_Number1(arg0 uint, base int) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:650
+// /usr/include/qt/QtCore/qstring.h:626
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QString number(uint, int)
@@ -12648,7 +11956,7 @@ func (this *QString) Number1p(arg0 uint) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:651
+// /usr/include/qt/QtCore/qstring.h:627
 // index:2
 // Public static Visibility=Default Availability=Available
 // [8] QString number(long, int)
@@ -12683,7 +11991,7 @@ func QString_Number2(arg0 int, base int) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:651
+// /usr/include/qt/QtCore/qstring.h:627
 // index:2
 // Public static Visibility=Default Availability=Available
 // [8] QString number(long, int)
@@ -12715,7 +12023,7 @@ func (this *QString) Number2p(arg0 int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:652
+// /usr/include/qt/QtCore/qstring.h:628
 // index:3
 // Public static Visibility=Default Availability=Available
 // [8] QString number(ulong, int)
@@ -12750,7 +12058,7 @@ func QString_Number3(arg0 uint, base int) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:652
+// /usr/include/qt/QtCore/qstring.h:628
 // index:3
 // Public static Visibility=Default Availability=Available
 // [8] QString number(ulong, int)
@@ -12782,7 +12090,7 @@ func (this *QString) Number3p(arg0 uint) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:653
+// /usr/include/qt/QtCore/qstring.h:629
 // index:4
 // Public static Visibility=Default Availability=Available
 // [8] QString number(qlonglong, int)
@@ -12817,7 +12125,7 @@ func QString_Number4(arg0 int64, base int) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:653
+// /usr/include/qt/QtCore/qstring.h:629
 // index:4
 // Public static Visibility=Default Availability=Available
 // [8] QString number(qlonglong, int)
@@ -12849,7 +12157,7 @@ func (this *QString) Number4p(arg0 int64) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:654
+// /usr/include/qt/QtCore/qstring.h:630
 // index:5
 // Public static Visibility=Default Availability=Available
 // [8] QString number(qulonglong, int)
@@ -12884,7 +12192,7 @@ func QString_Number5(arg0 uint64, base int) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:654
+// /usr/include/qt/QtCore/qstring.h:630
 // index:5
 // Public static Visibility=Default Availability=Available
 // [8] QString number(qulonglong, int)
@@ -12916,7 +12224,7 @@ func (this *QString) Number5p(arg0 uint64) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:655
+// /usr/include/qt/QtCore/qstring.h:631
 // index:6
 // Public static Visibility=Default Availability=Available
 // [8] QString number(double, char, int)
@@ -12951,7 +12259,7 @@ func QString_Number6(arg0 float64, f byte, prec int) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qstring.h:655
+// /usr/include/qt/QtCore/qstring.h:631
 // index:6
 // Public static Visibility=Default Availability=Available
 // [8] QString number(double, char, int)
@@ -12985,7 +12293,7 @@ func (this *QString) Number6p(arg0 float64) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:655
+// /usr/include/qt/QtCore/qstring.h:631
 // index:6
 // Public static Visibility=Default Availability=Available
 // [8] QString number(double, char, int)
@@ -13017,7 +12325,7 @@ func (this *QString) Number6p1(arg0 float64, f byte) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstring.h:664
+// /usr/include/qt/QtCore/qstring.h:640
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(QLatin1String) const
@@ -13035,7 +12343,7 @@ func (this *QString) Operator_equal_equal(s QLatin1String_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:715
+// /usr/include/qt/QtCore/qstring.h:691
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const char *) const
@@ -13051,7 +12359,7 @@ func (this *QString) Operator_equal_equal1(s string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:722
+// /usr/include/qt/QtCore/qstring.h:698
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QByteArray &) const
@@ -13069,7 +12377,7 @@ func (this *QString) Operator_equal_equal2(s QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:665
+// /usr/include/qt/QtCore/qstring.h:641
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator<(QLatin1String) const
@@ -13087,7 +12395,7 @@ func (this *QString) Operator_less_than(s QLatin1String_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:717
+// /usr/include/qt/QtCore/qstring.h:693
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<(const char *) const
@@ -13103,7 +12411,7 @@ func (this *QString) Operator_less_than1(s string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:724
+// /usr/include/qt/QtCore/qstring.h:700
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<(const QByteArray &) const
@@ -13121,7 +12429,7 @@ func (this *QString) Operator_less_than2(s QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:666
+// /usr/include/qt/QtCore/qstring.h:642
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator>(QLatin1String) const
@@ -13139,7 +12447,7 @@ func (this *QString) Operator_greater_than(s QLatin1String_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:719
+// /usr/include/qt/QtCore/qstring.h:695
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>(const char *) const
@@ -13155,7 +12463,7 @@ func (this *QString) Operator_greater_than1(s string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:725
+// /usr/include/qt/QtCore/qstring.h:701
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>(const QByteArray &) const
@@ -13173,7 +12481,7 @@ func (this *QString) Operator_greater_than2(s QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:667
+// /usr/include/qt/QtCore/qstring.h:643
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(QLatin1String) const
@@ -13191,7 +12499,7 @@ func (this *QString) Operator_not_equal(s QLatin1String_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:716
+// /usr/include/qt/QtCore/qstring.h:692
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const char *) const
@@ -13207,7 +12515,7 @@ func (this *QString) Operator_not_equal1(s string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:723
+// /usr/include/qt/QtCore/qstring.h:699
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QByteArray &) const
@@ -13225,7 +12533,7 @@ func (this *QString) Operator_not_equal2(s QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:668
+// /usr/include/qt/QtCore/qstring.h:644
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<=(QLatin1String) const
@@ -13243,7 +12551,7 @@ func (this *QString) Operator_less_than_equal(s QLatin1String_ITF /*123*/) bool 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:718
+// /usr/include/qt/QtCore/qstring.h:694
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<=(const char *) const
@@ -13259,7 +12567,7 @@ func (this *QString) Operator_less_than_equal1(s string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:726
+// /usr/include/qt/QtCore/qstring.h:702
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<=(const QByteArray &) const
@@ -13277,7 +12585,7 @@ func (this *QString) Operator_less_than_equal2(s QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:669
+// /usr/include/qt/QtCore/qstring.h:645
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>=(QLatin1String) const
@@ -13295,7 +12603,7 @@ func (this *QString) Operator_greater_than_equal(s QLatin1String_ITF /*123*/) bo
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:720
+// /usr/include/qt/QtCore/qstring.h:696
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>=(const char *) const
@@ -13311,7 +12619,7 @@ func (this *QString) Operator_greater_than_equal1(s string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:727
+// /usr/include/qt/QtCore/qstring.h:703
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>=(const QByteArray &) const
@@ -13329,7 +12637,7 @@ func (this *QString) Operator_greater_than_equal2(s QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:750
+// /usr/include/qt/QtCore/qstring.h:726
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString::iterator begin()
@@ -13346,7 +12654,7 @@ func (this *QString) Begin() *QChar /*777 QChar **/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:751
+// /usr/include/qt/QtCore/qstring.h:727
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QString::const_iterator begin() const
@@ -13363,7 +12671,7 @@ func (this *QString) Begin1() *QChar /*777 const QChar **/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:752
+// /usr/include/qt/QtCore/qstring.h:728
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString::const_iterator cbegin() const
@@ -13382,7 +12690,7 @@ func (this *QString) Cbegin() *QChar /*777 const QChar **/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:753
+// /usr/include/qt/QtCore/qstring.h:729
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString::const_iterator constBegin() const
@@ -13399,7 +12707,7 @@ func (this *QString) ConstBegin() *QChar /*777 const QChar **/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:754
+// /usr/include/qt/QtCore/qstring.h:730
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString::iterator end()
@@ -13416,7 +12724,7 @@ func (this *QString) End() *QChar /*777 QChar **/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:755
+// /usr/include/qt/QtCore/qstring.h:731
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QString::const_iterator end() const
@@ -13433,7 +12741,7 @@ func (this *QString) End1() *QChar /*777 const QChar **/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:756
+// /usr/include/qt/QtCore/qstring.h:732
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString::const_iterator cend() const
@@ -13452,7 +12760,7 @@ func (this *QString) Cend() *QChar /*777 const QChar **/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:757
+// /usr/include/qt/QtCore/qstring.h:733
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString::const_iterator constEnd() const
@@ -13469,7 +12777,7 @@ func (this *QString) ConstEnd() *QChar /*777 const QChar **/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstring.h:773
+// /usr/include/qt/QtCore/qstring.h:749
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_back(QChar)
@@ -13488,7 +12796,7 @@ func (this *QString) Push_back(c QChar_ITF /*123*/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:774
+// /usr/include/qt/QtCore/qstring.h:750
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_back(const QString &)
@@ -13505,7 +12813,7 @@ func (this *QString) Push_back1(s string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:775
+// /usr/include/qt/QtCore/qstring.h:751
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_front(QChar)
@@ -13524,7 +12832,7 @@ func (this *QString) Push_front(c QChar_ITF /*123*/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:776
+// /usr/include/qt/QtCore/qstring.h:752
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_front(const QString &)
@@ -13541,24 +12849,7 @@ func (this *QString) Push_front1(s string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:777
-// index:0
-// Public inline Visibility=Default Availability=Available
-// [-2] void shrink_to_fit()
-
-/*
-This function is provided for STL compatibility. It is equivalent to squeeze().
-
-This function was introduced in  Qt 5.10.
-
-See also squeeze().
-*/
-func (this *QString) Shrink_to_fit() {
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QString13shrink_to_fitEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtCore/qstring.h:780
+// /usr/include/qt/QtCore/qstring.h:755
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] std::string toStdString() const
@@ -13576,7 +12867,7 @@ func (this *QString) ToStdString() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:782
+// /usr/include/qt/QtCore/qstring.h:757
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] std::wstring toStdWString() const
@@ -13594,7 +12885,7 @@ func (this *QString) ToStdWString() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:786
+// /usr/include/qt/QtCore/qstring.h:761
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] std::u16string toStdU16String() const
@@ -13612,7 +12903,7 @@ func (this *QString) ToStdU16String() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:788
+// /usr/include/qt/QtCore/qstring.h:763
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] std::u32string toStdU32String() const
@@ -13630,7 +12921,7 @@ func (this *QString) ToStdU32String() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qstring.h:805
+// /usr/include/qt/QtCore/qstring.h:780
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull() const
@@ -13657,7 +12948,7 @@ func (this *QString) IsNull() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:808
+// /usr/include/qt/QtCore/qstring.h:783
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSimpleText() const
@@ -13671,7 +12962,7 @@ func (this *QString) IsSimpleText() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstring.h:809
+// /usr/include/qt/QtCore/qstring.h:784
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isRightToLeft() const

@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qlistwidget.h
@@ -96,7 +94,7 @@ func (*QListWidget) NewFromPointer(cthis unsafe.Pointer) *QListWidget {
 	return NewQListWidgetFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:199
+// /usr/include/qt/QtWidgets/qlistwidget.h:200
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -110,7 +108,7 @@ func (this *QListWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:207
+// /usr/include/qt/QtWidgets/qlistwidget.h:208
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidget(QWidget *)
@@ -133,7 +131,7 @@ func NewQListWidget(parent QWidget_ITF /*777 QWidget **/) *QListWidget {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:207
+// /usr/include/qt/QtWidgets/qlistwidget.h:208
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidget(QWidget *)
@@ -154,7 +152,7 @@ func NewQListWidgetp() *QListWidget {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:208
+// /usr/include/qt/QtWidgets/qlistwidget.h:209
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QListWidget()
@@ -169,7 +167,7 @@ func DeleteQListWidget(this *QListWidget) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:210
+// /usr/include/qt/QtWidgets/qlistwidget.h:211
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setSelectionModel(QItemSelectionModel *)
@@ -186,7 +184,7 @@ func (this *QListWidget) SetSelectionModel(selectionModel qtcore.QItemSelectionM
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:212
+// /usr/include/qt/QtWidgets/qlistwidget.h:213
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QListWidgetItem * item(int) const
@@ -202,7 +200,7 @@ func (this *QListWidget) Item(row int) *QListWidgetItem /*777 QListWidgetItem **
 	return /*==*/ NewQListWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:213
+// /usr/include/qt/QtWidgets/qlistwidget.h:214
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int row(const QListWidgetItem *) const
@@ -222,7 +220,7 @@ func (this *QListWidget) Row(item QListWidgetItem_ITF /*777 const QListWidgetIte
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:214
+// /usr/include/qt/QtWidgets/qlistwidget.h:215
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertItem(int, QListWidgetItem *)
@@ -241,7 +239,7 @@ func (this *QListWidget) InsertItem(row int, item QListWidgetItem_ITF /*777 QLis
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:215
+// /usr/include/qt/QtWidgets/qlistwidget.h:216
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void insertItem(int, const QString &)
@@ -258,7 +256,7 @@ func (this *QListWidget) InsertItem1(row int, label string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:216
+// /usr/include/qt/QtWidgets/qlistwidget.h:217
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertItems(int, const QStringList &)
@@ -277,7 +275,7 @@ func (this *QListWidget) InsertItems(row int, labels qtcore.QStringList_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:217
+// /usr/include/qt/QtWidgets/qlistwidget.h:218
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void addItem(const QString &)
@@ -292,7 +290,7 @@ func (this *QListWidget) AddItem(label string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:218
+// /usr/include/qt/QtWidgets/qlistwidget.h:219
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void addItem(QListWidgetItem *)
@@ -309,7 +307,7 @@ func (this *QListWidget) AddItem1(item QListWidgetItem_ITF /*777 QListWidgetItem
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:219
+// /usr/include/qt/QtWidgets/qlistwidget.h:220
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void addItems(const QStringList &)
@@ -328,7 +326,7 @@ func (this *QListWidget) AddItems(labels qtcore.QStringList_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:220
+// /usr/include/qt/QtWidgets/qlistwidget.h:221
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QListWidgetItem * takeItem(int)
@@ -346,7 +344,7 @@ func (this *QListWidget) TakeItem(row int) *QListWidgetItem /*777 QListWidgetIte
 	return /*==*/ NewQListWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:221
+// /usr/include/qt/QtWidgets/qlistwidget.h:222
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int count() const
@@ -360,7 +358,7 @@ func (this *QListWidget) Count() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:223
+// /usr/include/qt/QtWidgets/qlistwidget.h:224
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QListWidgetItem * currentItem() const
@@ -376,7 +374,7 @@ func (this *QListWidget) CurrentItem() *QListWidgetItem /*777 QListWidgetItem **
 	return /*==*/ NewQListWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:224
+// /usr/include/qt/QtWidgets/qlistwidget.h:225
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentItem(QListWidgetItem *)
@@ -397,7 +395,7 @@ func (this *QListWidget) SetCurrentItem(item QListWidgetItem_ITF /*777 QListWidg
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:225
+// /usr/include/qt/QtWidgets/qlistwidget.h:226
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentItem(QListWidgetItem *, QItemSelectionModel::SelectionFlags)
@@ -418,7 +416,7 @@ func (this *QListWidget) SetCurrentItem1(item QListWidgetItem_ITF /*777 QListWid
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:227
+// /usr/include/qt/QtWidgets/qlistwidget.h:228
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentRow() const
@@ -432,7 +430,7 @@ func (this *QListWidget) CurrentRow() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:228
+// /usr/include/qt/QtWidgets/qlistwidget.h:229
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentRow(int)
@@ -445,7 +443,7 @@ func (this *QListWidget) SetCurrentRow(row int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:229
+// /usr/include/qt/QtWidgets/qlistwidget.h:230
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentRow(int, QItemSelectionModel::SelectionFlags)
@@ -458,7 +456,7 @@ func (this *QListWidget) SetCurrentRow1(row int, command int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:231
+// /usr/include/qt/QtWidgets/qlistwidget.h:232
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QListWidgetItem * itemAt(const QPoint &) const
@@ -476,7 +474,7 @@ func (this *QListWidget) ItemAt(p qtcore.QPoint_ITF) *QListWidgetItem /*777 QLis
 	return /*==*/ NewQListWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:232
+// /usr/include/qt/QtWidgets/qlistwidget.h:233
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QListWidgetItem * itemAt(int, int) const
@@ -490,7 +488,7 @@ func (this *QListWidget) ItemAt1(x int, y int) *QListWidgetItem /*777 QListWidge
 	return /*==*/ NewQListWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:233
+// /usr/include/qt/QtWidgets/qlistwidget.h:234
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect visualItemRect(const QListWidgetItem *) const
@@ -510,7 +508,7 @@ func (this *QListWidget) VisualItemRect(item QListWidgetItem_ITF /*777 const QLi
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:235
+// /usr/include/qt/QtWidgets/qlistwidget.h:236
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sortItems(Qt::SortOrder)
@@ -523,7 +521,7 @@ func (this *QListWidget) SortItems(order int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:235
+// /usr/include/qt/QtWidgets/qlistwidget.h:236
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sortItems(Qt::SortOrder)
@@ -538,7 +536,7 @@ func (this *QListWidget) SortItemsp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:236
+// /usr/include/qt/QtWidgets/qlistwidget.h:237
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSortingEnabled(bool)
@@ -551,7 +549,7 @@ func (this *QListWidget) SetSortingEnabled(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:237
+// /usr/include/qt/QtWidgets/qlistwidget.h:238
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSortingEnabled() const
@@ -565,7 +563,7 @@ func (this *QListWidget) IsSortingEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:239
+// /usr/include/qt/QtWidgets/qlistwidget.h:240
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void editItem(QListWidgetItem *)
@@ -582,7 +580,7 @@ func (this *QListWidget) EditItem(item QListWidgetItem_ITF /*777 QListWidgetItem
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:240
+// /usr/include/qt/QtWidgets/qlistwidget.h:241
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void openPersistentEditor(QListWidgetItem *)
@@ -590,7 +588,7 @@ func (this *QListWidget) EditItem(item QListWidgetItem_ITF /*777 QListWidgetItem
 /*
 Opens an editor for the given item. The editor remains open after editing.
 
-See also closePersistentEditor() and isPersistentEditorOpen().
+See also closePersistentEditor().
 */
 func (this *QListWidget) OpenPersistentEditor(item QListWidgetItem_ITF /*777 QListWidgetItem **/) {
 	var convArg0 unsafe.Pointer
@@ -601,7 +599,7 @@ func (this *QListWidget) OpenPersistentEditor(item QListWidgetItem_ITF /*777 QLi
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:241
+// /usr/include/qt/QtWidgets/qlistwidget.h:242
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void closePersistentEditor(QListWidgetItem *)
@@ -609,7 +607,7 @@ func (this *QListWidget) OpenPersistentEditor(item QListWidgetItem_ITF /*777 QLi
 /*
 Closes the persistent editor for the given item.
 
-See also openPersistentEditor() and isPersistentEditorOpen().
+See also openPersistentEditor().
 */
 func (this *QListWidget) ClosePersistentEditor(item QListWidgetItem_ITF /*777 QListWidgetItem **/) {
 	var convArg0 unsafe.Pointer
@@ -620,29 +618,7 @@ func (this *QListWidget) ClosePersistentEditor(item QListWidgetItem_ITF /*777 QL
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:243
-// index:0
-// Public Visibility=Default Availability=Available
-// [1] bool isPersistentEditorOpen(QListWidgetItem *) const
-
-/*
-Returns whether a persistent editor is open for item item.
-
-This function was introduced in  Qt 5.10.
-
-See also openPersistentEditor() and closePersistentEditor().
-*/
-func (this *QListWidget) IsPersistentEditorOpen(item QListWidgetItem_ITF /*777 QListWidgetItem **/) bool {
-	var convArg0 unsafe.Pointer
-	if item != nil && item.QListWidgetItem_PTR() != nil {
-		convArg0 = item.QListWidgetItem_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK11QListWidget22isPersistentEditorOpenEP15QListWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtWidgets/qlistwidget.h:245
+// /usr/include/qt/QtWidgets/qlistwidget.h:244
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * itemWidget(QListWidgetItem *) const
@@ -664,7 +640,7 @@ func (this *QListWidget) ItemWidget(item QListWidgetItem_ITF /*777 QListWidgetIt
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:246
+// /usr/include/qt/QtWidgets/qlistwidget.h:245
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemWidget(QListWidgetItem *, QWidget *)
@@ -691,7 +667,7 @@ func (this *QListWidget) SetItemWidget(item QListWidgetItem_ITF /*777 QListWidge
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:247
+// /usr/include/qt/QtWidgets/qlistwidget.h:246
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void removeItemWidget(QListWidgetItem *)
@@ -714,7 +690,7 @@ func (this *QListWidget) RemoveItemWidget(item QListWidgetItem_ITF /*777 QListWi
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:249
+// /usr/include/qt/QtWidgets/qlistwidget.h:248
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isItemSelected(const QListWidgetItem *) const
@@ -732,7 +708,7 @@ func (this *QListWidget) IsItemSelected(item QListWidgetItem_ITF /*777 const QLi
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:250
+// /usr/include/qt/QtWidgets/qlistwidget.h:249
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemSelected(const QListWidgetItem *, bool)
@@ -749,7 +725,7 @@ func (this *QListWidget) SetItemSelected(item QListWidgetItem_ITF /*777 const QL
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:254
+// /usr/include/qt/QtWidgets/qlistwidget.h:253
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isItemHidden(const QListWidgetItem *) const
@@ -767,7 +743,7 @@ func (this *QListWidget) IsItemHidden(item QListWidgetItem_ITF /*777 const QList
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:255
+// /usr/include/qt/QtWidgets/qlistwidget.h:254
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemHidden(const QListWidgetItem *, bool)
@@ -784,7 +760,7 @@ func (this *QListWidget) SetItemHidden(item QListWidgetItem_ITF /*777 const QLis
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:260
+// /usr/include/qt/QtWidgets/qlistwidget.h:256
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QDropEvent *)
@@ -801,7 +777,7 @@ func (this *QListWidget) DropEvent(event qtgui.QDropEvent_ITF /*777 QDropEvent *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:263
+// /usr/include/qt/QtWidgets/qlistwidget.h:259
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void scrollToItem(const QListWidgetItem *, QAbstractItemView::ScrollHint)
@@ -820,7 +796,7 @@ func (this *QListWidget) ScrollToItem(item QListWidgetItem_ITF /*777 const QList
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:263
+// /usr/include/qt/QtWidgets/qlistwidget.h:259
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void scrollToItem(const QListWidgetItem *, QAbstractItemView::ScrollHint)
@@ -841,7 +817,7 @@ func (this *QListWidget) ScrollToItemp(item QListWidgetItem_ITF /*777 const QLis
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:264
+// /usr/include/qt/QtWidgets/qlistwidget.h:260
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
@@ -856,7 +832,7 @@ func (this *QListWidget) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:267
+// /usr/include/qt/QtWidgets/qlistwidget.h:263
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemPressed(QListWidgetItem *)
@@ -875,7 +851,7 @@ func (this *QListWidget) ItemPressed(item QListWidgetItem_ITF /*777 QListWidgetI
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:268
+// /usr/include/qt/QtWidgets/qlistwidget.h:264
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemClicked(QListWidgetItem *)
@@ -894,7 +870,7 @@ func (this *QListWidget) ItemClicked(item QListWidgetItem_ITF /*777 QListWidgetI
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:269
+// /usr/include/qt/QtWidgets/qlistwidget.h:265
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemDoubleClicked(QListWidgetItem *)
@@ -913,7 +889,7 @@ func (this *QListWidget) ItemDoubleClicked(item QListWidgetItem_ITF /*777 QListW
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:270
+// /usr/include/qt/QtWidgets/qlistwidget.h:266
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemActivated(QListWidgetItem *)
@@ -930,7 +906,7 @@ func (this *QListWidget) ItemActivated(item QListWidgetItem_ITF /*777 QListWidge
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:271
+// /usr/include/qt/QtWidgets/qlistwidget.h:267
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemEntered(QListWidgetItem *)
@@ -949,7 +925,7 @@ func (this *QListWidget) ItemEntered(item QListWidgetItem_ITF /*777 QListWidgetI
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:272
+// /usr/include/qt/QtWidgets/qlistwidget.h:268
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemChanged(QListWidgetItem *)
@@ -966,7 +942,7 @@ func (this *QListWidget) ItemChanged(item QListWidgetItem_ITF /*777 QListWidgetI
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:274
+// /usr/include/qt/QtWidgets/qlistwidget.h:270
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentItemChanged(QListWidgetItem *, QListWidgetItem *)
@@ -989,7 +965,7 @@ func (this *QListWidget) CurrentItemChanged(current QListWidgetItem_ITF /*777 QL
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:275
+// /usr/include/qt/QtWidgets/qlistwidget.h:271
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentTextChanged(const QString &)
@@ -1006,7 +982,7 @@ func (this *QListWidget) CurrentTextChanged(currentText string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:276
+// /usr/include/qt/QtWidgets/qlistwidget.h:272
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentRowChanged(int)
@@ -1023,7 +999,7 @@ func (this *QListWidget) CurrentRowChanged(currentRow int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:278
+// /usr/include/qt/QtWidgets/qlistwidget.h:274
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void itemSelectionChanged()
@@ -1038,7 +1014,7 @@ func (this *QListWidget) ItemSelectionChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:281
+// /usr/include/qt/QtWidgets/qlistwidget.h:277
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -1056,7 +1032,7 @@ func (this *QListWidget) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:282
+// /usr/include/qt/QtWidgets/qlistwidget.h:278
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QStringList mimeTypes() const
@@ -1074,7 +1050,7 @@ func (this *QListWidget) MimeTypes() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:289
+// /usr/include/qt/QtWidgets/qlistwidget.h:285
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool dropMimeData(int, const QMimeData *, Qt::DropAction)
@@ -1094,7 +1070,7 @@ func (this *QListWidget) DropMimeData(index int, data qtcore.QMimeData_ITF /*777
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:290
+// /usr/include/qt/QtWidgets/qlistwidget.h:286
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] Qt::DropActions supportedDropActions() const
@@ -1110,7 +1086,7 @@ func (this *QListWidget) SupportedDropActions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:300
+// /usr/include/qt/QtWidgets/qlistwidget.h:290
 // index:0
 // Protected Visibility=Default Availability=Available
 // [24] QModelIndex indexFromItem(QListWidgetItem *) const
@@ -1130,7 +1106,7 @@ func (this *QListWidget) IndexFromItem(item QListWidgetItem_ITF /*777 QListWidge
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:301
+// /usr/include/qt/QtWidgets/qlistwidget.h:291
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QListWidgetItem * itemFromIndex(const QModelIndex &) const

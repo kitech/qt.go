@@ -95,16 +95,6 @@ Warning: Although many e-mail clients can send attachments and are Unicode-aware
 
 Warning: A return value of true indicates that the application has successfully requested the operating system to open the URL in an external application. The external application may still fail to launch or fail to open the requested URL. This result will not be reported back to the application.
 
-Warning: URLs passed to this function on iOS will not load unless their schemes are listed in the LSApplicationQueriesSchemes key of the application's Info.plist file. For more information, see the Apple Developer Documentation for canOpenURL(_:). For example, the following lines enable URLs with the HTTPS scheme:
-
-
-  <key>LSApplicationQueriesSchemes</key>
-  <array>
-      <string>https</string>
-  </array>
-
-
-
 See also setUrlHandler().
 */
 func (this *QDesktopServices) OpenUrl(url qtcore.QUrl_ITF) bool {

@@ -64,7 +64,7 @@ func (*QStyleOptionTitleBar) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionT
 	return NewQStyleOptionTitleBarFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:619
+// /usr/include/qt/QtWidgets/qstyleoption.h:608
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionTitleBar()
@@ -83,7 +83,7 @@ func NewQStyleOptionTitleBar() *QStyleOptionTitleBar {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:623
+// /usr/include/qt/QtWidgets/qstyleoption.h:612
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionTitleBar(int)

@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qmessagebox.h
@@ -96,7 +94,7 @@ func (*QMessageBox) NewFromPointer(cthis unsafe.Pointer) *QMessageBox {
 	return NewQMessageBoxFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:58
+// /usr/include/qt/QtWidgets/qmessagebox.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -110,7 +108,7 @@ func (this *QMessageBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:135
+// /usr/include/qt/QtWidgets/qmessagebox.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageBox(QWidget *)
@@ -135,7 +133,7 @@ func NewQMessageBox(parent QWidget_ITF /*777 QWidget **/) *QMessageBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:135
+// /usr/include/qt/QtWidgets/qmessagebox.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageBox(QWidget *)
@@ -158,7 +156,7 @@ func NewQMessageBoxp() *QMessageBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:136
+// /usr/include/qt/QtWidgets/qmessagebox.h:137
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageBox(QMessageBox::Icon, const QString &, const QString &, QMessageBox::StandardButtons, QWidget *, Qt::WindowFlags)
@@ -187,7 +185,7 @@ func NewQMessageBox1(icon int, title string, text string, buttons int, parent QW
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:136
+// /usr/include/qt/QtWidgets/qmessagebox.h:137
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageBox(QMessageBox::Icon, const QString &, const QString &, QMessageBox::StandardButtons, QWidget *, Qt::WindowFlags)
@@ -218,7 +216,7 @@ func NewQMessageBox1p(icon int, title string, text string) *QMessageBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:136
+// /usr/include/qt/QtWidgets/qmessagebox.h:137
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageBox(QMessageBox::Icon, const QString &, const QString &, QMessageBox::StandardButtons, QWidget *, Qt::WindowFlags)
@@ -247,7 +245,7 @@ func NewQMessageBox1p1(icon int, title string, text string, buttons int) *QMessa
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:136
+// /usr/include/qt/QtWidgets/qmessagebox.h:137
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageBox(QMessageBox::Icon, const QString &, const QString &, QMessageBox::StandardButtons, QWidget *, Qt::WindowFlags)
@@ -278,7 +276,7 @@ func NewQMessageBox1p2(icon int, title string, text string, buttons int, parent 
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:202
+// /usr/include/qt/QtWidgets/qmessagebox.h:203
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageBox(const QString &, const QString &, QMessageBox::Icon, int, int, int, QWidget *, Qt::WindowFlags)
@@ -307,7 +305,7 @@ func NewQMessageBox2(title string, text string, icon int, button0 int, button1 i
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:202
+// /usr/include/qt/QtWidgets/qmessagebox.h:203
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageBox(const QString &, const QString &, QMessageBox::Icon, int, int, int, QWidget *, Qt::WindowFlags)
@@ -336,7 +334,7 @@ func NewQMessageBox2p(title string, text string, icon int, button0 int, button1 
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:202
+// /usr/include/qt/QtWidgets/qmessagebox.h:203
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QMessageBox(const QString &, const QString &, QMessageBox::Icon, int, int, int, QWidget *, Qt::WindowFlags)
@@ -367,7 +365,7 @@ func NewQMessageBox2p1(title string, text string, icon int, button0 int, button1
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:139
+// /usr/include/qt/QtWidgets/qmessagebox.h:140
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMessageBox()
@@ -382,7 +380,7 @@ func DeleteQMessageBox(this *QMessageBox) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:141
+// /usr/include/qt/QtWidgets/qmessagebox.h:142
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addButton(QAbstractButton *, QMessageBox::ButtonRole)
@@ -403,7 +401,7 @@ func (this *QMessageBox) AddButton(button QAbstractButton_ITF /*777 QAbstractBut
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:142
+// /usr/include/qt/QtWidgets/qmessagebox.h:143
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QPushButton * addButton(const QString &, QMessageBox::ButtonRole)
@@ -423,7 +421,7 @@ func (this *QMessageBox) AddButton1(text string, role int) *QPushButton /*777 QP
 	return /*==*/ NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:143
+// /usr/include/qt/QtWidgets/qmessagebox.h:144
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QPushButton * addButton(QMessageBox::StandardButton)
@@ -441,7 +439,7 @@ func (this *QMessageBox) AddButton2(button int) *QPushButton /*777 QPushButton *
 	return /*==*/ NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:144
+// /usr/include/qt/QtWidgets/qmessagebox.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeButton(QAbstractButton *)
@@ -462,7 +460,7 @@ func (this *QMessageBox) RemoveButton(button QAbstractButton_ITF /*777 QAbstract
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:147
+// /usr/include/qt/QtWidgets/qmessagebox.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void open(QObject *, const char *)
@@ -485,7 +483,7 @@ func (this *QMessageBox) Open(receiver qtcore.QObject_ITF /*777 QObject **/, mem
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:150
+// /usr/include/qt/QtWidgets/qmessagebox.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QMessageBox::ButtonRole buttonRole(QAbstractButton *) const
@@ -507,7 +505,7 @@ func (this *QMessageBox) ButtonRole(button QAbstractButton_ITF /*777 QAbstractBu
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:152
+// /usr/include/qt/QtWidgets/qmessagebox.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStandardButtons(QMessageBox::StandardButtons)
@@ -520,7 +518,7 @@ func (this *QMessageBox) SetStandardButtons(buttons int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:153
+// /usr/include/qt/QtWidgets/qmessagebox.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButtons standardButtons() const
@@ -534,7 +532,7 @@ func (this *QMessageBox) StandardButtons() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:154
+// /usr/include/qt/QtWidgets/qmessagebox.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton standardButton(QAbstractButton *) const
@@ -556,7 +554,7 @@ func (this *QMessageBox) StandardButton(button QAbstractButton_ITF /*777 QAbstra
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:155
+// /usr/include/qt/QtWidgets/qmessagebox.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractButton * button(QMessageBox::StandardButton) const
@@ -574,7 +572,7 @@ func (this *QMessageBox) Button(which int) *QAbstractButton /*777 QAbstractButto
 	return /*==*/ NewQAbstractButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:157
+// /usr/include/qt/QtWidgets/qmessagebox.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPushButton * defaultButton() const
@@ -592,7 +590,7 @@ func (this *QMessageBox) DefaultButton() *QPushButton /*777 QPushButton **/ {
 	return /*==*/ NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:158
+// /usr/include/qt/QtWidgets/qmessagebox.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultButton(QPushButton *)
@@ -613,7 +611,7 @@ func (this *QMessageBox) SetDefaultButton(button QPushButton_ITF /*777 QPushButt
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:159
+// /usr/include/qt/QtWidgets/qmessagebox.h:160
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultButton(QMessageBox::StandardButton)
@@ -630,7 +628,7 @@ func (this *QMessageBox) SetDefaultButton1(button int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:161
+// /usr/include/qt/QtWidgets/qmessagebox.h:162
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractButton * escapeButton() const
@@ -646,7 +644,7 @@ func (this *QMessageBox) EscapeButton() *QAbstractButton /*777 QAbstractButton *
 	return /*==*/ NewQAbstractButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:162
+// /usr/include/qt/QtWidgets/qmessagebox.h:163
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEscapeButton(QAbstractButton *)
@@ -667,7 +665,7 @@ func (this *QMessageBox) SetEscapeButton(button QAbstractButton_ITF /*777 QAbstr
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:163
+// /usr/include/qt/QtWidgets/qmessagebox.h:164
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setEscapeButton(QMessageBox::StandardButton)
@@ -684,7 +682,7 @@ func (this *QMessageBox) SetEscapeButton1(button int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:165
+// /usr/include/qt/QtWidgets/qmessagebox.h:166
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractButton * clickedButton() const
@@ -718,7 +716,7 @@ func (this *QMessageBox) ClickedButton() *QAbstractButton /*777 QAbstractButton 
 	return /*==*/ NewQAbstractButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:167
+// /usr/include/qt/QtWidgets/qmessagebox.h:168
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text() const
@@ -735,7 +733,7 @@ func (this *QMessageBox) Text() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:168
+// /usr/include/qt/QtWidgets/qmessagebox.h:169
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setText(const QString &)
@@ -750,7 +748,7 @@ func (this *QMessageBox) SetText(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:170
+// /usr/include/qt/QtWidgets/qmessagebox.h:171
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QMessageBox::Icon icon() const
@@ -764,7 +762,7 @@ func (this *QMessageBox) Icon() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:171
+// /usr/include/qt/QtWidgets/qmessagebox.h:172
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIcon(QMessageBox::Icon)
@@ -777,7 +775,7 @@ func (this *QMessageBox) SetIcon(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:173
+// /usr/include/qt/QtWidgets/qmessagebox.h:174
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPixmap iconPixmap() const
@@ -793,7 +791,7 @@ func (this *QMessageBox) IconPixmap() *qtgui.QPixmap /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:174
+// /usr/include/qt/QtWidgets/qmessagebox.h:175
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconPixmap(const QPixmap &)
@@ -810,7 +808,7 @@ func (this *QMessageBox) SetIconPixmap(pixmap qtgui.QPixmap_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:176
+// /usr/include/qt/QtWidgets/qmessagebox.h:177
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::TextFormat textFormat() const
@@ -824,7 +822,7 @@ func (this *QMessageBox) TextFormat() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:177
+// /usr/include/qt/QtWidgets/qmessagebox.h:178
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextFormat(Qt::TextFormat)
@@ -837,7 +835,7 @@ func (this *QMessageBox) SetTextFormat(format int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:179
+// /usr/include/qt/QtWidgets/qmessagebox.h:180
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextInteractionFlags(Qt::TextInteractionFlags)
@@ -850,7 +848,7 @@ func (this *QMessageBox) SetTextInteractionFlags(flags int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:180
+// /usr/include/qt/QtWidgets/qmessagebox.h:181
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::TextInteractionFlags textInteractionFlags() const
@@ -864,7 +862,7 @@ func (this *QMessageBox) TextInteractionFlags() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:182
+// /usr/include/qt/QtWidgets/qmessagebox.h:183
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCheckBox(QCheckBox *)
@@ -885,7 +883,7 @@ func (this *QMessageBox) SetCheckBox(cb QCheckBox_ITF /*777 QCheckBox **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:183
+// /usr/include/qt/QtWidgets/qmessagebox.h:184
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QCheckBox * checkBox() const
@@ -903,7 +901,7 @@ func (this *QMessageBox) CheckBox() *QCheckBox /*777 QCheckBox **/ {
 	return /*==*/ NewQCheckBoxFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:185
+// /usr/include/qt/QtWidgets/qmessagebox.h:186
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
@@ -942,7 +940,7 @@ func QMessageBox_Information(parent QWidget_ITF /*777 QWidget **/, title string,
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:185
+// /usr/include/qt/QtWidgets/qmessagebox.h:186
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
@@ -980,7 +978,7 @@ func (this *QMessageBox) Informationp(parent QWidget_ITF /*777 QWidget **/, titl
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:185
+// /usr/include/qt/QtWidgets/qmessagebox.h:186
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
@@ -1016,7 +1014,7 @@ func (this *QMessageBox) Informationp1(parent QWidget_ITF /*777 QWidget **/, tit
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:207
+// /usr/include/qt/QtWidgets/qmessagebox.h:208
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int information(QWidget *, const QString &, const QString &, int, int, int)
@@ -1055,7 +1053,7 @@ func QMessageBox_Information1(parent QWidget_ITF /*777 QWidget **/, title string
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:207
+// /usr/include/qt/QtWidgets/qmessagebox.h:208
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int information(QWidget *, const QString &, const QString &, int, int, int)
@@ -1093,7 +1091,7 @@ func (this *QMessageBox) Information1p(parent QWidget_ITF /*777 QWidget **/, tit
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:207
+// /usr/include/qt/QtWidgets/qmessagebox.h:208
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int information(QWidget *, const QString &, const QString &, int, int, int)
@@ -1129,7 +1127,7 @@ func (this *QMessageBox) Information1p1(parent QWidget_ITF /*777 QWidget **/, ti
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:210
+// /usr/include/qt/QtWidgets/qmessagebox.h:211
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int information(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -1174,7 +1172,7 @@ func QMessageBox_Information2(parent QWidget_ITF /*777 QWidget **/, title string
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:210
+// /usr/include/qt/QtWidgets/qmessagebox.h:211
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int information(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -1218,7 +1216,7 @@ func (this *QMessageBox) Information2p(parent QWidget_ITF /*777 QWidget **/, tit
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:210
+// /usr/include/qt/QtWidgets/qmessagebox.h:211
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int information(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -1262,7 +1260,7 @@ func (this *QMessageBox) Information2p1(parent QWidget_ITF /*777 QWidget **/, ti
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:210
+// /usr/include/qt/QtWidgets/qmessagebox.h:211
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int information(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -1306,7 +1304,7 @@ func (this *QMessageBox) Information2p2(parent QWidget_ITF /*777 QWidget **/, ti
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:210
+// /usr/include/qt/QtWidgets/qmessagebox.h:211
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int information(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -1348,7 +1346,7 @@ func (this *QMessageBox) Information2p3(parent QWidget_ITF /*777 QWidget **/, ti
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:217
+// /usr/include/qt/QtWidgets/qmessagebox.h:218
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, QMessageBox::StandardButton, QMessageBox::StandardButton)
@@ -1387,7 +1385,7 @@ func QMessageBox_Information3(parent QWidget_ITF /*777 QWidget **/, title string
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:217
+// /usr/include/qt/QtWidgets/qmessagebox.h:218
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton information(QWidget *, const QString &, const QString &, QMessageBox::StandardButton, QMessageBox::StandardButton)
@@ -1423,7 +1421,7 @@ func (this *QMessageBox) Information3p(parent QWidget_ITF /*777 QWidget **/, tit
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:188
+// /usr/include/qt/QtWidgets/qmessagebox.h:189
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton question(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
@@ -1462,7 +1460,7 @@ func QMessageBox_Question(parent QWidget_ITF /*777 QWidget **/, title string, te
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:188
+// /usr/include/qt/QtWidgets/qmessagebox.h:189
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton question(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
@@ -1500,7 +1498,7 @@ func (this *QMessageBox) Questionp(parent QWidget_ITF /*777 QWidget **/, title s
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:188
+// /usr/include/qt/QtWidgets/qmessagebox.h:189
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton question(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
@@ -1536,7 +1534,7 @@ func (this *QMessageBox) Questionp1(parent QWidget_ITF /*777 QWidget **/, title 
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:222
+// /usr/include/qt/QtWidgets/qmessagebox.h:223
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int question(QWidget *, const QString &, const QString &, int, int, int)
@@ -1575,7 +1573,7 @@ func QMessageBox_Question1(parent QWidget_ITF /*777 QWidget **/, title string, t
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:222
+// /usr/include/qt/QtWidgets/qmessagebox.h:223
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int question(QWidget *, const QString &, const QString &, int, int, int)
@@ -1613,7 +1611,7 @@ func (this *QMessageBox) Question1p(parent QWidget_ITF /*777 QWidget **/, title 
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:222
+// /usr/include/qt/QtWidgets/qmessagebox.h:223
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int question(QWidget *, const QString &, const QString &, int, int, int)
@@ -1649,7 +1647,7 @@ func (this *QMessageBox) Question1p1(parent QWidget_ITF /*777 QWidget **/, title
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:225
+// /usr/include/qt/QtWidgets/qmessagebox.h:226
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int question(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -1694,7 +1692,7 @@ func QMessageBox_Question2(parent QWidget_ITF /*777 QWidget **/, title string, t
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:225
+// /usr/include/qt/QtWidgets/qmessagebox.h:226
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int question(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -1738,7 +1736,7 @@ func (this *QMessageBox) Question2p(parent QWidget_ITF /*777 QWidget **/, title 
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:225
+// /usr/include/qt/QtWidgets/qmessagebox.h:226
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int question(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -1782,7 +1780,7 @@ func (this *QMessageBox) Question2p1(parent QWidget_ITF /*777 QWidget **/, title
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:225
+// /usr/include/qt/QtWidgets/qmessagebox.h:226
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int question(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -1826,7 +1824,7 @@ func (this *QMessageBox) Question2p2(parent QWidget_ITF /*777 QWidget **/, title
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:225
+// /usr/include/qt/QtWidgets/qmessagebox.h:226
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int question(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -1868,7 +1866,7 @@ func (this *QMessageBox) Question2p3(parent QWidget_ITF /*777 QWidget **/, title
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:232
+// /usr/include/qt/QtWidgets/qmessagebox.h:233
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [4] int question(QWidget *, const QString &, const QString &, QMessageBox::StandardButton, QMessageBox::StandardButton)
@@ -1907,7 +1905,7 @@ func QMessageBox_Question3(parent QWidget_ITF /*777 QWidget **/, title string, t
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:191
+// /usr/include/qt/QtWidgets/qmessagebox.h:192
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton warning(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
@@ -1946,7 +1944,7 @@ func QMessageBox_Warning(parent QWidget_ITF /*777 QWidget **/, title string, tex
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:191
+// /usr/include/qt/QtWidgets/qmessagebox.h:192
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton warning(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
@@ -1984,7 +1982,7 @@ func (this *QMessageBox) Warningp(parent QWidget_ITF /*777 QWidget **/, title st
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:191
+// /usr/include/qt/QtWidgets/qmessagebox.h:192
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton warning(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
@@ -2020,7 +2018,7 @@ func (this *QMessageBox) Warningp1(parent QWidget_ITF /*777 QWidget **/, title s
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:237
+// /usr/include/qt/QtWidgets/qmessagebox.h:238
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int warning(QWidget *, const QString &, const QString &, int, int, int)
@@ -2059,7 +2057,7 @@ func QMessageBox_Warning1(parent QWidget_ITF /*777 QWidget **/, title string, te
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:237
+// /usr/include/qt/QtWidgets/qmessagebox.h:238
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int warning(QWidget *, const QString &, const QString &, int, int, int)
@@ -2095,7 +2093,7 @@ func (this *QMessageBox) Warning1p(parent QWidget_ITF /*777 QWidget **/, title s
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:240
+// /usr/include/qt/QtWidgets/qmessagebox.h:241
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int warning(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -2140,7 +2138,7 @@ func QMessageBox_Warning2(parent QWidget_ITF /*777 QWidget **/, title string, te
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:240
+// /usr/include/qt/QtWidgets/qmessagebox.h:241
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int warning(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -2184,7 +2182,7 @@ func (this *QMessageBox) Warning2p(parent QWidget_ITF /*777 QWidget **/, title s
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:240
+// /usr/include/qt/QtWidgets/qmessagebox.h:241
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int warning(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -2228,7 +2226,7 @@ func (this *QMessageBox) Warning2p1(parent QWidget_ITF /*777 QWidget **/, title 
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:240
+// /usr/include/qt/QtWidgets/qmessagebox.h:241
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int warning(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -2272,7 +2270,7 @@ func (this *QMessageBox) Warning2p2(parent QWidget_ITF /*777 QWidget **/, title 
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:240
+// /usr/include/qt/QtWidgets/qmessagebox.h:241
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int warning(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -2314,7 +2312,7 @@ func (this *QMessageBox) Warning2p3(parent QWidget_ITF /*777 QWidget **/, title 
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:247
+// /usr/include/qt/QtWidgets/qmessagebox.h:248
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [4] int warning(QWidget *, const QString &, const QString &, QMessageBox::StandardButton, QMessageBox::StandardButton)
@@ -2353,7 +2351,7 @@ func QMessageBox_Warning3(parent QWidget_ITF /*777 QWidget **/, title string, te
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:194
+// /usr/include/qt/QtWidgets/qmessagebox.h:195
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton critical(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
@@ -2392,7 +2390,7 @@ func QMessageBox_Critical(parent QWidget_ITF /*777 QWidget **/, title string, te
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:194
+// /usr/include/qt/QtWidgets/qmessagebox.h:195
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton critical(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
@@ -2430,7 +2428,7 @@ func (this *QMessageBox) Criticalp(parent QWidget_ITF /*777 QWidget **/, title s
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:194
+// /usr/include/qt/QtWidgets/qmessagebox.h:195
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QMessageBox::StandardButton critical(QWidget *, const QString &, const QString &, QMessageBox::StandardButtons, QMessageBox::StandardButton)
@@ -2466,7 +2464,7 @@ func (this *QMessageBox) Criticalp1(parent QWidget_ITF /*777 QWidget **/, title 
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:252
+// /usr/include/qt/QtWidgets/qmessagebox.h:253
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int critical(QWidget *, const QString &, const QString &, int, int, int)
@@ -2505,7 +2503,7 @@ func QMessageBox_Critical1(parent QWidget_ITF /*777 QWidget **/, title string, t
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:252
+// /usr/include/qt/QtWidgets/qmessagebox.h:253
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int critical(QWidget *, const QString &, const QString &, int, int, int)
@@ -2541,7 +2539,7 @@ func (this *QMessageBox) Critical1p(parent QWidget_ITF /*777 QWidget **/, title 
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:255
+// /usr/include/qt/QtWidgets/qmessagebox.h:256
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int critical(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -2586,7 +2584,7 @@ func QMessageBox_Critical2(parent QWidget_ITF /*777 QWidget **/, title string, t
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:255
+// /usr/include/qt/QtWidgets/qmessagebox.h:256
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int critical(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -2630,7 +2628,7 @@ func (this *QMessageBox) Critical2p(parent QWidget_ITF /*777 QWidget **/, title 
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:255
+// /usr/include/qt/QtWidgets/qmessagebox.h:256
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int critical(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -2674,7 +2672,7 @@ func (this *QMessageBox) Critical2p1(parent QWidget_ITF /*777 QWidget **/, title
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:255
+// /usr/include/qt/QtWidgets/qmessagebox.h:256
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int critical(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -2718,7 +2716,7 @@ func (this *QMessageBox) Critical2p2(parent QWidget_ITF /*777 QWidget **/, title
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:255
+// /usr/include/qt/QtWidgets/qmessagebox.h:256
 // index:2
 // Public static Visibility=Default Availability=Available
 // [4] int critical(QWidget *, const QString &, const QString &, const QString &, const QString &, const QString &, int, int)
@@ -2760,7 +2758,7 @@ func (this *QMessageBox) Critical2p3(parent QWidget_ITF /*777 QWidget **/, title
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:262
+// /usr/include/qt/QtWidgets/qmessagebox.h:263
 // index:3
 // Public static inline Visibility=Default Availability=Available
 // [4] int critical(QWidget *, const QString &, const QString &, QMessageBox::StandardButton, QMessageBox::StandardButton)
@@ -2799,7 +2797,7 @@ func QMessageBox_Critical3(parent QWidget_ITF /*777 QWidget **/, title string, t
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:197
+// /usr/include/qt/QtWidgets/qmessagebox.h:198
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void about(QWidget *, const QString &, const QString &)
@@ -2826,7 +2824,7 @@ func QMessageBox_About(parent QWidget_ITF /*777 QWidget **/, title string, text 
 	nilthis.About(parent, title, text)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:198
+// /usr/include/qt/QtWidgets/qmessagebox.h:199
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void aboutQt(QWidget *, const QString &)
@@ -2857,7 +2855,7 @@ func QMessageBox_AboutQt(parent QWidget_ITF /*777 QWidget **/, title string) {
 	nilthis.AboutQt(parent, title)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:198
+// /usr/include/qt/QtWidgets/qmessagebox.h:199
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void aboutQt(QWidget *, const QString &)
@@ -2884,7 +2882,7 @@ func (this *QMessageBox) AboutQtp(parent QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:267
+// /usr/include/qt/QtWidgets/qmessagebox.h:268
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString buttonText(int) const
@@ -2901,7 +2899,7 @@ func (this *QMessageBox) ButtonText(button int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:268
+// /usr/include/qt/QtWidgets/qmessagebox.h:269
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setButtonText(int, const QString &)
@@ -2916,7 +2914,7 @@ func (this *QMessageBox) SetButtonText(button int, text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:270
+// /usr/include/qt/QtWidgets/qmessagebox.h:271
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString informativeText() const
@@ -2933,7 +2931,7 @@ func (this *QMessageBox) InformativeText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:271
+// /usr/include/qt/QtWidgets/qmessagebox.h:272
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setInformativeText(const QString &)
@@ -2948,7 +2946,7 @@ func (this *QMessageBox) SetInformativeText(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:274
+// /usr/include/qt/QtWidgets/qmessagebox.h:275
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString detailedText() const
@@ -2965,7 +2963,7 @@ func (this *QMessageBox) DetailedText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:275
+// /usr/include/qt/QtWidgets/qmessagebox.h:276
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDetailedText(const QString &)
@@ -2980,7 +2978,7 @@ func (this *QMessageBox) SetDetailedText(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:278
+// /usr/include/qt/QtWidgets/qmessagebox.h:279
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWindowTitle(const QString &)
@@ -2999,7 +2997,7 @@ func (this *QMessageBox) SetWindowTitle(title string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:279
+// /usr/include/qt/QtWidgets/qmessagebox.h:280
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWindowModality(Qt::WindowModality)
@@ -3018,7 +3016,7 @@ func (this *QMessageBox) SetWindowModality(windowModality int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:282
+// /usr/include/qt/QtWidgets/qmessagebox.h:283
 // index:0
 // Public static Visibility=Default Availability=Available
 // [32] QPixmap standardIcon(QMessageBox::Icon)
@@ -3039,7 +3037,7 @@ func QMessageBox_StandardIcon(icon int) *qtgui.QPixmap /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:285
+// /usr/include/qt/QtWidgets/qmessagebox.h:286
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void buttonClicked(QAbstractButton *)
@@ -3056,7 +3054,7 @@ func (this *QMessageBox) ButtonClicked(button QAbstractButton_ITF /*777 QAbstrac
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:293
+// /usr/include/qt/QtWidgets/qmessagebox.h:294
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -3074,7 +3072,7 @@ func (this *QMessageBox) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:294
+// /usr/include/qt/QtWidgets/qmessagebox.h:295
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
@@ -3091,7 +3089,7 @@ func (this *QMessageBox) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeE
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:295
+// /usr/include/qt/QtWidgets/qmessagebox.h:296
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
@@ -3108,7 +3106,7 @@ func (this *QMessageBox) ShowEvent(event qtgui.QShowEvent_ITF /*777 QShowEvent *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:296
+// /usr/include/qt/QtWidgets/qmessagebox.h:297
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void closeEvent(QCloseEvent *)
@@ -3125,7 +3123,7 @@ func (this *QMessageBox) CloseEvent(event qtgui.QCloseEvent_ITF /*777 QCloseEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:297
+// /usr/include/qt/QtWidgets/qmessagebox.h:298
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
@@ -3142,7 +3140,7 @@ func (this *QMessageBox) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:298
+// /usr/include/qt/QtWidgets/qmessagebox.h:299
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)

@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtnetwork
 
 // /usr/include/qt/QtNetwork/qlocalsocket.h
@@ -20,7 +18,7 @@ package qtnetwork
 
 /*
 #include <stdlib.h>
-// extern C begin: 22
+// extern C begin: 21
 */
 // import "C"
 import "unsafe"
@@ -75,7 +73,7 @@ func (*QLocalSocket) NewFromPointer(cthis unsafe.Pointer) *QLocalSocket {
 	return NewQLocalSocketFromPointer(cthis)
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:55
+// /usr/include/qt/QtNetwork/qlocalsocket.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -89,7 +87,7 @@ func (this *QLocalSocket) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:82
+// /usr/include/qt/QtNetwork/qlocalsocket.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QLocalSocket(QObject *)
@@ -112,7 +110,7 @@ func NewQLocalSocket(parent qtcore.QObject_ITF /*777 QObject **/) *QLocalSocket 
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:82
+// /usr/include/qt/QtNetwork/qlocalsocket.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QLocalSocket(QObject *)
@@ -133,7 +131,7 @@ func NewQLocalSocketp() *QLocalSocket {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:83
+// /usr/include/qt/QtNetwork/qlocalsocket.h:84
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QLocalSocket()
@@ -148,7 +146,7 @@ func DeleteQLocalSocket(this *QLocalSocket) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:85
+// /usr/include/qt/QtNetwork/qlocalsocket.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void connectToServer(QIODevice::OpenMode)
@@ -169,7 +167,7 @@ func (this *QLocalSocket) ConnectToServer(openMode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:85
+// /usr/include/qt/QtNetwork/qlocalsocket.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void connectToServer(QIODevice::OpenMode)
@@ -192,7 +190,7 @@ func (this *QLocalSocket) ConnectToServerp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:86
+// /usr/include/qt/QtNetwork/qlocalsocket.h:87
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void connectToServer(const QString &, QIODevice::OpenMode)
@@ -215,7 +213,7 @@ func (this *QLocalSocket) ConnectToServer1(name string, openMode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:86
+// /usr/include/qt/QtNetwork/qlocalsocket.h:87
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void connectToServer(const QString &, QIODevice::OpenMode)
@@ -240,7 +238,7 @@ func (this *QLocalSocket) ConnectToServer1p(name string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:87
+// /usr/include/qt/QtNetwork/qlocalsocket.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void disconnectFromServer()
@@ -255,7 +253,7 @@ func (this *QLocalSocket) DisconnectFromServer() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:89
+// /usr/include/qt/QtNetwork/qlocalsocket.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setServerName(const QString &)
@@ -276,7 +274,7 @@ func (this *QLocalSocket) SetServerName(name string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:90
+// /usr/include/qt/QtNetwork/qlocalsocket.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString serverName() const
@@ -295,7 +293,7 @@ func (this *QLocalSocket) ServerName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:91
+// /usr/include/qt/QtNetwork/qlocalsocket.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString fullServerName() const
@@ -316,7 +314,7 @@ func (this *QLocalSocket) FullServerName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:93
+// /usr/include/qt/QtNetwork/qlocalsocket.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void abort()
@@ -331,7 +329,7 @@ func (this *QLocalSocket) Abort() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:94
+// /usr/include/qt/QtNetwork/qlocalsocket.h:95
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isSequential() const
@@ -345,7 +343,7 @@ func (this *QLocalSocket) IsSequential() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:95
+// /usr/include/qt/QtNetwork/qlocalsocket.h:96
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] qint64 bytesAvailable() const
@@ -359,7 +357,7 @@ func (this *QLocalSocket) BytesAvailable() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:96
+// /usr/include/qt/QtNetwork/qlocalsocket.h:97
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] qint64 bytesToWrite() const
@@ -373,7 +371,7 @@ func (this *QLocalSocket) BytesToWrite() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:97
+// /usr/include/qt/QtNetwork/qlocalsocket.h:98
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool canReadLine() const
@@ -387,7 +385,7 @@ func (this *QLocalSocket) CanReadLine() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:98
+// /usr/include/qt/QtNetwork/qlocalsocket.h:99
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool open(QIODevice::OpenMode)
@@ -407,7 +405,7 @@ func (this *QLocalSocket) Open(openMode int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:98
+// /usr/include/qt/QtNetwork/qlocalsocket.h:99
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool open(QIODevice::OpenMode)
@@ -429,7 +427,7 @@ func (this *QLocalSocket) Openp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:99
+// /usr/include/qt/QtNetwork/qlocalsocket.h:100
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void close()
@@ -442,7 +440,7 @@ func (this *QLocalSocket) Close() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:100
+// /usr/include/qt/QtNetwork/qlocalsocket.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QLocalSocket::LocalSocketError error() const
@@ -458,7 +456,7 @@ func (this *QLocalSocket) Error() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:120
+// /usr/include/qt/QtNetwork/qlocalsocket.h:121
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void error(QLocalSocket::LocalSocketError)
@@ -473,7 +471,7 @@ func (this *QLocalSocket) Error1(socketError int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:101
+// /usr/include/qt/QtNetwork/qlocalsocket.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool flush()
@@ -491,7 +489,7 @@ func (this *QLocalSocket) Flush() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:102
+// /usr/include/qt/QtNetwork/qlocalsocket.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -509,7 +507,7 @@ func (this *QLocalSocket) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:103
+// /usr/include/qt/QtNetwork/qlocalsocket.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 readBufferSize() const
@@ -525,7 +523,7 @@ func (this *QLocalSocket) ReadBufferSize() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:104
+// /usr/include/qt/QtNetwork/qlocalsocket.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setReadBufferSize(qint64)
@@ -544,7 +542,7 @@ func (this *QLocalSocket) SetReadBufferSize(size int64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:106
+// /usr/include/qt/QtNetwork/qlocalsocket.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setSocketDescriptor(qintptr, QLocalSocket::LocalSocketState, QIODevice::OpenMode)
@@ -562,7 +560,7 @@ func (this *QLocalSocket) SetSocketDescriptor(socketDescriptor int64, socketStat
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:106
+// /usr/include/qt/QtNetwork/qlocalsocket.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setSocketDescriptor(qintptr, QLocalSocket::LocalSocketState, QIODevice::OpenMode)
@@ -584,7 +582,7 @@ func (this *QLocalSocket) SetSocketDescriptorp(socketDescriptor int64) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:106
+// /usr/include/qt/QtNetwork/qlocalsocket.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setSocketDescriptor(qintptr, QLocalSocket::LocalSocketState, QIODevice::OpenMode)
@@ -604,7 +602,7 @@ func (this *QLocalSocket) SetSocketDescriptorp1(socketDescriptor int64, socketSt
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:109
+// /usr/include/qt/QtNetwork/qlocalsocket.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qintptr socketDescriptor() const
@@ -612,13 +610,7 @@ func (this *QLocalSocket) SetSocketDescriptorp1(socketDescriptor int64, socketSt
 /*
 Returns the native socket descriptor of the QLocalSocket object if this is available; otherwise returns -1.
 
-The socket descriptor is not available when QLocalSocket is in UnconnectedState. The type of the descriptor depends on the platform:
-
-
-On Windows, the returned value is a Winsock 2 Socket Handle.
-With WinRT and on INTEGRITY, the returned value is the QTcpSocket socket descriptor and the type is defined by socketDescriptor.
-On all other UNIX-like operating systems, the type is a file descriptor representing a socket.
-
+The socket descriptor is not available when QLocalSocket is in UnconnectedState.
 
 See also setSocketDescriptor().
 */
@@ -628,7 +620,7 @@ func (this *QLocalSocket) SocketDescriptor() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:111
+// /usr/include/qt/QtNetwork/qlocalsocket.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QLocalSocket::LocalSocketState state() const
@@ -644,7 +636,7 @@ func (this *QLocalSocket) State() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:112
+// /usr/include/qt/QtNetwork/qlocalsocket.h:113
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool waitForBytesWritten(int)
@@ -658,7 +650,7 @@ func (this *QLocalSocket) WaitForBytesWritten(msecs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:112
+// /usr/include/qt/QtNetwork/qlocalsocket.h:113
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool waitForBytesWritten(int)
@@ -674,7 +666,7 @@ func (this *QLocalSocket) WaitForBytesWrittenp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:113
+// /usr/include/qt/QtNetwork/qlocalsocket.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForConnected(int)
@@ -701,7 +693,7 @@ func (this *QLocalSocket) WaitForConnected(msecs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:113
+// /usr/include/qt/QtNetwork/qlocalsocket.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForConnected(int)
@@ -730,7 +722,7 @@ func (this *QLocalSocket) WaitForConnectedp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:114
+// /usr/include/qt/QtNetwork/qlocalsocket.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForDisconnected(int)
@@ -757,7 +749,7 @@ func (this *QLocalSocket) WaitForDisconnected(msecs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:114
+// /usr/include/qt/QtNetwork/qlocalsocket.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForDisconnected(int)
@@ -786,7 +778,7 @@ func (this *QLocalSocket) WaitForDisconnectedp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:115
+// /usr/include/qt/QtNetwork/qlocalsocket.h:116
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool waitForReadyRead(int)
@@ -806,7 +798,7 @@ func (this *QLocalSocket) WaitForReadyRead(msecs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:115
+// /usr/include/qt/QtNetwork/qlocalsocket.h:116
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool waitForReadyRead(int)
@@ -828,7 +820,7 @@ func (this *QLocalSocket) WaitForReadyReadp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:118
+// /usr/include/qt/QtNetwork/qlocalsocket.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void connected()
@@ -843,7 +835,7 @@ func (this *QLocalSocket) Connected() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:119
+// /usr/include/qt/QtNetwork/qlocalsocket.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void disconnected()
@@ -858,7 +850,7 @@ func (this *QLocalSocket) Disconnected() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:121
+// /usr/include/qt/QtNetwork/qlocalsocket.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stateChanged(QLocalSocket::LocalSocketState)
@@ -875,7 +867,7 @@ func (this *QLocalSocket) StateChanged(socketState int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:124
+// /usr/include/qt/QtNetwork/qlocalsocket.h:125
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] qint64 readData(char *, qint64)
@@ -891,7 +883,7 @@ func (this *QLocalSocket) ReadData(arg0 string, arg1 int64) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtNetwork/qlocalsocket.h:125
+// /usr/include/qt/QtNetwork/qlocalsocket.h:126
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] qint64 writeData(const char *, qint64)

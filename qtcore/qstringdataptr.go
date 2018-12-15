@@ -1,7 +1,7 @@
 package qtcore
 
-// /usr/include/qt/QtCore/qstringliteral.h
-// #include <qstringliteral.h>
+// /usr/include/qt/QtCore/qstring.h
+// #include <qstring.h>
 // #include <QtCore>
 
 //  header block end
@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 8
+// extern C begin: 31
 */
 // import "C"
 import "unsafe"

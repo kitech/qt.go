@@ -186,8 +186,6 @@ Reporting the rectangle in combination with BoundedRectRendering is particularly
 
 For rendernodes covering the entire area of a corresponding QQuickItem the return value will be (0, 0, item->width(), item->height()).
 
-Note: Nodes are also free to render outside the boundaries specified by the item's width and height, since the scenegraph nodes are not bounded by the QQuickItem geometry, as long as this is reported correctly from this function.
-
 See also flags().
 */
 func (this *QSGRenderNode) Rect() *qtcore.QRectF /*123*/ {

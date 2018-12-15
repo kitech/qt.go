@@ -63,7 +63,7 @@ func (*QIconDragEvent) NewFromPointer(cthis unsafe.Pointer) *QIconDragEvent {
 	return NewQIconDragEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:485
+// /usr/include/qt/QtGui/qevent.h:478
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QIconDragEvent()
@@ -82,7 +82,7 @@ func NewQIconDragEvent() *QIconDragEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:486
+// /usr/include/qt/QtGui/qevent.h:479
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QIconDragEvent()

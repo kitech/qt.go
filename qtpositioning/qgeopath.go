@@ -293,22 +293,6 @@ func (this *QGeoPath) Lengthp1(indexFrom int) float64 {
 // /usr/include/qt/QtPositioning/qgeopath.h:81
 // index:0
 // Public Visibility=Default Availability=Available
-// [4] int size() const
-
-/*
-Returns the number of elements in the path.
-
-This function was introduced in  Qt 5.10.
-*/
-func (this *QGeoPath) Size() int {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK8QGeoPath4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
-}
-
-// /usr/include/qt/QtPositioning/qgeopath.h:82
-// index:0
-// Public Visibility=Default Availability=Available
 // [-2] void addCoordinate(const QGeoCoordinate &)
 
 /*
@@ -323,7 +307,7 @@ func (this *QGeoPath) AddCoordinate(coordinate QGeoCoordinate_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:83
+// /usr/include/qt/QtPositioning/qgeopath.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertCoordinate(int, const QGeoCoordinate &)
@@ -340,7 +324,7 @@ func (this *QGeoPath) InsertCoordinate(index int, coordinate QGeoCoordinate_ITF)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:84
+// /usr/include/qt/QtPositioning/qgeopath.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void replaceCoordinate(int, const QGeoCoordinate &)
@@ -357,7 +341,7 @@ func (this *QGeoPath) ReplaceCoordinate(index int, coordinate QGeoCoordinate_ITF
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:85
+// /usr/include/qt/QtPositioning/qgeopath.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGeoCoordinate coordinateAt(int) const
@@ -373,7 +357,7 @@ func (this *QGeoPath) CoordinateAt(index int) *QGeoCoordinate /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:86
+// /usr/include/qt/QtPositioning/qgeopath.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool containsCoordinate(const QGeoCoordinate &) const
@@ -391,7 +375,7 @@ func (this *QGeoPath) ContainsCoordinate(coordinate QGeoCoordinate_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:87
+// /usr/include/qt/QtPositioning/qgeopath.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeCoordinate(const QGeoCoordinate &)
@@ -408,7 +392,7 @@ func (this *QGeoPath) RemoveCoordinate(coordinate QGeoCoordinate_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:88
+// /usr/include/qt/QtPositioning/qgeopath.h:87
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void removeCoordinate(int)
@@ -421,7 +405,7 @@ func (this *QGeoPath) RemoveCoordinate1(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtPositioning/qgeopath.h:90
+// /usr/include/qt/QtPositioning/qgeopath.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString() const

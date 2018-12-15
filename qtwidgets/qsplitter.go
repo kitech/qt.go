@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qsplitter.h
@@ -106,7 +104,7 @@ func (*QSplitter) NewFromPointer(cthis unsafe.Pointer) *QSplitter {
 	return NewQSplitterFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:59
+// /usr/include/qt/QtWidgets/qsplitter.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -120,7 +118,7 @@ func (this *QSplitter) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:67
+// /usr/include/qt/QtWidgets/qsplitter.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSplitter(QWidget *)
@@ -145,7 +143,7 @@ func NewQSplitter(parent QWidget_ITF /*777 QWidget **/) *QSplitter {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:67
+// /usr/include/qt/QtWidgets/qsplitter.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSplitter(QWidget *)
@@ -168,7 +166,7 @@ func NewQSplitterp() *QSplitter {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:68
+// /usr/include/qt/QtWidgets/qsplitter.h:69
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSplitter(Qt::Orientation, QWidget *)
@@ -193,7 +191,7 @@ func NewQSplitter1(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QSplitter {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:68
+// /usr/include/qt/QtWidgets/qsplitter.h:69
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSplitter(Qt::Orientation, QWidget *)
@@ -216,7 +214,7 @@ func NewQSplitter1p(arg0 int) *QSplitter {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:69
+// /usr/include/qt/QtWidgets/qsplitter.h:70
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSplitter()
@@ -231,7 +229,7 @@ func DeleteQSplitter(this *QSplitter) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:71
+// /usr/include/qt/QtWidgets/qsplitter.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addWidget(QWidget *)
@@ -254,7 +252,7 @@ func (this *QSplitter) AddWidget(widget QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:72
+// /usr/include/qt/QtWidgets/qsplitter.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertWidget(int, QWidget *)
@@ -279,7 +277,7 @@ func (this *QSplitter) InsertWidget(index int, widget QWidget_ITF /*777 QWidget 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:73
+// /usr/include/qt/QtWidgets/qsplitter.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * replaceWidget(int, QWidget *)
@@ -309,7 +307,7 @@ func (this *QSplitter) ReplaceWidget(index int, widget QWidget_ITF /*777 QWidget
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:75
+// /usr/include/qt/QtWidgets/qsplitter.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOrientation(Qt::Orientation)
@@ -322,7 +320,7 @@ func (this *QSplitter) SetOrientation(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:76
+// /usr/include/qt/QtWidgets/qsplitter.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Orientation orientation() const
@@ -336,7 +334,7 @@ func (this *QSplitter) Orientation() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:78
+// /usr/include/qt/QtWidgets/qsplitter.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setChildrenCollapsible(bool)
@@ -349,7 +347,7 @@ func (this *QSplitter) SetChildrenCollapsible(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:79
+// /usr/include/qt/QtWidgets/qsplitter.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool childrenCollapsible() const
@@ -363,7 +361,7 @@ func (this *QSplitter) ChildrenCollapsible() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:81
+// /usr/include/qt/QtWidgets/qsplitter.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCollapsible(int, bool)
@@ -380,7 +378,7 @@ func (this *QSplitter) SetCollapsible(index int, arg1 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:82
+// /usr/include/qt/QtWidgets/qsplitter.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isCollapsible(int) const
@@ -394,7 +392,7 @@ func (this *QSplitter) IsCollapsible(index int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:83
+// /usr/include/qt/QtWidgets/qsplitter.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOpaqueResize(bool)
@@ -407,7 +405,7 @@ func (this *QSplitter) SetOpaqueResize(opaque bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:83
+// /usr/include/qt/QtWidgets/qsplitter.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOpaqueResize(bool)
@@ -422,7 +420,7 @@ func (this *QSplitter) SetOpaqueResizep() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:84
+// /usr/include/qt/QtWidgets/qsplitter.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool opaqueResize() const
@@ -436,7 +434,7 @@ func (this *QSplitter) OpaqueResize() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:85
+// /usr/include/qt/QtWidgets/qsplitter.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void refresh()
@@ -449,7 +447,7 @@ func (this *QSplitter) Refresh() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:87
+// /usr/include/qt/QtWidgets/qsplitter.h:88
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
@@ -465,7 +463,7 @@ func (this *QSplitter) SizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:88
+// /usr/include/qt/QtWidgets/qsplitter.h:89
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
@@ -481,7 +479,7 @@ func (this *QSplitter) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:93
+// /usr/include/qt/QtWidgets/qsplitter.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray saveState() const
@@ -507,7 +505,7 @@ func (this *QSplitter) SaveState() *qtcore.QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:94
+// /usr/include/qt/QtWidgets/qsplitter.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool restoreState(const QByteArray &)
@@ -539,7 +537,7 @@ func (this *QSplitter) RestoreState(state qtcore.QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:96
+// /usr/include/qt/QtWidgets/qsplitter.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int handleWidth() const
@@ -553,7 +551,7 @@ func (this *QSplitter) HandleWidth() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:97
+// /usr/include/qt/QtWidgets/qsplitter.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHandleWidth(int)
@@ -566,7 +564,7 @@ func (this *QSplitter) SetHandleWidth(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:99
+// /usr/include/qt/QtWidgets/qsplitter.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QWidget *) const
@@ -588,7 +586,7 @@ func (this *QSplitter) IndexOf(w QWidget_ITF /*777 QWidget **/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:100
+// /usr/include/qt/QtWidgets/qsplitter.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * widget(int) const
@@ -604,7 +602,7 @@ func (this *QSplitter) Widget(index int) *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:101
+// /usr/include/qt/QtWidgets/qsplitter.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int count() const
@@ -620,7 +618,7 @@ func (this *QSplitter) Count() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:103
+// /usr/include/qt/QtWidgets/qsplitter.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getRange(int, int *, int *) const
@@ -633,7 +631,7 @@ func (this *QSplitter) GetRange(index int, arg1 unsafe.Pointer /*666*/, arg2 uns
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:104
+// /usr/include/qt/QtWidgets/qsplitter.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSplitterHandle * handle(int) const
@@ -651,7 +649,7 @@ func (this *QSplitter) Handle(index int) *QSplitterHandle /*777 QSplitterHandle 
 	return /*==*/ NewQSplitterHandleFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:106
+// /usr/include/qt/QtWidgets/qsplitter.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStretchFactor(int, int)
@@ -679,7 +677,7 @@ func (this *QSplitter) SetStretchFactor(index int, stretch int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:109
+// /usr/include/qt/QtWidgets/qsplitter.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void splitterMoved(int, int)
@@ -696,7 +694,7 @@ func (this *QSplitter) SplitterMoved(pos int, index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:112
+// /usr/include/qt/QtWidgets/qsplitter.h:113
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QSplitterHandle * createHandle()
@@ -712,7 +710,7 @@ func (this *QSplitter) CreateHandle() *QSplitterHandle /*777 QSplitterHandle **/
 	return /*==*/ NewQSplitterHandleFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:114
+// /usr/include/qt/QtWidgets/qsplitter.h:115
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void childEvent(QChildEvent *)
@@ -735,7 +733,7 @@ func (this *QSplitter) ChildEvent(arg0 qtcore.QChildEvent_ITF /*777 QChildEvent 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:116
+// /usr/include/qt/QtWidgets/qsplitter.h:117
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -753,7 +751,7 @@ func (this *QSplitter) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:117
+// /usr/include/qt/QtWidgets/qsplitter.h:118
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
@@ -770,7 +768,7 @@ func (this *QSplitter) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:119
+// /usr/include/qt/QtWidgets/qsplitter.h:120
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
@@ -787,7 +785,7 @@ func (this *QSplitter) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:120
+// /usr/include/qt/QtWidgets/qsplitter.h:121
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void moveSplitter(int, int)
@@ -804,7 +802,7 @@ func (this *QSplitter) MoveSplitter(pos int, index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:121
+// /usr/include/qt/QtWidgets/qsplitter.h:122
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setRubberBand(int)
@@ -817,7 +815,7 @@ func (this *QSplitter) SetRubberBand(position int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qsplitter.h:122
+// /usr/include/qt/QtWidgets/qsplitter.h:123
 // index:0
 // Protected Visibility=Default Availability=Available
 // [4] int closestLegalPosition(int, int)

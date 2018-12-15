@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 0
+// extern C begin: 7
 */
 // import "C"
 import "unsafe"
@@ -77,7 +77,7 @@ func (*QThread) NewFromPointer(cthis unsafe.Pointer) *QThread {
 	return NewQThreadFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qthread.h:72
+// /usr/include/qt/QtCore/qthread.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -91,7 +91,7 @@ func (this *QThread) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qthread.h:74
+// /usr/include/qt/QtCore/qthread.h:59
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] Qt::HANDLE currentThreadId()
@@ -114,7 +114,7 @@ func QThread_CurrentThreadId() int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qthread.h:75
+// /usr/include/qt/QtCore/qthread.h:60
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QThread * currentThread()
@@ -133,13 +133,13 @@ func QThread_CurrentThread() *QThread /*777 QThread **/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qthread.h:76
+// /usr/include/qt/QtCore/qthread.h:61
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int idealThreadCount()
 
 /*
-Returns the ideal number of threads that can be run on the system. This is done querying the number of processor cores, both real and logical, in the system. This function returns 1 if the number of processor cores could not be detected.
+Returns the ideal number of threads that can be run on the system. This is done querying the number of processor cores, both real and logical, in the system. This function returns -1 if the number of processor cores could not be detected.
 */
 func (this *QThread) IdealThreadCount() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QThread16idealThreadCountEv", qtrt.FFI_TYPE_POINTER)
@@ -152,7 +152,7 @@ func QThread_IdealThreadCount() int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qthread.h:77
+// /usr/include/qt/QtCore/qthread.h:62
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void yieldCurrentThread()
@@ -169,7 +169,7 @@ func QThread_YieldCurrentThread() {
 	nilthis.YieldCurrentThread()
 }
 
-// /usr/include/qt/QtCore/qthread.h:79
+// /usr/include/qt/QtCore/qthread.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QThread(QObject *)
@@ -194,7 +194,7 @@ func NewQThread(parent QObject_ITF /*777 QObject **/) *QThread {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qthread.h:79
+// /usr/include/qt/QtCore/qthread.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QThread(QObject *)
@@ -217,7 +217,7 @@ func NewQThreadp() *QThread {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qthread.h:80
+// /usr/include/qt/QtCore/qthread.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QThread()
@@ -232,7 +232,7 @@ func DeleteQThread(this *QThread) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qthread.h:96
+// /usr/include/qt/QtCore/qthread.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPriority(QThread::Priority)
@@ -253,7 +253,7 @@ func (this *QThread) SetPriority(priority int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qthread.h:97
+// /usr/include/qt/QtCore/qthread.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QThread::Priority priority() const
@@ -271,7 +271,7 @@ func (this *QThread) Priority() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qthread.h:99
+// /usr/include/qt/QtCore/qthread.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isFinished() const
@@ -287,7 +287,7 @@ func (this *QThread) IsFinished() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qthread.h:100
+// /usr/include/qt/QtCore/qthread.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isRunning() const
@@ -303,7 +303,7 @@ func (this *QThread) IsRunning() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qthread.h:102
+// /usr/include/qt/QtCore/qthread.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void requestInterruption()
@@ -320,7 +320,7 @@ func (this *QThread) RequestInterruption() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qthread.h:103
+// /usr/include/qt/QtCore/qthread.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isInterruptionRequested() const
@@ -351,7 +351,7 @@ func (this *QThread) IsInterruptionRequested() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qthread.h:105
+// /usr/include/qt/QtCore/qthread.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStackSize(uint)
@@ -368,7 +368,7 @@ func (this *QThread) SetStackSize(stackSize uint) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qthread.h:106
+// /usr/include/qt/QtCore/qthread.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] uint stackSize() const
@@ -384,7 +384,7 @@ func (this *QThread) StackSize() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qthread.h:108
+// /usr/include/qt/QtCore/qthread.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void exit(int)
@@ -407,7 +407,7 @@ func (this *QThread) Exit(retcode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qthread.h:108
+// /usr/include/qt/QtCore/qthread.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void exit(int)
@@ -432,7 +432,7 @@ func (this *QThread) Exitp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qthread.h:110
+// /usr/include/qt/QtCore/qthread.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractEventDispatcher * eventDispatcher() const
@@ -450,7 +450,7 @@ func (this *QThread) EventDispatcher() *QAbstractEventDispatcher /*777 QAbstract
 	return /*==*/ NewQAbstractEventDispatcherFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qthread.h:111
+// /usr/include/qt/QtCore/qthread.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEventDispatcher(QAbstractEventDispatcher *)
@@ -471,7 +471,7 @@ func (this *QThread) SetEventDispatcher(eventDispatcher QAbstractEventDispatcher
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qthread.h:113
+// /usr/include/qt/QtCore/qthread.h:98
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -489,7 +489,7 @@ func (this *QThread) Event(event QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qthread.h:114
+// /usr/include/qt/QtCore/qthread.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int loopLevel() const
@@ -507,7 +507,7 @@ func (this *QThread) LoopLevel() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qthread.h:134
+// /usr/include/qt/QtCore/qthread.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void start(QThread::Priority)
@@ -524,7 +524,7 @@ func (this *QThread) Start(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qthread.h:134
+// /usr/include/qt/QtCore/qthread.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void start(QThread::Priority)
@@ -543,7 +543,7 @@ func (this *QThread) Startp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qthread.h:135
+// /usr/include/qt/QtCore/qthread.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void terminate()
@@ -564,7 +564,7 @@ func (this *QThread) Terminate() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qthread.h:136
+// /usr/include/qt/QtCore/qthread.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void quit()
@@ -581,7 +581,7 @@ func (this *QThread) Quit() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qthread.h:140
+// /usr/include/qt/QtCore/qthread.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool wait(unsigned long)
@@ -604,7 +604,7 @@ func (this *QThread) Wait(time uint) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qthread.h:140
+// /usr/include/qt/QtCore/qthread.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool wait(unsigned long)
@@ -629,7 +629,7 @@ func (this *QThread) Waitp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qthread.h:142
+// /usr/include/qt/QtCore/qthread.h:110
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void sleep(unsigned long)
@@ -648,7 +648,7 @@ func QThread_Sleep(arg0 uint) {
 	nilthis.Sleep(arg0)
 }
 
-// /usr/include/qt/QtCore/qthread.h:143
+// /usr/include/qt/QtCore/qthread.h:111
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void msleep(unsigned long)
@@ -667,7 +667,7 @@ func QThread_Msleep(arg0 uint) {
 	nilthis.Msleep(arg0)
 }
 
-// /usr/include/qt/QtCore/qthread.h:144
+// /usr/include/qt/QtCore/qthread.h:112
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void usleep(unsigned long)
@@ -686,7 +686,7 @@ func QThread_Usleep(arg0 uint) {
 	nilthis.Usleep(arg0)
 }
 
-// /usr/include/qt/QtCore/qthread.h:151
+// /usr/include/qt/QtCore/qthread.h:119
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void run()
@@ -703,7 +703,7 @@ func (this *QThread) Run() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qthread.h:152
+// /usr/include/qt/QtCore/qthread.h:120
 // index:0
 // Protected Visibility=Default Availability=Available
 // [4] int exec()
@@ -721,7 +721,7 @@ func (this *QThread) Exec() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qthread.h:154
+// /usr/include/qt/QtCore/qthread.h:122
 // index:0
 // Protected static Visibility=Default Availability=Available
 // [-2] void setTerminationEnabled(bool)
@@ -744,7 +744,7 @@ func QThread_SetTerminationEnabled(enabled bool) {
 	nilthis.SetTerminationEnabled(enabled)
 }
 
-// /usr/include/qt/QtCore/qthread.h:154
+// /usr/include/qt/QtCore/qthread.h:122
 // index:0
 // Protected static Visibility=Default Availability=Available
 // [-2] void setTerminationEnabled(bool)

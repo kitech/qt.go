@@ -766,8 +766,6 @@ func QQmlComponent_QmlAttachedProperties(arg0 qtcore.QObject_ITF /*777 QObject *
 Load the QQmlComponent from the provided url.
 
 Ensure that the URL provided is full and correct, in particular, use QUrl::fromLocalFile() when loading a file from the local filesystem.
-
-Relative paths will be resolved against the engine's baseUrl(), which is the current working directory unless specified.
 */
 func (this *QQmlComponent) LoadUrl(url qtcore.QUrl_ITF) {
 	var convArg0 unsafe.Pointer
@@ -787,8 +785,6 @@ func (this *QQmlComponent) LoadUrl(url qtcore.QUrl_ITF) {
 Load the QQmlComponent from the provided url.
 
 Ensure that the URL provided is full and correct, in particular, use QUrl::fromLocalFile() when loading a file from the local filesystem.
-
-Relative paths will be resolved against the engine's baseUrl(), which is the current working directory unless specified.
 */
 func (this *QQmlComponent) LoadUrl1(url qtcore.QUrl_ITF, mode int) {
 	var convArg0 unsafe.Pointer

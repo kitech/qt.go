@@ -343,301 +343,6 @@ func (this *QProcess) Start2p() {
 
 // /usr/include/qt/QtCore/qprocess.h:166
 // index:0
-// Public Visibility=Default Availability=Available
-// [1] bool startDetached(qint64 *)
-
-/*
-Starts the program set by setProgram() with arguments set by setArguments() in a new process, and detaches from it. Returns true on success; otherwise returns false. If the calling process exits, the detached process will continue to run unaffected.
-
-Unix: The started process will run in its own session and act like a daemon.
-
-The process will be started in the directory set by setWorkingDirectory(). If workingDirectory() is empty, the working directory is inherited from the calling process.
-
-Note: On QNX, this may cause all application threads to temporarily freeze.
-
-If the function is successful then *pid is set to the process identifier of the started process. Note that the child process may exit and the PID may become invalid without notice. Furthermore, after the child process exits, the same PID may be recycled and used by a completely different process. User code should be careful when using this variable, especially if one intends to forcibly terminate the process by operating system means.
-
-Only the following property setters are supported by startDetached():
-
-
-setArguments()
-setCreateProcessArgumentsModifier()
-setNativeArguments()
-setProcessEnvironment()
-setProgram()
-setStandardErrorFile()
-setStandardInputFile()
-setStandardOutputFile()
-setWorkingDirectory()
-
-
-All other properties of the QProcess object are ignored.
-
-This function was introduced in  Qt 5.10.
-
-See also start(), startDetached(const QString &program, const QStringList &arguments, const QString &workingDirectory, qint64 *pid), and startDetached(const QString &command).
-*/
-func (this *QProcess) StartDetached(pid unsafe.Pointer /*666*/) bool {
-	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess13startDetachedEPx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pid)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtCore/qprocess.h:166
-// index:0
-// Public Visibility=Default Availability=Available
-// [1] bool startDetached(qint64 *)
-
-/*
-Starts the program set by setProgram() with arguments set by setArguments() in a new process, and detaches from it. Returns true on success; otherwise returns false. If the calling process exits, the detached process will continue to run unaffected.
-
-Unix: The started process will run in its own session and act like a daemon.
-
-The process will be started in the directory set by setWorkingDirectory(). If workingDirectory() is empty, the working directory is inherited from the calling process.
-
-Note: On QNX, this may cause all application threads to temporarily freeze.
-
-If the function is successful then *pid is set to the process identifier of the started process. Note that the child process may exit and the PID may become invalid without notice. Furthermore, after the child process exits, the same PID may be recycled and used by a completely different process. User code should be careful when using this variable, especially if one intends to forcibly terminate the process by operating system means.
-
-Only the following property setters are supported by startDetached():
-
-
-setArguments()
-setCreateProcessArgumentsModifier()
-setNativeArguments()
-setProcessEnvironment()
-setProgram()
-setStandardErrorFile()
-setStandardInputFile()
-setStandardOutputFile()
-setWorkingDirectory()
-
-
-All other properties of the QProcess object are ignored.
-
-This function was introduced in  Qt 5.10.
-
-See also start(), startDetached(const QString &program, const QStringList &arguments, const QString &workingDirectory, qint64 *pid), and startDetached(const QString &command).
-*/
-func (this *QProcess) StartDetachedp() bool {
-	// arg: 0, qint64 *=Pointer, qint64=Typedef, long long, LongLong
-	pid := unsafe.Pointer(nil)
-	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess13startDetachedEPx", qtrt.FFI_TYPE_POINTER, this.GetCthis(), pid)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtCore/qprocess.h:251
-// index:1
-// Public static Visibility=Default Availability=Available
-// [1] bool startDetached(const QString &, const QStringList &, const QString &, qint64 *)
-
-/*
-Starts the program set by setProgram() with arguments set by setArguments() in a new process, and detaches from it. Returns true on success; otherwise returns false. If the calling process exits, the detached process will continue to run unaffected.
-
-Unix: The started process will run in its own session and act like a daemon.
-
-The process will be started in the directory set by setWorkingDirectory(). If workingDirectory() is empty, the working directory is inherited from the calling process.
-
-Note: On QNX, this may cause all application threads to temporarily freeze.
-
-If the function is successful then *pid is set to the process identifier of the started process. Note that the child process may exit and the PID may become invalid without notice. Furthermore, after the child process exits, the same PID may be recycled and used by a completely different process. User code should be careful when using this variable, especially if one intends to forcibly terminate the process by operating system means.
-
-Only the following property setters are supported by startDetached():
-
-
-setArguments()
-setCreateProcessArgumentsModifier()
-setNativeArguments()
-setProcessEnvironment()
-setProgram()
-setStandardErrorFile()
-setStandardInputFile()
-setStandardOutputFile()
-setWorkingDirectory()
-
-
-All other properties of the QProcess object are ignored.
-
-This function was introduced in  Qt 5.10.
-
-See also start(), startDetached(const QString &program, const QStringList &arguments, const QString &workingDirectory, qint64 *pid), and startDetached(const QString &command).
-*/
-func (this *QProcess) StartDetached1(program string, arguments QStringList_ITF, workingDirectory string, pid unsafe.Pointer /*666*/) bool {
-	var tmpArg0 = NewQString5(program)
-	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 unsafe.Pointer
-	if arguments != nil && arguments.QStringList_PTR() != nil {
-		convArg1 = arguments.QStringList_PTR().GetCthis()
-	}
-	var tmpArg2 = NewQString5(workingDirectory)
-	var convArg2 = tmpArg2.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess13startDetachedERK7QStringRK11QStringListS2_Px", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, pid)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-func QProcess_StartDetached1(program string, arguments QStringList_ITF, workingDirectory string, pid unsafe.Pointer /*666*/) bool {
-	var nilthis *QProcess
-	rv := nilthis.StartDetached1(program, arguments, workingDirectory, pid)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qprocess.h:251
-// index:1
-// Public static Visibility=Default Availability=Available
-// [1] bool startDetached(const QString &, const QStringList &, const QString &, qint64 *)
-
-/*
-Starts the program set by setProgram() with arguments set by setArguments() in a new process, and detaches from it. Returns true on success; otherwise returns false. If the calling process exits, the detached process will continue to run unaffected.
-
-Unix: The started process will run in its own session and act like a daemon.
-
-The process will be started in the directory set by setWorkingDirectory(). If workingDirectory() is empty, the working directory is inherited from the calling process.
-
-Note: On QNX, this may cause all application threads to temporarily freeze.
-
-If the function is successful then *pid is set to the process identifier of the started process. Note that the child process may exit and the PID may become invalid without notice. Furthermore, after the child process exits, the same PID may be recycled and used by a completely different process. User code should be careful when using this variable, especially if one intends to forcibly terminate the process by operating system means.
-
-Only the following property setters are supported by startDetached():
-
-
-setArguments()
-setCreateProcessArgumentsModifier()
-setNativeArguments()
-setProcessEnvironment()
-setProgram()
-setStandardErrorFile()
-setStandardInputFile()
-setStandardOutputFile()
-setWorkingDirectory()
-
-
-All other properties of the QProcess object are ignored.
-
-This function was introduced in  Qt 5.10.
-
-See also start(), startDetached(const QString &program, const QStringList &arguments, const QString &workingDirectory, qint64 *pid), and startDetached(const QString &command).
-*/
-func (this *QProcess) StartDetached1p(program string, arguments QStringList_ITF, workingDirectory string) bool {
-	var tmpArg0 = NewQString5(program)
-	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 unsafe.Pointer
-	if arguments != nil && arguments.QStringList_PTR() != nil {
-		convArg1 = arguments.QStringList_PTR().GetCthis()
-	}
-	var tmpArg2 = NewQString5(workingDirectory)
-	var convArg2 = tmpArg2.GetCthis()
-	// arg: 3, qint64 *=Pointer, qint64=Typedef, long long, LongLong
-	pid := unsafe.Pointer(nil)
-	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess13startDetachedERK7QStringRK11QStringListS2_Px", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, pid)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtCore/qprocess.h:258
-// index:2
-// Public static Visibility=Default Availability=Available
-// [1] bool startDetached(const QString &, const QStringList &)
-
-/*
-Starts the program set by setProgram() with arguments set by setArguments() in a new process, and detaches from it. Returns true on success; otherwise returns false. If the calling process exits, the detached process will continue to run unaffected.
-
-Unix: The started process will run in its own session and act like a daemon.
-
-The process will be started in the directory set by setWorkingDirectory(). If workingDirectory() is empty, the working directory is inherited from the calling process.
-
-Note: On QNX, this may cause all application threads to temporarily freeze.
-
-If the function is successful then *pid is set to the process identifier of the started process. Note that the child process may exit and the PID may become invalid without notice. Furthermore, after the child process exits, the same PID may be recycled and used by a completely different process. User code should be careful when using this variable, especially if one intends to forcibly terminate the process by operating system means.
-
-Only the following property setters are supported by startDetached():
-
-
-setArguments()
-setCreateProcessArgumentsModifier()
-setNativeArguments()
-setProcessEnvironment()
-setProgram()
-setStandardErrorFile()
-setStandardInputFile()
-setStandardOutputFile()
-setWorkingDirectory()
-
-
-All other properties of the QProcess object are ignored.
-
-This function was introduced in  Qt 5.10.
-
-See also start(), startDetached(const QString &program, const QStringList &arguments, const QString &workingDirectory, qint64 *pid), and startDetached(const QString &command).
-*/
-func (this *QProcess) StartDetached2(program string, arguments QStringList_ITF) bool {
-	var tmpArg0 = NewQString5(program)
-	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 unsafe.Pointer
-	if arguments != nil && arguments.QStringList_PTR() != nil {
-		convArg1 = arguments.QStringList_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess13startDetachedERK7QStringRK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-func QProcess_StartDetached2(program string, arguments QStringList_ITF) bool {
-	var nilthis *QProcess
-	rv := nilthis.StartDetached2(program, arguments)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qprocess.h:260
-// index:3
-// Public static Visibility=Default Availability=Available
-// [1] bool startDetached(const QString &)
-
-/*
-Starts the program set by setProgram() with arguments set by setArguments() in a new process, and detaches from it. Returns true on success; otherwise returns false. If the calling process exits, the detached process will continue to run unaffected.
-
-Unix: The started process will run in its own session and act like a daemon.
-
-The process will be started in the directory set by setWorkingDirectory(). If workingDirectory() is empty, the working directory is inherited from the calling process.
-
-Note: On QNX, this may cause all application threads to temporarily freeze.
-
-If the function is successful then *pid is set to the process identifier of the started process. Note that the child process may exit and the PID may become invalid without notice. Furthermore, after the child process exits, the same PID may be recycled and used by a completely different process. User code should be careful when using this variable, especially if one intends to forcibly terminate the process by operating system means.
-
-Only the following property setters are supported by startDetached():
-
-
-setArguments()
-setCreateProcessArgumentsModifier()
-setNativeArguments()
-setProcessEnvironment()
-setProgram()
-setStandardErrorFile()
-setStandardInputFile()
-setStandardOutputFile()
-setWorkingDirectory()
-
-
-All other properties of the QProcess object are ignored.
-
-This function was introduced in  Qt 5.10.
-
-See also start(), startDetached(const QString &program, const QStringList &arguments, const QString &workingDirectory, qint64 *pid), and startDetached(const QString &command).
-*/
-func (this *QProcess) StartDetached3(command string) bool {
-	var tmpArg0 = NewQString5(command)
-	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess13startDetachedERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-func QProcess_StartDetached3(command string) bool {
-	var nilthis *QProcess
-	rv := nilthis.StartDetached3(command)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qprocess.h:167
-// index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool open(QIODevice::OpenMode)
 
@@ -656,7 +361,7 @@ func (this *QProcess) Open(mode int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qprocess.h:167
+// /usr/include/qt/QtCore/qprocess.h:166
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool open(QIODevice::OpenMode)
@@ -678,7 +383,7 @@ func (this *QProcess) Openp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qprocess.h:169
+// /usr/include/qt/QtCore/qprocess.h:168
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString program() const
@@ -699,7 +404,7 @@ func (this *QProcess) Program() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qprocess.h:170
+// /usr/include/qt/QtCore/qprocess.h:169
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProgram(const QString &)
@@ -718,7 +423,7 @@ func (this *QProcess) SetProgram(program string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:172
+// /usr/include/qt/QtCore/qprocess.h:171
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList arguments() const
@@ -738,7 +443,7 @@ func (this *QProcess) Arguments() *QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qprocess.h:173
+// /usr/include/qt/QtCore/qprocess.h:172
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setArguments(const QStringList &)
@@ -759,7 +464,7 @@ func (this *QProcess) SetArguments(arguments QStringList_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:175
+// /usr/include/qt/QtCore/qprocess.h:174
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QProcess::ProcessChannelMode readChannelMode() const
@@ -773,7 +478,7 @@ func (this *QProcess) ReadChannelMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:176
+// /usr/include/qt/QtCore/qprocess.h:175
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setReadChannelMode(QProcess::ProcessChannelMode)
@@ -786,7 +491,7 @@ func (this *QProcess) SetReadChannelMode(mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:177
+// /usr/include/qt/QtCore/qprocess.h:176
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QProcess::ProcessChannelMode processChannelMode() const
@@ -804,7 +509,7 @@ func (this *QProcess) ProcessChannelMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:178
+// /usr/include/qt/QtCore/qprocess.h:177
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProcessChannelMode(QProcess::ProcessChannelMode)
@@ -833,7 +538,7 @@ func (this *QProcess) SetProcessChannelMode(mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:179
+// /usr/include/qt/QtCore/qprocess.h:178
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QProcess::InputChannelMode inputChannelMode() const
@@ -851,7 +556,7 @@ func (this *QProcess) InputChannelMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:180
+// /usr/include/qt/QtCore/qprocess.h:179
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setInputChannelMode(QProcess::InputChannelMode)
@@ -868,7 +573,7 @@ func (this *QProcess) SetInputChannelMode(mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:182
+// /usr/include/qt/QtCore/qprocess.h:181
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QProcess::ProcessChannel readChannel() const
@@ -884,7 +589,7 @@ func (this *QProcess) ReadChannel() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:183
+// /usr/include/qt/QtCore/qprocess.h:182
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setReadChannel(QProcess::ProcessChannel)
@@ -899,7 +604,7 @@ func (this *QProcess) SetReadChannel(channel int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:185
+// /usr/include/qt/QtCore/qprocess.h:184
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void closeReadChannel(QProcess::ProcessChannel)
@@ -916,7 +621,7 @@ func (this *QProcess) CloseReadChannel(channel int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:186
+// /usr/include/qt/QtCore/qprocess.h:185
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void closeWriteChannel()
@@ -944,7 +649,7 @@ func (this *QProcess) CloseWriteChannel() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:188
+// /usr/include/qt/QtCore/qprocess.h:187
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStandardInputFile(const QString &)
@@ -969,7 +674,7 @@ func (this *QProcess) SetStandardInputFile(fileName string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:189
+// /usr/include/qt/QtCore/qprocess.h:188
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStandardOutputFile(const QString &, QIODevice::OpenMode)
@@ -996,7 +701,7 @@ func (this *QProcess) SetStandardOutputFile(fileName string, mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:189
+// /usr/include/qt/QtCore/qprocess.h:188
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStandardOutputFile(const QString &, QIODevice::OpenMode)
@@ -1025,7 +730,7 @@ func (this *QProcess) SetStandardOutputFilep(fileName string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:190
+// /usr/include/qt/QtCore/qprocess.h:189
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStandardErrorFile(const QString &, QIODevice::OpenMode)
@@ -1048,7 +753,7 @@ func (this *QProcess) SetStandardErrorFile(fileName string, mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:190
+// /usr/include/qt/QtCore/qprocess.h:189
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStandardErrorFile(const QString &, QIODevice::OpenMode)
@@ -1073,7 +778,7 @@ func (this *QProcess) SetStandardErrorFilep(fileName string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:191
+// /usr/include/qt/QtCore/qprocess.h:190
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStandardOutputProcess(QProcess *)
@@ -1112,7 +817,7 @@ func (this *QProcess) SetStandardOutputProcess(destination QProcess_ITF /*777 QP
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:214
+// /usr/include/qt/QtCore/qprocess.h:213
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString workingDirectory() const
@@ -1131,7 +836,7 @@ func (this *QProcess) WorkingDirectory() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qprocess.h:215
+// /usr/include/qt/QtCore/qprocess.h:214
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWorkingDirectory(const QString &)
@@ -1150,7 +855,7 @@ func (this *QProcess) SetWorkingDirectory(dir string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:217
+// /usr/include/qt/QtCore/qprocess.h:216
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEnvironment(const QStringList &)
@@ -1167,7 +872,7 @@ func (this *QProcess) SetEnvironment(environment QStringList_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:218
+// /usr/include/qt/QtCore/qprocess.h:217
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList environment() const
@@ -1183,7 +888,7 @@ func (this *QProcess) Environment() *QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qprocess.h:219
+// /usr/include/qt/QtCore/qprocess.h:218
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProcessEnvironment(const QProcessEnvironment &)
@@ -1217,7 +922,7 @@ func (this *QProcess) SetProcessEnvironment(environment QProcessEnvironment_ITF)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:220
+// /usr/include/qt/QtCore/qprocess.h:219
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QProcessEnvironment processEnvironment() const
@@ -1237,7 +942,7 @@ func (this *QProcess) ProcessEnvironment() *QProcessEnvironment /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qprocess.h:222
+// /usr/include/qt/QtCore/qprocess.h:221
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QProcess::ProcessError error() const
@@ -1253,7 +958,7 @@ func (this *QProcess) Error() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:275
+// /usr/include/qt/QtCore/qprocess.h:274
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void error(QProcess::ProcessError)
@@ -1268,7 +973,7 @@ func (this *QProcess) Error1(error int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:223
+// /usr/include/qt/QtCore/qprocess.h:222
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QProcess::ProcessState state() const
@@ -1284,7 +989,7 @@ func (this *QProcess) State() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:226
+// /usr/include/qt/QtCore/qprocess.h:225
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] Q_PID pid() const
@@ -1298,7 +1003,7 @@ func (this *QProcess) Pid() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qprocess.h:227
+// /usr/include/qt/QtCore/qprocess.h:226
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 processId() const
@@ -1314,7 +1019,7 @@ func (this *QProcess) ProcessId() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qprocess.h:229
+// /usr/include/qt/QtCore/qprocess.h:228
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForStarted(int)
@@ -1340,7 +1045,7 @@ func (this *QProcess) WaitForStarted(msecs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qprocess.h:229
+// /usr/include/qt/QtCore/qprocess.h:228
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForStarted(int)
@@ -1368,7 +1073,7 @@ func (this *QProcess) WaitForStartedp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qprocess.h:230
+// /usr/include/qt/QtCore/qprocess.h:229
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool waitForReadyRead(int)
@@ -1382,7 +1087,7 @@ func (this *QProcess) WaitForReadyRead(msecs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qprocess.h:230
+// /usr/include/qt/QtCore/qprocess.h:229
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool waitForReadyRead(int)
@@ -1398,7 +1103,7 @@ func (this *QProcess) WaitForReadyReadp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qprocess.h:231
+// /usr/include/qt/QtCore/qprocess.h:230
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool waitForBytesWritten(int)
@@ -1412,7 +1117,7 @@ func (this *QProcess) WaitForBytesWritten(msecs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qprocess.h:231
+// /usr/include/qt/QtCore/qprocess.h:230
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool waitForBytesWritten(int)
@@ -1428,7 +1133,7 @@ func (this *QProcess) WaitForBytesWrittenp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qprocess.h:232
+// /usr/include/qt/QtCore/qprocess.h:231
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForFinished(int)
@@ -1452,7 +1157,7 @@ func (this *QProcess) WaitForFinished(msecs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qprocess.h:232
+// /usr/include/qt/QtCore/qprocess.h:231
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForFinished(int)
@@ -1478,7 +1183,7 @@ func (this *QProcess) WaitForFinishedp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qprocess.h:234
+// /usr/include/qt/QtCore/qprocess.h:233
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray readAllStandardOutput()
@@ -1496,7 +1201,7 @@ func (this *QProcess) ReadAllStandardOutput() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qprocess.h:235
+// /usr/include/qt/QtCore/qprocess.h:234
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray readAllStandardError()
@@ -1514,7 +1219,7 @@ func (this *QProcess) ReadAllStandardError() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qprocess.h:237
+// /usr/include/qt/QtCore/qprocess.h:236
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int exitCode() const
@@ -1530,7 +1235,7 @@ func (this *QProcess) ExitCode() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qprocess.h:238
+// /usr/include/qt/QtCore/qprocess.h:237
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QProcess::ExitStatus exitStatus() const
@@ -1548,7 +1253,7 @@ func (this *QProcess) ExitStatus() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:241
+// /usr/include/qt/QtCore/qprocess.h:240
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] qint64 bytesAvailable() const
@@ -1562,7 +1267,7 @@ func (this *QProcess) BytesAvailable() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qprocess.h:242
+// /usr/include/qt/QtCore/qprocess.h:241
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] qint64 bytesToWrite() const
@@ -1576,7 +1281,7 @@ func (this *QProcess) BytesToWrite() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qprocess.h:243
+// /usr/include/qt/QtCore/qprocess.h:242
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isSequential() const
@@ -1590,7 +1295,7 @@ func (this *QProcess) IsSequential() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qprocess.h:244
+// /usr/include/qt/QtCore/qprocess.h:243
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool canReadLine() const
@@ -1608,7 +1313,7 @@ func (this *QProcess) CanReadLine() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qprocess.h:245
+// /usr/include/qt/QtCore/qprocess.h:244
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void close()
@@ -1623,7 +1328,7 @@ func (this *QProcess) Close() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:246
+// /usr/include/qt/QtCore/qprocess.h:245
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool atEnd() const
@@ -1639,7 +1344,7 @@ func (this *QProcess) AtEnd() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qprocess.h:248
+// /usr/include/qt/QtCore/qprocess.h:247
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int execute(const QString &, const QStringList &)
@@ -1672,7 +1377,7 @@ func QProcess_Execute(program string, arguments QStringList_ITF) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qprocess.h:249
+// /usr/include/qt/QtCore/qprocess.h:248
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int execute(const QString &)
@@ -1701,7 +1406,152 @@ func QProcess_Execute1(command string) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qprocess.h:262
+// /usr/include/qt/QtCore/qprocess.h:250
+// index:0
+// Public static Visibility=Default Availability=Available
+// [1] bool startDetached(const QString &, const QStringList &, const QString &, qint64 *)
+
+/*
+Starts the program program with the arguments arguments in a new process, and detaches from it. Returns true on success; otherwise returns false. If the calling process exits, the detached process will continue to run unaffected.
+
+Argument handling is identical to the respective start() overload.
+
+Unix: The started process will run in its own session and act like a daemon.
+
+The process will be started in the directory workingDirectory. If workingDirectory is empty, the working directory is inherited from the calling process.
+
+Note: On QNX, this may cause all application threads to temporarily freeze.
+
+If the function is successful then *pid is set to the process identifier of the started process.
+
+See also start().
+*/
+func (this *QProcess) StartDetached(program string, arguments QStringList_ITF, workingDirectory string, pid unsafe.Pointer /*666*/) bool {
+	var tmpArg0 = NewQString5(program)
+	var convArg0 = tmpArg0.GetCthis()
+	var convArg1 unsafe.Pointer
+	if arguments != nil && arguments.QStringList_PTR() != nil {
+		convArg1 = arguments.QStringList_PTR().GetCthis()
+	}
+	var tmpArg2 = NewQString5(workingDirectory)
+	var convArg2 = tmpArg2.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess13startDetachedERK7QStringRK11QStringListS2_Px", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, pid)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+func QProcess_StartDetached(program string, arguments QStringList_ITF, workingDirectory string, pid unsafe.Pointer /*666*/) bool {
+	var nilthis *QProcess
+	rv := nilthis.StartDetached(program, arguments, workingDirectory, pid)
+	return rv
+}
+
+// /usr/include/qt/QtCore/qprocess.h:250
+// index:0
+// Public static Visibility=Default Availability=Available
+// [1] bool startDetached(const QString &, const QStringList &, const QString &, qint64 *)
+
+/*
+Starts the program program with the arguments arguments in a new process, and detaches from it. Returns true on success; otherwise returns false. If the calling process exits, the detached process will continue to run unaffected.
+
+Argument handling is identical to the respective start() overload.
+
+Unix: The started process will run in its own session and act like a daemon.
+
+The process will be started in the directory workingDirectory. If workingDirectory is empty, the working directory is inherited from the calling process.
+
+Note: On QNX, this may cause all application threads to temporarily freeze.
+
+If the function is successful then *pid is set to the process identifier of the started process.
+
+See also start().
+*/
+func (this *QProcess) StartDetachedp(program string, arguments QStringList_ITF, workingDirectory string) bool {
+	var tmpArg0 = NewQString5(program)
+	var convArg0 = tmpArg0.GetCthis()
+	var convArg1 unsafe.Pointer
+	if arguments != nil && arguments.QStringList_PTR() != nil {
+		convArg1 = arguments.QStringList_PTR().GetCthis()
+	}
+	var tmpArg2 = NewQString5(workingDirectory)
+	var convArg2 = tmpArg2.GetCthis()
+	// arg: 3, qint64 *=Pointer, qint64=Typedef, long long, LongLong
+	pid := unsafe.Pointer(nil)
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess13startDetachedERK7QStringRK11QStringListS2_Px", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, pid)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtCore/qprocess.h:257
+// index:1
+// Public static Visibility=Default Availability=Available
+// [1] bool startDetached(const QString &, const QStringList &)
+
+/*
+Starts the program program with the arguments arguments in a new process, and detaches from it. Returns true on success; otherwise returns false. If the calling process exits, the detached process will continue to run unaffected.
+
+Argument handling is identical to the respective start() overload.
+
+Unix: The started process will run in its own session and act like a daemon.
+
+The process will be started in the directory workingDirectory. If workingDirectory is empty, the working directory is inherited from the calling process.
+
+Note: On QNX, this may cause all application threads to temporarily freeze.
+
+If the function is successful then *pid is set to the process identifier of the started process.
+
+See also start().
+*/
+func (this *QProcess) StartDetached1(program string, arguments QStringList_ITF) bool {
+	var tmpArg0 = NewQString5(program)
+	var convArg0 = tmpArg0.GetCthis()
+	var convArg1 unsafe.Pointer
+	if arguments != nil && arguments.QStringList_PTR() != nil {
+		convArg1 = arguments.QStringList_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess13startDetachedERK7QStringRK11QStringList", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+func QProcess_StartDetached1(program string, arguments QStringList_ITF) bool {
+	var nilthis *QProcess
+	rv := nilthis.StartDetached1(program, arguments)
+	return rv
+}
+
+// /usr/include/qt/QtCore/qprocess.h:259
+// index:2
+// Public static Visibility=Default Availability=Available
+// [1] bool startDetached(const QString &)
+
+/*
+Starts the program program with the arguments arguments in a new process, and detaches from it. Returns true on success; otherwise returns false. If the calling process exits, the detached process will continue to run unaffected.
+
+Argument handling is identical to the respective start() overload.
+
+Unix: The started process will run in its own session and act like a daemon.
+
+The process will be started in the directory workingDirectory. If workingDirectory is empty, the working directory is inherited from the calling process.
+
+Note: On QNX, this may cause all application threads to temporarily freeze.
+
+If the function is successful then *pid is set to the process identifier of the started process.
+
+See also start().
+*/
+func (this *QProcess) StartDetached2(command string) bool {
+	var tmpArg0 = NewQString5(command)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.InvokeQtFunc6("_ZN8QProcess13startDetachedERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+func QProcess_StartDetached2(command string) bool {
+	var nilthis *QProcess
+	rv := nilthis.StartDetached2(command)
+	return rv
+}
+
+// /usr/include/qt/QtCore/qprocess.h:261
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList systemEnvironment()
@@ -1739,7 +1589,7 @@ func QProcess_SystemEnvironment() *QStringList /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qprocess.h:264
+// /usr/include/qt/QtCore/qprocess.h:263
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString nullDevice()
@@ -1767,7 +1617,7 @@ func QProcess_NullDevice() string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qprocess.h:267
+// /usr/include/qt/QtCore/qprocess.h:266
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void terminate()
@@ -1788,7 +1638,7 @@ func (this *QProcess) Terminate() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:268
+// /usr/include/qt/QtCore/qprocess.h:267
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void kill()
@@ -1805,7 +1655,7 @@ func (this *QProcess) Kill() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:272
+// /usr/include/qt/QtCore/qprocess.h:271
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void finished(int)
@@ -1813,10 +1663,10 @@ func (this *QProcess) Kill() {
 /*
 This signal is emitted when the process finishes. exitCode is the exit code of the process (only valid for normal exits), and exitStatus is the exit status. After the process has finished, the buffers in QProcess are still intact. You can still read any data that the process may have written before it finished.
 
-Note: Signal finished is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal finished is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
+  connect(process, static_cast<void(QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished),
       [=](int exitCode, QProcess::ExitStatus exitStatus){ /-* ... *-/ });
 
 
@@ -1828,7 +1678,7 @@ func (this *QProcess) Finished(exitCode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:273
+// /usr/include/qt/QtCore/qprocess.h:272
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void finished(int, QProcess::ExitStatus)
@@ -1836,10 +1686,10 @@ func (this *QProcess) Finished(exitCode int) {
 /*
 This signal is emitted when the process finishes. exitCode is the exit code of the process (only valid for normal exits), and exitStatus is the exit status. After the process has finished, the buffers in QProcess are still intact. You can still read any data that the process may have written before it finished.
 
-Note: Signal finished is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal finished is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
+  connect(process, static_cast<void(QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished),
       [=](int exitCode, QProcess::ExitStatus exitStatus){ /-* ... *-/ });
 
 
@@ -1851,7 +1701,7 @@ func (this *QProcess) Finished1(exitCode int, exitStatus int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:277
+// /usr/include/qt/QtCore/qprocess.h:276
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void errorOccurred(QProcess::ProcessError)
@@ -1866,7 +1716,7 @@ func (this *QProcess) ErrorOccurred(error int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:284
+// /usr/include/qt/QtCore/qprocess.h:283
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setProcessState(QProcess::ProcessState)
@@ -1881,7 +1731,7 @@ func (this *QProcess) SetProcessState(state int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:286
+// /usr/include/qt/QtCore/qprocess.h:285
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setupChildProcess()
@@ -1923,7 +1773,7 @@ func (this *QProcess) SetupChildProcess() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:289
+// /usr/include/qt/QtCore/qprocess.h:288
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] qint64 readData(char *, qint64)
@@ -1939,7 +1789,7 @@ func (this *QProcess) ReadData(data string, maxlen int64) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qprocess.h:290
+// /usr/include/qt/QtCore/qprocess.h:289
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] qint64 writeData(const char *, qint64)

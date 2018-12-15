@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qinputdialog.h
@@ -20,7 +18,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 96
+// extern C begin: 94
 */
 // import "C"
 import "unsafe"
@@ -66,7 +64,7 @@ func (*QInputDialog) NewFromPointer(cthis unsafe.Pointer) *QInputDialog {
 	return NewQInputDialogFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qinputdialog.h:57
+// /usr/include/qt/QtWidgets/qinputdialog.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -2419,80 +2417,7 @@ func (this *QInputDialog) GetDoublep5(parent QWidget_ITF /*777 QWidget **/, titl
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qinputdialog.h:183
-// index:1
-// Public static Visibility=Default Availability=Available
-// [8] double getDouble(QWidget *, const QString &, const QString &, double, double, double, int, bool *, Qt::WindowFlags, double)
-
-/*
-Static convenience function to get a floating point number from the user.
-
-title is the text which is displayed in the title bar of the dialog. label is the text which is shown to the user (it should say what should be entered). value is the default floating point number that the line edit will be set to. min and max are the minimum and maximum values the user may choose. decimals is the maximum number of decimal places the number may have.
-
-If ok is nonnull, *ok will be set to true if the user pressed OK and to false if the user pressed Cancel. The dialog's parent is parent. The dialog will be modal and uses the widget flags.
-
-This function returns the floating point number which has been entered by the user.
-
-Use this static function like this:
-
-
-      bool ok;
-      double d = QInputDialog::getDouble(this, tr("QInputDialog::getDouble()"),
-                                         tr("Amount:"), 37.56, -10000, 10000, 2, &ok);
-      if (ok)
-          doubleLabel->setText(QString("$%1").arg(d));
-
-
-
-See also getText(), getInt(), getItem(), and getMultiLineText().
-*/
-func (this *QInputDialog) GetDouble1(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int, ok *bool, flags int, step float64) float64 {
-	var convArg0 unsafe.Pointer
-	if parent != nil && parent.QWidget_PTR() != nil {
-		convArg0 = parent.QWidget_PTR().GetCthis()
-	}
-	var tmpArg1 = qtcore.NewQString5(title)
-	var convArg1 = tmpArg1.GetCthis()
-	var tmpArg2 = qtcore.NewQString5(label)
-	var convArg2 = tmpArg2.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog9getDoubleEP7QWidgetRK7QStringS4_dddiPb6QFlagsIN2Qt10WindowTypeEEd", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2, value, minValue, maxValue, decimals, ok, flags, step)
-	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("float64", rv).(float64) // 1111
-}
-func QInputDialog_GetDouble1(parent QWidget_ITF /*777 QWidget **/, title string, label string, value float64, minValue float64, maxValue float64, decimals int, ok *bool, flags int, step float64) float64 {
-	var nilthis *QInputDialog
-	rv := nilthis.GetDouble1(parent, title, label, value, minValue, maxValue, decimals, ok, flags, step)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qinputdialog.h:196
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void setDoubleStep(double)
-
-/*
-
- */
-func (this *QInputDialog) SetDoubleStep(step float64) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QInputDialog13setDoubleStepEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), step)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qinputdialog.h:197
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] double doubleStep() const
-
-/*
-
- */
-func (this *QInputDialog) DoubleStep() float64 {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK12QInputDialog10doubleStepEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("float64", rv).(float64) // 1111
-}
-
-// /usr/include/qt/QtWidgets/qinputdialog.h:201
+// /usr/include/qt/QtWidgets/qinputdialog.h:194
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void textValueChanged(const QString &)
@@ -2511,7 +2436,7 @@ func (this *QInputDialog) TextValueChanged(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qinputdialog.h:202
+// /usr/include/qt/QtWidgets/qinputdialog.h:195
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void textValueSelected(const QString &)
@@ -2528,7 +2453,7 @@ func (this *QInputDialog) TextValueSelected(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qinputdialog.h:203
+// /usr/include/qt/QtWidgets/qinputdialog.h:196
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void intValueChanged(int)
@@ -2545,7 +2470,7 @@ func (this *QInputDialog) IntValueChanged(value int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qinputdialog.h:204
+// /usr/include/qt/QtWidgets/qinputdialog.h:197
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void intValueSelected(int)
@@ -2560,7 +2485,7 @@ func (this *QInputDialog) IntValueSelected(value int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qinputdialog.h:205
+// /usr/include/qt/QtWidgets/qinputdialog.h:198
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void doubleValueChanged(double)
@@ -2577,7 +2502,7 @@ func (this *QInputDialog) DoubleValueChanged(value float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qinputdialog.h:206
+// /usr/include/qt/QtWidgets/qinputdialog.h:199
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void doubleValueSelected(double)
@@ -2592,7 +2517,7 @@ func (this *QInputDialog) DoubleValueSelected(value float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qinputdialog.h:209
+// /usr/include/qt/QtWidgets/qinputdialog.h:202
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void done(int)

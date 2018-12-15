@@ -64,7 +64,7 @@ func (*QStyleOptionTab) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionTab {
 	return NewQStyleOptionTabFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:285
+// /usr/include/qt/QtWidgets/qstyleoption.h:274
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionTab()
@@ -83,7 +83,7 @@ func NewQStyleOptionTab() *QStyleOptionTab {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:289
+// /usr/include/qt/QtWidgets/qstyleoption.h:278
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionTab(int)

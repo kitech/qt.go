@@ -18,7 +18,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 42
+// extern C begin: 40
 */
 // import "C"
 import "unsafe"
@@ -84,54 +84,19 @@ func (this *QOffscreenSurface) MetaObject() *qtcore.QMetaObject /*777 const QMet
 // /usr/include/qt/QtGui/qoffscreensurface.h:61
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void QOffscreenSurface(QScreen *, QObject *)
-
-/*
-Creates an offscreen surface for the targetScreen with the given parent.
-
-The underlying platform surface is not created until create() is called.
-
-This function was introduced in  Qt 5.10.
-
-See also setScreen() and create().
-*/
-func (*QOffscreenSurface) NewForInherit(screen QScreen_ITF /*777 QScreen **/, parent qtcore.QObject_ITF /*777 QObject **/) *QOffscreenSurface {
-	return NewQOffscreenSurface(screen, parent)
-}
-func NewQOffscreenSurface(screen QScreen_ITF /*777 QScreen **/, parent qtcore.QObject_ITF /*777 QObject **/) *QOffscreenSurface {
-	var convArg0 unsafe.Pointer
-	if screen != nil && screen.QScreen_PTR() != nil {
-		convArg0 = screen.QScreen_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if parent != nil && parent.QObject_PTR() != nil {
-		convArg1 = parent.QObject_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN17QOffscreenSurfaceC2EP7QScreenP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQOffscreenSurfaceFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.ConnectDestroyed(gothis, "QOffscreenSurface")
-	return gothis
-}
-
-// /usr/include/qt/QtGui/qoffscreensurface.h:62
-// index:1
-// Public Visibility=Default Availability=Available
 // [-2] void QOffscreenSurface(QScreen *)
 
 /*
-Creates an offscreen surface for the targetScreen with the given parent.
+Creates an offscreen surface for the targetScreen.
 
 The underlying platform surface is not created until create() is called.
 
-This function was introduced in  Qt 5.10.
-
 See also setScreen() and create().
 */
-func (*QOffscreenSurface) NewForInherit1(screen QScreen_ITF /*777 QScreen **/) *QOffscreenSurface {
-	return NewQOffscreenSurface1(screen)
+func (*QOffscreenSurface) NewForInherit(screen QScreen_ITF /*777 QScreen **/) *QOffscreenSurface {
+	return NewQOffscreenSurface(screen)
 }
-func NewQOffscreenSurface1(screen QScreen_ITF /*777 QScreen **/) *QOffscreenSurface {
+func NewQOffscreenSurface(screen QScreen_ITF /*777 QScreen **/) *QOffscreenSurface {
 	var convArg0 unsafe.Pointer
 	if screen != nil && screen.QScreen_PTR() != nil {
 		convArg0 = screen.QScreen_PTR().GetCthis()
@@ -143,24 +108,22 @@ func NewQOffscreenSurface1(screen QScreen_ITF /*777 QScreen **/) *QOffscreenSurf
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qoffscreensurface.h:62
-// index:1
+// /usr/include/qt/QtGui/qoffscreensurface.h:61
+// index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QOffscreenSurface(QScreen *)
 
 /*
-Creates an offscreen surface for the targetScreen with the given parent.
+Creates an offscreen surface for the targetScreen.
 
 The underlying platform surface is not created until create() is called.
 
-This function was introduced in  Qt 5.10.
-
 See also setScreen() and create().
 */
-func (*QOffscreenSurface) NewForInherit1p() *QOffscreenSurface {
-	return NewQOffscreenSurface1p()
+func (*QOffscreenSurface) NewForInheritp() *QOffscreenSurface {
+	return NewQOffscreenSurfacep()
 }
-func NewQOffscreenSurface1p() *QOffscreenSurface {
+func NewQOffscreenSurfacep() *QOffscreenSurface {
 	// arg: 0, QScreen *=Pointer, QScreen=Record, , Invalid
 	var convArg0 unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QOffscreenSurfaceC2EP7QScreen", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -170,7 +133,7 @@ func NewQOffscreenSurface1p() *QOffscreenSurface {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qoffscreensurface.h:63
+// /usr/include/qt/QtGui/qoffscreensurface.h:62
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QOffscreenSurface()
@@ -185,7 +148,7 @@ func DeleteQOffscreenSurface(this *QOffscreenSurface) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qoffscreensurface.h:65
+// /usr/include/qt/QtGui/qoffscreensurface.h:64
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QSurface::SurfaceType surfaceType() const
@@ -203,7 +166,7 @@ func (this *QOffscreenSurface) SurfaceType() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qoffscreensurface.h:67
+// /usr/include/qt/QtGui/qoffscreensurface.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void create()
@@ -224,7 +187,7 @@ func (this *QOffscreenSurface) Create() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qoffscreensurface.h:68
+// /usr/include/qt/QtGui/qoffscreensurface.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void destroy()
@@ -239,7 +202,7 @@ func (this *QOffscreenSurface) Destroy() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qoffscreensurface.h:70
+// /usr/include/qt/QtGui/qoffscreensurface.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -257,7 +220,7 @@ func (this *QOffscreenSurface) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qoffscreensurface.h:72
+// /usr/include/qt/QtGui/qoffscreensurface.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QSurfaceFormat &)
@@ -278,7 +241,7 @@ func (this *QOffscreenSurface) SetFormat(format QSurfaceFormat_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qoffscreensurface.h:73
+// /usr/include/qt/QtGui/qoffscreensurface.h:72
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSurfaceFormat format() const
@@ -300,7 +263,7 @@ func (this *QOffscreenSurface) Format() *QSurfaceFormat /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qoffscreensurface.h:74
+// /usr/include/qt/QtGui/qoffscreensurface.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSurfaceFormat requestedFormat() const
@@ -322,7 +285,7 @@ func (this *QOffscreenSurface) RequestedFormat() *QSurfaceFormat /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qoffscreensurface.h:76
+// /usr/include/qt/QtGui/qoffscreensurface.h:75
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize size() const
@@ -340,7 +303,7 @@ func (this *QOffscreenSurface) Size() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qoffscreensurface.h:78
+// /usr/include/qt/QtGui/qoffscreensurface.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QScreen * screen() const
@@ -356,7 +319,7 @@ func (this *QOffscreenSurface) Screen() *QScreen /*777 QScreen **/ {
 	return /*==*/ NewQScreenFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qoffscreensurface.h:79
+// /usr/include/qt/QtGui/qoffscreensurface.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScreen(QScreen *)
@@ -377,7 +340,7 @@ func (this *QOffscreenSurface) SetScreen(screen QScreen_ITF /*777 QScreen **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qoffscreensurface.h:83
+// /usr/include/qt/QtGui/qoffscreensurface.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] void * nativeHandle() const
@@ -395,7 +358,7 @@ func (this *QOffscreenSurface) NativeHandle() unsafe.Pointer /*666*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtGui/qoffscreensurface.h:84
+// /usr/include/qt/QtGui/qoffscreensurface.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNativeHandle(void *)
@@ -416,7 +379,7 @@ func (this *QOffscreenSurface) SetNativeHandle(handle unsafe.Pointer /*666*/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qoffscreensurface.h:87
+// /usr/include/qt/QtGui/qoffscreensurface.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void screenChanged(QScreen *)

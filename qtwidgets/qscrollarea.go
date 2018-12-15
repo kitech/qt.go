@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qscrollarea.h
@@ -91,7 +89,7 @@ func (*QScrollArea) NewFromPointer(cthis unsafe.Pointer) *QScrollArea {
 	return NewQScrollAreaFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:54
+// /usr/include/qt/QtWidgets/qscrollarea.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -105,7 +103,7 @@ func (this *QScrollArea) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:59
+// /usr/include/qt/QtWidgets/qscrollarea.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QScrollArea(QWidget *)
@@ -130,7 +128,7 @@ func NewQScrollArea(parent QWidget_ITF /*777 QWidget **/) *QScrollArea {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:59
+// /usr/include/qt/QtWidgets/qscrollarea.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QScrollArea(QWidget *)
@@ -153,7 +151,7 @@ func NewQScrollAreap() *QScrollArea {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:60
+// /usr/include/qt/QtWidgets/qscrollarea.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QScrollArea()
@@ -168,7 +166,7 @@ func DeleteQScrollArea(this *QScrollArea) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:62
+// /usr/include/qt/QtWidgets/qscrollarea.h:63
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * widget() const
@@ -184,7 +182,7 @@ func (this *QScrollArea) Widget() *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:63
+// /usr/include/qt/QtWidgets/qscrollarea.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidget(QWidget *)
@@ -211,7 +209,7 @@ func (this *QScrollArea) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:64
+// /usr/include/qt/QtWidgets/qscrollarea.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * takeWidget()
@@ -227,7 +225,7 @@ func (this *QScrollArea) TakeWidget() *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:66
+// /usr/include/qt/QtWidgets/qscrollarea.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool widgetResizable() const
@@ -241,7 +239,7 @@ func (this *QScrollArea) WidgetResizable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:67
+// /usr/include/qt/QtWidgets/qscrollarea.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidgetResizable(bool)
@@ -254,7 +252,7 @@ func (this *QScrollArea) SetWidgetResizable(resizable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:69
+// /usr/include/qt/QtWidgets/qscrollarea.h:70
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
@@ -270,7 +268,7 @@ func (this *QScrollArea) SizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:71
+// /usr/include/qt/QtWidgets/qscrollarea.h:72
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool focusNextPrevChild(bool)
@@ -284,7 +282,7 @@ func (this *QScrollArea) FocusNextPrevChild(next bool) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:73
+// /usr/include/qt/QtWidgets/qscrollarea.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Alignment alignment() const
@@ -298,7 +296,7 @@ func (this *QScrollArea) Alignment() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:74
+// /usr/include/qt/QtWidgets/qscrollarea.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAlignment(Qt::Alignment)
@@ -311,7 +309,7 @@ func (this *QScrollArea) SetAlignment(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:76
+// /usr/include/qt/QtWidgets/qscrollarea.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ensureVisible(int, int, int, int)
@@ -324,7 +322,7 @@ func (this *QScrollArea) EnsureVisible(x int, y int, xmargin int, ymargin int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:76
+// /usr/include/qt/QtWidgets/qscrollarea.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ensureVisible(int, int, int, int)
@@ -341,7 +339,7 @@ func (this *QScrollArea) EnsureVisiblep(x int, y int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:76
+// /usr/include/qt/QtWidgets/qscrollarea.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ensureVisible(int, int, int, int)
@@ -356,7 +354,7 @@ func (this *QScrollArea) EnsureVisiblep1(x int, y int, xmargin int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:77
+// /usr/include/qt/QtWidgets/qscrollarea.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ensureWidgetVisible(QWidget *, int, int)
@@ -375,7 +373,7 @@ func (this *QScrollArea) EnsureWidgetVisible(childWidget QWidget_ITF /*777 QWidg
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:77
+// /usr/include/qt/QtWidgets/qscrollarea.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ensureWidgetVisible(QWidget *, int, int)
@@ -398,7 +396,7 @@ func (this *QScrollArea) EnsureWidgetVisiblep(childWidget QWidget_ITF /*777 QWid
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:77
+// /usr/include/qt/QtWidgets/qscrollarea.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ensureWidgetVisible(QWidget *, int, int)
@@ -419,7 +417,7 @@ func (this *QScrollArea) EnsureWidgetVisiblep1(childWidget QWidget_ITF /*777 QWi
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:81
+// /usr/include/qt/QtWidgets/qscrollarea.h:82
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -437,7 +435,7 @@ func (this *QScrollArea) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:82
+// /usr/include/qt/QtWidgets/qscrollarea.h:83
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
@@ -459,7 +457,7 @@ func (this *QScrollArea) EventFilter(arg0 qtcore.QObject_ITF /*777 QObject **/, 
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:83
+// /usr/include/qt/QtWidgets/qscrollarea.h:84
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
@@ -476,7 +474,7 @@ func (this *QScrollArea) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEv
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:84
+// /usr/include/qt/QtWidgets/qscrollarea.h:85
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void scrollContentsBy(int, int)
@@ -489,7 +487,7 @@ func (this *QScrollArea) ScrollContentsBy(dx int, dy int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qscrollarea.h:86
+// /usr/include/qt/QtWidgets/qscrollarea.h:87
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QSize viewportSizeHint() const

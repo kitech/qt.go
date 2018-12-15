@@ -860,10 +860,10 @@ func (this *QCamera) LockFailed() {
 /*
 Signals the overall status for all the requested camera locks was changed with specified reason.
 
-Note: Signal lockStatusChanged is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal lockStatusChanged is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(camera, QOverload<QCamera::LockStatus, QCamera::LockChangeReason>::of(&QCamera::lockStatusChanged),
+  connect(camera, static_cast<void(QCamera::*)(QCamera::LockStatus, QCamera::LockChangeReason)>(&QCamera::lockStatusChanged),
       [=](QCamera::LockStatus status, QCamera::LockChangeReason reason){ /-* ... *-/ });
 
 
@@ -883,10 +883,10 @@ func (this *QCamera) LockStatusChanged(arg0 int, arg1 int) {
 /*
 Signals the overall status for all the requested camera locks was changed with specified reason.
 
-Note: Signal lockStatusChanged is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal lockStatusChanged is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(camera, QOverload<QCamera::LockStatus, QCamera::LockChangeReason>::of(&QCamera::lockStatusChanged),
+  connect(camera, static_cast<void(QCamera::*)(QCamera::LockStatus, QCamera::LockChangeReason)>(&QCamera::lockStatusChanged),
       [=](QCamera::LockStatus status, QCamera::LockChangeReason reason){ /-* ... *-/ });
 
 

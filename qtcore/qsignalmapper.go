@@ -62,7 +62,7 @@ func (*QSignalMapper) NewFromPointer(cthis unsafe.Pointer) *QSignalMapper {
 	return NewQSignalMapperFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:53
+// /usr/include/qt/QtCore/qsignalmapper.h:51
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -76,14 +76,12 @@ func (this *QSignalMapper) MetaObject() *QMetaObject /*777 const QMetaObject **/
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:56
+// /usr/include/qt/QtCore/qsignalmapper.h:54
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSignalMapper(QObject *)
 
 /*
-This function is deprecated.
-
 Constructs a QSignalMapper with parent parent.
 */
 func (*QSignalMapper) NewForInherit(parent QObject_ITF /*777 QObject **/) *QSignalMapper {
@@ -101,14 +99,12 @@ func NewQSignalMapper(parent QObject_ITF /*777 QObject **/) *QSignalMapper {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:56
+// /usr/include/qt/QtCore/qsignalmapper.h:54
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSignalMapper(QObject *)
 
 /*
-This function is deprecated.
-
 Constructs a QSignalMapper with parent parent.
 */
 func (*QSignalMapper) NewForInheritp() *QSignalMapper {
@@ -124,7 +120,7 @@ func NewQSignalMapperp() *QSignalMapper {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:57
+// /usr/include/qt/QtCore/qsignalmapper.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSignalMapper()
@@ -139,7 +135,7 @@ func DeleteQSignalMapper(this *QSignalMapper) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:59
+// /usr/include/qt/QtCore/qsignalmapper.h:57
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMapping(QObject *, int)
@@ -160,7 +156,7 @@ func (this *QSignalMapper) SetMapping(sender QObject_ITF /*777 QObject **/, id i
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:60
+// /usr/include/qt/QtCore/qsignalmapper.h:58
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setMapping(QObject *, const QString &)
@@ -183,7 +179,7 @@ func (this *QSignalMapper) SetMapping1(sender QObject_ITF /*777 QObject **/, tex
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:61
+// /usr/include/qt/QtCore/qsignalmapper.h:59
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void setMapping(QObject *, QWidget *)
@@ -204,7 +200,7 @@ func (this *QSignalMapper) SetMapping2(sender QObject_ITF /*777 QObject **/, wid
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:62
+// /usr/include/qt/QtCore/qsignalmapper.h:60
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void setMapping(QObject *, QObject *)
@@ -229,7 +225,7 @@ func (this *QSignalMapper) SetMapping3(sender QObject_ITF /*777 QObject **/, obj
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:63
+// /usr/include/qt/QtCore/qsignalmapper.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeMappings(QObject *)
@@ -250,7 +246,7 @@ func (this *QSignalMapper) RemoveMappings(sender QObject_ITF /*777 QObject **/) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:65
+// /usr/include/qt/QtCore/qsignalmapper.h:63
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * mapping(int) const
@@ -266,7 +262,7 @@ func (this *QSignalMapper) Mapping(id int) *QObject /*777 QObject **/ {
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:66
+// /usr/include/qt/QtCore/qsignalmapper.h:64
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QObject * mapping(const QString &) const
@@ -284,7 +280,7 @@ func (this *QSignalMapper) Mapping1(text string) *QObject /*777 QObject **/ {
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:67
+// /usr/include/qt/QtCore/qsignalmapper.h:65
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QObject * mapping(QWidget *) const
@@ -300,7 +296,7 @@ func (this *QSignalMapper) Mapping2(widget unsafe.Pointer /*666*/) *QObject /*77
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:68
+// /usr/include/qt/QtCore/qsignalmapper.h:66
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QObject * mapping(QObject *) const
@@ -320,7 +316,7 @@ func (this *QSignalMapper) Mapping3(object QObject_ITF /*777 QObject **/) *QObje
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:71
+// /usr/include/qt/QtCore/qsignalmapper.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void mapped(int)
@@ -328,10 +324,10 @@ func (this *QSignalMapper) Mapping3(object QObject_ITF /*777 QObject **/) *QObje
 /*
 This signal is emitted when map() is signalled from an object that has an integer mapping set. The object's mapped integer is passed in i.
 
-Note: Signal mapped is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal mapped is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(signalMapper, QOverload<int>::of(&QSignalMapper::mapped),
+  connect(signalMapper, static_cast<void(QSignalMapper::*)(int)>(&QSignalMapper::mapped),
       [=](int i){ /-* ... *-/ });
 
 
@@ -343,7 +339,7 @@ func (this *QSignalMapper) Mapped(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:72
+// /usr/include/qt/QtCore/qsignalmapper.h:70
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void mapped(const QString &)
@@ -351,10 +347,10 @@ func (this *QSignalMapper) Mapped(arg0 int) {
 /*
 This signal is emitted when map() is signalled from an object that has an integer mapping set. The object's mapped integer is passed in i.
 
-Note: Signal mapped is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal mapped is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(signalMapper, QOverload<int>::of(&QSignalMapper::mapped),
+  connect(signalMapper, static_cast<void(QSignalMapper::*)(int)>(&QSignalMapper::mapped),
       [=](int i){ /-* ... *-/ });
 
 
@@ -368,7 +364,7 @@ func (this *QSignalMapper) Mapped1(arg0 string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:73
+// /usr/include/qt/QtCore/qsignalmapper.h:71
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void mapped(QWidget *)
@@ -376,10 +372,10 @@ func (this *QSignalMapper) Mapped1(arg0 string) {
 /*
 This signal is emitted when map() is signalled from an object that has an integer mapping set. The object's mapped integer is passed in i.
 
-Note: Signal mapped is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal mapped is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(signalMapper, QOverload<int>::of(&QSignalMapper::mapped),
+  connect(signalMapper, static_cast<void(QSignalMapper::*)(int)>(&QSignalMapper::mapped),
       [=](int i){ /-* ... *-/ });
 
 
@@ -391,7 +387,7 @@ func (this *QSignalMapper) Mapped2(arg0 unsafe.Pointer /*666*/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:74
+// /usr/include/qt/QtCore/qsignalmapper.h:72
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void mapped(QObject *)
@@ -399,10 +395,10 @@ func (this *QSignalMapper) Mapped2(arg0 unsafe.Pointer /*666*/) {
 /*
 This signal is emitted when map() is signalled from an object that has an integer mapping set. The object's mapped integer is passed in i.
 
-Note: Signal mapped is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal mapped is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(signalMapper, QOverload<int>::of(&QSignalMapper::mapped),
+  connect(signalMapper, static_cast<void(QSignalMapper::*)(int)>(&QSignalMapper::mapped),
       [=](int i){ /-* ... *-/ });
 
 
@@ -418,7 +414,7 @@ func (this *QSignalMapper) Mapped3(arg0 QObject_ITF /*777 QObject **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:77
+// /usr/include/qt/QtCore/qsignalmapper.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void map()
@@ -431,7 +427,7 @@ func (this *QSignalMapper) Map() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsignalmapper.h:78
+// /usr/include/qt/QtCore/qsignalmapper.h:76
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void map(QObject *)

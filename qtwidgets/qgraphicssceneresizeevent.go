@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h
@@ -68,7 +66,7 @@ func (*QGraphicsSceneResizeEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphic
 	return NewQGraphicsSceneResizeEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:297
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:298
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneResizeEvent()
@@ -87,7 +85,7 @@ func NewQGraphicsSceneResizeEvent() *QGraphicsSceneResizeEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:298
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:299
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsSceneResizeEvent()
@@ -102,7 +100,7 @@ func DeleteQGraphicsSceneResizeEvent(this *QGraphicsSceneResizeEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:300
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:301
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF oldSize() const
@@ -118,7 +116,7 @@ func (this *QGraphicsSceneResizeEvent) OldSize() *qtcore.QSizeF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:301
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:302
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOldSize(const QSizeF &)
@@ -135,7 +133,7 @@ func (this *QGraphicsSceneResizeEvent) SetOldSize(size qtcore.QSizeF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:303
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:304
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF newSize() const
@@ -151,7 +149,7 @@ func (this *QGraphicsSceneResizeEvent) NewSize() *qtcore.QSizeF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:304
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:305
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNewSize(const QSizeF &)

@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h
@@ -68,7 +66,7 @@ func (*QGraphicsSceneContextMenuEvent) NewFromPointer(cthis unsafe.Pointer) *QGr
 	return NewQGraphicsSceneContextMenuEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:174
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:175
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneContextMenuEvent(QEvent::Type)
@@ -87,7 +85,7 @@ func NewQGraphicsSceneContextMenuEvent(type_ int) *QGraphicsSceneContextMenuEven
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:174
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:175
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneContextMenuEvent(QEvent::Type)
@@ -108,7 +106,7 @@ func NewQGraphicsSceneContextMenuEventp() *QGraphicsSceneContextMenuEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:175
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:176
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsSceneContextMenuEvent()
@@ -123,7 +121,7 @@ func DeleteQGraphicsSceneContextMenuEvent(this *QGraphicsSceneContextMenuEvent) 
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:177
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:178
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF pos() const
@@ -139,7 +137,7 @@ func (this *QGraphicsSceneContextMenuEvent) Pos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:178
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:179
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPos(const QPointF &)
@@ -156,7 +154,7 @@ func (this *QGraphicsSceneContextMenuEvent) SetPos(pos qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:180
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:181
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF scenePos() const
@@ -172,7 +170,7 @@ func (this *QGraphicsSceneContextMenuEvent) ScenePos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:181
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:182
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScenePos(const QPointF &)
@@ -189,7 +187,7 @@ func (this *QGraphicsSceneContextMenuEvent) SetScenePos(pos qtcore.QPointF_ITF) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:183
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:184
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint screenPos() const
@@ -205,7 +203,7 @@ func (this *QGraphicsSceneContextMenuEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:184
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:185
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScreenPos(const QPoint &)
@@ -222,7 +220,7 @@ func (this *QGraphicsSceneContextMenuEvent) SetScreenPos(pos qtcore.QPoint_ITF) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:186
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:187
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::KeyboardModifiers modifiers() const
@@ -236,7 +234,7 @@ func (this *QGraphicsSceneContextMenuEvent) Modifiers() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:187
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:188
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setModifiers(Qt::KeyboardModifiers)
@@ -249,7 +247,7 @@ func (this *QGraphicsSceneContextMenuEvent) SetModifiers(modifiers int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:189
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:190
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QGraphicsSceneContextMenuEvent::Reason reason() const
@@ -263,7 +261,7 @@ func (this *QGraphicsSceneContextMenuEvent) Reason() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:190
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:191
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setReason(QGraphicsSceneContextMenuEvent::Reason)

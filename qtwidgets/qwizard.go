@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qwizard.h
@@ -96,7 +94,7 @@ func (*QWizard) NewFromPointer(cthis unsafe.Pointer) *QWizard {
 	return NewQWizardFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:56
+// /usr/include/qt/QtWidgets/qwizard.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -110,7 +108,7 @@ func (this *QWizard) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:123
+// /usr/include/qt/QtWidgets/qwizard.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWizard(QWidget *, Qt::WindowFlags)
@@ -135,7 +133,7 @@ func NewQWizard(parent QWidget_ITF /*777 QWidget **/, flags int) *QWizard {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:123
+// /usr/include/qt/QtWidgets/qwizard.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWizard(QWidget *, Qt::WindowFlags)
@@ -160,7 +158,7 @@ func NewQWizardp() *QWizard {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:123
+// /usr/include/qt/QtWidgets/qwizard.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWizard(QWidget *, Qt::WindowFlags)
@@ -187,7 +185,7 @@ func NewQWizardp1(parent QWidget_ITF /*777 QWidget **/) *QWizard {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:124
+// /usr/include/qt/QtWidgets/qwizard.h:126
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWizard()
@@ -202,7 +200,7 @@ func DeleteQWizard(this *QWizard) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:126
+// /usr/include/qt/QtWidgets/qwizard.h:128
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int addPage(QWizardPage *)
@@ -224,7 +222,7 @@ func (this *QWizard) AddPage(page QWizardPage_ITF /*777 QWizardPage **/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:127
+// /usr/include/qt/QtWidgets/qwizard.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPage(int, QWizardPage *)
@@ -245,7 +243,7 @@ func (this *QWizard) SetPage(id int, page QWizardPage_ITF /*777 QWizardPage **/)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:128
+// /usr/include/qt/QtWidgets/qwizard.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removePage(int)
@@ -264,7 +262,7 @@ func (this *QWizard) RemovePage(id int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:129
+// /usr/include/qt/QtWidgets/qwizard.h:131
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWizardPage * page(int) const
@@ -280,7 +278,7 @@ func (this *QWizard) Page(id int) *QWizardPage /*777 QWizardPage **/ {
 	return /*==*/ NewQWizardPageFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:130
+// /usr/include/qt/QtWidgets/qwizard.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasVisitedPage(int) const
@@ -298,7 +296,7 @@ func (this *QWizard) HasVisitedPage(id int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:133
+// /usr/include/qt/QtWidgets/qwizard.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStartId(int)
@@ -311,7 +309,7 @@ func (this *QWizard) SetStartId(id int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:134
+// /usr/include/qt/QtWidgets/qwizard.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int startId() const
@@ -325,7 +323,7 @@ func (this *QWizard) StartId() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:135
+// /usr/include/qt/QtWidgets/qwizard.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWizardPage * currentPage() const
@@ -343,7 +341,7 @@ func (this *QWizard) CurrentPage() *QWizardPage /*777 QWizardPage **/ {
 	return /*==*/ NewQWizardPageFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:136
+// /usr/include/qt/QtWidgets/qwizard.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentId() const
@@ -357,7 +355,7 @@ func (this *QWizard) CurrentId() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:138
+// /usr/include/qt/QtWidgets/qwizard.h:140
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool validateCurrentPage()
@@ -377,7 +375,7 @@ func (this *QWizard) ValidateCurrentPage() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:139
+// /usr/include/qt/QtWidgets/qwizard.h:141
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int nextId() const
@@ -399,7 +397,7 @@ func (this *QWizard) NextId() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:141
+// /usr/include/qt/QtWidgets/qwizard.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setField(const QString &, const QVariant &)
@@ -422,7 +420,7 @@ func (this *QWizard) SetField(name string, value qtcore.QVariant_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:142
+// /usr/include/qt/QtWidgets/qwizard.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant field(const QString &) const
@@ -444,7 +442,7 @@ func (this *QWizard) Field(name string) *qtcore.QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:144
+// /usr/include/qt/QtWidgets/qwizard.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWizardStyle(QWizard::WizardStyle)
@@ -457,7 +455,7 @@ func (this *QWizard) SetWizardStyle(style int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:145
+// /usr/include/qt/QtWidgets/qwizard.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QWizard::WizardStyle wizardStyle() const
@@ -471,7 +469,7 @@ func (this *QWizard) WizardStyle() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:147
+// /usr/include/qt/QtWidgets/qwizard.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(QWizard::WizardOption, bool)
@@ -486,7 +484,7 @@ func (this *QWizard) SetOption(option int, on bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:147
+// /usr/include/qt/QtWidgets/qwizard.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(QWizard::WizardOption, bool)
@@ -503,7 +501,7 @@ func (this *QWizard) SetOptionp(option int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:148
+// /usr/include/qt/QtWidgets/qwizard.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool testOption(QWizard::WizardOption) const
@@ -519,7 +517,7 @@ func (this *QWizard) TestOption(option int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:149
+// /usr/include/qt/QtWidgets/qwizard.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOptions(QWizard::WizardOptions)
@@ -532,7 +530,7 @@ func (this *QWizard) SetOptions(options int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:150
+// /usr/include/qt/QtWidgets/qwizard.h:152
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QWizard::WizardOptions options() const
@@ -546,7 +544,7 @@ func (this *QWizard) Options() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:152
+// /usr/include/qt/QtWidgets/qwizard.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setButtonText(QWizard::WizardButton, const QString &)
@@ -569,7 +567,7 @@ func (this *QWizard) SetButtonText(which int, text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:153
+// /usr/include/qt/QtWidgets/qwizard.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString buttonText(QWizard::WizardButton) const
@@ -592,7 +590,7 @@ func (this *QWizard) ButtonText(which int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:155
+// /usr/include/qt/QtWidgets/qwizard.h:157
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setButton(QWizard::WizardButton, QAbstractButton *)
@@ -613,7 +611,7 @@ func (this *QWizard) SetButton(which int, button QAbstractButton_ITF /*777 QAbst
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:156
+// /usr/include/qt/QtWidgets/qwizard.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractButton * button(QWizard::WizardButton) const
@@ -629,7 +627,7 @@ func (this *QWizard) Button(which int) *QAbstractButton /*777 QAbstractButton **
 	return /*==*/ NewQAbstractButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:158
+// /usr/include/qt/QtWidgets/qwizard.h:160
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTitleFormat(Qt::TextFormat)
@@ -642,7 +640,7 @@ func (this *QWizard) SetTitleFormat(format int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:159
+// /usr/include/qt/QtWidgets/qwizard.h:161
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::TextFormat titleFormat() const
@@ -656,7 +654,7 @@ func (this *QWizard) TitleFormat() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:160
+// /usr/include/qt/QtWidgets/qwizard.h:162
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSubTitleFormat(Qt::TextFormat)
@@ -669,7 +667,7 @@ func (this *QWizard) SetSubTitleFormat(format int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:161
+// /usr/include/qt/QtWidgets/qwizard.h:163
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::TextFormat subTitleFormat() const
@@ -683,7 +681,7 @@ func (this *QWizard) SubTitleFormat() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:162
+// /usr/include/qt/QtWidgets/qwizard.h:164
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPixmap(QWizard::WizardPixmap, const QPixmap &)
@@ -706,7 +704,7 @@ func (this *QWizard) SetPixmap(which int, pixmap qtgui.QPixmap_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:163
+// /usr/include/qt/QtWidgets/qwizard.h:165
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPixmap pixmap(QWizard::WizardPixmap) const
@@ -726,7 +724,7 @@ func (this *QWizard) Pixmap(which int) *qtgui.QPixmap /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:165
+// /usr/include/qt/QtWidgets/qwizard.h:167
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSideWidget(QWidget *)
@@ -759,7 +757,7 @@ func (this *QWizard) SetSideWidget(widget QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:166
+// /usr/include/qt/QtWidgets/qwizard.h:168
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * sideWidget() const
@@ -779,7 +777,7 @@ func (this *QWizard) SideWidget() *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:168
+// /usr/include/qt/QtWidgets/qwizard.h:170
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultProperty(const char *, const char *, const char *)
@@ -815,7 +813,7 @@ func (this *QWizard) SetDefaultProperty(className string, property string, chang
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:171
+// /usr/include/qt/QtWidgets/qwizard.h:173
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setVisible(bool)
@@ -828,7 +826,7 @@ func (this *QWizard) SetVisible(visible bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:172
+// /usr/include/qt/QtWidgets/qwizard.h:174
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
@@ -844,7 +842,7 @@ func (this *QWizard) SizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:175
+// /usr/include/qt/QtWidgets/qwizard.h:177
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentIdChanged(int)
@@ -861,7 +859,7 @@ func (this *QWizard) CurrentIdChanged(id int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:176
+// /usr/include/qt/QtWidgets/qwizard.h:178
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void helpRequested()
@@ -912,7 +910,7 @@ func (this *QWizard) HelpRequested() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:177
+// /usr/include/qt/QtWidgets/qwizard.h:179
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void customButtonClicked(int)
@@ -929,7 +927,7 @@ func (this *QWizard) CustomButtonClicked(which int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:178
+// /usr/include/qt/QtWidgets/qwizard.h:180
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void pageAdded(int)
@@ -946,7 +944,7 @@ func (this *QWizard) PageAdded(id int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:179
+// /usr/include/qt/QtWidgets/qwizard.h:181
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void pageRemoved(int)
@@ -963,7 +961,7 @@ func (this *QWizard) PageRemoved(id int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:182
+// /usr/include/qt/QtWidgets/qwizard.h:184
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void back()
@@ -980,7 +978,7 @@ func (this *QWizard) Back() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:183
+// /usr/include/qt/QtWidgets/qwizard.h:185
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void next()
@@ -997,7 +995,7 @@ func (this *QWizard) Next() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:184
+// /usr/include/qt/QtWidgets/qwizard.h:186
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void restart()
@@ -1012,7 +1010,7 @@ func (this *QWizard) Restart() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:187
+// /usr/include/qt/QtWidgets/qwizard.h:189
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -1030,7 +1028,7 @@ func (this *QWizard) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:188
+// /usr/include/qt/QtWidgets/qwizard.h:190
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
@@ -1047,7 +1045,7 @@ func (this *QWizard) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:189
+// /usr/include/qt/QtWidgets/qwizard.h:191
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
@@ -1064,7 +1062,7 @@ func (this *QWizard) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent **
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:193
+// /usr/include/qt/QtWidgets/qwizard.h:195
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void done(int)
@@ -1077,7 +1075,7 @@ func (this *QWizard) Done(result int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:194
+// /usr/include/qt/QtWidgets/qwizard.h:196
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void initializePage(int)
@@ -1096,7 +1094,7 @@ func (this *QWizard) InitializePage(id int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:195
+// /usr/include/qt/QtWidgets/qwizard.h:197
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void cleanupPage(int)

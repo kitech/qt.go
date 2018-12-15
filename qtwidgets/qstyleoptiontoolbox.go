@@ -64,7 +64,7 @@ func (*QStyleOptionToolBox) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionTo
 	return NewQStyleOptionToolBoxFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:472
+// /usr/include/qt/QtWidgets/qstyleoption.h:461
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionToolBox()
@@ -83,7 +83,7 @@ func NewQStyleOptionToolBox() *QStyleOptionToolBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:476
+// /usr/include/qt/QtWidgets/qstyleoption.h:465
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionToolBox(int)

@@ -67,25 +67,6 @@ func (*QBasicMutex) NewFromPointer(cthis unsafe.Pointer) *QBasicMutex {
 // /usr/include/qt/QtCore/qmutex.h:71
 // index:0
 // Public inline Visibility=Default Availability=Available
-// [-2] void QBasicMutex()
-
-/*
-
- */
-func (*QBasicMutex) NewForInherit() *QBasicMutex {
-	return NewQBasicMutex()
-}
-func NewQBasicMutex() *QBasicMutex {
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QBasicMutexC2Ev", qtrt.FFI_TYPE_POINTER)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQBasicMutexFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQBasicMutex)
-	return gothis
-}
-
-// /usr/include/qt/QtCore/qmutex.h:77
-// index:0
-// Public inline Visibility=Default Availability=Available
 // [-2] void lock()
 
 /*
@@ -100,7 +81,7 @@ func (this *QBasicMutex) Lock() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qmutex.h:83
+// /usr/include/qt/QtCore/qmutex.h:77
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void unlock()
@@ -115,7 +96,7 @@ func (this *QBasicMutex) Unlock() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qmutex.h:89
+// /usr/include/qt/QtCore/qmutex.h:83
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool tryLock()
@@ -137,7 +118,7 @@ func (this *QBasicMutex) TryLock() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmutex.h:94
+// /usr/include/qt/QtCore/qmutex.h:88
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool try_lock()
@@ -157,7 +138,7 @@ func (this *QBasicMutex) Try_lock() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmutex.h:96
+// /usr/include/qt/QtCore/qmutex.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isRecursive()
@@ -173,7 +154,7 @@ func (this *QBasicMutex) IsRecursive() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmutex.h:97
+// /usr/include/qt/QtCore/qmutex.h:91
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool isRecursive() const

@@ -99,7 +99,7 @@ func DeleteQGeoShape(this *QGeoShape) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtPositioning/qgeoshape.h:73
+// /usr/include/qt/QtPositioning/qgeoshape.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QGeoShape::ShapeType type() const
@@ -115,7 +115,7 @@ func (this *QGeoShape) Type() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtPositioning/qgeoshape.h:75
+// /usr/include/qt/QtPositioning/qgeoshape.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -131,7 +131,7 @@ func (this *QGeoShape) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtPositioning/qgeoshape.h:76
+// /usr/include/qt/QtPositioning/qgeoshape.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEmpty() const
@@ -149,7 +149,7 @@ func (this *QGeoShape) IsEmpty() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtPositioning/qgeoshape.h:77
+// /usr/include/qt/QtPositioning/qgeoshape.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool contains(const QGeoCoordinate &) const
@@ -167,7 +167,7 @@ func (this *QGeoShape) Contains(coordinate QGeoCoordinate_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtPositioning/qgeoshape.h:78
+// /usr/include/qt/QtPositioning/qgeoshape.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGeoRectangle boundingGeoRectangle() const
@@ -185,7 +185,7 @@ func (this *QGeoShape) BoundingGeoRectangle() *QGeoRectangle /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtPositioning/qgeoshape.h:79
+// /usr/include/qt/QtPositioning/qgeoshape.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGeoCoordinate center() const
@@ -203,7 +203,7 @@ func (this *QGeoShape) Center() *QGeoCoordinate /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtPositioning/qgeoshape.h:81
+// /usr/include/qt/QtPositioning/qgeoshape.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void extendShape(const QGeoCoordinate &)
@@ -220,7 +220,7 @@ func (this *QGeoShape) ExtendShape(coordinate QGeoCoordinate_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtPositioning/qgeoshape.h:83
+// /usr/include/qt/QtPositioning/qgeoshape.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QGeoShape &) const
@@ -238,7 +238,7 @@ func (this *QGeoShape) Operator_equal_equal(other QGeoShape_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtPositioning/qgeoshape.h:84
+// /usr/include/qt/QtPositioning/qgeoshape.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator!=(const QGeoShape &) const
@@ -256,7 +256,7 @@ func (this *QGeoShape) Operator_not_equal(other QGeoShape_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtPositioning/qgeoshape.h:86
+// /usr/include/qt/QtPositioning/qgeoshape.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGeoShape & operator=(const QGeoShape &)
@@ -276,7 +276,7 @@ func (this *QGeoShape) Operator_equal(other QGeoShape_ITF) *QGeoShape {
 	return rv2
 }
 
-// /usr/include/qt/QtPositioning/qgeoshape.h:88
+// /usr/include/qt/QtPositioning/qgeoshape.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString() const
@@ -314,9 +314,6 @@ const QGeoShape__CircleType QGeoShape__ShapeType = 2
 // A path type.
 const QGeoShape__PathType QGeoShape__ShapeType = 3
 
-//
-const QGeoShape__PolygonType QGeoShape__ShapeType = 4
-
 func (this *QGeoShape) ShapeTypeItemName(val int) string {
 	switch val {
 	case QGeoShape__UnknownType: // 0
@@ -327,8 +324,6 @@ func (this *QGeoShape) ShapeTypeItemName(val int) string {
 		return "CircleType"
 	case QGeoShape__PathType: // 3
 		return "PathType"
-	case QGeoShape__PolygonType: // 4
-		return "PolygonType"
 	default:
 		return fmt.Sprintf("%d", val)
 	}

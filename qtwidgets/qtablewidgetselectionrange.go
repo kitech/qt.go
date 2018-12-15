@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qtablewidget.h
@@ -70,7 +68,7 @@ func (*QTableWidgetSelectionRange) NewFromPointer(cthis unsafe.Pointer) *QTableW
 	return NewQTableWidgetSelectionRangeFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:55
+// /usr/include/qt/QtWidgets/qtablewidget.h:57
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTableWidgetSelectionRange()
@@ -89,7 +87,7 @@ func NewQTableWidgetSelectionRange() *QTableWidgetSelectionRange {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:56
+// /usr/include/qt/QtWidgets/qtablewidget.h:58
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTableWidgetSelectionRange(int, int, int, int)
@@ -108,7 +106,7 @@ func NewQTableWidgetSelectionRange1(top int, left int, bottom int, right int) *Q
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:58
+// /usr/include/qt/QtWidgets/qtablewidget.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTableWidgetSelectionRange()
@@ -123,7 +121,7 @@ func DeleteQTableWidgetSelectionRange(this *QTableWidgetSelectionRange) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:60
+// /usr/include/qt/QtWidgets/qtablewidget.h:62
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int topRow() const
@@ -137,7 +135,7 @@ func (this *QTableWidgetSelectionRange) TopRow() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:61
+// /usr/include/qt/QtWidgets/qtablewidget.h:63
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int bottomRow() const
@@ -151,7 +149,7 @@ func (this *QTableWidgetSelectionRange) BottomRow() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:62
+// /usr/include/qt/QtWidgets/qtablewidget.h:64
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int leftColumn() const
@@ -165,7 +163,7 @@ func (this *QTableWidgetSelectionRange) LeftColumn() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:63
+// /usr/include/qt/QtWidgets/qtablewidget.h:65
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int rightColumn() const
@@ -179,7 +177,7 @@ func (this *QTableWidgetSelectionRange) RightColumn() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:64
+// /usr/include/qt/QtWidgets/qtablewidget.h:66
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int rowCount() const
@@ -197,7 +195,7 @@ func (this *QTableWidgetSelectionRange) RowCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:65
+// /usr/include/qt/QtWidgets/qtablewidget.h:67
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int columnCount() const

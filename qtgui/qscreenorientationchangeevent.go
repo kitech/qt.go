@@ -65,7 +65,7 @@ func (*QScreenOrientationChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QScr
 	return NewQScreenOrientationChangeEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:1038
+// /usr/include/qt/QtGui/qevent.h:1031
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QScreenOrientationChangeEvent(QScreen *, Qt::ScreenOrientation)
@@ -88,7 +88,7 @@ func NewQScreenOrientationChangeEvent(screen QScreen_ITF /*777 QScreen **/, orie
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:1039
+// /usr/include/qt/QtGui/qevent.h:1032
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QScreenOrientationChangeEvent()
@@ -103,7 +103,7 @@ func DeleteQScreenOrientationChangeEvent(this *QScreenOrientationChangeEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:1041
+// /usr/include/qt/QtGui/qevent.h:1034
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QScreen * screen() const
@@ -117,7 +117,7 @@ func (this *QScreenOrientationChangeEvent) Screen() *QScreen /*777 QScreen **/ {
 	return /*==*/ NewQScreenFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qevent.h:1042
+// /usr/include/qt/QtGui/qevent.h:1035
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ScreenOrientation orientation() const

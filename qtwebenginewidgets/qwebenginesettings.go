@@ -75,7 +75,7 @@ func (*QWebEngineSettings) NewFromPointer(cthis unsafe.Pointer) *QWebEngineSetti
 	return NewQWebEngineSettingsFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:105
+// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:103
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QWebEngineSettings * globalSettings()
@@ -94,7 +94,7 @@ func QWebEngineSettings_GlobalSettings() *QWebEngineSettings /*777 QWebEngineSet
 	return rv
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:107
+// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:105
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QWebEngineSettings * defaultSettings()
@@ -113,7 +113,7 @@ func QWebEngineSettings_DefaultSettings() *QWebEngineSettings /*777 QWebEngineSe
 	return rv
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:109
+// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFontFamily(QWebEngineSettings::FontFamily, const QString &)
@@ -128,7 +128,7 @@ func (this *QWebEngineSettings) SetFontFamily(which int, family string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:110
+// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString fontFamily(QWebEngineSettings::FontFamily) const
@@ -145,7 +145,7 @@ func (this *QWebEngineSettings) FontFamily(which int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:111
+// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetFontFamily(QWebEngineSettings::FontFamily)
@@ -158,7 +158,7 @@ func (this *QWebEngineSettings) ResetFontFamily(which int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:113
+// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFontSize(QWebEngineSettings::FontSize, int)
@@ -171,7 +171,7 @@ func (this *QWebEngineSettings) SetFontSize(type_ int, size int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:114
+// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int fontSize(QWebEngineSettings::FontSize) const
@@ -185,7 +185,7 @@ func (this *QWebEngineSettings) FontSize(type_ int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:115
+// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetFontSize(QWebEngineSettings::FontSize)
@@ -198,7 +198,7 @@ func (this *QWebEngineSettings) ResetFontSize(type_ int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:117
+// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAttribute(QWebEngineSettings::WebAttribute, bool)
@@ -211,7 +211,7 @@ func (this *QWebEngineSettings) SetAttribute(attr int, on bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:118
+// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool testAttribute(QWebEngineSettings::WebAttribute) const
@@ -225,7 +225,7 @@ func (this *QWebEngineSettings) TestAttribute(attr int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:119
+// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetAttribute(QWebEngineSettings::WebAttribute)
@@ -238,7 +238,7 @@ func (this *QWebEngineSettings) ResetAttribute(attr int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:121
+// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultTextEncoding(const QString &)
@@ -253,7 +253,7 @@ func (this *QWebEngineSettings) SetDefaultTextEncoding(encoding string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:122
+// /usr/include/qt/QtWebEngineWidgets/qwebenginesettings.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString defaultTextEncoding() const
@@ -406,12 +406,6 @@ const QWebEngineSettings__AllowRunningInsecureContent QWebEngineSettings__WebAtt
 //
 const QWebEngineSettings__AllowGeolocationOnInsecureOrigins QWebEngineSettings__WebAttribute = 23
 
-//
-const QWebEngineSettings__AllowWindowActivationFromJavaScript QWebEngineSettings__WebAttribute = 24
-
-//
-const QWebEngineSettings__ShowScrollBars QWebEngineSettings__WebAttribute = 25
-
 func (this *QWebEngineSettings) WebAttributeItemName(val int) string {
 	switch val {
 	case QWebEngineSettings__AutoLoadImages: // 0
@@ -462,10 +456,6 @@ func (this *QWebEngineSettings) WebAttributeItemName(val int) string {
 		return "AllowRunningInsecureContent"
 	case QWebEngineSettings__AllowGeolocationOnInsecureOrigins: // 23
 		return "AllowGeolocationOnInsecureOrigins"
-	case QWebEngineSettings__AllowWindowActivationFromJavaScript: // 24
-		return "AllowWindowActivationFromJavaScript"
-	case QWebEngineSettings__ShowScrollBars: // 25
-		return "ShowScrollBars"
 	default:
 		return fmt.Sprintf("%d", val)
 	}

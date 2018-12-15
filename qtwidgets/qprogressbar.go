@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qprogressbar.h
@@ -81,7 +79,7 @@ func (*QProgressBar) NewFromPointer(cthis unsafe.Pointer) *QProgressBar {
 	return NewQProgressBarFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:55
+// /usr/include/qt/QtWidgets/qprogressbar.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -95,7 +93,7 @@ func (this *QProgressBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:71
+// /usr/include/qt/QtWidgets/qprogressbar.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QProgressBar(QWidget *)
@@ -122,7 +120,7 @@ func NewQProgressBar(parent QWidget_ITF /*777 QWidget **/) *QProgressBar {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:71
+// /usr/include/qt/QtWidgets/qprogressbar.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QProgressBar(QWidget *)
@@ -147,7 +145,7 @@ func NewQProgressBarp() *QProgressBar {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:72
+// /usr/include/qt/QtWidgets/qprogressbar.h:73
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QProgressBar()
@@ -162,7 +160,7 @@ func DeleteQProgressBar(this *QProgressBar) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:74
+// /usr/include/qt/QtWidgets/qprogressbar.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int minimum() const
@@ -176,7 +174,7 @@ func (this *QProgressBar) Minimum() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:75
+// /usr/include/qt/QtWidgets/qprogressbar.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int maximum() const
@@ -190,7 +188,7 @@ func (this *QProgressBar) Maximum() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:77
+// /usr/include/qt/QtWidgets/qprogressbar.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int value() const
@@ -204,7 +202,7 @@ func (this *QProgressBar) Value() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:79
+// /usr/include/qt/QtWidgets/qprogressbar.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString text() const
@@ -221,7 +219,7 @@ func (this *QProgressBar) Text() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:80
+// /usr/include/qt/QtWidgets/qprogressbar.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextVisible(bool)
@@ -234,7 +232,7 @@ func (this *QProgressBar) SetTextVisible(visible bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:81
+// /usr/include/qt/QtWidgets/qprogressbar.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isTextVisible() const
@@ -248,7 +246,7 @@ func (this *QProgressBar) IsTextVisible() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:83
+// /usr/include/qt/QtWidgets/qprogressbar.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Alignment alignment() const
@@ -262,7 +260,7 @@ func (this *QProgressBar) Alignment() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:84
+// /usr/include/qt/QtWidgets/qprogressbar.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAlignment(Qt::Alignment)
@@ -275,7 +273,7 @@ func (this *QProgressBar) SetAlignment(alignment int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:86
+// /usr/include/qt/QtWidgets/qprogressbar.h:87
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
@@ -291,7 +289,7 @@ func (this *QProgressBar) SizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:87
+// /usr/include/qt/QtWidgets/qprogressbar.h:88
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
@@ -307,7 +305,7 @@ func (this *QProgressBar) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:89
+// /usr/include/qt/QtWidgets/qprogressbar.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Orientation orientation() const
@@ -321,7 +319,7 @@ func (this *QProgressBar) Orientation() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:91
+// /usr/include/qt/QtWidgets/qprogressbar.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setInvertedAppearance(bool)
@@ -334,7 +332,7 @@ func (this *QProgressBar) SetInvertedAppearance(invert bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:92
+// /usr/include/qt/QtWidgets/qprogressbar.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool invertedAppearance() const
@@ -348,7 +346,7 @@ func (this *QProgressBar) InvertedAppearance() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:93
+// /usr/include/qt/QtWidgets/qprogressbar.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextDirection(QProgressBar::Direction)
@@ -361,7 +359,7 @@ func (this *QProgressBar) SetTextDirection(textDirection int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:94
+// /usr/include/qt/QtWidgets/qprogressbar.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QProgressBar::Direction textDirection() const
@@ -375,7 +373,7 @@ func (this *QProgressBar) TextDirection() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:96
+// /usr/include/qt/QtWidgets/qprogressbar.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QString &)
@@ -390,7 +388,7 @@ func (this *QProgressBar) SetFormat(format string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:97
+// /usr/include/qt/QtWidgets/qprogressbar.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetFormat()
@@ -403,7 +401,7 @@ func (this *QProgressBar) ResetFormat() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:98
+// /usr/include/qt/QtWidgets/qprogressbar.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString format() const
@@ -420,7 +418,7 @@ func (this *QProgressBar) Format() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:101
+// /usr/include/qt/QtWidgets/qprogressbar.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reset()
@@ -433,7 +431,7 @@ func (this *QProgressBar) Reset() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:102
+// /usr/include/qt/QtWidgets/qprogressbar.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRange(int, int)
@@ -454,7 +452,7 @@ func (this *QProgressBar) SetRange(minimum int, maximum int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:103
+// /usr/include/qt/QtWidgets/qprogressbar.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimum(int)
@@ -467,7 +465,7 @@ func (this *QProgressBar) SetMinimum(minimum int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:104
+// /usr/include/qt/QtWidgets/qprogressbar.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximum(int)
@@ -480,7 +478,7 @@ func (this *QProgressBar) SetMaximum(maximum int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:105
+// /usr/include/qt/QtWidgets/qprogressbar.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setValue(int)
@@ -493,7 +491,7 @@ func (this *QProgressBar) SetValue(value int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:106
+// /usr/include/qt/QtWidgets/qprogressbar.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOrientation(Qt::Orientation)
@@ -506,7 +504,7 @@ func (this *QProgressBar) SetOrientation(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:109
+// /usr/include/qt/QtWidgets/qprogressbar.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void valueChanged(int)
@@ -521,7 +519,7 @@ func (this *QProgressBar) ValueChanged(value int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:112
+// /usr/include/qt/QtWidgets/qprogressbar.h:113
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -539,7 +537,7 @@ func (this *QProgressBar) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:113
+// /usr/include/qt/QtWidgets/qprogressbar.h:114
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
@@ -556,7 +554,7 @@ func (this *QProgressBar) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qprogressbar.h:114
+// /usr/include/qt/QtWidgets/qprogressbar.h:115
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionProgressBar *) const
@@ -580,7 +578,7 @@ Specifies the reading direction of the text for vertical progress bars.
 
 
 
-Note that whether or not the text is drawn is dependent on the style. Currently CleanLooks and Plastique draw the text. Mac, Windows and WindowsVista style do not.
+Note that whether or not the text is drawn is dependent on the style. Currently CleanLooks and Plastique draw the text. Mac, Windows and WindowsXP style do not.
 
 This enum was introduced or modified in  Qt 4.1.
 

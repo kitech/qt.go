@@ -359,7 +359,7 @@ func (this *QDesktopWidget) ScreenGeometry2(point qtcore.QPoint_ITF) *qtcore.QRe
 /*
 Returns the available geometry of the screen with index screen. What is available will be subrect of screenGeometry() based on what the platform decides is available (for example excludes the dock and menu bar on macOS, or the task bar on Windows). The default screen is used if screen is -1.
 
-See also screenNumber(), screenGeometry(), and QScreen::availableGeometry().
+See also screenNumber() and screenGeometry().
 */
 func (this *QDesktopWidget) AvailableGeometry(screen int) *qtcore.QRect /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK14QDesktopWidget17availableGeometryEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), screen)
@@ -377,7 +377,7 @@ func (this *QDesktopWidget) AvailableGeometry(screen int) *qtcore.QRect /*123*/ 
 /*
 Returns the available geometry of the screen with index screen. What is available will be subrect of screenGeometry() based on what the platform decides is available (for example excludes the dock and menu bar on macOS, or the task bar on Windows). The default screen is used if screen is -1.
 
-See also screenNumber(), screenGeometry(), and QScreen::availableGeometry().
+See also screenNumber() and screenGeometry().
 */
 func (this *QDesktopWidget) AvailableGeometryp() *qtcore.QRect /*123*/ {
 	// arg: 0, int=Int, =Invalid, , Invalid
@@ -397,7 +397,7 @@ func (this *QDesktopWidget) AvailableGeometryp() *qtcore.QRect /*123*/ {
 /*
 Returns the available geometry of the screen with index screen. What is available will be subrect of screenGeometry() based on what the platform decides is available (for example excludes the dock and menu bar on macOS, or the task bar on Windows). The default screen is used if screen is -1.
 
-See also screenNumber(), screenGeometry(), and QScreen::availableGeometry().
+See also screenNumber() and screenGeometry().
 */
 func (this *QDesktopWidget) AvailableGeometry1(widget QWidget_ITF /*777 const QWidget **/) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer
@@ -419,7 +419,7 @@ func (this *QDesktopWidget) AvailableGeometry1(widget QWidget_ITF /*777 const QW
 /*
 Returns the available geometry of the screen with index screen. What is available will be subrect of screenGeometry() based on what the platform decides is available (for example excludes the dock and menu bar on macOS, or the task bar on Windows). The default screen is used if screen is -1.
 
-See also screenNumber(), screenGeometry(), and QScreen::availableGeometry().
+See also screenNumber() and screenGeometry().
 */
 func (this *QDesktopWidget) AvailableGeometry2(point qtcore.QPoint_ITF) *qtcore.QRect /*123*/ {
 	var convArg0 unsafe.Pointer

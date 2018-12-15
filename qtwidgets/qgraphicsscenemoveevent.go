@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h
@@ -66,7 +64,7 @@ func (*QGraphicsSceneMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphicsS
 	return NewQGraphicsSceneMoveEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:313
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:314
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneMoveEvent()
@@ -85,7 +83,7 @@ func NewQGraphicsSceneMoveEvent() *QGraphicsSceneMoveEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:314
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:315
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsSceneMoveEvent()
@@ -100,7 +98,7 @@ func DeleteQGraphicsSceneMoveEvent(this *QGraphicsSceneMoveEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:316
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:317
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF oldPos() const
@@ -116,7 +114,7 @@ func (this *QGraphicsSceneMoveEvent) OldPos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:317
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:318
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOldPos(const QPointF &)
@@ -133,7 +131,7 @@ func (this *QGraphicsSceneMoveEvent) SetOldPos(pos qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:319
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:320
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF newPos() const
@@ -149,7 +147,7 @@ func (this *QGraphicsSceneMoveEvent) NewPos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:320
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:321
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNewPos(const QPointF &)

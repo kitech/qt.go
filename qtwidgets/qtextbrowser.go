@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qtextbrowser.h
@@ -20,7 +18,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 77
+// extern C begin: 76
 */
 // import "C"
 import "unsafe"
@@ -106,7 +104,7 @@ func (*QTextBrowser) NewFromPointer(cthis unsafe.Pointer) *QTextBrowser {
 	return NewQTextBrowserFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:55
+// /usr/include/qt/QtWidgets/qtextbrowser.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -120,7 +118,7 @@ func (this *QTextBrowser) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:66
+// /usr/include/qt/QtWidgets/qtextbrowser.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTextBrowser(QWidget *)
@@ -143,7 +141,7 @@ func NewQTextBrowser(parent QWidget_ITF /*777 QWidget **/) *QTextBrowser {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:66
+// /usr/include/qt/QtWidgets/qtextbrowser.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTextBrowser(QWidget *)
@@ -164,7 +162,7 @@ func NewQTextBrowserp() *QTextBrowser {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:67
+// /usr/include/qt/QtWidgets/qtextbrowser.h:68
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTextBrowser()
@@ -179,7 +177,7 @@ func DeleteQTextBrowser(this *QTextBrowser) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:69
+// /usr/include/qt/QtWidgets/qtextbrowser.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl source() const
@@ -195,7 +193,7 @@ func (this *QTextBrowser) Source() *qtcore.QUrl /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:71
+// /usr/include/qt/QtWidgets/qtextbrowser.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList searchPaths() const
@@ -211,7 +209,7 @@ func (this *QTextBrowser) SearchPaths() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:72
+// /usr/include/qt/QtWidgets/qtextbrowser.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSearchPaths(const QStringList &)
@@ -228,7 +226,7 @@ func (this *QTextBrowser) SetSearchPaths(paths qtcore.QStringList_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:74
+// /usr/include/qt/QtWidgets/qtextbrowser.h:75
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant loadResource(int, const QUrl &)
@@ -260,7 +258,7 @@ func (this *QTextBrowser) LoadResource(type_ int, name qtcore.QUrl_ITF) *qtcore.
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:76
+// /usr/include/qt/QtWidgets/qtextbrowser.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isBackwardAvailable() const
@@ -278,7 +276,7 @@ func (this *QTextBrowser) IsBackwardAvailable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:77
+// /usr/include/qt/QtWidgets/qtextbrowser.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isForwardAvailable() const
@@ -296,7 +294,7 @@ func (this *QTextBrowser) IsForwardAvailable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:78
+// /usr/include/qt/QtWidgets/qtextbrowser.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clearHistory()
@@ -313,7 +311,7 @@ func (this *QTextBrowser) ClearHistory() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:79
+// /usr/include/qt/QtWidgets/qtextbrowser.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString historyTitle(int) const
@@ -345,7 +343,7 @@ func (this *QTextBrowser) HistoryTitle(arg0 int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:80
+// /usr/include/qt/QtWidgets/qtextbrowser.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl historyUrl(int) const
@@ -370,7 +368,7 @@ func (this *QTextBrowser) HistoryUrl(arg0 int) *qtcore.QUrl /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:81
+// /usr/include/qt/QtWidgets/qtextbrowser.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int backwardHistoryCount() const
@@ -386,7 +384,7 @@ func (this *QTextBrowser) BackwardHistoryCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:82
+// /usr/include/qt/QtWidgets/qtextbrowser.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int forwardHistoryCount() const
@@ -402,7 +400,7 @@ func (this *QTextBrowser) ForwardHistoryCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:84
+// /usr/include/qt/QtWidgets/qtextbrowser.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool openExternalLinks() const
@@ -416,7 +414,7 @@ func (this *QTextBrowser) OpenExternalLinks() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:85
+// /usr/include/qt/QtWidgets/qtextbrowser.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOpenExternalLinks(bool)
@@ -429,7 +427,7 @@ func (this *QTextBrowser) SetOpenExternalLinks(open bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:87
+// /usr/include/qt/QtWidgets/qtextbrowser.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool openLinks() const
@@ -443,7 +441,7 @@ func (this *QTextBrowser) OpenLinks() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:88
+// /usr/include/qt/QtWidgets/qtextbrowser.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOpenLinks(bool)
@@ -456,7 +454,7 @@ func (this *QTextBrowser) SetOpenLinks(open bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:91
+// /usr/include/qt/QtWidgets/qtextbrowser.h:92
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setSource(const QUrl &)
@@ -473,7 +471,7 @@ func (this *QTextBrowser) SetSource(name qtcore.QUrl_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:92
+// /usr/include/qt/QtWidgets/qtextbrowser.h:93
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void backward()
@@ -488,7 +486,7 @@ func (this *QTextBrowser) Backward() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:93
+// /usr/include/qt/QtWidgets/qtextbrowser.h:94
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void forward()
@@ -503,7 +501,7 @@ func (this *QTextBrowser) Forward() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:94
+// /usr/include/qt/QtWidgets/qtextbrowser.h:95
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void home()
@@ -516,7 +514,7 @@ func (this *QTextBrowser) Home() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:95
+// /usr/include/qt/QtWidgets/qtextbrowser.h:96
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void reload()
@@ -529,7 +527,7 @@ func (this *QTextBrowser) Reload() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:98
+// /usr/include/qt/QtWidgets/qtextbrowser.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void backwardAvailable(bool)
@@ -542,7 +540,7 @@ func (this *QTextBrowser) BackwardAvailable(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:99
+// /usr/include/qt/QtWidgets/qtextbrowser.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void forwardAvailable(bool)
@@ -555,7 +553,7 @@ func (this *QTextBrowser) ForwardAvailable(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:100
+// /usr/include/qt/QtWidgets/qtextbrowser.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void historyChanged()
@@ -572,7 +570,7 @@ func (this *QTextBrowser) HistoryChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:101
+// /usr/include/qt/QtWidgets/qtextbrowser.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sourceChanged(const QUrl &)
@@ -591,7 +589,7 @@ func (this *QTextBrowser) SourceChanged(arg0 qtcore.QUrl_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:102
+// /usr/include/qt/QtWidgets/qtextbrowser.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void highlighted(const QUrl &)
@@ -599,10 +597,10 @@ func (this *QTextBrowser) SourceChanged(arg0 qtcore.QUrl_ITF) {
 /*
 This signal is emitted when the user has selected but not activated an anchor in the document. The URL referred to by the anchor is passed in link.
 
-Note: Signal highlighted is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal highlighted is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(textBrowser, QOverload<const QUrl &>::of(&QTextBrowser::highlighted),
+  connect(textBrowser, static_cast<void(QTextBrowser::*)(const QUrl &)>(&QTextBrowser::highlighted),
       [=](const QUrl &link){ /-* ... *-/ });
 */
 func (this *QTextBrowser) Highlighted(arg0 qtcore.QUrl_ITF) {
@@ -614,7 +612,7 @@ func (this *QTextBrowser) Highlighted(arg0 qtcore.QUrl_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:103
+// /usr/include/qt/QtWidgets/qtextbrowser.h:104
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void highlighted(const QString &)
@@ -622,10 +620,10 @@ func (this *QTextBrowser) Highlighted(arg0 qtcore.QUrl_ITF) {
 /*
 This signal is emitted when the user has selected but not activated an anchor in the document. The URL referred to by the anchor is passed in link.
 
-Note: Signal highlighted is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal highlighted is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(textBrowser, QOverload<const QUrl &>::of(&QTextBrowser::highlighted),
+  connect(textBrowser, static_cast<void(QTextBrowser::*)(const QUrl &)>(&QTextBrowser::highlighted),
       [=](const QUrl &link){ /-* ... *-/ });
 */
 func (this *QTextBrowser) Highlighted1(arg0 string) {
@@ -635,7 +633,7 @@ func (this *QTextBrowser) Highlighted1(arg0 string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:104
+// /usr/include/qt/QtWidgets/qtextbrowser.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void anchorClicked(const QUrl &)
@@ -654,7 +652,7 @@ func (this *QTextBrowser) AnchorClicked(arg0 qtcore.QUrl_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:107
+// /usr/include/qt/QtWidgets/qtextbrowser.h:108
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -672,7 +670,7 @@ func (this *QTextBrowser) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:108
+// /usr/include/qt/QtWidgets/qtextbrowser.h:109
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
@@ -697,7 +695,7 @@ func (this *QTextBrowser) KeyPressEvent(ev qtgui.QKeyEvent_ITF /*777 QKeyEvent *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:109
+// /usr/include/qt/QtWidgets/qtextbrowser.h:110
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
@@ -714,7 +712,7 @@ func (this *QTextBrowser) MouseMoveEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEv
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:110
+// /usr/include/qt/QtWidgets/qtextbrowser.h:111
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
@@ -731,7 +729,7 @@ func (this *QTextBrowser) MousePressEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseE
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:111
+// /usr/include/qt/QtWidgets/qtextbrowser.h:112
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
@@ -748,7 +746,7 @@ func (this *QTextBrowser) MouseReleaseEvent(ev qtgui.QMouseEvent_ITF /*777 QMous
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:112
+// /usr/include/qt/QtWidgets/qtextbrowser.h:113
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
@@ -765,7 +763,7 @@ func (this *QTextBrowser) FocusOutEvent(ev qtgui.QFocusEvent_ITF /*777 QFocusEve
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:113
+// /usr/include/qt/QtWidgets/qtextbrowser.h:114
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool focusNextPrevChild(bool)
@@ -779,7 +777,7 @@ func (this *QTextBrowser) FocusNextPrevChild(next bool) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtextbrowser.h:114
+// /usr/include/qt/QtWidgets/qtextbrowser.h:115
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)

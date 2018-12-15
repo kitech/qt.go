@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qlistwidget.h
@@ -68,7 +66,7 @@ func (*QListWidgetItem) NewFromPointer(cthis unsafe.Pointer) *QListWidgetItem {
 	return NewQListWidgetItemFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:64
+// /usr/include/qt/QtWidgets/qlistwidget.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(QListWidget *, int)
@@ -91,7 +89,7 @@ func NewQListWidgetItem(view QListWidget_ITF /*777 QListWidget **/, type_ int) *
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:64
+// /usr/include/qt/QtWidgets/qlistwidget.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(QListWidget *, int)
@@ -114,7 +112,7 @@ func NewQListWidgetItemp() *QListWidgetItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:64
+// /usr/include/qt/QtWidgets/qlistwidget.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(QListWidget *, int)
@@ -139,7 +137,7 @@ func NewQListWidgetItemp1(view QListWidget_ITF /*777 QListWidget **/) *QListWidg
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:65
+// /usr/include/qt/QtWidgets/qlistwidget.h:66
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(const QString &, QListWidget *, int)
@@ -164,7 +162,7 @@ func NewQListWidgetItem1(text string, view QListWidget_ITF /*777 QListWidget **/
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:65
+// /usr/include/qt/QtWidgets/qlistwidget.h:66
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(const QString &, QListWidget *, int)
@@ -189,7 +187,7 @@ func NewQListWidgetItem1p(text string) *QListWidgetItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:65
+// /usr/include/qt/QtWidgets/qlistwidget.h:66
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(const QString &, QListWidget *, int)
@@ -216,7 +214,7 @@ func NewQListWidgetItem1p1(text string, view QListWidget_ITF /*777 QListWidget *
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:66
+// /usr/include/qt/QtWidgets/qlistwidget.h:67
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(const QIcon &, const QString &, QListWidget *, int)
@@ -245,7 +243,7 @@ func NewQListWidgetItem2(icon qtgui.QIcon_ITF, text string, view QListWidget_ITF
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:66
+// /usr/include/qt/QtWidgets/qlistwidget.h:67
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(const QIcon &, const QString &, QListWidget *, int)
@@ -274,7 +272,7 @@ func NewQListWidgetItem2p(icon qtgui.QIcon_ITF, text string) *QListWidgetItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:66
+// /usr/include/qt/QtWidgets/qlistwidget.h:67
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QListWidgetItem(const QIcon &, const QString &, QListWidget *, int)
@@ -305,7 +303,7 @@ func NewQListWidgetItem2p1(icon qtgui.QIcon_ITF, text string, view QListWidget_I
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:69
+// /usr/include/qt/QtWidgets/qlistwidget.h:70
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QListWidgetItem()
@@ -320,7 +318,7 @@ func DeleteQListWidgetItem(this *QListWidgetItem) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:71
+// /usr/include/qt/QtWidgets/qlistwidget.h:72
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QListWidgetItem * clone() const
@@ -334,7 +332,7 @@ func (this *QListWidgetItem) Clone() *QListWidgetItem /*777 QListWidgetItem **/ 
 	return /*==*/ NewQListWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:73
+// /usr/include/qt/QtWidgets/qlistwidget.h:74
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QListWidget * listWidget() const
@@ -348,7 +346,7 @@ func (this *QListWidgetItem) ListWidget() *QListWidget /*777 QListWidget **/ {
 	return /*==*/ NewQListWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:75
+// /usr/include/qt/QtWidgets/qlistwidget.h:76
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setSelected(bool)
@@ -361,7 +359,7 @@ func (this *QListWidgetItem) SetSelected(select_ bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:76
+// /usr/include/qt/QtWidgets/qlistwidget.h:77
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isSelected() const
@@ -375,7 +373,7 @@ func (this *QListWidgetItem) IsSelected() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:78
+// /usr/include/qt/QtWidgets/qlistwidget.h:79
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setHidden(bool)
@@ -388,7 +386,7 @@ func (this *QListWidgetItem) SetHidden(hide bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:79
+// /usr/include/qt/QtWidgets/qlistwidget.h:80
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isHidden() const
@@ -402,7 +400,7 @@ func (this *QListWidgetItem) IsHidden() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:81
+// /usr/include/qt/QtWidgets/qlistwidget.h:82
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::ItemFlags flags() const
@@ -416,7 +414,7 @@ func (this *QListWidgetItem) Flags() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:82
+// /usr/include/qt/QtWidgets/qlistwidget.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlags(Qt::ItemFlags)
@@ -429,7 +427,7 @@ func (this *QListWidgetItem) SetFlags(flags int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:84
+// /usr/include/qt/QtWidgets/qlistwidget.h:85
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString text() const
@@ -446,7 +444,7 @@ func (this *QListWidgetItem) Text() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:86
+// /usr/include/qt/QtWidgets/qlistwidget.h:87
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setText(const QString &)
@@ -461,7 +459,7 @@ func (this *QListWidgetItem) SetText(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:88
+// /usr/include/qt/QtWidgets/qlistwidget.h:89
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QIcon icon() const
@@ -477,7 +475,7 @@ func (this *QListWidgetItem) Icon() *qtgui.QIcon /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:90
+// /usr/include/qt/QtWidgets/qlistwidget.h:91
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
@@ -494,7 +492,7 @@ func (this *QListWidgetItem) SetIcon(icon qtgui.QIcon_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:92
+// /usr/include/qt/QtWidgets/qlistwidget.h:93
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString statusTip() const
@@ -511,7 +509,7 @@ func (this *QListWidgetItem) StatusTip() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:94
+// /usr/include/qt/QtWidgets/qlistwidget.h:95
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setStatusTip(const QString &)
@@ -526,7 +524,7 @@ func (this *QListWidgetItem) SetStatusTip(statusTip string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:97
+// /usr/include/qt/QtWidgets/qlistwidget.h:98
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString toolTip() const
@@ -543,7 +541,7 @@ func (this *QListWidgetItem) ToolTip() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:99
+// /usr/include/qt/QtWidgets/qlistwidget.h:100
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setToolTip(const QString &)
@@ -558,7 +556,7 @@ func (this *QListWidgetItem) SetToolTip(toolTip string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:103
+// /usr/include/qt/QtWidgets/qlistwidget.h:104
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString whatsThis() const
@@ -575,7 +573,7 @@ func (this *QListWidgetItem) WhatsThis() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:105
+// /usr/include/qt/QtWidgets/qlistwidget.h:106
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setWhatsThis(const QString &)
@@ -590,7 +588,7 @@ func (this *QListWidgetItem) SetWhatsThis(whatsThis string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:108
+// /usr/include/qt/QtWidgets/qlistwidget.h:109
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QFont font() const
@@ -606,7 +604,7 @@ func (this *QListWidgetItem) Font() *qtgui.QFont /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:110
+// /usr/include/qt/QtWidgets/qlistwidget.h:111
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
@@ -623,7 +621,7 @@ func (this *QListWidgetItem) SetFont(font qtgui.QFont_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:112
+// /usr/include/qt/QtWidgets/qlistwidget.h:113
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int textAlignment() const
@@ -637,7 +635,7 @@ func (this *QListWidgetItem) TextAlignment() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:114
+// /usr/include/qt/QtWidgets/qlistwidget.h:115
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTextAlignment(int)
@@ -650,7 +648,7 @@ func (this *QListWidgetItem) SetTextAlignment(alignment int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:117
+// /usr/include/qt/QtWidgets/qlistwidget.h:118
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QColor backgroundColor() const
@@ -666,7 +664,7 @@ func (this *QListWidgetItem) BackgroundColor() *qtgui.QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:119
+// /usr/include/qt/QtWidgets/qlistwidget.h:120
 // index:0
 // Public inline virtual Visibility=Default Availability=Available
 // [-2] void setBackgroundColor(const QColor &)
@@ -683,7 +681,7 @@ func (this *QListWidgetItem) SetBackgroundColor(color qtgui.QColor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:122
+// /usr/include/qt/QtWidgets/qlistwidget.h:123
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QBrush background() const
@@ -699,7 +697,7 @@ func (this *QListWidgetItem) Background() *qtgui.QBrush /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:124
+// /usr/include/qt/QtWidgets/qlistwidget.h:125
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setBackground(const QBrush &)
@@ -716,7 +714,7 @@ func (this *QListWidgetItem) SetBackground(brush qtgui.QBrush_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:127
+// /usr/include/qt/QtWidgets/qlistwidget.h:128
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QColor textColor() const
@@ -732,7 +730,7 @@ func (this *QListWidgetItem) TextColor() *qtgui.QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:129
+// /usr/include/qt/QtWidgets/qlistwidget.h:130
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTextColor(const QColor &)
@@ -749,7 +747,7 @@ func (this *QListWidgetItem) SetTextColor(color qtgui.QColor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:132
+// /usr/include/qt/QtWidgets/qlistwidget.h:133
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QBrush foreground() const
@@ -765,7 +763,7 @@ func (this *QListWidgetItem) Foreground() *qtgui.QBrush /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:134
+// /usr/include/qt/QtWidgets/qlistwidget.h:135
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setForeground(const QBrush &)
@@ -782,7 +780,7 @@ func (this *QListWidgetItem) SetForeground(brush qtgui.QBrush_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:137
+// /usr/include/qt/QtWidgets/qlistwidget.h:138
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::CheckState checkState() const
@@ -796,7 +794,7 @@ func (this *QListWidgetItem) CheckState() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:139
+// /usr/include/qt/QtWidgets/qlistwidget.h:140
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setCheckState(Qt::CheckState)
@@ -809,7 +807,7 @@ func (this *QListWidgetItem) SetCheckState(state int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:142
+// /usr/include/qt/QtWidgets/qlistwidget.h:143
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
@@ -825,7 +823,7 @@ func (this *QListWidgetItem) SizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:144
+// /usr/include/qt/QtWidgets/qlistwidget.h:145
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setSizeHint(const QSize &)
@@ -842,7 +840,7 @@ func (this *QListWidgetItem) SetSizeHint(size qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:147
+// /usr/include/qt/QtWidgets/qlistwidget.h:148
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(int) const
@@ -858,7 +856,7 @@ func (this *QListWidgetItem) Data(role int) *qtcore.QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:148
+// /usr/include/qt/QtWidgets/qlistwidget.h:149
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setData(int, const QVariant &)
@@ -875,7 +873,7 @@ func (this *QListWidgetItem) SetData(role int, value qtcore.QVariant_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:150
+// /usr/include/qt/QtWidgets/qlistwidget.h:151
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool operator<(const QListWidgetItem &) const
@@ -893,7 +891,7 @@ func (this *QListWidgetItem) Operator_less_than(other QListWidgetItem_ITF) bool 
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:153
+// /usr/include/qt/QtWidgets/qlistwidget.h:154
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void read(QDataStream &)
@@ -910,7 +908,7 @@ func (this *QListWidgetItem) Read(in qtcore.QDataStream_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:154
+// /usr/include/qt/QtWidgets/qlistwidget.h:155
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void write(QDataStream &) const
@@ -927,7 +925,7 @@ func (this *QListWidgetItem) Write(out_ qtcore.QDataStream_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:156
+// /usr/include/qt/QtWidgets/qlistwidget.h:157
 // index:0
 // Public Visibility=Default Availability=Available
 // [48] QListWidgetItem & operator=(const QListWidgetItem &)
@@ -947,7 +945,7 @@ func (this *QListWidgetItem) Operator_equal(other QListWidgetItem_ITF) *QListWid
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlistwidget.h:158
+// /usr/include/qt/QtWidgets/qlistwidget.h:159
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int type() const

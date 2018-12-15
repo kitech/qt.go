@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h
@@ -81,7 +79,7 @@ func (*QGraphicsPathItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsPathIte
 	return NewQGraphicsPathItemFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:628
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:629
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsPathItem(QGraphicsItem *)
@@ -104,7 +102,7 @@ func NewQGraphicsPathItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGr
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:628
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:629
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsPathItem(QGraphicsItem *)
@@ -125,7 +123,7 @@ func NewQGraphicsPathItemp() *QGraphicsPathItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:629
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:630
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsPathItem(const QPainterPath &, QGraphicsItem *)
@@ -152,7 +150,7 @@ func NewQGraphicsPathItem1(path qtgui.QPainterPath_ITF, parent QGraphicsItem_ITF
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:629
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:630
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsPathItem(const QPainterPath &, QGraphicsItem *)
@@ -177,7 +175,7 @@ func NewQGraphicsPathItem1p(path qtgui.QPainterPath_ITF) *QGraphicsPathItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:630
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:631
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsPathItem()
@@ -192,7 +190,7 @@ func DeleteQGraphicsPathItem(this *QGraphicsPathItem) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:632
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:633
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPainterPath path() const
@@ -208,7 +206,7 @@ func (this *QGraphicsPathItem) Path() *qtgui.QPainterPath /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:633
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:634
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPath(const QPainterPath &)
@@ -225,7 +223,7 @@ func (this *QGraphicsPathItem) SetPath(path qtgui.QPainterPath_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:635
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:636
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF boundingRect() const
@@ -263,7 +261,7 @@ func (this *QGraphicsPathItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:636
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:637
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QPainterPath shape() const
@@ -297,7 +295,7 @@ func (this *QGraphicsPathItem) Shape() *qtgui.QPainterPath /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:637
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:638
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool contains(const QPointF &) const
@@ -319,7 +317,7 @@ func (this *QGraphicsPathItem) Contains(point qtcore.QPointF_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:639
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:640
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
@@ -368,7 +366,7 @@ func (this *QGraphicsPathItem) Paint(painter qtgui.QPainter_ITF /*777 QPainter *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:639
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:640
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
@@ -415,7 +413,7 @@ func (this *QGraphicsPathItem) Paintp(painter qtgui.QPainter_ITF /*777 QPainter 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:641
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:642
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isObscuredBy(const QGraphicsItem *) const
@@ -439,7 +437,7 @@ func (this *QGraphicsPathItem) IsObscuredBy(item QGraphicsItem_ITF /*777 const Q
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:642
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:643
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QPainterPath opaqueArea() const
@@ -461,7 +459,7 @@ func (this *QGraphicsPathItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:645
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:646
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int type() const
@@ -499,7 +497,7 @@ func (this *QGraphicsPathItem) Type() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:648
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:649
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool supportsExtension(QGraphicsItem::Extension) const
@@ -513,7 +511,7 @@ func (this *QGraphicsPathItem) SupportsExtension(extension int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:649
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:650
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setExtension(QGraphicsItem::Extension, const QVariant &)
@@ -530,7 +528,7 @@ func (this *QGraphicsPathItem) SetExtension(extension int, variant qtcore.QVaria
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:650
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:651
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant extension(const QVariant &) const

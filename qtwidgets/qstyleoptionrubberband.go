@@ -64,7 +64,7 @@ func (*QStyleOptionRubberBand) NewFromPointer(cthis unsafe.Pointer) *QStyleOptio
 	return NewQStyleOptionRubberBandFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:491
+// /usr/include/qt/QtWidgets/qstyleoption.h:480
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionRubberBand()
@@ -83,7 +83,7 @@ func NewQStyleOptionRubberBand() *QStyleOptionRubberBand {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:495
+// /usr/include/qt/QtWidgets/qstyleoption.h:484
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionRubberBand(int)

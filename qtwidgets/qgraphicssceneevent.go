@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h
@@ -66,7 +64,7 @@ func (*QGraphicsSceneEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphicsScene
 	return NewQGraphicsSceneEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:67
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneEvent(QEvent::Type)
@@ -85,7 +83,7 @@ func NewQGraphicsSceneEvent(type_ int) *QGraphicsSceneEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:68
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:69
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsSceneEvent()
@@ -100,7 +98,7 @@ func DeleteQGraphicsSceneEvent(this *QGraphicsSceneEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:70
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * widget() const
@@ -114,7 +112,7 @@ func (this *QGraphicsSceneEvent) Widget() *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:71
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidget(QWidget *)

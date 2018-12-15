@@ -1890,9 +1890,7 @@ Ensure that you call QPainter::end() for the target device's active painter (if 
 
 
 
-Note: To obtain the contents of a QOpenGLWidget, use QOpenGLWidget::grabFramebuffer() instead.
-
-Note: To obtain the contents of a QGLWidget (deprecated), use QGLWidget::grabFrameBuffer() or QGLWidget::renderPixmap() instead.
+Note: To obtain the contents of an OpenGL widget, use QGLWidget::grabFrameBuffer() or QGLWidget::renderPixmap() instead.
 
 This function was introduced in  Qt 4.3.
 */
@@ -1939,9 +1937,7 @@ Ensure that you call QPainter::end() for the target device's active painter (if 
 
 
 
-Note: To obtain the contents of a QOpenGLWidget, use QOpenGLWidget::grabFramebuffer() instead.
-
-Note: To obtain the contents of a QGLWidget (deprecated), use QGLWidget::grabFrameBuffer() or QGLWidget::renderPixmap() instead.
+Note: To obtain the contents of an OpenGL widget, use QGLWidget::grabFrameBuffer() or QGLWidget::renderPixmap() instead.
 
 This function was introduced in  Qt 4.3.
 */
@@ -1986,9 +1982,7 @@ Ensure that you call QPainter::end() for the target device's active painter (if 
 
 
 
-Note: To obtain the contents of a QOpenGLWidget, use QOpenGLWidget::grabFramebuffer() instead.
-
-Note: To obtain the contents of a QGLWidget (deprecated), use QGLWidget::grabFrameBuffer() or QGLWidget::renderPixmap() instead.
+Note: To obtain the contents of an OpenGL widget, use QGLWidget::grabFrameBuffer() or QGLWidget::renderPixmap() instead.
 
 This function was introduced in  Qt 4.3.
 */
@@ -2035,9 +2029,7 @@ Ensure that you call QPainter::end() for the target device's active painter (if 
 
 
 
-Note: To obtain the contents of a QOpenGLWidget, use QOpenGLWidget::grabFramebuffer() instead.
-
-Note: To obtain the contents of a QGLWidget (deprecated), use QGLWidget::grabFrameBuffer() or QGLWidget::renderPixmap() instead.
+Note: To obtain the contents of an OpenGL widget, use QGLWidget::grabFrameBuffer() or QGLWidget::renderPixmap() instead.
 
 This function was introduced in  Qt 4.3.
 */
@@ -2086,9 +2078,7 @@ Ensure that you call QPainter::end() for the target device's active painter (if 
 
 
 
-Note: To obtain the contents of a QOpenGLWidget, use QOpenGLWidget::grabFramebuffer() instead.
-
-Note: To obtain the contents of a QGLWidget (deprecated), use QGLWidget::grabFrameBuffer() or QGLWidget::renderPixmap() instead.
+Note: To obtain the contents of an OpenGL widget, use QGLWidget::grabFrameBuffer() or QGLWidget::renderPixmap() instead.
 
 This function was introduced in  Qt 4.3.
 */
@@ -2135,9 +2125,7 @@ Ensure that you call QPainter::end() for the target device's active painter (if 
 
 
 
-Note: To obtain the contents of a QOpenGLWidget, use QOpenGLWidget::grabFramebuffer() instead.
-
-Note: To obtain the contents of a QGLWidget (deprecated), use QGLWidget::grabFrameBuffer() or QGLWidget::renderPixmap() instead.
+Note: To obtain the contents of an OpenGL widget, use QGLWidget::grabFrameBuffer() or QGLWidget::renderPixmap() instead.
 
 This function was introduced in  Qt 4.3.
 */
@@ -2182,9 +2170,7 @@ Ensure that you call QPainter::end() for the target device's active painter (if 
 
 
 
-Note: To obtain the contents of a QOpenGLWidget, use QOpenGLWidget::grabFramebuffer() instead.
-
-Note: To obtain the contents of a QGLWidget (deprecated), use QGLWidget::grabFrameBuffer() or QGLWidget::renderPixmap() instead.
+Note: To obtain the contents of an OpenGL widget, use QGLWidget::grabFrameBuffer() or QGLWidget::renderPixmap() instead.
 
 This function was introduced in  Qt 4.3.
 */
@@ -2231,9 +2217,7 @@ Ensure that you call QPainter::end() for the target device's active painter (if 
 
 
 
-Note: To obtain the contents of a QOpenGLWidget, use QOpenGLWidget::grabFramebuffer() instead.
-
-Note: To obtain the contents of a QGLWidget (deprecated), use QGLWidget::grabFrameBuffer() or QGLWidget::renderPixmap() instead.
+Note: To obtain the contents of an OpenGL widget, use QGLWidget::grabFrameBuffer() or QGLWidget::renderPixmap() instead.
 
 This function was introduced in  Qt 4.3.
 */
@@ -3102,8 +3086,6 @@ func (this *QWidget) HasFocus() bool {
 /*
 Puts the second widget after the first widget in the focus order.
 
-It effectively removes the second widget from its focus chain and inserts it after the first widget.
-
 Note that since the tab order of the second widget is changed, you should order a chain like this:
 
 
@@ -3124,8 +3106,6 @@ not like this:
 
 
 If first or second has a focus proxy, setTabOrder() correctly substitutes the proxy.
-
-Note: Since Qt 5.10: A widget that has a child as focus proxy is understood as a compound widget. When setting a tab order between one or two compound widgets, the local tab order inside each will be preserved. This means that if both widgets are compound widgets, the resulting tab order will be from the last child inside first, to the first child inside second.
 
 See also setFocusPolicy(), setFocusProxy(), and Keyboard Focus in Widgets.
 */
@@ -5673,7 +5653,7 @@ The background can be set using setBackgroundRole() and setPalette().
 
 Since Qt 4.0, QWidget automatically double-buffers its painting, so there is no need to write double-buffering code in paintEvent() to avoid flicker.
 
-Note: Generally, you should refrain from calling update() or repaint() inside a paintEvent(). For example, calling update() or repaint() on children inside a paintEvent() results in undefined behavior; the child may or may not get a paint event.
+Note: Generally, you should refrain from calling update() or repaint() inside a paintEvent(). For example, calling update() or repaint() on children inside a paintevent() results in undefined behavior; the child may or may not get a paint event.
 
 Warning: If you are using a custom paint engine without Qt's backingstore, Qt::WA_PaintOnScreen must be set. Otherwise, QWidget::paintEngine() will never be called; the backingstore will be used instead.
 
@@ -5982,7 +5962,6 @@ Note: This function superseedes the event filter functions x11Event(), winEvent(
 
  PlatformEvent Type IdentifierMessage TypeResult Type
 Windows"windows_generic_MSG"MSG *LRESULT
-macOS"NSEvent"NSEvent *
 */
 func (this *QWidget) NativeEvent(eventType qtcore.QByteArray_ITF, message unsafe.Pointer /*666*/, result unsafe.Pointer /*666*/) bool {
 	var convArg0 unsafe.Pointer

@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qtablewidget.h
@@ -101,7 +99,7 @@ func (*QTableWidget) NewFromPointer(cthis unsafe.Pointer) *QTableWidget {
 	return NewQTableWidgetFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:216
+// /usr/include/qt/QtWidgets/qtablewidget.h:218
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -115,7 +113,7 @@ func (this *QTableWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:222
+// /usr/include/qt/QtWidgets/qtablewidget.h:224
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTableWidget(QWidget *)
@@ -138,7 +136,7 @@ func NewQTableWidget(parent QWidget_ITF /*777 QWidget **/) *QTableWidget {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:222
+// /usr/include/qt/QtWidgets/qtablewidget.h:224
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTableWidget(QWidget *)
@@ -159,7 +157,7 @@ func NewQTableWidgetp() *QTableWidget {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:223
+// /usr/include/qt/QtWidgets/qtablewidget.h:225
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTableWidget(int, int, QWidget *)
@@ -182,7 +180,7 @@ func NewQTableWidget1(rows int, columns int, parent QWidget_ITF /*777 QWidget **
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:223
+// /usr/include/qt/QtWidgets/qtablewidget.h:225
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTableWidget(int, int, QWidget *)
@@ -203,7 +201,7 @@ func NewQTableWidget1p(rows int, columns int) *QTableWidget {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:224
+// /usr/include/qt/QtWidgets/qtablewidget.h:226
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTableWidget()
@@ -218,7 +216,7 @@ func DeleteQTableWidget(this *QTableWidget) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:226
+// /usr/include/qt/QtWidgets/qtablewidget.h:228
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRowCount(int)
@@ -235,7 +233,7 @@ func (this *QTableWidget) SetRowCount(rows int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:227
+// /usr/include/qt/QtWidgets/qtablewidget.h:229
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int rowCount() const
@@ -253,7 +251,7 @@ func (this *QTableWidget) RowCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:229
+// /usr/include/qt/QtWidgets/qtablewidget.h:231
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColumnCount(int)
@@ -270,7 +268,7 @@ func (this *QTableWidget) SetColumnCount(columns int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:230
+// /usr/include/qt/QtWidgets/qtablewidget.h:232
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int columnCount() const
@@ -288,7 +286,7 @@ func (this *QTableWidget) ColumnCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:232
+// /usr/include/qt/QtWidgets/qtablewidget.h:234
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int row(const QTableWidgetItem *) const
@@ -306,7 +304,7 @@ func (this *QTableWidget) Row(item QTableWidgetItem_ITF /*777 const QTableWidget
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:233
+// /usr/include/qt/QtWidgets/qtablewidget.h:235
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int column(const QTableWidgetItem *) const
@@ -324,7 +322,7 @@ func (this *QTableWidget) Column(item QTableWidgetItem_ITF /*777 const QTableWid
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:235
+// /usr/include/qt/QtWidgets/qtablewidget.h:237
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTableWidgetItem * item(int, int) const
@@ -340,7 +338,7 @@ func (this *QTableWidget) Item(row int, column int) *QTableWidgetItem /*777 QTab
 	return /*==*/ NewQTableWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:236
+// /usr/include/qt/QtWidgets/qtablewidget.h:238
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItem(int, int, QTableWidgetItem *)
@@ -365,7 +363,7 @@ func (this *QTableWidget) SetItem(row int, column int, item QTableWidgetItem_ITF
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:237
+// /usr/include/qt/QtWidgets/qtablewidget.h:239
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTableWidgetItem * takeItem(int, int)
@@ -379,7 +377,7 @@ func (this *QTableWidget) TakeItem(row int, column int) *QTableWidgetItem /*777 
 	return /*==*/ NewQTableWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:239
+// /usr/include/qt/QtWidgets/qtablewidget.h:241
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTableWidgetItem * verticalHeaderItem(int) const
@@ -395,7 +393,7 @@ func (this *QTableWidget) VerticalHeaderItem(row int) *QTableWidgetItem /*777 QT
 	return /*==*/ NewQTableWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:240
+// /usr/include/qt/QtWidgets/qtablewidget.h:242
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVerticalHeaderItem(int, QTableWidgetItem *)
@@ -414,7 +412,7 @@ func (this *QTableWidget) SetVerticalHeaderItem(row int, item QTableWidgetItem_I
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:241
+// /usr/include/qt/QtWidgets/qtablewidget.h:243
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTableWidgetItem * takeVerticalHeaderItem(int)
@@ -430,7 +428,7 @@ func (this *QTableWidget) TakeVerticalHeaderItem(row int) *QTableWidgetItem /*77
 	return /*==*/ NewQTableWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:243
+// /usr/include/qt/QtWidgets/qtablewidget.h:245
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTableWidgetItem * horizontalHeaderItem(int) const
@@ -446,7 +444,7 @@ func (this *QTableWidget) HorizontalHeaderItem(column int) *QTableWidgetItem /*7
 	return /*==*/ NewQTableWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:244
+// /usr/include/qt/QtWidgets/qtablewidget.h:246
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHorizontalHeaderItem(int, QTableWidgetItem *)
@@ -465,7 +463,7 @@ func (this *QTableWidget) SetHorizontalHeaderItem(column int, item QTableWidgetI
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:245
+// /usr/include/qt/QtWidgets/qtablewidget.h:247
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTableWidgetItem * takeHorizontalHeaderItem(int)
@@ -481,7 +479,7 @@ func (this *QTableWidget) TakeHorizontalHeaderItem(column int) *QTableWidgetItem
 	return /*==*/ NewQTableWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:246
+// /usr/include/qt/QtWidgets/qtablewidget.h:248
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVerticalHeaderLabels(const QStringList &)
@@ -498,7 +496,7 @@ func (this *QTableWidget) SetVerticalHeaderLabels(labels qtcore.QStringList_ITF)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:247
+// /usr/include/qt/QtWidgets/qtablewidget.h:249
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHorizontalHeaderLabels(const QStringList &)
@@ -515,7 +513,7 @@ func (this *QTableWidget) SetHorizontalHeaderLabels(labels qtcore.QStringList_IT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:249
+// /usr/include/qt/QtWidgets/qtablewidget.h:251
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentRow() const
@@ -531,7 +529,7 @@ func (this *QTableWidget) CurrentRow() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:250
+// /usr/include/qt/QtWidgets/qtablewidget.h:252
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentColumn() const
@@ -547,7 +545,7 @@ func (this *QTableWidget) CurrentColumn() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:251
+// /usr/include/qt/QtWidgets/qtablewidget.h:253
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTableWidgetItem * currentItem() const
@@ -563,7 +561,7 @@ func (this *QTableWidget) CurrentItem() *QTableWidgetItem /*777 QTableWidgetItem
 	return /*==*/ NewQTableWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:252
+// /usr/include/qt/QtWidgets/qtablewidget.h:254
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentItem(QTableWidgetItem *)
@@ -584,7 +582,7 @@ func (this *QTableWidget) SetCurrentItem(item QTableWidgetItem_ITF /*777 QTableW
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:253
+// /usr/include/qt/QtWidgets/qtablewidget.h:255
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentItem(QTableWidgetItem *, QItemSelectionModel::SelectionFlags)
@@ -605,7 +603,7 @@ func (this *QTableWidget) SetCurrentItem1(item QTableWidgetItem_ITF /*777 QTable
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:254
+// /usr/include/qt/QtWidgets/qtablewidget.h:256
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentCell(int, int)
@@ -624,7 +622,7 @@ func (this *QTableWidget) SetCurrentCell(row int, column int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:255
+// /usr/include/qt/QtWidgets/qtablewidget.h:257
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentCell(int, int, QItemSelectionModel::SelectionFlags)
@@ -643,7 +641,7 @@ func (this *QTableWidget) SetCurrentCell1(row int, column int, command int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:257
+// /usr/include/qt/QtWidgets/qtablewidget.h:259
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sortItems(int, Qt::SortOrder)
@@ -656,7 +654,7 @@ func (this *QTableWidget) SortItems(column int, order int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:257
+// /usr/include/qt/QtWidgets/qtablewidget.h:259
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sortItems(int, Qt::SortOrder)
@@ -671,7 +669,7 @@ func (this *QTableWidget) SortItemsp(column int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:258
+// /usr/include/qt/QtWidgets/qtablewidget.h:260
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSortingEnabled(bool)
@@ -684,7 +682,7 @@ func (this *QTableWidget) SetSortingEnabled(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:259
+// /usr/include/qt/QtWidgets/qtablewidget.h:261
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSortingEnabled() const
@@ -698,7 +696,7 @@ func (this *QTableWidget) IsSortingEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:261
+// /usr/include/qt/QtWidgets/qtablewidget.h:263
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void editItem(QTableWidgetItem *)
@@ -715,7 +713,7 @@ func (this *QTableWidget) EditItem(item QTableWidgetItem_ITF /*777 QTableWidgetI
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:262
+// /usr/include/qt/QtWidgets/qtablewidget.h:264
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void openPersistentEditor(QTableWidgetItem *)
@@ -723,7 +721,7 @@ func (this *QTableWidget) EditItem(item QTableWidgetItem_ITF /*777 QTableWidgetI
 /*
 Opens an editor for the give item. The editor remains open after editing.
 
-See also closePersistentEditor() and isPersistentEditorOpen().
+See also closePersistentEditor().
 */
 func (this *QTableWidget) OpenPersistentEditor(item QTableWidgetItem_ITF /*777 QTableWidgetItem **/) {
 	var convArg0 unsafe.Pointer
@@ -734,7 +732,7 @@ func (this *QTableWidget) OpenPersistentEditor(item QTableWidgetItem_ITF /*777 Q
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:263
+// /usr/include/qt/QtWidgets/qtablewidget.h:265
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void closePersistentEditor(QTableWidgetItem *)
@@ -742,7 +740,7 @@ func (this *QTableWidget) OpenPersistentEditor(item QTableWidgetItem_ITF /*777 Q
 /*
 Closes the persistent editor for item.
 
-See also openPersistentEditor() and isPersistentEditorOpen().
+See also openPersistentEditor().
 */
 func (this *QTableWidget) ClosePersistentEditor(item QTableWidgetItem_ITF /*777 QTableWidgetItem **/) {
 	var convArg0 unsafe.Pointer
@@ -751,28 +749,6 @@ func (this *QTableWidget) ClosePersistentEditor(item QTableWidgetItem_ITF /*777 
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QTableWidget21closePersistentEditorEP16QTableWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qtablewidget.h:265
-// index:0
-// Public Visibility=Default Availability=Available
-// [1] bool isPersistentEditorOpen(QTableWidgetItem *) const
-
-/*
-Returns whether a persistent editor is open for item item.
-
-This function was introduced in  Qt 5.10.
-
-See also openPersistentEditor() and closePersistentEditor().
-*/
-func (this *QTableWidget) IsPersistentEditorOpen(item QTableWidgetItem_ITF /*777 QTableWidgetItem **/) bool {
-	var convArg0 unsafe.Pointer
-	if item != nil && item.QTableWidgetItem_PTR() != nil {
-		convArg0 = item.QTableWidgetItem_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK12QTableWidget22isPersistentEditorOpenEP16QTableWidgetItem", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qtablewidget.h:267
@@ -1450,7 +1426,7 @@ func (this *QTableWidget) SupportedDropActions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:338
+// /usr/include/qt/QtWidgets/qtablewidget.h:332
 // index:0
 // Protected Visibility=Default Availability=Available
 // [24] QModelIndex indexFromItem(QTableWidgetItem *) const
@@ -1470,7 +1446,7 @@ func (this *QTableWidget) IndexFromItem(item QTableWidgetItem_ITF /*777 QTableWi
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:339
+// /usr/include/qt/QtWidgets/qtablewidget.h:333
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QTableWidgetItem * itemFromIndex(const QModelIndex &) const
@@ -1488,7 +1464,7 @@ func (this *QTableWidget) ItemFromIndex(index qtcore.QModelIndex_ITF) *QTableWid
 	return /*==*/ NewQTableWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:343
+// /usr/include/qt/QtWidgets/qtablewidget.h:335
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QDropEvent *)

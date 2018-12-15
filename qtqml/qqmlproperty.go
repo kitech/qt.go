@@ -682,8 +682,6 @@ func (this *QQmlProperty) NeedsNotifySignal() bool {
 
 /*
 Connects the property's change notifier signal to the specified slot of the dest object and returns true. Returns false if this metaproperty does not represent a regular Qt property or if it has no change notifier signal, or if the dest object does not have the specified slot.
-
-Note: slot should be passed using the SLOT() macro so it is correctly identified.
 */
 func (this *QQmlProperty) ConnectNotifySignal(dest qtcore.QObject_ITF /*777 QObject **/, slot string) bool {
 	var convArg0 unsafe.Pointer
@@ -704,8 +702,6 @@ func (this *QQmlProperty) ConnectNotifySignal(dest qtcore.QObject_ITF /*777 QObj
 
 /*
 Connects the property's change notifier signal to the specified slot of the dest object and returns true. Returns false if this metaproperty does not represent a regular Qt property or if it has no change notifier signal, or if the dest object does not have the specified slot.
-
-Note: slot should be passed using the SLOT() macro so it is correctly identified.
 */
 func (this *QQmlProperty) ConnectNotifySignal1(dest qtcore.QObject_ITF /*777 QObject **/, method int) bool {
 	var convArg0 unsafe.Pointer

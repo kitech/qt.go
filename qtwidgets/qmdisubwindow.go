@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qmdisubwindow.h
@@ -166,7 +164,7 @@ func (*QMdiSubWindow) NewFromPointer(cthis unsafe.Pointer) *QMdiSubWindow {
 	return NewQMdiSubWindowFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:57
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -180,7 +178,7 @@ func (this *QMdiSubWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:69
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMdiSubWindow(QWidget *, Qt::WindowFlags)
@@ -216,7 +214,7 @@ func NewQMdiSubWindow(parent QWidget_ITF /*777 QWidget **/, flags int) *QMdiSubW
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:69
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMdiSubWindow(QWidget *, Qt::WindowFlags)
@@ -252,7 +250,7 @@ func NewQMdiSubWindowp() *QMdiSubWindow {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:69
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMdiSubWindow(QWidget *, Qt::WindowFlags)
@@ -290,7 +288,7 @@ func NewQMdiSubWindowp1(parent QWidget_ITF /*777 QWidget **/) *QMdiSubWindow {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:70
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:71
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMdiSubWindow()
@@ -305,7 +303,7 @@ func DeleteQMdiSubWindow(this *QMdiSubWindow) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:72
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:73
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
@@ -321,7 +319,7 @@ func (this *QMdiSubWindow) SizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:73
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:74
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
@@ -337,7 +335,7 @@ func (this *QMdiSubWindow) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:75
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidget(QWidget *)
@@ -358,7 +356,7 @@ func (this *QMdiSubWindow) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:76
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * widget() const
@@ -374,7 +372,7 @@ func (this *QMdiSubWindow) Widget() *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:78
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * maximizedButtonsWidget() const
@@ -388,7 +386,7 @@ func (this *QMdiSubWindow) MaximizedButtonsWidget() *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:79
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * maximizedSystemMenuIconWidget() const
@@ -402,7 +400,7 @@ func (this *QMdiSubWindow) MaximizedSystemMenuIconWidget() *QWidget /*777 QWidge
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:81
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isShaded() const
@@ -418,7 +416,7 @@ func (this *QMdiSubWindow) IsShaded() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:83
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(QMdiSubWindow::SubWindowOption, bool)
@@ -433,7 +431,7 @@ func (this *QMdiSubWindow) SetOption(option int, on bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:83
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(QMdiSubWindow::SubWindowOption, bool)
@@ -450,7 +448,7 @@ func (this *QMdiSubWindow) SetOptionp(option int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:84
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool testOption(QMdiSubWindow::SubWindowOption) const
@@ -466,7 +464,7 @@ func (this *QMdiSubWindow) TestOption(arg0 int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:86
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKeyboardSingleStep(int)
@@ -479,7 +477,7 @@ func (this *QMdiSubWindow) SetKeyboardSingleStep(step int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:87
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int keyboardSingleStep() const
@@ -493,7 +491,7 @@ func (this *QMdiSubWindow) KeyboardSingleStep() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:89
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKeyboardPageStep(int)
@@ -506,7 +504,7 @@ func (this *QMdiSubWindow) SetKeyboardPageStep(step int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:90
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int keyboardPageStep() const
@@ -520,7 +518,7 @@ func (this *QMdiSubWindow) KeyboardPageStep() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:93
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSystemMenu(QMenu *)
@@ -547,7 +545,7 @@ func (this *QMdiSubWindow) SetSystemMenu(systemMenu QMenu_ITF /*777 QMenu **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:94
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMenu * systemMenu() const
@@ -563,7 +561,7 @@ func (this *QMdiSubWindow) SystemMenu() *QMenu /*777 QMenu **/ {
 	return /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:97
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMdiArea * mdiArea() const
@@ -581,7 +579,7 @@ func (this *QMdiSubWindow) MdiArea() *QMdiArea /*777 QMdiArea **/ {
 	return /*==*/ NewQMdiAreaFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:100
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void windowStateChanged(Qt::WindowStates, Qt::WindowStates)
@@ -594,7 +592,7 @@ func (this *QMdiSubWindow) WindowStateChanged(oldState int, newState int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:101
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void aboutToActivate()
@@ -609,7 +607,7 @@ func (this *QMdiSubWindow) AboutToActivate() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:105
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showSystemMenu()
@@ -624,7 +622,7 @@ func (this *QMdiSubWindow) ShowSystemMenu() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:107
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showShaded()
@@ -641,7 +639,7 @@ func (this *QMdiSubWindow) ShowShaded() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:110
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:111
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
@@ -663,7 +661,7 @@ func (this *QMdiSubWindow) EventFilter(object qtcore.QObject_ITF /*777 QObject *
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:111
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:112
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -681,7 +679,7 @@ func (this *QMdiSubWindow) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool 
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:112
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:113
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
@@ -698,7 +696,7 @@ func (this *QMdiSubWindow) ShowEvent(showEvent qtgui.QShowEvent_ITF /*777 QShowE
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:113
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:114
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
@@ -715,7 +713,7 @@ func (this *QMdiSubWindow) HideEvent(hideEvent qtgui.QHideEvent_ITF /*777 QHideE
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:114
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:115
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
@@ -732,7 +730,7 @@ func (this *QMdiSubWindow) ChangeEvent(changeEvent qtcore.QEvent_ITF /*777 QEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:115
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:116
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void closeEvent(QCloseEvent *)
@@ -749,7 +747,7 @@ func (this *QMdiSubWindow) CloseEvent(closeEvent qtgui.QCloseEvent_ITF /*777 QCl
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:116
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:117
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void leaveEvent(QEvent *)
@@ -766,7 +764,7 @@ func (this *QMdiSubWindow) LeaveEvent(leaveEvent qtcore.QEvent_ITF /*777 QEvent 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:117
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:118
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
@@ -785,7 +783,7 @@ func (this *QMdiSubWindow) ResizeEvent(resizeEvent qtgui.QResizeEvent_ITF /*777 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:118
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:119
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
@@ -802,7 +800,7 @@ func (this *QMdiSubWindow) TimerEvent(timerEvent qtcore.QTimerEvent_ITF /*777 QT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:119
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:120
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void moveEvent(QMoveEvent *)
@@ -819,7 +817,7 @@ func (this *QMdiSubWindow) MoveEvent(moveEvent qtgui.QMoveEvent_ITF /*777 QMoveE
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:120
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:121
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
@@ -836,7 +834,7 @@ func (this *QMdiSubWindow) PaintEvent(paintEvent qtgui.QPaintEvent_ITF /*777 QPa
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:121
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:122
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
@@ -853,7 +851,7 @@ func (this *QMdiSubWindow) MousePressEvent(mouseEvent qtgui.QMouseEvent_ITF /*77
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:122
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:123
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
@@ -870,7 +868,7 @@ func (this *QMdiSubWindow) MouseDoubleClickEvent(mouseEvent qtgui.QMouseEvent_IT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:123
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:124
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
@@ -887,7 +885,7 @@ func (this *QMdiSubWindow) MouseReleaseEvent(mouseEvent qtgui.QMouseEvent_ITF /*
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:124
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:125
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
@@ -904,7 +902,7 @@ func (this *QMdiSubWindow) MouseMoveEvent(mouseEvent qtgui.QMouseEvent_ITF /*777
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:125
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:126
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
@@ -921,7 +919,7 @@ func (this *QMdiSubWindow) KeyPressEvent(keyEvent qtgui.QKeyEvent_ITF /*777 QKey
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:127
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:128
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QContextMenuEvent *)
@@ -938,7 +936,7 @@ func (this *QMdiSubWindow) ContextMenuEvent(contextMenuEvent qtgui.QContextMenuE
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:129
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:130
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
@@ -955,7 +953,7 @@ func (this *QMdiSubWindow) FocusInEvent(focusInEvent qtgui.QFocusEvent_ITF /*777
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:130
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:131
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
@@ -972,7 +970,7 @@ func (this *QMdiSubWindow) FocusOutEvent(focusOutEvent qtgui.QFocusEvent_ITF /*7
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:131
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:132
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void childEvent(QChildEvent *)

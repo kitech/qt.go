@@ -250,9 +250,7 @@ This function can be used to "create" resources as well. For example:
 
 
 
-QSemaphoreReleaser is a RAII wrapper around this function.
-
-See also acquire(), available(), and QSemaphoreReleaser.
+See also acquire() and available().
 */
 func (this *QSemaphore) Release(n int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QSemaphore7releaseEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), n)
@@ -277,9 +275,7 @@ This function can be used to "create" resources as well. For example:
 
 
 
-QSemaphoreReleaser is a RAII wrapper around this function.
-
-See also acquire(), available(), and QSemaphoreReleaser.
+See also acquire() and available().
 */
 func (this *QSemaphore) Releasep() {
 	// arg: 0, int=Int, =Invalid, , Invalid

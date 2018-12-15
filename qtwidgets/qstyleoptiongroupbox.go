@@ -64,7 +64,7 @@ func (*QStyleOptionGroupBox) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionG
 	return NewQStyleOptionGroupBoxFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:639
+// /usr/include/qt/QtWidgets/qstyleoption.h:628
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionGroupBox()
@@ -83,7 +83,7 @@ func NewQStyleOptionGroupBox() *QStyleOptionGroupBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:642
+// /usr/include/qt/QtWidgets/qstyleoption.h:631
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionGroupBox(int)

@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 28
+// extern C begin: 23
 */
 // import "C"
 import "unsafe"
@@ -120,42 +120,7 @@ func (this *QJsonObject) Operator_equal(other QJsonObject_ITF) *QJsonObject {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:84
-// index:1
-// Public inline Visibility=Default Availability=Available
-// [16] QJsonObject & operator=(QJsonObject &&)
-
-/*
-
- */
-func (this *QJsonObject) Operator_equal1(other unsafe.Pointer /*333*/) *QJsonObject {
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QJsonObjectaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQJsonObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonObject)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qjsonobject.h:90
-// index:0
-// Public inline Visibility=Default Availability=Available
-// [-2] void swap(QJsonObject &)
-
-/*
-Swaps the object other with this. This operation is very fast and never fails.
-
-This function was introduced in  Qt 5.10.
-*/
-func (this *QJsonObject) Swap(other QJsonObject_ITF) {
-	var convArg0 unsafe.Pointer
-	if other != nil && other.QJsonObject_PTR() != nil {
-		convArg0 = other.QJsonObject_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QJsonObject4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtCore/qjsonobject.h:101
+// /usr/include/qt/QtCore/qjsonobject.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList keys() const
@@ -173,7 +138,7 @@ func (this *QJsonObject) Keys() *QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:102
+// /usr/include/qt/QtCore/qjsonobject.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int size() const
@@ -187,7 +152,7 @@ func (this *QJsonObject) Size() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:103
+// /usr/include/qt/QtCore/qjsonobject.h:84
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int count() const
@@ -203,7 +168,7 @@ func (this *QJsonObject) Count() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:104
+// /usr/include/qt/QtCore/qjsonobject.h:85
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int length() const
@@ -219,7 +184,7 @@ func (this *QJsonObject) Length() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:105
+// /usr/include/qt/QtCore/qjsonobject.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEmpty() const
@@ -235,7 +200,7 @@ func (this *QJsonObject) IsEmpty() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:107
+// /usr/include/qt/QtCore/qjsonobject.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QJsonValue value(const QString &) const
@@ -257,7 +222,7 @@ func (this *QJsonObject) Value(key string) *QJsonValue /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:108
+// /usr/include/qt/QtCore/qjsonobject.h:89
 // index:1
 // Public Visibility=Default Availability=Available
 // [24] QJsonValue value(QLatin1String) const
@@ -281,7 +246,7 @@ func (this *QJsonObject) Value1(key QLatin1String_ITF /*123*/) *QJsonValue /*123
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:109
+// /usr/include/qt/QtCore/qjsonobject.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QJsonValue operator[](const QString &) const
@@ -299,7 +264,7 @@ func (this *QJsonObject) Operator_get_index(key string) *QJsonValue /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:110
+// /usr/include/qt/QtCore/qjsonobject.h:91
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [24] QJsonValue operator[](QLatin1String) const
@@ -319,7 +284,7 @@ func (this *QJsonObject) Operator_get_index1(key QLatin1String_ITF /*123*/) *QJs
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:111
+// /usr/include/qt/QtCore/qjsonobject.h:92
 // index:2
 // Public Visibility=Default Availability=Available
 // [16] QJsonValueRef operator[](const QString &)
@@ -337,7 +302,7 @@ func (this *QJsonObject) Operator_get_index2(key string) *QJsonValueRef /*123*/ 
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:112
+// /usr/include/qt/QtCore/qjsonobject.h:93
 // index:3
 // Public Visibility=Default Availability=Available
 // [16] QJsonValueRef operator[](QLatin1String)
@@ -357,7 +322,7 @@ func (this *QJsonObject) Operator_get_index3(key QLatin1String_ITF /*123*/) *QJs
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:114
+// /usr/include/qt/QtCore/qjsonobject.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void remove(const QString &)
@@ -374,7 +339,7 @@ func (this *QJsonObject) Remove(key string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:115
+// /usr/include/qt/QtCore/qjsonobject.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QJsonValue take(const QString &)
@@ -396,7 +361,7 @@ func (this *QJsonObject) Take(key string) *QJsonValue /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:116
+// /usr/include/qt/QtCore/qjsonobject.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool contains(const QString &) const
@@ -414,7 +379,7 @@ func (this *QJsonObject) Contains(key string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:117
+// /usr/include/qt/QtCore/qjsonobject.h:98
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool contains(QLatin1String) const
@@ -434,7 +399,7 @@ func (this *QJsonObject) Contains1(key QLatin1String_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:119
+// /usr/include/qt/QtCore/qjsonobject.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QJsonObject &) const
@@ -452,7 +417,7 @@ func (this *QJsonObject) Operator_equal_equal(other QJsonObject_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:120
+// /usr/include/qt/QtCore/qjsonobject.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator!=(const QJsonObject &) const
@@ -470,7 +435,7 @@ func (this *QJsonObject) Operator_not_equal(other QJsonObject_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:214
+// /usr/include/qt/QtCore/qjsonobject.h:195
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QJsonObject::iterator begin()
@@ -486,7 +451,7 @@ func (this *QJsonObject) Begin() unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:215
+// /usr/include/qt/QtCore/qjsonobject.h:196
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] QJsonObject::const_iterator begin() const
@@ -502,7 +467,7 @@ func (this *QJsonObject) Begin1() unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:216
+// /usr/include/qt/QtCore/qjsonobject.h:197
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QJsonObject::const_iterator constBegin() const
@@ -518,7 +483,7 @@ func (this *QJsonObject) ConstBegin() unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:217
+// /usr/include/qt/QtCore/qjsonobject.h:198
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QJsonObject::iterator end()
@@ -534,7 +499,7 @@ func (this *QJsonObject) End() unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:218
+// /usr/include/qt/QtCore/qjsonobject.h:199
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] QJsonObject::const_iterator end() const
@@ -550,7 +515,7 @@ func (this *QJsonObject) End1() unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:219
+// /usr/include/qt/QtCore/qjsonobject.h:200
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QJsonObject::const_iterator constEnd() const
@@ -566,7 +531,7 @@ func (this *QJsonObject) ConstEnd() unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:225
+// /usr/include/qt/QtCore/qjsonobject.h:206
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QJsonObject::iterator find(const QString &)
@@ -584,7 +549,7 @@ func (this *QJsonObject) Find(key string) unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:226
+// /usr/include/qt/QtCore/qjsonobject.h:207
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QJsonObject::iterator find(QLatin1String)
@@ -604,7 +569,7 @@ func (this *QJsonObject) Find1(key QLatin1String_ITF /*123*/) unsafe.Pointer /*4
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:227
+// /usr/include/qt/QtCore/qjsonobject.h:208
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [16] QJsonObject::const_iterator find(const QString &) const
@@ -622,7 +587,7 @@ func (this *QJsonObject) Find2(key string) unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:228
+// /usr/include/qt/QtCore/qjsonobject.h:209
 // index:3
 // Public inline Visibility=Default Availability=Available
 // [16] QJsonObject::const_iterator find(QLatin1String) const
@@ -642,7 +607,7 @@ func (this *QJsonObject) Find3(key QLatin1String_ITF /*123*/) unsafe.Pointer /*4
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:229
+// /usr/include/qt/QtCore/qjsonobject.h:210
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QJsonObject::const_iterator constFind(const QString &) const
@@ -660,7 +625,7 @@ func (this *QJsonObject) ConstFind(key string) unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:230
+// /usr/include/qt/QtCore/qjsonobject.h:211
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QJsonObject::const_iterator constFind(QLatin1String) const
@@ -680,7 +645,7 @@ func (this *QJsonObject) ConstFind1(key QLatin1String_ITF /*123*/) unsafe.Pointe
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qjsonobject.h:238
+// /usr/include/qt/QtCore/qjsonobject.h:219
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool empty() const

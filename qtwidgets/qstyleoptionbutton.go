@@ -64,7 +64,7 @@ func (*QStyleOptionButton) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionBut
 	return NewQStyleOptionButtonFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:248
+// /usr/include/qt/QtWidgets/qstyleoption.h:237
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionButton()
@@ -83,7 +83,7 @@ func NewQStyleOptionButton() *QStyleOptionButton {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:252
+// /usr/include/qt/QtWidgets/qstyleoption.h:241
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionButton(int)

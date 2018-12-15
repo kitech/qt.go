@@ -313,7 +313,7 @@ func (this *QAudioBuffer) ByteCount() int {
 /*
 Returns the duration of audio in this buffer, in microseconds.
 
-This depends on the format(), and the frameCount().
+This depends on the /l format(), and the frameCount().
 */
 func (this *QAudioBuffer) Duration() int64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QAudioBuffer8durationEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())

@@ -1068,10 +1068,10 @@ Signals that a media object's meta-data has changed.
 
 If multiple meta-data elements are changed, metaDataChanged(const QString &key, const QVariant &value) signal is emitted for each of them with metaDataChanged() changed emitted once.
 
-Note: Signal metaDataChanged is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal metaDataChanged is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(mediaRecorder, QOverload<>::of(&QMediaRecorder::metaDataChanged),
+  connect(mediaRecorder, static_cast<void(QMediaRecorder::*)()>(&QMediaRecorder::metaDataChanged),
       [=](){ /-* ... *-/ });
 */
 func (this *QMediaRecorder) MetaDataChanged() {
@@ -1089,10 +1089,10 @@ Signals that a media object's meta-data has changed.
 
 If multiple meta-data elements are changed, metaDataChanged(const QString &key, const QVariant &value) signal is emitted for each of them with metaDataChanged() changed emitted once.
 
-Note: Signal metaDataChanged is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal metaDataChanged is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(mediaRecorder, QOverload<>::of(&QMediaRecorder::metaDataChanged),
+  connect(mediaRecorder, static_cast<void(QMediaRecorder::*)()>(&QMediaRecorder::metaDataChanged),
       [=](){ /-* ... *-/ });
 */
 func (this *QMediaRecorder) MetaDataChanged1(key string, value qtcore.QVariant_ITF) {
@@ -1114,10 +1114,10 @@ func (this *QMediaRecorder) MetaDataChanged1(key string, value qtcore.QVariant_I
 /*
 Signals that the media recorder is now available (if available is true), or not.
 
-Note: Signal availabilityChanged is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal availabilityChanged is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(mediaRecorder, QOverload<bool>::of(&QMediaRecorder::availabilityChanged),
+  connect(mediaRecorder, static_cast<void(QMediaRecorder::*)(bool)>(&QMediaRecorder::availabilityChanged),
       [=](bool available){ /-* ... *-/ });
 */
 func (this *QMediaRecorder) AvailabilityChanged(available bool) {
@@ -1133,10 +1133,10 @@ func (this *QMediaRecorder) AvailabilityChanged(available bool) {
 /*
 Signals that the media recorder is now available (if available is true), or not.
 
-Note: Signal availabilityChanged is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal availabilityChanged is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(mediaRecorder, QOverload<bool>::of(&QMediaRecorder::availabilityChanged),
+  connect(mediaRecorder, static_cast<void(QMediaRecorder::*)(bool)>(&QMediaRecorder::availabilityChanged),
       [=](bool available){ /-* ... *-/ });
 */
 func (this *QMediaRecorder) AvailabilityChanged1(availability int) {

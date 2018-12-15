@@ -66,7 +66,7 @@ func (*QStyleOptionTabWidgetFrame) NewFromPointer(cthis unsafe.Pointer) *QStyleO
 	return NewQStyleOptionTabWidgetFrameFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:171
+// /usr/include/qt/QtWidgets/qstyleoption.h:160
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionTabWidgetFrame()
@@ -85,7 +85,7 @@ func NewQStyleOptionTabWidgetFrame() *QStyleOptionTabWidgetFrame {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:176
+// /usr/include/qt/QtWidgets/qstyleoption.h:165
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionTabWidgetFrame(int)

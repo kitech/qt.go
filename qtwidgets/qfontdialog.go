@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qfontdialog.h
@@ -81,7 +79,7 @@ func (*QFontDialog) NewFromPointer(cthis unsafe.Pointer) *QFontDialog {
 	return NewQFontDialogFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:57
+// /usr/include/qt/QtWidgets/qfontdialog.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -95,7 +93,7 @@ func (this *QFontDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:75
+// /usr/include/qt/QtWidgets/qfontdialog.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFontDialog(QWidget *)
@@ -126,7 +124,7 @@ func NewQFontDialog(parent QWidget_ITF /*777 QWidget **/) *QFontDialog {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:75
+// /usr/include/qt/QtWidgets/qfontdialog.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFontDialog(QWidget *)
@@ -155,7 +153,7 @@ func NewQFontDialogp() *QFontDialog {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:76
+// /usr/include/qt/QtWidgets/qfontdialog.h:77
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QFontDialog(const QFont &, QWidget *)
@@ -190,7 +188,7 @@ func NewQFontDialog1(initial qtgui.QFont_ITF, parent QWidget_ITF /*777 QWidget *
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:76
+// /usr/include/qt/QtWidgets/qfontdialog.h:77
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QFontDialog(const QFont &, QWidget *)
@@ -223,7 +221,7 @@ func NewQFontDialog1p(initial qtgui.QFont_ITF) *QFontDialog {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:77
+// /usr/include/qt/QtWidgets/qfontdialog.h:78
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFontDialog()
@@ -238,7 +236,7 @@ func DeleteQFontDialog(this *QFontDialog) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:79
+// /usr/include/qt/QtWidgets/qfontdialog.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentFont(const QFont &)
@@ -261,7 +259,7 @@ func (this *QFontDialog) SetCurrentFont(font qtgui.QFont_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:80
+// /usr/include/qt/QtWidgets/qfontdialog.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QFont currentFont() const
@@ -283,7 +281,7 @@ func (this *QFontDialog) CurrentFont() *qtgui.QFont /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:82
+// /usr/include/qt/QtWidgets/qfontdialog.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QFont selectedFont() const
@@ -301,7 +299,7 @@ func (this *QFontDialog) SelectedFont() *qtgui.QFont /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:84
+// /usr/include/qt/QtWidgets/qfontdialog.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(QFontDialog::FontDialogOption, bool)
@@ -316,7 +314,7 @@ func (this *QFontDialog) SetOption(option int, on bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:84
+// /usr/include/qt/QtWidgets/qfontdialog.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(QFontDialog::FontDialogOption, bool)
@@ -333,7 +331,7 @@ func (this *QFontDialog) SetOptionp(option int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:85
+// /usr/include/qt/QtWidgets/qfontdialog.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool testOption(QFontDialog::FontDialogOption) const
@@ -349,7 +347,7 @@ func (this *QFontDialog) TestOption(option int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:86
+// /usr/include/qt/QtWidgets/qfontdialog.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOptions(QFontDialog::FontDialogOptions)
@@ -362,7 +360,7 @@ func (this *QFontDialog) SetOptions(options int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:87
+// /usr/include/qt/QtWidgets/qfontdialog.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QFontDialog::FontDialogOptions options() const
@@ -376,7 +374,7 @@ func (this *QFontDialog) Options() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:90
+// /usr/include/qt/QtWidgets/qfontdialog.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void open(QObject *, const char *)
@@ -401,7 +399,7 @@ func (this *QFontDialog) Open(receiver qtcore.QObject_ITF /*777 QObject **/, mem
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:92
+// /usr/include/qt/QtWidgets/qfontdialog.h:93
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setVisible(bool)
@@ -414,7 +412,7 @@ func (this *QFontDialog) SetVisible(visible bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:94
+// /usr/include/qt/QtWidgets/qfontdialog.h:95
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QFont getFont(bool *, QWidget *)
@@ -468,7 +466,7 @@ func QFontDialog_GetFont(ok *bool, parent QWidget_ITF /*777 QWidget **/) *qtgui.
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:94
+// /usr/include/qt/QtWidgets/qfontdialog.h:95
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QFont getFont(bool *, QWidget *)
@@ -515,7 +513,7 @@ func (this *QFontDialog) GetFontp(ok *bool) *qtgui.QFont /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:95
+// /usr/include/qt/QtWidgets/qfontdialog.h:96
 // index:1
 // Public static Visibility=Default Availability=Available
 // [16] QFont getFont(bool *, const QFont &, QWidget *, const QString &, QFontDialog::FontDialogOptions)
@@ -575,7 +573,7 @@ func QFontDialog_GetFont1(ok *bool, initial qtgui.QFont_ITF, parent QWidget_ITF 
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:95
+// /usr/include/qt/QtWidgets/qfontdialog.h:96
 // index:1
 // Public static Visibility=Default Availability=Available
 // [16] QFont getFont(bool *, const QFont &, QWidget *, const QString &, QFontDialog::FontDialogOptions)
@@ -630,7 +628,7 @@ func (this *QFontDialog) GetFont1p(ok *bool, initial qtgui.QFont_ITF) *qtgui.QFo
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:95
+// /usr/include/qt/QtWidgets/qfontdialog.h:96
 // index:1
 // Public static Visibility=Default Availability=Available
 // [16] QFont getFont(bool *, const QFont &, QWidget *, const QString &, QFontDialog::FontDialogOptions)
@@ -687,7 +685,7 @@ func (this *QFontDialog) GetFont1p1(ok *bool, initial qtgui.QFont_ITF, parent QW
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:95
+// /usr/include/qt/QtWidgets/qfontdialog.h:96
 // index:1
 // Public static Visibility=Default Availability=Available
 // [16] QFont getFont(bool *, const QFont &, QWidget *, const QString &, QFontDialog::FontDialogOptions)
@@ -744,7 +742,7 @@ func (this *QFontDialog) GetFont1p2(ok *bool, initial qtgui.QFont_ITF, parent QW
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:99
+// /usr/include/qt/QtWidgets/qfontdialog.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentFontChanged(const QFont &)
@@ -769,7 +767,7 @@ func (this *QFontDialog) CurrentFontChanged(font qtgui.QFont_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:100
+// /usr/include/qt/QtWidgets/qfontdialog.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void fontSelected(const QFont &)
@@ -792,7 +790,7 @@ func (this *QFontDialog) FontSelected(font qtgui.QFont_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:103
+// /usr/include/qt/QtWidgets/qfontdialog.h:104
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
@@ -809,7 +807,7 @@ func (this *QFontDialog) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:104
+// /usr/include/qt/QtWidgets/qfontdialog.h:105
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void done(int)
@@ -826,7 +824,7 @@ func (this *QFontDialog) Done(result int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfontdialog.h:105
+// /usr/include/qt/QtWidgets/qfontdialog.h:106
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)

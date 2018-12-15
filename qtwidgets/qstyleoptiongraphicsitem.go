@@ -66,7 +66,7 @@ func (*QStyleOptionGraphicsItem) NewFromPointer(cthis unsafe.Pointer) *QStyleOpt
 	return NewQStyleOptionGraphicsItemFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:669
+// /usr/include/qt/QtWidgets/qstyleoption.h:658
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionGraphicsItem()
@@ -85,7 +85,7 @@ func NewQStyleOptionGraphicsItem() *QStyleOptionGraphicsItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:673
+// /usr/include/qt/QtWidgets/qstyleoption.h:662
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionGraphicsItem(int)
@@ -104,7 +104,7 @@ func NewQStyleOptionGraphicsItem1(version int) *QStyleOptionGraphicsItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:671
+// /usr/include/qt/QtWidgets/qstyleoption.h:660
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] qreal levelOfDetailFromTransform(const QTransform &)

@@ -156,8 +156,6 @@ Note that if you are attempting to join an IPv4 group, your socket must not be b
 
 This function returns true if successful; otherwise it returns false and sets the socket error accordingly.
 
-Note: Joining IPv6 multicast groups without an interface selection is not supported in all operating systems. Consider using the overload where the interface is specified.
-
 This function was introduced in  Qt 4.8.
 
 See also leaveMulticastGroup().
@@ -183,8 +181,6 @@ Joins the multicast group specified by groupAddress on the default interface cho
 Note that if you are attempting to join an IPv4 group, your socket must not be bound using IPv6 (or in dual mode, using QHostAddress::Any). You must use QHostAddress::AnyIPv4 instead.
 
 This function returns true if successful; otherwise it returns false and sets the socket error accordingly.
-
-Note: Joining IPv6 multicast groups without an interface selection is not supported in all operating systems. Consider using the overload where the interface is specified.
 
 This function was introduced in  Qt 4.8.
 
@@ -214,8 +210,6 @@ Leaves the multicast group specified by groupAddress on the default interface ch
 
 This function returns true if successful; otherwise it returns false and sets the socket error accordingly.
 
-Note: This function should be called with the same arguments as were passed to joinMulticastGroup().
-
 This function was introduced in  Qt 4.8.
 
 See also joinMulticastGroup().
@@ -239,8 +233,6 @@ func (this *QUdpSocket) LeaveMulticastGroup(groupAddress QHostAddress_ITF) bool 
 Leaves the multicast group specified by groupAddress on the default interface chosen by the operating system. The socket must be in BoundState, otherwise an error occurs.
 
 This function returns true if successful; otherwise it returns false and sets the socket error accordingly.
-
-Note: This function should be called with the same arguments as were passed to joinMulticastGroup().
 
 This function was introduced in  Qt 4.8.
 

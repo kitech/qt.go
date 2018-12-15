@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h
@@ -68,7 +66,7 @@ func (*QGraphicsSceneHoverEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphics
 	return NewQGraphicsSceneHoverEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:201
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:202
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneHoverEvent(QEvent::Type)
@@ -87,7 +85,7 @@ func NewQGraphicsSceneHoverEvent(type_ int) *QGraphicsSceneHoverEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:201
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:202
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneHoverEvent(QEvent::Type)
@@ -108,7 +106,7 @@ func NewQGraphicsSceneHoverEventp() *QGraphicsSceneHoverEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:202
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:203
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsSceneHoverEvent()
@@ -123,7 +121,7 @@ func DeleteQGraphicsSceneHoverEvent(this *QGraphicsSceneHoverEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:204
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:205
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF pos() const
@@ -139,7 +137,7 @@ func (this *QGraphicsSceneHoverEvent) Pos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:205
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:206
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPos(const QPointF &)
@@ -156,7 +154,7 @@ func (this *QGraphicsSceneHoverEvent) SetPos(pos qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:207
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:208
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF scenePos() const
@@ -172,7 +170,7 @@ func (this *QGraphicsSceneHoverEvent) ScenePos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:208
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:209
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScenePos(const QPointF &)
@@ -189,7 +187,7 @@ func (this *QGraphicsSceneHoverEvent) SetScenePos(pos qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:210
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:211
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint screenPos() const
@@ -205,7 +203,7 @@ func (this *QGraphicsSceneHoverEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:211
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:212
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScreenPos(const QPoint &)
@@ -222,7 +220,7 @@ func (this *QGraphicsSceneHoverEvent) SetScreenPos(pos qtcore.QPoint_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:213
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:214
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF lastPos() const
@@ -238,7 +236,7 @@ func (this *QGraphicsSceneHoverEvent) LastPos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:214
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:215
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLastPos(const QPointF &)
@@ -255,7 +253,7 @@ func (this *QGraphicsSceneHoverEvent) SetLastPos(pos qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:216
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:217
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF lastScenePos() const
@@ -271,7 +269,7 @@ func (this *QGraphicsSceneHoverEvent) LastScenePos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:217
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:218
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLastScenePos(const QPointF &)
@@ -288,7 +286,7 @@ func (this *QGraphicsSceneHoverEvent) SetLastScenePos(pos qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:219
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:220
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint lastScreenPos() const
@@ -304,7 +302,7 @@ func (this *QGraphicsSceneHoverEvent) LastScreenPos() *qtcore.QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:220
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:221
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLastScreenPos(const QPoint &)
@@ -321,7 +319,7 @@ func (this *QGraphicsSceneHoverEvent) SetLastScreenPos(pos qtcore.QPoint_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:222
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:223
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::KeyboardModifiers modifiers() const
@@ -335,7 +333,7 @@ func (this *QGraphicsSceneHoverEvent) Modifiers() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:223
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:224
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setModifiers(Qt::KeyboardModifiers)

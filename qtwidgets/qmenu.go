@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qmenu.h
@@ -146,7 +144,7 @@ func (*QMenu) NewFromPointer(cthis unsafe.Pointer) *QMenu {
 	return NewQMenuFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:64
+// /usr/include/qt/QtWidgets/qmenu.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -160,7 +158,7 @@ func (this *QMenu) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ 
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:74
+// /usr/include/qt/QtWidgets/qmenu.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMenu(QWidget *)
@@ -185,7 +183,7 @@ func NewQMenu(parent QWidget_ITF /*777 QWidget **/) *QMenu {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:74
+// /usr/include/qt/QtWidgets/qmenu.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMenu(QWidget *)
@@ -208,7 +206,7 @@ func NewQMenup() *QMenu {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:75
+// /usr/include/qt/QtWidgets/qmenu.h:76
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QMenu(const QString &, QWidget *)
@@ -235,7 +233,7 @@ func NewQMenu1(title string, parent QWidget_ITF /*777 QWidget **/) *QMenu {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:75
+// /usr/include/qt/QtWidgets/qmenu.h:76
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QMenu(const QString &, QWidget *)
@@ -260,7 +258,7 @@ func NewQMenu1p(title string) *QMenu {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:76
+// /usr/include/qt/QtWidgets/qmenu.h:77
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMenu()
@@ -275,7 +273,7 @@ func DeleteQMenu(this *QMenu) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:79
+// /usr/include/qt/QtWidgets/qmenu.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QString &)
@@ -297,7 +295,7 @@ func (this *QMenu) AddAction(text string) *QAction /*777 QAction **/ {
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:80
+// /usr/include/qt/QtWidgets/qmenu.h:81
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QIcon &, const QString &)
@@ -323,7 +321,7 @@ func (this *QMenu) AddAction1(icon qtgui.QIcon_ITF, text string) *QAction /*777 
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:81
+// /usr/include/qt/QtWidgets/qmenu.h:82
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QString &, const QObject *, const char *, const QKeySequence &)
@@ -355,7 +353,7 @@ func (this *QMenu) AddAction2(text string, receiver qtcore.QObject_ITF /*777 con
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:81
+// /usr/include/qt/QtWidgets/qmenu.h:82
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QString &, const QObject *, const char *, const QKeySequence &)
@@ -385,7 +383,7 @@ func (this *QMenu) AddAction2p(text string, receiver qtcore.QObject_ITF /*777 co
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:82
+// /usr/include/qt/QtWidgets/qmenu.h:83
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QIcon &, const QString &, const QObject *, const char *, const QKeySequence &)
@@ -421,7 +419,7 @@ func (this *QMenu) AddAction3(icon qtgui.QIcon_ITF, text string, receiver qtcore
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:82
+// /usr/include/qt/QtWidgets/qmenu.h:83
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QIcon &, const QString &, const QObject *, const char *, const QKeySequence &)
@@ -455,7 +453,7 @@ func (this *QMenu) AddAction3p(icon qtgui.QIcon_ITF, text string, receiver qtcor
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:156
+// /usr/include/qt/QtWidgets/qmenu.h:157
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * addMenu(QMenu *)
@@ -475,7 +473,7 @@ func (this *QMenu) AddMenu(menu QMenu_ITF /*777 QMenu **/) *QAction /*777 QActio
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:157
+// /usr/include/qt/QtWidgets/qmenu.h:158
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QMenu * addMenu(const QString &)
@@ -493,7 +491,7 @@ func (this *QMenu) AddMenu1(title string) *QMenu /*777 QMenu **/ {
 	return /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:158
+// /usr/include/qt/QtWidgets/qmenu.h:159
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QMenu * addMenu(const QIcon &, const QString &)
@@ -515,7 +513,7 @@ func (this *QMenu) AddMenu2(icon qtgui.QIcon_ITF, title string) *QMenu /*777 QMe
 	return /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:160
+// /usr/include/qt/QtWidgets/qmenu.h:161
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * addSeparator()
@@ -533,7 +531,7 @@ func (this *QMenu) AddSeparator() *QAction /*777 QAction **/ {
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:162
+// /usr/include/qt/QtWidgets/qmenu.h:163
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * addSection(const QString &)
@@ -557,7 +555,7 @@ func (this *QMenu) AddSection(text string) *QAction /*777 QAction **/ {
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:163
+// /usr/include/qt/QtWidgets/qmenu.h:164
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QAction * addSection(const QIcon &, const QString &)
@@ -585,7 +583,7 @@ func (this *QMenu) AddSection1(icon qtgui.QIcon_ITF, text string) *QAction /*777
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:165
+// /usr/include/qt/QtWidgets/qmenu.h:166
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * insertMenu(QAction *, QMenu *)
@@ -609,7 +607,7 @@ func (this *QMenu) InsertMenu(before QAction_ITF /*777 QAction **/, menu QMenu_I
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:166
+// /usr/include/qt/QtWidgets/qmenu.h:167
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * insertSeparator(QAction *)
@@ -631,7 +629,7 @@ func (this *QMenu) InsertSeparator(before QAction_ITF /*777 QAction **/) *QActio
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:167
+// /usr/include/qt/QtWidgets/qmenu.h:168
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * insertSection(QAction *, const QString &)
@@ -659,7 +657,7 @@ func (this *QMenu) InsertSection(before QAction_ITF /*777 QAction **/, text stri
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:168
+// /usr/include/qt/QtWidgets/qmenu.h:169
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QAction * insertSection(QAction *, const QIcon &, const QString &)
@@ -691,7 +689,7 @@ func (this *QMenu) InsertSection1(before QAction_ITF /*777 QAction **/, icon qtg
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:170
+// /usr/include/qt/QtWidgets/qmenu.h:171
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEmpty() const
@@ -709,7 +707,7 @@ func (this *QMenu) IsEmpty() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:171
+// /usr/include/qt/QtWidgets/qmenu.h:172
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
@@ -724,7 +722,7 @@ func (this *QMenu) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:173
+// /usr/include/qt/QtWidgets/qmenu.h:174
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTearOffEnabled(bool)
@@ -737,7 +735,7 @@ func (this *QMenu) SetTearOffEnabled(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:174
+// /usr/include/qt/QtWidgets/qmenu.h:175
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isTearOffEnabled() const
@@ -751,7 +749,7 @@ func (this *QMenu) IsTearOffEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:176
+// /usr/include/qt/QtWidgets/qmenu.h:177
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isTearOffMenuVisible() const
@@ -767,7 +765,7 @@ func (this *QMenu) IsTearOffMenuVisible() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:177
+// /usr/include/qt/QtWidgets/qmenu.h:178
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showTearOffMenu()
@@ -784,7 +782,7 @@ func (this *QMenu) ShowTearOffMenu() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:178
+// /usr/include/qt/QtWidgets/qmenu.h:179
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void showTearOffMenu(const QPoint &)
@@ -805,7 +803,7 @@ func (this *QMenu) ShowTearOffMenu1(pos qtcore.QPoint_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:179
+// /usr/include/qt/QtWidgets/qmenu.h:180
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void hideTearOffMenu()
@@ -820,7 +818,7 @@ func (this *QMenu) HideTearOffMenu() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:181
+// /usr/include/qt/QtWidgets/qmenu.h:182
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultAction(QAction *)
@@ -839,7 +837,7 @@ func (this *QMenu) SetDefaultAction(arg0 QAction_ITF /*777 QAction **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:182
+// /usr/include/qt/QtWidgets/qmenu.h:183
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * defaultAction() const
@@ -855,7 +853,7 @@ func (this *QMenu) DefaultAction() *QAction /*777 QAction **/ {
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:184
+// /usr/include/qt/QtWidgets/qmenu.h:185
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setActiveAction(QAction *)
@@ -874,7 +872,7 @@ func (this *QMenu) SetActiveAction(act QAction_ITF /*777 QAction **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:185
+// /usr/include/qt/QtWidgets/qmenu.h:186
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * activeAction() const
@@ -890,7 +888,7 @@ func (this *QMenu) ActiveAction() *QAction /*777 QAction **/ {
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:187
+// /usr/include/qt/QtWidgets/qmenu.h:188
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void popup(const QPoint &, QAction *)
@@ -915,7 +913,7 @@ func (this *QMenu) Popup(pos qtcore.QPoint_ITF, at QAction_ITF /*777 QAction **/
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:187
+// /usr/include/qt/QtWidgets/qmenu.h:188
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void popup(const QPoint &, QAction *)
@@ -938,7 +936,7 @@ func (this *QMenu) Popupp(pos qtcore.QPoint_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:188
+// /usr/include/qt/QtWidgets/qmenu.h:189
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * exec()
@@ -975,7 +973,7 @@ func (this *QMenu) Exec() *QAction /*777 QAction **/ {
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:189
+// /usr/include/qt/QtWidgets/qmenu.h:190
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QAction * exec(const QPoint &, QAction *)
@@ -1020,7 +1018,7 @@ func (this *QMenu) Exec1(pos qtcore.QPoint_ITF, at QAction_ITF /*777 QAction **/
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:189
+// /usr/include/qt/QtWidgets/qmenu.h:190
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QAction * exec(const QPoint &, QAction *)
@@ -1063,7 +1061,7 @@ func (this *QMenu) Exec1p(pos qtcore.QPoint_ITF) *QAction /*777 QAction **/ {
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:197
+// /usr/include/qt/QtWidgets/qmenu.h:198
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
@@ -1079,7 +1077,7 @@ func (this *QMenu) SizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:199
+// /usr/include/qt/QtWidgets/qmenu.h:200
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect actionGeometry(QAction *) const
@@ -1099,7 +1097,7 @@ func (this *QMenu) ActionGeometry(arg0 QAction_ITF /*777 QAction **/) *qtcore.QR
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:200
+// /usr/include/qt/QtWidgets/qmenu.h:201
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * actionAt(const QPoint &) const
@@ -1117,7 +1115,7 @@ func (this *QMenu) ActionAt(arg0 qtcore.QPoint_ITF) *QAction /*777 QAction **/ {
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:202
+// /usr/include/qt/QtWidgets/qmenu.h:203
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * menuAction() const
@@ -1131,7 +1129,7 @@ func (this *QMenu) MenuAction() *QAction /*777 QAction **/ {
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:204
+// /usr/include/qt/QtWidgets/qmenu.h:205
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString title() const
@@ -1148,7 +1146,7 @@ func (this *QMenu) Title() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:205
+// /usr/include/qt/QtWidgets/qmenu.h:206
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTitle(const QString &)
@@ -1163,7 +1161,7 @@ func (this *QMenu) SetTitle(title string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:207
+// /usr/include/qt/QtWidgets/qmenu.h:208
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIcon icon() const
@@ -1179,7 +1177,7 @@ func (this *QMenu) Icon() *qtgui.QIcon /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:208
+// /usr/include/qt/QtWidgets/qmenu.h:209
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
@@ -1196,7 +1194,7 @@ func (this *QMenu) SetIcon(icon qtgui.QIcon_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:210
+// /usr/include/qt/QtWidgets/qmenu.h:211
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNoReplayFor(QWidget *)
@@ -1213,7 +1211,7 @@ func (this *QMenu) SetNoReplayFor(widget QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:219
+// /usr/include/qt/QtWidgets/qmenu.h:220
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool separatorsCollapsible() const
@@ -1227,7 +1225,7 @@ func (this *QMenu) SeparatorsCollapsible() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:220
+// /usr/include/qt/QtWidgets/qmenu.h:221
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSeparatorsCollapsible(bool)
@@ -1240,7 +1238,7 @@ func (this *QMenu) SetSeparatorsCollapsible(collapse bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:222
+// /usr/include/qt/QtWidgets/qmenu.h:223
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool toolTipsVisible() const
@@ -1254,7 +1252,7 @@ func (this *QMenu) ToolTipsVisible() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:223
+// /usr/include/qt/QtWidgets/qmenu.h:224
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setToolTipsVisible(bool)
@@ -1267,7 +1265,7 @@ func (this *QMenu) SetToolTipsVisible(visible bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:226
+// /usr/include/qt/QtWidgets/qmenu.h:227
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void aboutToShow()
@@ -1282,7 +1280,7 @@ func (this *QMenu) AboutToShow() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:227
+// /usr/include/qt/QtWidgets/qmenu.h:228
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void aboutToHide()
@@ -1299,7 +1297,7 @@ func (this *QMenu) AboutToHide() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:228
+// /usr/include/qt/QtWidgets/qmenu.h:229
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void triggered(QAction *)
@@ -1324,7 +1322,7 @@ func (this *QMenu) Triggered(action QAction_ITF /*777 QAction **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:229
+// /usr/include/qt/QtWidgets/qmenu.h:230
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void hovered(QAction *)
@@ -1345,7 +1343,7 @@ func (this *QMenu) Hovered(action QAction_ITF /*777 QAction **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:232
+// /usr/include/qt/QtWidgets/qmenu.h:233
 // index:0
 // Protected Visibility=Default Availability=Available
 // [4] int columnCount() const
@@ -1361,7 +1359,7 @@ func (this *QMenu) ColumnCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:234
+// /usr/include/qt/QtWidgets/qmenu.h:235
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
@@ -1378,7 +1376,7 @@ func (this *QMenu) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:235
+// /usr/include/qt/QtWidgets/qmenu.h:236
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
@@ -1395,7 +1393,7 @@ func (this *QMenu) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:236
+// /usr/include/qt/QtWidgets/qmenu.h:237
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
@@ -1412,7 +1410,7 @@ func (this *QMenu) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:237
+// /usr/include/qt/QtWidgets/qmenu.h:238
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
@@ -1429,7 +1427,7 @@ func (this *QMenu) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:238
+// /usr/include/qt/QtWidgets/qmenu.h:239
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
@@ -1446,7 +1444,7 @@ func (this *QMenu) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:240
+// /usr/include/qt/QtWidgets/qmenu.h:241
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
@@ -1463,7 +1461,7 @@ func (this *QMenu) WheelEvent(arg0 qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:242
+// /usr/include/qt/QtWidgets/qmenu.h:243
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void enterEvent(QEvent *)
@@ -1480,7 +1478,7 @@ func (this *QMenu) EnterEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:243
+// /usr/include/qt/QtWidgets/qmenu.h:244
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void leaveEvent(QEvent *)
@@ -1497,7 +1495,7 @@ func (this *QMenu) LeaveEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:244
+// /usr/include/qt/QtWidgets/qmenu.h:245
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
@@ -1514,7 +1512,7 @@ func (this *QMenu) HideEvent(arg0 qtgui.QHideEvent_ITF /*777 QHideEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:245
+// /usr/include/qt/QtWidgets/qmenu.h:246
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
@@ -1531,7 +1529,7 @@ func (this *QMenu) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:246
+// /usr/include/qt/QtWidgets/qmenu.h:247
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void actionEvent(QActionEvent *)
@@ -1548,7 +1546,7 @@ func (this *QMenu) ActionEvent(arg0 qtgui.QActionEvent_ITF /*777 QActionEvent **
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:247
+// /usr/include/qt/QtWidgets/qmenu.h:248
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
@@ -1565,7 +1563,7 @@ func (this *QMenu) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimerEvent **/)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:248
+// /usr/include/qt/QtWidgets/qmenu.h:249
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -1583,7 +1581,7 @@ func (this *QMenu) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:249
+// /usr/include/qt/QtWidgets/qmenu.h:250
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool focusNextPrevChild(bool)
@@ -1597,7 +1595,7 @@ func (this *QMenu) FocusNextPrevChild(next bool) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:250
+// /usr/include/qt/QtWidgets/qmenu.h:251
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionMenuItem *, const QAction *) const

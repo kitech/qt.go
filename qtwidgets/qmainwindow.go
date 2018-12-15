@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qmainwindow.h
@@ -20,7 +18,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 56
+// extern C begin: 55
 */
 // import "C"
 import "unsafe"
@@ -76,7 +74,7 @@ func (*QMainWindow) NewFromPointer(cthis unsafe.Pointer) *QMainWindow {
 	return NewQMainWindowFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:62
+// /usr/include/qt/QtWidgets/qmainwindow.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -90,7 +88,7 @@ func (this *QMainWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:94
+// /usr/include/qt/QtWidgets/qmainwindow.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMainWindow(QWidget *, Qt::WindowFlags)
@@ -115,7 +113,7 @@ func NewQMainWindow(parent QWidget_ITF /*777 QWidget **/, flags int) *QMainWindo
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:94
+// /usr/include/qt/QtWidgets/qmainwindow.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMainWindow(QWidget *, Qt::WindowFlags)
@@ -140,7 +138,7 @@ func NewQMainWindowp() *QMainWindow {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:94
+// /usr/include/qt/QtWidgets/qmainwindow.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMainWindow(QWidget *, Qt::WindowFlags)
@@ -167,7 +165,7 @@ func NewQMainWindowp1(parent QWidget_ITF /*777 QWidget **/) *QMainWindow {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:95
+// /usr/include/qt/QtWidgets/qmainwindow.h:94
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QMainWindow()
@@ -182,7 +180,7 @@ func DeleteQMainWindow(this *QMainWindow) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:97
+// /usr/include/qt/QtWidgets/qmainwindow.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize iconSize() const
@@ -198,7 +196,7 @@ func (this *QMainWindow) IconSize() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:98
+// /usr/include/qt/QtWidgets/qmainwindow.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconSize(const QSize &)
@@ -215,7 +213,7 @@ func (this *QMainWindow) SetIconSize(iconSize qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:100
+// /usr/include/qt/QtWidgets/qmainwindow.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ToolButtonStyle toolButtonStyle() const
@@ -229,7 +227,7 @@ func (this *QMainWindow) ToolButtonStyle() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:101
+// /usr/include/qt/QtWidgets/qmainwindow.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setToolButtonStyle(Qt::ToolButtonStyle)
@@ -242,7 +240,7 @@ func (this *QMainWindow) SetToolButtonStyle(toolButtonStyle int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:104
+// /usr/include/qt/QtWidgets/qmainwindow.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isAnimated() const
@@ -256,7 +254,7 @@ func (this *QMainWindow) IsAnimated() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:105
+// /usr/include/qt/QtWidgets/qmainwindow.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isDockNestingEnabled() const
@@ -270,7 +268,7 @@ func (this *QMainWindow) IsDockNestingEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:109
+// /usr/include/qt/QtWidgets/qmainwindow.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool documentMode() const
@@ -284,7 +282,7 @@ func (this *QMainWindow) DocumentMode() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:110
+// /usr/include/qt/QtWidgets/qmainwindow.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDocumentMode(bool)
@@ -297,7 +295,7 @@ func (this *QMainWindow) SetDocumentMode(enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:114
+// /usr/include/qt/QtWidgets/qmainwindow.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QTabWidget::TabShape tabShape() const
@@ -311,7 +309,7 @@ func (this *QMainWindow) TabShape() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:115
+// /usr/include/qt/QtWidgets/qmainwindow.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabShape(QTabWidget::TabShape)
@@ -324,7 +322,7 @@ func (this *QMainWindow) SetTabShape(tabShape int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:116
+// /usr/include/qt/QtWidgets/qmainwindow.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QTabWidget::TabPosition tabPosition(Qt::DockWidgetArea) const
@@ -344,7 +342,7 @@ func (this *QMainWindow) TabPosition(area int) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:117
+// /usr/include/qt/QtWidgets/qmainwindow.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabPosition(Qt::DockWidgetAreas, QTabWidget::TabPosition)
@@ -363,7 +361,7 @@ func (this *QMainWindow) SetTabPosition(areas int, tabPosition int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:120
+// /usr/include/qt/QtWidgets/qmainwindow.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDockOptions(QMainWindow::DockOptions)
@@ -376,7 +374,7 @@ func (this *QMainWindow) SetDockOptions(options int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:121
+// /usr/include/qt/QtWidgets/qmainwindow.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QMainWindow::DockOptions dockOptions() const
@@ -390,7 +388,7 @@ func (this *QMainWindow) DockOptions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:123
+// /usr/include/qt/QtWidgets/qmainwindow.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSeparator(const QPoint &) const
@@ -408,7 +406,7 @@ func (this *QMainWindow) IsSeparator(pos qtcore.QPoint_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:126
+// /usr/include/qt/QtWidgets/qmainwindow.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMenuBar * menuBar() const
@@ -431,7 +429,7 @@ func (this *QMainWindow) MenuBar() *QMenuBar /*777 QMenuBar **/ {
 	return /*==*/ NewQMenuBarFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:127
+// /usr/include/qt/QtWidgets/qmainwindow.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMenuBar(QMenuBar *)
@@ -452,7 +450,7 @@ func (this *QMainWindow) SetMenuBar(menubar QMenuBar_ITF /*777 QMenuBar **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:129
+// /usr/include/qt/QtWidgets/qmainwindow.h:128
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * menuWidget() const
@@ -470,7 +468,7 @@ func (this *QMainWindow) MenuWidget() *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:130
+// /usr/include/qt/QtWidgets/qmainwindow.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMenuWidget(QWidget *)
@@ -493,7 +491,7 @@ func (this *QMainWindow) SetMenuWidget(menubar QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:134
+// /usr/include/qt/QtWidgets/qmainwindow.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStatusBar * statusBar() const
@@ -509,7 +507,7 @@ func (this *QMainWindow) StatusBar() *QStatusBar /*777 QStatusBar **/ {
 	return /*==*/ NewQStatusBarFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:135
+// /usr/include/qt/QtWidgets/qmainwindow.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStatusBar(QStatusBar *)
@@ -530,7 +528,7 @@ func (this *QMainWindow) SetStatusBar(statusbar QStatusBar_ITF /*777 QStatusBar 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:138
+// /usr/include/qt/QtWidgets/qmainwindow.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * centralWidget() const
@@ -546,7 +544,7 @@ func (this *QMainWindow) CentralWidget() *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:139
+// /usr/include/qt/QtWidgets/qmainwindow.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCentralWidget(QWidget *)
@@ -567,7 +565,7 @@ func (this *QMainWindow) SetCentralWidget(widget QWidget_ITF /*777 QWidget **/) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:141
+// /usr/include/qt/QtWidgets/qmainwindow.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * takeCentralWidget()
@@ -585,7 +583,7 @@ func (this *QMainWindow) TakeCentralWidget() *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:144
+// /usr/include/qt/QtWidgets/qmainwindow.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCorner(Qt::Corner, Qt::DockWidgetArea)
@@ -600,7 +598,7 @@ func (this *QMainWindow) SetCorner(corner int, area int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:145
+// /usr/include/qt/QtWidgets/qmainwindow.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::DockWidgetArea corner(Qt::Corner) const
@@ -616,7 +614,7 @@ func (this *QMainWindow) Corner(corner int) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:149
+// /usr/include/qt/QtWidgets/qmainwindow.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addToolBarBreak(Qt::ToolBarArea)
@@ -629,7 +627,7 @@ func (this *QMainWindow) AddToolBarBreak(area int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:149
+// /usr/include/qt/QtWidgets/qmainwindow.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addToolBarBreak(Qt::ToolBarArea)
@@ -644,7 +642,7 @@ func (this *QMainWindow) AddToolBarBreakp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:150
+// /usr/include/qt/QtWidgets/qmainwindow.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertToolBarBreak(QToolBar *)
@@ -661,7 +659,7 @@ func (this *QMainWindow) InsertToolBarBreak(before QToolBar_ITF /*777 QToolBar *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:152
+// /usr/include/qt/QtWidgets/qmainwindow.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addToolBar(Qt::ToolBarArea, QToolBar *)
@@ -680,7 +678,7 @@ func (this *QMainWindow) AddToolBar(area int, toolbar QToolBar_ITF /*777 QToolBa
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:153
+// /usr/include/qt/QtWidgets/qmainwindow.h:152
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void addToolBar(QToolBar *)
@@ -699,7 +697,7 @@ func (this *QMainWindow) AddToolBar1(toolbar QToolBar_ITF /*777 QToolBar **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:154
+// /usr/include/qt/QtWidgets/qmainwindow.h:153
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QToolBar * addToolBar(const QString &)
@@ -717,7 +715,7 @@ func (this *QMainWindow) AddToolBar2(title string) *QToolBar /*777 QToolBar **/ 
 	return /*==*/ NewQToolBarFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:155
+// /usr/include/qt/QtWidgets/qmainwindow.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertToolBar(QToolBar *, QToolBar *)
@@ -740,7 +738,7 @@ func (this *QMainWindow) InsertToolBar(before QToolBar_ITF /*777 QToolBar **/, t
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:156
+// /usr/include/qt/QtWidgets/qmainwindow.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeToolBar(QToolBar *)
@@ -757,7 +755,7 @@ func (this *QMainWindow) RemoveToolBar(toolbar QToolBar_ITF /*777 QToolBar **/) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:157
+// /usr/include/qt/QtWidgets/qmainwindow.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeToolBarBreak(QToolBar *)
@@ -774,7 +772,7 @@ func (this *QMainWindow) RemoveToolBarBreak(before QToolBar_ITF /*777 QToolBar *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:159
+// /usr/include/qt/QtWidgets/qmainwindow.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool unifiedTitleAndToolBarOnMac() const
@@ -788,7 +786,7 @@ func (this *QMainWindow) UnifiedTitleAndToolBarOnMac() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:161
+// /usr/include/qt/QtWidgets/qmainwindow.h:160
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ToolBarArea toolBarArea(QToolBar *) const
@@ -808,7 +806,7 @@ func (this *QMainWindow) ToolBarArea(toolbar QToolBar_ITF /*777 QToolBar **/) in
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:162
+// /usr/include/qt/QtWidgets/qmainwindow.h:161
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool toolBarBreak(QToolBar *) const
@@ -828,7 +826,7 @@ func (this *QMainWindow) ToolBarBreak(toolbar QToolBar_ITF /*777 QToolBar **/) b
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:165
+// /usr/include/qt/QtWidgets/qmainwindow.h:164
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addDockWidget(Qt::DockWidgetArea, QDockWidget *)
@@ -845,7 +843,7 @@ func (this *QMainWindow) AddDockWidget(area int, dockwidget QDockWidget_ITF /*77
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:166
+// /usr/include/qt/QtWidgets/qmainwindow.h:165
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void addDockWidget(Qt::DockWidgetArea, QDockWidget *, Qt::Orientation)
@@ -862,7 +860,7 @@ func (this *QMainWindow) AddDockWidget1(area int, dockwidget QDockWidget_ITF /*7
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:168
+// /usr/include/qt/QtWidgets/qmainwindow.h:167
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void splitDockWidget(QDockWidget *, QDockWidget *, Qt::Orientation)
@@ -891,7 +889,7 @@ func (this *QMainWindow) SplitDockWidget(after QDockWidget_ITF /*777 QDockWidget
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:170
+// /usr/include/qt/QtWidgets/qmainwindow.h:169
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void tabifyDockWidget(QDockWidget *, QDockWidget *)
@@ -914,7 +912,7 @@ func (this *QMainWindow) TabifyDockWidget(first QDockWidget_ITF /*777 QDockWidge
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:172
+// /usr/include/qt/QtWidgets/qmainwindow.h:171
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeDockWidget(QDockWidget *)
@@ -931,7 +929,7 @@ func (this *QMainWindow) RemoveDockWidget(dockwidget QDockWidget_ITF /*777 QDock
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:173
+// /usr/include/qt/QtWidgets/qmainwindow.h:172
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool restoreDockWidget(QDockWidget *)
@@ -951,7 +949,7 @@ func (this *QMainWindow) RestoreDockWidget(dockwidget QDockWidget_ITF /*777 QDoc
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:175
+// /usr/include/qt/QtWidgets/qmainwindow.h:174
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::DockWidgetArea dockWidgetArea(QDockWidget *) const
@@ -971,7 +969,7 @@ func (this *QMainWindow) DockWidgetArea(dockwidget QDockWidget_ITF /*777 QDockWi
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:181
+// /usr/include/qt/QtWidgets/qmainwindow.h:180
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray saveState(int) const
@@ -1006,7 +1004,7 @@ func (this *QMainWindow) SaveState(version int) *qtcore.QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:181
+// /usr/include/qt/QtWidgets/qmainwindow.h:180
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray saveState(int) const
@@ -1043,7 +1041,7 @@ func (this *QMainWindow) SaveStatep() *qtcore.QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:182
+// /usr/include/qt/QtWidgets/qmainwindow.h:181
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool restoreState(const QByteArray &, int)
@@ -1075,7 +1073,7 @@ func (this *QMainWindow) RestoreState(state qtcore.QByteArray_ITF, version int) 
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:182
+// /usr/include/qt/QtWidgets/qmainwindow.h:181
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool restoreState(const QByteArray &, int)
@@ -1109,7 +1107,7 @@ func (this *QMainWindow) RestoreStatep(state qtcore.QByteArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:185
+// /usr/include/qt/QtWidgets/qmainwindow.h:184
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QMenu * createPopupMenu()
@@ -1129,7 +1127,7 @@ func (this *QMainWindow) CreatePopupMenu() *QMenu /*777 QMenu **/ {
 	return /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:190
+// /usr/include/qt/QtWidgets/qmainwindow.h:189
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAnimated(bool)
@@ -1142,7 +1140,7 @@ func (this *QMainWindow) SetAnimated(enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:191
+// /usr/include/qt/QtWidgets/qmainwindow.h:190
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDockNestingEnabled(bool)
@@ -1155,7 +1153,7 @@ func (this *QMainWindow) SetDockNestingEnabled(enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:194
+// /usr/include/qt/QtWidgets/qmainwindow.h:193
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setUnifiedTitleAndToolBarOnMac(bool)
@@ -1168,7 +1166,7 @@ func (this *QMainWindow) SetUnifiedTitleAndToolBarOnMac(set bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:198
+// /usr/include/qt/QtWidgets/qmainwindow.h:197
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void iconSizeChanged(const QSize &)
@@ -1189,7 +1187,7 @@ func (this *QMainWindow) IconSizeChanged(iconSize qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:199
+// /usr/include/qt/QtWidgets/qmainwindow.h:198
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void toolButtonStyleChanged(Qt::ToolButtonStyle)
@@ -1206,7 +1204,7 @@ func (this *QMainWindow) ToolButtonStyleChanged(toolButtonStyle int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:201
+// /usr/include/qt/QtWidgets/qmainwindow.h:200
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void tabifiedDockWidgetActivated(QDockWidget *)
@@ -1227,7 +1225,7 @@ func (this *QMainWindow) TabifiedDockWidgetActivated(dockWidget QDockWidget_ITF 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:206
+// /usr/include/qt/QtWidgets/qmainwindow.h:205
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QContextMenuEvent *)
@@ -1244,7 +1242,7 @@ func (this *QMainWindow) ContextMenuEvent(event qtgui.QContextMenuEvent_ITF /*77
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:208
+// /usr/include/qt/QtWidgets/qmainwindow.h:207
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)

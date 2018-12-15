@@ -209,7 +209,7 @@ func NewQColor4(rgba64 QRgba64_ITF /*123*/) *QColor {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qcolor.h:76
+// /usr/include/qt/QtGui/qcolor.h:75
 // index:5
 // Public inline Visibility=Default Availability=Available
 // [-2] void QColor(const QString &)
@@ -234,35 +234,8 @@ func NewQColor5(name string) *QColor {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qcolor.h:78
+// /usr/include/qt/QtGui/qcolor.h:76
 // index:6
-// Public inline Visibility=Default Availability=Available
-// [-2] void QColor(QStringView)
-
-/*
-Constructs an invalid color with the RGB value (0, 0, 0). An invalid color is a color that is not properly set up for the underlying window system.
-
-The alpha value of an invalid color is unspecified.
-
-See also isValid().
-*/
-func (*QColor) NewForInherit6(name qtcore.QStringView_ITF /*123*/) *QColor {
-	return NewQColor6(name)
-}
-func NewQColor6(name qtcore.QStringView_ITF /*123*/) *QColor {
-	var convArg0 unsafe.Pointer
-	if name != nil && name.QStringView_PTR() != nil {
-		convArg0 = name.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2E11QStringView", qtrt.FFI_TYPE_POINTER, convArg0)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQColor)
-	return gothis
-}
-
-// /usr/include/qt/QtGui/qcolor.h:79
-// index:7
 // Public inline Visibility=Default Availability=Available
 // [-2] void QColor(const char *)
 
@@ -273,10 +246,10 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
-func (*QColor) NewForInherit7(aname string) *QColor {
-	return NewQColor7(aname)
+func (*QColor) NewForInherit6(aname string) *QColor {
+	return NewQColor6(aname)
 }
-func NewQColor7(aname string) *QColor {
+func NewQColor6(aname string) *QColor {
 	var convArg0 = qtrt.CString(aname)
 	defer qtrt.FreeMem(convArg0)
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2EPKc", qtrt.FFI_TYPE_POINTER, convArg0)
@@ -286,8 +259,8 @@ func NewQColor7(aname string) *QColor {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qcolor.h:80
-// index:8
+// /usr/include/qt/QtGui/qcolor.h:77
+// index:7
 // Public inline Visibility=Default Availability=Available
 // [-2] void QColor(QLatin1String)
 
@@ -298,10 +271,10 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
-func (*QColor) NewForInherit8(name qtcore.QLatin1String_ITF /*123*/) *QColor {
-	return NewQColor8(name)
+func (*QColor) NewForInherit7(name qtcore.QLatin1String_ITF /*123*/) *QColor {
+	return NewQColor7(name)
 }
-func NewQColor8(name qtcore.QLatin1String_ITF /*123*/) *QColor {
+func NewQColor7(name qtcore.QLatin1String_ITF /*123*/) *QColor {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QLatin1String_PTR() != nil {
 		convArg0 = name.QLatin1String_PTR().GetCthis()
@@ -313,8 +286,8 @@ func NewQColor8(name qtcore.QLatin1String_ITF /*123*/) *QColor {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qcolor.h:81
-// index:9
+// /usr/include/qt/QtGui/qcolor.h:78
+// index:8
 // Public Visibility=Default Availability=Available
 // [-2] void QColor(QColor::Spec)
 
@@ -325,10 +298,10 @@ The alpha value of an invalid color is unspecified.
 
 See also isValid().
 */
-func (*QColor) NewForInherit9(spec int) *QColor {
-	return NewQColor9(spec)
+func (*QColor) NewForInherit8(spec int) *QColor {
+	return NewQColor8(spec)
 }
-func NewQColor9(spec int) *QColor {
+func NewQColor8(spec int) *QColor {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QColorC2ENS_4SpecE", qtrt.FFI_TYPE_POINTER, spec)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQColorFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -336,7 +309,7 @@ func NewQColor9(spec int) *QColor {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qcolor.h:87
+// /usr/include/qt/QtGui/qcolor.h:84
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QColor & operator=(QColor &&)
@@ -352,7 +325,7 @@ func (this *QColor) Operator_equal(other unsafe.Pointer /*333*/) *QColor {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:90
+// /usr/include/qt/QtGui/qcolor.h:87
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QColor & operator=(const QColor &)
@@ -372,7 +345,7 @@ func (this *QColor) Operator_equal1(arg0 QColor_ITF) *QColor {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:93
+// /usr/include/qt/QtGui/qcolor.h:90
 // index:2
 // Public Visibility=Default Availability=Available
 // [16] QColor & operator=(Qt::GlobalColor)
@@ -388,7 +361,7 @@ func (this *QColor) Operator_equal2(color int) *QColor {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:95
+// /usr/include/qt/QtGui/qcolor.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -402,7 +375,7 @@ func (this *QColor) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qcolor.h:98
+// /usr/include/qt/QtGui/qcolor.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const
@@ -421,7 +394,7 @@ func (this *QColor) Name() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qcolor.h:99
+// /usr/include/qt/QtGui/qcolor.h:96
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString name(QColor::NameFormat) const
@@ -440,7 +413,7 @@ func (this *QColor) Name1(format int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qcolor.h:102
+// /usr/include/qt/QtGui/qcolor.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNamedColor(const QString &)
@@ -469,39 +442,8 @@ func (this *QColor) SetNamedColor(name string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:104
+// /usr/include/qt/QtGui/qcolor.h:99
 // index:1
-// Public Visibility=Default Availability=Available
-// [-2] void setNamedColor(QStringView)
-
-/*
-Sets the RGB value of this QColor to name, which may be in one of these formats:
-
-
-#RGB (each of R, G, and B is a single hex digit)
-#RRGGBB
-#AARRGGBB (Since 5.2)
-#RRRGGGBBB
-#RRRRGGGGBBBB
-A name from the list of colors defined in the list of SVG color keyword names provided by the World Wide Web Consortium; for example, "steelblue" or "gainsboro". These color names work on all platforms. Note that these color names are not the same as defined by the Qt::GlobalColor enums, e.g. "green" and Qt::green does not refer to the same color.
-transparent - representing the absence of a color.
-
-
-The color is invalid if name cannot be parsed.
-
-See also QColor(), name(), and isValid().
-*/
-func (this *QColor) SetNamedColor1(name qtcore.QStringView_ITF /*123*/) {
-	var convArg0 unsafe.Pointer
-	if name != nil && name.QStringView_PTR() != nil {
-		convArg0 = name.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor13setNamedColorE11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qcolor.h:105
-// index:2
 // Public Visibility=Default Availability=Available
 // [-2] void setNamedColor(QLatin1String)
 
@@ -522,7 +464,7 @@ The color is invalid if name cannot be parsed.
 
 See also QColor(), name(), and isValid().
 */
-func (this *QColor) SetNamedColor2(name qtcore.QLatin1String_ITF /*123*/) {
+func (this *QColor) SetNamedColor1(name qtcore.QLatin1String_ITF /*123*/) {
 	var convArg0 unsafe.Pointer
 	if name != nil && name.QLatin1String_PTR() != nil {
 		convArg0 = name.QLatin1String_PTR().GetCthis()
@@ -531,7 +473,7 @@ func (this *QColor) SetNamedColor2(name qtcore.QLatin1String_ITF /*123*/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:107
+// /usr/include/qt/QtGui/qcolor.h:101
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList colorNames()
@@ -554,7 +496,7 @@ func QColor_ColorNames() *qtcore.QStringList /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qcolor.h:109
+// /usr/include/qt/QtGui/qcolor.h:103
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QColor::Spec spec() const
@@ -570,7 +512,7 @@ func (this *QColor) Spec() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:112
+// /usr/include/qt/QtGui/qcolor.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int alpha() const
@@ -586,7 +528,7 @@ func (this *QColor) Alpha() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:113
+// /usr/include/qt/QtGui/qcolor.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAlpha(int)
@@ -601,7 +543,7 @@ func (this *QColor) SetAlpha(alpha int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:115
+// /usr/include/qt/QtGui/qcolor.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal alphaF() const
@@ -617,7 +559,7 @@ func (this *QColor) AlphaF() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:116
+// /usr/include/qt/QtGui/qcolor.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAlphaF(qreal)
@@ -632,7 +574,7 @@ func (this *QColor) SetAlphaF(alpha float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:118
+// /usr/include/qt/QtGui/qcolor.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int red() const
@@ -648,7 +590,7 @@ func (this *QColor) Red() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:119
+// /usr/include/qt/QtGui/qcolor.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int green() const
@@ -664,7 +606,7 @@ func (this *QColor) Green() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:120
+// /usr/include/qt/QtGui/qcolor.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int blue() const
@@ -680,7 +622,7 @@ func (this *QColor) Blue() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:121
+// /usr/include/qt/QtGui/qcolor.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRed(int)
@@ -695,7 +637,7 @@ func (this *QColor) SetRed(red int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:122
+// /usr/include/qt/QtGui/qcolor.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setGreen(int)
@@ -710,7 +652,7 @@ func (this *QColor) SetGreen(green int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:123
+// /usr/include/qt/QtGui/qcolor.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBlue(int)
@@ -725,7 +667,7 @@ func (this *QColor) SetBlue(blue int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:125
+// /usr/include/qt/QtGui/qcolor.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal redF() const
@@ -741,7 +683,7 @@ func (this *QColor) RedF() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:126
+// /usr/include/qt/QtGui/qcolor.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal greenF() const
@@ -757,7 +699,7 @@ func (this *QColor) GreenF() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:127
+// /usr/include/qt/QtGui/qcolor.h:121
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal blueF() const
@@ -773,7 +715,7 @@ func (this *QColor) BlueF() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:128
+// /usr/include/qt/QtGui/qcolor.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRedF(qreal)
@@ -788,7 +730,7 @@ func (this *QColor) SetRedF(red float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:129
+// /usr/include/qt/QtGui/qcolor.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setGreenF(qreal)
@@ -803,7 +745,7 @@ func (this *QColor) SetGreenF(green float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:130
+// /usr/include/qt/QtGui/qcolor.h:124
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBlueF(qreal)
@@ -818,7 +760,7 @@ func (this *QColor) SetBlueF(blue float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:132
+// /usr/include/qt/QtGui/qcolor.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getRgb(int *, int *, int *, int *) const
@@ -835,7 +777,7 @@ func (this *QColor) GetRgb(r unsafe.Pointer /*666*/, g unsafe.Pointer /*666*/, b
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:132
+// /usr/include/qt/QtGui/qcolor.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getRgb(int *, int *, int *, int *) const
@@ -854,7 +796,7 @@ func (this *QColor) GetRgbp(r unsafe.Pointer /*666*/, g unsafe.Pointer /*666*/, 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:133
+// /usr/include/qt/QtGui/qcolor.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRgb(int, int, int, int)
@@ -871,7 +813,7 @@ func (this *QColor) SetRgb(r int, g int, b int, a int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:133
+// /usr/include/qt/QtGui/qcolor.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRgb(int, int, int, int)
@@ -890,7 +832,7 @@ func (this *QColor) SetRgbp(r int, g int, b int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:145
+// /usr/include/qt/QtGui/qcolor.h:139
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setRgb(QRgb)
@@ -907,7 +849,7 @@ func (this *QColor) SetRgb1(rgb uint) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:135
+// /usr/include/qt/QtGui/qcolor.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getRgbF(qreal *, qreal *, qreal *, qreal *) const
@@ -924,7 +866,7 @@ func (this *QColor) GetRgbF(r unsafe.Pointer /*666*/, g unsafe.Pointer /*666*/, 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:135
+// /usr/include/qt/QtGui/qcolor.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getRgbF(qreal *, qreal *, qreal *, qreal *) const
@@ -943,7 +885,7 @@ func (this *QColor) GetRgbFp(r unsafe.Pointer /*666*/, g unsafe.Pointer /*666*/,
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:136
+// /usr/include/qt/QtGui/qcolor.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRgbF(qreal, qreal, qreal, qreal)
@@ -960,7 +902,7 @@ func (this *QColor) SetRgbF(r float64, g float64, b float64, a float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:136
+// /usr/include/qt/QtGui/qcolor.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRgbF(qreal, qreal, qreal, qreal)
@@ -979,7 +921,7 @@ func (this *QColor) SetRgbFp(r float64, g float64, b float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:138
+// /usr/include/qt/QtGui/qcolor.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRgba64 rgba64() const
@@ -1001,7 +943,7 @@ func (this *QColor) Rgba64() *QRgba64 /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:139
+// /usr/include/qt/QtGui/qcolor.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRgba64(QRgba64)
@@ -1022,7 +964,7 @@ func (this *QColor) SetRgba64(rgba QRgba64_ITF /*123*/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:141
+// /usr/include/qt/QtGui/qcolor.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QRgb rgba() const
@@ -1040,7 +982,7 @@ func (this *QColor) Rgba() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtGui/qcolor.h:142
+// /usr/include/qt/QtGui/qcolor.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRgba(QRgb)
@@ -1055,7 +997,7 @@ func (this *QColor) SetRgba(rgba uint) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:144
+// /usr/include/qt/QtGui/qcolor.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QRgb rgb() const
@@ -1071,7 +1013,7 @@ func (this *QColor) Rgb() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtGui/qcolor.h:147
+// /usr/include/qt/QtGui/qcolor.h:141
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int hue() const
@@ -1089,7 +1031,7 @@ func (this *QColor) Hue() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:148
+// /usr/include/qt/QtGui/qcolor.h:142
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int saturation() const
@@ -1107,7 +1049,7 @@ func (this *QColor) Saturation() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:149
+// /usr/include/qt/QtGui/qcolor.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int hsvHue() const
@@ -1123,7 +1065,7 @@ func (this *QColor) HsvHue() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:150
+// /usr/include/qt/QtGui/qcolor.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int hsvSaturation() const
@@ -1139,7 +1081,7 @@ func (this *QColor) HsvSaturation() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:151
+// /usr/include/qt/QtGui/qcolor.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int value() const
@@ -1155,7 +1097,7 @@ func (this *QColor) Value() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:153
+// /usr/include/qt/QtGui/qcolor.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal hueF() const
@@ -1173,7 +1115,7 @@ func (this *QColor) HueF() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:154
+// /usr/include/qt/QtGui/qcolor.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal saturationF() const
@@ -1191,7 +1133,7 @@ func (this *QColor) SaturationF() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:155
+// /usr/include/qt/QtGui/qcolor.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal hsvHueF() const
@@ -1207,7 +1149,7 @@ func (this *QColor) HsvHueF() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:156
+// /usr/include/qt/QtGui/qcolor.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal hsvSaturationF() const
@@ -1223,7 +1165,7 @@ func (this *QColor) HsvSaturationF() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:157
+// /usr/include/qt/QtGui/qcolor.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal valueF() const
@@ -1239,7 +1181,7 @@ func (this *QColor) ValueF() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:159
+// /usr/include/qt/QtGui/qcolor.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getHsv(int *, int *, int *, int *) const
@@ -1256,7 +1198,7 @@ func (this *QColor) GetHsv(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, v
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:159
+// /usr/include/qt/QtGui/qcolor.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getHsv(int *, int *, int *, int *) const
@@ -1275,7 +1217,7 @@ func (this *QColor) GetHsvp(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:160
+// /usr/include/qt/QtGui/qcolor.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHsv(int, int, int, int)
@@ -1292,7 +1234,7 @@ func (this *QColor) SetHsv(h int, s int, v int, a int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:160
+// /usr/include/qt/QtGui/qcolor.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHsv(int, int, int, int)
@@ -1311,7 +1253,7 @@ func (this *QColor) SetHsvp(h int, s int, v int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:162
+// /usr/include/qt/QtGui/qcolor.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getHsvF(qreal *, qreal *, qreal *, qreal *) const
@@ -1328,7 +1270,7 @@ func (this *QColor) GetHsvF(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:162
+// /usr/include/qt/QtGui/qcolor.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getHsvF(qreal *, qreal *, qreal *, qreal *) const
@@ -1347,7 +1289,7 @@ func (this *QColor) GetHsvFp(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/,
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:163
+// /usr/include/qt/QtGui/qcolor.h:157
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHsvF(qreal, qreal, qreal, qreal)
@@ -1364,7 +1306,7 @@ func (this *QColor) SetHsvF(h float64, s float64, v float64, a float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:163
+// /usr/include/qt/QtGui/qcolor.h:157
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHsvF(qreal, qreal, qreal, qreal)
@@ -1383,7 +1325,7 @@ func (this *QColor) SetHsvFp(h float64, s float64, v float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:165
+// /usr/include/qt/QtGui/qcolor.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int cyan() const
@@ -1399,7 +1341,7 @@ func (this *QColor) Cyan() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:166
+// /usr/include/qt/QtGui/qcolor.h:160
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int magenta() const
@@ -1415,7 +1357,7 @@ func (this *QColor) Magenta() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:167
+// /usr/include/qt/QtGui/qcolor.h:161
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int yellow() const
@@ -1431,7 +1373,7 @@ func (this *QColor) Yellow() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:168
+// /usr/include/qt/QtGui/qcolor.h:162
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int black() const
@@ -1447,7 +1389,7 @@ func (this *QColor) Black() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:170
+// /usr/include/qt/QtGui/qcolor.h:164
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal cyanF() const
@@ -1463,7 +1405,7 @@ func (this *QColor) CyanF() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:171
+// /usr/include/qt/QtGui/qcolor.h:165
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal magentaF() const
@@ -1479,7 +1421,7 @@ func (this *QColor) MagentaF() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:172
+// /usr/include/qt/QtGui/qcolor.h:166
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal yellowF() const
@@ -1495,7 +1437,7 @@ func (this *QColor) YellowF() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:173
+// /usr/include/qt/QtGui/qcolor.h:167
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal blackF() const
@@ -1511,7 +1453,7 @@ func (this *QColor) BlackF() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:175
+// /usr/include/qt/QtGui/qcolor.h:169
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getCmyk(int *, int *, int *, int *, int *)
@@ -1528,7 +1470,7 @@ func (this *QColor) GetCmyk(c unsafe.Pointer /*666*/, m unsafe.Pointer /*666*/, 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:175
+// /usr/include/qt/QtGui/qcolor.h:169
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getCmyk(int *, int *, int *, int *, int *)
@@ -1547,7 +1489,7 @@ func (this *QColor) GetCmykp(c unsafe.Pointer /*666*/, m unsafe.Pointer /*666*/,
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:176
+// /usr/include/qt/QtGui/qcolor.h:170
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCmyk(int, int, int, int, int)
@@ -1564,7 +1506,7 @@ func (this *QColor) SetCmyk(c int, m int, y int, k int, a int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:176
+// /usr/include/qt/QtGui/qcolor.h:170
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCmyk(int, int, int, int, int)
@@ -1583,7 +1525,7 @@ func (this *QColor) SetCmykp(c int, m int, y int, k int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:178
+// /usr/include/qt/QtGui/qcolor.h:172
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getCmykF(qreal *, qreal *, qreal *, qreal *, qreal *)
@@ -1600,7 +1542,7 @@ func (this *QColor) GetCmykF(c unsafe.Pointer /*666*/, m unsafe.Pointer /*666*/,
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:178
+// /usr/include/qt/QtGui/qcolor.h:172
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getCmykF(qreal *, qreal *, qreal *, qreal *, qreal *)
@@ -1619,7 +1561,7 @@ func (this *QColor) GetCmykFp(c unsafe.Pointer /*666*/, m unsafe.Pointer /*666*/
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:179
+// /usr/include/qt/QtGui/qcolor.h:173
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCmykF(qreal, qreal, qreal, qreal, qreal)
@@ -1638,7 +1580,7 @@ func (this *QColor) SetCmykF(c float64, m float64, y float64, k float64, a float
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:179
+// /usr/include/qt/QtGui/qcolor.h:173
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCmykF(qreal, qreal, qreal, qreal, qreal)
@@ -1659,7 +1601,7 @@ func (this *QColor) SetCmykFp(c float64, m float64, y float64, k float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:181
+// /usr/include/qt/QtGui/qcolor.h:175
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int hslHue() const
@@ -1677,7 +1619,7 @@ func (this *QColor) HslHue() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:182
+// /usr/include/qt/QtGui/qcolor.h:176
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int hslSaturation() const
@@ -1695,7 +1637,7 @@ func (this *QColor) HslSaturation() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:183
+// /usr/include/qt/QtGui/qcolor.h:177
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int lightness() const
@@ -1713,7 +1655,7 @@ func (this *QColor) Lightness() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:185
+// /usr/include/qt/QtGui/qcolor.h:179
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal hslHueF() const
@@ -1731,7 +1673,7 @@ func (this *QColor) HslHueF() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:186
+// /usr/include/qt/QtGui/qcolor.h:180
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal hslSaturationF() const
@@ -1749,7 +1691,7 @@ func (this *QColor) HslSaturationF() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:187
+// /usr/include/qt/QtGui/qcolor.h:181
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal lightnessF() const
@@ -1767,7 +1709,7 @@ func (this *QColor) LightnessF() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qcolor.h:189
+// /usr/include/qt/QtGui/qcolor.h:183
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getHsl(int *, int *, int *, int *) const
@@ -1786,7 +1728,7 @@ func (this *QColor) GetHsl(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, l
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:189
+// /usr/include/qt/QtGui/qcolor.h:183
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getHsl(int *, int *, int *, int *) const
@@ -1807,7 +1749,7 @@ func (this *QColor) GetHslp(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:190
+// /usr/include/qt/QtGui/qcolor.h:184
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHsl(int, int, int, int)
@@ -1826,7 +1768,7 @@ func (this *QColor) SetHsl(h int, s int, l int, a int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:190
+// /usr/include/qt/QtGui/qcolor.h:184
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHsl(int, int, int, int)
@@ -1847,7 +1789,7 @@ func (this *QColor) SetHslp(h int, s int, l int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:192
+// /usr/include/qt/QtGui/qcolor.h:186
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getHslF(qreal *, qreal *, qreal *, qreal *) const
@@ -1866,7 +1808,7 @@ func (this *QColor) GetHslF(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/, 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:192
+// /usr/include/qt/QtGui/qcolor.h:186
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getHslF(qreal *, qreal *, qreal *, qreal *) const
@@ -1887,7 +1829,7 @@ func (this *QColor) GetHslFp(h unsafe.Pointer /*666*/, s unsafe.Pointer /*666*/,
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:193
+// /usr/include/qt/QtGui/qcolor.h:187
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHslF(qreal, qreal, qreal, qreal)
@@ -1906,7 +1848,7 @@ func (this *QColor) SetHslF(h float64, s float64, l float64, a float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:193
+// /usr/include/qt/QtGui/qcolor.h:187
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHslF(qreal, qreal, qreal, qreal)
@@ -1927,7 +1869,7 @@ func (this *QColor) SetHslFp(h float64, s float64, l float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qcolor.h:195
+// /usr/include/qt/QtGui/qcolor.h:189
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor toRgb() const
@@ -1945,7 +1887,7 @@ func (this *QColor) ToRgb() *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:196
+// /usr/include/qt/QtGui/qcolor.h:190
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor toHsv() const
@@ -1963,7 +1905,7 @@ func (this *QColor) ToHsv() *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:197
+// /usr/include/qt/QtGui/qcolor.h:191
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor toCmyk() const
@@ -1981,7 +1923,7 @@ func (this *QColor) ToCmyk() *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:198
+// /usr/include/qt/QtGui/qcolor.h:192
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor toHsl() const
@@ -1999,7 +1941,7 @@ func (this *QColor) ToHsl() *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:200
+// /usr/include/qt/QtGui/qcolor.h:194
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor convertTo(QColor::Spec) const
@@ -2017,7 +1959,7 @@ func (this *QColor) ConvertTo(colorSpec int) *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:202
+// /usr/include/qt/QtGui/qcolor.h:196
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromRgb(QRgb)
@@ -2042,7 +1984,7 @@ func QColor_FromRgb(rgb uint) *QColor /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qcolor.h:205
+// /usr/include/qt/QtGui/qcolor.h:199
 // index:1
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromRgb(int, int, int, int)
@@ -2067,7 +2009,7 @@ func QColor_FromRgb1(r int, g int, b int, a int) *QColor /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qcolor.h:205
+// /usr/include/qt/QtGui/qcolor.h:199
 // index:1
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromRgb(int, int, int, int)
@@ -2089,7 +2031,7 @@ func (this *QColor) FromRgb1p(r int, g int, b int) *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:203
+// /usr/include/qt/QtGui/qcolor.h:197
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromRgba(QRgb)
@@ -2114,7 +2056,7 @@ func QColor_FromRgba(rgba uint) *QColor /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qcolor.h:206
+// /usr/include/qt/QtGui/qcolor.h:200
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromRgbF(qreal, qreal, qreal, qreal)
@@ -2139,7 +2081,7 @@ func QColor_FromRgbF(r float64, g float64, b float64, a float64) *QColor /*123*/
 	return rv
 }
 
-// /usr/include/qt/QtGui/qcolor.h:206
+// /usr/include/qt/QtGui/qcolor.h:200
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromRgbF(qreal, qreal, qreal, qreal)
@@ -2161,7 +2103,7 @@ func (this *QColor) FromRgbFp(r float64, g float64, b float64) *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:208
+// /usr/include/qt/QtGui/qcolor.h:202
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromRgba64(ushort, ushort, ushort, ushort)
@@ -2186,7 +2128,7 @@ func QColor_FromRgba64(r uint16, g uint16, b uint16, a uint16) *QColor /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qcolor.h:208
+// /usr/include/qt/QtGui/qcolor.h:202
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromRgba64(ushort, ushort, ushort, ushort)
@@ -2208,7 +2150,7 @@ func (this *QColor) FromRgba64p(r uint16, g uint16, b uint16) *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:209
+// /usr/include/qt/QtGui/qcolor.h:203
 // index:1
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromRgba64(QRgba64)
@@ -2237,7 +2179,7 @@ func QColor_FromRgba641(rgba QRgba64_ITF /*123*/) *QColor /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qcolor.h:211
+// /usr/include/qt/QtGui/qcolor.h:205
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromHsv(int, int, int, int)
@@ -2262,7 +2204,7 @@ func QColor_FromHsv(h int, s int, v int, a int) *QColor /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qcolor.h:211
+// /usr/include/qt/QtGui/qcolor.h:205
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromHsv(int, int, int, int)
@@ -2284,7 +2226,7 @@ func (this *QColor) FromHsvp(h int, s int, v int) *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:212
+// /usr/include/qt/QtGui/qcolor.h:206
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromHsvF(qreal, qreal, qreal, qreal)
@@ -2311,7 +2253,7 @@ func QColor_FromHsvF(h float64, s float64, v float64, a float64) *QColor /*123*/
 	return rv
 }
 
-// /usr/include/qt/QtGui/qcolor.h:212
+// /usr/include/qt/QtGui/qcolor.h:206
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromHsvF(qreal, qreal, qreal, qreal)
@@ -2335,7 +2277,7 @@ func (this *QColor) FromHsvFp(h float64, s float64, v float64) *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:214
+// /usr/include/qt/QtGui/qcolor.h:208
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromCmyk(int, int, int, int, int)
@@ -2360,7 +2302,7 @@ func QColor_FromCmyk(c int, m int, y int, k int, a int) *QColor /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qcolor.h:214
+// /usr/include/qt/QtGui/qcolor.h:208
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromCmyk(int, int, int, int, int)
@@ -2382,7 +2324,7 @@ func (this *QColor) FromCmykp(c int, m int, y int, k int) *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:215
+// /usr/include/qt/QtGui/qcolor.h:209
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromCmykF(qreal, qreal, qreal, qreal, qreal)
@@ -2409,7 +2351,7 @@ func QColor_FromCmykF(c float64, m float64, y float64, k float64, a float64) *QC
 	return rv
 }
 
-// /usr/include/qt/QtGui/qcolor.h:215
+// /usr/include/qt/QtGui/qcolor.h:209
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromCmykF(qreal, qreal, qreal, qreal, qreal)
@@ -2433,7 +2375,7 @@ func (this *QColor) FromCmykFp(c float64, m float64, y float64, k float64) *QCol
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:217
+// /usr/include/qt/QtGui/qcolor.h:211
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromHsl(int, int, int, int)
@@ -2460,7 +2402,7 @@ func QColor_FromHsl(h int, s int, l int, a int) *QColor /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qcolor.h:217
+// /usr/include/qt/QtGui/qcolor.h:211
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromHsl(int, int, int, int)
@@ -2484,7 +2426,7 @@ func (this *QColor) FromHslp(h int, s int, l int) *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:218
+// /usr/include/qt/QtGui/qcolor.h:212
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromHslF(qreal, qreal, qreal, qreal)
@@ -2513,7 +2455,7 @@ func QColor_FromHslF(h float64, s float64, l float64, a float64) *QColor /*123*/
 	return rv
 }
 
-// /usr/include/qt/QtGui/qcolor.h:218
+// /usr/include/qt/QtGui/qcolor.h:212
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor fromHslF(qreal, qreal, qreal, qreal)
@@ -2539,7 +2481,7 @@ func (this *QColor) FromHslFp(h float64, s float64, l float64) *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:220
+// /usr/include/qt/QtGui/qcolor.h:214
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor light(int) const
@@ -2555,7 +2497,7 @@ func (this *QColor) Light(f int) *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:220
+// /usr/include/qt/QtGui/qcolor.h:214
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor light(int) const
@@ -2573,7 +2515,7 @@ func (this *QColor) Lightp() *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:221
+// /usr/include/qt/QtGui/qcolor.h:215
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor lighter(int) const
@@ -2597,7 +2539,7 @@ func (this *QColor) Lighter(f int) *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:221
+// /usr/include/qt/QtGui/qcolor.h:215
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor lighter(int) const
@@ -2623,7 +2565,7 @@ func (this *QColor) Lighterp() *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:222
+// /usr/include/qt/QtGui/qcolor.h:216
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor dark(int) const
@@ -2639,7 +2581,7 @@ func (this *QColor) Dark(f int) *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:222
+// /usr/include/qt/QtGui/qcolor.h:216
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor dark(int) const
@@ -2657,7 +2599,7 @@ func (this *QColor) Darkp() *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:223
+// /usr/include/qt/QtGui/qcolor.h:217
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor darker(int) const
@@ -2681,7 +2623,7 @@ func (this *QColor) Darker(f int) *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:223
+// /usr/include/qt/QtGui/qcolor.h:217
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor darker(int) const
@@ -2707,7 +2649,7 @@ func (this *QColor) Darkerp() *QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qcolor.h:225
+// /usr/include/qt/QtGui/qcolor.h:219
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QColor &) const
@@ -2725,7 +2667,7 @@ func (this *QColor) Operator_equal_equal(c QColor_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qcolor.h:226
+// /usr/include/qt/QtGui/qcolor.h:220
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator!=(const QColor &) const
@@ -2743,7 +2685,7 @@ func (this *QColor) Operator_not_equal(c QColor_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qcolor.h:231
+// /usr/include/qt/QtGui/qcolor.h:224
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool isValidColor(const QString &)
@@ -2770,37 +2712,8 @@ func QColor_IsValidColor(name string) bool {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qcolor.h:233
+// /usr/include/qt/QtGui/qcolor.h:225
 // index:1
-// Public static Visibility=Default Availability=Available
-// [1] bool isValidColor(QStringView)
-
-/*
-Returns true if the name is a valid color name and can be used to construct a valid QColor object, otherwise returns false.
-
-It uses the same algorithm used in setNamedColor().
-
-This function was introduced in  Qt 4.7.
-
-See also setNamedColor().
-*/
-func (this *QColor) IsValidColor1(arg0 qtcore.QStringView_ITF /*123*/) bool {
-	var convArg0 unsafe.Pointer
-	if arg0 != nil && arg0.QStringView_PTR() != nil {
-		convArg0 = arg0.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN6QColor12isValidColorE11QStringView", qtrt.FFI_TYPE_POINTER, convArg0)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-func QColor_IsValidColor1(arg0 qtcore.QStringView_ITF /*123*/) bool {
-	var nilthis *QColor
-	rv := nilthis.IsValidColor1(arg0)
-	return rv
-}
-
-// /usr/include/qt/QtGui/qcolor.h:234
-// index:2
 // Public static Visibility=Default Availability=Available
 // [1] bool isValidColor(QLatin1String)
 
@@ -2813,7 +2726,7 @@ This function was introduced in  Qt 4.7.
 
 See also setNamedColor().
 */
-func (this *QColor) IsValidColor2(arg0 qtcore.QLatin1String_ITF /*123*/) bool {
+func (this *QColor) IsValidColor1(arg0 qtcore.QLatin1String_ITF /*123*/) bool {
 	var convArg0 unsafe.Pointer
 	if arg0 != nil && arg0.QLatin1String_PTR() != nil {
 		convArg0 = arg0.QLatin1String_PTR().GetCthis()
@@ -2822,9 +2735,9 @@ func (this *QColor) IsValidColor2(arg0 qtcore.QLatin1String_ITF /*123*/) bool {
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
 }
-func QColor_IsValidColor2(arg0 qtcore.QLatin1String_ITF /*123*/) bool {
+func QColor_IsValidColor1(arg0 qtcore.QLatin1String_ITF /*123*/) bool {
 	var nilthis *QColor
-	rv := nilthis.IsValidColor2(arg0)
+	rv := nilthis.IsValidColor1(arg0)
 	return rv
 }
 

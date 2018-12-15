@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h
@@ -68,7 +66,7 @@ func (*QGraphicsSceneMouseEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphics
 	return NewQGraphicsSceneMouseEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:85
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneMouseEvent(QEvent::Type)
@@ -87,7 +85,7 @@ func NewQGraphicsSceneMouseEvent(type_ int) *QGraphicsSceneMouseEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:85
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneMouseEvent(QEvent::Type)
@@ -108,7 +106,7 @@ func NewQGraphicsSceneMouseEventp() *QGraphicsSceneMouseEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:86
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:87
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsSceneMouseEvent()
@@ -123,7 +121,7 @@ func DeleteQGraphicsSceneMouseEvent(this *QGraphicsSceneMouseEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:88
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF pos() const
@@ -139,7 +137,7 @@ func (this *QGraphicsSceneMouseEvent) Pos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:89
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPos(const QPointF &)
@@ -156,7 +154,7 @@ func (this *QGraphicsSceneMouseEvent) SetPos(pos qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:91
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF scenePos() const
@@ -172,7 +170,7 @@ func (this *QGraphicsSceneMouseEvent) ScenePos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:92
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScenePos(const QPointF &)
@@ -189,7 +187,7 @@ func (this *QGraphicsSceneMouseEvent) SetScenePos(pos qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:94
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint screenPos() const
@@ -205,7 +203,7 @@ func (this *QGraphicsSceneMouseEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:95
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScreenPos(const QPoint &)
@@ -222,7 +220,7 @@ func (this *QGraphicsSceneMouseEvent) SetScreenPos(pos qtcore.QPoint_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:97
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF buttonDownPos(Qt::MouseButton) const
@@ -238,7 +236,7 @@ func (this *QGraphicsSceneMouseEvent) ButtonDownPos(button int) *qtcore.QPointF 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:98
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setButtonDownPos(Qt::MouseButton, const QPointF &)
@@ -255,7 +253,7 @@ func (this *QGraphicsSceneMouseEvent) SetButtonDownPos(button int, pos qtcore.QP
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:100
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF buttonDownScenePos(Qt::MouseButton) const
@@ -271,7 +269,7 @@ func (this *QGraphicsSceneMouseEvent) ButtonDownScenePos(button int) *qtcore.QPo
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:101
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setButtonDownScenePos(Qt::MouseButton, const QPointF &)
@@ -288,7 +286,7 @@ func (this *QGraphicsSceneMouseEvent) SetButtonDownScenePos(button int, pos qtco
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:103
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint buttonDownScreenPos(Qt::MouseButton) const
@@ -304,7 +302,7 @@ func (this *QGraphicsSceneMouseEvent) ButtonDownScreenPos(button int) *qtcore.QP
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:104
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setButtonDownScreenPos(Qt::MouseButton, const QPoint &)
@@ -321,7 +319,7 @@ func (this *QGraphicsSceneMouseEvent) SetButtonDownScreenPos(button int, pos qtc
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:106
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF lastPos() const
@@ -337,7 +335,7 @@ func (this *QGraphicsSceneMouseEvent) LastPos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:107
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLastPos(const QPointF &)
@@ -354,7 +352,7 @@ func (this *QGraphicsSceneMouseEvent) SetLastPos(pos qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:109
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF lastScenePos() const
@@ -370,7 +368,7 @@ func (this *QGraphicsSceneMouseEvent) LastScenePos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:110
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLastScenePos(const QPointF &)
@@ -387,7 +385,7 @@ func (this *QGraphicsSceneMouseEvent) SetLastScenePos(pos qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:112
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint lastScreenPos() const
@@ -403,7 +401,7 @@ func (this *QGraphicsSceneMouseEvent) LastScreenPos() *qtcore.QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:113
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLastScreenPos(const QPoint &)
@@ -420,7 +418,7 @@ func (this *QGraphicsSceneMouseEvent) SetLastScreenPos(pos qtcore.QPoint_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:115
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::MouseButtons buttons() const
@@ -434,7 +432,7 @@ func (this *QGraphicsSceneMouseEvent) Buttons() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:116
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setButtons(Qt::MouseButtons)
@@ -447,7 +445,7 @@ func (this *QGraphicsSceneMouseEvent) SetButtons(buttons int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:118
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::MouseButton button() const
@@ -461,7 +459,7 @@ func (this *QGraphicsSceneMouseEvent) Button() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:119
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setButton(Qt::MouseButton)
@@ -474,7 +472,7 @@ func (this *QGraphicsSceneMouseEvent) SetButton(button int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:121
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::KeyboardModifiers modifiers() const
@@ -488,7 +486,7 @@ func (this *QGraphicsSceneMouseEvent) Modifiers() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:122
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setModifiers(Qt::KeyboardModifiers)
@@ -501,7 +499,7 @@ func (this *QGraphicsSceneMouseEvent) SetModifiers(modifiers int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:124
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::MouseEventSource source() const
@@ -515,7 +513,7 @@ func (this *QGraphicsSceneMouseEvent) Source() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:125
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSource(Qt::MouseEventSource)
@@ -528,7 +526,7 @@ func (this *QGraphicsSceneMouseEvent) SetSource(source int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:127
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:128
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::MouseEventFlags flags() const
@@ -542,7 +540,7 @@ func (this *QGraphicsSceneMouseEvent) Flags() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:128
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlags(Qt::MouseEventFlags)

@@ -67,7 +67,7 @@ func (*QItemSelectionModel) NewFromPointer(cthis unsafe.Pointer) *QItemSelection
 	return NewQItemSelectionModelFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:139
+// /usr/include/qt/QtCore/qitemselectionmodel.h:141
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -81,7 +81,7 @@ func (this *QItemSelectionModel) MetaObject() *QMetaObject /*777 const QMetaObje
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:167
+// /usr/include/qt/QtCore/qitemselectionmodel.h:169
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QItemSelectionModel(QAbstractItemModel *)
@@ -104,7 +104,7 @@ func NewQItemSelectionModel(model QAbstractItemModel_ITF /*777 QAbstractItemMode
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:167
+// /usr/include/qt/QtCore/qitemselectionmodel.h:169
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QItemSelectionModel(QAbstractItemModel *)
@@ -125,7 +125,7 @@ func NewQItemSelectionModelp() *QItemSelectionModel {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:168
+// /usr/include/qt/QtCore/qitemselectionmodel.h:170
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QItemSelectionModel(QAbstractItemModel *, QObject *)
@@ -152,7 +152,7 @@ func NewQItemSelectionModel1(model QAbstractItemModel_ITF /*777 QAbstractItemMod
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:169
+// /usr/include/qt/QtCore/qitemselectionmodel.h:171
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QItemSelectionModel()
@@ -167,7 +167,7 @@ func DeleteQItemSelectionModel(this *QItemSelectionModel) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:171
+// /usr/include/qt/QtCore/qitemselectionmodel.h:173
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex currentIndex() const
@@ -185,7 +185,7 @@ func (this *QItemSelectionModel) CurrentIndex() *QModelIndex /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:173
+// /usr/include/qt/QtCore/qitemselectionmodel.h:175
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSelected(const QModelIndex &) const
@@ -203,7 +203,7 @@ func (this *QItemSelectionModel) IsSelected(index QModelIndex_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:174
+// /usr/include/qt/QtCore/qitemselectionmodel.h:176
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isRowSelected(int, const QModelIndex &) const
@@ -223,7 +223,7 @@ func (this *QItemSelectionModel) IsRowSelected(row int, parent QModelIndex_ITF) 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:175
+// /usr/include/qt/QtCore/qitemselectionmodel.h:177
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isColumnSelected(int, const QModelIndex &) const
@@ -243,7 +243,7 @@ func (this *QItemSelectionModel) IsColumnSelected(column int, parent QModelIndex
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:177
+// /usr/include/qt/QtCore/qitemselectionmodel.h:179
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool rowIntersectsSelection(int, const QModelIndex &) const
@@ -261,7 +261,7 @@ func (this *QItemSelectionModel) RowIntersectsSelection(row int, parent QModelIn
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:178
+// /usr/include/qt/QtCore/qitemselectionmodel.h:180
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool columnIntersectsSelection(int, const QModelIndex &) const
@@ -279,7 +279,7 @@ func (this *QItemSelectionModel) ColumnIntersectsSelection(column int, parent QM
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:180
+// /usr/include/qt/QtCore/qitemselectionmodel.h:182
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasSelection() const
@@ -295,7 +295,7 @@ func (this *QItemSelectionModel) HasSelection() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:182
+// /usr/include/qt/QtCore/qitemselectionmodel.h:184
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QModelIndexList selectedIndexes() const
@@ -312,7 +312,7 @@ func (this *QItemSelectionModel) SelectedIndexes() *QModelIndexList /*667*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:183
+// /usr/include/qt/QtCore/qitemselectionmodel.h:185
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QModelIndexList selectedRows(int) const
@@ -331,7 +331,7 @@ func (this *QItemSelectionModel) SelectedRows(column int) *QModelIndexList /*667
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:183
+// /usr/include/qt/QtCore/qitemselectionmodel.h:185
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QModelIndexList selectedRows(int) const
@@ -352,7 +352,7 @@ func (this *QItemSelectionModel) SelectedRowsp() *QModelIndexList /*667*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:184
+// /usr/include/qt/QtCore/qitemselectionmodel.h:186
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QModelIndexList selectedColumns(int) const
@@ -371,7 +371,7 @@ func (this *QItemSelectionModel) SelectedColumns(row int) *QModelIndexList /*667
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:184
+// /usr/include/qt/QtCore/qitemselectionmodel.h:186
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QModelIndexList selectedColumns(int) const
@@ -392,7 +392,7 @@ func (this *QItemSelectionModel) SelectedColumnsp() *QModelIndexList /*667*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:185
+// /usr/include/qt/QtCore/qitemselectionmodel.h:187
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QItemSelection selection() const
@@ -408,7 +408,7 @@ func (this *QItemSelectionModel) Selection() *QItemSelection /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:188
+// /usr/include/qt/QtCore/qitemselectionmodel.h:190
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QAbstractItemModel * model() const
@@ -424,7 +424,7 @@ func (this *QItemSelectionModel) Model() *QAbstractItemModel /*777 const QAbstra
 	return /*==*/ NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:189
+// /usr/include/qt/QtCore/qitemselectionmodel.h:191
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QAbstractItemModel * model()
@@ -440,7 +440,7 @@ func (this *QItemSelectionModel) Model1() *QAbstractItemModel /*777 QAbstractIte
 	return /*==*/ NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:191
+// /usr/include/qt/QtCore/qitemselectionmodel.h:193
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setModel(QAbstractItemModel *)
@@ -461,7 +461,7 @@ func (this *QItemSelectionModel) SetModel(model QAbstractItemModel_ITF /*777 QAb
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:194
+// /usr/include/qt/QtCore/qitemselectionmodel.h:196
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setCurrentIndex(const QModelIndex &, QItemSelectionModel::SelectionFlags)
@@ -482,7 +482,7 @@ func (this *QItemSelectionModel) SetCurrentIndex(index QModelIndex_ITF, command 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:195
+// /usr/include/qt/QtCore/qitemselectionmodel.h:197
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void select(const QModelIndex &, QItemSelectionModel::SelectionFlags)
@@ -501,7 +501,7 @@ func (this *QItemSelectionModel) Select(index QModelIndex_ITF, command int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:196
+// /usr/include/qt/QtCore/qitemselectionmodel.h:198
 // index:1
 // Public virtual Visibility=Default Availability=Available
 // [-2] void select(const QItemSelection &, QItemSelectionModel::SelectionFlags)
@@ -520,7 +520,7 @@ func (this *QItemSelectionModel) Select1(selection QItemSelection_ITF, command i
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:197
+// /usr/include/qt/QtCore/qitemselectionmodel.h:199
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void clear()
@@ -533,7 +533,7 @@ func (this *QItemSelectionModel) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:198
+// /usr/include/qt/QtCore/qitemselectionmodel.h:200
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void reset()
@@ -546,7 +546,7 @@ func (this *QItemSelectionModel) Reset() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:200
+// /usr/include/qt/QtCore/qitemselectionmodel.h:202
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clearSelection()
@@ -561,7 +561,7 @@ func (this *QItemSelectionModel) ClearSelection() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:201
+// /usr/include/qt/QtCore/qitemselectionmodel.h:203
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void clearCurrentIndex()
@@ -574,7 +574,7 @@ func (this *QItemSelectionModel) ClearCurrentIndex() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:204
+// /usr/include/qt/QtCore/qitemselectionmodel.h:206
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void selectionChanged(const QItemSelection &, const QItemSelection &)
@@ -601,7 +601,7 @@ func (this *QItemSelectionModel) SelectionChanged(selected QItemSelection_ITF, d
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:205
+// /usr/include/qt/QtCore/qitemselectionmodel.h:207
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentChanged(const QModelIndex &, const QModelIndex &)
@@ -626,7 +626,7 @@ func (this *QItemSelectionModel) CurrentChanged(current QModelIndex_ITF, previou
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:206
+// /usr/include/qt/QtCore/qitemselectionmodel.h:208
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentRowChanged(const QModelIndex &, const QModelIndex &)
@@ -651,7 +651,7 @@ func (this *QItemSelectionModel) CurrentRowChanged(current QModelIndex_ITF, prev
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:207
+// /usr/include/qt/QtCore/qitemselectionmodel.h:209
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentColumnChanged(const QModelIndex &, const QModelIndex &)
@@ -676,7 +676,7 @@ func (this *QItemSelectionModel) CurrentColumnChanged(current QModelIndex_ITF, p
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:208
+// /usr/include/qt/QtCore/qitemselectionmodel.h:210
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void modelChanged(QAbstractItemModel *)
@@ -697,7 +697,7 @@ func (this *QItemSelectionModel) ModelChanged(model QAbstractItemModel_ITF /*777
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:212
+// /usr/include/qt/QtCore/qitemselectionmodel.h:214
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void emitSelectionChanged(const QItemSelection &, const QItemSelection &)

@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h
@@ -81,7 +79,7 @@ func (*QGraphicsEllipseItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsElli
 	return NewQGraphicsEllipseItemFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:699
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:700
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsEllipseItem(QGraphicsItem *)
@@ -104,7 +102,7 @@ func NewQGraphicsEllipseItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:699
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:700
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsEllipseItem(QGraphicsItem *)
@@ -125,7 +123,7 @@ func NewQGraphicsEllipseItemp() *QGraphicsEllipseItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:700
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:701
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsEllipseItem(const QRectF &, QGraphicsItem *)
@@ -152,7 +150,7 @@ func NewQGraphicsEllipseItem1(rect qtcore.QRectF_ITF, parent QGraphicsItem_ITF /
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:700
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:701
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsEllipseItem(const QRectF &, QGraphicsItem *)
@@ -177,7 +175,7 @@ func NewQGraphicsEllipseItem1p(rect qtcore.QRectF_ITF) *QGraphicsEllipseItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:701
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:702
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsEllipseItem(qreal, qreal, qreal, qreal, QGraphicsItem *)
@@ -200,7 +198,7 @@ func NewQGraphicsEllipseItem2(x float64, y float64, w float64, h float64, parent
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:701
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:702
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsEllipseItem(qreal, qreal, qreal, qreal, QGraphicsItem *)
@@ -221,7 +219,7 @@ func NewQGraphicsEllipseItem2p(x float64, y float64, w float64, h float64) *QGra
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:702
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:703
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsEllipseItem()
@@ -236,7 +234,7 @@ func DeleteQGraphicsEllipseItem(this *QGraphicsEllipseItem) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:704
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:705
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF rect() const
@@ -252,7 +250,7 @@ func (this *QGraphicsEllipseItem) Rect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:705
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:706
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRect(const QRectF &)
@@ -269,7 +267,7 @@ func (this *QGraphicsEllipseItem) SetRect(rect qtcore.QRectF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:706
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:707
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setRect(qreal, qreal, qreal, qreal)
@@ -282,7 +280,7 @@ func (this *QGraphicsEllipseItem) SetRect1(x float64, y float64, w float64, h fl
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:708
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:709
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int startAngle() const
@@ -296,7 +294,7 @@ func (this *QGraphicsEllipseItem) StartAngle() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:709
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:710
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStartAngle(int)
@@ -309,7 +307,7 @@ func (this *QGraphicsEllipseItem) SetStartAngle(angle int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:711
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:712
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int spanAngle() const
@@ -323,7 +321,7 @@ func (this *QGraphicsEllipseItem) SpanAngle() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:712
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:713
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSpanAngle(int)
@@ -336,7 +334,7 @@ func (this *QGraphicsEllipseItem) SetSpanAngle(angle int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:714
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:715
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF boundingRect() const
@@ -374,7 +372,7 @@ func (this *QGraphicsEllipseItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:715
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:716
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QPainterPath shape() const
@@ -408,7 +406,7 @@ func (this *QGraphicsEllipseItem) Shape() *qtgui.QPainterPath /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:716
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:717
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool contains(const QPointF &) const
@@ -430,7 +428,7 @@ func (this *QGraphicsEllipseItem) Contains(point qtcore.QPointF_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:718
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:719
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
@@ -479,7 +477,7 @@ func (this *QGraphicsEllipseItem) Paint(painter qtgui.QPainter_ITF /*777 QPainte
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:718
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:719
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
@@ -526,7 +524,7 @@ func (this *QGraphicsEllipseItem) Paintp(painter qtgui.QPainter_ITF /*777 QPaint
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:720
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:721
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isObscuredBy(const QGraphicsItem *) const
@@ -550,7 +548,7 @@ func (this *QGraphicsEllipseItem) IsObscuredBy(item QGraphicsItem_ITF /*777 cons
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:721
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:722
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QPainterPath opaqueArea() const
@@ -572,7 +570,7 @@ func (this *QGraphicsEllipseItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:724
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:725
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int type() const
@@ -610,7 +608,7 @@ func (this *QGraphicsEllipseItem) Type() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:727
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:728
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool supportsExtension(QGraphicsItem::Extension) const
@@ -624,7 +622,7 @@ func (this *QGraphicsEllipseItem) SupportsExtension(extension int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:728
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:729
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setExtension(QGraphicsItem::Extension, const QVariant &)
@@ -641,7 +639,7 @@ func (this *QGraphicsEllipseItem) SetExtension(extension int, variant qtcore.QVa
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:729
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:730
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant extension(const QVariant &) const

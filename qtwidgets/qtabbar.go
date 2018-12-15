@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qtabbar.h
@@ -156,7 +154,7 @@ func (*QTabBar) NewFromPointer(cthis unsafe.Pointer) *QTabBar {
 	return NewQTabBarFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:56
+// /usr/include/qt/QtWidgets/qtabbar.h:57
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -170,7 +168,7 @@ func (this *QTabBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:74
+// /usr/include/qt/QtWidgets/qtabbar.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTabBar(QWidget *)
@@ -193,7 +191,7 @@ func NewQTabBar(parent QWidget_ITF /*777 QWidget **/) *QTabBar {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:74
+// /usr/include/qt/QtWidgets/qtabbar.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTabBar(QWidget *)
@@ -214,7 +212,7 @@ func NewQTabBarp() *QTabBar {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:75
+// /usr/include/qt/QtWidgets/qtabbar.h:76
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTabBar()
@@ -229,7 +227,7 @@ func DeleteQTabBar(this *QTabBar) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:93
+// /usr/include/qt/QtWidgets/qtabbar.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QTabBar::Shape shape() const
@@ -243,7 +241,7 @@ func (this *QTabBar) Shape() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:94
+// /usr/include/qt/QtWidgets/qtabbar.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setShape(QTabBar::Shape)
@@ -256,7 +254,7 @@ func (this *QTabBar) SetShape(shape int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:96
+// /usr/include/qt/QtWidgets/qtabbar.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int addTab(const QString &)
@@ -272,7 +270,7 @@ func (this *QTabBar) AddTab(text string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:97
+// /usr/include/qt/QtWidgets/qtabbar.h:98
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int addTab(const QIcon &, const QString &)
@@ -292,7 +290,7 @@ func (this *QTabBar) AddTab1(icon qtgui.QIcon_ITF, text string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:99
+// /usr/include/qt/QtWidgets/qtabbar.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int insertTab(int, const QString &)
@@ -308,7 +306,7 @@ func (this *QTabBar) InsertTab(index int, text string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:100
+// /usr/include/qt/QtWidgets/qtabbar.h:101
 // index:1
 // Public Visibility=Default Availability=Available
 // [4] int insertTab(int, const QIcon &, const QString &)
@@ -328,7 +326,7 @@ func (this *QTabBar) InsertTab1(index int, icon qtgui.QIcon_ITF, text string) in
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:102
+// /usr/include/qt/QtWidgets/qtabbar.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeTab(int)
@@ -343,7 +341,7 @@ func (this *QTabBar) RemoveTab(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:103
+// /usr/include/qt/QtWidgets/qtabbar.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void moveTab(int, int)
@@ -360,7 +358,7 @@ func (this *QTabBar) MoveTab(from int, to int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:105
+// /usr/include/qt/QtWidgets/qtabbar.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isTabEnabled(int) const
@@ -374,7 +372,7 @@ func (this *QTabBar) IsTabEnabled(index int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:106
+// /usr/include/qt/QtWidgets/qtabbar.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabEnabled(int, bool)
@@ -389,7 +387,7 @@ func (this *QTabBar) SetTabEnabled(index int, arg1 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:108
+// /usr/include/qt/QtWidgets/qtabbar.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString tabText(int) const
@@ -408,7 +406,7 @@ func (this *QTabBar) TabText(index int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:109
+// /usr/include/qt/QtWidgets/qtabbar.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabText(int, const QString &)
@@ -425,7 +423,7 @@ func (this *QTabBar) SetTabText(index int, text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:111
+// /usr/include/qt/QtWidgets/qtabbar.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor tabTextColor(int) const
@@ -443,7 +441,7 @@ func (this *QTabBar) TabTextColor(index int) *qtgui.QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:112
+// /usr/include/qt/QtWidgets/qtabbar.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabTextColor(int, const QColor &)
@@ -464,7 +462,7 @@ func (this *QTabBar) SetTabTextColor(index int, color qtgui.QColor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:114
+// /usr/include/qt/QtWidgets/qtabbar.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIcon tabIcon(int) const
@@ -482,7 +480,7 @@ func (this *QTabBar) TabIcon(index int) *qtgui.QIcon /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:115
+// /usr/include/qt/QtWidgets/qtabbar.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabIcon(int, const QIcon &)
@@ -501,7 +499,7 @@ func (this *QTabBar) SetTabIcon(index int, icon qtgui.QIcon_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:117
+// /usr/include/qt/QtWidgets/qtabbar.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::TextElideMode elideMode() const
@@ -515,7 +513,7 @@ func (this *QTabBar) ElideMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:118
+// /usr/include/qt/QtWidgets/qtabbar.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setElideMode(Qt::TextElideMode)
@@ -528,7 +526,7 @@ func (this *QTabBar) SetElideMode(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:121
+// /usr/include/qt/QtWidgets/qtabbar.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabToolTip(int, const QString &)
@@ -545,7 +543,7 @@ func (this *QTabBar) SetTabToolTip(index int, tip string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:122
+// /usr/include/qt/QtWidgets/qtabbar.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString tabToolTip(int) const
@@ -564,7 +562,7 @@ func (this *QTabBar) TabToolTip(index int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:126
+// /usr/include/qt/QtWidgets/qtabbar.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabWhatsThis(int, const QString &)
@@ -583,7 +581,7 @@ func (this *QTabBar) SetTabWhatsThis(index int, text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:127
+// /usr/include/qt/QtWidgets/qtabbar.h:128
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString tabWhatsThis(int) const
@@ -604,7 +602,7 @@ func (this *QTabBar) TabWhatsThis(index int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:130
+// /usr/include/qt/QtWidgets/qtabbar.h:131
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabData(int, const QVariant &)
@@ -623,7 +621,7 @@ func (this *QTabBar) SetTabData(index int, data qtcore.QVariant_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:131
+// /usr/include/qt/QtWidgets/qtabbar.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant tabData(int) const
@@ -641,7 +639,7 @@ func (this *QTabBar) TabData(index int) *qtcore.QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:133
+// /usr/include/qt/QtWidgets/qtabbar.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect tabRect(int) const
@@ -657,7 +655,7 @@ func (this *QTabBar) TabRect(index int) *qtcore.QRect /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:134
+// /usr/include/qt/QtWidgets/qtabbar.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int tabAt(const QPoint &) const
@@ -677,7 +675,7 @@ func (this *QTabBar) TabAt(pos qtcore.QPoint_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:136
+// /usr/include/qt/QtWidgets/qtabbar.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentIndex() const
@@ -691,7 +689,7 @@ func (this *QTabBar) CurrentIndex() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:137
+// /usr/include/qt/QtWidgets/qtabbar.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int count() const
@@ -705,7 +703,7 @@ func (this *QTabBar) Count() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:139
+// /usr/include/qt/QtWidgets/qtabbar.h:140
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
@@ -721,7 +719,7 @@ func (this *QTabBar) SizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:140
+// /usr/include/qt/QtWidgets/qtabbar.h:141
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
@@ -737,7 +735,7 @@ func (this *QTabBar) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:142
+// /usr/include/qt/QtWidgets/qtabbar.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDrawBase(bool)
@@ -750,7 +748,7 @@ func (this *QTabBar) SetDrawBase(drawTheBase bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:143
+// /usr/include/qt/QtWidgets/qtabbar.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool drawBase() const
@@ -764,7 +762,7 @@ func (this *QTabBar) DrawBase() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:145
+// /usr/include/qt/QtWidgets/qtabbar.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize iconSize() const
@@ -780,7 +778,7 @@ func (this *QTabBar) IconSize() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:146
+// /usr/include/qt/QtWidgets/qtabbar.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconSize(const QSize &)
@@ -797,7 +795,7 @@ func (this *QTabBar) SetIconSize(size qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:148
+// /usr/include/qt/QtWidgets/qtabbar.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool usesScrollButtons() const
@@ -811,7 +809,7 @@ func (this *QTabBar) UsesScrollButtons() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:149
+// /usr/include/qt/QtWidgets/qtabbar.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setUsesScrollButtons(bool)
@@ -824,7 +822,7 @@ func (this *QTabBar) SetUsesScrollButtons(useButtons bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:151
+// /usr/include/qt/QtWidgets/qtabbar.h:152
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool tabsClosable() const
@@ -838,7 +836,7 @@ func (this *QTabBar) TabsClosable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:152
+// /usr/include/qt/QtWidgets/qtabbar.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabsClosable(bool)
@@ -851,7 +849,7 @@ func (this *QTabBar) SetTabsClosable(closable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:154
+// /usr/include/qt/QtWidgets/qtabbar.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabButton(int, QTabBar::ButtonPosition, QWidget *)
@@ -876,7 +874,7 @@ func (this *QTabBar) SetTabButton(index int, position int, widget QWidget_ITF /*
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:155
+// /usr/include/qt/QtWidgets/qtabbar.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * tabButton(int, QTabBar::ButtonPosition) const
@@ -892,7 +890,7 @@ func (this *QTabBar) TabButton(index int, position int) *QWidget /*777 QWidget *
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:157
+// /usr/include/qt/QtWidgets/qtabbar.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QTabBar::SelectionBehavior selectionBehaviorOnRemove() const
@@ -906,7 +904,7 @@ func (this *QTabBar) SelectionBehaviorOnRemove() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:158
+// /usr/include/qt/QtWidgets/qtabbar.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSelectionBehaviorOnRemove(QTabBar::SelectionBehavior)
@@ -919,7 +917,7 @@ func (this *QTabBar) SetSelectionBehaviorOnRemove(behavior int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:160
+// /usr/include/qt/QtWidgets/qtabbar.h:161
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool expanding() const
@@ -933,7 +931,7 @@ func (this *QTabBar) Expanding() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:161
+// /usr/include/qt/QtWidgets/qtabbar.h:162
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setExpanding(bool)
@@ -946,7 +944,7 @@ func (this *QTabBar) SetExpanding(enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:163
+// /usr/include/qt/QtWidgets/qtabbar.h:164
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isMovable() const
@@ -960,7 +958,7 @@ func (this *QTabBar) IsMovable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:164
+// /usr/include/qt/QtWidgets/qtabbar.h:165
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMovable(bool)
@@ -973,7 +971,7 @@ func (this *QTabBar) SetMovable(movable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:166
+// /usr/include/qt/QtWidgets/qtabbar.h:167
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool documentMode() const
@@ -987,7 +985,7 @@ func (this *QTabBar) DocumentMode() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:167
+// /usr/include/qt/QtWidgets/qtabbar.h:168
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDocumentMode(bool)
@@ -1000,7 +998,7 @@ func (this *QTabBar) SetDocumentMode(set bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:169
+// /usr/include/qt/QtWidgets/qtabbar.h:170
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool autoHide() const
@@ -1014,7 +1012,7 @@ func (this *QTabBar) AutoHide() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:170
+// /usr/include/qt/QtWidgets/qtabbar.h:171
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAutoHide(bool)
@@ -1027,7 +1025,7 @@ func (this *QTabBar) SetAutoHide(hide bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:172
+// /usr/include/qt/QtWidgets/qtabbar.h:173
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool changeCurrentOnDrag() const
@@ -1041,7 +1039,7 @@ func (this *QTabBar) ChangeCurrentOnDrag() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:173
+// /usr/include/qt/QtWidgets/qtabbar.h:174
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setChangeCurrentOnDrag(bool)
@@ -1054,7 +1052,7 @@ func (this *QTabBar) SetChangeCurrentOnDrag(change bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:176
+// /usr/include/qt/QtWidgets/qtabbar.h:177
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString accessibleTabName(int) const
@@ -1073,7 +1071,7 @@ func (this *QTabBar) AccessibleTabName(index int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:177
+// /usr/include/qt/QtWidgets/qtabbar.h:178
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAccessibleTabName(int, const QString &)
@@ -1090,7 +1088,7 @@ func (this *QTabBar) SetAccessibleTabName(index int, name string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:181
+// /usr/include/qt/QtWidgets/qtabbar.h:182
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentIndex(int)
@@ -1103,7 +1101,7 @@ func (this *QTabBar) SetCurrentIndex(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:184
+// /usr/include/qt/QtWidgets/qtabbar.h:185
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentChanged(int)
@@ -1118,7 +1116,7 @@ func (this *QTabBar) CurrentChanged(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:185
+// /usr/include/qt/QtWidgets/qtabbar.h:186
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void tabCloseRequested(int)
@@ -1135,7 +1133,7 @@ func (this *QTabBar) TabCloseRequested(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:186
+// /usr/include/qt/QtWidgets/qtabbar.h:187
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void tabMoved(int, int)
@@ -1154,7 +1152,7 @@ func (this *QTabBar) TabMoved(from int, to int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:187
+// /usr/include/qt/QtWidgets/qtabbar.h:188
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void tabBarClicked(int)
@@ -1171,7 +1169,7 @@ func (this *QTabBar) TabBarClicked(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:188
+// /usr/include/qt/QtWidgets/qtabbar.h:189
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void tabBarDoubleClicked(int)
@@ -1188,7 +1186,7 @@ func (this *QTabBar) TabBarDoubleClicked(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:191
+// /usr/include/qt/QtWidgets/qtabbar.h:192
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QSize tabSizeHint(int) const
@@ -1204,7 +1202,7 @@ func (this *QTabBar) TabSizeHint(index int) *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:192
+// /usr/include/qt/QtWidgets/qtabbar.h:193
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QSize minimumTabSizeHint(int) const
@@ -1222,7 +1220,7 @@ func (this *QTabBar) MinimumTabSizeHint(index int) *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:193
+// /usr/include/qt/QtWidgets/qtabbar.h:194
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void tabInserted(int)
@@ -1237,7 +1235,7 @@ func (this *QTabBar) TabInserted(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:194
+// /usr/include/qt/QtWidgets/qtabbar.h:195
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void tabRemoved(int)
@@ -1252,7 +1250,7 @@ func (this *QTabBar) TabRemoved(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:195
+// /usr/include/qt/QtWidgets/qtabbar.h:196
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void tabLayoutChange()
@@ -1267,7 +1265,7 @@ func (this *QTabBar) TabLayoutChange() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:197
+// /usr/include/qt/QtWidgets/qtabbar.h:198
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -1285,7 +1283,7 @@ func (this *QTabBar) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:198
+// /usr/include/qt/QtWidgets/qtabbar.h:199
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
@@ -1302,7 +1300,7 @@ func (this *QTabBar) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEvent 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:199
+// /usr/include/qt/QtWidgets/qtabbar.h:200
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
@@ -1319,7 +1317,7 @@ func (this *QTabBar) ShowEvent(arg0 qtgui.QShowEvent_ITF /*777 QShowEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:200
+// /usr/include/qt/QtWidgets/qtabbar.h:201
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
@@ -1336,7 +1334,7 @@ func (this *QTabBar) HideEvent(arg0 qtgui.QHideEvent_ITF /*777 QHideEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:201
+// /usr/include/qt/QtWidgets/qtabbar.h:202
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
@@ -1353,7 +1351,7 @@ func (this *QTabBar) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent **/
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:202
+// /usr/include/qt/QtWidgets/qtabbar.h:203
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
@@ -1370,7 +1368,7 @@ func (this *QTabBar) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:203
+// /usr/include/qt/QtWidgets/qtabbar.h:204
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
@@ -1387,7 +1385,7 @@ func (this *QTabBar) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:204
+// /usr/include/qt/QtWidgets/qtabbar.h:205
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
@@ -1404,7 +1402,7 @@ func (this *QTabBar) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEv
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:206
+// /usr/include/qt/QtWidgets/qtabbar.h:207
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
@@ -1421,7 +1419,7 @@ func (this *QTabBar) WheelEvent(event qtgui.QWheelEvent_ITF /*777 QWheelEvent **
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:208
+// /usr/include/qt/QtWidgets/qtabbar.h:209
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
@@ -1438,7 +1436,7 @@ func (this *QTabBar) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **/)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:209
+// /usr/include/qt/QtWidgets/qtabbar.h:210
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
@@ -1455,7 +1453,7 @@ func (this *QTabBar) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:210
+// /usr/include/qt/QtWidgets/qtabbar.h:211
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
@@ -1472,7 +1470,7 @@ func (this *QTabBar) TimerEvent(event qtcore.QTimerEvent_ITF /*777 QTimerEvent *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:211
+// /usr/include/qt/QtWidgets/qtabbar.h:212
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionTab *, int) const

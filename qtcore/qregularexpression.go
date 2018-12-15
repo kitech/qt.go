@@ -64,7 +64,7 @@ func (*QRegularExpression) NewFromPointer(cthis unsafe.Pointer) *QRegularExpress
 	return NewQRegularExpressionFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:81
+// /usr/include/qt/QtCore/qregularexpression.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QRegularExpression::PatternOptions patternOptions() const
@@ -80,7 +80,7 @@ func (this *QRegularExpression) PatternOptions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:82
+// /usr/include/qt/QtCore/qregularexpression.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPatternOptions(QRegularExpression::PatternOptions)
@@ -95,7 +95,7 @@ func (this *QRegularExpression) SetPatternOptions(options int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:84
+// /usr/include/qt/QtCore/qregularexpression.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRegularExpression()
@@ -116,7 +116,7 @@ func NewQRegularExpression() *QRegularExpression {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:85
+// /usr/include/qt/QtCore/qregularexpression.h:83
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QRegularExpression(const QString &, QRegularExpression::PatternOptions)
@@ -139,7 +139,7 @@ func NewQRegularExpression1(pattern string, options int) *QRegularExpression {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:85
+// /usr/include/qt/QtCore/qregularexpression.h:83
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QRegularExpression(const QString &, QRegularExpression::PatternOptions)
@@ -164,7 +164,7 @@ func NewQRegularExpression1p(pattern string) *QRegularExpression {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:87
+// /usr/include/qt/QtCore/qregularexpression.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QRegularExpression()
@@ -179,7 +179,7 @@ func DeleteQRegularExpression(this *QRegularExpression) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:88
+// /usr/include/qt/QtCore/qregularexpression.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpression & operator=(const QRegularExpression &)
@@ -199,7 +199,7 @@ func (this *QRegularExpression) Operator_equal(re QRegularExpression_ITF) *QRegu
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:91
+// /usr/include/qt/QtCore/qregularexpression.h:89
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QRegularExpression & operator=(QRegularExpression &&)
@@ -215,7 +215,7 @@ func (this *QRegularExpression) Operator_equal1(re unsafe.Pointer /*333*/) *QReg
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:95
+// /usr/include/qt/QtCore/qregularexpression.h:93
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QRegularExpression &)
@@ -232,7 +232,7 @@ func (this *QRegularExpression) Swap(other QRegularExpression_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:97
+// /usr/include/qt/QtCore/qregularexpression.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString pattern() const
@@ -251,7 +251,7 @@ func (this *QRegularExpression) Pattern() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:98
+// /usr/include/qt/QtCore/qregularexpression.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPattern(const QString &)
@@ -268,7 +268,7 @@ func (this *QRegularExpression) SetPattern(pattern string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:100
+// /usr/include/qt/QtCore/qregularexpression.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -284,7 +284,7 @@ func (this *QRegularExpression) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:101
+// /usr/include/qt/QtCore/qregularexpression.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int patternErrorOffset() const
@@ -300,7 +300,7 @@ func (this *QRegularExpression) PatternErrorOffset() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:102
+// /usr/include/qt/QtCore/qregularexpression.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString errorString() const
@@ -319,7 +319,7 @@ func (this *QRegularExpression) ErrorString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:104
+// /usr/include/qt/QtCore/qregularexpression.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int captureCount() const
@@ -337,7 +337,7 @@ func (this *QRegularExpression) CaptureCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:105
+// /usr/include/qt/QtCore/qregularexpression.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList namedCaptureGroups() const
@@ -375,7 +375,7 @@ func (this *QRegularExpression) NamedCaptureGroups() *QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:121
+// /usr/include/qt/QtCore/qregularexpression.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatch match(const QString &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
@@ -397,7 +397,7 @@ func (this *QRegularExpression) Match(subject string, offset int, matchType int,
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:121
+// /usr/include/qt/QtCore/qregularexpression.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatch match(const QString &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
@@ -425,7 +425,7 @@ func (this *QRegularExpression) Matchp(subject string) *QRegularExpressionMatch 
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:121
+// /usr/include/qt/QtCore/qregularexpression.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatch match(const QString &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
@@ -451,7 +451,7 @@ func (this *QRegularExpression) Matchp1(subject string, offset int) *QRegularExp
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:121
+// /usr/include/qt/QtCore/qregularexpression.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatch match(const QString &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
@@ -475,7 +475,7 @@ func (this *QRegularExpression) Matchp2(subject string, offset int, matchType in
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:126
+// /usr/include/qt/QtCore/qregularexpression.h:124
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatch match(const QStringRef &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
@@ -499,7 +499,7 @@ func (this *QRegularExpression) Match1(subjectRef QStringRef_ITF, offset int, ma
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:126
+// /usr/include/qt/QtCore/qregularexpression.h:124
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatch match(const QStringRef &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
@@ -529,7 +529,7 @@ func (this *QRegularExpression) Match1p(subjectRef QStringRef_ITF) *QRegularExpr
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:126
+// /usr/include/qt/QtCore/qregularexpression.h:124
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatch match(const QStringRef &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
@@ -557,7 +557,7 @@ func (this *QRegularExpression) Match1p1(subjectRef QStringRef_ITF, offset int) 
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:126
+// /usr/include/qt/QtCore/qregularexpression.h:124
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatch match(const QStringRef &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
@@ -583,7 +583,7 @@ func (this *QRegularExpression) Match1p2(subjectRef QStringRef_ITF, offset int, 
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:131
+// /usr/include/qt/QtCore/qregularexpression.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatchIterator globalMatch(const QString &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
@@ -605,7 +605,7 @@ func (this *QRegularExpression) GlobalMatch(subject string, offset int, matchTyp
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:131
+// /usr/include/qt/QtCore/qregularexpression.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatchIterator globalMatch(const QString &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
@@ -633,7 +633,7 @@ func (this *QRegularExpression) GlobalMatchp(subject string) *QRegularExpression
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:131
+// /usr/include/qt/QtCore/qregularexpression.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatchIterator globalMatch(const QString &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
@@ -659,7 +659,7 @@ func (this *QRegularExpression) GlobalMatchp1(subject string, offset int) *QRegu
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:131
+// /usr/include/qt/QtCore/qregularexpression.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatchIterator globalMatch(const QString &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
@@ -683,7 +683,7 @@ func (this *QRegularExpression) GlobalMatchp2(subject string, offset int, matchT
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:136
+// /usr/include/qt/QtCore/qregularexpression.h:134
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatchIterator globalMatch(const QStringRef &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
@@ -707,7 +707,7 @@ func (this *QRegularExpression) GlobalMatch1(subjectRef QStringRef_ITF, offset i
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:136
+// /usr/include/qt/QtCore/qregularexpression.h:134
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatchIterator globalMatch(const QStringRef &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
@@ -737,7 +737,7 @@ func (this *QRegularExpression) GlobalMatch1p(subjectRef QStringRef_ITF) *QRegul
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:136
+// /usr/include/qt/QtCore/qregularexpression.h:134
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatchIterator globalMatch(const QStringRef &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
@@ -765,7 +765,7 @@ func (this *QRegularExpression) GlobalMatch1p1(subjectRef QStringRef_ITF, offset
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:136
+// /usr/include/qt/QtCore/qregularexpression.h:134
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QRegularExpressionMatchIterator globalMatch(const QStringRef &, int, QRegularExpression::MatchType, QRegularExpression::MatchOptions) const
@@ -791,7 +791,7 @@ func (this *QRegularExpression) GlobalMatch1p2(subjectRef QStringRef_ITF, offset
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:141
+// /usr/include/qt/QtCore/qregularexpression.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void optimize() const
@@ -810,7 +810,7 @@ func (this *QRegularExpression) Optimize() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:143
+// /usr/include/qt/QtCore/qregularexpression.h:141
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString escape(const QString &)
@@ -851,7 +851,7 @@ func QRegularExpression_Escape(str string) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:145
+// /usr/include/qt/QtCore/qregularexpression.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QRegularExpression &) const
@@ -869,7 +869,7 @@ func (this *QRegularExpression) Operator_equal_equal(re QRegularExpression_ITF) 
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:146
+// /usr/include/qt/QtCore/qregularexpression.h:144
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QRegularExpression &) const

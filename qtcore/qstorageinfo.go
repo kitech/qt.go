@@ -64,7 +64,7 @@ func (*QStorageInfo) NewFromPointer(cthis unsafe.Pointer) *QStorageInfo {
 	return NewQStorageInfoFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:58
+// /usr/include/qt/QtCore/qstorageinfo.h:56
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStorageInfo()
@@ -87,7 +87,7 @@ func NewQStorageInfo() *QStorageInfo {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:59
+// /usr/include/qt/QtCore/qstorageinfo.h:57
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QStorageInfo(const QString &)
@@ -112,7 +112,7 @@ func NewQStorageInfo1(path string) *QStorageInfo {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:60
+// /usr/include/qt/QtCore/qstorageinfo.h:58
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QStorageInfo(const QDir &)
@@ -139,7 +139,7 @@ func NewQStorageInfo2(dir QDir_ITF) *QStorageInfo {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:62
+// /usr/include/qt/QtCore/qstorageinfo.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QStorageInfo()
@@ -154,7 +154,7 @@ func DeleteQStorageInfo(this *QStorageInfo) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:64
+// /usr/include/qt/QtCore/qstorageinfo.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStorageInfo & operator=(const QStorageInfo &)
@@ -174,7 +174,7 @@ func (this *QStorageInfo) Operator_equal(other QStorageInfo_ITF) *QStorageInfo {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:66
+// /usr/include/qt/QtCore/qstorageinfo.h:64
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QStorageInfo & operator=(QStorageInfo &&)
@@ -190,7 +190,7 @@ func (this *QStorageInfo) Operator_equal1(other unsafe.Pointer /*333*/) *QStorag
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:69
+// /usr/include/qt/QtCore/qstorageinfo.h:67
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QStorageInfo &)
@@ -207,7 +207,7 @@ func (this *QStorageInfo) Swap(other QStorageInfo_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:72
+// /usr/include/qt/QtCore/qstorageinfo.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPath(const QString &)
@@ -226,7 +226,7 @@ func (this *QStorageInfo) SetPath(path string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:74
+// /usr/include/qt/QtCore/qstorageinfo.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString rootPath() const
@@ -249,7 +249,7 @@ func (this *QStorageInfo) RootPath() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:75
+// /usr/include/qt/QtCore/qstorageinfo.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray device() const
@@ -269,7 +269,7 @@ func (this *QStorageInfo) Device() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:76
+// /usr/include/qt/QtCore/qstorageinfo.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray subvolume() const
@@ -293,7 +293,7 @@ func (this *QStorageInfo) Subvolume() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:77
+// /usr/include/qt/QtCore/qstorageinfo.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray fileSystemType() const
@@ -313,7 +313,7 @@ func (this *QStorageInfo) FileSystemType() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:78
+// /usr/include/qt/QtCore/qstorageinfo.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString name() const
@@ -336,7 +336,7 @@ func (this *QStorageInfo) Name() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:79
+// /usr/include/qt/QtCore/qstorageinfo.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString displayName() const
@@ -353,7 +353,7 @@ func (this *QStorageInfo) DisplayName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:81
+// /usr/include/qt/QtCore/qstorageinfo.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 bytesTotal() const
@@ -371,7 +371,7 @@ func (this *QStorageInfo) BytesTotal() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:82
+// /usr/include/qt/QtCore/qstorageinfo.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 bytesFree() const
@@ -389,7 +389,7 @@ func (this *QStorageInfo) BytesFree() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:83
+// /usr/include/qt/QtCore/qstorageinfo.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 bytesAvailable() const
@@ -409,7 +409,7 @@ func (this *QStorageInfo) BytesAvailable() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:84
+// /usr/include/qt/QtCore/qstorageinfo.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int blockSize() const
@@ -427,7 +427,7 @@ func (this *QStorageInfo) BlockSize() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:86
+// /usr/include/qt/QtCore/qstorageinfo.h:84
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isRoot() const
@@ -445,7 +445,7 @@ func (this *QStorageInfo) IsRoot() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:87
+// /usr/include/qt/QtCore/qstorageinfo.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isReadOnly() const
@@ -459,7 +459,7 @@ func (this *QStorageInfo) IsReadOnly() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:88
+// /usr/include/qt/QtCore/qstorageinfo.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isReady() const
@@ -477,7 +477,7 @@ func (this *QStorageInfo) IsReady() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:89
+// /usr/include/qt/QtCore/qstorageinfo.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -493,7 +493,7 @@ func (this *QStorageInfo) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:91
+// /usr/include/qt/QtCore/qstorageinfo.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void refresh()
@@ -508,7 +508,7 @@ func (this *QStorageInfo) Refresh() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstorageinfo.h:94
+// /usr/include/qt/QtCore/qstorageinfo.h:92
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStorageInfo root()

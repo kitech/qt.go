@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicsgridlayout.h
@@ -66,7 +64,7 @@ func (*QGraphicsGridLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsGridL
 	return NewQGraphicsGridLayoutFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:56
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:57
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsGridLayout(QGraphicsLayoutItem *)
@@ -89,7 +87,7 @@ func NewQGraphicsGridLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayout
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:56
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:57
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsGridLayout(QGraphicsLayoutItem *)
@@ -110,7 +108,7 @@ func NewQGraphicsGridLayoutp() *QGraphicsGridLayout {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:57
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsGridLayout()
@@ -125,7 +123,7 @@ func DeleteQGraphicsGridLayout(this *QGraphicsGridLayout) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:59
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addItem(QGraphicsLayoutItem *, int, int, int, int, Qt::Alignment)
@@ -142,7 +140,7 @@ func (this *QGraphicsGridLayout) AddItem(item QGraphicsLayoutItem_ITF /*777 QGra
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:59
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addItem(QGraphicsLayoutItem *, int, int, int, int, Qt::Alignment)
@@ -161,7 +159,7 @@ func (this *QGraphicsGridLayout) AddItemp(item QGraphicsLayoutItem_ITF /*777 QGr
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:61
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:62
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void addItem(QGraphicsLayoutItem *, int, int, Qt::Alignment)
@@ -178,7 +176,7 @@ func (this *QGraphicsGridLayout) AddItem1(item QGraphicsLayoutItem_ITF /*777 QGr
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:61
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:62
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void addItem(QGraphicsLayoutItem *, int, int, Qt::Alignment)
@@ -197,7 +195,7 @@ func (this *QGraphicsGridLayout) AddItem1p(item QGraphicsLayoutItem_ITF /*777 QG
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:63
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHorizontalSpacing(qreal)
@@ -212,7 +210,7 @@ func (this *QGraphicsGridLayout) SetHorizontalSpacing(spacing float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:64
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal horizontalSpacing() const
@@ -228,7 +226,7 @@ func (this *QGraphicsGridLayout) HorizontalSpacing() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:65
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVerticalSpacing(qreal)
@@ -243,7 +241,7 @@ func (this *QGraphicsGridLayout) SetVerticalSpacing(spacing float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:66
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal verticalSpacing() const
@@ -259,7 +257,7 @@ func (this *QGraphicsGridLayout) VerticalSpacing() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:67
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSpacing(qreal)
@@ -274,7 +272,7 @@ func (this *QGraphicsGridLayout) SetSpacing(spacing float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:69
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRowSpacing(int, qreal)
@@ -289,7 +287,7 @@ func (this *QGraphicsGridLayout) SetRowSpacing(row int, spacing float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:70
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal rowSpacing(int) const
@@ -305,7 +303,7 @@ func (this *QGraphicsGridLayout) RowSpacing(row int) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:71
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColumnSpacing(int, qreal)
@@ -320,7 +318,7 @@ func (this *QGraphicsGridLayout) SetColumnSpacing(column int, spacing float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:72
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal columnSpacing(int) const
@@ -336,7 +334,7 @@ func (this *QGraphicsGridLayout) ColumnSpacing(column int) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:74
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRowStretchFactor(int, int)
@@ -351,7 +349,7 @@ func (this *QGraphicsGridLayout) SetRowStretchFactor(row int, stretch int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:75
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int rowStretchFactor(int) const
@@ -367,7 +365,7 @@ func (this *QGraphicsGridLayout) RowStretchFactor(row int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:76
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColumnStretchFactor(int, int)
@@ -382,7 +380,7 @@ func (this *QGraphicsGridLayout) SetColumnStretchFactor(column int, stretch int)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:77
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int columnStretchFactor(int) const
@@ -398,7 +396,7 @@ func (this *QGraphicsGridLayout) ColumnStretchFactor(column int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:79
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRowMinimumHeight(int, qreal)
@@ -413,7 +411,7 @@ func (this *QGraphicsGridLayout) SetRowMinimumHeight(row int, height float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:80
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal rowMinimumHeight(int) const
@@ -429,7 +427,7 @@ func (this *QGraphicsGridLayout) RowMinimumHeight(row int) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:81
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRowPreferredHeight(int, qreal)
@@ -444,7 +442,7 @@ func (this *QGraphicsGridLayout) SetRowPreferredHeight(row int, height float64) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:82
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal rowPreferredHeight(int) const
@@ -460,7 +458,7 @@ func (this *QGraphicsGridLayout) RowPreferredHeight(row int) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:83
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRowMaximumHeight(int, qreal)
@@ -475,7 +473,7 @@ func (this *QGraphicsGridLayout) SetRowMaximumHeight(row int, height float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:84
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal rowMaximumHeight(int) const
@@ -491,7 +489,7 @@ func (this *QGraphicsGridLayout) RowMaximumHeight(row int) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:85
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRowFixedHeight(int, qreal)
@@ -504,7 +502,7 @@ func (this *QGraphicsGridLayout) SetRowFixedHeight(row int, height float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:87
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColumnMinimumWidth(int, qreal)
@@ -519,7 +517,7 @@ func (this *QGraphicsGridLayout) SetColumnMinimumWidth(column int, width float64
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:88
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal columnMinimumWidth(int) const
@@ -535,7 +533,7 @@ func (this *QGraphicsGridLayout) ColumnMinimumWidth(column int) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:89
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColumnPreferredWidth(int, qreal)
@@ -550,7 +548,7 @@ func (this *QGraphicsGridLayout) SetColumnPreferredWidth(column int, width float
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:90
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal columnPreferredWidth(int) const
@@ -566,7 +564,7 @@ func (this *QGraphicsGridLayout) ColumnPreferredWidth(column int) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:91
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColumnMaximumWidth(int, qreal)
@@ -581,7 +579,7 @@ func (this *QGraphicsGridLayout) SetColumnMaximumWidth(column int, width float64
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:92
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal columnMaximumWidth(int) const
@@ -597,7 +595,7 @@ func (this *QGraphicsGridLayout) ColumnMaximumWidth(column int) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:93
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColumnFixedWidth(int, qreal)
@@ -610,7 +608,7 @@ func (this *QGraphicsGridLayout) SetColumnFixedWidth(column int, width float64) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:95
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRowAlignment(int, Qt::Alignment)
@@ -625,7 +623,7 @@ func (this *QGraphicsGridLayout) SetRowAlignment(row int, alignment int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:96
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Alignment rowAlignment(int) const
@@ -641,7 +639,7 @@ func (this *QGraphicsGridLayout) RowAlignment(row int) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:97
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColumnAlignment(int, Qt::Alignment)
@@ -656,7 +654,7 @@ func (this *QGraphicsGridLayout) SetColumnAlignment(column int, alignment int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:98
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Alignment columnAlignment(int) const
@@ -672,7 +670,7 @@ func (this *QGraphicsGridLayout) ColumnAlignment(column int) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:100
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAlignment(QGraphicsLayoutItem *, Qt::Alignment)
@@ -691,7 +689,7 @@ func (this *QGraphicsGridLayout) SetAlignment(item QGraphicsLayoutItem_ITF /*777
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:101
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Alignment alignment(QGraphicsLayoutItem *) const
@@ -711,7 +709,7 @@ func (this *QGraphicsGridLayout) Alignment(item QGraphicsLayoutItem_ITF /*777 QG
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:103
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int rowCount() const
@@ -725,7 +723,7 @@ func (this *QGraphicsGridLayout) RowCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:104
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int columnCount() const
@@ -739,7 +737,7 @@ func (this *QGraphicsGridLayout) ColumnCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:106
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsLayoutItem * itemAt(int, int) const
@@ -753,7 +751,7 @@ func (this *QGraphicsGridLayout) ItemAt(row int, column int) *QGraphicsLayoutIte
 	return /*==*/ NewQGraphicsLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:110
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:111
 // index:1
 // Public virtual Visibility=Default Availability=Available
 // [8] QGraphicsLayoutItem * itemAt(int) const
@@ -767,7 +765,7 @@ func (this *QGraphicsGridLayout) ItemAt1(index int) *QGraphicsLayoutItem /*777 Q
 	return /*==*/ NewQGraphicsLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:109
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:110
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int count() const
@@ -783,7 +781,7 @@ func (this *QGraphicsGridLayout) Count() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:111
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:112
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void removeAt(int)
@@ -800,7 +798,7 @@ func (this *QGraphicsGridLayout) RemoveAt(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:112
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeItem(QGraphicsLayoutItem *)
@@ -819,7 +817,7 @@ func (this *QGraphicsGridLayout) RemoveItem(item QGraphicsLayoutItem_ITF /*777 Q
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:114
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:115
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void invalidate()
@@ -832,7 +830,7 @@ func (this *QGraphicsGridLayout) Invalidate() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:117
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:118
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRectF &)
@@ -851,7 +849,7 @@ func (this *QGraphicsGridLayout) SetGeometry(rect qtcore.QRectF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:118
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:119
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &) const
@@ -871,7 +869,7 @@ func (this *QGraphicsGridLayout) SizeHint(which int, constraint qtcore.QSizeF_IT
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:118
+// /usr/include/qt/QtWidgets/qgraphicsgridlayout.h:119
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &) const

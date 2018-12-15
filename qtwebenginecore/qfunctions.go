@@ -47,14 +47,14 @@ func init() {
 
 //  body block begin
 // /usr/include/qt/QtWebEngineCore/qwebenginehttprequest.h:101
-// index:85
+// index:80
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QWebEngineHttpRequest &, QWebEngineHttpRequest &)
 
 /*
 
  */
-func Swap85(value1 QWebEngineHttpRequest_ITF, value2 QWebEngineHttpRequest_ITF) {
+func Swap80(value1 QWebEngineHttpRequest_ITF, value2 QWebEngineHttpRequest_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QWebEngineHttpRequest_PTR() != nil {
 		convArg0 = value1.QWebEngineHttpRequest_PTR().GetCthis()

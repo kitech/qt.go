@@ -63,7 +63,7 @@ func (*QResizeEvent) NewFromPointer(cthis unsafe.Pointer) *QResizeEvent {
 	return NewQResizeEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:463
+// /usr/include/qt/QtGui/qevent.h:456
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QResizeEvent(const QSize &, const QSize &)
@@ -90,7 +90,7 @@ func NewQResizeEvent(size qtcore.QSize_ITF, oldSize qtcore.QSize_ITF) *QResizeEv
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:464
+// /usr/include/qt/QtGui/qevent.h:457
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QResizeEvent()
@@ -105,7 +105,7 @@ func DeleteQResizeEvent(this *QResizeEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:466
+// /usr/include/qt/QtGui/qevent.h:459
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QSize & size() const
@@ -121,7 +121,7 @@ func (this *QResizeEvent) Size() *qtcore.QSize {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:467
+// /usr/include/qt/QtGui/qevent.h:460
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QSize & oldSize() const

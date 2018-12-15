@@ -116,7 +116,7 @@ func (this *QPagedPaintDevice) NewPage() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qpagedpaintdevice.h:219
+// /usr/include/qt/QtGui/qpagedpaintdevice.h:217
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setPageLayout(const QPageLayout &)
@@ -142,7 +142,7 @@ func (this *QPagedPaintDevice) SetPageLayout(pageLayout QPageLayout_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qpagedpaintdevice.h:220
+// /usr/include/qt/QtGui/qpagedpaintdevice.h:218
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setPageSize(const QPageSize &)
@@ -170,7 +170,7 @@ func (this *QPagedPaintDevice) SetPageSize(pageSize QPageSize_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qpagedpaintdevice.h:226
+// /usr/include/qt/QtGui/qpagedpaintdevice.h:224
 // index:1
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setPageSize(QPagedPaintDevice::PageSize)
@@ -193,7 +193,7 @@ func (this *QPagedPaintDevice) SetPageSize1(size int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpagedpaintdevice.h:221
+// /usr/include/qt/QtGui/qpagedpaintdevice.h:219
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setPageOrientation(QPageLayout::Orientation)
@@ -219,7 +219,7 @@ func (this *QPagedPaintDevice) SetPageOrientation(orientation int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qpagedpaintdevice.h:222
+// /usr/include/qt/QtGui/qpagedpaintdevice.h:220
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setPageMargins(const QMarginsF &)
@@ -247,7 +247,7 @@ func (this *QPagedPaintDevice) SetPageMargins(margins qtcore.QMarginsF_ITF) bool
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qpagedpaintdevice.h:223
+// /usr/include/qt/QtGui/qpagedpaintdevice.h:221
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool setPageMargins(const QMarginsF &, QPageLayout::Unit)
@@ -275,7 +275,7 @@ func (this *QPagedPaintDevice) SetPageMargins1(margins qtcore.QMarginsF_ITF, uni
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qpagedpaintdevice.h:224
+// /usr/include/qt/QtGui/qpagedpaintdevice.h:222
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPageLayout pageLayout() const
@@ -297,7 +297,7 @@ func (this *QPagedPaintDevice) PageLayout() *QPageLayout /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpagedpaintdevice.h:227
+// /usr/include/qt/QtGui/qpagedpaintdevice.h:225
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QPagedPaintDevice::PageSize pageSize() const
@@ -313,7 +313,7 @@ func (this *QPagedPaintDevice) PageSize() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qpagedpaintdevice.h:229
+// /usr/include/qt/QtGui/qpagedpaintdevice.h:227
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setPageSizeMM(const QSizeF &)
@@ -334,7 +334,7 @@ func (this *QPagedPaintDevice) SetPageSizeMM(size qtcore.QSizeF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpagedpaintdevice.h:230
+// /usr/include/qt/QtGui/qpagedpaintdevice.h:228
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF pageSizeMM() const
@@ -352,7 +352,7 @@ func (this *QPagedPaintDevice) PageSizeMM() *qtcore.QSizeF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpagedpaintdevice.h:241
+// /usr/include/qt/QtGui/qpagedpaintdevice.h:239
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPagedPaintDevice::Margins margins() const
@@ -370,7 +370,7 @@ func (this *QPagedPaintDevice) Margins() unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtGui/qpagedpaintdevice.h:246
+// /usr/include/qt/QtGui/qpagedpaintdevice.h:244
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QPageLayout devicePageLayout() const
@@ -386,7 +386,7 @@ func (this *QPagedPaintDevice) DevicePageLayout() *QPageLayout /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpagedpaintdevice.h:247
+// /usr/include/qt/QtGui/qpagedpaintdevice.h:245
 // index:1
 // Protected Visibility=Default Availability=Available
 // [8] QPageLayout & devicePageLayout()
@@ -1063,37 +1063,6 @@ func (this *QPagedPaintDevice) PageSizeItemName(val int) string {
 func QPagedPaintDevice_PageSizeItemName(val int) string {
 	var nilthis *QPagedPaintDevice
 	return nilthis.PageSizeItemName(val)
-}
-
-/*
-The PdfVersion enum describes the version of the PDF file that is produced by QPrinter or QPdfWriter.
-
-
-
-This enum was introduced or modified in  Qt 5.10.
-
-*/
-type QPagedPaintDevice__PdfVersion = int
-
-//
-const QPagedPaintDevice__PdfVersion_1_4 QPagedPaintDevice__PdfVersion = 0
-
-//
-const QPagedPaintDevice__PdfVersion_A1b QPagedPaintDevice__PdfVersion = 1
-
-func (this *QPagedPaintDevice) PdfVersionItemName(val int) string {
-	switch val {
-	case QPagedPaintDevice__PdfVersion_1_4: // 0
-		return "PdfVersion_1_4"
-	case QPagedPaintDevice__PdfVersion_A1b: // 1
-		return "PdfVersion_A1b"
-	default:
-		return fmt.Sprintf("%d", val)
-	}
-}
-func QPagedPaintDevice_PdfVersionItemName(val int) string {
-	var nilthis *QPagedPaintDevice
-	return nilthis.PdfVersionItemName(val)
 }
 
 //  body block end

@@ -64,7 +64,7 @@ func (*QStyleOptionMenuItem) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionM
 	return NewQStyleOptionMenuItemFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:372
+// /usr/include/qt/QtWidgets/qstyleoption.h:361
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionMenuItem()
@@ -83,7 +83,7 @@ func NewQStyleOptionMenuItem() *QStyleOptionMenuItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:376
+// /usr/include/qt/QtWidgets/qstyleoption.h:365
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionMenuItem(int)

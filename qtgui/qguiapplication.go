@@ -454,33 +454,6 @@ func QGuiApplication_PrimaryScreen() *QScreen /*777 QScreen **/ {
 
 // /usr/include/qt/QtGui/qguiapplication.h:113
 // index:0
-// Public static Visibility=Default Availability=Available
-// [8] QScreen * screenAt(const QPoint &)
-
-/*
-Returns the screen at point, or nullptr if outside of any screen.
-
-The point is in relation to the virtualGeometry() of each set of virtual siblings. If the point maps to more than one set of virtual siblings the first match is returned.
-
-This function was introduced in  Qt 5.10.
-*/
-func (this *QGuiApplication) ScreenAt(point qtcore.QPoint_ITF) *QScreen /*777 QScreen **/ {
-	var convArg0 unsafe.Pointer
-	if point != nil && point.QPoint_PTR() != nil {
-		convArg0 = point.QPoint_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN15QGuiApplication8screenAtERK6QPoint", qtrt.FFI_TYPE_POINTER, convArg0)
-	qtrt.ErrPrint(err, rv)
-	return /*==*/ NewQScreenFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-}
-func QGuiApplication_ScreenAt(point qtcore.QPoint_ITF) *QScreen /*777 QScreen **/ {
-	var nilthis *QGuiApplication
-	rv := nilthis.ScreenAt(point)
-	return rv
-}
-
-// /usr/include/qt/QtGui/qguiapplication.h:115
-// index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal devicePixelRatio() const
 
@@ -497,7 +470,7 @@ func (this *QGuiApplication) DevicePixelRatio() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:118
+// /usr/include/qt/QtGui/qguiapplication.h:116
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QCursor * overrideCursor()
@@ -520,7 +493,7 @@ func QGuiApplication_OverrideCursor() *QCursor /*777 QCursor **/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:119
+// /usr/include/qt/QtGui/qguiapplication.h:117
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setOverrideCursor(const QCursor &)
@@ -560,7 +533,7 @@ func QGuiApplication_SetOverrideCursor(arg0 QCursor_ITF) {
 	nilthis.SetOverrideCursor(arg0)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:120
+// /usr/include/qt/QtGui/qguiapplication.h:118
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void changeOverrideCursor(const QCursor &)
@@ -585,7 +558,7 @@ func QGuiApplication_ChangeOverrideCursor(arg0 QCursor_ITF) {
 	nilthis.ChangeOverrideCursor(arg0)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:121
+// /usr/include/qt/QtGui/qguiapplication.h:119
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void restoreOverrideCursor()
@@ -606,7 +579,7 @@ func QGuiApplication_RestoreOverrideCursor() {
 	nilthis.RestoreOverrideCursor()
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:124
+// /usr/include/qt/QtGui/qguiapplication.h:122
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QFont font()
@@ -629,7 +602,7 @@ func QGuiApplication_Font() *QFont /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:125
+// /usr/include/qt/QtGui/qguiapplication.h:123
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
@@ -652,7 +625,7 @@ func QGuiApplication_SetFont(arg0 QFont_ITF) {
 	nilthis.SetFont(arg0)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:128
+// /usr/include/qt/QtGui/qguiapplication.h:126
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QClipboard * clipboard()
@@ -671,7 +644,7 @@ func QGuiApplication_Clipboard() *QClipboard /*777 QClipboard **/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:131
+// /usr/include/qt/QtGui/qguiapplication.h:129
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QPalette palette()
@@ -694,7 +667,7 @@ func QGuiApplication_Palette() *QPalette /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:132
+// /usr/include/qt/QtGui/qguiapplication.h:130
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setPalette(const QPalette &)
@@ -717,7 +690,7 @@ func QGuiApplication_SetPalette(pal QPalette_ITF) {
 	nilthis.SetPalette(pal)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:134
+// /usr/include/qt/QtGui/qguiapplication.h:132
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] Qt::KeyboardModifiers keyboardModifiers()
@@ -740,7 +713,7 @@ func QGuiApplication_KeyboardModifiers() int {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:135
+// /usr/include/qt/QtGui/qguiapplication.h:133
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] Qt::KeyboardModifiers queryKeyboardModifiers()
@@ -763,7 +736,7 @@ func QGuiApplication_QueryKeyboardModifiers() int {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:136
+// /usr/include/qt/QtGui/qguiapplication.h:134
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] Qt::MouseButtons mouseButtons()
@@ -786,7 +759,7 @@ func QGuiApplication_MouseButtons() int {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:138
+// /usr/include/qt/QtGui/qguiapplication.h:136
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setLayoutDirection(Qt::LayoutDirection)
@@ -803,7 +776,7 @@ func QGuiApplication_SetLayoutDirection(direction int) {
 	nilthis.SetLayoutDirection(direction)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:139
+// /usr/include/qt/QtGui/qguiapplication.h:137
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] Qt::LayoutDirection layoutDirection()
@@ -822,7 +795,7 @@ func QGuiApplication_LayoutDirection() int {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:141
+// /usr/include/qt/QtGui/qguiapplication.h:139
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [1] bool isRightToLeft()
@@ -843,7 +816,7 @@ func QGuiApplication_IsRightToLeft() bool {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:142
+// /usr/include/qt/QtGui/qguiapplication.h:140
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [1] bool isLeftToRight()
@@ -864,7 +837,7 @@ func QGuiApplication_IsLeftToRight() bool {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:144
+// /usr/include/qt/QtGui/qguiapplication.h:142
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStyleHints * styleHints()
@@ -889,7 +862,7 @@ func QGuiApplication_StyleHints() *QStyleHints /*777 QStyleHints **/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:145
+// /usr/include/qt/QtGui/qguiapplication.h:143
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setDesktopSettingsAware(bool)
@@ -921,7 +894,7 @@ func QGuiApplication_SetDesktopSettingsAware(on bool) {
 	nilthis.SetDesktopSettingsAware(on)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:146
+// /usr/include/qt/QtGui/qguiapplication.h:144
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool desktopSettingsAware()
@@ -942,7 +915,7 @@ func QGuiApplication_DesktopSettingsAware() bool {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:148
+// /usr/include/qt/QtGui/qguiapplication.h:146
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QInputMethod * inputMethod()
@@ -965,7 +938,7 @@ func QGuiApplication_InputMethod() *QInputMethod /*777 QInputMethod **/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:152
+// /usr/include/qt/QtGui/qguiapplication.h:150
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QFunctionPointer platformFunction(const QByteArray &)
@@ -988,7 +961,7 @@ func QGuiApplication_PlatformFunction(function qtcore.QByteArray_ITF) unsafe.Poi
 	return rv
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:154
+// /usr/include/qt/QtGui/qguiapplication.h:152
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setQuitOnLastWindowClosed(bool)
@@ -1005,7 +978,7 @@ func QGuiApplication_SetQuitOnLastWindowClosed(quit bool) {
 	nilthis.SetQuitOnLastWindowClosed(quit)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:155
+// /usr/include/qt/QtGui/qguiapplication.h:153
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool quitOnLastWindowClosed()
@@ -1024,7 +997,7 @@ func QGuiApplication_QuitOnLastWindowClosed() bool {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:157
+// /usr/include/qt/QtGui/qguiapplication.h:155
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] Qt::ApplicationState applicationState()
@@ -1047,7 +1020,7 @@ func QGuiApplication_ApplicationState() int {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:159
+// /usr/include/qt/QtGui/qguiapplication.h:157
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int exec()
@@ -1076,7 +1049,7 @@ func QGuiApplication_Exec() int {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:160
+// /usr/include/qt/QtGui/qguiapplication.h:158
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool notify(QObject *, QEvent *)
@@ -1098,7 +1071,7 @@ func (this *QGuiApplication) Notify(arg0 qtcore.QObject_ITF /*777 QObject **/, a
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:164
+// /usr/include/qt/QtGui/qguiapplication.h:162
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSessionRestored() const
@@ -1114,7 +1087,7 @@ func (this *QGuiApplication) IsSessionRestored() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:165
+// /usr/include/qt/QtGui/qguiapplication.h:163
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString sessionId() const
@@ -1135,7 +1108,7 @@ func (this *QGuiApplication) SessionId() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:166
+// /usr/include/qt/QtGui/qguiapplication.h:164
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString sessionKey() const
@@ -1158,7 +1131,7 @@ func (this *QGuiApplication) SessionKey() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:167
+// /usr/include/qt/QtGui/qguiapplication.h:165
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSavingSession() const
@@ -1178,7 +1151,7 @@ func (this *QGuiApplication) IsSavingSession() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:169
+// /usr/include/qt/QtGui/qguiapplication.h:167
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool isFallbackSessionManagementEnabled()
@@ -1209,7 +1182,7 @@ func QGuiApplication_IsFallbackSessionManagementEnabled() bool {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:170
+// /usr/include/qt/QtGui/qguiapplication.h:168
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setFallbackSessionManagementEnabled(bool)
@@ -1230,7 +1203,7 @@ func QGuiApplication_SetFallbackSessionManagementEnabled(arg0 bool) {
 	nilthis.SetFallbackSessionManagementEnabled(arg0)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:173
+// /usr/include/qt/QtGui/qguiapplication.h:171
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void sync()
@@ -1253,7 +1226,7 @@ func QGuiApplication_Sync() {
 	nilthis.Sync()
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:175
+// /usr/include/qt/QtGui/qguiapplication.h:173
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void fontDatabaseChanged()
@@ -1268,7 +1241,7 @@ func (this *QGuiApplication) FontDatabaseChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:176
+// /usr/include/qt/QtGui/qguiapplication.h:174
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void screenAdded(QScreen *)
@@ -1287,7 +1260,7 @@ func (this *QGuiApplication) ScreenAdded(screen QScreen_ITF /*777 QScreen **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:177
+// /usr/include/qt/QtGui/qguiapplication.h:175
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void screenRemoved(QScreen *)
@@ -1308,7 +1281,7 @@ func (this *QGuiApplication) ScreenRemoved(screen QScreen_ITF /*777 QScreen **/)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:178
+// /usr/include/qt/QtGui/qguiapplication.h:176
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void primaryScreenChanged(QScreen *)
@@ -1325,7 +1298,7 @@ func (this *QGuiApplication) PrimaryScreenChanged(screen QScreen_ITF /*777 QScre
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:179
+// /usr/include/qt/QtGui/qguiapplication.h:177
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void lastWindowClosed()
@@ -1342,7 +1315,7 @@ func (this *QGuiApplication) LastWindowClosed() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:180
+// /usr/include/qt/QtGui/qguiapplication.h:178
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void focusObjectChanged(QObject *)
@@ -1361,7 +1334,7 @@ func (this *QGuiApplication) FocusObjectChanged(focusObject qtcore.QObject_ITF /
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:181
+// /usr/include/qt/QtGui/qguiapplication.h:179
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void focusWindowChanged(QWindow *)
@@ -1380,7 +1353,7 @@ func (this *QGuiApplication) FocusWindowChanged(focusWindow QWindow_ITF /*777 QW
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:182
+// /usr/include/qt/QtGui/qguiapplication.h:180
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void applicationStateChanged(Qt::ApplicationState)
@@ -1397,7 +1370,7 @@ func (this *QGuiApplication) ApplicationStateChanged(state int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:183
+// /usr/include/qt/QtGui/qguiapplication.h:181
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void layoutDirectionChanged(Qt::LayoutDirection)
@@ -1410,7 +1383,7 @@ func (this *QGuiApplication) LayoutDirectionChanged(direction int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:185
+// /usr/include/qt/QtGui/qguiapplication.h:183
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void commitDataRequest(QSessionManager &)
@@ -1439,7 +1412,7 @@ func (this *QGuiApplication) CommitDataRequest(sessionManager QSessionManager_IT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:186
+// /usr/include/qt/QtGui/qguiapplication.h:184
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void saveStateRequest(QSessionManager &)
@@ -1468,7 +1441,7 @@ func (this *QGuiApplication) SaveStateRequest(sessionManager QSessionManager_ITF
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:188
+// /usr/include/qt/QtGui/qguiapplication.h:186
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void paletteChanged(const QPalette &)
@@ -1489,7 +1462,7 @@ func (this *QGuiApplication) PaletteChanged(pal QPalette_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:189
+// /usr/include/qt/QtGui/qguiapplication.h:187
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void applicationDisplayNameChanged()
@@ -1502,7 +1475,7 @@ func (this *QGuiApplication) ApplicationDisplayNameChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qguiapplication.h:192
+// /usr/include/qt/QtGui/qguiapplication.h:190
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)

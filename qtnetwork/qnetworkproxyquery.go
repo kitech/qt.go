@@ -272,9 +272,9 @@ func NewQNetworkProxyQuery3p1(bindPort uint16, protocolTag string) *QNetworkProx
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:80
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:79
 // index:4
-// Public Visibility=Default Availability=Deprecated
+// Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QUrl &, QNetworkProxyQuery::QueryType)
 
 /*
@@ -299,9 +299,9 @@ func NewQNetworkProxyQuery4(networkConfiguration QNetworkConfiguration_ITF, requ
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:80
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:79
 // index:4
-// Public Visibility=Default Availability=Deprecated
+// Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QUrl &, QNetworkProxyQuery::QueryType)
 
 /*
@@ -328,9 +328,9 @@ func NewQNetworkProxyQuery4p(networkConfiguration QNetworkConfiguration_ITF, req
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:83
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:81
 // index:5
-// Public Visibility=Default Availability=Deprecated
+// Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QString &, int, const QString &, QNetworkProxyQuery::QueryType)
 
 /*
@@ -355,9 +355,9 @@ func NewQNetworkProxyQuery5(networkConfiguration QNetworkConfiguration_ITF, host
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:83
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:81
 // index:5
-// Public Visibility=Default Availability=Deprecated
+// Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QString &, int, const QString &, QNetworkProxyQuery::QueryType)
 
 /*
@@ -384,9 +384,9 @@ func NewQNetworkProxyQuery5p(networkConfiguration QNetworkConfiguration_ITF, hos
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:83
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:81
 // index:5
-// Public Visibility=Default Availability=Deprecated
+// Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, const QString &, int, const QString &, QNetworkProxyQuery::QueryType)
 
 /*
@@ -413,9 +413,9 @@ func NewQNetworkProxyQuery5p1(networkConfiguration QNetworkConfiguration_ITF, ho
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:87
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:84
 // index:6
-// Public Visibility=Default Availability=Deprecated
+// Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, quint16, const QString &, QNetworkProxyQuery::QueryType)
 
 /*
@@ -438,9 +438,9 @@ func NewQNetworkProxyQuery6(networkConfiguration QNetworkConfiguration_ITF, bind
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:87
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:84
 // index:6
-// Public Visibility=Default Availability=Deprecated
+// Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, quint16, const QString &, QNetworkProxyQuery::QueryType)
 
 /*
@@ -465,9 +465,9 @@ func NewQNetworkProxyQuery6p(networkConfiguration QNetworkConfiguration_ITF, bin
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:87
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:84
 // index:6
-// Public Visibility=Default Availability=Deprecated
+// Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyQuery(const QNetworkConfiguration &, quint16, const QString &, QNetworkProxyQuery::QueryType)
 
 /*
@@ -492,7 +492,7 @@ func NewQNetworkProxyQuery6p1(networkConfiguration QNetworkConfiguration_ITF, bi
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:93
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:90
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QNetworkProxyQuery & operator=(QNetworkProxyQuery &&)
@@ -508,7 +508,7 @@ func (this *QNetworkProxyQuery) Operator_equal(other unsafe.Pointer /*333*/) *QN
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:95
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:92
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QNetworkProxyQuery & operator=(const QNetworkProxyQuery &)
@@ -528,7 +528,7 @@ func (this *QNetworkProxyQuery) Operator_equal1(other QNetworkProxyQuery_ITF) *Q
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:96
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QNetworkProxyQuery()
@@ -543,7 +543,7 @@ func DeleteQNetworkProxyQuery(this *QNetworkProxyQuery) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:98
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:95
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QNetworkProxyQuery &)
@@ -562,7 +562,7 @@ func (this *QNetworkProxyQuery) Swap(other QNetworkProxyQuery_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:100
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QNetworkProxyQuery &) const
@@ -580,7 +580,7 @@ func (this *QNetworkProxyQuery) Operator_equal_equal(other QNetworkProxyQuery_IT
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:101
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:98
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QNetworkProxyQuery &) const
@@ -598,7 +598,7 @@ func (this *QNetworkProxyQuery) Operator_not_equal(other QNetworkProxyQuery_ITF)
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:104
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QNetworkProxyQuery::QueryType queryType() const
@@ -612,7 +612,7 @@ func (this *QNetworkProxyQuery) QueryType() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:105
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setQueryType(QNetworkProxyQuery::QueryType)
@@ -625,7 +625,7 @@ func (this *QNetworkProxyQuery) SetQueryType(type_ int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:107
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int peerPort() const
@@ -639,7 +639,7 @@ func (this *QNetworkProxyQuery) PeerPort() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:108
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPeerPort(int)
@@ -652,7 +652,7 @@ func (this *QNetworkProxyQuery) SetPeerPort(port int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:110
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString peerHostName() const
@@ -669,7 +669,7 @@ func (this *QNetworkProxyQuery) PeerHostName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:111
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPeerHostName(const QString &)
@@ -684,7 +684,7 @@ func (this *QNetworkProxyQuery) SetPeerHostName(hostname string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:113
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int localPort() const
@@ -698,7 +698,7 @@ func (this *QNetworkProxyQuery) LocalPort() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:114
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLocalPort(int)
@@ -711,7 +711,7 @@ func (this *QNetworkProxyQuery) SetLocalPort(port int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:116
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString protocolTag() const
@@ -728,7 +728,7 @@ func (this *QNetworkProxyQuery) ProtocolTag() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:117
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProtocolTag(const QString &)
@@ -743,7 +743,7 @@ func (this *QNetworkProxyQuery) SetProtocolTag(protocolTag string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:119
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUrl url() const
@@ -759,7 +759,7 @@ func (this *QNetworkProxyQuery) Url() *qtcore.QUrl /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:120
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setUrl(const QUrl &)
@@ -776,9 +776,9 @@ func (this *QNetworkProxyQuery) SetUrl(url qtcore.QUrl_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:124
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:120
 // index:0
-// Public Visibility=Default Availability=Deprecated
+// Public Visibility=Default Availability=Available
 // [8] QNetworkConfiguration networkConfiguration() const
 
 /*
@@ -792,9 +792,9 @@ func (this *QNetworkProxyQuery) NetworkConfiguration() *QNetworkConfiguration /*
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:126
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:121
 // index:0
-// Public Visibility=Default Availability=Deprecated
+// Public Visibility=Default Availability=Available
 // [-2] void setNetworkConfiguration(const QNetworkConfiguration &)
 
 /*

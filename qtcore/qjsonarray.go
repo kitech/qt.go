@@ -118,23 +118,7 @@ func (this *QJsonArray) Operator_equal(other QJsonArray_ITF) *QJsonArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:83
-// index:1
-// Public inline Visibility=Default Availability=Available
-// [16] QJsonArray & operator=(QJsonArray &&)
-
-/*
-
- */
-func (this *QJsonArray) Operator_equal1(other unsafe.Pointer /*333*/) *QJsonArray {
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonArrayaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQJsonArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQJsonArray)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qjsonarray.h:89
+// /usr/include/qt/QtCore/qjsonarray.h:75
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QJsonArray fromStringList(const QStringList &)
@@ -163,7 +147,7 @@ func QJsonArray_FromStringList(list QStringList_ITF) *QJsonArray /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:91
+// /usr/include/qt/QtCore/qjsonarray.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QVariantList toVariantList() const
@@ -180,7 +164,7 @@ func (this *QJsonArray) ToVariantList() *QVariantList /*667*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:93
+// /usr/include/qt/QtCore/qjsonarray.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int size() const
@@ -194,7 +178,7 @@ func (this *QJsonArray) Size() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:94
+// /usr/include/qt/QtCore/qjsonarray.h:80
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int count() const
@@ -210,7 +194,7 @@ func (this *QJsonArray) Count() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:96
+// /usr/include/qt/QtCore/qjsonarray.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEmpty() const
@@ -226,7 +210,7 @@ func (this *QJsonArray) IsEmpty() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:97
+// /usr/include/qt/QtCore/qjsonarray.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QJsonValue at(int) const
@@ -244,7 +228,7 @@ func (this *QJsonArray) At(i int) *QJsonValue /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:98
+// /usr/include/qt/QtCore/qjsonarray.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QJsonValue first() const
@@ -264,7 +248,7 @@ func (this *QJsonArray) First() *QJsonValue /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:99
+// /usr/include/qt/QtCore/qjsonarray.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QJsonValue last() const
@@ -284,7 +268,7 @@ func (this *QJsonArray) Last() *QJsonValue /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:103
+// /usr/include/qt/QtCore/qjsonarray.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeAt(int)
@@ -299,7 +283,7 @@ func (this *QJsonArray) RemoveAt(i int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:104
+// /usr/include/qt/QtCore/qjsonarray.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QJsonValue takeAt(int)
@@ -319,7 +303,7 @@ func (this *QJsonArray) TakeAt(i int) *QJsonValue /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:105
+// /usr/include/qt/QtCore/qjsonarray.h:91
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void removeFirst()
@@ -334,7 +318,7 @@ func (this *QJsonArray) RemoveFirst() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:106
+// /usr/include/qt/QtCore/qjsonarray.h:92
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void removeLast()
@@ -349,7 +333,7 @@ func (this *QJsonArray) RemoveLast() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:109
+// /usr/include/qt/QtCore/qjsonarray.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void replace(int, const QJsonValue &)
@@ -368,7 +352,7 @@ func (this *QJsonArray) Replace(i int, value QJsonValue_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:111
+// /usr/include/qt/QtCore/qjsonarray.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool contains(const QJsonValue &) const
@@ -388,7 +372,7 @@ func (this *QJsonArray) Contains(element QJsonValue_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:112
+// /usr/include/qt/QtCore/qjsonarray.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QJsonValueRef operator[](int)
@@ -404,7 +388,7 @@ func (this *QJsonArray) Operator_get_index(i int) *QJsonValueRef /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:113
+// /usr/include/qt/QtCore/qjsonarray.h:99
 // index:1
 // Public Visibility=Default Availability=Available
 // [24] QJsonValue operator[](int) const
@@ -420,7 +404,7 @@ func (this *QJsonArray) Operator_get_index1(i int) *QJsonValue /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:115
+// /usr/include/qt/QtCore/qjsonarray.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QJsonArray &) const
@@ -438,7 +422,7 @@ func (this *QJsonArray) Operator_equal_equal(other QJsonArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:116
+// /usr/include/qt/QtCore/qjsonarray.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator!=(const QJsonArray &) const
@@ -456,26 +440,7 @@ func (this *QJsonArray) Operator_not_equal(other QJsonArray_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:118
-// index:0
-// Public inline Visibility=Default Availability=Available
-// [-2] void swap(QJsonArray &)
-
-/*
-Swaps the array other with this. This operation is very fast and never fails.
-
-This function was introduced in  Qt 5.10.
-*/
-func (this *QJsonArray) Swap(other QJsonArray_ITF) {
-	var convArg0 unsafe.Pointer
-	if other != nil && other.QJsonArray_PTR() != nil {
-		convArg0 = other.QJsonArray_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QJsonArray4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtCore/qjsonarray.h:214
+// /usr/include/qt/QtCore/qjsonarray.h:194
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QJsonArray::iterator begin()
@@ -491,7 +456,7 @@ func (this *QJsonArray) Begin() unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:215
+// /usr/include/qt/QtCore/qjsonarray.h:195
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] QJsonArray::const_iterator begin() const
@@ -507,7 +472,7 @@ func (this *QJsonArray) Begin1() unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:216
+// /usr/include/qt/QtCore/qjsonarray.h:196
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QJsonArray::const_iterator constBegin() const
@@ -523,7 +488,7 @@ func (this *QJsonArray) ConstBegin() unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:217
+// /usr/include/qt/QtCore/qjsonarray.h:197
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QJsonArray::iterator end()
@@ -539,7 +504,7 @@ func (this *QJsonArray) End() unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:218
+// /usr/include/qt/QtCore/qjsonarray.h:198
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] QJsonArray::const_iterator end() const
@@ -555,7 +520,7 @@ func (this *QJsonArray) End1() unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:219
+// /usr/include/qt/QtCore/qjsonarray.h:199
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QJsonArray::const_iterator constEnd() const
@@ -571,7 +536,7 @@ func (this *QJsonArray) ConstEnd() unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:228
+// /usr/include/qt/QtCore/qjsonarray.h:208
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QJsonArray operator+(const QJsonValue &) const
@@ -591,7 +556,7 @@ func (this *QJsonArray) Operator_add(v QJsonValue_ITF) *QJsonArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:230
+// /usr/include/qt/QtCore/qjsonarray.h:210
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QJsonArray & operator+=(const QJsonValue &)
@@ -611,7 +576,7 @@ func (this *QJsonArray) Operator_add_equal(v QJsonValue_ITF) *QJsonArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:232
+// /usr/include/qt/QtCore/qjsonarray.h:212
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QJsonArray & operator<<(const QJsonValue &)
@@ -631,7 +596,7 @@ func (this *QJsonArray) Operator_left_shift(v QJsonValue_ITF) *QJsonArray {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:236
+// /usr/include/qt/QtCore/qjsonarray.h:216
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_back(const QJsonValue &)
@@ -648,7 +613,7 @@ func (this *QJsonArray) Push_back(t QJsonValue_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:237
+// /usr/include/qt/QtCore/qjsonarray.h:217
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void push_front(const QJsonValue &)
@@ -665,7 +630,7 @@ func (this *QJsonArray) Push_front(t QJsonValue_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:238
+// /usr/include/qt/QtCore/qjsonarray.h:218
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void pop_front()
@@ -678,7 +643,7 @@ func (this *QJsonArray) Pop_front() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:239
+// /usr/include/qt/QtCore/qjsonarray.h:219
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void pop_back()
@@ -691,7 +656,7 @@ func (this *QJsonArray) Pop_back() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qjsonarray.h:240
+// /usr/include/qt/QtCore/qjsonarray.h:220
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool empty() const

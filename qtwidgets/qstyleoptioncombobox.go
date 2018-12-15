@@ -64,7 +64,7 @@ func (*QStyleOptionComboBox) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionC
 	return NewQStyleOptionComboBoxFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:601
+// /usr/include/qt/QtWidgets/qstyleoption.h:590
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionComboBox()
@@ -83,7 +83,7 @@ func NewQStyleOptionComboBox() *QStyleOptionComboBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:605
+// /usr/include/qt/QtWidgets/qstyleoption.h:594
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionComboBox(int)

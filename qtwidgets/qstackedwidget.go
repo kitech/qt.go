@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h
@@ -71,7 +69,7 @@ func (*QStackedWidget) NewFromPointer(cthis unsafe.Pointer) *QStackedWidget {
 	return NewQStackedWidgetFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstackedwidget.h:54
+// /usr/include/qt/QtWidgets/qstackedwidget.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -85,7 +83,7 @@ func (this *QStackedWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qstackedwidget.h:59
+// /usr/include/qt/QtWidgets/qstackedwidget.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStackedWidget(QWidget *)
@@ -110,7 +108,7 @@ func NewQStackedWidget(parent QWidget_ITF /*777 QWidget **/) *QStackedWidget {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstackedwidget.h:59
+// /usr/include/qt/QtWidgets/qstackedwidget.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStackedWidget(QWidget *)
@@ -133,7 +131,7 @@ func NewQStackedWidgetp() *QStackedWidget {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstackedwidget.h:60
+// /usr/include/qt/QtWidgets/qstackedwidget.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStackedWidget()
@@ -148,7 +146,7 @@ func DeleteQStackedWidget(this *QStackedWidget) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qstackedwidget.h:62
+// /usr/include/qt/QtWidgets/qstackedwidget.h:63
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int addWidget(QWidget *)
@@ -170,7 +168,7 @@ func (this *QStackedWidget) AddWidget(w QWidget_ITF /*777 QWidget **/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstackedwidget.h:63
+// /usr/include/qt/QtWidgets/qstackedwidget.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int insertWidget(int, QWidget *)
@@ -194,7 +192,7 @@ func (this *QStackedWidget) InsertWidget(index int, w QWidget_ITF /*777 QWidget 
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstackedwidget.h:64
+// /usr/include/qt/QtWidgets/qstackedwidget.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeWidget(QWidget *)
@@ -215,7 +213,7 @@ func (this *QStackedWidget) RemoveWidget(w QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstackedwidget.h:66
+// /usr/include/qt/QtWidgets/qstackedwidget.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * currentWidget() const
@@ -231,7 +229,7 @@ func (this *QStackedWidget) CurrentWidget() *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qstackedwidget.h:67
+// /usr/include/qt/QtWidgets/qstackedwidget.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentIndex() const
@@ -245,7 +243,7 @@ func (this *QStackedWidget) CurrentIndex() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstackedwidget.h:69
+// /usr/include/qt/QtWidgets/qstackedwidget.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int indexOf(QWidget *) const
@@ -265,7 +263,7 @@ func (this *QStackedWidget) IndexOf(arg0 QWidget_ITF /*777 QWidget **/) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstackedwidget.h:70
+// /usr/include/qt/QtWidgets/qstackedwidget.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * widget(int) const
@@ -281,7 +279,7 @@ func (this *QStackedWidget) Widget(arg0 int) *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qstackedwidget.h:71
+// /usr/include/qt/QtWidgets/qstackedwidget.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int count() const
@@ -295,7 +293,7 @@ func (this *QStackedWidget) Count() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstackedwidget.h:74
+// /usr/include/qt/QtWidgets/qstackedwidget.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentIndex(int)
@@ -308,7 +306,7 @@ func (this *QStackedWidget) SetCurrentIndex(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstackedwidget.h:75
+// /usr/include/qt/QtWidgets/qstackedwidget.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentWidget(QWidget *)
@@ -327,7 +325,7 @@ func (this *QStackedWidget) SetCurrentWidget(w QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstackedwidget.h:78
+// /usr/include/qt/QtWidgets/qstackedwidget.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentChanged(int)
@@ -346,7 +344,7 @@ func (this *QStackedWidget) CurrentChanged(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstackedwidget.h:79
+// /usr/include/qt/QtWidgets/qstackedwidget.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void widgetRemoved(int)
@@ -361,7 +359,7 @@ func (this *QStackedWidget) WidgetRemoved(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstackedwidget.h:82
+// /usr/include/qt/QtWidgets/qstackedwidget.h:83
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)

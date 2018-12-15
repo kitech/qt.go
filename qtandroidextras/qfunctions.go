@@ -66,23 +66,7 @@ func Operator_equal_equal(obj1 QAndroidJniObject_ITF, obj2 QAndroidJniObject_ITF
 	return rv != 0
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:107
-// index:0
-// Invalid Visibility=Default Availability=Available
-// [1] bool shouldShowRequestPermissionRationale(const QString &)
-
-/*
-
- */
-func ShouldShowRequestPermissionRationale(permission string) bool {
-	var tmpArg0 = qtcore.NewQString5(permission)
-	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QtAndroid36shouldShowRequestPermissionRationaleERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:93
+// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:71
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void runOnAndroidThreadSync(const QtAndroid::Runnable &, int)
@@ -95,7 +79,7 @@ func RunOnAndroidThreadSync(runnable unsafe.Pointer /*555*/, timeoutMs int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:92
+// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:70
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void runOnAndroidThread(const QtAndroid::Runnable &)
@@ -108,24 +92,7 @@ func RunOnAndroidThread(runnable unsafe.Pointer /*555*/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:104
-// index:0
-// Invalid Visibility=Default Availability=Available
-// [-2] void requestPermissions(const QStringList &, const QtAndroid::PermissionResultCallback &)
-
-/*
-
- */
-func RequestPermissions(permissions qtcore.QStringList_ITF, callbackFunc unsafe.Pointer /*555*/) {
-	var convArg0 unsafe.Pointer
-	if permissions != nil && permissions.QStringList_PTR() != nil {
-		convArg0 = permissions.QStringList_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QtAndroid18requestPermissionsERK11QStringListRKSt8functionIFvRK5QHashI7QStringNS_16PermissionResultEEEE", qtrt.FFI_TYPE_POINTER, convArg0, callbackFunc)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:65
+// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:62
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void startIntentSender(const QAndroidJniObject &, int, QAndroidActivityResultReceiver *)
@@ -146,7 +113,7 @@ func StartIntentSender(intentSender QAndroidJniObject_ITF, receiverRequestCode i
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:63
+// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:60
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [4] int androidSdkVersion()
@@ -160,7 +127,7 @@ func AndroidSdkVersion() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:95
+// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:73
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void hideSplashScreen()
@@ -173,36 +140,7 @@ func HideSplashScreen() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:96
-// index:1
-// Invalid Visibility=Default Availability=Available
-// [-2] void hideSplashScreen(int)
-
-/*
-
- */
-func HideSplashScreen1(duration int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QtAndroid16hideSplashScreenEi", qtrt.FFI_TYPE_POINTER, duration)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:106
-// index:0
-// Invalid Visibility=Default Availability=Available
-// [4] QtAndroid::PermissionResult checkPermission(const QString &)
-
-/*
-
- */
-func CheckPermission(permission string) int {
-	var tmpArg0 = qtcore.NewQString5(permission)
-	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QtAndroid15checkPermissionERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
-	qtrt.ErrPrint(err, rv)
-	return int(rv)
-}
-
-// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:60
+// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:57
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QAndroidJniObject androidActivity()
@@ -218,7 +156,7 @@ func AndroidActivity() *QAndroidJniObject /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:61
+// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:58
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QAndroidJniObject androidService()
@@ -234,7 +172,7 @@ func AndroidService() *QAndroidJniObject /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:62
+// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:59
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [16] QAndroidJniObject androidContext()
@@ -250,7 +188,7 @@ func AndroidContext() *QAndroidJniObject /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:68
+// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:65
 // index:0
 // Invalid Visibility=Default Availability=Available
 // [-2] void startActivity(const QAndroidJniObject &, int, QAndroidActivityResultReceiver *)
@@ -269,28 +207,6 @@ func StartActivity(intent QAndroidJniObject_ITF, receiverRequestCode int, result
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QtAndroid13startActivityERK17QAndroidJniObjectiP30QAndroidActivityResultReceiver", qtrt.FFI_TYPE_POINTER, convArg0, receiverRequestCode, convArg2)
 	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtAndroidExtras/qandroidfunctions.h:87
-// index:0
-// Invalid Visibility=Default Availability=Available
-// [1] bool bindService(const QAndroidIntent &, const QAndroidServiceConnection &, QtAndroid::BindFlags)
-
-/*
-
- */
-func BindService(serviceIntent QAndroidIntent_ITF, serviceConnection QAndroidServiceConnection_ITF, flags int) bool {
-	var convArg0 unsafe.Pointer
-	if serviceIntent != nil && serviceIntent.QAndroidIntent_PTR() != nil {
-		convArg0 = serviceIntent.QAndroidIntent_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if serviceConnection != nil && serviceConnection.QAndroidServiceConnection_PTR() != nil {
-		convArg1 = serviceConnection.QAndroidServiceConnection_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QtAndroid11bindServiceERK14QAndroidIntentRK25QAndroidServiceConnection6QFlagsINS_8BindFlagEE", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, flags)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
 }
 
 //  body block end

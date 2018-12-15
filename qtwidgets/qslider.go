@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qslider.h
@@ -91,7 +89,7 @@ func (*QSlider) NewFromPointer(cthis unsafe.Pointer) *QSlider {
 	return NewQSliderFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qslider.h:55
+// /usr/include/qt/QtWidgets/qslider.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -105,7 +103,7 @@ func (this *QSlider) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qslider.h:71
+// /usr/include/qt/QtWidgets/qslider.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSlider(QWidget *)
@@ -128,7 +126,7 @@ func NewQSlider(parent QWidget_ITF /*777 QWidget **/) *QSlider {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qslider.h:71
+// /usr/include/qt/QtWidgets/qslider.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSlider(QWidget *)
@@ -149,7 +147,7 @@ func NewQSliderp() *QSlider {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qslider.h:72
+// /usr/include/qt/QtWidgets/qslider.h:73
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSlider(Qt::Orientation, QWidget *)
@@ -172,7 +170,7 @@ func NewQSlider1(orientation int, parent QWidget_ITF /*777 QWidget **/) *QSlider
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qslider.h:72
+// /usr/include/qt/QtWidgets/qslider.h:73
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSlider(Qt::Orientation, QWidget *)
@@ -193,7 +191,7 @@ func NewQSlider1p(orientation int) *QSlider {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qslider.h:74
+// /usr/include/qt/QtWidgets/qslider.h:75
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSlider()
@@ -208,7 +206,7 @@ func DeleteQSlider(this *QSlider) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qslider.h:76
+// /usr/include/qt/QtWidgets/qslider.h:77
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
@@ -224,7 +222,7 @@ func (this *QSlider) SizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qslider.h:77
+// /usr/include/qt/QtWidgets/qslider.h:78
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
@@ -240,7 +238,7 @@ func (this *QSlider) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qslider.h:79
+// /usr/include/qt/QtWidgets/qslider.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTickPosition(QSlider::TickPosition)
@@ -253,7 +251,7 @@ func (this *QSlider) SetTickPosition(position int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qslider.h:80
+// /usr/include/qt/QtWidgets/qslider.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSlider::TickPosition tickPosition() const
@@ -267,7 +265,7 @@ func (this *QSlider) TickPosition() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qslider.h:82
+// /usr/include/qt/QtWidgets/qslider.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTickInterval(int)
@@ -280,7 +278,7 @@ func (this *QSlider) SetTickInterval(ti int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qslider.h:83
+// /usr/include/qt/QtWidgets/qslider.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int tickInterval() const
@@ -294,7 +292,7 @@ func (this *QSlider) TickInterval() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qslider.h:85
+// /usr/include/qt/QtWidgets/qslider.h:86
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -312,7 +310,7 @@ func (this *QSlider) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qslider.h:88
+// /usr/include/qt/QtWidgets/qslider.h:89
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
@@ -329,7 +327,7 @@ func (this *QSlider) PaintEvent(ev qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qslider.h:89
+// /usr/include/qt/QtWidgets/qslider.h:90
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
@@ -346,7 +344,7 @@ func (this *QSlider) MousePressEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEvent 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qslider.h:90
+// /usr/include/qt/QtWidgets/qslider.h:91
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
@@ -363,7 +361,7 @@ func (this *QSlider) MouseReleaseEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qslider.h:91
+// /usr/include/qt/QtWidgets/qslider.h:92
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
@@ -380,7 +378,7 @@ func (this *QSlider) MouseMoveEvent(ev qtgui.QMouseEvent_ITF /*777 QMouseEvent *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qslider.h:92
+// /usr/include/qt/QtWidgets/qslider.h:93
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionSlider *) const

@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qcalendarwidget.h
@@ -106,7 +104,7 @@ func (*QCalendarWidget) NewFromPointer(cthis unsafe.Pointer) *QCalendarWidget {
 	return NewQCalendarWidgetFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:57
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -120,7 +118,7 @@ func (this *QCalendarWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:92
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QCalendarWidget(QWidget *)
@@ -147,7 +145,7 @@ func NewQCalendarWidget(parent QWidget_ITF /*777 QWidget **/) *QCalendarWidget {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:92
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QCalendarWidget(QWidget *)
@@ -172,7 +170,7 @@ func NewQCalendarWidgetp() *QCalendarWidget {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:93
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:94
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QCalendarWidget()
@@ -187,7 +185,7 @@ func DeleteQCalendarWidget(this *QCalendarWidget) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:95
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:96
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
@@ -203,7 +201,7 @@ func (this *QCalendarWidget) SizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:96
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:97
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
@@ -219,7 +217,7 @@ func (this *QCalendarWidget) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:98
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDate selectedDate() const
@@ -235,7 +233,7 @@ func (this *QCalendarWidget) SelectedDate() *qtcore.QDate /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:100
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int yearShown() const
@@ -251,7 +249,7 @@ func (this *QCalendarWidget) YearShown() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:101
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int monthShown() const
@@ -267,7 +265,7 @@ func (this *QCalendarWidget) MonthShown() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:103
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDate minimumDate() const
@@ -283,7 +281,7 @@ func (this *QCalendarWidget) MinimumDate() *qtcore.QDate /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:104
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumDate(const QDate &)
@@ -300,7 +298,7 @@ func (this *QCalendarWidget) SetMinimumDate(date qtcore.QDate_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:106
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDate maximumDate() const
@@ -316,7 +314,7 @@ func (this *QCalendarWidget) MaximumDate() *qtcore.QDate /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:107
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximumDate(const QDate &)
@@ -333,7 +331,7 @@ func (this *QCalendarWidget) SetMaximumDate(date qtcore.QDate_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:109
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::DayOfWeek firstDayOfWeek() const
@@ -347,7 +345,7 @@ func (this *QCalendarWidget) FirstDayOfWeek() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:110
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFirstDayOfWeek(Qt::DayOfWeek)
@@ -360,7 +358,7 @@ func (this *QCalendarWidget) SetFirstDayOfWeek(dayOfWeek int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:112
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isNavigationBarVisible() const
@@ -374,7 +372,7 @@ func (this *QCalendarWidget) IsNavigationBarVisible() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:113
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isGridVisible() const
@@ -388,7 +386,7 @@ func (this *QCalendarWidget) IsGridVisible() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:115
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QCalendarWidget::SelectionMode selectionMode() const
@@ -402,7 +400,7 @@ func (this *QCalendarWidget) SelectionMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:116
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSelectionMode(QCalendarWidget::SelectionMode)
@@ -415,7 +413,7 @@ func (this *QCalendarWidget) SetSelectionMode(mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:118
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QCalendarWidget::HorizontalHeaderFormat horizontalHeaderFormat() const
@@ -429,7 +427,7 @@ func (this *QCalendarWidget) HorizontalHeaderFormat() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:119
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHorizontalHeaderFormat(QCalendarWidget::HorizontalHeaderFormat)
@@ -442,7 +440,7 @@ func (this *QCalendarWidget) SetHorizontalHeaderFormat(format int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:121
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QCalendarWidget::VerticalHeaderFormat verticalHeaderFormat() const
@@ -456,7 +454,7 @@ func (this *QCalendarWidget) VerticalHeaderFormat() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:122
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVerticalHeaderFormat(QCalendarWidget::VerticalHeaderFormat)
@@ -469,7 +467,7 @@ func (this *QCalendarWidget) SetVerticalHeaderFormat(format int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:124
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextCharFormat headerTextFormat() const
@@ -487,7 +485,7 @@ func (this *QCalendarWidget) HeaderTextFormat() *qtgui.QTextCharFormat /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:125
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHeaderTextFormat(const QTextCharFormat &)
@@ -506,7 +504,7 @@ func (this *QCalendarWidget) SetHeaderTextFormat(format qtgui.QTextCharFormat_IT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:127
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:128
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextCharFormat weekdayTextFormat(Qt::DayOfWeek) const
@@ -524,7 +522,7 @@ func (this *QCalendarWidget) WeekdayTextFormat(dayOfWeek int) *qtgui.QTextCharFo
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:128
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWeekdayTextFormat(Qt::DayOfWeek, const QTextCharFormat &)
@@ -543,7 +541,7 @@ func (this *QCalendarWidget) SetWeekdayTextFormat(dayOfWeek int, format qtgui.QT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:131
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextCharFormat dateTextFormat(const QDate &) const
@@ -565,7 +563,7 @@ func (this *QCalendarWidget) DateTextFormat(date qtcore.QDate_ITF) *qtgui.QTextC
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:132
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDateTextFormat(const QDate &, const QTextCharFormat &)
@@ -590,7 +588,7 @@ func (this *QCalendarWidget) SetDateTextFormat(date qtcore.QDate_ITF, format qtg
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:134
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isDateEditEnabled() const
@@ -604,7 +602,7 @@ func (this *QCalendarWidget) IsDateEditEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:135
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDateEditEnabled(bool)
@@ -617,7 +615,7 @@ func (this *QCalendarWidget) SetDateEditEnabled(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:137
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int dateEditAcceptDelay() const
@@ -631,7 +629,7 @@ func (this *QCalendarWidget) DateEditAcceptDelay() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:138
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDateEditAcceptDelay(int)
@@ -644,7 +642,7 @@ func (this *QCalendarWidget) SetDateEditAcceptDelay(delay int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:141
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:142
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -662,7 +660,7 @@ func (this *QCalendarWidget) Event(event qtcore.QEvent_ITF /*777 QEvent **/) boo
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:142
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:143
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
@@ -684,7 +682,7 @@ func (this *QCalendarWidget) EventFilter(watched qtcore.QObject_ITF /*777 QObjec
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:143
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:144
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
@@ -701,7 +699,7 @@ func (this *QCalendarWidget) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 Q
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:144
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:145
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
@@ -718,7 +716,7 @@ func (this *QCalendarWidget) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QRes
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:145
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:146
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
@@ -735,7 +733,7 @@ func (this *QCalendarWidget) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyE
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:147
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:148
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintCell(QPainter *, const QRect &, const QDate &) const
@@ -760,7 +758,7 @@ func (this *QCalendarWidget) PaintCell(painter qtgui.QPainter_ITF /*777 QPainter
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:148
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:149
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void updateCell(const QDate &)
@@ -781,7 +779,7 @@ func (this *QCalendarWidget) UpdateCell(date qtcore.QDate_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:149
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:150
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void updateCells()
@@ -798,7 +796,7 @@ func (this *QCalendarWidget) UpdateCells() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:152
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSelectedDate(const QDate &)
@@ -815,7 +813,7 @@ func (this *QCalendarWidget) SetSelectedDate(date qtcore.QDate_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:153
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDateRange(const QDate &, const QDate &)
@@ -859,7 +857,7 @@ func (this *QCalendarWidget) SetDateRange(min qtcore.QDate_ITF, max qtcore.QDate
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:154
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentPage(int, int)
@@ -876,7 +874,7 @@ func (this *QCalendarWidget) SetCurrentPage(year int, month int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:155
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setGridVisible(bool)
@@ -889,7 +887,7 @@ func (this *QCalendarWidget) SetGridVisible(show bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:156
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:157
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNavigationBarVisible(bool)
@@ -902,7 +900,7 @@ func (this *QCalendarWidget) SetNavigationBarVisible(visible bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:157
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showNextMonth()
@@ -917,7 +915,7 @@ func (this *QCalendarWidget) ShowNextMonth() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:158
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showPreviousMonth()
@@ -932,7 +930,7 @@ func (this *QCalendarWidget) ShowPreviousMonth() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:159
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:160
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showNextYear()
@@ -947,7 +945,7 @@ func (this *QCalendarWidget) ShowNextYear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:160
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:161
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showPreviousYear()
@@ -962,7 +960,7 @@ func (this *QCalendarWidget) ShowPreviousYear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:161
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:162
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showSelectedDate()
@@ -977,7 +975,7 @@ func (this *QCalendarWidget) ShowSelectedDate() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:162
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:163
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showToday()
@@ -992,7 +990,7 @@ func (this *QCalendarWidget) ShowToday() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:165
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:166
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void selectionChanged()
@@ -1009,7 +1007,7 @@ func (this *QCalendarWidget) SelectionChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:166
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:167
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clicked(const QDate &)
@@ -1026,7 +1024,7 @@ func (this *QCalendarWidget) Clicked(date qtcore.QDate_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:167
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:168
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activated(const QDate &)
@@ -1043,7 +1041,7 @@ func (this *QCalendarWidget) Activated(date qtcore.QDate_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcalendarwidget.h:168
+// /usr/include/qt/QtWidgets/qcalendarwidget.h:169
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentPageChanged(int, int)

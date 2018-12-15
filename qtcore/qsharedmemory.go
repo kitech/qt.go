@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 43
+// extern C begin: 41
 */
 // import "C"
 import "unsafe"
@@ -322,8 +322,6 @@ func (this *QSharedMemory) Createp(size int) bool {
 
 /*
 Returns the size of the attached shared memory segment. If no shared memory segment is attached, 0 is returned.
-
-Note: The size of the segment may be larger than the requested size that was passed to create().
 
 See also create() and attach().
 */

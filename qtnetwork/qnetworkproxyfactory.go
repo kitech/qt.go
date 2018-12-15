@@ -65,7 +65,7 @@ func (*QNetworkProxyFactory) NewFromPointer(cthis unsafe.Pointer) *QNetworkProxy
 	return NewQNetworkProxyFactoryFromPointer(cthis)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:219
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:214
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkProxyFactory()
@@ -84,7 +84,7 @@ func NewQNetworkProxyFactory() *QNetworkProxyFactory {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:220
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:215
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QNetworkProxyFactory()
@@ -99,7 +99,7 @@ func DeleteQNetworkProxyFactory(this *QNetworkProxyFactory) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:224
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:219
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool usesSystemConfiguration()
@@ -118,7 +118,7 @@ func QNetworkProxyFactory_UsesSystemConfiguration() bool {
 	return rv
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:225
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:220
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setUseSystemConfiguration(bool)
@@ -135,7 +135,7 @@ func QNetworkProxyFactory_SetUseSystemConfiguration(enable bool) {
 	nilthis.SetUseSystemConfiguration(enable)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkproxy.h:226
+// /usr/include/qt/QtNetwork/qnetworkproxy.h:221
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setApplicationProxyFactory(QNetworkProxyFactory *)

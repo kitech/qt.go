@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h
@@ -68,7 +66,7 @@ func (*QItemEditorCreatorBase) NewFromPointer(cthis unsafe.Pointer) *QItemEditor
 	return NewQItemEditorCreatorBaseFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qitemeditorfactory.h:58
+// /usr/include/qt/QtWidgets/qitemeditorfactory.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QItemEditorCreatorBase()
@@ -83,7 +81,7 @@ func DeleteQItemEditorCreatorBase(this *QItemEditorCreatorBase) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qitemeditorfactory.h:60
+// /usr/include/qt/QtWidgets/qitemeditorfactory.h:61
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QWidget * createWidget(QWidget *) const
@@ -101,7 +99,7 @@ func (this *QItemEditorCreatorBase) CreateWidget(parent QWidget_ITF /*777 QWidge
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qitemeditorfactory.h:61
+// /usr/include/qt/QtWidgets/qitemeditorfactory.h:62
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QByteArray valuePropertyName() const

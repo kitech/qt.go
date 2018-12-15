@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qstyleditemdelegate.h
@@ -81,7 +79,7 @@ func (*QStyledItemDelegate) NewFromPointer(cthis unsafe.Pointer) *QStyledItemDel
 	return NewQStyledItemDelegateFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:58
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -95,7 +93,7 @@ func (this *QStyledItemDelegate) MetaObject() *qtcore.QMetaObject /*777 const QM
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:61
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyledItemDelegate(QObject *)
@@ -118,7 +116,7 @@ func NewQStyledItemDelegate(parent qtcore.QObject_ITF /*777 QObject **/) *QStyle
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:61
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyledItemDelegate(QObject *)
@@ -139,7 +137,7 @@ func NewQStyledItemDelegatep() *QStyledItemDelegate {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:62
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:63
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStyledItemDelegate()
@@ -154,7 +152,7 @@ func DeleteQStyledItemDelegate(this *QStyledItemDelegate) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:65
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionViewItem &, const QModelIndex &) const
@@ -191,7 +189,7 @@ func (this *QStyledItemDelegate) Paint(painter qtgui.QPainter_ITF /*777 QPainter
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:67
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:68
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint(const QStyleOptionViewItem &, const QModelIndex &) const
@@ -221,7 +219,7 @@ func (this *QStyledItemDelegate) SizeHint(option QStyleOptionViewItem_ITF, index
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:71
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:72
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QWidget * createEditor(QWidget *, const QStyleOptionViewItem &, const QModelIndex &) const
@@ -251,7 +249,7 @@ func (this *QStyledItemDelegate) CreateEditor(parent QWidget_ITF /*777 QWidget *
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:75
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:76
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setEditorData(QWidget *, const QModelIndex &) const
@@ -278,7 +276,7 @@ func (this *QStyledItemDelegate) SetEditorData(editor QWidget_ITF /*777 QWidget 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:76
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:77
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setModelData(QWidget *, QAbstractItemModel *, const QModelIndex &) const
@@ -309,7 +307,7 @@ func (this *QStyledItemDelegate) SetModelData(editor QWidget_ITF /*777 QWidget *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:80
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:81
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void updateEditorGeometry(QWidget *, const QStyleOptionViewItem &, const QModelIndex &) const
@@ -336,7 +334,7 @@ func (this *QStyledItemDelegate) UpdateEditorGeometry(editor QWidget_ITF /*777 Q
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:85
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QItemEditorFactory * itemEditorFactory() const
@@ -352,7 +350,7 @@ func (this *QStyledItemDelegate) ItemEditorFactory() *QItemEditorFactory /*777 Q
 	return /*==*/ NewQItemEditorFactoryFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:86
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemEditorFactory(QItemEditorFactory *)
@@ -371,7 +369,7 @@ func (this *QStyledItemDelegate) SetItemEditorFactory(factory QItemEditorFactory
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:88
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:89
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString displayText(const QVariant &, const QLocale &) const
@@ -402,7 +400,7 @@ func (this *QStyledItemDelegate) DisplayText(value qtcore.QVariant_ITF, locale q
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:91
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:92
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionViewItem *, const QModelIndex &) const
@@ -425,7 +423,7 @@ func (this *QStyledItemDelegate) InitStyleOption(option QStyleOptionViewItem_ITF
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:94
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:95
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
@@ -465,7 +463,7 @@ func (this *QStyledItemDelegate) EventFilter(object qtcore.QObject_ITF /*777 QOb
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:95
+// /usr/include/qt/QtWidgets/qstyleditemdelegate.h:96
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool editorEvent(QEvent *, QAbstractItemModel *, const QStyleOptionViewItem &, const QModelIndex &)

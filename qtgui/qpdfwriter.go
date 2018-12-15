@@ -153,43 +153,6 @@ func DeleteQPdfWriter(this *QPdfWriter) {
 // /usr/include/qt/QtGui/qpdfwriter.h:64
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setPdfVersion(QPagedPaintDevice::PdfVersion)
-
-/*
-Sets the PDF version for this writer to version.
-
-If version is the same value as currently set then no change will be made.
-
-This function was introduced in  Qt 5.10.
-
-See also pdfVersion().
-*/
-func (this *QPdfWriter) SetPdfVersion(version int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QPdfWriter13setPdfVersionEN17QPagedPaintDevice10PdfVersionE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), version)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qpdfwriter.h:65
-// index:0
-// Public Visibility=Default Availability=Available
-// [4] QPagedPaintDevice::PdfVersion pdfVersion() const
-
-/*
-Returns the PDF version for this writer. The default is PdfVersion_1_4.
-
-This function was introduced in  Qt 5.10.
-
-See also setPdfVersion().
-*/
-func (this *QPdfWriter) PdfVersion() int {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK10QPdfWriter10pdfVersionEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return int(rv)
-}
-
-// /usr/include/qt/QtGui/qpdfwriter.h:67
-// index:0
-// Public Visibility=Default Availability=Available
 // [8] QString title() const
 
 /*
@@ -206,7 +169,7 @@ func (this *QPdfWriter) Title() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qpdfwriter.h:68
+// /usr/include/qt/QtGui/qpdfwriter.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTitle(const QString &)
@@ -223,7 +186,7 @@ func (this *QPdfWriter) SetTitle(title string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpdfwriter.h:70
+// /usr/include/qt/QtGui/qpdfwriter.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString creator() const
@@ -242,7 +205,7 @@ func (this *QPdfWriter) Creator() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qpdfwriter.h:71
+// /usr/include/qt/QtGui/qpdfwriter.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCreator(const QString &)
@@ -259,7 +222,7 @@ func (this *QPdfWriter) SetCreator(creator string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpdfwriter.h:73
+// /usr/include/qt/QtGui/qpdfwriter.h:70
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool newPage()
@@ -273,7 +236,7 @@ func (this *QPdfWriter) NewPage() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qpdfwriter.h:75
+// /usr/include/qt/QtGui/qpdfwriter.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setResolution(int)
@@ -292,7 +255,7 @@ func (this *QPdfWriter) SetResolution(resolution int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpdfwriter.h:76
+// /usr/include/qt/QtGui/qpdfwriter.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int resolution() const
@@ -310,7 +273,7 @@ func (this *QPdfWriter) Resolution() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qpdfwriter.h:89
+// /usr/include/qt/QtGui/qpdfwriter.h:86
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setPageSize(QPagedPaintDevice::PageSize)
@@ -333,7 +296,7 @@ func (this *QPdfWriter) SetPageSize(size int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpdfwriter.h:90
+// /usr/include/qt/QtGui/qpdfwriter.h:87
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setPageSizeMM(const QSizeF &)
@@ -350,7 +313,7 @@ func (this *QPdfWriter) SetPageSizeMM(size qtcore.QSizeF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpdfwriter.h:95
+// /usr/include/qt/QtGui/qpdfwriter.h:92
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QPaintEngine * paintEngine() const
@@ -364,7 +327,7 @@ func (this *QPdfWriter) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 	return /*==*/ NewQPaintEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qpdfwriter.h:96
+// /usr/include/qt/QtGui/qpdfwriter.h:93
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] int metric(QPaintDevice::PaintDeviceMetric) const

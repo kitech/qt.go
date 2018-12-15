@@ -64,7 +64,7 @@ func (*QCryptographicHash) NewFromPointer(cthis unsafe.Pointer) *QCryptographicH
 	return NewQCryptographicHashFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qcryptographichash.h:92
+// /usr/include/qt/QtCore/qcryptographichash.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QCryptographicHash(QCryptographicHash::Algorithm)
@@ -83,7 +83,7 @@ func NewQCryptographicHash(method int) *QCryptographicHash {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qcryptographichash.h:93
+// /usr/include/qt/QtCore/qcryptographichash.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QCryptographicHash()
@@ -98,7 +98,7 @@ func DeleteQCryptographicHash(this *QCryptographicHash) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qcryptographichash.h:95
+// /usr/include/qt/QtCore/qcryptographichash.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reset()
@@ -111,7 +111,7 @@ func (this *QCryptographicHash) Reset() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qcryptographichash.h:97
+// /usr/include/qt/QtCore/qcryptographichash.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addData(const char *, int)
@@ -126,7 +126,7 @@ func (this *QCryptographicHash) AddData(data string, length int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qcryptographichash.h:98
+// /usr/include/qt/QtCore/qcryptographichash.h:82
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void addData(const QByteArray &)
@@ -143,7 +143,7 @@ func (this *QCryptographicHash) AddData1(data QByteArray_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qcryptographichash.h:99
+// /usr/include/qt/QtCore/qcryptographichash.h:83
 // index:2
 // Public Visibility=Default Availability=Available
 // [1] bool addData(QIODevice *)
@@ -161,7 +161,7 @@ func (this *QCryptographicHash) AddData2(device QIODevice_ITF /*777 QIODevice **
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcryptographichash.h:101
+// /usr/include/qt/QtCore/qcryptographichash.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray result() const
@@ -179,7 +179,7 @@ func (this *QCryptographicHash) Result() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcryptographichash.h:103
+// /usr/include/qt/QtCore/qcryptographichash.h:87
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray hash(const QByteArray &, QCryptographicHash::Algorithm)
@@ -205,10 +205,8 @@ func QCryptographicHash_Hash(data QByteArray_ITF, method int) *QByteArray /*123*
 }
 
 /*
-Note: In Qt versions before 5.9, when asked to generate a SHA3 hash sum, QCryptographicHash actually calculated Keccak. If you need compatibility with SHA-3 hashes produced by those versions of Qt, use the Keccak_ enumerators. Alternatively, if source compatibility is required, define the macro QT_SHA3_KECCAK_COMPAT.
 
-
-*/
+ */
 type QCryptographicHash__Algorithm = int
 
 //
@@ -233,40 +231,16 @@ const QCryptographicHash__Sha384 QCryptographicHash__Algorithm = 5
 const QCryptographicHash__Sha512 QCryptographicHash__Algorithm = 6
 
 //
-const QCryptographicHash__Keccak_224 QCryptographicHash__Algorithm = 7
+const QCryptographicHash__Sha3_224 QCryptographicHash__Algorithm = 7
 
 //
-const QCryptographicHash__Keccak_256 QCryptographicHash__Algorithm = 8
+const QCryptographicHash__Sha3_256 QCryptographicHash__Algorithm = 8
 
 //
-const QCryptographicHash__Keccak_384 QCryptographicHash__Algorithm = 9
+const QCryptographicHash__Sha3_384 QCryptographicHash__Algorithm = 9
 
 //
-const QCryptographicHash__Keccak_512 QCryptographicHash__Algorithm = 10
-
-//
-const QCryptographicHash__RealSha3_224 QCryptographicHash__Algorithm = 11
-
-//
-const QCryptographicHash__RealSha3_256 QCryptographicHash__Algorithm = 12
-
-//
-const QCryptographicHash__RealSha3_384 QCryptographicHash__Algorithm = 13
-
-//
-const QCryptographicHash__RealSha3_512 QCryptographicHash__Algorithm = 14
-
-//
-const QCryptographicHash__Sha3_224 QCryptographicHash__Algorithm = 11
-
-//
-const QCryptographicHash__Sha3_256 QCryptographicHash__Algorithm = 12
-
-//
-const QCryptographicHash__Sha3_384 QCryptographicHash__Algorithm = 13
-
-//
-const QCryptographicHash__Sha3_512 QCryptographicHash__Algorithm = 14
+const QCryptographicHash__Sha3_512 QCryptographicHash__Algorithm = 10
 
 func (this *QCryptographicHash) AlgorithmItemName(val int) string {
 	switch val {
@@ -284,30 +258,14 @@ func (this *QCryptographicHash) AlgorithmItemName(val int) string {
 		return "Sha384"
 	case QCryptographicHash__Sha512: // 6
 		return "Sha512"
-	case QCryptographicHash__Keccak_224: // 7
-		return "Keccak_224"
-	case QCryptographicHash__Keccak_256: // 8
-		return "Keccak_256"
-	case QCryptographicHash__Keccak_384: // 9
-		return "Keccak_384"
-	case QCryptographicHash__Keccak_512: // 10
-		return "Keccak_512"
-	case QCryptographicHash__RealSha3_224: // 11
-		return "RealSha3_224,Sha3_224"
-	case QCryptographicHash__RealSha3_256: // 12
-		return "RealSha3_256,Sha3_256"
-	case QCryptographicHash__RealSha3_384: // 13
-		return "RealSha3_384,Sha3_384"
-	case QCryptographicHash__RealSha3_512: // 14
-		return "RealSha3_512,Sha3_512"
-		// case QCryptographicHash__Sha3_224: // 11
-		// return ""
-		// case QCryptographicHash__Sha3_256: // 12
-		// return ""
-		// case QCryptographicHash__Sha3_384: // 13
-		// return ""
-		// case QCryptographicHash__Sha3_512: // 14
-		// return ""
+	case QCryptographicHash__Sha3_224: // 7
+		return "Sha3_224"
+	case QCryptographicHash__Sha3_256: // 8
+		return "Sha3_256"
+	case QCryptographicHash__Sha3_384: // 9
+		return "Sha3_384"
+	case QCryptographicHash__Sha3_512: // 10
+		return "Sha3_512"
 	default:
 		return fmt.Sprintf("%d", val)
 	}

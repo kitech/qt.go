@@ -262,69 +262,38 @@ func (this *QTextOption) Flags() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qtextoption.h:121
+// /usr/include/qt/QtGui/qtextoption.h:120
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTabStop(qreal)
 
 /*
+Sets the default distance in device units between tab stops to the value specified by tabStop.
 
- */
+See also tabStop(), setTabArray(), setTabs(), and tabs().
+*/
 func (this *QTextOption) SetTabStop(tabStop float64) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextOption10setTabStopEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), tabStop)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextoption.h:122
+// /usr/include/qt/QtGui/qtextoption.h:121
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal tabStop() const
 
 /*
+Returns the distance in device units between tab stops. Convenient function for the above method
 
- */
+See also setTabStop(), tabArray(), setTabs(), and tabs().
+*/
 func (this *QTextOption) TabStop() float64 {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextOption7tabStopEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qtextoption.h:125
-// index:0
-// Public inline Visibility=Default Availability=Available
-// [-2] void setTabStopDistance(qreal)
-
-/*
-Sets the default distance in device units between tab stops to the value specified by tabStopDistance.
-
-This function was introduced in  Qt 5.10.
-
-See also tabStopDistance(), setTabArray(), setTabs(), and tabs().
-*/
-func (this *QTextOption) SetTabStopDistance(tabStopDistance float64) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextOption18setTabStopDistanceEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), tabStopDistance)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qtextoption.h:126
-// index:0
-// Public inline Visibility=Default Availability=Available
-// [8] qreal tabStopDistance() const
-
-/*
-Returns the distance in device units between tab stops.
-
-This function was introduced in  Qt 5.10.
-
-See also setTabStopDistance(), tabArray(), setTabs(), and tabs().
-*/
-func (this *QTextOption) TabStopDistance() float64 {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextOption15tabStopDistanceEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("float64", rv).(float64) // 1111
-}
-
-// /usr/include/qt/QtGui/qtextoption.h:134
+// /usr/include/qt/QtGui/qtextoption.h:129
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setUseDesignMetrics(bool)
@@ -339,7 +308,7 @@ func (this *QTextOption) SetUseDesignMetrics(b bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qtextoption.h:135
+// /usr/include/qt/QtGui/qtextoption.h:130
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool useDesignMetrics() const

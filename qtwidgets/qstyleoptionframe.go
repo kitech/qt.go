@@ -64,7 +64,7 @@ func (*QStyleOptionFrame) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionFram
 	return NewQStyleOptionFrameFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:143
+// /usr/include/qt/QtWidgets/qstyleoption.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionFrame()
@@ -83,7 +83,7 @@ func NewQStyleOptionFrame() *QStyleOptionFrame {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:147
+// /usr/include/qt/QtWidgets/qstyleoption.h:136
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionFrame(int)

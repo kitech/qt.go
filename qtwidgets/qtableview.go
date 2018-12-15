@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qtableview.h
@@ -191,7 +189,7 @@ func (*QTableView) NewFromPointer(cthis unsafe.Pointer) *QTableView {
 	return NewQTableViewFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:55
+// /usr/include/qt/QtWidgets/qtableview.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -205,7 +203,7 @@ func (this *QTableView) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:65
+// /usr/include/qt/QtWidgets/qtableview.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTableView(QWidget *)
@@ -230,7 +228,7 @@ func NewQTableView(parent QWidget_ITF /*777 QWidget **/) *QTableView {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:65
+// /usr/include/qt/QtWidgets/qtableview.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTableView(QWidget *)
@@ -253,7 +251,7 @@ func NewQTableViewp() *QTableView {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:66
+// /usr/include/qt/QtWidgets/qtableview.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QTableView()
@@ -268,7 +266,7 @@ func DeleteQTableView(this *QTableView) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:68
+// /usr/include/qt/QtWidgets/qtableview.h:69
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setModel(QAbstractItemModel *)
@@ -285,7 +283,7 @@ func (this *QTableView) SetModel(model qtcore.QAbstractItemModel_ITF /*777 QAbst
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:69
+// /usr/include/qt/QtWidgets/qtableview.h:70
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setRootIndex(const QModelIndex &)
@@ -302,7 +300,7 @@ func (this *QTableView) SetRootIndex(index qtcore.QModelIndex_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:70
+// /usr/include/qt/QtWidgets/qtableview.h:71
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setSelectionModel(QItemSelectionModel *)
@@ -319,7 +317,7 @@ func (this *QTableView) SetSelectionModel(selectionModel qtcore.QItemSelectionMo
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:71
+// /usr/include/qt/QtWidgets/qtableview.h:72
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void doItemsLayout()
@@ -332,7 +330,7 @@ func (this *QTableView) DoItemsLayout() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:73
+// /usr/include/qt/QtWidgets/qtableview.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QHeaderView * horizontalHeader() const
@@ -348,7 +346,7 @@ func (this *QTableView) HorizontalHeader() *QHeaderView /*777 QHeaderView **/ {
 	return /*==*/ NewQHeaderViewFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:74
+// /usr/include/qt/QtWidgets/qtableview.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QHeaderView * verticalHeader() const
@@ -364,7 +362,7 @@ func (this *QTableView) VerticalHeader() *QHeaderView /*777 QHeaderView **/ {
 	return /*==*/ NewQHeaderViewFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:75
+// /usr/include/qt/QtWidgets/qtableview.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHorizontalHeader(QHeaderView *)
@@ -383,7 +381,7 @@ func (this *QTableView) SetHorizontalHeader(header QHeaderView_ITF /*777 QHeader
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:76
+// /usr/include/qt/QtWidgets/qtableview.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVerticalHeader(QHeaderView *)
@@ -402,7 +400,7 @@ func (this *QTableView) SetVerticalHeader(header QHeaderView_ITF /*777 QHeaderVi
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:78
+// /usr/include/qt/QtWidgets/qtableview.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int rowViewportPosition(int) const
@@ -416,7 +414,7 @@ func (this *QTableView) RowViewportPosition(row int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:79
+// /usr/include/qt/QtWidgets/qtableview.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int rowAt(int) const
@@ -434,7 +432,7 @@ func (this *QTableView) RowAt(y int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:81
+// /usr/include/qt/QtWidgets/qtableview.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRowHeight(int, int)
@@ -451,7 +449,7 @@ func (this *QTableView) SetRowHeight(row int, height int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:82
+// /usr/include/qt/QtWidgets/qtableview.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int rowHeight(int) const
@@ -467,7 +465,7 @@ func (this *QTableView) RowHeight(row int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:84
+// /usr/include/qt/QtWidgets/qtableview.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int columnViewportPosition(int) const
@@ -481,7 +479,7 @@ func (this *QTableView) ColumnViewportPosition(column int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:85
+// /usr/include/qt/QtWidgets/qtableview.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int columnAt(int) const
@@ -499,7 +497,7 @@ func (this *QTableView) ColumnAt(x int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:87
+// /usr/include/qt/QtWidgets/qtableview.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColumnWidth(int, int)
@@ -516,7 +514,7 @@ func (this *QTableView) SetColumnWidth(column int, width int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:88
+// /usr/include/qt/QtWidgets/qtableview.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int columnWidth(int) const
@@ -532,7 +530,7 @@ func (this *QTableView) ColumnWidth(column int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:90
+// /usr/include/qt/QtWidgets/qtableview.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isRowHidden(int) const
@@ -548,7 +546,7 @@ func (this *QTableView) IsRowHidden(row int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:91
+// /usr/include/qt/QtWidgets/qtableview.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRowHidden(int, bool)
@@ -563,7 +561,7 @@ func (this *QTableView) SetRowHidden(row int, hide bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:93
+// /usr/include/qt/QtWidgets/qtableview.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isColumnHidden(int) const
@@ -579,7 +577,7 @@ func (this *QTableView) IsColumnHidden(column int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:94
+// /usr/include/qt/QtWidgets/qtableview.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setColumnHidden(int, bool)
@@ -594,7 +592,7 @@ func (this *QTableView) SetColumnHidden(column int, hide bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:96
+// /usr/include/qt/QtWidgets/qtableview.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSortingEnabled(bool)
@@ -611,7 +609,7 @@ func (this *QTableView) SetSortingEnabled(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:97
+// /usr/include/qt/QtWidgets/qtableview.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSortingEnabled() const
@@ -625,7 +623,7 @@ func (this *QTableView) IsSortingEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:99
+// /usr/include/qt/QtWidgets/qtableview.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool showGrid() const
@@ -639,7 +637,7 @@ func (this *QTableView) ShowGrid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:101
+// /usr/include/qt/QtWidgets/qtableview.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::PenStyle gridStyle() const
@@ -653,7 +651,7 @@ func (this *QTableView) GridStyle() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:102
+// /usr/include/qt/QtWidgets/qtableview.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setGridStyle(Qt::PenStyle)
@@ -666,7 +664,7 @@ func (this *QTableView) SetGridStyle(style int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:104
+// /usr/include/qt/QtWidgets/qtableview.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWordWrap(bool)
@@ -679,7 +677,7 @@ func (this *QTableView) SetWordWrap(on bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:105
+// /usr/include/qt/QtWidgets/qtableview.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool wordWrap() const
@@ -693,7 +691,7 @@ func (this *QTableView) WordWrap() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:108
+// /usr/include/qt/QtWidgets/qtableview.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCornerButtonEnabled(bool)
@@ -706,7 +704,7 @@ func (this *QTableView) SetCornerButtonEnabled(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:109
+// /usr/include/qt/QtWidgets/qtableview.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isCornerButtonEnabled() const
@@ -720,7 +718,7 @@ func (this *QTableView) IsCornerButtonEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:112
+// /usr/include/qt/QtWidgets/qtableview.h:113
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QRect visualRect(const QModelIndex &) const
@@ -740,7 +738,7 @@ func (this *QTableView) VisualRect(index qtcore.QModelIndex_ITF) *qtcore.QRect /
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:113
+// /usr/include/qt/QtWidgets/qtableview.h:114
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void scrollTo(const QModelIndex &, QAbstractItemView::ScrollHint)
@@ -757,7 +755,7 @@ func (this *QTableView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:113
+// /usr/include/qt/QtWidgets/qtableview.h:114
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void scrollTo(const QModelIndex &, QAbstractItemView::ScrollHint)
@@ -776,7 +774,7 @@ func (this *QTableView) ScrollTop(index qtcore.QModelIndex_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:114
+// /usr/include/qt/QtWidgets/qtableview.h:115
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex indexAt(const QPoint &) const
@@ -798,7 +796,7 @@ func (this *QTableView) IndexAt(p qtcore.QPoint_ITF) *qtcore.QModelIndex /*123*/
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:116
+// /usr/include/qt/QtWidgets/qtableview.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSpan(int, int, int, int)
@@ -815,7 +813,7 @@ func (this *QTableView) SetSpan(row int, column int, rowSpan int, columnSpan int
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:117
+// /usr/include/qt/QtWidgets/qtableview.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int rowSpan(int, int) const
@@ -833,7 +831,7 @@ func (this *QTableView) RowSpan(row int, column int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:118
+// /usr/include/qt/QtWidgets/qtableview.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int columnSpan(int, int) const
@@ -851,7 +849,7 @@ func (this *QTableView) ColumnSpan(row int, column int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:119
+// /usr/include/qt/QtWidgets/qtableview.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clearSpans()
@@ -868,7 +866,7 @@ func (this *QTableView) ClearSpans() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:121
+// /usr/include/qt/QtWidgets/qtableview.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sortByColumn(int, Qt::SortOrder)
@@ -885,7 +883,7 @@ func (this *QTableView) SortByColumn(column int, order int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:134
+// /usr/include/qt/QtWidgets/qtableview.h:135
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void sortByColumn(int)
@@ -902,7 +900,7 @@ func (this *QTableView) SortByColumn1(column int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:124
+// /usr/include/qt/QtWidgets/qtableview.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void selectRow(int)
@@ -917,7 +915,7 @@ func (this *QTableView) SelectRow(row int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:125
+// /usr/include/qt/QtWidgets/qtableview.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void selectColumn(int)
@@ -932,7 +930,7 @@ func (this *QTableView) SelectColumn(column int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:126
+// /usr/include/qt/QtWidgets/qtableview.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void hideRow(int)
@@ -947,7 +945,7 @@ func (this *QTableView) HideRow(row int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:127
+// /usr/include/qt/QtWidgets/qtableview.h:128
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void hideColumn(int)
@@ -962,7 +960,7 @@ func (this *QTableView) HideColumn(column int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:128
+// /usr/include/qt/QtWidgets/qtableview.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showRow(int)
@@ -977,7 +975,7 @@ func (this *QTableView) ShowRow(row int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:129
+// /usr/include/qt/QtWidgets/qtableview.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showColumn(int)
@@ -992,7 +990,7 @@ func (this *QTableView) ShowColumn(column int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:130
+// /usr/include/qt/QtWidgets/qtableview.h:131
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resizeRowToContents(int)
@@ -1007,7 +1005,7 @@ func (this *QTableView) ResizeRowToContents(row int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:131
+// /usr/include/qt/QtWidgets/qtableview.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resizeRowsToContents()
@@ -1022,7 +1020,7 @@ func (this *QTableView) ResizeRowsToContents() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:132
+// /usr/include/qt/QtWidgets/qtableview.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resizeColumnToContents(int)
@@ -1039,7 +1037,7 @@ func (this *QTableView) ResizeColumnToContents(column int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:133
+// /usr/include/qt/QtWidgets/qtableview.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resizeColumnsToContents()
@@ -1054,7 +1052,7 @@ func (this *QTableView) ResizeColumnsToContents() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:135
+// /usr/include/qt/QtWidgets/qtableview.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setShowGrid(bool)
@@ -1067,7 +1065,7 @@ func (this *QTableView) SetShowGrid(show bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:138
+// /usr/include/qt/QtWidgets/qtableview.h:139
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void rowMoved(int, int, int)
@@ -1082,7 +1080,7 @@ func (this *QTableView) RowMoved(row int, oldIndex int, newIndex int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:139
+// /usr/include/qt/QtWidgets/qtableview.h:140
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void columnMoved(int, int, int)
@@ -1097,7 +1095,7 @@ func (this *QTableView) ColumnMoved(column int, oldIndex int, newIndex int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:140
+// /usr/include/qt/QtWidgets/qtableview.h:141
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void rowResized(int, int, int)
@@ -1112,7 +1110,7 @@ func (this *QTableView) RowResized(row int, oldHeight int, newHeight int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:141
+// /usr/include/qt/QtWidgets/qtableview.h:142
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void columnResized(int, int, int)
@@ -1127,7 +1125,7 @@ func (this *QTableView) ColumnResized(column int, oldWidth int, newWidth int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:142
+// /usr/include/qt/QtWidgets/qtableview.h:143
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void rowCountChanged(int, int)
@@ -1140,7 +1138,7 @@ func (this *QTableView) RowCountChanged(oldCount int, newCount int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:143
+// /usr/include/qt/QtWidgets/qtableview.h:144
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void columnCountChanged(int, int)
@@ -1153,7 +1151,7 @@ func (this *QTableView) ColumnCountChanged(oldCount int, newCount int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:147
+// /usr/include/qt/QtWidgets/qtableview.h:148
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void scrollContentsBy(int, int)
@@ -1166,7 +1164,7 @@ func (this *QTableView) ScrollContentsBy(dx int, dy int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:149
+// /usr/include/qt/QtWidgets/qtableview.h:150
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [192] QStyleOptionViewItem viewOptions() const
@@ -1182,7 +1180,7 @@ func (this *QTableView) ViewOptions() *QStyleOptionViewItem /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:150
+// /usr/include/qt/QtWidgets/qtableview.h:151
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
@@ -1201,7 +1199,7 @@ func (this *QTableView) PaintEvent(e qtgui.QPaintEvent_ITF /*777 QPaintEvent **/
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:152
+// /usr/include/qt/QtWidgets/qtableview.h:153
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
@@ -1218,7 +1216,7 @@ func (this *QTableView) TimerEvent(event qtcore.QTimerEvent_ITF /*777 QTimerEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:154
+// /usr/include/qt/QtWidgets/qtableview.h:155
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] int horizontalOffset() const
@@ -1238,7 +1236,7 @@ func (this *QTableView) HorizontalOffset() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:155
+// /usr/include/qt/QtWidgets/qtableview.h:156
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] int verticalOffset() const
@@ -1258,7 +1256,7 @@ func (this *QTableView) VerticalOffset() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:156
+// /usr/include/qt/QtWidgets/qtableview.h:157
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [24] QModelIndex moveCursor(QAbstractItemView::CursorAction, Qt::KeyboardModifiers)
@@ -1278,7 +1276,7 @@ func (this *QTableView) MoveCursor(cursorAction int, modifiers int) *qtcore.QMod
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:158
+// /usr/include/qt/QtWidgets/qtableview.h:159
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setSelection(const QRect &, QItemSelectionModel::SelectionFlags)
@@ -1297,7 +1295,7 @@ func (this *QTableView) SetSelection(rect qtcore.QRect_ITF, command int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:159
+// /usr/include/qt/QtWidgets/qtableview.h:160
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QRegion visualRegionForSelection(const QItemSelection &) const
@@ -1317,7 +1315,7 @@ func (this *QTableView) VisualRegionForSelection(selection qtcore.QItemSelection
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:160
+// /usr/include/qt/QtWidgets/qtableview.h:161
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QModelIndexList selectedIndexes() const
@@ -1332,7 +1330,7 @@ func (this *QTableView) SelectedIndexes() *qtcore.QModelIndexList /*667*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:162
+// /usr/include/qt/QtWidgets/qtableview.h:163
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void updateGeometries()
@@ -1345,7 +1343,7 @@ func (this *QTableView) UpdateGeometries() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:164
+// /usr/include/qt/QtWidgets/qtableview.h:165
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QSize viewportSizeHint() const
@@ -1361,7 +1359,7 @@ func (this *QTableView) ViewportSizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:166
+// /usr/include/qt/QtWidgets/qtableview.h:167
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] int sizeHintForRow(int) const
@@ -1383,7 +1381,7 @@ func (this *QTableView) SizeHintForRow(row int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:167
+// /usr/include/qt/QtWidgets/qtableview.h:168
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] int sizeHintForColumn(int) const
@@ -1405,7 +1403,7 @@ func (this *QTableView) SizeHintForColumn(column int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:169
+// /usr/include/qt/QtWidgets/qtableview.h:170
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void verticalScrollbarAction(int)
@@ -1418,7 +1416,7 @@ func (this *QTableView) VerticalScrollbarAction(action int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:170
+// /usr/include/qt/QtWidgets/qtableview.h:171
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void horizontalScrollbarAction(int)
@@ -1431,7 +1429,7 @@ func (this *QTableView) HorizontalScrollbarAction(action int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:172
+// /usr/include/qt/QtWidgets/qtableview.h:173
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool isIndexHidden(const QModelIndex &) const
@@ -1449,7 +1447,7 @@ func (this *QTableView) IsIndexHidden(index qtcore.QModelIndex_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:174
+// /usr/include/qt/QtWidgets/qtableview.h:175
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void selectionChanged(const QItemSelection &, const QItemSelection &)
@@ -1470,7 +1468,7 @@ func (this *QTableView) SelectionChanged(selected qtcore.QItemSelection_ITF, des
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:176
+// /usr/include/qt/QtWidgets/qtableview.h:177
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void currentChanged(const QModelIndex &, const QModelIndex &)

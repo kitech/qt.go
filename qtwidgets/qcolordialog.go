@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qcolordialog.h
@@ -76,7 +74,7 @@ func (*QColorDialog) NewFromPointer(cthis unsafe.Pointer) *QColorDialog {
 	return NewQColorDialogFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:55
+// /usr/include/qt/QtWidgets/qcolordialog.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -90,7 +88,7 @@ func (this *QColorDialog) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:71
+// /usr/include/qt/QtWidgets/qcolordialog.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QColorDialog(QWidget *)
@@ -115,7 +113,7 @@ func NewQColorDialog(parent QWidget_ITF /*777 QWidget **/) *QColorDialog {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:71
+// /usr/include/qt/QtWidgets/qcolordialog.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QColorDialog(QWidget *)
@@ -138,7 +136,7 @@ func NewQColorDialogp() *QColorDialog {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:72
+// /usr/include/qt/QtWidgets/qcolordialog.h:73
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QColorDialog(const QColor &, QWidget *)
@@ -167,7 +165,7 @@ func NewQColorDialog1(initial qtgui.QColor_ITF, parent QWidget_ITF /*777 QWidget
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:72
+// /usr/include/qt/QtWidgets/qcolordialog.h:73
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QColorDialog(const QColor &, QWidget *)
@@ -194,7 +192,7 @@ func NewQColorDialog1p(initial qtgui.QColor_ITF) *QColorDialog {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:73
+// /usr/include/qt/QtWidgets/qcolordialog.h:74
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QColorDialog()
@@ -209,7 +207,7 @@ func DeleteQColorDialog(this *QColorDialog) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:75
+// /usr/include/qt/QtWidgets/qcolordialog.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentColor(const QColor &)
@@ -226,7 +224,7 @@ func (this *QColorDialog) SetCurrentColor(color qtgui.QColor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:76
+// /usr/include/qt/QtWidgets/qcolordialog.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor currentColor() const
@@ -242,7 +240,7 @@ func (this *QColorDialog) CurrentColor() *qtgui.QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:78
+// /usr/include/qt/QtWidgets/qcolordialog.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QColor selectedColor() const
@@ -260,7 +258,7 @@ func (this *QColorDialog) SelectedColor() *qtgui.QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:80
+// /usr/include/qt/QtWidgets/qcolordialog.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(QColorDialog::ColorDialogOption, bool)
@@ -275,7 +273,7 @@ func (this *QColorDialog) SetOption(option int, on bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:80
+// /usr/include/qt/QtWidgets/qcolordialog.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(QColorDialog::ColorDialogOption, bool)
@@ -292,7 +290,7 @@ func (this *QColorDialog) SetOptionp(option int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:81
+// /usr/include/qt/QtWidgets/qcolordialog.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool testOption(QColorDialog::ColorDialogOption) const
@@ -310,7 +308,7 @@ func (this *QColorDialog) TestOption(option int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:82
+// /usr/include/qt/QtWidgets/qcolordialog.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOptions(QColorDialog::ColorDialogOptions)
@@ -323,7 +321,7 @@ func (this *QColorDialog) SetOptions(options int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:83
+// /usr/include/qt/QtWidgets/qcolordialog.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QColorDialog::ColorDialogOptions options() const
@@ -337,7 +335,7 @@ func (this *QColorDialog) Options() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:86
+// /usr/include/qt/QtWidgets/qcolordialog.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void open(QObject *, const char *)
@@ -362,7 +360,7 @@ func (this *QColorDialog) Open(receiver qtcore.QObject_ITF /*777 QObject **/, me
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:88
+// /usr/include/qt/QtWidgets/qcolordialog.h:89
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setVisible(bool)
@@ -377,7 +375,7 @@ func (this *QColorDialog) SetVisible(visible bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:90
+// /usr/include/qt/QtWidgets/qcolordialog.h:91
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor getColor(const QColor &, QWidget *, const QString &, QColorDialog::ColorDialogOptions)
@@ -412,7 +410,7 @@ func QColorDialog_GetColor(initial qtgui.QColor_ITF, parent QWidget_ITF /*777 QW
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:90
+// /usr/include/qt/QtWidgets/qcolordialog.h:91
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor getColor(const QColor &, QWidget *, const QString &, QColorDialog::ColorDialogOptions)
@@ -440,7 +438,7 @@ func (this *QColorDialog) GetColorp() *qtgui.QColor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:90
+// /usr/include/qt/QtWidgets/qcolordialog.h:91
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor getColor(const QColor &, QWidget *, const QString &, QColorDialog::ColorDialogOptions)
@@ -470,7 +468,7 @@ func (this *QColorDialog) GetColorp1(initial qtgui.QColor_ITF) *qtgui.QColor /*1
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:90
+// /usr/include/qt/QtWidgets/qcolordialog.h:91
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor getColor(const QColor &, QWidget *, const QString &, QColorDialog::ColorDialogOptions)
@@ -502,7 +500,7 @@ func (this *QColorDialog) GetColorp2(initial qtgui.QColor_ITF, parent QWidget_IT
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:90
+// /usr/include/qt/QtWidgets/qcolordialog.h:91
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor getColor(const QColor &, QWidget *, const QString &, QColorDialog::ColorDialogOptions)
@@ -534,7 +532,7 @@ func (this *QColorDialog) GetColorp3(initial qtgui.QColor_ITF, parent QWidget_IT
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:96
+// /usr/include/qt/QtWidgets/qcolordialog.h:97
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QRgb getRgba(QRgb, bool *, QWidget *)
@@ -557,7 +555,7 @@ func QColorDialog_GetRgba(rgba uint, ok *bool, parent QWidget_ITF /*777 QWidget 
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:96
+// /usr/include/qt/QtWidgets/qcolordialog.h:97
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QRgb getRgba(QRgb, bool *, QWidget *)
@@ -577,7 +575,7 @@ func (this *QColorDialog) GetRgbap() uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:96
+// /usr/include/qt/QtWidgets/qcolordialog.h:97
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QRgb getRgba(QRgb, bool *, QWidget *)
@@ -595,7 +593,7 @@ func (this *QColorDialog) GetRgbap1(rgba uint) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:96
+// /usr/include/qt/QtWidgets/qcolordialog.h:97
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QRgb getRgba(QRgb, bool *, QWidget *)
@@ -611,7 +609,7 @@ func (this *QColorDialog) GetRgbap2(rgba uint, ok *bool) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:98
+// /usr/include/qt/QtWidgets/qcolordialog.h:99
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int customCount()
@@ -630,7 +628,7 @@ func QColorDialog_CustomCount() int {
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:99
+// /usr/include/qt/QtWidgets/qcolordialog.h:100
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor customColor(int)
@@ -655,7 +653,7 @@ func QColorDialog_CustomColor(index int) *qtgui.QColor /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:100
+// /usr/include/qt/QtWidgets/qcolordialog.h:101
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setCustomColor(int, QColor)
@@ -680,7 +678,7 @@ func QColorDialog_SetCustomColor(index int, color qtgui.QColor_ITF /*123*/) {
 	nilthis.SetCustomColor(index, color)
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:101
+// /usr/include/qt/QtWidgets/qcolordialog.h:102
 // index:0
 // Public static Visibility=Default Availability=Available
 // [16] QColor standardColor(int)
@@ -705,7 +703,7 @@ func QColorDialog_StandardColor(index int) *qtgui.QColor /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:102
+// /usr/include/qt/QtWidgets/qcolordialog.h:103
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setStandardColor(int, QColor)
@@ -730,7 +728,7 @@ func QColorDialog_SetStandardColor(index int, color qtgui.QColor_ITF /*123*/) {
 	nilthis.SetStandardColor(index, color)
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:105
+// /usr/include/qt/QtWidgets/qcolordialog.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentColorChanged(const QColor &)
@@ -751,7 +749,7 @@ func (this *QColorDialog) CurrentColorChanged(color qtgui.QColor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:106
+// /usr/include/qt/QtWidgets/qcolordialog.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void colorSelected(const QColor &)
@@ -770,7 +768,7 @@ func (this *QColorDialog) ColorSelected(color qtgui.QColor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:109
+// /usr/include/qt/QtWidgets/qcolordialog.h:110
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
@@ -787,7 +785,7 @@ func (this *QColorDialog) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:110
+// /usr/include/qt/QtWidgets/qcolordialog.h:111
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void done(int)

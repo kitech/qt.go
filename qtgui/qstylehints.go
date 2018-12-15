@@ -77,7 +77,7 @@ func (this *QStyleHints) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:78
+// /usr/include/qt/QtGui/qstylehints.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMouseDoubleClickInterval(int)
@@ -90,7 +90,7 @@ func (this *QStyleHints) SetMouseDoubleClickInterval(mouseDoubleClickInterval in
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:79
+// /usr/include/qt/QtGui/qstylehints.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int mouseDoubleClickInterval() const
@@ -104,7 +104,7 @@ func (this *QStyleHints) MouseDoubleClickInterval() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:80
+// /usr/include/qt/QtGui/qstylehints.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMousePressAndHoldInterval(int)
@@ -117,7 +117,7 @@ func (this *QStyleHints) SetMousePressAndHoldInterval(mousePressAndHoldInterval 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:81
+// /usr/include/qt/QtGui/qstylehints.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int mousePressAndHoldInterval() const
@@ -131,7 +131,7 @@ func (this *QStyleHints) MousePressAndHoldInterval() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:82
+// /usr/include/qt/QtGui/qstylehints.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStartDragDistance(int)
@@ -144,7 +144,7 @@ func (this *QStyleHints) SetStartDragDistance(startDragDistance int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:83
+// /usr/include/qt/QtGui/qstylehints.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int startDragDistance() const
@@ -158,7 +158,7 @@ func (this *QStyleHints) StartDragDistance() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:84
+// /usr/include/qt/QtGui/qstylehints.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStartDragTime(int)
@@ -171,7 +171,7 @@ func (this *QStyleHints) SetStartDragTime(startDragTime int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:85
+// /usr/include/qt/QtGui/qstylehints.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int startDragTime() const
@@ -185,7 +185,7 @@ func (this *QStyleHints) StartDragTime() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:86
+// /usr/include/qt/QtGui/qstylehints.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int startDragVelocity() const
@@ -199,7 +199,7 @@ func (this *QStyleHints) StartDragVelocity() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:87
+// /usr/include/qt/QtGui/qstylehints.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKeyboardInputInterval(int)
@@ -212,7 +212,7 @@ func (this *QStyleHints) SetKeyboardInputInterval(keyboardInputInterval int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:88
+// /usr/include/qt/QtGui/qstylehints.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int keyboardInputInterval() const
@@ -226,7 +226,7 @@ func (this *QStyleHints) KeyboardInputInterval() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:89
+// /usr/include/qt/QtGui/qstylehints.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int keyboardAutoRepeatRate() const
@@ -240,7 +240,7 @@ func (this *QStyleHints) KeyboardAutoRepeatRate() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:90
+// /usr/include/qt/QtGui/qstylehints.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCursorFlashTime(int)
@@ -253,7 +253,7 @@ func (this *QStyleHints) SetCursorFlashTime(cursorFlashTime int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:91
+// /usr/include/qt/QtGui/qstylehints.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int cursorFlashTime() const
@@ -267,7 +267,7 @@ func (this *QStyleHints) CursorFlashTime() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:92
+// /usr/include/qt/QtGui/qstylehints.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool showIsFullScreen() const
@@ -281,7 +281,7 @@ func (this *QStyleHints) ShowIsFullScreen() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:93
+// /usr/include/qt/QtGui/qstylehints.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool showIsMaximized() const
@@ -295,21 +295,7 @@ func (this *QStyleHints) ShowIsMaximized() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:94
-// index:0
-// Public Visibility=Default Availability=Available
-// [1] bool showShortcutsInContextMenus() const
-
-/*
-
- */
-func (this *QStyleHints) ShowShortcutsInContextMenus() bool {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK11QStyleHints27showShortcutsInContextMenusEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtGui/qstylehints.h:95
+// /usr/include/qt/QtGui/qstylehints.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int passwordMaskDelay() const
@@ -323,7 +309,7 @@ func (this *QStyleHints) PasswordMaskDelay() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:96
+// /usr/include/qt/QtGui/qstylehints.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [2] QChar passwordMaskCharacter() const
@@ -339,7 +325,7 @@ func (this *QStyleHints) PasswordMaskCharacter() *qtcore.QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:97
+// /usr/include/qt/QtGui/qstylehints.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal fontSmoothingGamma() const
@@ -353,7 +339,7 @@ func (this *QStyleHints) FontSmoothingGamma() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:98
+// /usr/include/qt/QtGui/qstylehints.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool useRtlExtensions() const
@@ -367,7 +353,7 @@ func (this *QStyleHints) UseRtlExtensions() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:99
+// /usr/include/qt/QtGui/qstylehints.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setFocusOnTouchRelease() const
@@ -381,7 +367,7 @@ func (this *QStyleHints) SetFocusOnTouchRelease() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:100
+// /usr/include/qt/QtGui/qstylehints.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::TabFocusBehavior tabFocusBehavior() const
@@ -395,7 +381,7 @@ func (this *QStyleHints) TabFocusBehavior() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:101
+// /usr/include/qt/QtGui/qstylehints.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabFocusBehavior(Qt::TabFocusBehavior)
@@ -408,7 +394,7 @@ func (this *QStyleHints) SetTabFocusBehavior(tabFocusBehavior int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:102
+// /usr/include/qt/QtGui/qstylehints.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool singleClickActivation() const
@@ -422,7 +408,7 @@ func (this *QStyleHints) SingleClickActivation() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:103
+// /usr/include/qt/QtGui/qstylehints.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool useHoverEffects() const
@@ -436,7 +422,7 @@ func (this *QStyleHints) UseHoverEffects() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:104
+// /usr/include/qt/QtGui/qstylehints.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setUseHoverEffects(bool)
@@ -449,7 +435,7 @@ func (this *QStyleHints) SetUseHoverEffects(useHoverEffects bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:105
+// /usr/include/qt/QtGui/qstylehints.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int wheelScrollLines() const
@@ -463,7 +449,7 @@ func (this *QStyleHints) WheelScrollLines() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:106
+// /usr/include/qt/QtGui/qstylehints.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWheelScrollLines(int)
@@ -476,7 +462,7 @@ func (this *QStyleHints) SetWheelScrollLines(scrollLines int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:109
+// /usr/include/qt/QtGui/qstylehints.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cursorFlashTimeChanged(int)
@@ -489,7 +475,7 @@ func (this *QStyleHints) CursorFlashTimeChanged(cursorFlashTime int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:110
+// /usr/include/qt/QtGui/qstylehints.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void keyboardInputIntervalChanged(int)
@@ -502,7 +488,7 @@ func (this *QStyleHints) KeyboardInputIntervalChanged(keyboardInputInterval int)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:111
+// /usr/include/qt/QtGui/qstylehints.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickIntervalChanged(int)
@@ -515,7 +501,7 @@ func (this *QStyleHints) MouseDoubleClickIntervalChanged(mouseDoubleClickInterva
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:112
+// /usr/include/qt/QtGui/qstylehints.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void mousePressAndHoldIntervalChanged(int)
@@ -528,7 +514,7 @@ func (this *QStyleHints) MousePressAndHoldIntervalChanged(mousePressAndHoldInter
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:113
+// /usr/include/qt/QtGui/qstylehints.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void startDragDistanceChanged(int)
@@ -541,7 +527,7 @@ func (this *QStyleHints) StartDragDistanceChanged(startDragDistance int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:114
+// /usr/include/qt/QtGui/qstylehints.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void startDragTimeChanged(int)
@@ -554,7 +540,7 @@ func (this *QStyleHints) StartDragTimeChanged(startDragTime int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:115
+// /usr/include/qt/QtGui/qstylehints.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void tabFocusBehaviorChanged(Qt::TabFocusBehavior)
@@ -567,7 +553,7 @@ func (this *QStyleHints) TabFocusBehaviorChanged(tabFocusBehavior int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:116
+// /usr/include/qt/QtGui/qstylehints.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void useHoverEffectsChanged(bool)
@@ -580,7 +566,7 @@ func (this *QStyleHints) UseHoverEffectsChanged(useHoverEffects bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qstylehints.h:117
+// /usr/include/qt/QtGui/qstylehints.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void wheelScrollLinesChanged(int)

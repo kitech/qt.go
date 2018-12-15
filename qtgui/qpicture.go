@@ -18,7 +18,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 17
+// extern C begin: 15
 */
 // import "C"
 import "unsafe"
@@ -535,7 +535,7 @@ func (this *QPicture) IsDetached() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qpicture.h:94
+// /usr/include/qt/QtGui/qpicture.h:93
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] const char * pictureFormat(const QString &)
@@ -556,7 +556,7 @@ func QPicture_PictureFormat(fileName string) string {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qpicture.h:97
+// /usr/include/qt/QtGui/qpicture.h:96
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList inputFormatList()
@@ -577,7 +577,7 @@ func QPicture_InputFormatList() *qtcore.QStringList /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qpicture.h:98
+// /usr/include/qt/QtGui/qpicture.h:97
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QStringList outputFormatList()
@@ -598,7 +598,7 @@ func QPicture_OutputFormatList() *qtcore.QStringList /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qpicture.h:101
+// /usr/include/qt/QtGui/qpicture.h:99
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QPaintEngine * paintEngine() const
@@ -612,7 +612,7 @@ func (this *QPicture) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 	return /*==*/ NewQPaintEngineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qpicture.h:106
+// /usr/include/qt/QtGui/qpicture.h:104
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] int metric(QPaintDevice::PaintDeviceMetric) const

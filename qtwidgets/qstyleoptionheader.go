@@ -64,7 +64,7 @@ func (*QStyleOptionHeader) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionHea
 	return NewQStyleOptionHeaderFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:226
+// /usr/include/qt/QtWidgets/qstyleoption.h:215
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionHeader()
@@ -83,7 +83,7 @@ func NewQStyleOptionHeader() *QStyleOptionHeader {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:230
+// /usr/include/qt/QtWidgets/qstyleoption.h:219
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionHeader(int)

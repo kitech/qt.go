@@ -157,7 +157,7 @@ func (*QWindow) NewFromPointer(cthis unsafe.Pointer) *QWindow {
 	return NewQWindowFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:97
+// /usr/include/qt/QtGui/qwindow.h:94
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -171,7 +171,7 @@ func (this *QWindow) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qwindow.h:144
+// /usr/include/qt/QtGui/qwindow.h:141
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWindow(QScreen *)
@@ -198,7 +198,7 @@ func NewQWindow(screen QScreen_ITF /*777 QScreen **/) *QWindow {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qwindow.h:144
+// /usr/include/qt/QtGui/qwindow.h:141
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWindow(QScreen *)
@@ -223,7 +223,7 @@ func NewQWindowp() *QWindow {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qwindow.h:145
+// /usr/include/qt/QtGui/qwindow.h:142
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QWindow(QWindow *)
@@ -250,7 +250,7 @@ func NewQWindow1(parent QWindow_ITF /*777 QWindow **/) *QWindow {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qwindow.h:146
+// /usr/include/qt/QtGui/qwindow.h:143
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QWindow()
@@ -265,7 +265,7 @@ func DeleteQWindow(this *QWindow) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:148
+// /usr/include/qt/QtGui/qwindow.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSurfaceType(QSurface::SurfaceType)
@@ -284,7 +284,7 @@ func (this *QWindow) SetSurfaceType(surfaceType int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:149
+// /usr/include/qt/QtGui/qwindow.h:146
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QSurface::SurfaceType surfaceType() const
@@ -302,7 +302,7 @@ func (this *QWindow) SurfaceType() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:151
+// /usr/include/qt/QtGui/qwindow.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isVisible() const
@@ -316,7 +316,7 @@ func (this *QWindow) IsVisible() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qwindow.h:153
+// /usr/include/qt/QtGui/qwindow.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QWindow::Visibility visibility() const
@@ -330,7 +330,7 @@ func (this *QWindow) Visibility() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:154
+// /usr/include/qt/QtGui/qwindow.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVisibility(QWindow::Visibility)
@@ -343,7 +343,7 @@ func (this *QWindow) SetVisibility(v int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:156
+// /usr/include/qt/QtGui/qwindow.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void create()
@@ -364,7 +364,7 @@ func (this *QWindow) Create() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:158
+// /usr/include/qt/QtGui/qwindow.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] WId winId() const
@@ -382,7 +382,7 @@ func (this *QWindow) WinId() uint64 {
 	return uint64(rv) // 222
 }
 
-// /usr/include/qt/QtGui/qwindow.h:160
+// /usr/include/qt/QtGui/qwindow.h:157
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWindow * parent(QWindow::AncestorMode) const
@@ -404,7 +404,7 @@ func (this *QWindow) Parent(mode int) *QWindow /*777 QWindow **/ {
 	return /*==*/ NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qwindow.h:161
+// /usr/include/qt/QtGui/qwindow.h:158
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QWindow * parent() const
@@ -426,7 +426,7 @@ func (this *QWindow) Parent1() *QWindow /*777 QWindow **/ {
 	return /*==*/ NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qwindow.h:162
+// /usr/include/qt/QtGui/qwindow.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setParent(QWindow *)
@@ -449,7 +449,7 @@ func (this *QWindow) SetParent(parent QWindow_ITF /*777 QWindow **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:164
+// /usr/include/qt/QtGui/qwindow.h:161
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isTopLevel() const
@@ -463,7 +463,7 @@ func (this *QWindow) IsTopLevel() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qwindow.h:166
+// /usr/include/qt/QtGui/qwindow.h:163
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isModal() const
@@ -481,7 +481,7 @@ func (this *QWindow) IsModal() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qwindow.h:167
+// /usr/include/qt/QtGui/qwindow.h:164
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::WindowModality modality() const
@@ -495,7 +495,7 @@ func (this *QWindow) Modality() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:168
+// /usr/include/qt/QtGui/qwindow.h:165
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setModality(Qt::WindowModality)
@@ -508,7 +508,7 @@ func (this *QWindow) SetModality(modality int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:170
+// /usr/include/qt/QtGui/qwindow.h:167
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QSurfaceFormat &)
@@ -540,7 +540,7 @@ func (this *QWindow) SetFormat(format QSurfaceFormat_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:171
+// /usr/include/qt/QtGui/qwindow.h:168
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSurfaceFormat format() const
@@ -564,7 +564,7 @@ func (this *QWindow) Format() *QSurfaceFormat /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qwindow.h:172
+// /usr/include/qt/QtGui/qwindow.h:169
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSurfaceFormat requestedFormat() const
@@ -586,7 +586,7 @@ func (this *QWindow) RequestedFormat() *QSurfaceFormat /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qwindow.h:174
+// /usr/include/qt/QtGui/qwindow.h:171
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlags(Qt::WindowFlags)
@@ -599,7 +599,7 @@ func (this *QWindow) SetFlags(flags int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:175
+// /usr/include/qt/QtGui/qwindow.h:172
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::WindowFlags flags() const
@@ -613,7 +613,7 @@ func (this *QWindow) Flags() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:176
+// /usr/include/qt/QtGui/qwindow.h:173
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlag(Qt::WindowType, bool)
@@ -630,7 +630,7 @@ func (this *QWindow) SetFlag(arg0 int, on bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:176
+// /usr/include/qt/QtGui/qwindow.h:173
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlag(Qt::WindowType, bool)
@@ -649,7 +649,7 @@ func (this *QWindow) SetFlagp(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:177
+// /usr/include/qt/QtGui/qwindow.h:174
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::WindowType type() const
@@ -667,7 +667,7 @@ func (this *QWindow) Type() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:179
+// /usr/include/qt/QtGui/qwindow.h:176
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString title() const
@@ -684,7 +684,7 @@ func (this *QWindow) Title() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qwindow.h:181
+// /usr/include/qt/QtGui/qwindow.h:178
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOpacity(qreal)
@@ -697,7 +697,7 @@ func (this *QWindow) SetOpacity(level float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:182
+// /usr/include/qt/QtGui/qwindow.h:179
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal opacity() const
@@ -711,7 +711,7 @@ func (this *QWindow) Opacity() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qwindow.h:184
+// /usr/include/qt/QtGui/qwindow.h:181
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMask(const QRegion &)
@@ -722,6 +722,8 @@ Sets the mask of the window.
 The mask is a hint to the windowing system that the application does not want to receive mouse or touch input outside the given region.
 
 The window manager may or may not choose to display any areas of the window not included in the mask, thus it is the application's responsibility to clear to transparent the areas that are not part of the mask.
+
+Setting the mask before the window has been created has no effect.
 
 See also mask().
 */
@@ -734,7 +736,7 @@ func (this *QWindow) SetMask(region QRegion_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:185
+// /usr/include/qt/QtGui/qwindow.h:182
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion mask() const
@@ -754,7 +756,7 @@ func (this *QWindow) Mask() *QRegion /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qwindow.h:187
+// /usr/include/qt/QtGui/qwindow.h:184
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isActive() const
@@ -774,7 +776,7 @@ func (this *QWindow) IsActive() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qwindow.h:189
+// /usr/include/qt/QtGui/qwindow.h:186
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reportContentOrientationChange(Qt::ScreenOrientation)
@@ -787,7 +789,7 @@ func (this *QWindow) ReportContentOrientationChange(orientation int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:190
+// /usr/include/qt/QtGui/qwindow.h:187
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ScreenOrientation contentOrientation() const
@@ -801,7 +803,7 @@ func (this *QWindow) ContentOrientation() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:192
+// /usr/include/qt/QtGui/qwindow.h:189
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal devicePixelRatio() const
@@ -821,7 +823,7 @@ func (this *QWindow) DevicePixelRatio() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtGui/qwindow.h:194
+// /usr/include/qt/QtGui/qwindow.h:191
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::WindowState windowState() const
@@ -829,7 +831,7 @@ func (this *QWindow) DevicePixelRatio() float64 {
 /*
 the screen-occupation state of the window
 
-See also setWindowState() and windowStates().
+See also setWindowState().
 */
 func (this *QWindow) WindowState() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow11windowStateEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -837,27 +839,7 @@ func (this *QWindow) WindowState() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:195
-// index:0
-// Public Visibility=Default Availability=Available
-// [4] Qt::WindowStates windowStates() const
-
-/*
-the screen-occupation state of the window
-
-The window can be in a combination of several states. For example, if the window is both minimized and maximized, the window will appear minimized, but clicking on the task bar entry will restore it to the maximized state.
-
-This function was introduced in  Qt 5.10.
-
-See also setWindowStates().
-*/
-func (this *QWindow) WindowStates() int {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QWindow12windowStatesEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return int(rv)
-}
-
-// /usr/include/qt/QtGui/qwindow.h:196
+// /usr/include/qt/QtGui/qwindow.h:192
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWindowState(Qt::WindowState)
@@ -869,37 +851,14 @@ The window state represents whether the window appears in the windowing system a
 
 The enum value Qt::WindowActive is not an accepted parameter.
 
-See also windowState(), showNormal(), showFullScreen(), showMinimized(), showMaximized(), and setWindowStates().
+See also windowState(), showNormal(), showFullScreen(), showMinimized(), and showMaximized().
 */
 func (this *QWindow) SetWindowState(state int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow14setWindowStateEN2Qt11WindowStateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), state)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:197
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void setWindowStates(Qt::WindowStates)
-
-/*
-set the screen-occupation state of the window
-
-The window state represents whether the window appears in the windowing system as maximized, minimized and/or fullscreen.
-
-The window can be in a combination of several states. For example, if the window is both minimized and maximized, the window will appear minimized, but clicking on the task bar entry will restore it to the maximized state.
-
-The enum value Qt::WindowActive should not be set.
-
-This function was introduced in  Qt 5.10.
-
-See also windowStates(), showNormal(), showFullScreen(), showMinimized(), and showMaximized().
-*/
-func (this *QWindow) SetWindowStates(states int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow15setWindowStatesE6QFlagsIN2Qt11WindowStateEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), states)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qwindow.h:199
+// /usr/include/qt/QtGui/qwindow.h:194
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTransientParent(QWindow *)
@@ -922,7 +881,7 @@ func (this *QWindow) SetTransientParent(parent QWindow_ITF /*777 QWindow **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:200
+// /usr/include/qt/QtGui/qwindow.h:195
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWindow * transientParent() const
@@ -938,7 +897,7 @@ func (this *QWindow) TransientParent() *QWindow /*777 QWindow **/ {
 	return /*==*/ NewQWindowFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qwindow.h:202
+// /usr/include/qt/QtGui/qwindow.h:197
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isAncestorOf(const QWindow *, QWindow::AncestorMode) const
@@ -956,7 +915,7 @@ func (this *QWindow) IsAncestorOf(child QWindow_ITF /*777 const QWindow **/, mod
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qwindow.h:202
+// /usr/include/qt/QtGui/qwindow.h:197
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isAncestorOf(const QWindow *, QWindow::AncestorMode) const
@@ -976,7 +935,7 @@ func (this *QWindow) IsAncestorOfp(child QWindow_ITF /*777 const QWindow **/) bo
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qwindow.h:204
+// /usr/include/qt/QtGui/qwindow.h:199
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isExposed() const
@@ -996,7 +955,7 @@ func (this *QWindow) IsExposed() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qwindow.h:206
+// /usr/include/qt/QtGui/qwindow.h:201
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int minimumWidth() const
@@ -1010,7 +969,7 @@ func (this *QWindow) MinimumWidth() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qwindow.h:207
+// /usr/include/qt/QtGui/qwindow.h:202
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int minimumHeight() const
@@ -1024,7 +983,7 @@ func (this *QWindow) MinimumHeight() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qwindow.h:208
+// /usr/include/qt/QtGui/qwindow.h:203
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int maximumWidth() const
@@ -1038,7 +997,7 @@ func (this *QWindow) MaximumWidth() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qwindow.h:209
+// /usr/include/qt/QtGui/qwindow.h:204
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int maximumHeight() const
@@ -1052,7 +1011,7 @@ func (this *QWindow) MaximumHeight() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qwindow.h:211
+// /usr/include/qt/QtGui/qwindow.h:206
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize minimumSize() const
@@ -1070,7 +1029,7 @@ func (this *QWindow) MinimumSize() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qwindow.h:212
+// /usr/include/qt/QtGui/qwindow.h:207
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize maximumSize() const
@@ -1088,7 +1047,7 @@ func (this *QWindow) MaximumSize() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qwindow.h:213
+// /usr/include/qt/QtGui/qwindow.h:208
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize baseSize() const
@@ -1106,7 +1065,7 @@ func (this *QWindow) BaseSize() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qwindow.h:214
+// /usr/include/qt/QtGui/qwindow.h:209
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize sizeIncrement() const
@@ -1124,7 +1083,7 @@ func (this *QWindow) SizeIncrement() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qwindow.h:216
+// /usr/include/qt/QtGui/qwindow.h:211
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumSize(const QSize &)
@@ -1145,7 +1104,7 @@ func (this *QWindow) SetMinimumSize(size qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:217
+// /usr/include/qt/QtGui/qwindow.h:212
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximumSize(const QSize &)
@@ -1166,7 +1125,7 @@ func (this *QWindow) SetMaximumSize(size qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:218
+// /usr/include/qt/QtGui/qwindow.h:213
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBaseSize(const QSize &)
@@ -1187,7 +1146,7 @@ func (this *QWindow) SetBaseSize(size qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:219
+// /usr/include/qt/QtGui/qwindow.h:214
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSizeIncrement(const QSize &)
@@ -1212,7 +1171,45 @@ func (this *QWindow) SetSizeIncrement(size qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:221
+// /usr/include/qt/QtGui/qwindow.h:216
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setGeometry(int, int, int, int)
+
+/*
+Sets the geometry of the window, excluding its window frame, to a rectangle constructed from posx, posy, w and h.
+
+The geometry is in relation to the virtualGeometry() of its screen.
+
+See also geometry().
+*/
+func (this *QWindow) SetGeometry(posx int, posy int, w int, h int) {
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow11setGeometryEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), posx, posy, w, h)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:217
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void setGeometry(const QRect &)
+
+/*
+Sets the geometry of the window, excluding its window frame, to a rectangle constructed from posx, posy, w and h.
+
+The geometry is in relation to the virtualGeometry() of its screen.
+
+See also geometry().
+*/
+func (this *QWindow) SetGeometry1(rect qtcore.QRect_ITF) {
+	var convArg0 unsafe.Pointer
+	if rect != nil && rect.QRect_PTR() != nil {
+		convArg0 = rect.QRect_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow11setGeometryERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtGui/qwindow.h:218
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect geometry() const
@@ -1232,7 +1229,7 @@ func (this *QWindow) Geometry() *qtcore.QRect /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qwindow.h:223
+// /usr/include/qt/QtGui/qwindow.h:220
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QMargins frameMargins() const
@@ -1250,7 +1247,7 @@ func (this *QWindow) FrameMargins() *qtcore.QMargins /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qwindow.h:224
+// /usr/include/qt/QtGui/qwindow.h:221
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect frameGeometry() const
@@ -1270,7 +1267,7 @@ func (this *QWindow) FrameGeometry() *qtcore.QRect /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qwindow.h:226
+// /usr/include/qt/QtGui/qwindow.h:223
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint framePosition() const
@@ -1290,7 +1287,7 @@ func (this *QWindow) FramePosition() *qtcore.QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qwindow.h:227
+// /usr/include/qt/QtGui/qwindow.h:224
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFramePosition(const QPoint &)
@@ -1311,7 +1308,7 @@ func (this *QWindow) SetFramePosition(point qtcore.QPoint_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:229
+// /usr/include/qt/QtGui/qwindow.h:226
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int width() const
@@ -1325,7 +1322,7 @@ func (this *QWindow) Width() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qwindow.h:230
+// /usr/include/qt/QtGui/qwindow.h:227
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int height() const
@@ -1339,7 +1336,7 @@ func (this *QWindow) Height() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qwindow.h:231
+// /usr/include/qt/QtGui/qwindow.h:228
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int x() const
@@ -1353,7 +1350,7 @@ func (this *QWindow) X() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qwindow.h:232
+// /usr/include/qt/QtGui/qwindow.h:229
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int y() const
@@ -1367,7 +1364,7 @@ func (this *QWindow) Y() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qwindow.h:234
+// /usr/include/qt/QtGui/qwindow.h:231
 // index:0
 // Public inline virtual Visibility=Default Availability=Available
 // [8] QSize size() const
@@ -1387,7 +1384,7 @@ func (this *QWindow) Size() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qwindow.h:235
+// /usr/include/qt/QtGui/qwindow.h:232
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPoint position() const
@@ -1405,7 +1402,7 @@ func (this *QWindow) Position() *qtcore.QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qwindow.h:237
+// /usr/include/qt/QtGui/qwindow.h:234
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPosition(const QPoint &)
@@ -1426,7 +1423,7 @@ func (this *QWindow) SetPosition(pt qtcore.QPoint_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:238
+// /usr/include/qt/QtGui/qwindow.h:235
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setPosition(int, int)
@@ -1443,7 +1440,7 @@ func (this *QWindow) SetPosition1(posx int, posy int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:240
+// /usr/include/qt/QtGui/qwindow.h:237
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resize(const QSize &)
@@ -1462,7 +1459,7 @@ func (this *QWindow) Resize(newSize qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:241
+// /usr/include/qt/QtGui/qwindow.h:238
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void resize(int, int)
@@ -1477,7 +1474,7 @@ func (this *QWindow) Resize1(w int, h int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:243
+// /usr/include/qt/QtGui/qwindow.h:240
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFilePath(const QString &)
@@ -1496,7 +1493,7 @@ func (this *QWindow) SetFilePath(filePath string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:244
+// /usr/include/qt/QtGui/qwindow.h:241
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString filePath() const
@@ -1515,7 +1512,7 @@ func (this *QWindow) FilePath() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qwindow.h:246
+// /usr/include/qt/QtGui/qwindow.h:243
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
@@ -1525,9 +1522,7 @@ Sets the window's icon in the windowing system
 
 The window icon might be used by the windowing system for example to decorate the window, and/or in the task switcher.
 
-Note: On macOS, the window title bar icon is meant for windows representing documents, and will only show up if a file path is also set.
-
-See also icon() and setFilePath().
+See also icon().
 */
 func (this *QWindow) SetIcon(icon QIcon_ITF) {
 	var convArg0 unsafe.Pointer
@@ -1538,13 +1533,13 @@ func (this *QWindow) SetIcon(icon QIcon_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:247
+// /usr/include/qt/QtGui/qwindow.h:244
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIcon icon() const
 
 /*
-Returns the window's icon in the windowing system
+Sets the window's icon in the windowing system
 
 See also setIcon().
 */
@@ -1556,7 +1551,7 @@ func (this *QWindow) Icon() *QIcon /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qwindow.h:249
+// /usr/include/qt/QtGui/qwindow.h:246
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void destroy()
@@ -1571,7 +1566,7 @@ func (this *QWindow) Destroy() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:253
+// /usr/include/qt/QtGui/qwindow.h:250
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setKeyboardGrabEnabled(bool)
@@ -1589,7 +1584,7 @@ func (this *QWindow) SetKeyboardGrabEnabled(grab bool) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qwindow.h:254
+// /usr/include/qt/QtGui/qwindow.h:251
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setMouseGrabEnabled(bool)
@@ -1607,7 +1602,7 @@ func (this *QWindow) SetMouseGrabEnabled(grab bool) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qwindow.h:256
+// /usr/include/qt/QtGui/qwindow.h:253
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QScreen * screen() const
@@ -1625,7 +1620,7 @@ func (this *QWindow) Screen() *QScreen /*777 QScreen **/ {
 	return /*==*/ NewQScreenFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qwindow.h:257
+// /usr/include/qt/QtGui/qwindow.h:254
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScreen(QScreen *)
@@ -1650,7 +1645,7 @@ func (this *QWindow) SetScreen(screen QScreen_ITF /*777 QScreen **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:259
+// /usr/include/qt/QtGui/qwindow.h:256
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QAccessibleInterface * accessibleRoot() const
@@ -1664,7 +1659,7 @@ func (this *QWindow) AccessibleRoot() *QAccessibleInterface /*777 QAccessibleInt
 	return /*==*/ NewQAccessibleInterfaceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qwindow.h:260
+// /usr/include/qt/QtGui/qwindow.h:257
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QObject * focusObject() const
@@ -1678,7 +1673,7 @@ func (this *QWindow) FocusObject() *qtcore.QObject /*777 QObject **/ {
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qwindow.h:262
+// /usr/include/qt/QtGui/qwindow.h:259
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint mapToGlobal(const QPoint &) const
@@ -1700,7 +1695,7 @@ func (this *QWindow) MapToGlobal(pos qtcore.QPoint_ITF) *qtcore.QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qwindow.h:263
+// /usr/include/qt/QtGui/qwindow.h:260
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint mapFromGlobal(const QPoint &) const
@@ -1722,7 +1717,7 @@ func (this *QWindow) MapFromGlobal(pos qtcore.QPoint_ITF) *qtcore.QPoint /*123*/
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qwindow.h:266
+// /usr/include/qt/QtGui/qwindow.h:263
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QCursor cursor() const
@@ -1740,7 +1735,7 @@ func (this *QWindow) Cursor() *QCursor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qwindow.h:267
+// /usr/include/qt/QtGui/qwindow.h:264
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCursor(const QCursor &)
@@ -1767,7 +1762,7 @@ func (this *QWindow) SetCursor(arg0 QCursor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:268
+// /usr/include/qt/QtGui/qwindow.h:265
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void unsetCursor()
@@ -1780,7 +1775,7 @@ func (this *QWindow) UnsetCursor() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:271
+// /usr/include/qt/QtGui/qwindow.h:268
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QWindow * fromWinId(WId)
@@ -1809,7 +1804,7 @@ func QWindow_FromWinId(id uint64) *QWindow /*777 QWindow **/ {
 	return rv
 }
 
-// /usr/include/qt/QtGui/qwindow.h:279
+// /usr/include/qt/QtGui/qwindow.h:271
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void requestActivate()
@@ -1824,7 +1819,7 @@ func (this *QWindow) RequestActivate() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:281
+// /usr/include/qt/QtGui/qwindow.h:273
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVisible(bool)
@@ -1837,7 +1832,7 @@ func (this *QWindow) SetVisible(visible bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:283
+// /usr/include/qt/QtGui/qwindow.h:275
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void show()
@@ -1854,7 +1849,7 @@ func (this *QWindow) Show() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:284
+// /usr/include/qt/QtGui/qwindow.h:276
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void hide()
@@ -1871,7 +1866,7 @@ func (this *QWindow) Hide() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:286
+// /usr/include/qt/QtGui/qwindow.h:278
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showMinimized()
@@ -1879,16 +1874,16 @@ func (this *QWindow) Hide() {
 /*
 Shows the window as minimized.
 
-Equivalent to calling setWindowStates(Qt::WindowMinimized) and then setVisible(true).
+Equivalent to calling setWindowState(Qt::WindowMinimized) and then setVisible(true).
 
-See also setWindowStates() and setVisible().
+See also setWindowState() and setVisible().
 */
 func (this *QWindow) ShowMinimized() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow13showMinimizedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:287
+// /usr/include/qt/QtGui/qwindow.h:279
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showMaximized()
@@ -1896,16 +1891,16 @@ func (this *QWindow) ShowMinimized() {
 /*
 Shows the window as maximized.
 
-Equivalent to calling setWindowStates(Qt::WindowMaximized) and then setVisible(true).
+Equivalent to calling setWindowState(Qt::WindowMaximized) and then setVisible(true).
 
-See also setWindowStates() and setVisible().
+See also setWindowState() and setVisible().
 */
 func (this *QWindow) ShowMaximized() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow13showMaximizedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:288
+// /usr/include/qt/QtGui/qwindow.h:280
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showFullScreen()
@@ -1913,16 +1908,16 @@ func (this *QWindow) ShowMaximized() {
 /*
 Shows the window as fullscreen.
 
-Equivalent to calling setWindowStates(Qt::WindowFullScreen) and then setVisible(true).
+Equivalent to calling setWindowState(Qt::WindowFullScreen) and then setVisible(true).
 
-See also setWindowStates() and setVisible().
+See also setWindowState() and setVisible().
 */
 func (this *QWindow) ShowFullScreen() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow14showFullScreenEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:289
+// /usr/include/qt/QtGui/qwindow.h:281
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showNormal()
@@ -1930,16 +1925,16 @@ func (this *QWindow) ShowFullScreen() {
 /*
 Shows the window as normal, i.e. neither maximized, minimized, nor fullscreen.
 
-Equivalent to calling setWindowStates(Qt::WindowNoState) and then setVisible(true).
+Equivalent to calling setWindowState(Qt::WindowNoState) and then setVisible(true).
 
-See also setWindowStates() and setVisible().
+See also setWindowState() and setVisible().
 */
 func (this *QWindow) ShowNormal() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow10showNormalEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:291
+// /usr/include/qt/QtGui/qwindow.h:283
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool close()
@@ -1957,7 +1952,7 @@ func (this *QWindow) Close() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qwindow.h:292
+// /usr/include/qt/QtGui/qwindow.h:284
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void raise()
@@ -1972,7 +1967,7 @@ func (this *QWindow) Raise() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:293
+// /usr/include/qt/QtGui/qwindow.h:285
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void lower()
@@ -1987,7 +1982,7 @@ func (this *QWindow) Lower() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:295
+// /usr/include/qt/QtGui/qwindow.h:287
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTitle(const QString &)
@@ -2002,7 +1997,7 @@ func (this *QWindow) SetTitle(arg0 string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:297
+// /usr/include/qt/QtGui/qwindow.h:289
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setX(int)
@@ -2015,7 +2010,7 @@ func (this *QWindow) SetX(arg int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:298
+// /usr/include/qt/QtGui/qwindow.h:290
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setY(int)
@@ -2028,7 +2023,7 @@ func (this *QWindow) SetY(arg int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:299
+// /usr/include/qt/QtGui/qwindow.h:291
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidth(int)
@@ -2041,7 +2036,7 @@ func (this *QWindow) SetWidth(arg int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:300
+// /usr/include/qt/QtGui/qwindow.h:292
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHeight(int)
@@ -2054,45 +2049,7 @@ func (this *QWindow) SetHeight(arg int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:301
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void setGeometry(int, int, int, int)
-
-/*
-Sets the geometry of the window, excluding its window frame, to a rectangle constructed from posx, posy, w and h.
-
-The geometry is in relation to the virtualGeometry() of its screen.
-
-See also geometry().
-*/
-func (this *QWindow) SetGeometry(posx int, posy int, w int, h int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow11setGeometryEiiii", qtrt.FFI_TYPE_POINTER, this.GetCthis(), posx, posy, w, h)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qwindow.h:302
-// index:1
-// Public Visibility=Default Availability=Available
-// [-2] void setGeometry(const QRect &)
-
-/*
-Sets the geometry of the window, excluding its window frame, to a rectangle constructed from posx, posy, w and h.
-
-The geometry is in relation to the virtualGeometry() of its screen.
-
-See also geometry().
-*/
-func (this *QWindow) SetGeometry1(rect qtcore.QRect_ITF) {
-	var convArg0 unsafe.Pointer
-	if rect != nil && rect.QRect_PTR() != nil {
-		convArg0 = rect.QRect_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow11setGeometryERK5QRect", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qwindow.h:304
+// /usr/include/qt/QtGui/qwindow.h:294
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumWidth(int)
@@ -2105,7 +2062,7 @@ func (this *QWindow) SetMinimumWidth(w int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:305
+// /usr/include/qt/QtGui/qwindow.h:295
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumHeight(int)
@@ -2118,7 +2075,7 @@ func (this *QWindow) SetMinimumHeight(h int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:306
+// /usr/include/qt/QtGui/qwindow.h:296
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximumWidth(int)
@@ -2131,7 +2088,7 @@ func (this *QWindow) SetMaximumWidth(w int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:307
+// /usr/include/qt/QtGui/qwindow.h:297
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximumHeight(int)
@@ -2144,7 +2101,7 @@ func (this *QWindow) SetMaximumHeight(h int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:309
+// /usr/include/qt/QtGui/qwindow.h:299
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void alert(int)
@@ -2161,7 +2118,7 @@ func (this *QWindow) Alert(msec int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:311
+// /usr/include/qt/QtGui/qwindow.h:301
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void requestUpdate()
@@ -2184,7 +2141,7 @@ func (this *QWindow) RequestUpdate() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:314
+// /usr/include/qt/QtGui/qwindow.h:304
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void screenChanged(QScreen *)
@@ -2201,7 +2158,7 @@ func (this *QWindow) ScreenChanged(screen QScreen_ITF /*777 QScreen **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:315
+// /usr/include/qt/QtGui/qwindow.h:305
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void modalityChanged(Qt::WindowModality)
@@ -2216,20 +2173,20 @@ func (this *QWindow) ModalityChanged(modality int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:316
+// /usr/include/qt/QtGui/qwindow.h:306
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void windowStateChanged(Qt::WindowState)
 
 /*
-This signal is emitted when the windowState changes, either by being set explicitly with setWindowStates(), or automatically when the user clicks one of the titlebar buttons or by other means.
+This signal is emitted when the windowState changes, either by being set explicitly with setWindowState(), or automatically when the user clicks one of the titlebar buttons or by other means.
 */
 func (this *QWindow) WindowStateChanged(windowState int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow18windowStateChangedEN2Qt11WindowStateE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), windowState)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:317
+// /usr/include/qt/QtGui/qwindow.h:307
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void windowTitleChanged(const QString &)
@@ -2244,7 +2201,7 @@ func (this *QWindow) WindowTitleChanged(title string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:319
+// /usr/include/qt/QtGui/qwindow.h:309
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void xChanged(int)
@@ -2257,7 +2214,7 @@ func (this *QWindow) XChanged(arg int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:320
+// /usr/include/qt/QtGui/qwindow.h:310
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void yChanged(int)
@@ -2270,7 +2227,7 @@ func (this *QWindow) YChanged(arg int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:322
+// /usr/include/qt/QtGui/qwindow.h:312
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void widthChanged(int)
@@ -2283,7 +2240,7 @@ func (this *QWindow) WidthChanged(arg int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:323
+// /usr/include/qt/QtGui/qwindow.h:313
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void heightChanged(int)
@@ -2296,7 +2253,7 @@ func (this *QWindow) HeightChanged(arg int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:325
+// /usr/include/qt/QtGui/qwindow.h:315
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void minimumWidthChanged(int)
@@ -2309,7 +2266,7 @@ func (this *QWindow) MinimumWidthChanged(arg int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:326
+// /usr/include/qt/QtGui/qwindow.h:316
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void minimumHeightChanged(int)
@@ -2322,7 +2279,7 @@ func (this *QWindow) MinimumHeightChanged(arg int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:327
+// /usr/include/qt/QtGui/qwindow.h:317
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void maximumWidthChanged(int)
@@ -2335,7 +2292,7 @@ func (this *QWindow) MaximumWidthChanged(arg int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:328
+// /usr/include/qt/QtGui/qwindow.h:318
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void maximumHeightChanged(int)
@@ -2348,7 +2305,7 @@ func (this *QWindow) MaximumHeightChanged(arg int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:330
+// /usr/include/qt/QtGui/qwindow.h:320
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void visibleChanged(bool)
@@ -2361,7 +2318,7 @@ func (this *QWindow) VisibleChanged(arg bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:331
+// /usr/include/qt/QtGui/qwindow.h:321
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void visibilityChanged(QWindow::Visibility)
@@ -2374,7 +2331,7 @@ func (this *QWindow) VisibilityChanged(visibility int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:332
+// /usr/include/qt/QtGui/qwindow.h:322
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activeChanged()
@@ -2387,7 +2344,7 @@ func (this *QWindow) ActiveChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:333
+// /usr/include/qt/QtGui/qwindow.h:323
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void contentOrientationChanged(Qt::ScreenOrientation)
@@ -2400,7 +2357,7 @@ func (this *QWindow) ContentOrientationChanged(orientation int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:335
+// /usr/include/qt/QtGui/qwindow.h:325
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void focusObjectChanged(QObject *)
@@ -2419,7 +2376,7 @@ func (this *QWindow) FocusObjectChanged(object qtcore.QObject_ITF /*777 QObject 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:337
+// /usr/include/qt/QtGui/qwindow.h:327
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void opacityChanged(qreal)
@@ -2432,7 +2389,7 @@ func (this *QWindow) OpacityChanged(opacity float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:340
+// /usr/include/qt/QtGui/qwindow.h:330
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void exposeEvent(QExposeEvent *)
@@ -2457,7 +2414,7 @@ func (this *QWindow) ExposeEvent(arg0 QExposeEvent_ITF /*777 QExposeEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:341
+// /usr/include/qt/QtGui/qwindow.h:331
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
@@ -2476,7 +2433,7 @@ func (this *QWindow) ResizeEvent(arg0 QResizeEvent_ITF /*777 QResizeEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:342
+// /usr/include/qt/QtGui/qwindow.h:332
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void moveEvent(QMoveEvent *)
@@ -2493,7 +2450,7 @@ func (this *QWindow) MoveEvent(arg0 QMoveEvent_ITF /*777 QMoveEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:343
+// /usr/include/qt/QtGui/qwindow.h:333
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
@@ -2514,7 +2471,7 @@ func (this *QWindow) FocusInEvent(arg0 QFocusEvent_ITF /*777 QFocusEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:344
+// /usr/include/qt/QtGui/qwindow.h:334
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
@@ -2535,7 +2492,7 @@ func (this *QWindow) FocusOutEvent(arg0 QFocusEvent_ITF /*777 QFocusEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:346
+// /usr/include/qt/QtGui/qwindow.h:336
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
@@ -2556,7 +2513,7 @@ func (this *QWindow) ShowEvent(arg0 QShowEvent_ITF /*777 QShowEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:347
+// /usr/include/qt/QtGui/qwindow.h:337
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
@@ -2575,7 +2532,7 @@ func (this *QWindow) HideEvent(arg0 QHideEvent_ITF /*777 QHideEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:350
+// /usr/include/qt/QtGui/qwindow.h:340
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -2597,7 +2554,7 @@ func (this *QWindow) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qwindow.h:351
+// /usr/include/qt/QtGui/qwindow.h:341
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
@@ -2616,7 +2573,7 @@ func (this *QWindow) KeyPressEvent(arg0 QKeyEvent_ITF /*777 QKeyEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:352
+// /usr/include/qt/QtGui/qwindow.h:342
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
@@ -2635,7 +2592,7 @@ func (this *QWindow) KeyReleaseEvent(arg0 QKeyEvent_ITF /*777 QKeyEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:353
+// /usr/include/qt/QtGui/qwindow.h:343
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
@@ -2654,7 +2611,7 @@ func (this *QWindow) MousePressEvent(arg0 QMouseEvent_ITF /*777 QMouseEvent **/)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:354
+// /usr/include/qt/QtGui/qwindow.h:344
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
@@ -2673,7 +2630,7 @@ func (this *QWindow) MouseReleaseEvent(arg0 QMouseEvent_ITF /*777 QMouseEvent **
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:355
+// /usr/include/qt/QtGui/qwindow.h:345
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
@@ -2692,7 +2649,7 @@ func (this *QWindow) MouseDoubleClickEvent(arg0 QMouseEvent_ITF /*777 QMouseEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:356
+// /usr/include/qt/QtGui/qwindow.h:346
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
@@ -2709,7 +2666,7 @@ func (this *QWindow) MouseMoveEvent(arg0 QMouseEvent_ITF /*777 QMouseEvent **/) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:358
+// /usr/include/qt/QtGui/qwindow.h:348
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
@@ -2726,7 +2683,7 @@ func (this *QWindow) WheelEvent(arg0 QWheelEvent_ITF /*777 QWheelEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:360
+// /usr/include/qt/QtGui/qwindow.h:350
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void touchEvent(QTouchEvent *)
@@ -2743,7 +2700,7 @@ func (this *QWindow) TouchEvent(arg0 QTouchEvent_ITF /*777 QTouchEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:362
+// /usr/include/qt/QtGui/qwindow.h:352
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void tabletEvent(QTabletEvent *)
@@ -2762,7 +2719,7 @@ func (this *QWindow) TabletEvent(arg0 QTabletEvent_ITF /*777 QTabletEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:364
+// /usr/include/qt/QtGui/qwindow.h:354
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool nativeEvent(const QByteArray &, void *, long *)

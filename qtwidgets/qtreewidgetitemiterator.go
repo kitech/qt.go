@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h
@@ -68,7 +66,7 @@ func (*QTreeWidgetItemIterator) NewFromPointer(cthis unsafe.Pointer) *QTreeWidge
 	return NewQTreeWidgetItemIteratorFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:85
+// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTreeWidgetItemIterator(QTreeWidget *, QTreeWidgetItemIterator::IteratorFlags)
@@ -91,7 +89,7 @@ func NewQTreeWidgetItemIterator(widget QTreeWidget_ITF /*777 QTreeWidget **/, fl
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:85
+// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTreeWidgetItemIterator(QTreeWidget *, QTreeWidgetItemIterator::IteratorFlags)
@@ -116,7 +114,7 @@ func NewQTreeWidgetItemIteratorp(widget QTreeWidget_ITF /*777 QTreeWidget **/) *
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:86
+// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:87
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTreeWidgetItemIterator(QTreeWidgetItem *, QTreeWidgetItemIterator::IteratorFlags)
@@ -139,7 +137,7 @@ func NewQTreeWidgetItemIterator1(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem 
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:86
+// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:87
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTreeWidgetItemIterator(QTreeWidgetItem *, QTreeWidgetItemIterator::IteratorFlags)
@@ -164,7 +162,7 @@ func NewQTreeWidgetItemIterator1p(item QTreeWidgetItem_ITF /*777 QTreeWidgetItem
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:87
+// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTreeWidgetItemIterator()
@@ -179,7 +177,7 @@ func DeleteQTreeWidgetItemIterator(this *QTreeWidgetItemIterator) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:89
+// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QTreeWidgetItemIterator & operator=(const QTreeWidgetItemIterator &)
@@ -199,7 +197,7 @@ func (this *QTreeWidgetItemIterator) Operator_equal(it QTreeWidgetItemIterator_I
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:91
+// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QTreeWidgetItemIterator & operator++()
@@ -215,7 +213,7 @@ func (this *QTreeWidgetItemIterator) Operator_add_add() *QTreeWidgetItemIterator
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:92
+// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:93
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [24] const QTreeWidgetItemIterator operator++(int)
@@ -231,7 +229,7 @@ func (this *QTreeWidgetItemIterator) Operator_add_add1(arg0 int) *QTreeWidgetIte
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:93
+// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:94
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [24] QTreeWidgetItemIterator & operator+=(int)
@@ -247,7 +245,7 @@ func (this *QTreeWidgetItemIterator) Operator_add_equal(n int) *QTreeWidgetItemI
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:95
+// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QTreeWidgetItemIterator & operator--()
@@ -263,7 +261,7 @@ func (this *QTreeWidgetItemIterator) Operator_minus_minus() *QTreeWidgetItemIter
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:96
+// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:97
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [24] const QTreeWidgetItemIterator operator--(int)
@@ -279,7 +277,7 @@ func (this *QTreeWidgetItemIterator) Operator_minus_minus1(arg0 int) *QTreeWidge
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:97
+// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:98
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [24] QTreeWidgetItemIterator & operator-=(int)
@@ -295,7 +293,7 @@ func (this *QTreeWidgetItemIterator) Operator_minus_equal(n int) *QTreeWidgetIte
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:99
+// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:100
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QTreeWidgetItem * operator*() const

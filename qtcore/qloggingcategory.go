@@ -147,9 +147,9 @@ func (this *QLoggingCategory) IsEnabled(type_ int) bool {
 /*
 Changes the message type type for the category to enable.
 
-This method is meant to be used only from inside a filter installed by installFilter(). See Configuring Categories for an overview on how to configure categories globally.
+Note: Changes only affect the current QLoggingCategory object, and won't change the settings of other objects for the same category name. Use either setFilterRules() or installFilter() to change the configuration globally.
 
-Note: QtFatalMsg cannot be changed. It will always remain true.
+Note: QtFatalMsg cannot be changed. It will always return true.
 
 See also isEnabled().
 */

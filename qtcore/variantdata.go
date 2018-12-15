@@ -64,7 +64,7 @@ func (*VariantData) NewFromPointer(cthis unsafe.Pointer) *VariantData {
 	return NewVariantDataFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qmetatype.h:798
+// /usr/include/qt/QtCore/qmetatype.h:797
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void VariantData(const int, const void *, const uint)

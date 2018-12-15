@@ -609,8 +609,6 @@ Returns a polygon which is the intersection of this polygon and r.
 Set operations on polygons will treat the polygons as areas. Non-closed polygons will be treated as implicitly closed.
 
 This function was introduced in  Qt 4.3.
-
-See also intersects().
 */
 func (this *QPolygon) Intersected(r QPolygon_ITF) *QPolygon /*123*/ {
 	var convArg0 unsafe.Pointer
@@ -646,30 +644,6 @@ func (this *QPolygon) Subtracted(r QPolygon_ITF) *QPolygon /*123*/ {
 	rv2 := /*==*/ NewQPolygonFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygon)
 	return rv2
-}
-
-// /usr/include/qt/QtGui/qpolygon.h:102
-// index:0
-// Public Visibility=Default Availability=Available
-// [1] bool intersects(const QPolygon &) const
-
-/*
-Returns true if the current polygon intersects at any point the given polygon p. Also returns true if the current polygon contains or is contained by any part of p.
-
-Set operations on polygons will treat the polygons as areas. Non-closed polygons will be treated as implicitly closed.
-
-This function was introduced in  Qt 5.10.
-
-See also intersected().
-*/
-func (this *QPolygon) Intersects(r QPolygon_ITF) bool {
-	var convArg0 unsafe.Pointer
-	if r != nil && r.QPolygon_PTR() != nil {
-		convArg0 = r.QPolygon_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK8QPolygon10intersectsERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
 }
 
 //  body block end

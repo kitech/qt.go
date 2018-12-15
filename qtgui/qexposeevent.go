@@ -63,7 +63,7 @@ func (*QExposeEvent) NewFromPointer(cthis unsafe.Pointer) *QExposeEvent {
 	return NewQExposeEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:434
+// /usr/include/qt/QtGui/qevent.h:427
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QExposeEvent(const QRegion &)
@@ -86,7 +86,7 @@ func NewQExposeEvent(rgn QRegion_ITF) *QExposeEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:435
+// /usr/include/qt/QtGui/qevent.h:428
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QExposeEvent()
@@ -101,7 +101,7 @@ func DeleteQExposeEvent(this *QExposeEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:437
+// /usr/include/qt/QtGui/qevent.h:430
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QRegion & region() const

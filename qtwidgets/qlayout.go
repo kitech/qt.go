@@ -558,7 +558,7 @@ func (this *QLayout) AddItem(arg0 QLayoutItem_ITF /*777 QLayoutItem **/) {
 // [-2] void removeWidget(QWidget *)
 
 /*
-Removes the widget widget from the layout. After this call, it is the caller's responsibility to give the widget a reasonable geometry or to put the widget back into a layout or to explicitly hide it if necessary.
+Removes the widget widget from the layout. After this call, it is the caller's responsibility to give the widget a reasonable geometry or to put the widget back into a layout.
 
 Note: The ownership of widget remains the same as when it was added.
 

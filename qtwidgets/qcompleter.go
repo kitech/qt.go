@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qcompleter.h
@@ -76,7 +74,7 @@ func (*QCompleter) NewFromPointer(cthis unsafe.Pointer) *QCompleter {
 	return NewQCompleterFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:61
+// /usr/include/qt/QtWidgets/qcompleter.h:62
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -90,7 +88,7 @@ func (this *QCompleter) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:85
+// /usr/include/qt/QtWidgets/qcompleter.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QCompleter(QObject *)
@@ -113,7 +111,7 @@ func NewQCompleter(parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:85
+// /usr/include/qt/QtWidgets/qcompleter.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QCompleter(QObject *)
@@ -134,7 +132,7 @@ func NewQCompleterp() *QCompleter {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:86
+// /usr/include/qt/QtWidgets/qcompleter.h:87
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QCompleter(QAbstractItemModel *, QObject *)
@@ -161,7 +159,7 @@ func NewQCompleter1(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:86
+// /usr/include/qt/QtWidgets/qcompleter.h:87
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QCompleter(QAbstractItemModel *, QObject *)
@@ -186,7 +184,7 @@ func NewQCompleter1p(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemMode
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:88
+// /usr/include/qt/QtWidgets/qcompleter.h:89
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QCompleter(const QStringList &, QObject *)
@@ -213,7 +211,7 @@ func NewQCompleter2(completions qtcore.QStringList_ITF, parent qtcore.QObject_IT
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:88
+// /usr/include/qt/QtWidgets/qcompleter.h:89
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QCompleter(const QStringList &, QObject *)
@@ -238,7 +236,7 @@ func NewQCompleter2p(completions qtcore.QStringList_ITF) *QCompleter {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:90
+// /usr/include/qt/QtWidgets/qcompleter.h:91
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QCompleter()
@@ -253,7 +251,7 @@ func DeleteQCompleter(this *QCompleter) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:92
+// /usr/include/qt/QtWidgets/qcompleter.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidget(QWidget *)
@@ -272,7 +270,7 @@ func (this *QCompleter) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:93
+// /usr/include/qt/QtWidgets/qcompleter.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * widget() const
@@ -288,7 +286,7 @@ func (this *QCompleter) Widget() *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:95
+// /usr/include/qt/QtWidgets/qcompleter.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setModel(QAbstractItemModel *)
@@ -309,7 +307,7 @@ func (this *QCompleter) SetModel(c qtcore.QAbstractItemModel_ITF /*777 QAbstract
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:96
+// /usr/include/qt/QtWidgets/qcompleter.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractItemModel * model() const
@@ -325,7 +323,7 @@ func (this *QCompleter) Model() *qtcore.QAbstractItemModel /*777 QAbstractItemMo
 	return qtcore.NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:98
+// /usr/include/qt/QtWidgets/qcompleter.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCompletionMode(QCompleter::CompletionMode)
@@ -338,7 +336,7 @@ func (this *QCompleter) SetCompletionMode(mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:99
+// /usr/include/qt/QtWidgets/qcompleter.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QCompleter::CompletionMode completionMode() const
@@ -352,7 +350,7 @@ func (this *QCompleter) CompletionMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:101
+// /usr/include/qt/QtWidgets/qcompleter.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFilterMode(Qt::MatchFlags)
@@ -365,7 +363,7 @@ func (this *QCompleter) SetFilterMode(filterMode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:102
+// /usr/include/qt/QtWidgets/qcompleter.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::MatchFlags filterMode() const
@@ -379,7 +377,7 @@ func (this *QCompleter) FilterMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:104
+// /usr/include/qt/QtWidgets/qcompleter.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractItemView * popup() const
@@ -395,7 +393,7 @@ func (this *QCompleter) Popup() *QAbstractItemView /*777 QAbstractItemView **/ {
 	return /*==*/ NewQAbstractItemViewFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:105
+// /usr/include/qt/QtWidgets/qcompleter.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPopup(QAbstractItemView *)
@@ -418,7 +416,7 @@ func (this *QCompleter) SetPopup(popup QAbstractItemView_ITF /*777 QAbstractItem
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:107
+// /usr/include/qt/QtWidgets/qcompleter.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCaseSensitivity(Qt::CaseSensitivity)
@@ -431,7 +429,7 @@ func (this *QCompleter) SetCaseSensitivity(caseSensitivity int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:108
+// /usr/include/qt/QtWidgets/qcompleter.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::CaseSensitivity caseSensitivity() const
@@ -445,7 +443,7 @@ func (this *QCompleter) CaseSensitivity() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:110
+// /usr/include/qt/QtWidgets/qcompleter.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setModelSorting(QCompleter::ModelSorting)
@@ -458,7 +456,7 @@ func (this *QCompleter) SetModelSorting(sorting int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:111
+// /usr/include/qt/QtWidgets/qcompleter.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QCompleter::ModelSorting modelSorting() const
@@ -472,7 +470,7 @@ func (this *QCompleter) ModelSorting() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:113
+// /usr/include/qt/QtWidgets/qcompleter.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCompletionColumn(int)
@@ -485,7 +483,7 @@ func (this *QCompleter) SetCompletionColumn(column int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:114
+// /usr/include/qt/QtWidgets/qcompleter.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int completionColumn() const
@@ -499,7 +497,7 @@ func (this *QCompleter) CompletionColumn() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:116
+// /usr/include/qt/QtWidgets/qcompleter.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCompletionRole(int)
@@ -512,7 +510,7 @@ func (this *QCompleter) SetCompletionRole(role int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:117
+// /usr/include/qt/QtWidgets/qcompleter.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int completionRole() const
@@ -526,7 +524,7 @@ func (this *QCompleter) CompletionRole() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:119
+// /usr/include/qt/QtWidgets/qcompleter.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool wrapAround() const
@@ -540,7 +538,7 @@ func (this *QCompleter) WrapAround() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:121
+// /usr/include/qt/QtWidgets/qcompleter.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int maxVisibleItems() const
@@ -554,7 +552,7 @@ func (this *QCompleter) MaxVisibleItems() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:122
+// /usr/include/qt/QtWidgets/qcompleter.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaxVisibleItems(int)
@@ -567,7 +565,7 @@ func (this *QCompleter) SetMaxVisibleItems(maxItems int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:124
+// /usr/include/qt/QtWidgets/qcompleter.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int completionCount() const
@@ -581,7 +579,7 @@ func (this *QCompleter) CompletionCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:125
+// /usr/include/qt/QtWidgets/qcompleter.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setCurrentRow(int)
@@ -599,7 +597,7 @@ func (this *QCompleter) SetCurrentRow(row int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:126
+// /usr/include/qt/QtWidgets/qcompleter.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentRow() const
@@ -615,7 +613,7 @@ func (this *QCompleter) CurrentRow() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:128
+// /usr/include/qt/QtWidgets/qcompleter.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex currentIndex() const
@@ -633,7 +631,7 @@ func (this *QCompleter) CurrentIndex() *qtcore.QModelIndex /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:129
+// /usr/include/qt/QtWidgets/qcompleter.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString currentCompletion() const
@@ -652,7 +650,7 @@ func (this *QCompleter) CurrentCompletion() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:131
+// /usr/include/qt/QtWidgets/qcompleter.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractItemModel * completionModel() const
@@ -670,7 +668,7 @@ func (this *QCompleter) CompletionModel() *qtcore.QAbstractItemModel /*777 QAbst
 	return qtcore.NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:133
+// /usr/include/qt/QtWidgets/qcompleter.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString completionPrefix() const
@@ -687,7 +685,7 @@ func (this *QCompleter) CompletionPrefix() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:136
+// /usr/include/qt/QtWidgets/qcompleter.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCompletionPrefix(const QString &)
@@ -702,7 +700,7 @@ func (this *QCompleter) SetCompletionPrefix(prefix string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:137
+// /usr/include/qt/QtWidgets/qcompleter.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void complete(const QRect &)
@@ -721,7 +719,7 @@ func (this *QCompleter) Complete(rect qtcore.QRect_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:137
+// /usr/include/qt/QtWidgets/qcompleter.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void complete(const QRect &)
@@ -738,7 +736,7 @@ func (this *QCompleter) Completep() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:138
+// /usr/include/qt/QtWidgets/qcompleter.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWrapAround(bool)
@@ -751,7 +749,7 @@ func (this *QCompleter) SetWrapAround(wrap bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:141
+// /usr/include/qt/QtWidgets/qcompleter.h:142
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString pathFromIndex(const QModelIndex &) const
@@ -776,7 +774,7 @@ func (this *QCompleter) PathFromIndex(index qtcore.QModelIndex_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:142
+// /usr/include/qt/QtWidgets/qcompleter.h:143
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QStringList splitPath(const QString &) const
@@ -800,7 +798,7 @@ func (this *QCompleter) SplitPath(path string) *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:145
+// /usr/include/qt/QtWidgets/qcompleter.h:146
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool eventFilter(QObject *, QEvent *)
@@ -822,7 +820,7 @@ func (this *QCompleter) EventFilter(o qtcore.QObject_ITF /*777 QObject **/, e qt
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:146
+// /usr/include/qt/QtWidgets/qcompleter.h:147
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -840,7 +838,7 @@ func (this *QCompleter) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:149
+// /usr/include/qt/QtWidgets/qcompleter.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activated(const QString &)
@@ -848,10 +846,10 @@ func (this *QCompleter) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 /*
 This signal is sent when an item in the popup() is activated by the user (by clicking or pressing return). The item's text is given.
 
-Note: Signal activated is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal activated is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(completer, QOverload<const QString &>::of(&QCompleter::activated),
+  connect(completer, static_cast<void(QCompleter::*)(const QString &)>(&QCompleter::activated),
       [=](const QString &text){ /-* ... *-/ });
 */
 func (this *QCompleter) Activated(text string) {
@@ -861,7 +859,7 @@ func (this *QCompleter) Activated(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:150
+// /usr/include/qt/QtWidgets/qcompleter.h:151
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void activated(const QModelIndex &)
@@ -869,10 +867,10 @@ func (this *QCompleter) Activated(text string) {
 /*
 This signal is sent when an item in the popup() is activated by the user (by clicking or pressing return). The item's text is given.
 
-Note: Signal activated is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal activated is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(completer, QOverload<const QString &>::of(&QCompleter::activated),
+  connect(completer, static_cast<void(QCompleter::*)(const QString &)>(&QCompleter::activated),
       [=](const QString &text){ /-* ... *-/ });
 */
 func (this *QCompleter) Activated1(index qtcore.QModelIndex_ITF) {
@@ -884,7 +882,7 @@ func (this *QCompleter) Activated1(index qtcore.QModelIndex_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:151
+// /usr/include/qt/QtWidgets/qcompleter.h:152
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void highlighted(const QString &)
@@ -892,10 +890,10 @@ func (this *QCompleter) Activated1(index qtcore.QModelIndex_ITF) {
 /*
 This signal is sent when an item in the popup() is highlighted by the user. It is also sent if complete() is called with the completionMode() set to QCompleter::InlineCompletion. The item's text is given.
 
-Note: Signal highlighted is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal highlighted is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(completer, QOverload<const QString &>::of(&QCompleter::highlighted),
+  connect(completer, static_cast<void(QCompleter::*)(const QString &)>(&QCompleter::highlighted),
       [=](const QString &text){ /-* ... *-/ });
 */
 func (this *QCompleter) Highlighted(text string) {
@@ -905,7 +903,7 @@ func (this *QCompleter) Highlighted(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:152
+// /usr/include/qt/QtWidgets/qcompleter.h:153
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void highlighted(const QModelIndex &)
@@ -913,10 +911,10 @@ func (this *QCompleter) Highlighted(text string) {
 /*
 This signal is sent when an item in the popup() is highlighted by the user. It is also sent if complete() is called with the completionMode() set to QCompleter::InlineCompletion. The item's text is given.
 
-Note: Signal highlighted is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal highlighted is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(completer, QOverload<const QString &>::of(&QCompleter::highlighted),
+  connect(completer, static_cast<void(QCompleter::*)(const QString &)>(&QCompleter::highlighted),
       [=](const QString &text){ /-* ... *-/ });
 */
 func (this *QCompleter) Highlighted1(index qtcore.QModelIndex_ITF) {

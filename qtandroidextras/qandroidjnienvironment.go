@@ -18,7 +18,7 @@ package qtandroidextras
 
 /*
 #include <stdlib.h>
-// extern C begin: 10
+// extern C begin: 3
 */
 // import "C"
 import "unsafe"

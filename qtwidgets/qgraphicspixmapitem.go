@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h
@@ -81,7 +79,7 @@ func (*QGraphicsPixmapItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsPixma
 	return NewQGraphicsPixmapItemFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:825
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:826
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsPixmapItem(QGraphicsItem *)
@@ -104,7 +102,7 @@ func NewQGraphicsPixmapItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *Q
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:825
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:826
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsPixmapItem(QGraphicsItem *)
@@ -125,7 +123,7 @@ func NewQGraphicsPixmapItemp() *QGraphicsPixmapItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:826
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:827
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsPixmapItem(const QPixmap &, QGraphicsItem *)
@@ -152,7 +150,7 @@ func NewQGraphicsPixmapItem1(pixmap qtgui.QPixmap_ITF, parent QGraphicsItem_ITF 
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:826
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:827
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsPixmapItem(const QPixmap &, QGraphicsItem *)
@@ -177,7 +175,7 @@ func NewQGraphicsPixmapItem1p(pixmap qtgui.QPixmap_ITF) *QGraphicsPixmapItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:827
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:828
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsPixmapItem()
@@ -192,7 +190,7 @@ func DeleteQGraphicsPixmapItem(this *QGraphicsPixmapItem) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:829
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:830
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QPixmap pixmap() const
@@ -208,7 +206,7 @@ func (this *QGraphicsPixmapItem) Pixmap() *qtgui.QPixmap /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:830
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:831
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPixmap(const QPixmap &)
@@ -225,7 +223,7 @@ func (this *QGraphicsPixmapItem) SetPixmap(pixmap qtgui.QPixmap_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:832
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:833
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::TransformationMode transformationMode() const
@@ -239,7 +237,7 @@ func (this *QGraphicsPixmapItem) TransformationMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:833
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:834
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTransformationMode(Qt::TransformationMode)
@@ -252,7 +250,7 @@ func (this *QGraphicsPixmapItem) SetTransformationMode(mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:835
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:836
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF offset() const
@@ -268,7 +266,7 @@ func (this *QGraphicsPixmapItem) Offset() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:836
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:837
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOffset(const QPointF &)
@@ -285,7 +283,7 @@ func (this *QGraphicsPixmapItem) SetOffset(offset qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:837
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:838
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setOffset(qreal, qreal)
@@ -298,7 +296,7 @@ func (this *QGraphicsPixmapItem) SetOffset1(x float64, y float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:839
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:840
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF boundingRect() const
@@ -336,7 +334,7 @@ func (this *QGraphicsPixmapItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:840
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:841
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QPainterPath shape() const
@@ -370,7 +368,7 @@ func (this *QGraphicsPixmapItem) Shape() *qtgui.QPainterPath /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:841
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:842
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool contains(const QPointF &) const
@@ -392,7 +390,7 @@ func (this *QGraphicsPixmapItem) Contains(point qtcore.QPointF_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:843
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:844
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
@@ -441,7 +439,7 @@ func (this *QGraphicsPixmapItem) Paint(painter qtgui.QPainter_ITF /*777 QPainter
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:845
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:846
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isObscuredBy(const QGraphicsItem *) const
@@ -465,7 +463,7 @@ func (this *QGraphicsPixmapItem) IsObscuredBy(item QGraphicsItem_ITF /*777 const
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:846
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:847
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QPainterPath opaqueArea() const
@@ -487,7 +485,7 @@ func (this *QGraphicsPixmapItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:849
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:850
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int type() const
@@ -525,7 +523,7 @@ func (this *QGraphicsPixmapItem) Type() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:851
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:852
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QGraphicsPixmapItem::ShapeMode shapeMode() const
@@ -539,7 +537,7 @@ func (this *QGraphicsPixmapItem) ShapeMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:852
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:853
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setShapeMode(QGraphicsPixmapItem::ShapeMode)
@@ -552,7 +550,7 @@ func (this *QGraphicsPixmapItem) SetShapeMode(mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:855
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:856
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool supportsExtension(QGraphicsItem::Extension) const
@@ -566,7 +564,7 @@ func (this *QGraphicsPixmapItem) SupportsExtension(extension int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:856
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:857
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setExtension(QGraphicsItem::Extension, const QVariant &)
@@ -583,7 +581,7 @@ func (this *QGraphicsPixmapItem) SetExtension(extension int, variant qtcore.QVar
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:857
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:858
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant extension(const QVariant &) const

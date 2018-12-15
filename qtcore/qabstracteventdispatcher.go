@@ -352,7 +352,7 @@ func (this *QAbstractEventDispatcher) RemainingTime(timerId int) int {
 /*
 Wakes up the event loop.
 
-Note: This function is thread-safe.
+Note: This function is thread-safe
 
 See also awake().
 */
@@ -419,7 +419,7 @@ func (this *QAbstractEventDispatcher) ClosingDown() {
 // [-2] void installNativeEventFilter(QAbstractNativeEventFilter *)
 
 /*
-Installs an event filter filterObj for all native events received by the application.
+Installs an event filter filterObj for all native event filters received by the application.
 
 The event filter filterObj receives events via its nativeEventFilter() function, which is called for all events received by all threads.
 

@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qspinbox.h
@@ -91,7 +89,7 @@ func (*QSpinBox) NewFromPointer(cthis unsafe.Pointer) *QSpinBox {
 	return NewQSpinBoxFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:53
+// /usr/include/qt/QtWidgets/qspinbox.h:54
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -105,7 +103,7 @@ func (this *QSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject *
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:65
+// /usr/include/qt/QtWidgets/qspinbox.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSpinBox(QWidget *)
@@ -130,7 +128,7 @@ func NewQSpinBox(parent QWidget_ITF /*777 QWidget **/) *QSpinBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:65
+// /usr/include/qt/QtWidgets/qspinbox.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSpinBox(QWidget *)
@@ -153,7 +151,7 @@ func NewQSpinBoxp() *QSpinBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:66
+// /usr/include/qt/QtWidgets/qspinbox.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSpinBox()
@@ -168,7 +166,7 @@ func DeleteQSpinBox(this *QSpinBox) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:68
+// /usr/include/qt/QtWidgets/qspinbox.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int value() const
@@ -182,7 +180,7 @@ func (this *QSpinBox) Value() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:70
+// /usr/include/qt/QtWidgets/qspinbox.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString prefix() const
@@ -199,7 +197,7 @@ func (this *QSpinBox) Prefix() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:71
+// /usr/include/qt/QtWidgets/qspinbox.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPrefix(const QString &)
@@ -214,7 +212,7 @@ func (this *QSpinBox) SetPrefix(prefix string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:73
+// /usr/include/qt/QtWidgets/qspinbox.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString suffix() const
@@ -231,7 +229,7 @@ func (this *QSpinBox) Suffix() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:74
+// /usr/include/qt/QtWidgets/qspinbox.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSuffix(const QString &)
@@ -246,7 +244,7 @@ func (this *QSpinBox) SetSuffix(suffix string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:76
+// /usr/include/qt/QtWidgets/qspinbox.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString cleanText() const
@@ -263,7 +261,7 @@ func (this *QSpinBox) CleanText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:78
+// /usr/include/qt/QtWidgets/qspinbox.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int singleStep() const
@@ -277,7 +275,7 @@ func (this *QSpinBox) SingleStep() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:79
+// /usr/include/qt/QtWidgets/qspinbox.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSingleStep(int)
@@ -290,7 +288,7 @@ func (this *QSpinBox) SetSingleStep(val int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:81
+// /usr/include/qt/QtWidgets/qspinbox.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int minimum() const
@@ -304,7 +302,7 @@ func (this *QSpinBox) Minimum() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:82
+// /usr/include/qt/QtWidgets/qspinbox.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimum(int)
@@ -317,7 +315,7 @@ func (this *QSpinBox) SetMinimum(min int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:84
+// /usr/include/qt/QtWidgets/qspinbox.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int maximum() const
@@ -331,7 +329,7 @@ func (this *QSpinBox) Maximum() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:85
+// /usr/include/qt/QtWidgets/qspinbox.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximum(int)
@@ -344,7 +342,7 @@ func (this *QSpinBox) SetMaximum(max int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:87
+// /usr/include/qt/QtWidgets/qspinbox.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRange(int, int)
@@ -372,7 +370,7 @@ func (this *QSpinBox) SetRange(min int, max int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:89
+// /usr/include/qt/QtWidgets/qspinbox.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int displayIntegerBase() const
@@ -386,7 +384,7 @@ func (this *QSpinBox) DisplayIntegerBase() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:90
+// /usr/include/qt/QtWidgets/qspinbox.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDisplayIntegerBase(int)
@@ -399,7 +397,7 @@ func (this *QSpinBox) SetDisplayIntegerBase(base int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:93
+// /usr/include/qt/QtWidgets/qspinbox.h:94
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -417,7 +415,7 @@ func (this *QSpinBox) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:94
+// /usr/include/qt/QtWidgets/qspinbox.h:95
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] QValidator::State validate(QString &, int &) const
@@ -433,7 +431,7 @@ func (this *QSpinBox) Validate(input string, pos int) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:95
+// /usr/include/qt/QtWidgets/qspinbox.h:96
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] int valueFromText(const QString &) const
@@ -455,7 +453,7 @@ func (this *QSpinBox) ValueFromText(text string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:96
+// /usr/include/qt/QtWidgets/qspinbox.h:97
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QString textFromValue(int) const
@@ -478,7 +476,7 @@ func (this *QSpinBox) TextFromValue(val int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:97
+// /usr/include/qt/QtWidgets/qspinbox.h:98
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void fixup(QString &) const
@@ -493,7 +491,7 @@ func (this *QSpinBox) Fixup(str string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:101
+// /usr/include/qt/QtWidgets/qspinbox.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setValue(int)
@@ -506,7 +504,7 @@ func (this *QSpinBox) SetValue(val int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:104
+// /usr/include/qt/QtWidgets/qspinbox.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void valueChanged(int)
@@ -514,10 +512,10 @@ func (this *QSpinBox) SetValue(val int) {
 /*
 This signal is emitted whenever the spin box's value is changed. The new value's integer value is passed in i.
 
-Note: Signal valueChanged is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal valueChanged is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(spinBox, QOverload<int>::of(&QSpinBox::valueChanged),
+  connect(spinBox, static_cast<void(QSpinBox::*)(int)>(&QSpinBox::valueChanged),
       [=](int i){ /-* ... *-/ });
 
 
@@ -529,7 +527,7 @@ func (this *QSpinBox) ValueChanged(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:105
+// /usr/include/qt/QtWidgets/qspinbox.h:106
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void valueChanged(const QString &)
@@ -537,10 +535,10 @@ func (this *QSpinBox) ValueChanged(arg0 int) {
 /*
 This signal is emitted whenever the spin box's value is changed. The new value's integer value is passed in i.
 
-Note: Signal valueChanged is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal valueChanged is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(spinBox, QOverload<int>::of(&QSpinBox::valueChanged),
+  connect(spinBox, static_cast<void(QSpinBox::*)(int)>(&QSpinBox::valueChanged),
       [=](int i){ /-* ... *-/ });
 
 

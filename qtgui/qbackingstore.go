@@ -18,7 +18,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 146
+// extern C begin: 144
 */
 // import "C"
 import "unsafe"
@@ -123,9 +123,7 @@ func (this *QBackingStore) Window() *QWindow /*777 QWindow **/ {
 // [8] QPaintDevice * paintDevice()
 
 /*
-Returns the paint device for this surface.
-
-Warning: The device is only valid between calls to beginPaint() and endPaint(). You should not cache the returned value.
+Implement this function to return the appropriate paint device.
 */
 func (this *QBackingStore) PaintDevice() *QPaintDevice /*777 QPaintDevice **/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN13QBackingStore11paintDeviceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -133,21 +131,15 @@ func (this *QBackingStore) PaintDevice() *QPaintDevice /*777 QPaintDevice **/ {
 	return /*==*/ NewQPaintDeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qbackingstore.h:69
+// /usr/include/qt/QtGui/qbackingstore.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void flush(const QRegion &, QWindow *, const QPoint &)
 
 /*
-Flushes the given region from the specified window onto the screen.
+Flushes the given region from the specified window win onto the screen.
 
-The window must either be the top level window represented by this backingstore, or a non-transient child of that window. Passing nullptr falls back to using the backingstore's top level window.
-
-If the window is a child window, the region should be in child window coordinates, and the offset should be the child window's offset in relation to the backingstore's top level window.
-
-You should call this function after ending painting with endPaint().
-
-See also QWindow::transientParent().
+Note that the offset parameter is currently unused.
 */
 func (this *QBackingStore) Flush(region QRegion_ITF, window QWindow_ITF /*777 QWindow **/, offset qtcore.QPoint_ITF) {
 	var convArg0 unsafe.Pointer
@@ -166,21 +158,15 @@ func (this *QBackingStore) Flush(region QRegion_ITF, window QWindow_ITF /*777 QW
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qbackingstore.h:69
+// /usr/include/qt/QtGui/qbackingstore.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void flush(const QRegion &, QWindow *, const QPoint &)
 
 /*
-Flushes the given region from the specified window onto the screen.
+Flushes the given region from the specified window win onto the screen.
 
-The window must either be the top level window represented by this backingstore, or a non-transient child of that window. Passing nullptr falls back to using the backingstore's top level window.
-
-If the window is a child window, the region should be in child window coordinates, and the offset should be the child window's offset in relation to the backingstore's top level window.
-
-You should call this function after ending painting with endPaint().
-
-See also QWindow::transientParent().
+Note that the offset parameter is currently unused.
 */
 func (this *QBackingStore) Flushp(region QRegion_ITF) {
 	var convArg0 unsafe.Pointer
@@ -195,21 +181,15 @@ func (this *QBackingStore) Flushp(region QRegion_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qbackingstore.h:69
+// /usr/include/qt/QtGui/qbackingstore.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void flush(const QRegion &, QWindow *, const QPoint &)
 
 /*
-Flushes the given region from the specified window onto the screen.
+Flushes the given region from the specified window win onto the screen.
 
-The window must either be the top level window represented by this backingstore, or a non-transient child of that window. Passing nullptr falls back to using the backingstore's top level window.
-
-If the window is a child window, the region should be in child window coordinates, and the offset should be the child window's offset in relation to the backingstore's top level window.
-
-You should call this function after ending painting with endPaint().
-
-See also QWindow::transientParent().
+Note that the offset parameter is currently unused.
 */
 func (this *QBackingStore) Flushp1(region QRegion_ITF, window QWindow_ITF /*777 QWindow **/) {
 	var convArg0 unsafe.Pointer
@@ -226,13 +206,13 @@ func (this *QBackingStore) Flushp1(region QRegion_ITF, window QWindow_ITF /*777 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qbackingstore.h:71
+// /usr/include/qt/QtGui/qbackingstore.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resize(const QSize &)
 
 /*
-Sets the size of the window surface to size.
+Sets the size of the windowsurface to be size.
 
 See also size().
 */
@@ -245,13 +225,13 @@ func (this *QBackingStore) Resize(size qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qbackingstore.h:72
+// /usr/include/qt/QtGui/qbackingstore.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize size() const
 
 /*
-Returns the current size of the window surface.
+Returns the current size of the windowsurface.
 */
 func (this *QBackingStore) Size() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK13QBackingStore4sizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -261,7 +241,7 @@ func (this *QBackingStore) Size() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qbackingstore.h:74
+// /usr/include/qt/QtGui/qbackingstore.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool scroll(const QRegion &, int, int)
@@ -281,15 +261,13 @@ func (this *QBackingStore) Scroll(area QRegion_ITF, dx int, dy int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qbackingstore.h:76
+// /usr/include/qt/QtGui/qbackingstore.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void beginPaint(const QRegion &)
 
 /*
-Begins painting on the backing store surface in the given region.
-
-You should call this function before using the paintDevice() to paint.
+This function is called before painting onto the surface begins, with the region in which the painting will occur.
 
 See also endPaint() and paintDevice().
 */
@@ -302,15 +280,13 @@ func (this *QBackingStore) BeginPaint(arg0 QRegion_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qbackingstore.h:77
+// /usr/include/qt/QtGui/qbackingstore.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void endPaint()
 
 /*
-Ends painting.
-
-You should call this function after painting with the paintDevice() has ended.
+This function is called after painting onto the surface has ended.
 
 See also beginPaint() and paintDevice().
 */
@@ -319,7 +295,7 @@ func (this *QBackingStore) EndPaint() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qbackingstore.h:79
+// /usr/include/qt/QtGui/qbackingstore.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStaticContents(const QRegion &)
@@ -338,13 +314,13 @@ func (this *QBackingStore) SetStaticContents(region QRegion_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qbackingstore.h:80
+// /usr/include/qt/QtGui/qbackingstore.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion staticContents() const
 
 /*
-Returns a QRegion representing the area of the window that has static contents.
+Returns a pointer to the QRegion that has the static contents of this window.
 
 See also setStaticContents().
 */
@@ -356,7 +332,7 @@ func (this *QBackingStore) StaticContents() *QRegion /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qbackingstore.h:81
+// /usr/include/qt/QtGui/qbackingstore.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasStaticContents() const

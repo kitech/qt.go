@@ -64,7 +64,7 @@ func (*QStyleOptionDockWidget) NewFromPointer(cthis unsafe.Pointer) *QStyleOptio
 	return NewQStyleOptionDockWidgetFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:391
+// /usr/include/qt/QtWidgets/qstyleoption.h:380
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionDockWidget()
@@ -83,7 +83,7 @@ func NewQStyleOptionDockWidget() *QStyleOptionDockWidget {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:395
+// /usr/include/qt/QtWidgets/qstyleoption.h:384
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionDockWidget(int)

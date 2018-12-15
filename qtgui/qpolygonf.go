@@ -18,7 +18,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 25
+// extern C begin: 24
 */
 // import "C"
 import "unsafe"
@@ -65,7 +65,7 @@ func (*QPolygonF) NewFromPointer(cthis unsafe.Pointer) *QPolygonF {
 	return NewQPolygonFFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qpolygon.h:144
+// /usr/include/qt/QtGui/qpolygon.h:142
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QPolygonF()
@@ -84,7 +84,7 @@ func NewQPolygonF() *QPolygonF {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qpolygon.h:146
+// /usr/include/qt/QtGui/qpolygon.h:144
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void QPolygonF(int)
@@ -103,7 +103,7 @@ func NewQPolygonF1(size int) *QPolygonF {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qpolygon.h:151
+// /usr/include/qt/QtGui/qpolygon.h:149
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QPolygonF(const QRectF &)
@@ -126,7 +126,7 @@ func NewQPolygonF2(r qtcore.QRectF_ITF) *QPolygonF {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qpolygon.h:152
+// /usr/include/qt/QtGui/qpolygon.h:150
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QPolygonF(const QPolygon &)
@@ -149,7 +149,7 @@ func NewQPolygonF3(a QPolygon_ITF) *QPolygonF {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qpolygon.h:145
+// /usr/include/qt/QtGui/qpolygon.h:143
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ~QPolygonF()
@@ -164,7 +164,7 @@ func DeleteQPolygonF(this *QPolygonF) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qpolygon.h:156
+// /usr/include/qt/QtGui/qpolygon.h:154
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPolygonF & operator=(QPolygonF &&)
@@ -180,7 +180,7 @@ func (this *QPolygonF) Operator_equal(other unsafe.Pointer /*333*/) *QPolygonF {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpolygon.h:158
+// /usr/include/qt/QtGui/qpolygon.h:156
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QPolygonF & operator=(const QPolygonF &)
@@ -200,7 +200,7 @@ func (this *QPolygonF) Operator_equal1(other QPolygonF_ITF) *QPolygonF {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpolygon.h:159
+// /usr/include/qt/QtGui/qpolygon.h:157
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QPolygonF &)
@@ -219,7 +219,7 @@ func (this *QPolygonF) Swap(other QPolygonF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpolygon.h:163
+// /usr/include/qt/QtGui/qpolygon.h:161
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void translate(qreal, qreal)
@@ -234,7 +234,7 @@ func (this *QPolygonF) Translate(dx float64, dy float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpolygon.h:164
+// /usr/include/qt/QtGui/qpolygon.h:162
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void translate(const QPointF &)
@@ -253,7 +253,7 @@ func (this *QPolygonF) Translate1(offset qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qpolygon.h:166
+// /usr/include/qt/QtGui/qpolygon.h:164
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPolygonF translated(qreal, qreal) const
@@ -273,7 +273,7 @@ func (this *QPolygonF) Translated(dx float64, dy float64) *QPolygonF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpolygon.h:167
+// /usr/include/qt/QtGui/qpolygon.h:165
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF translated(const QPointF &) const
@@ -297,7 +297,7 @@ func (this *QPolygonF) Translated1(offset qtcore.QPointF_ITF) *QPolygonF /*123*/
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpolygon.h:169
+// /usr/include/qt/QtGui/qpolygon.h:167
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPolygon toPolygon() const
@@ -313,7 +313,7 @@ func (this *QPolygonF) ToPolygon() *QPolygon /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpolygon.h:171
+// /usr/include/qt/QtGui/qpolygon.h:169
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isClosed() const
@@ -327,7 +327,7 @@ func (this *QPolygonF) IsClosed() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qpolygon.h:173
+// /usr/include/qt/QtGui/qpolygon.h:171
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF boundingRect() const
@@ -345,7 +345,7 @@ func (this *QPolygonF) BoundingRect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpolygon.h:175
+// /usr/include/qt/QtGui/qpolygon.h:173
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool containsPoint(const QPointF &, Qt::FillRule) const
@@ -365,7 +365,7 @@ func (this *QPolygonF) ContainsPoint(pt qtcore.QPointF_ITF, fillRule int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qpolygon.h:177
+// /usr/include/qt/QtGui/qpolygon.h:175
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF united(const QPolygonF &) const
@@ -391,7 +391,7 @@ func (this *QPolygonF) United(r QPolygonF_ITF) *QPolygonF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpolygon.h:178
+// /usr/include/qt/QtGui/qpolygon.h:176
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF intersected(const QPolygonF &) const
@@ -402,8 +402,6 @@ Returns a polygon which is the intersection of this polygon and r.
 Set operations on polygons will treat the polygons as areas. Non-closed polygons will be treated as implicitly closed.
 
 This function was introduced in  Qt 4.3.
-
-See also intersects().
 */
 func (this *QPolygonF) Intersected(r QPolygonF_ITF) *QPolygonF /*123*/ {
 	var convArg0 unsafe.Pointer
@@ -417,7 +415,7 @@ func (this *QPolygonF) Intersected(r QPolygonF_ITF) *QPolygonF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qpolygon.h:179
+// /usr/include/qt/QtGui/qpolygon.h:177
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF subtracted(const QPolygonF &) const
@@ -439,30 +437,6 @@ func (this *QPolygonF) Subtracted(r QPolygonF_ITF) *QPolygonF /*123*/ {
 	rv2 := /*==*/ NewQPolygonFFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPolygonF)
 	return rv2
-}
-
-// /usr/include/qt/QtGui/qpolygon.h:181
-// index:0
-// Public Visibility=Default Availability=Available
-// [1] bool intersects(const QPolygonF &) const
-
-/*
-Returns true if the current polygon intersects at any point the given polygon p. Also returns true if the current polygon contains or is contained by any part of p.
-
-Set operations on polygons will treat the polygons as areas. Non-closed polygons will be treated as implicitly closed.
-
-This function was introduced in  Qt 5.10.
-
-See also intersected().
-*/
-func (this *QPolygonF) Intersects(r QPolygonF_ITF) bool {
-	var convArg0 unsafe.Pointer
-	if r != nil && r.QPolygonF_PTR() != nil {
-		convArg0 = r.QPolygonF_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK9QPolygonF10intersectsERKS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
 }
 
 //  body block end

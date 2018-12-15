@@ -211,31 +211,31 @@ func NewQChar6(s int) *QChar {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qchar.h:90
+// /usr/include/qt/QtCore/qchar.h:91
 // index:7
 // Public inline Visibility=Default Availability=Available
-// [-2] void QChar(char16_t)
+// [-2] void QChar(char)
 
 /*
 Constructs a null QChar ('\0').
 
 See also isNull().
 */
-func (*QChar) NewForInherit7(ch int16) *QChar {
-	return NewQChar7(ch)
+func (*QChar) NewForInherit7(c byte) *QChar {
+	return NewQChar7(c)
 }
-func NewQChar7(ch int16) *QChar {
-	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2EDs", qtrt.FFI_TYPE_POINTER, ch)
+func NewQChar7(c byte) *QChar {
+	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Ec", qtrt.FFI_TYPE_POINTER, c)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
 	qtrt.SetFinalizer(gothis, DeleteQChar)
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qchar.h:98
+// /usr/include/qt/QtCore/qchar.h:93
 // index:8
 // Public inline Visibility=Default Availability=Available
-// [-2] void QChar(char)
+// [-2] void QChar(uchar)
 
 /*
 Constructs a null QChar ('\0').
@@ -246,27 +246,6 @@ func (*QChar) NewForInherit8(c byte) *QChar {
 	return NewQChar8(c)
 }
 func NewQChar8(c byte) *QChar {
-	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Ec", qtrt.FFI_TYPE_POINTER, c)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQChar)
-	return gothis
-}
-
-// /usr/include/qt/QtCore/qchar.h:100
-// index:9
-// Public inline Visibility=Default Availability=Available
-// [-2] void QChar(uchar)
-
-/*
-Constructs a null QChar ('\0').
-
-See also isNull().
-*/
-func (*QChar) NewForInherit9(c byte) *QChar {
-	return NewQChar9(c)
-}
-func NewQChar9(c byte) *QChar {
 	rv, err := qtrt.InvokeQtFunc6("_ZN5QCharC2Eh", qtrt.FFI_TYPE_POINTER, c)
 	qtrt.ErrPrint(err, rv)
 	gothis := NewQCharFromPointer(unsafe.Pointer(uintptr(rv)))
@@ -274,7 +253,7 @@ func NewQChar9(c byte) *QChar {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qchar.h:394
+// /usr/include/qt/QtCore/qchar.h:387
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QChar::Category category() const
@@ -288,7 +267,7 @@ func (this *QChar) Category() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qchar.h:504
+// /usr/include/qt/QtCore/qchar.h:497
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] QChar::Category category(uint)
@@ -307,7 +286,7 @@ func QChar_Category1(ucs4 uint) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:395
+// /usr/include/qt/QtCore/qchar.h:388
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QChar::Direction direction() const
@@ -321,7 +300,7 @@ func (this *QChar) Direction() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qchar.h:505
+// /usr/include/qt/QtCore/qchar.h:498
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] QChar::Direction direction(uint)
@@ -340,7 +319,7 @@ func QChar_Direction1(ucs4 uint) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:396
+// /usr/include/qt/QtCore/qchar.h:389
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QChar::JoiningType joiningType() const
@@ -356,7 +335,7 @@ func (this *QChar) JoiningType() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qchar.h:506
+// /usr/include/qt/QtCore/qchar.h:499
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] QChar::JoiningType joiningType(uint)
@@ -377,7 +356,7 @@ func QChar_JoiningType1(ucs4 uint) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:398
+// /usr/include/qt/QtCore/qchar.h:391
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QChar::Joining joining() const
@@ -391,7 +370,7 @@ func (this *QChar) Joining() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qchar.h:508
+// /usr/include/qt/QtCore/qchar.h:501
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] QChar::Joining joining(uint)
@@ -410,7 +389,7 @@ func QChar_Joining1(ucs4 uint) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:411
+// /usr/include/qt/QtCore/qchar.h:404
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] unsigned char combiningClass() const
@@ -426,7 +405,7 @@ func (this *QChar) CombiningClass() byte {
 	return qtrt.Cretval2go("byte", rv).(byte) // 1111
 }
 
-// /usr/include/qt/QtCore/qchar.h:510
+// /usr/include/qt/QtCore/qchar.h:503
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] unsigned char combiningClass(uint)
@@ -447,7 +426,7 @@ func QChar_CombiningClass1(ucs4 uint) byte {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:413
+// /usr/include/qt/QtCore/qchar.h:406
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] QChar mirroredChar() const
@@ -465,7 +444,7 @@ func (this *QChar) MirroredChar() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qchar.h:512
+// /usr/include/qt/QtCore/qchar.h:505
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] uint mirroredChar(uint)
@@ -486,7 +465,7 @@ func QChar_MirroredChar1(ucs4 uint) uint {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:414
+// /usr/include/qt/QtCore/qchar.h:407
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool hasMirrored() const
@@ -504,7 +483,7 @@ func (this *QChar) HasMirrored() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:513
+// /usr/include/qt/QtCore/qchar.h:506
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool hasMirrored(uint)
@@ -527,7 +506,7 @@ func QChar_HasMirrored1(ucs4 uint) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:416
+// /usr/include/qt/QtCore/qchar.h:409
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString decomposition() const
@@ -544,7 +523,7 @@ func (this *QChar) Decomposition() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qchar.h:515
+// /usr/include/qt/QtCore/qchar.h:508
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QString decomposition(uint)
@@ -566,7 +545,7 @@ func QChar_Decomposition1(ucs4 uint) string {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:417
+// /usr/include/qt/QtCore/qchar.h:410
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QChar::Decomposition decompositionTag() const
@@ -580,7 +559,7 @@ func (this *QChar) DecompositionTag() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qchar.h:516
+// /usr/include/qt/QtCore/qchar.h:509
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] QChar::Decomposition decompositionTag(uint)
@@ -599,7 +578,7 @@ func QChar_DecompositionTag1(ucs4 uint) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:419
+// /usr/include/qt/QtCore/qchar.h:412
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int digitValue() const
@@ -613,7 +592,7 @@ func (this *QChar) DigitValue() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qchar.h:518
+// /usr/include/qt/QtCore/qchar.h:511
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] int digitValue(uint)
@@ -632,7 +611,7 @@ func QChar_DigitValue1(ucs4 uint) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:420
+// /usr/include/qt/QtCore/qchar.h:413
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] QChar toLower() const
@@ -648,7 +627,7 @@ func (this *QChar) ToLower() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qchar.h:519
+// /usr/include/qt/QtCore/qchar.h:512
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] uint toLower(uint)
@@ -667,7 +646,7 @@ func QChar_ToLower1(ucs4 uint) uint {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:421
+// /usr/include/qt/QtCore/qchar.h:414
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] QChar toUpper() const
@@ -683,7 +662,7 @@ func (this *QChar) ToUpper() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qchar.h:520
+// /usr/include/qt/QtCore/qchar.h:513
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] uint toUpper(uint)
@@ -702,7 +681,7 @@ func QChar_ToUpper1(ucs4 uint) uint {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:422
+// /usr/include/qt/QtCore/qchar.h:415
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] QChar toTitleCase() const
@@ -718,7 +697,7 @@ func (this *QChar) ToTitleCase() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qchar.h:521
+// /usr/include/qt/QtCore/qchar.h:514
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] uint toTitleCase(uint)
@@ -737,7 +716,7 @@ func QChar_ToTitleCase1(ucs4 uint) uint {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:423
+// /usr/include/qt/QtCore/qchar.h:416
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] QChar toCaseFolded() const
@@ -753,7 +732,7 @@ func (this *QChar) ToCaseFolded() *QChar /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qchar.h:522
+// /usr/include/qt/QtCore/qchar.h:515
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] uint toCaseFolded(uint)
@@ -772,7 +751,7 @@ func QChar_ToCaseFolded1(ucs4 uint) uint {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:425
+// /usr/include/qt/QtCore/qchar.h:418
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QChar::Script script() const
@@ -788,7 +767,7 @@ func (this *QChar) Script() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qchar.h:524
+// /usr/include/qt/QtCore/qchar.h:517
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] QChar::Script script(uint)
@@ -809,7 +788,7 @@ func QChar_Script1(ucs4 uint) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:427
+// /usr/include/qt/QtCore/qchar.h:420
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QChar::UnicodeVersion unicodeVersion() const
@@ -823,7 +802,7 @@ func (this *QChar) UnicodeVersion() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qchar.h:526
+// /usr/include/qt/QtCore/qchar.h:519
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] QChar::UnicodeVersion unicodeVersion(uint)
@@ -842,7 +821,7 @@ func QChar_UnicodeVersion1(ucs4 uint) int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:432
+// /usr/include/qt/QtCore/qchar.h:425
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] char toLatin1() const
@@ -860,7 +839,7 @@ func (this *QChar) ToLatin1() byte {
 	return qtrt.Cretval2go("byte", rv).(byte) // 1111
 }
 
-// /usr/include/qt/QtCore/qchar.h:433
+// /usr/include/qt/QtCore/qchar.h:426
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [2] ushort unicode() const
@@ -874,7 +853,7 @@ func (this *QChar) Unicode() uint16 {
 	return uint16(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qchar.h:434
+// /usr/include/qt/QtCore/qchar.h:427
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [2] ushort & unicode()
@@ -888,7 +867,7 @@ func (this *QChar) Unicode1() uint16 {
 	return uint16(rv)
 }
 
-// /usr/include/qt/QtCore/qchar.h:440
+// /usr/include/qt/QtCore/qchar.h:433
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [2] QChar fromLatin1(char)
@@ -913,7 +892,7 @@ func QChar_FromLatin1(c byte) *QChar /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:442
+// /usr/include/qt/QtCore/qchar.h:435
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull() const
@@ -927,7 +906,7 @@ func (this *QChar) IsNull() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:444
+// /usr/include/qt/QtCore/qchar.h:437
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isPrint() const
@@ -943,7 +922,7 @@ func (this *QChar) IsPrint() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:530
+// /usr/include/qt/QtCore/qchar.h:523
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool isPrint(uint)
@@ -964,7 +943,7 @@ func QChar_IsPrint1(ucs4 uint) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:445
+// /usr/include/qt/QtCore/qchar.h:438
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isSpace() const
@@ -978,7 +957,7 @@ func (this *QChar) IsSpace() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:531
+// /usr/include/qt/QtCore/qchar.h:524
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool isSpace(uint)
@@ -997,7 +976,7 @@ func QChar_IsSpace1(ucs4 uint) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:446
+// /usr/include/qt/QtCore/qchar.h:439
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isMark() const
@@ -1013,7 +992,7 @@ func (this *QChar) IsMark() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:537
+// /usr/include/qt/QtCore/qchar.h:530
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool isMark(uint)
@@ -1034,7 +1013,7 @@ func QChar_IsMark1(ucs4 uint) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:447
+// /usr/include/qt/QtCore/qchar.h:440
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isPunct() const
@@ -1048,7 +1027,7 @@ func (this *QChar) IsPunct() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:538
+// /usr/include/qt/QtCore/qchar.h:531
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool isPunct(uint)
@@ -1067,7 +1046,7 @@ func QChar_IsPunct1(ucs4 uint) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:448
+// /usr/include/qt/QtCore/qchar.h:441
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isSymbol() const
@@ -1081,7 +1060,7 @@ func (this *QChar) IsSymbol() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:539
+// /usr/include/qt/QtCore/qchar.h:532
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool isSymbol(uint)
@@ -1100,7 +1079,7 @@ func QChar_IsSymbol1(ucs4 uint) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:449
+// /usr/include/qt/QtCore/qchar.h:442
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isLetter() const
@@ -1114,7 +1093,7 @@ func (this *QChar) IsLetter() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:540
+// /usr/include/qt/QtCore/qchar.h:533
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool isLetter(uint)
@@ -1133,7 +1112,7 @@ func QChar_IsLetter1(ucs4 uint) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:450
+// /usr/include/qt/QtCore/qchar.h:443
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNumber() const
@@ -1149,7 +1128,7 @@ func (this *QChar) IsNumber() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:545
+// /usr/include/qt/QtCore/qchar.h:538
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool isNumber(uint)
@@ -1170,7 +1149,7 @@ func QChar_IsNumber1(ucs4 uint) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:451
+// /usr/include/qt/QtCore/qchar.h:444
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isLetterOrNumber() const
@@ -1184,7 +1163,7 @@ func (this *QChar) IsLetterOrNumber() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:547
+// /usr/include/qt/QtCore/qchar.h:540
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool isLetterOrNumber(uint)
@@ -1203,7 +1182,7 @@ func QChar_IsLetterOrNumber1(ucs4 uint) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:452
+// /usr/include/qt/QtCore/qchar.h:445
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isDigit() const
@@ -1219,7 +1198,7 @@ func (this *QChar) IsDigit() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:553
+// /usr/include/qt/QtCore/qchar.h:546
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool isDigit(uint)
@@ -1240,7 +1219,7 @@ func QChar_IsDigit1(ucs4 uint) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:453
+// /usr/include/qt/QtCore/qchar.h:446
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isLower() const
@@ -1256,7 +1235,7 @@ func (this *QChar) IsLower() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:555
+// /usr/include/qt/QtCore/qchar.h:548
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool isLower(uint)
@@ -1277,7 +1256,7 @@ func QChar_IsLower1(ucs4 uint) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:454
+// /usr/include/qt/QtCore/qchar.h:447
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isUpper() const
@@ -1293,7 +1272,7 @@ func (this *QChar) IsUpper() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:557
+// /usr/include/qt/QtCore/qchar.h:550
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool isUpper(uint)
@@ -1314,7 +1293,7 @@ func QChar_IsUpper1(ucs4 uint) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:455
+// /usr/include/qt/QtCore/qchar.h:448
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isTitleCase() const
@@ -1330,7 +1309,7 @@ func (this *QChar) IsTitleCase() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:559
+// /usr/include/qt/QtCore/qchar.h:552
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool isTitleCase(uint)
@@ -1351,7 +1330,7 @@ func QChar_IsTitleCase1(ucs4 uint) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:457
+// /usr/include/qt/QtCore/qchar.h:450
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNonCharacter() const
@@ -1369,7 +1348,7 @@ func (this *QChar) IsNonCharacter() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:467
+// /usr/include/qt/QtCore/qchar.h:460
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool isNonCharacter(uint)
@@ -1392,7 +1371,7 @@ func QChar_IsNonCharacter1(ucs4 uint) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:458
+// /usr/include/qt/QtCore/qchar.h:451
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isHighSurrogate() const
@@ -1406,7 +1385,7 @@ func (this *QChar) IsHighSurrogate() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:471
+// /usr/include/qt/QtCore/qchar.h:464
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool isHighSurrogate(uint)
@@ -1425,7 +1404,7 @@ func QChar_IsHighSurrogate1(ucs4 uint) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:459
+// /usr/include/qt/QtCore/qchar.h:452
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isLowSurrogate() const
@@ -1439,7 +1418,7 @@ func (this *QChar) IsLowSurrogate() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:475
+// /usr/include/qt/QtCore/qchar.h:468
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool isLowSurrogate(uint)
@@ -1458,7 +1437,7 @@ func QChar_IsLowSurrogate1(ucs4 uint) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:460
+// /usr/include/qt/QtCore/qchar.h:453
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isSurrogate() const
@@ -1474,7 +1453,7 @@ func (this *QChar) IsSurrogate() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qchar.h:479
+// /usr/include/qt/QtCore/qchar.h:472
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [1] bool isSurrogate(uint)
@@ -1495,7 +1474,7 @@ func QChar_IsSurrogate1(ucs4 uint) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:462
+// /usr/include/qt/QtCore/qchar.h:455
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] uchar cell() const
@@ -1511,7 +1490,7 @@ func (this *QChar) Cell() byte {
 	return byte(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qchar.h:463
+// /usr/include/qt/QtCore/qchar.h:456
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] uchar row() const
@@ -1527,7 +1506,7 @@ func (this *QChar) Row() byte {
 	return byte(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qchar.h:464
+// /usr/include/qt/QtCore/qchar.h:457
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setCell(uchar)
@@ -1540,7 +1519,7 @@ func (this *QChar) SetCell(acell byte) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qchar.h:465
+// /usr/include/qt/QtCore/qchar.h:458
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setRow(uchar)
@@ -1553,7 +1532,7 @@ func (this *QChar) SetRow(arow byte) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qchar.h:483
+// /usr/include/qt/QtCore/qchar.h:476
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [1] bool requiresSurrogates(uint)
@@ -1572,7 +1551,7 @@ func QChar_RequiresSurrogates(ucs4 uint) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:487
+// /usr/include/qt/QtCore/qchar.h:480
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [4] uint surrogateToUcs4(ushort, ushort)
@@ -1591,7 +1570,7 @@ func QChar_SurrogateToUcs4(high uint16, low uint16) uint {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:491
+// /usr/include/qt/QtCore/qchar.h:484
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [4] uint surrogateToUcs4(QChar, QChar)
@@ -1618,7 +1597,7 @@ func QChar_SurrogateToUcs41(high QChar_ITF /*123*/, low QChar_ITF /*123*/) uint 
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:495
+// /usr/include/qt/QtCore/qchar.h:488
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [2] ushort highSurrogate(uint)
@@ -1637,7 +1616,7 @@ func QChar_HighSurrogate(ucs4 uint) uint16 {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:499
+// /usr/include/qt/QtCore/qchar.h:492
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [2] ushort lowSurrogate(uint)
@@ -1656,7 +1635,7 @@ func QChar_LowSurrogate(ucs4 uint) uint16 {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qchar.h:528
+// /usr/include/qt/QtCore/qchar.h:521
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QChar::UnicodeVersion currentUnicodeVersion()

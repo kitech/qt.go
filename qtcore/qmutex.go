@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 7
+// extern C begin: 6
 */
 // import "C"
 import "unsafe"
@@ -62,7 +62,7 @@ func (*QMutex) NewFromPointer(cthis unsafe.Pointer) *QMutex {
 	return NewQMutexFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qmutex.h:130
+// /usr/include/qt/QtCore/qmutex.h:124
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMutex(QMutex::RecursionMode)
@@ -87,7 +87,7 @@ func NewQMutex(mode int) *QMutex {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qmutex.h:130
+// /usr/include/qt/QtCore/qmutex.h:124
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QMutex(QMutex::RecursionMode)
@@ -114,7 +114,7 @@ func NewQMutexp() *QMutex {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qmutex.h:131
+// /usr/include/qt/QtCore/qmutex.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QMutex()
@@ -129,7 +129,7 @@ func DeleteQMutex(this *QMutex) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qmutex.h:134
+// /usr/include/qt/QtCore/qmutex.h:128
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void lock()
@@ -146,7 +146,7 @@ func (this *QMutex) Lock() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qmutex.h:135
+// /usr/include/qt/QtCore/qmutex.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool tryLock(int)
@@ -168,7 +168,7 @@ func (this *QMutex) TryLock(timeout int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmutex.h:135
+// /usr/include/qt/QtCore/qmutex.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool tryLock(int)
@@ -192,7 +192,7 @@ func (this *QMutex) TryLockp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmutex.h:137
+// /usr/include/qt/QtCore/qmutex.h:131
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void unlock()
@@ -207,7 +207,7 @@ func (this *QMutex) Unlock() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qmutex.h:140
+// /usr/include/qt/QtCore/qmutex.h:134
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool try_lock()
@@ -227,7 +227,7 @@ func (this *QMutex) Try_lock() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qmutex.h:161
+// /usr/include/qt/QtCore/qmutex.h:155
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isRecursive() const

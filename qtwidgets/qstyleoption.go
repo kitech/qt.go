@@ -66,7 +66,7 @@ func (*QStyleOption) NewFromPointer(cthis unsafe.Pointer) *QStyleOption {
 	return NewQStyleOptionFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:102
+// /usr/include/qt/QtWidgets/qstyleoption.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOption(int, int)
@@ -91,7 +91,7 @@ func NewQStyleOption(version int, type_ int) *QStyleOption {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:102
+// /usr/include/qt/QtWidgets/qstyleoption.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOption(int, int)
@@ -120,7 +120,7 @@ func NewQStyleOptionp() *QStyleOption {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:102
+// /usr/include/qt/QtWidgets/qstyleoption.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOption(int, int)
@@ -147,7 +147,7 @@ func NewQStyleOptionp1(version int) *QStyleOption {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:104
+// /usr/include/qt/QtWidgets/qstyleoption.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QStyleOption()
@@ -162,7 +162,7 @@ func DeleteQStyleOption(this *QStyleOption) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:106
+// /usr/include/qt/QtWidgets/qstyleoption.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void init(const QWidget *)
@@ -179,7 +179,7 @@ func (this *QStyleOption) Init(w QWidget_ITF /*777 const QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:107
+// /usr/include/qt/QtWidgets/qstyleoption.h:96
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void initFrom(const QWidget *)
@@ -202,7 +202,7 @@ func (this *QStyleOption) InitFrom(w QWidget_ITF /*777 const QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:108
+// /usr/include/qt/QtWidgets/qstyleoption.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [64] QStyleOption & operator=(const QStyleOption &)

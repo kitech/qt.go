@@ -3060,7 +3060,7 @@ func (this *QMetaObject) InvokeMethod3p9(obj QObject_ITF /*777 QObject **/, memb
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:469
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3114,7 +3114,7 @@ func (this *QMetaObject) NewInstance(val0 QGenericArgument_ITF /*123*/, val1 QGe
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:469
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3148,7 +3148,7 @@ func (this *QMetaObject) NewInstancep() *QObject /*777 QObject **/ {
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:469
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3184,7 +3184,7 @@ func (this *QMetaObject) NewInstancep1(val0 QGenericArgument_ITF /*123*/) *QObje
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:469
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3222,7 +3222,7 @@ func (this *QMetaObject) NewInstancep2(val0 QGenericArgument_ITF /*123*/, val1 Q
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:469
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3262,7 +3262,7 @@ func (this *QMetaObject) NewInstancep3(val0 QGenericArgument_ITF /*123*/, val1 Q
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:469
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3304,7 +3304,7 @@ func (this *QMetaObject) NewInstancep4(val0 QGenericArgument_ITF /*123*/, val1 Q
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:469
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3348,7 +3348,7 @@ func (this *QMetaObject) NewInstancep5(val0 QGenericArgument_ITF /*123*/, val1 Q
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:469
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3394,7 +3394,7 @@ func (this *QMetaObject) NewInstancep6(val0 QGenericArgument_ITF /*123*/, val1 Q
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:469
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3442,7 +3442,7 @@ func (this *QMetaObject) NewInstancep7(val0 QGenericArgument_ITF /*123*/, val1 Q
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:469
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3492,7 +3492,7 @@ func (this *QMetaObject) NewInstancep8(val0 QGenericArgument_ITF /*123*/, val1 Q
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:554
+// /usr/include/qt/QtCore/qobjectdefs.h:469
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * newInstance(QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument, QGenericArgument) const
@@ -3544,7 +3544,7 @@ func (this *QMetaObject) NewInstancep9(val0 QGenericArgument_ITF /*123*/, val1 Q
 	return /*==*/ NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:581
+// /usr/include/qt/QtCore/qobjectdefs.h:496
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int static_metacall(QMetaObject::Call, int, void **) const
@@ -3558,7 +3558,7 @@ func (this *QMetaObject) Static_metacall(arg0 int, arg1 int, arg2 unsafe.Pointer
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qobjectdefs.h:582
+// /usr/include/qt/QtCore/qobjectdefs.h:497
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int metacall(QObject *, QMetaObject::Call, int, void **)

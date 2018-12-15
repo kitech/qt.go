@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h
@@ -71,7 +69,7 @@ func (*QGraphicsAnchorLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsAnc
 	return NewQGraphicsAnchorLayoutFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:79
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsAnchorLayout(QGraphicsLayoutItem *)
@@ -94,7 +92,7 @@ func NewQGraphicsAnchorLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayo
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:79
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsAnchorLayout(QGraphicsLayoutItem *)
@@ -115,7 +113,7 @@ func NewQGraphicsAnchorLayoutp() *QGraphicsAnchorLayout {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:80
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:82
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsAnchorLayout()
@@ -130,7 +128,7 @@ func DeleteQGraphicsAnchorLayout(this *QGraphicsAnchorLayout) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:82
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsAnchor * addAnchor(QGraphicsLayoutItem *, Qt::AnchorPoint, QGraphicsLayoutItem *, Qt::AnchorPoint)
@@ -162,7 +160,7 @@ func (this *QGraphicsAnchorLayout) AddAnchor(firstItem QGraphicsLayoutItem_ITF /
 	return /*==*/ NewQGraphicsAnchorFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:84
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsAnchor * anchor(QGraphicsLayoutItem *, Qt::AnchorPoint, QGraphicsLayoutItem *, Qt::AnchorPoint)
@@ -184,7 +182,7 @@ func (this *QGraphicsAnchorLayout) Anchor(firstItem QGraphicsLayoutItem_ITF /*77
 	return /*==*/ NewQGraphicsAnchorFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:87
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addCornerAnchors(QGraphicsLayoutItem *, Qt::Corner, QGraphicsLayoutItem *, Qt::Corner)
@@ -226,7 +224,7 @@ func (this *QGraphicsAnchorLayout) AddCornerAnchors(firstItem QGraphicsLayoutIte
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:90
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addAnchors(QGraphicsLayoutItem *, QGraphicsLayoutItem *, Qt::Orientations)
@@ -264,7 +262,7 @@ func (this *QGraphicsAnchorLayout) AddAnchors(firstItem QGraphicsLayoutItem_ITF 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:90
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addAnchors(QGraphicsLayoutItem *, QGraphicsLayoutItem *, Qt::Orientations)
@@ -304,7 +302,7 @@ func (this *QGraphicsAnchorLayout) AddAnchorsp(firstItem QGraphicsLayoutItem_ITF
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:94
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHorizontalSpacing(qreal)
@@ -319,7 +317,7 @@ func (this *QGraphicsAnchorLayout) SetHorizontalSpacing(spacing float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:95
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVerticalSpacing(qreal)
@@ -334,7 +332,7 @@ func (this *QGraphicsAnchorLayout) SetVerticalSpacing(spacing float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:96
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSpacing(qreal)
@@ -353,7 +351,7 @@ func (this *QGraphicsAnchorLayout) SetSpacing(spacing float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:97
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal horizontalSpacing() const
@@ -369,7 +367,7 @@ func (this *QGraphicsAnchorLayout) HorizontalSpacing() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:98
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal verticalSpacing() const
@@ -385,7 +383,7 @@ func (this *QGraphicsAnchorLayout) VerticalSpacing() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:100
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:102
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void removeAt(int)
@@ -404,7 +402,7 @@ func (this *QGraphicsAnchorLayout) RemoveAt(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:101
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:103
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRectF &)
@@ -421,7 +419,7 @@ func (this *QGraphicsAnchorLayout) SetGeometry(rect qtcore.QRectF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:102
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:104
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int count() const
@@ -435,7 +433,7 @@ func (this *QGraphicsAnchorLayout) Count() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:103
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:105
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QGraphicsLayoutItem * itemAt(int) const
@@ -449,7 +447,7 @@ func (this *QGraphicsAnchorLayout) ItemAt(index int) *QGraphicsLayoutItem /*777 
 	return /*==*/ NewQGraphicsLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:105
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:107
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void invalidate()
@@ -462,7 +460,7 @@ func (this *QGraphicsAnchorLayout) Invalidate() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:107
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:109
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &) const
@@ -482,7 +480,7 @@ func (this *QGraphicsAnchorLayout) SizeHint(which int, constraint qtcore.QSizeF_
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:107
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:109
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &) const

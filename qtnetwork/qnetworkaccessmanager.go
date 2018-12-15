@@ -73,7 +73,7 @@ func (*QNetworkAccessManager) NewFromPointer(cthis unsafe.Pointer) *QNetworkAcce
 	return NewQNetworkAccessManagerFromPointer(cthis)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:76
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:75
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -87,7 +87,7 @@ func (this *QNetworkAccessManager) MetaObject() *qtcore.QMetaObject /*777 const 
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:103
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkAccessManager(QObject *)
@@ -110,7 +110,7 @@ func NewQNetworkAccessManager(parent qtcore.QObject_ITF /*777 QObject **/) *QNet
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:103
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QNetworkAccessManager(QObject *)
@@ -131,7 +131,7 @@ func NewQNetworkAccessManagerp() *QNetworkAccessManager {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:104
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:103
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QNetworkAccessManager()
@@ -146,7 +146,7 @@ func DeleteQNetworkAccessManager(this *QNetworkAccessManager) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:107
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList supportedSchemes() const
@@ -166,7 +166,7 @@ func (this *QNetworkAccessManager) SupportedSchemes() *qtcore.QStringList /*123*
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:109
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clearAccessCache()
@@ -185,7 +185,7 @@ func (this *QNetworkAccessManager) ClearAccessCache() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:111
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clearConnectionCache()
@@ -202,7 +202,7 @@ func (this *QNetworkAccessManager) ClearConnectionCache() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:114
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QNetworkProxy proxy() const
@@ -220,7 +220,7 @@ func (this *QNetworkAccessManager) Proxy() *QNetworkProxy /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:115
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProxy(const QNetworkProxy &)
@@ -241,7 +241,7 @@ func (this *QNetworkAccessManager) SetProxy(proxy QNetworkProxy_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:116
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QNetworkProxyFactory * proxyFactory() const
@@ -261,7 +261,7 @@ func (this *QNetworkAccessManager) ProxyFactory() *QNetworkProxyFactory /*777 QN
 	return /*==*/ NewQNetworkProxyFactoryFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:117
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProxyFactory(QNetworkProxyFactory *)
@@ -297,7 +297,7 @@ func (this *QNetworkAccessManager) SetProxyFactory(factory QNetworkProxyFactory_
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:120
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractNetworkCache * cache() const
@@ -315,7 +315,7 @@ func (this *QNetworkAccessManager) Cache() *QAbstractNetworkCache /*777 QAbstrac
 	return /*==*/ NewQAbstractNetworkCacheFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:121
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCache(QAbstractNetworkCache *)
@@ -342,7 +342,7 @@ func (this *QNetworkAccessManager) SetCache(cache QAbstractNetworkCache_ITF /*77
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:123
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QNetworkCookieJar * cookieJar() const
@@ -358,7 +358,7 @@ func (this *QNetworkAccessManager) CookieJar() *QNetworkCookieJar /*777 QNetwork
 	return /*==*/ NewQNetworkCookieJarFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:124
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCookieJar(QNetworkCookieJar *)
@@ -385,7 +385,7 @@ func (this *QNetworkAccessManager) SetCookieJar(cookieJar QNetworkCookieJar_ITF 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:126
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStrictTransportSecurityEnabled(bool)
@@ -404,7 +404,7 @@ func (this *QNetworkAccessManager) SetStrictTransportSecurityEnabled(enabled boo
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:127
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isStrictTransportSecurityEnabled() const
@@ -422,67 +422,7 @@ func (this *QNetworkAccessManager) IsStrictTransportSecurityEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:128
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void enableStrictTransportSecurityStore(bool, const QString &)
-
-/*
-If enabled is true, the internal HSTS cache will use a persistent store to read and write HSTS policies. storeDir defines where this store will be located. The default location is defined by QStandardPaths::CacheLocation. If there is no writable QStandartPaths::CacheLocation and storeDir is an empty string, the store will be located in the program's working directory.
-
-Note: If HSTS cache already contains HSTS policies by the time persistent store is enabled, these policies will be preserved in the store. In case both cache and store contain the same known hosts, policies from cache are considered to be more up-to-date (and thus will overwrite the previous values in the store). If this behavior is undesired, enable HSTS store before enabling Strict Tranport Security. By default, the persistent store of HSTS policies is disabled.
-
-This function was introduced in  Qt 5.10.
-
-See also isStrictTransportSecurityStoreEnabled(), setStrictTransportSecurityEnabled(), and QStandardPaths::standardLocations().
-*/
-func (this *QNetworkAccessManager) EnableStrictTransportSecurityStore(enabled bool, storeDir string) {
-	var tmpArg1 = qtcore.NewQString5(storeDir)
-	var convArg1 = tmpArg1.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkAccessManager34enableStrictTransportSecurityStoreEbRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enabled, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:128
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void enableStrictTransportSecurityStore(bool, const QString &)
-
-/*
-If enabled is true, the internal HSTS cache will use a persistent store to read and write HSTS policies. storeDir defines where this store will be located. The default location is defined by QStandardPaths::CacheLocation. If there is no writable QStandartPaths::CacheLocation and storeDir is an empty string, the store will be located in the program's working directory.
-
-Note: If HSTS cache already contains HSTS policies by the time persistent store is enabled, these policies will be preserved in the store. In case both cache and store contain the same known hosts, policies from cache are considered to be more up-to-date (and thus will overwrite the previous values in the store). If this behavior is undesired, enable HSTS store before enabling Strict Tranport Security. By default, the persistent store of HSTS policies is disabled.
-
-This function was introduced in  Qt 5.10.
-
-See also isStrictTransportSecurityStoreEnabled(), setStrictTransportSecurityEnabled(), and QStandardPaths::standardLocations().
-*/
-func (this *QNetworkAccessManager) EnableStrictTransportSecurityStorep(enabled bool) {
-	// arg: 1, const QString &=LValueReference, QString=Record, , Invalid
-	var convArg1 = qtcore.NewQString()
-	rv, err := qtrt.InvokeQtFunc6("_ZN21QNetworkAccessManager34enableStrictTransportSecurityStoreEbRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enabled, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:129
-// index:0
-// Public Visibility=Default Availability=Available
-// [1] bool isStrictTransportSecurityStoreEnabled() const
-
-/*
-Returns true if HSTS cache uses a permanent store to load and store HSTS policies.
-
-This function was introduced in  Qt 5.10.
-
-See also enableStrictTransportSecurityStore().
-*/
-func (this *QNetworkAccessManager) IsStrictTransportSecurityStoreEnabled() bool {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK21QNetworkAccessManager37isStrictTransportSecurityStoreEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:133
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QNetworkReply * head(const QNetworkRequest &)
@@ -502,7 +442,7 @@ func (this *QNetworkAccessManager) Head(request QNetworkRequest_ITF) *QNetworkRe
 	return /*==*/ NewQNetworkReplyFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:134
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:131
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QNetworkReply * get(const QNetworkRequest &)
@@ -524,7 +464,7 @@ func (this *QNetworkAccessManager) Get(request QNetworkRequest_ITF) *QNetworkRep
 	return /*==*/ NewQNetworkReplyFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:135
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QNetworkReply * post(const QNetworkRequest &, QIODevice *)
@@ -552,7 +492,7 @@ func (this *QNetworkAccessManager) Post(request QNetworkRequest_ITF, data qtcore
 	return /*==*/ NewQNetworkReplyFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:136
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:133
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QNetworkReply * post(const QNetworkRequest &, const QByteArray &)
@@ -580,7 +520,7 @@ func (this *QNetworkAccessManager) Post1(request QNetworkRequest_ITF, data qtcor
 	return /*==*/ NewQNetworkReplyFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:137
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:134
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QNetworkReply * post(const QNetworkRequest &, QHttpMultiPart *)
@@ -608,7 +548,7 @@ func (this *QNetworkAccessManager) Post2(request QNetworkRequest_ITF, multiPart 
 	return /*==*/ NewQNetworkReplyFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:138
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QNetworkReply * put(const QNetworkRequest &, QIODevice *)
@@ -638,7 +578,7 @@ func (this *QNetworkAccessManager) Put(request QNetworkRequest_ITF, data qtcore.
 	return /*==*/ NewQNetworkReplyFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:139
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:136
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QNetworkReply * put(const QNetworkRequest &, const QByteArray &)
@@ -668,7 +608,7 @@ func (this *QNetworkAccessManager) Put1(request QNetworkRequest_ITF, data qtcore
 	return /*==*/ NewQNetworkReplyFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:140
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:137
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QNetworkReply * put(const QNetworkRequest &, QHttpMultiPart *)
@@ -698,7 +638,7 @@ func (this *QNetworkAccessManager) Put2(request QNetworkRequest_ITF, multiPart Q
 	return /*==*/ NewQNetworkReplyFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:141
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QNetworkReply * deleteResource(const QNetworkRequest &)
@@ -722,7 +662,7 @@ func (this *QNetworkAccessManager) DeleteResource(request QNetworkRequest_ITF) *
 	return /*==*/ NewQNetworkReplyFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:142
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QNetworkReply * sendCustomRequest(const QNetworkRequest &, const QByteArray &, QIODevice *)
@@ -760,7 +700,7 @@ func (this *QNetworkAccessManager) SendCustomRequest(request QNetworkRequest_ITF
 	return /*==*/ NewQNetworkReplyFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:142
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QNetworkReply * sendCustomRequest(const QNetworkRequest &, const QByteArray &, QIODevice *)
@@ -796,7 +736,7 @@ func (this *QNetworkAccessManager) SendCustomRequestp(request QNetworkRequest_IT
 	return /*==*/ NewQNetworkReplyFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:143
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:140
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QNetworkReply * sendCustomRequest(const QNetworkRequest &, const QByteArray &, const QByteArray &)
@@ -834,7 +774,7 @@ func (this *QNetworkAccessManager) SendCustomRequest1(request QNetworkRequest_IT
 	return /*==*/ NewQNetworkReplyFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:144
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:141
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QNetworkReply * sendCustomRequest(const QNetworkRequest &, const QByteArray &, QHttpMultiPart *)
@@ -872,7 +812,7 @@ func (this *QNetworkAccessManager) SendCustomRequest2(request QNetworkRequest_IT
 	return /*==*/ NewQNetworkReplyFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:147
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setConfiguration(const QNetworkConfiguration &)
@@ -912,7 +852,7 @@ func (this *QNetworkAccessManager) SetConfiguration(config QNetworkConfiguration
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:148
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QNetworkConfiguration configuration() const
@@ -932,7 +872,7 @@ func (this *QNetworkAccessManager) Configuration() *QNetworkConfiguration /*123*
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:149
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QNetworkConfiguration activeConfiguration() const
@@ -956,7 +896,7 @@ func (this *QNetworkAccessManager) ActiveConfiguration() *QNetworkConfiguration 
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:151
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNetworkAccessible(QNetworkAccessManager::NetworkAccessibility)
@@ -975,7 +915,7 @@ func (this *QNetworkAccessManager) SetNetworkAccessible(accessible int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:152
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QNetworkAccessManager::NetworkAccessibility networkAccessible() const
@@ -995,7 +935,7 @@ func (this *QNetworkAccessManager) NetworkAccessible() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:156
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void connectToHostEncrypted(const QString &, quint16, const QSslConfiguration &)
@@ -1022,7 +962,7 @@ func (this *QNetworkAccessManager) ConnectToHostEncrypted(hostName string, port 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:156
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void connectToHostEncrypted(const QString &, quint16, const QSslConfiguration &)
@@ -1049,7 +989,7 @@ func (this *QNetworkAccessManager) ConnectToHostEncryptedp(hostName string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:156
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void connectToHostEncrypted(const QString &, quint16, const QSslConfiguration &)
@@ -1074,7 +1014,7 @@ func (this *QNetworkAccessManager) ConnectToHostEncryptedp1(hostName string, por
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:159
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void connectToHost(const QString &, quint16)
@@ -1095,7 +1035,7 @@ func (this *QNetworkAccessManager) ConnectToHost(hostName string, port uint16) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:159
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void connectToHost(const QString &, quint16)
@@ -1118,7 +1058,7 @@ func (this *QNetworkAccessManager) ConnectToHostp(hostName string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:161
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRedirectPolicy(QNetworkRequest::RedirectPolicy)
@@ -1141,7 +1081,7 @@ func (this *QNetworkAccessManager) SetRedirectPolicy(policy int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:162
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QNetworkRequest::RedirectPolicy redirectPolicy() const
@@ -1159,7 +1099,7 @@ func (this *QNetworkAccessManager) RedirectPolicy() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:166
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:163
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void proxyAuthenticationRequired(const QNetworkProxy &, QAuthenticator *)
@@ -1186,7 +1126,7 @@ func (this *QNetworkAccessManager) ProxyAuthenticationRequired(proxy QNetworkPro
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:168
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:165
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void authenticationRequired(QNetworkReply *, QAuthenticator *)
@@ -1215,7 +1155,7 @@ func (this *QNetworkAccessManager) AuthenticationRequired(reply QNetworkReply_IT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:169
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:166
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void finished(QNetworkReply *)
@@ -1238,7 +1178,7 @@ func (this *QNetworkAccessManager) Finished(reply QNetworkReply_ITF /*777 QNetwo
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:171
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:168
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void encrypted(QNetworkReply *)
@@ -1261,7 +1201,7 @@ func (this *QNetworkAccessManager) Encrypted(reply QNetworkReply_ITF /*777 QNetw
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:173
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:170
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void preSharedKeyAuthenticationRequired(QNetworkReply *, QSslPreSharedKeyAuthenticator *)
@@ -1292,7 +1232,7 @@ func (this *QNetworkAccessManager) PreSharedKeyAuthenticationRequired(reply QNet
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:177
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:174
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void networkSessionConnected()
@@ -1305,7 +1245,7 @@ func (this *QNetworkAccessManager) NetworkSessionConnected() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:179
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:176
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility)
@@ -1320,7 +1260,7 @@ func (this *QNetworkAccessManager) NetworkAccessibleChanged(accessible int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:183
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:180
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QNetworkReply * createRequest(QNetworkAccessManager::Operation, const QNetworkRequest &, QIODevice *)
@@ -1346,7 +1286,7 @@ func (this *QNetworkAccessManager) CreateRequest(op int, request QNetworkRequest
 	return /*==*/ NewQNetworkReplyFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:183
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:180
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QNetworkReply * createRequest(QNetworkAccessManager::Operation, const QNetworkRequest &, QIODevice *)
@@ -1370,7 +1310,7 @@ func (this *QNetworkAccessManager) CreateRequestp(op int, request QNetworkReques
 	return /*==*/ NewQNetworkReplyFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:187
+// /usr/include/qt/QtNetwork/qnetworkaccessmanager.h:184
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QStringList supportedSchemesImplementation() const

@@ -83,15 +83,13 @@ func (this *QAction) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:95
+// /usr/include/qt/QtWidgets/qaction.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAction(QObject *)
 
 /*
 Constructs an action with parent. If parent is an action group the action will be automatically inserted into the group.
-
-Note: The parent argument is optional since Qt 5.7.
 */
 func (*QAction) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
 	return NewQAction(parent)
@@ -108,15 +106,13 @@ func NewQAction(parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:95
+// /usr/include/qt/QtWidgets/qaction.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAction(QObject *)
 
 /*
 Constructs an action with parent. If parent is an action group the action will be automatically inserted into the group.
-
-Note: The parent argument is optional since Qt 5.7.
 */
 func (*QAction) NewForInheritp() *QAction {
 	return NewQActionp()
@@ -131,15 +127,13 @@ func NewQActionp() *QAction {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:96
+// /usr/include/qt/QtWidgets/qaction.h:95
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QAction(const QString &, QObject *)
 
 /*
 Constructs an action with parent. If parent is an action group the action will be automatically inserted into the group.
-
-Note: The parent argument is optional since Qt 5.7.
 */
 func (*QAction) NewForInherit1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
 	return NewQAction1(text, parent)
@@ -158,15 +152,13 @@ func NewQAction1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAct
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:96
+// /usr/include/qt/QtWidgets/qaction.h:95
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QAction(const QString &, QObject *)
 
 /*
 Constructs an action with parent. If parent is an action group the action will be automatically inserted into the group.
-
-Note: The parent argument is optional since Qt 5.7.
 */
 func (*QAction) NewForInherit1p(text string) *QAction {
 	return NewQAction1p(text)
@@ -183,15 +175,13 @@ func NewQAction1p(text string) *QAction {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:97
+// /usr/include/qt/QtWidgets/qaction.h:96
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QAction(const QIcon &, const QString &, QObject *)
 
 /*
 Constructs an action with parent. If parent is an action group the action will be automatically inserted into the group.
-
-Note: The parent argument is optional since Qt 5.7.
 */
 func (*QAction) NewForInherit2(icon qtgui.QIcon_ITF, text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
 	return NewQAction2(icon, text, parent)
@@ -214,15 +204,13 @@ func NewQAction2(icon qtgui.QIcon_ITF, text string, parent qtcore.QObject_ITF /*
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:97
+// /usr/include/qt/QtWidgets/qaction.h:96
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QAction(const QIcon &, const QString &, QObject *)
 
 /*
 Constructs an action with parent. If parent is an action group the action will be automatically inserted into the group.
-
-Note: The parent argument is optional since Qt 5.7.
 */
 func (*QAction) NewForInherit2p(icon qtgui.QIcon_ITF, text string) *QAction {
 	return NewQAction2p(icon, text)
@@ -243,7 +231,7 @@ func NewQAction2p(icon qtgui.QIcon_ITF, text string) *QAction {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:99
+// /usr/include/qt/QtWidgets/qaction.h:98
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAction()
@@ -258,7 +246,7 @@ func DeleteQAction(this *QAction) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:101
+// /usr/include/qt/QtWidgets/qaction.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setActionGroup(QActionGroup *)
@@ -279,7 +267,7 @@ func (this *QAction) SetActionGroup(group QActionGroup_ITF /*777 QActionGroup **
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:102
+// /usr/include/qt/QtWidgets/qaction.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QActionGroup * actionGroup() const
@@ -295,7 +283,7 @@ func (this *QAction) ActionGroup() *QActionGroup /*777 QActionGroup **/ {
 	return /*==*/ NewQActionGroupFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:103
+// /usr/include/qt/QtWidgets/qaction.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIcon(const QIcon &)
@@ -312,7 +300,7 @@ func (this *QAction) SetIcon(icon qtgui.QIcon_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:104
+// /usr/include/qt/QtWidgets/qaction.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIcon icon() const
@@ -328,7 +316,7 @@ func (this *QAction) Icon() *qtgui.QIcon /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:106
+// /usr/include/qt/QtWidgets/qaction.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setText(const QString &)
@@ -343,7 +331,7 @@ func (this *QAction) SetText(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:107
+// /usr/include/qt/QtWidgets/qaction.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text() const
@@ -360,7 +348,7 @@ func (this *QAction) Text() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:109
+// /usr/include/qt/QtWidgets/qaction.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconText(const QString &)
@@ -375,7 +363,7 @@ func (this *QAction) SetIconText(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:110
+// /usr/include/qt/QtWidgets/qaction.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString iconText() const
@@ -392,7 +380,7 @@ func (this *QAction) IconText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:112
+// /usr/include/qt/QtWidgets/qaction.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setToolTip(const QString &)
@@ -407,7 +395,7 @@ func (this *QAction) SetToolTip(tip string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:113
+// /usr/include/qt/QtWidgets/qaction.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toolTip() const
@@ -424,7 +412,7 @@ func (this *QAction) ToolTip() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:115
+// /usr/include/qt/QtWidgets/qaction.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStatusTip(const QString &)
@@ -439,7 +427,7 @@ func (this *QAction) SetStatusTip(statusTip string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:116
+// /usr/include/qt/QtWidgets/qaction.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString statusTip() const
@@ -456,7 +444,7 @@ func (this *QAction) StatusTip() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:118
+// /usr/include/qt/QtWidgets/qaction.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWhatsThis(const QString &)
@@ -471,7 +459,7 @@ func (this *QAction) SetWhatsThis(what string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:119
+// /usr/include/qt/QtWidgets/qaction.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString whatsThis() const
@@ -488,7 +476,7 @@ func (this *QAction) WhatsThis() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:121
+// /usr/include/qt/QtWidgets/qaction.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPriority(QAction::Priority)
@@ -501,7 +489,7 @@ func (this *QAction) SetPriority(priority int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:122
+// /usr/include/qt/QtWidgets/qaction.h:121
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAction::Priority priority() const
@@ -515,7 +503,7 @@ func (this *QAction) Priority() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:125
+// /usr/include/qt/QtWidgets/qaction.h:124
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMenu * menu() const
@@ -531,7 +519,7 @@ func (this *QAction) Menu() *QMenu /*777 QMenu **/ {
 	return /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:126
+// /usr/include/qt/QtWidgets/qaction.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMenu(QMenu *)
@@ -550,7 +538,7 @@ func (this *QAction) SetMenu(menu QMenu_ITF /*777 QMenu **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:129
+// /usr/include/qt/QtWidgets/qaction.h:128
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSeparator(bool)
@@ -567,7 +555,7 @@ func (this *QAction) SetSeparator(b bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:130
+// /usr/include/qt/QtWidgets/qaction.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSeparator() const
@@ -583,7 +571,7 @@ func (this *QAction) IsSeparator() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:133
+// /usr/include/qt/QtWidgets/qaction.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setShortcut(const QKeySequence &)
@@ -600,7 +588,7 @@ func (this *QAction) SetShortcut(shortcut qtgui.QKeySequence_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:134
+// /usr/include/qt/QtWidgets/qaction.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QKeySequence shortcut() const
@@ -620,7 +608,7 @@ func (this *QAction) Shortcut() *qtgui.QKeySequence /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:137
+// /usr/include/qt/QtWidgets/qaction.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setShortcuts(QKeySequence::StandardKey)
@@ -637,7 +625,7 @@ func (this *QAction) SetShortcuts(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:140
+// /usr/include/qt/QtWidgets/qaction.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setShortcutContext(Qt::ShortcutContext)
@@ -650,7 +638,7 @@ func (this *QAction) SetShortcutContext(context int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:141
+// /usr/include/qt/QtWidgets/qaction.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::ShortcutContext shortcutContext() const
@@ -664,7 +652,7 @@ func (this *QAction) ShortcutContext() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:143
+// /usr/include/qt/QtWidgets/qaction.h:142
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAutoRepeat(bool)
@@ -677,7 +665,7 @@ func (this *QAction) SetAutoRepeat(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:144
+// /usr/include/qt/QtWidgets/qaction.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool autoRepeat() const
@@ -691,7 +679,7 @@ func (this *QAction) AutoRepeat() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:147
+// /usr/include/qt/QtWidgets/qaction.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
@@ -708,7 +696,7 @@ func (this *QAction) SetFont(font qtgui.QFont_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:148
+// /usr/include/qt/QtWidgets/qaction.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QFont font() const
@@ -724,7 +712,7 @@ func (this *QAction) Font() *qtgui.QFont /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:150
+// /usr/include/qt/QtWidgets/qaction.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCheckable(bool)
@@ -737,7 +725,7 @@ func (this *QAction) SetCheckable(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:151
+// /usr/include/qt/QtWidgets/qaction.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isCheckable() const
@@ -751,7 +739,7 @@ func (this *QAction) IsCheckable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:153
+// /usr/include/qt/QtWidgets/qaction.h:152
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant data() const
@@ -769,7 +757,7 @@ func (this *QAction) Data() *qtcore.QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:154
+// /usr/include/qt/QtWidgets/qaction.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setData(const QVariant &)
@@ -788,7 +776,7 @@ func (this *QAction) SetData(var_ qtcore.QVariant_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:156
+// /usr/include/qt/QtWidgets/qaction.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isChecked() const
@@ -802,7 +790,7 @@ func (this *QAction) IsChecked() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:158
+// /usr/include/qt/QtWidgets/qaction.h:157
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEnabled() const
@@ -816,7 +804,7 @@ func (this *QAction) IsEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:160
+// /usr/include/qt/QtWidgets/qaction.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isVisible() const
@@ -830,7 +818,7 @@ func (this *QAction) IsVisible() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:163
+// /usr/include/qt/QtWidgets/qaction.h:162
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activate(QAction::ActionEvent)
@@ -845,7 +833,7 @@ func (this *QAction) Activate(event int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:164
+// /usr/include/qt/QtWidgets/qaction.h:163
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool showStatusText(QWidget *)
@@ -867,7 +855,7 @@ func (this *QAction) ShowStatusText(widget QWidget_ITF /*777 QWidget **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:164
+// /usr/include/qt/QtWidgets/qaction.h:163
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool showStatusText(QWidget *)
@@ -887,7 +875,7 @@ func (this *QAction) ShowStatusTextp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:166
+// /usr/include/qt/QtWidgets/qaction.h:165
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMenuRole(QAction::MenuRole)
@@ -900,7 +888,7 @@ func (this *QAction) SetMenuRole(menuRole int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:167
+// /usr/include/qt/QtWidgets/qaction.h:166
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAction::MenuRole menuRole() const
@@ -914,7 +902,7 @@ func (this *QAction) MenuRole() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:169
+// /usr/include/qt/QtWidgets/qaction.h:168
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconVisibleInMenu(bool)
@@ -927,7 +915,7 @@ func (this *QAction) SetIconVisibleInMenu(visible bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:170
+// /usr/include/qt/QtWidgets/qaction.h:169
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isIconVisibleInMenu() const
@@ -944,33 +932,6 @@ func (this *QAction) IsIconVisibleInMenu() bool {
 // /usr/include/qt/QtWidgets/qaction.h:172
 // index:0
 // Public Visibility=Default Availability=Available
-// [-2] void setShortcutVisibleInContextMenu(bool)
-
-/*
-
- */
-func (this *QAction) SetShortcutVisibleInContextMenu(show bool) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction31setShortcutVisibleInContextMenuEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), show)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qaction.h:173
-// index:0
-// Public Visibility=Default Availability=Available
-// [1] bool isShortcutVisibleInContextMenu() const
-
-/*
-
- */
-func (this *QAction) IsShortcutVisibleInContextMenu() bool {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction30isShortcutVisibleInContextMenuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtWidgets/qaction.h:175
-// index:0
-// Public Visibility=Default Availability=Available
 // [8] QWidget * parentWidget() const
 
 /*
@@ -982,7 +943,7 @@ func (this *QAction) ParentWidget() *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:183
+// /usr/include/qt/QtWidgets/qaction.h:180
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -1000,7 +961,7 @@ func (this *QAction) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:187
+// /usr/include/qt/QtWidgets/qaction.h:184
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void trigger()
@@ -1013,7 +974,7 @@ func (this *QAction) Trigger() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:188
+// /usr/include/qt/QtWidgets/qaction.h:185
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void hover()
@@ -1026,7 +987,7 @@ func (this *QAction) Hover() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:189
+// /usr/include/qt/QtWidgets/qaction.h:186
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setChecked(bool)
@@ -1039,7 +1000,7 @@ func (this *QAction) SetChecked(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:190
+// /usr/include/qt/QtWidgets/qaction.h:187
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void toggle()
@@ -1052,7 +1013,7 @@ func (this *QAction) Toggle() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:191
+// /usr/include/qt/QtWidgets/qaction.h:188
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEnabled(bool)
@@ -1065,7 +1026,7 @@ func (this *QAction) SetEnabled(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:192
+// /usr/include/qt/QtWidgets/qaction.h:189
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setDisabled(bool)
@@ -1078,7 +1039,7 @@ func (this *QAction) SetDisabled(b bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:193
+// /usr/include/qt/QtWidgets/qaction.h:190
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVisible(bool)
@@ -1091,7 +1052,7 @@ func (this *QAction) SetVisible(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:196
+// /usr/include/qt/QtWidgets/qaction.h:193
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void changed()
@@ -1099,7 +1060,7 @@ func (this *QAction) SetVisible(arg0 bool) {
 /*
 This signal is emitted when an action has changed. If you are only interested in actions in a given widget, you can watch for QWidget::actionEvent() sent with an QEvent::ActionChanged.
 
-Note: Notifier signal for property autoRepeat. Notifier signal for property checkable. Notifier signal for property enabled. Notifier signal for property font. Notifier signal for property icon. Notifier signal for property iconText. Notifier signal for property iconVisibleInMenu. Notifier signal for property menuRole. Notifier signal for property shortcut. Notifier signal for property shortcutContext. Notifier signal for property shortcutVisibleInContextMenu. Notifier signal for property statusTip. Notifier signal for property text. Notifier signal for property toolTip. Notifier signal for property visible. Notifier signal for property whatsThis.
+Note: Notifier signal for property autoRepeat. Notifier signal for property checkable. Notifier signal for property enabled. Notifier signal for property font. Notifier signal for property icon. Notifier signal for property iconText. Notifier signal for property iconVisibleInMenu. Notifier signal for property menuRole. Notifier signal for property shortcut. Notifier signal for property shortcutContext. Notifier signal for property statusTip. Notifier signal for property text. Notifier signal for property toolTip. Notifier signal for property visible. Notifier signal for property whatsThis.
 
 See also QWidget::actionEvent().
 */
@@ -1108,7 +1069,7 @@ func (this *QAction) Changed() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:197
+// /usr/include/qt/QtWidgets/qaction.h:194
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void triggered(bool)
@@ -1125,7 +1086,7 @@ func (this *QAction) Triggered(checked bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:197
+// /usr/include/qt/QtWidgets/qaction.h:194
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void triggered(bool)
@@ -1144,7 +1105,7 @@ func (this *QAction) Triggeredp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:198
+// /usr/include/qt/QtWidgets/qaction.h:195
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void hovered()
@@ -1159,7 +1120,7 @@ func (this *QAction) Hovered() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:199
+// /usr/include/qt/QtWidgets/qaction.h:196
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void toggled(bool)

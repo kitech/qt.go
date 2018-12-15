@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qabstractitemview.h
@@ -356,7 +354,7 @@ func (*QAbstractItemView) NewFromPointer(cthis unsafe.Pointer) *QAbstractItemVie
 	return NewQAbstractItemViewFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:63
+// /usr/include/qt/QtWidgets/qabstractitemview.h:64
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -370,7 +368,7 @@ func (this *QAbstractItemView) MetaObject() *qtcore.QMetaObject /*777 const QMet
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:127
+// /usr/include/qt/QtWidgets/qabstractitemview.h:128
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractItemView(QWidget *)
@@ -393,7 +391,7 @@ func NewQAbstractItemView(parent QWidget_ITF /*777 QWidget **/) *QAbstractItemVi
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:127
+// /usr/include/qt/QtWidgets/qabstractitemview.h:128
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractItemView(QWidget *)
@@ -414,7 +412,7 @@ func NewQAbstractItemViewp() *QAbstractItemView {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:128
+// /usr/include/qt/QtWidgets/qabstractitemview.h:129
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractItemView()
@@ -429,7 +427,7 @@ func DeleteQAbstractItemView(this *QAbstractItemView) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:130
+// /usr/include/qt/QtWidgets/qabstractitemview.h:131
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setModel(QAbstractItemModel *)
@@ -461,7 +459,7 @@ func (this *QAbstractItemView) SetModel(model qtcore.QAbstractItemModel_ITF /*77
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:131
+// /usr/include/qt/QtWidgets/qabstractitemview.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractItemModel * model() const
@@ -477,7 +475,7 @@ func (this *QAbstractItemView) Model() *qtcore.QAbstractItemModel /*777 QAbstrac
 	return qtcore.NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:133
+// /usr/include/qt/QtWidgets/qabstractitemview.h:134
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setSelectionModel(QItemSelectionModel *)
@@ -500,7 +498,7 @@ func (this *QAbstractItemView) SetSelectionModel(selectionModel qtcore.QItemSele
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:134
+// /usr/include/qt/QtWidgets/qabstractitemview.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QItemSelectionModel * selectionModel() const
@@ -516,7 +514,7 @@ func (this *QAbstractItemView) SelectionModel() *qtcore.QItemSelectionModel /*77
 	return qtcore.NewQItemSelectionModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:136
+// /usr/include/qt/QtWidgets/qabstractitemview.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemDelegate(QAbstractItemDelegate *)
@@ -539,7 +537,7 @@ func (this *QAbstractItemView) SetItemDelegate(delegate QAbstractItemDelegate_IT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:137
+// /usr/include/qt/QtWidgets/qabstractitemview.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractItemDelegate * itemDelegate() const
@@ -575,7 +573,7 @@ func (this *QAbstractItemView) ItemDelegate1(index qtcore.QModelIndex_ITF) *QAbs
 	return /*==*/ NewQAbstractItemDelegateFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:139
+// /usr/include/qt/QtWidgets/qabstractitemview.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSelectionMode(QAbstractItemView::SelectionMode)
@@ -588,7 +586,7 @@ func (this *QAbstractItemView) SetSelectionMode(mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:140
+// /usr/include/qt/QtWidgets/qabstractitemview.h:141
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAbstractItemView::SelectionMode selectionMode() const
@@ -602,7 +600,7 @@ func (this *QAbstractItemView) SelectionMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:142
+// /usr/include/qt/QtWidgets/qabstractitemview.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSelectionBehavior(QAbstractItemView::SelectionBehavior)
@@ -615,7 +613,7 @@ func (this *QAbstractItemView) SetSelectionBehavior(behavior int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:143
+// /usr/include/qt/QtWidgets/qabstractitemview.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAbstractItemView::SelectionBehavior selectionBehavior() const
@@ -629,7 +627,7 @@ func (this *QAbstractItemView) SelectionBehavior() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:145
+// /usr/include/qt/QtWidgets/qabstractitemview.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex currentIndex() const
@@ -647,7 +645,7 @@ func (this *QAbstractItemView) CurrentIndex() *qtcore.QModelIndex /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:146
+// /usr/include/qt/QtWidgets/qabstractitemview.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex rootIndex() const
@@ -665,7 +663,7 @@ func (this *QAbstractItemView) RootIndex() *qtcore.QModelIndex /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:148
+// /usr/include/qt/QtWidgets/qabstractitemview.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEditTriggers(QAbstractItemView::EditTriggers)
@@ -678,7 +676,7 @@ func (this *QAbstractItemView) SetEditTriggers(triggers int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:149
+// /usr/include/qt/QtWidgets/qabstractitemview.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAbstractItemView::EditTriggers editTriggers() const
@@ -692,7 +690,7 @@ func (this *QAbstractItemView) EditTriggers() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:151
+// /usr/include/qt/QtWidgets/qabstractitemview.h:152
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVerticalScrollMode(QAbstractItemView::ScrollMode)
@@ -705,7 +703,7 @@ func (this *QAbstractItemView) SetVerticalScrollMode(mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:152
+// /usr/include/qt/QtWidgets/qabstractitemview.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAbstractItemView::ScrollMode verticalScrollMode() const
@@ -719,7 +717,7 @@ func (this *QAbstractItemView) VerticalScrollMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:153
+// /usr/include/qt/QtWidgets/qabstractitemview.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetVerticalScrollMode()
@@ -732,7 +730,7 @@ func (this *QAbstractItemView) ResetVerticalScrollMode() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:155
+// /usr/include/qt/QtWidgets/qabstractitemview.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHorizontalScrollMode(QAbstractItemView::ScrollMode)
@@ -745,7 +743,7 @@ func (this *QAbstractItemView) SetHorizontalScrollMode(mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:156
+// /usr/include/qt/QtWidgets/qabstractitemview.h:157
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAbstractItemView::ScrollMode horizontalScrollMode() const
@@ -759,7 +757,7 @@ func (this *QAbstractItemView) HorizontalScrollMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:157
+// /usr/include/qt/QtWidgets/qabstractitemview.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetHorizontalScrollMode()
@@ -772,7 +770,7 @@ func (this *QAbstractItemView) ResetHorizontalScrollMode() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:159
+// /usr/include/qt/QtWidgets/qabstractitemview.h:160
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAutoScroll(bool)
@@ -785,7 +783,7 @@ func (this *QAbstractItemView) SetAutoScroll(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:160
+// /usr/include/qt/QtWidgets/qabstractitemview.h:161
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasAutoScroll() const
@@ -799,7 +797,7 @@ func (this *QAbstractItemView) HasAutoScroll() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:162
+// /usr/include/qt/QtWidgets/qabstractitemview.h:163
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAutoScrollMargin(int)
@@ -812,7 +810,7 @@ func (this *QAbstractItemView) SetAutoScrollMargin(margin int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:163
+// /usr/include/qt/QtWidgets/qabstractitemview.h:164
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int autoScrollMargin() const
@@ -826,7 +824,7 @@ func (this *QAbstractItemView) AutoScrollMargin() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:165
+// /usr/include/qt/QtWidgets/qabstractitemview.h:166
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabKeyNavigation(bool)
@@ -839,7 +837,7 @@ func (this *QAbstractItemView) SetTabKeyNavigation(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:166
+// /usr/include/qt/QtWidgets/qabstractitemview.h:167
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool tabKeyNavigation() const
@@ -853,7 +851,7 @@ func (this *QAbstractItemView) TabKeyNavigation() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:169
+// /usr/include/qt/QtWidgets/qabstractitemview.h:170
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDropIndicatorShown(bool)
@@ -866,7 +864,7 @@ func (this *QAbstractItemView) SetDropIndicatorShown(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:170
+// /usr/include/qt/QtWidgets/qabstractitemview.h:171
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool showDropIndicator() const
@@ -880,7 +878,7 @@ func (this *QAbstractItemView) ShowDropIndicator() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:172
+// /usr/include/qt/QtWidgets/qabstractitemview.h:173
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDragEnabled(bool)
@@ -893,7 +891,7 @@ func (this *QAbstractItemView) SetDragEnabled(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:173
+// /usr/include/qt/QtWidgets/qabstractitemview.h:174
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool dragEnabled() const
@@ -907,7 +905,7 @@ func (this *QAbstractItemView) DragEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:175
+// /usr/include/qt/QtWidgets/qabstractitemview.h:176
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDragDropOverwriteMode(bool)
@@ -920,7 +918,7 @@ func (this *QAbstractItemView) SetDragDropOverwriteMode(overwrite bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:176
+// /usr/include/qt/QtWidgets/qabstractitemview.h:177
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool dragDropOverwriteMode() const
@@ -934,7 +932,7 @@ func (this *QAbstractItemView) DragDropOverwriteMode() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:187
+// /usr/include/qt/QtWidgets/qabstractitemview.h:188
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDragDropMode(QAbstractItemView::DragDropMode)
@@ -947,7 +945,7 @@ func (this *QAbstractItemView) SetDragDropMode(behavior int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:188
+// /usr/include/qt/QtWidgets/qabstractitemview.h:189
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAbstractItemView::DragDropMode dragDropMode() const
@@ -961,7 +959,7 @@ func (this *QAbstractItemView) DragDropMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:190
+// /usr/include/qt/QtWidgets/qabstractitemview.h:191
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDefaultDropAction(Qt::DropAction)
@@ -974,7 +972,7 @@ func (this *QAbstractItemView) SetDefaultDropAction(dropAction int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:191
+// /usr/include/qt/QtWidgets/qabstractitemview.h:192
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::DropAction defaultDropAction() const
@@ -988,7 +986,7 @@ func (this *QAbstractItemView) DefaultDropAction() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:194
+// /usr/include/qt/QtWidgets/qabstractitemview.h:195
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAlternatingRowColors(bool)
@@ -1001,7 +999,7 @@ func (this *QAbstractItemView) SetAlternatingRowColors(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:195
+// /usr/include/qt/QtWidgets/qabstractitemview.h:196
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool alternatingRowColors() const
@@ -1015,7 +1013,7 @@ func (this *QAbstractItemView) AlternatingRowColors() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:197
+// /usr/include/qt/QtWidgets/qabstractitemview.h:198
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconSize(const QSize &)
@@ -1032,7 +1030,7 @@ func (this *QAbstractItemView) SetIconSize(size qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:198
+// /usr/include/qt/QtWidgets/qabstractitemview.h:199
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize iconSize() const
@@ -1048,7 +1046,7 @@ func (this *QAbstractItemView) IconSize() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:200
+// /usr/include/qt/QtWidgets/qabstractitemview.h:201
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextElideMode(Qt::TextElideMode)
@@ -1061,7 +1059,7 @@ func (this *QAbstractItemView) SetTextElideMode(mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:201
+// /usr/include/qt/QtWidgets/qabstractitemview.h:202
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::TextElideMode textElideMode() const
@@ -1075,7 +1073,7 @@ func (this *QAbstractItemView) TextElideMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:203
+// /usr/include/qt/QtWidgets/qabstractitemview.h:204
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void keyboardSearch(const QString &)
@@ -1092,7 +1090,7 @@ func (this *QAbstractItemView) KeyboardSearch(search string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:205
+// /usr/include/qt/QtWidgets/qabstractitemview.h:206
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [16] QRect visualRect(const QModelIndex &) const
@@ -1118,7 +1116,7 @@ func (this *QAbstractItemView) VisualRect(index qtcore.QModelIndex_ITF) *qtcore.
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:206
+// /usr/include/qt/QtWidgets/qabstractitemview.h:207
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void scrollTo(const QModelIndex &, QAbstractItemView::ScrollHint)
@@ -1137,7 +1135,7 @@ func (this *QAbstractItemView) ScrollTo(index qtcore.QModelIndex_ITF, hint int) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:206
+// /usr/include/qt/QtWidgets/qabstractitemview.h:207
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void scrollTo(const QModelIndex &, QAbstractItemView::ScrollHint)
@@ -1158,7 +1156,7 @@ func (this *QAbstractItemView) ScrollTop(index qtcore.QModelIndex_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:207
+// /usr/include/qt/QtWidgets/qabstractitemview.h:208
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [24] QModelIndex indexAt(const QPoint &) const
@@ -1182,7 +1180,7 @@ func (this *QAbstractItemView) IndexAt(point qtcore.QPoint_ITF) *qtcore.QModelIn
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:209
+// /usr/include/qt/QtWidgets/qabstractitemview.h:210
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize sizeHintForIndex(const QModelIndex &) const
@@ -1204,7 +1202,7 @@ func (this *QAbstractItemView) SizeHintForIndex(index qtcore.QModelIndex_ITF) *q
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:210
+// /usr/include/qt/QtWidgets/qabstractitemview.h:211
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int sizeHintForRow(int) const
@@ -1224,7 +1222,7 @@ func (this *QAbstractItemView) SizeHintForRow(row int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:211
+// /usr/include/qt/QtWidgets/qabstractitemview.h:212
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int sizeHintForColumn(int) const
@@ -1242,7 +1240,7 @@ func (this *QAbstractItemView) SizeHintForColumn(column int) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:213
+// /usr/include/qt/QtWidgets/qabstractitemview.h:214
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void openPersistentEditor(const QModelIndex &)
@@ -1250,7 +1248,7 @@ func (this *QAbstractItemView) SizeHintForColumn(column int) int {
 /*
 Opens a persistent editor on the item at the given index. If no editor exists, the delegate will create a new editor.
 
-See also closePersistentEditor() and isPersistentEditorOpen().
+See also closePersistentEditor().
 */
 func (this *QAbstractItemView) OpenPersistentEditor(index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
@@ -1261,7 +1259,7 @@ func (this *QAbstractItemView) OpenPersistentEditor(index qtcore.QModelIndex_ITF
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractitemview.h:214
+// /usr/include/qt/QtWidgets/qabstractitemview.h:215
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void closePersistentEditor(const QModelIndex &)
@@ -1269,7 +1267,7 @@ func (this *QAbstractItemView) OpenPersistentEditor(index qtcore.QModelIndex_ITF
 /*
 Closes the persistent editor for the item at the given index.
 
-See also openPersistentEditor() and isPersistentEditorOpen().
+See also openPersistentEditor().
 */
 func (this *QAbstractItemView) ClosePersistentEditor(index qtcore.QModelIndex_ITF) {
 	var convArg0 unsafe.Pointer
@@ -1278,28 +1276,6 @@ func (this *QAbstractItemView) ClosePersistentEditor(index qtcore.QModelIndex_IT
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN17QAbstractItemView21closePersistentEditorERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qabstractitemview.h:215
-// index:0
-// Public Visibility=Default Availability=Available
-// [1] bool isPersistentEditorOpen(const QModelIndex &) const
-
-/*
-Returns whether a persistent editor is open for the item at index index.
-
-This function was introduced in  Qt 5.10.
-
-See also openPersistentEditor() and closePersistentEditor().
-*/
-func (this *QAbstractItemView) IsPersistentEditorOpen(index qtcore.QModelIndex_ITF) bool {
-	var convArg0 unsafe.Pointer
-	if index != nil && index.QModelIndex_PTR() != nil {
-		convArg0 = index.QModelIndex_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK17QAbstractItemView22isPersistentEditorOpenERK11QModelIndex", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
 }
 
 // /usr/include/qt/QtWidgets/qabstractitemview.h:217
@@ -2705,7 +2681,7 @@ func (this *QAbstractItemView) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QF
 /*
 Reimplemented from QWidget::focusOutEvent().
 
-This function is called with the given event when the widget loses the focus. By default, the event is ignored.
+This function is called with the given event when the widget looses the focus. By default, the event is ignored.
 
 See also clearFocus() and focusInEvent().
 */

@@ -63,7 +63,7 @@ func (*QDropEvent) NewFromPointer(cthis unsafe.Pointer) *QDropEvent {
 	return NewQDropEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:608
+// /usr/include/qt/QtGui/qevent.h:601
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDropEvent(const QPointF &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, QEvent::Type)
@@ -90,7 +90,7 @@ func NewQDropEvent(pos qtcore.QPointF_ITF, actions int, data qtcore.QMimeData_IT
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:608
+// /usr/include/qt/QtGui/qevent.h:601
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDropEvent(const QPointF &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, QEvent::Type)
@@ -119,7 +119,7 @@ func NewQDropEventp(pos qtcore.QPointF_ITF, actions int, data qtcore.QMimeData_I
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:610
+// /usr/include/qt/QtGui/qevent.h:603
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDropEvent()
@@ -134,7 +134,7 @@ func DeleteQDropEvent(this *QDropEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:612
+// /usr/include/qt/QtGui/qevent.h:605
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QPoint pos() const
@@ -150,7 +150,7 @@ func (this *QDropEvent) Pos() *qtcore.QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:613
+// /usr/include/qt/QtGui/qevent.h:606
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] const QPointF & posF() const
@@ -166,7 +166,7 @@ func (this *QDropEvent) PosF() *qtcore.QPointF {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:614
+// /usr/include/qt/QtGui/qevent.h:607
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::MouseButtons mouseButtons() const
@@ -180,7 +180,7 @@ func (this *QDropEvent) MouseButtons() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:615
+// /usr/include/qt/QtGui/qevent.h:608
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::KeyboardModifiers keyboardModifiers() const
@@ -194,7 +194,7 @@ func (this *QDropEvent) KeyboardModifiers() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:617
+// /usr/include/qt/QtGui/qevent.h:610
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::DropActions possibleActions() const
@@ -208,7 +208,7 @@ func (this *QDropEvent) PossibleActions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:618
+// /usr/include/qt/QtGui/qevent.h:611
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::DropAction proposedAction() const
@@ -222,7 +222,7 @@ func (this *QDropEvent) ProposedAction() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:619
+// /usr/include/qt/QtGui/qevent.h:612
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void acceptProposedAction()
@@ -235,7 +235,7 @@ func (this *QDropEvent) AcceptProposedAction() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:621
+// /usr/include/qt/QtGui/qevent.h:614
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] Qt::DropAction dropAction() const
@@ -249,7 +249,7 @@ func (this *QDropEvent) DropAction() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:622
+// /usr/include/qt/QtGui/qevent.h:615
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDropAction(Qt::DropAction)
@@ -262,7 +262,7 @@ func (this *QDropEvent) SetDropAction(action int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:624
+// /usr/include/qt/QtGui/qevent.h:617
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QObject * source() const
@@ -276,7 +276,7 @@ func (this *QDropEvent) Source() *qtcore.QObject /*777 QObject **/ {
 	return qtcore.NewQObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qevent.h:625
+// /usr/include/qt/QtGui/qevent.h:618
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QMimeData * mimeData() const

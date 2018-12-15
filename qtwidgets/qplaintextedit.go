@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h
@@ -20,7 +18,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 126
+// extern C begin: 124
 */
 // import "C"
 import "unsafe"
@@ -231,7 +229,7 @@ func (*QPlainTextEdit) NewFromPointer(cthis unsafe.Pointer) *QPlainTextEdit {
 	return NewQPlainTextEditFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:66
+// /usr/include/qt/QtWidgets/qplaintextedit.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -245,7 +243,7 @@ func (this *QPlainTextEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:94
+// /usr/include/qt/QtWidgets/qplaintextedit.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPlainTextEdit(QWidget *)
@@ -268,7 +266,7 @@ func NewQPlainTextEdit(parent QWidget_ITF /*777 QWidget **/) *QPlainTextEdit {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:94
+// /usr/include/qt/QtWidgets/qplaintextedit.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QPlainTextEdit(QWidget *)
@@ -289,7 +287,7 @@ func NewQPlainTextEditp() *QPlainTextEdit {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:95
+// /usr/include/qt/QtWidgets/qplaintextedit.h:93
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPlainTextEdit(const QString &, QWidget *)
@@ -314,7 +312,7 @@ func NewQPlainTextEdit1(text string, parent QWidget_ITF /*777 QWidget **/) *QPla
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:95
+// /usr/include/qt/QtWidgets/qplaintextedit.h:93
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QPlainTextEdit(const QString &, QWidget *)
@@ -337,7 +335,7 @@ func NewQPlainTextEdit1p(text string) *QPlainTextEdit {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:96
+// /usr/include/qt/QtWidgets/qplaintextedit.h:94
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QPlainTextEdit()
@@ -352,7 +350,7 @@ func DeleteQPlainTextEdit(this *QPlainTextEdit) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:98
+// /usr/include/qt/QtWidgets/qplaintextedit.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDocument(QTextDocument *)
@@ -375,7 +373,7 @@ func (this *QPlainTextEdit) SetDocument(document qtgui.QTextDocument_ITF /*777 Q
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:99
+// /usr/include/qt/QtWidgets/qplaintextedit.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextDocument * document() const
@@ -391,7 +389,7 @@ func (this *QPlainTextEdit) Document() *qtgui.QTextDocument /*777 QTextDocument 
 	return qtgui.NewQTextDocumentFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:101
+// /usr/include/qt/QtWidgets/qplaintextedit.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPlaceholderText(const QString &)
@@ -406,7 +404,7 @@ func (this *QPlainTextEdit) SetPlaceholderText(placeholderText string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:102
+// /usr/include/qt/QtWidgets/qplaintextedit.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString placeholderText() const
@@ -423,7 +421,7 @@ func (this *QPlainTextEdit) PlaceholderText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:104
+// /usr/include/qt/QtWidgets/qplaintextedit.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextCursor(const QTextCursor &)
@@ -442,7 +440,7 @@ func (this *QPlainTextEdit) SetTextCursor(cursor qtgui.QTextCursor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:105
+// /usr/include/qt/QtWidgets/qplaintextedit.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextCursor textCursor() const
@@ -460,7 +458,7 @@ func (this *QPlainTextEdit) TextCursor() *qtgui.QTextCursor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:107
+// /usr/include/qt/QtWidgets/qplaintextedit.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isReadOnly() const
@@ -474,7 +472,7 @@ func (this *QPlainTextEdit) IsReadOnly() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:108
+// /usr/include/qt/QtWidgets/qplaintextedit.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setReadOnly(bool)
@@ -487,7 +485,7 @@ func (this *QPlainTextEdit) SetReadOnly(ro bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:110
+// /usr/include/qt/QtWidgets/qplaintextedit.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextInteractionFlags(Qt::TextInteractionFlags)
@@ -500,7 +498,7 @@ func (this *QPlainTextEdit) SetTextInteractionFlags(flags int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:111
+// /usr/include/qt/QtWidgets/qplaintextedit.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::TextInteractionFlags textInteractionFlags() const
@@ -514,7 +512,7 @@ func (this *QPlainTextEdit) TextInteractionFlags() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:113
+// /usr/include/qt/QtWidgets/qplaintextedit.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void mergeCurrentCharFormat(const QTextCharFormat &)
@@ -533,7 +531,7 @@ func (this *QPlainTextEdit) MergeCurrentCharFormat(modifier qtgui.QTextCharForma
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:114
+// /usr/include/qt/QtWidgets/qplaintextedit.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentCharFormat(const QTextCharFormat &)
@@ -552,7 +550,7 @@ func (this *QPlainTextEdit) SetCurrentCharFormat(format qtgui.QTextCharFormat_IT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:115
+// /usr/include/qt/QtWidgets/qplaintextedit.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QTextCharFormat currentCharFormat() const
@@ -570,7 +568,7 @@ func (this *QPlainTextEdit) CurrentCharFormat() *qtgui.QTextCharFormat /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:117
+// /usr/include/qt/QtWidgets/qplaintextedit.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool tabChangesFocus() const
@@ -584,7 +582,7 @@ func (this *QPlainTextEdit) TabChangesFocus() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:118
+// /usr/include/qt/QtWidgets/qplaintextedit.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabChangesFocus(bool)
@@ -597,7 +595,7 @@ func (this *QPlainTextEdit) SetTabChangesFocus(b bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:120
+// /usr/include/qt/QtWidgets/qplaintextedit.h:118
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setDocumentTitle(const QString &)
@@ -612,7 +610,7 @@ func (this *QPlainTextEdit) SetDocumentTitle(title string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:122
+// /usr/include/qt/QtWidgets/qplaintextedit.h:120
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString documentTitle() const
@@ -629,7 +627,7 @@ func (this *QPlainTextEdit) DocumentTitle() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:125
+// /usr/include/qt/QtWidgets/qplaintextedit.h:123
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isUndoRedoEnabled() const
@@ -643,7 +641,7 @@ func (this *QPlainTextEdit) IsUndoRedoEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:127
+// /usr/include/qt/QtWidgets/qplaintextedit.h:125
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setUndoRedoEnabled(bool)
@@ -656,7 +654,7 @@ func (this *QPlainTextEdit) SetUndoRedoEnabled(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:130
+// /usr/include/qt/QtWidgets/qplaintextedit.h:128
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void setMaximumBlockCount(int)
@@ -669,7 +667,7 @@ func (this *QPlainTextEdit) SetMaximumBlockCount(maximum int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:132
+// /usr/include/qt/QtWidgets/qplaintextedit.h:130
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int maximumBlockCount() const
@@ -683,7 +681,7 @@ func (this *QPlainTextEdit) MaximumBlockCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:136
+// /usr/include/qt/QtWidgets/qplaintextedit.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QPlainTextEdit::LineWrapMode lineWrapMode() const
@@ -697,7 +695,7 @@ func (this *QPlainTextEdit) LineWrapMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:137
+// /usr/include/qt/QtWidgets/qplaintextedit.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLineWrapMode(QPlainTextEdit::LineWrapMode)
@@ -710,7 +708,7 @@ func (this *QPlainTextEdit) SetLineWrapMode(mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:139
+// /usr/include/qt/QtWidgets/qplaintextedit.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QTextOption::WrapMode wordWrapMode() const
@@ -724,7 +722,7 @@ func (this *QPlainTextEdit) WordWrapMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:140
+// /usr/include/qt/QtWidgets/qplaintextedit.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWordWrapMode(QTextOption::WrapMode)
@@ -737,7 +735,7 @@ func (this *QPlainTextEdit) SetWordWrapMode(policy int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:142
+// /usr/include/qt/QtWidgets/qplaintextedit.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBackgroundVisible(bool)
@@ -750,7 +748,7 @@ func (this *QPlainTextEdit) SetBackgroundVisible(visible bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:143
+// /usr/include/qt/QtWidgets/qplaintextedit.h:141
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool backgroundVisible() const
@@ -764,7 +762,7 @@ func (this *QPlainTextEdit) BackgroundVisible() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:145
+// /usr/include/qt/QtWidgets/qplaintextedit.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCenterOnScroll(bool)
@@ -777,7 +775,7 @@ func (this *QPlainTextEdit) SetCenterOnScroll(enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:146
+// /usr/include/qt/QtWidgets/qplaintextedit.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool centerOnScroll() const
@@ -791,7 +789,7 @@ func (this *QPlainTextEdit) CenterOnScroll() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:148
+// /usr/include/qt/QtWidgets/qplaintextedit.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool find(const QString &, QTextDocument::FindFlags)
@@ -807,7 +805,7 @@ func (this *QPlainTextEdit) Find(exp string, options int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:148
+// /usr/include/qt/QtWidgets/qplaintextedit.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool find(const QString &, QTextDocument::FindFlags)
@@ -825,7 +823,7 @@ func (this *QPlainTextEdit) Findp(exp string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:150
+// /usr/include/qt/QtWidgets/qplaintextedit.h:148
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool find(const QRegExp &, QTextDocument::FindFlags)
@@ -843,7 +841,7 @@ func (this *QPlainTextEdit) Find1(exp qtcore.QRegExp_ITF, options int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:150
+// /usr/include/qt/QtWidgets/qplaintextedit.h:148
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool find(const QRegExp &, QTextDocument::FindFlags)
@@ -863,7 +861,7 @@ func (this *QPlainTextEdit) Find1p(exp qtcore.QRegExp_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:153
+// /usr/include/qt/QtWidgets/qplaintextedit.h:151
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString toPlainText() const
@@ -884,7 +882,7 @@ func (this *QPlainTextEdit) ToPlainText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:156
+// /usr/include/qt/QtWidgets/qplaintextedit.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ensureCursorVisible()
@@ -899,7 +897,7 @@ func (this *QPlainTextEdit) EnsureCursorVisible() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:158
+// /usr/include/qt/QtWidgets/qplaintextedit.h:156
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant loadResource(int, const QUrl &)
@@ -923,7 +921,7 @@ func (this *QPlainTextEdit) LoadResource(type_ int, name qtcore.QUrl_ITF) *qtcor
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:160
+// /usr/include/qt/QtWidgets/qplaintextedit.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMenu * createStandardContextMenu()
@@ -939,7 +937,7 @@ func (this *QPlainTextEdit) CreateStandardContextMenu() *QMenu /*777 QMenu **/ {
 	return /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:161
+// /usr/include/qt/QtWidgets/qplaintextedit.h:159
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QMenu * createStandardContextMenu(const QPoint &)
@@ -959,7 +957,7 @@ func (this *QPlainTextEdit) CreateStandardContextMenu1(position qtcore.QPoint_IT
 	return /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:164
+// /usr/include/qt/QtWidgets/qplaintextedit.h:162
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextCursor cursorForPosition(const QPoint &) const
@@ -979,7 +977,7 @@ func (this *QPlainTextEdit) CursorForPosition(pos qtcore.QPoint_ITF) *qtgui.QTex
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:165
+// /usr/include/qt/QtWidgets/qplaintextedit.h:163
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QRect cursorRect(const QTextCursor &) const
@@ -999,7 +997,7 @@ func (this *QPlainTextEdit) CursorRect(cursor qtgui.QTextCursor_ITF) *qtcore.QRe
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:166
+// /usr/include/qt/QtWidgets/qplaintextedit.h:164
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QRect cursorRect() const
@@ -1015,7 +1013,7 @@ func (this *QPlainTextEdit) CursorRect1() *qtcore.QRect /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:168
+// /usr/include/qt/QtWidgets/qplaintextedit.h:166
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString anchorAt(const QPoint &) const
@@ -1038,7 +1036,7 @@ func (this *QPlainTextEdit) AnchorAt(pos qtcore.QPoint_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:170
+// /usr/include/qt/QtWidgets/qplaintextedit.h:168
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool overwriteMode() const
@@ -1052,7 +1050,7 @@ func (this *QPlainTextEdit) OverwriteMode() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:171
+// /usr/include/qt/QtWidgets/qplaintextedit.h:169
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOverwriteMode(bool)
@@ -1065,7 +1063,7 @@ func (this *QPlainTextEdit) SetOverwriteMode(overwrite bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:174
+// /usr/include/qt/QtWidgets/qplaintextedit.h:171
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int tabStopWidth() const
@@ -1079,7 +1077,7 @@ func (this *QPlainTextEdit) TabStopWidth() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:175
+// /usr/include/qt/QtWidgets/qplaintextedit.h:172
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTabStopWidth(int)
@@ -1092,34 +1090,7 @@ func (this *QPlainTextEdit) SetTabStopWidth(width int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:178
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] qreal tabStopDistance() const
-
-/*
-
- */
-func (this *QPlainTextEdit) TabStopDistance() float64 {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK14QPlainTextEdit15tabStopDistanceEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("float64", rv).(float64) // 1111
-}
-
-// /usr/include/qt/QtWidgets/qplaintextedit.h:179
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void setTabStopDistance(qreal)
-
-/*
-
- */
-func (this *QPlainTextEdit) SetTabStopDistance(distance float64) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QPlainTextEdit18setTabStopDistanceEd", qtrt.FFI_TYPE_POINTER, this.GetCthis(), distance)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qplaintextedit.h:181
+// /usr/include/qt/QtWidgets/qplaintextedit.h:174
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int cursorWidth() const
@@ -1133,7 +1104,7 @@ func (this *QPlainTextEdit) CursorWidth() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:182
+// /usr/include/qt/QtWidgets/qplaintextedit.h:175
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCursorWidth(int)
@@ -1146,7 +1117,7 @@ func (this *QPlainTextEdit) SetCursorWidth(width int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:187
+// /usr/include/qt/QtWidgets/qplaintextedit.h:180
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void moveCursor(QTextCursor::MoveOperation, QTextCursor::MoveMode)
@@ -1163,7 +1134,7 @@ func (this *QPlainTextEdit) MoveCursor(operation int, mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:187
+// /usr/include/qt/QtWidgets/qplaintextedit.h:180
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void moveCursor(QTextCursor::MoveOperation, QTextCursor::MoveMode)
@@ -1182,7 +1153,7 @@ func (this *QPlainTextEdit) MoveCursorp(operation int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:189
+// /usr/include/qt/QtWidgets/qplaintextedit.h:182
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool canPaste() const
@@ -1196,7 +1167,7 @@ func (this *QPlainTextEdit) CanPaste() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:191
+// /usr/include/qt/QtWidgets/qplaintextedit.h:184
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void print(QPagedPaintDevice *) const
@@ -1215,7 +1186,7 @@ func (this *QPlainTextEdit) Print(printer qtgui.QPagedPaintDevice_ITF /*777 QPag
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:193
+// /usr/include/qt/QtWidgets/qplaintextedit.h:186
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int blockCount() const
@@ -1229,7 +1200,7 @@ func (this *QPlainTextEdit) BlockCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:194
+// /usr/include/qt/QtWidgets/qplaintextedit.h:187
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant inputMethodQuery(Qt::InputMethodQuery) const
@@ -1245,7 +1216,7 @@ func (this *QPlainTextEdit) InputMethodQuery(property int) *qtcore.QVariant /*12
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:195
+// /usr/include/qt/QtWidgets/qplaintextedit.h:188
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QVariant inputMethodQuery(Qt::InputMethodQuery, QVariant) const
@@ -1265,7 +1236,7 @@ func (this *QPlainTextEdit) InputMethodQuery1(query int, argument qtcore.QVarian
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:199
+// /usr/include/qt/QtWidgets/qplaintextedit.h:192
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPlainText(const QString &)
@@ -1288,7 +1259,7 @@ func (this *QPlainTextEdit) SetPlainText(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:202
+// /usr/include/qt/QtWidgets/qplaintextedit.h:195
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cut()
@@ -1305,7 +1276,7 @@ func (this *QPlainTextEdit) Cut() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:203
+// /usr/include/qt/QtWidgets/qplaintextedit.h:196
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void copy()
@@ -1320,7 +1291,7 @@ func (this *QPlainTextEdit) Copy() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:204
+// /usr/include/qt/QtWidgets/qplaintextedit.h:197
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void paste()
@@ -1339,7 +1310,7 @@ func (this *QPlainTextEdit) Paste() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:207
+// /usr/include/qt/QtWidgets/qplaintextedit.h:200
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void undo()
@@ -1356,7 +1327,7 @@ func (this *QPlainTextEdit) Undo() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:208
+// /usr/include/qt/QtWidgets/qplaintextedit.h:201
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void redo()
@@ -1373,7 +1344,7 @@ func (this *QPlainTextEdit) Redo() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:210
+// /usr/include/qt/QtWidgets/qplaintextedit.h:203
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
@@ -1390,7 +1361,7 @@ func (this *QPlainTextEdit) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:211
+// /usr/include/qt/QtWidgets/qplaintextedit.h:204
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void selectAll()
@@ -1405,7 +1376,7 @@ func (this *QPlainTextEdit) SelectAll() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:213
+// /usr/include/qt/QtWidgets/qplaintextedit.h:206
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void insertPlainText(const QString &)
@@ -1425,7 +1396,7 @@ func (this *QPlainTextEdit) InsertPlainText(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:215
+// /usr/include/qt/QtWidgets/qplaintextedit.h:208
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void appendPlainText(const QString &)
@@ -1442,7 +1413,7 @@ func (this *QPlainTextEdit) AppendPlainText(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:216
+// /usr/include/qt/QtWidgets/qplaintextedit.h:209
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void appendHtml(const QString &)
@@ -1459,7 +1430,7 @@ func (this *QPlainTextEdit) AppendHtml(html string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:218
+// /usr/include/qt/QtWidgets/qplaintextedit.h:211
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void centerCursor()
@@ -1474,7 +1445,7 @@ func (this *QPlainTextEdit) CenterCursor() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:220
+// /usr/include/qt/QtWidgets/qplaintextedit.h:213
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void zoomIn(int)
@@ -1489,7 +1460,7 @@ func (this *QPlainTextEdit) ZoomIn(range_ int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:220
+// /usr/include/qt/QtWidgets/qplaintextedit.h:213
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void zoomIn(int)
@@ -1506,7 +1477,7 @@ func (this *QPlainTextEdit) ZoomInp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:221
+// /usr/include/qt/QtWidgets/qplaintextedit.h:214
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void zoomOut(int)
@@ -1523,7 +1494,7 @@ func (this *QPlainTextEdit) ZoomOut(range_ int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:221
+// /usr/include/qt/QtWidgets/qplaintextedit.h:214
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void zoomOut(int)
@@ -1542,7 +1513,7 @@ func (this *QPlainTextEdit) ZoomOutp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:224
+// /usr/include/qt/QtWidgets/qplaintextedit.h:217
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void textChanged()
@@ -1557,7 +1528,7 @@ func (this *QPlainTextEdit) TextChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:225
+// /usr/include/qt/QtWidgets/qplaintextedit.h:218
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void undoAvailable(bool)
@@ -1570,7 +1541,7 @@ func (this *QPlainTextEdit) UndoAvailable(b bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:226
+// /usr/include/qt/QtWidgets/qplaintextedit.h:219
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void redoAvailable(bool)
@@ -1583,7 +1554,7 @@ func (this *QPlainTextEdit) RedoAvailable(b bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:227
+// /usr/include/qt/QtWidgets/qplaintextedit.h:220
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void copyAvailable(bool)
@@ -1602,7 +1573,7 @@ func (this *QPlainTextEdit) CopyAvailable(b bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:228
+// /usr/include/qt/QtWidgets/qplaintextedit.h:221
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void selectionChanged()
@@ -1617,7 +1588,7 @@ func (this *QPlainTextEdit) SelectionChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:229
+// /usr/include/qt/QtWidgets/qplaintextedit.h:222
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cursorPositionChanged()
@@ -1630,7 +1601,7 @@ func (this *QPlainTextEdit) CursorPositionChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:231
+// /usr/include/qt/QtWidgets/qplaintextedit.h:224
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void updateRequest(const QRect &, int)
@@ -1649,7 +1620,7 @@ func (this *QPlainTextEdit) UpdateRequest(rect qtcore.QRect_ITF, dy int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:232
+// /usr/include/qt/QtWidgets/qplaintextedit.h:225
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void blockCountChanged(int)
@@ -1662,7 +1633,7 @@ func (this *QPlainTextEdit) BlockCountChanged(newBlockCount int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:233
+// /usr/include/qt/QtWidgets/qplaintextedit.h:226
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void modificationChanged(bool)
@@ -1677,7 +1648,7 @@ func (this *QPlainTextEdit) ModificationChanged(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:236
+// /usr/include/qt/QtWidgets/qplaintextedit.h:229
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -1695,7 +1666,7 @@ func (this *QPlainTextEdit) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:237
+// /usr/include/qt/QtWidgets/qplaintextedit.h:230
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
@@ -1712,7 +1683,7 @@ func (this *QPlainTextEdit) TimerEvent(e qtcore.QTimerEvent_ITF /*777 QTimerEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:238
+// /usr/include/qt/QtWidgets/qplaintextedit.h:231
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
@@ -1729,7 +1700,7 @@ func (this *QPlainTextEdit) KeyPressEvent(e qtgui.QKeyEvent_ITF /*777 QKeyEvent 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:239
+// /usr/include/qt/QtWidgets/qplaintextedit.h:232
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
@@ -1746,7 +1717,7 @@ func (this *QPlainTextEdit) KeyReleaseEvent(e qtgui.QKeyEvent_ITF /*777 QKeyEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:240
+// /usr/include/qt/QtWidgets/qplaintextedit.h:233
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
@@ -1763,7 +1734,7 @@ func (this *QPlainTextEdit) ResizeEvent(e qtgui.QResizeEvent_ITF /*777 QResizeEv
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:241
+// /usr/include/qt/QtWidgets/qplaintextedit.h:234
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
@@ -1780,7 +1751,7 @@ func (this *QPlainTextEdit) PaintEvent(e qtgui.QPaintEvent_ITF /*777 QPaintEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:242
+// /usr/include/qt/QtWidgets/qplaintextedit.h:235
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
@@ -1797,7 +1768,7 @@ func (this *QPlainTextEdit) MousePressEvent(e qtgui.QMouseEvent_ITF /*777 QMouse
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:243
+// /usr/include/qt/QtWidgets/qplaintextedit.h:236
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
@@ -1814,7 +1785,7 @@ func (this *QPlainTextEdit) MouseMoveEvent(e qtgui.QMouseEvent_ITF /*777 QMouseE
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:244
+// /usr/include/qt/QtWidgets/qplaintextedit.h:237
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
@@ -1831,7 +1802,7 @@ func (this *QPlainTextEdit) MouseReleaseEvent(e qtgui.QMouseEvent_ITF /*777 QMou
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:245
+// /usr/include/qt/QtWidgets/qplaintextedit.h:238
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
@@ -1848,7 +1819,7 @@ func (this *QPlainTextEdit) MouseDoubleClickEvent(e qtgui.QMouseEvent_ITF /*777 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:246
+// /usr/include/qt/QtWidgets/qplaintextedit.h:239
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool focusNextPrevChild(bool)
@@ -1862,7 +1833,7 @@ func (this *QPlainTextEdit) FocusNextPrevChild(next bool) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:248
+// /usr/include/qt/QtWidgets/qplaintextedit.h:241
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QContextMenuEvent *)
@@ -1895,7 +1866,7 @@ func (this *QPlainTextEdit) ContextMenuEvent(e qtgui.QContextMenuEvent_ITF /*777
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:251
+// /usr/include/qt/QtWidgets/qplaintextedit.h:244
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragEnterEvent(QDragEnterEvent *)
@@ -1912,7 +1883,7 @@ func (this *QPlainTextEdit) DragEnterEvent(e qtgui.QDragEnterEvent_ITF /*777 QDr
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:252
+// /usr/include/qt/QtWidgets/qplaintextedit.h:245
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragLeaveEvent(QDragLeaveEvent *)
@@ -1929,7 +1900,7 @@ func (this *QPlainTextEdit) DragLeaveEvent(e qtgui.QDragLeaveEvent_ITF /*777 QDr
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:253
+// /usr/include/qt/QtWidgets/qplaintextedit.h:246
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragMoveEvent(QDragMoveEvent *)
@@ -1946,7 +1917,7 @@ func (this *QPlainTextEdit) DragMoveEvent(e qtgui.QDragMoveEvent_ITF /*777 QDrag
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:254
+// /usr/include/qt/QtWidgets/qplaintextedit.h:247
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QDropEvent *)
@@ -1963,7 +1934,7 @@ func (this *QPlainTextEdit) DropEvent(e qtgui.QDropEvent_ITF /*777 QDropEvent **
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:256
+// /usr/include/qt/QtWidgets/qplaintextedit.h:249
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
@@ -1980,7 +1951,7 @@ func (this *QPlainTextEdit) FocusInEvent(e qtgui.QFocusEvent_ITF /*777 QFocusEve
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:257
+// /usr/include/qt/QtWidgets/qplaintextedit.h:250
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
@@ -1997,7 +1968,7 @@ func (this *QPlainTextEdit) FocusOutEvent(e qtgui.QFocusEvent_ITF /*777 QFocusEv
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:258
+// /usr/include/qt/QtWidgets/qplaintextedit.h:251
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
@@ -2014,7 +1985,7 @@ func (this *QPlainTextEdit) ShowEvent(arg0 qtgui.QShowEvent_ITF /*777 QShowEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:259
+// /usr/include/qt/QtWidgets/qplaintextedit.h:252
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
@@ -2031,7 +2002,7 @@ func (this *QPlainTextEdit) ChangeEvent(e qtcore.QEvent_ITF /*777 QEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:261
+// /usr/include/qt/QtWidgets/qplaintextedit.h:254
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
@@ -2048,7 +2019,7 @@ func (this *QPlainTextEdit) WheelEvent(e qtgui.QWheelEvent_ITF /*777 QWheelEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:264
+// /usr/include/qt/QtWidgets/qplaintextedit.h:257
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [8] QMimeData * createMimeDataFromSelection() const
@@ -2064,7 +2035,7 @@ func (this *QPlainTextEdit) CreateMimeDataFromSelection() *qtcore.QMimeData /*77
 	return qtcore.NewQMimeDataFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:265
+// /usr/include/qt/QtWidgets/qplaintextedit.h:258
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool canInsertFromMimeData(const QMimeData *) const
@@ -2082,7 +2053,7 @@ func (this *QPlainTextEdit) CanInsertFromMimeData(source qtcore.QMimeData_ITF /*
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:266
+// /usr/include/qt/QtWidgets/qplaintextedit.h:259
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void insertFromMimeData(const QMimeData *)
@@ -2099,7 +2070,7 @@ func (this *QPlainTextEdit) InsertFromMimeData(source qtcore.QMimeData_ITF /*777
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:268
+// /usr/include/qt/QtWidgets/qplaintextedit.h:261
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void inputMethodEvent(QInputMethodEvent *)
@@ -2116,7 +2087,7 @@ func (this *QPlainTextEdit) InputMethodEvent(arg0 qtgui.QInputMethodEvent_ITF /*
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:272
+// /usr/include/qt/QtWidgets/qplaintextedit.h:265
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void scrollContentsBy(int, int)
@@ -2129,7 +2100,7 @@ func (this *QPlainTextEdit) ScrollContentsBy(dx int, dy int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:273
+// /usr/include/qt/QtWidgets/qplaintextedit.h:266
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void doSetTextCursor(const QTextCursor &)
@@ -2146,7 +2117,7 @@ func (this *QPlainTextEdit) DoSetTextCursor(cursor qtgui.QTextCursor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:275
+// /usr/include/qt/QtWidgets/qplaintextedit.h:268
 // index:0
 // Protected Visibility=Default Availability=Available
 // [16] QTextBlock firstVisibleBlock() const
@@ -2164,7 +2135,7 @@ func (this *QPlainTextEdit) FirstVisibleBlock() *qtgui.QTextBlock /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:276
+// /usr/include/qt/QtWidgets/qplaintextedit.h:269
 // index:0
 // Protected Visibility=Default Availability=Available
 // [16] QPointF contentOffset() const
@@ -2184,7 +2155,7 @@ func (this *QPlainTextEdit) ContentOffset() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:277
+// /usr/include/qt/QtWidgets/qplaintextedit.h:270
 // index:0
 // Protected Visibility=Default Availability=Available
 // [32] QRectF blockBoundingRect(const QTextBlock &) const
@@ -2206,7 +2177,7 @@ func (this *QPlainTextEdit) BlockBoundingRect(block qtgui.QTextBlock_ITF) *qtcor
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:278
+// /usr/include/qt/QtWidgets/qplaintextedit.h:271
 // index:0
 // Protected Visibility=Default Availability=Available
 // [32] QRectF blockBoundingGeometry(const QTextBlock &) const
@@ -2228,7 +2199,7 @@ func (this *QPlainTextEdit) BlockBoundingGeometry(block qtgui.QTextBlock_ITF) *q
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:279
+// /usr/include/qt/QtWidgets/qplaintextedit.h:272
 // index:0
 // Protected Visibility=Default Availability=Available
 // [64] QAbstractTextDocumentLayout::PaintContext getPaintContext() const
@@ -2242,7 +2213,7 @@ func (this *QPlainTextEdit) GetPaintContext() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:281
+// /usr/include/qt/QtWidgets/qplaintextedit.h:274
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void zoomInF(float)

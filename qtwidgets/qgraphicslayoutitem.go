@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicslayoutitem.h
@@ -83,7 +81,7 @@ func (*QGraphicsLayoutItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLayou
 	return NewQGraphicsLayoutItemFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:57
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:58
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLayoutItem(QGraphicsLayoutItem *, bool)
@@ -106,7 +104,7 @@ func NewQGraphicsLayoutItem(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayout
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:57
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:58
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLayoutItem(QGraphicsLayoutItem *, bool)
@@ -129,7 +127,7 @@ func NewQGraphicsLayoutItemp() *QGraphicsLayoutItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:57
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:58
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLayoutItem(QGraphicsLayoutItem *, bool)
@@ -154,7 +152,7 @@ func NewQGraphicsLayoutItemp1(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayo
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:58
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsLayoutItem()
@@ -169,7 +167,7 @@ func DeleteQGraphicsLayoutItem(this *QGraphicsLayoutItem) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:60
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSizePolicy(const QSizePolicy &)
@@ -190,7 +188,7 @@ func (this *QGraphicsLayoutItem) SetSizePolicy(policy QSizePolicy_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:61
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:62
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setSizePolicy(QSizePolicy::Policy, QSizePolicy::Policy, QSizePolicy::ControlType)
@@ -207,7 +205,7 @@ func (this *QGraphicsLayoutItem) SetSizePolicy1(hPolicy int, vPolicy int, contro
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:61
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:62
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setSizePolicy(QSizePolicy::Policy, QSizePolicy::Policy, QSizePolicy::ControlType)
@@ -226,7 +224,7 @@ func (this *QGraphicsLayoutItem) SetSizePolicy1p(hPolicy int, vPolicy int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:62
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:63
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSizePolicy sizePolicy() const
@@ -244,7 +242,7 @@ func (this *QGraphicsLayoutItem) SizePolicy() *QSizePolicy /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:64
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumSize(const QSizeF &)
@@ -263,7 +261,7 @@ func (this *QGraphicsLayoutItem) SetMinimumSize(size qtcore.QSizeF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:65
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:66
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setMinimumSize(qreal, qreal)
@@ -278,7 +276,7 @@ func (this *QGraphicsLayoutItem) SetMinimumSize1(w float64, h float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:66
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF minimumSize() const
@@ -296,7 +294,7 @@ func (this *QGraphicsLayoutItem) MinimumSize() *qtcore.QSizeF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:67
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumWidth(qreal)
@@ -311,7 +309,7 @@ func (this *QGraphicsLayoutItem) SetMinimumWidth(width float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:68
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:69
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal minimumWidth() const
@@ -327,7 +325,7 @@ func (this *QGraphicsLayoutItem) MinimumWidth() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:69
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimumHeight(qreal)
@@ -342,7 +340,7 @@ func (this *QGraphicsLayoutItem) SetMinimumHeight(height float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:70
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:71
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal minimumHeight() const
@@ -358,7 +356,7 @@ func (this *QGraphicsLayoutItem) MinimumHeight() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:72
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPreferredSize(const QSizeF &)
@@ -377,7 +375,7 @@ func (this *QGraphicsLayoutItem) SetPreferredSize(size qtcore.QSizeF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:73
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:74
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setPreferredSize(qreal, qreal)
@@ -392,7 +390,7 @@ func (this *QGraphicsLayoutItem) SetPreferredSize1(w float64, h float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:74
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF preferredSize() const
@@ -410,7 +408,7 @@ func (this *QGraphicsLayoutItem) PreferredSize() *qtcore.QSizeF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:75
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPreferredWidth(qreal)
@@ -425,7 +423,7 @@ func (this *QGraphicsLayoutItem) SetPreferredWidth(width float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:76
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:77
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal preferredWidth() const
@@ -441,7 +439,7 @@ func (this *QGraphicsLayoutItem) PreferredWidth() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:77
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPreferredHeight(qreal)
@@ -456,7 +454,7 @@ func (this *QGraphicsLayoutItem) SetPreferredHeight(height float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:78
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:79
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal preferredHeight() const
@@ -472,7 +470,7 @@ func (this *QGraphicsLayoutItem) PreferredHeight() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:80
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximumSize(const QSizeF &)
@@ -491,7 +489,7 @@ func (this *QGraphicsLayoutItem) SetMaximumSize(size qtcore.QSizeF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:81
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:82
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setMaximumSize(qreal, qreal)
@@ -506,7 +504,7 @@ func (this *QGraphicsLayoutItem) SetMaximumSize1(w float64, h float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:82
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF maximumSize() const
@@ -524,7 +522,7 @@ func (this *QGraphicsLayoutItem) MaximumSize() *qtcore.QSizeF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:83
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximumWidth(qreal)
@@ -539,7 +537,7 @@ func (this *QGraphicsLayoutItem) SetMaximumWidth(width float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:84
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:85
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal maximumWidth() const
@@ -555,7 +553,7 @@ func (this *QGraphicsLayoutItem) MaximumWidth() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:85
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximumHeight(qreal)
@@ -570,7 +568,7 @@ func (this *QGraphicsLayoutItem) SetMaximumHeight(height float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:86
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:87
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal maximumHeight() const
@@ -586,7 +584,7 @@ func (this *QGraphicsLayoutItem) MaximumHeight() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:88
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:89
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRectF &)
@@ -609,7 +607,7 @@ func (this *QGraphicsLayoutItem) SetGeometry(rect qtcore.QRectF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:89
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF geometry() const
@@ -627,7 +625,7 @@ func (this *QGraphicsLayoutItem) Geometry() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:90
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:91
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void getContentsMargins(qreal *, qreal *, qreal *, qreal *) const
@@ -642,7 +640,7 @@ func (this *QGraphicsLayoutItem) GetContentsMargins(left unsafe.Pointer /*666*/,
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:91
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF contentsRect() const
@@ -662,7 +660,7 @@ func (this *QGraphicsLayoutItem) ContentsRect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:93
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF effectiveSizeHint(Qt::SizeHint, const QSizeF &) const
@@ -694,7 +692,7 @@ func (this *QGraphicsLayoutItem) EffectiveSizeHint(which int, constraint qtcore.
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:93
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF effectiveSizeHint(Qt::SizeHint, const QSizeF &) const
@@ -724,7 +722,7 @@ func (this *QGraphicsLayoutItem) EffectiveSizeHintp(which int) *qtcore.QSizeF /*
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:95
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:96
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void updateGeometry()
@@ -739,7 +737,7 @@ func (this *QGraphicsLayoutItem) UpdateGeometry() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:97
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsLayoutItem * parentLayoutItem() const
@@ -755,7 +753,7 @@ func (this *QGraphicsLayoutItem) ParentLayoutItem() *QGraphicsLayoutItem /*777 Q
 	return /*==*/ NewQGraphicsLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:98
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setParentLayoutItem(QGraphicsLayoutItem *)
@@ -774,7 +772,7 @@ func (this *QGraphicsLayoutItem) SetParentLayoutItem(parent QGraphicsLayoutItem_
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:100
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isLayout() const
@@ -790,7 +788,7 @@ func (this *QGraphicsLayoutItem) IsLayout() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:101
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsItem * graphicsItem() const
@@ -806,7 +804,7 @@ func (this *QGraphicsLayoutItem) GraphicsItem() *QGraphicsItem /*777 QGraphicsIt
 	return /*==*/ NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:102
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool ownedByLayout() const
@@ -828,7 +826,7 @@ func (this *QGraphicsLayoutItem) OwnedByLayout() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:105
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:106
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setGraphicsItem(QGraphicsItem *)
@@ -847,7 +845,7 @@ func (this *QGraphicsLayoutItem) SetGraphicsItem(item QGraphicsItem_ITF /*777 QG
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:106
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:107
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setOwnedByLayout(bool)
@@ -864,7 +862,7 @@ func (this *QGraphicsLayoutItem) SetOwnedByLayout(ownedByLayout bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:109
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:110
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &) const
@@ -888,7 +886,7 @@ func (this *QGraphicsLayoutItem) SizeHint(which int, constraint qtcore.QSizeF_IT
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:109
+// /usr/include/qt/QtWidgets/qgraphicslayoutitem.h:110
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
 // [16] QSizeF sizeHint(Qt::SizeHint, const QSizeF &) const

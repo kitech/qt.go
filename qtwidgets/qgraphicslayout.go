@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicslayout.h
@@ -71,7 +69,7 @@ func (*QGraphicsLayout) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLayout {
 	return NewQGraphicsLayoutFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayout.h:57
+// /usr/include/qt/QtWidgets/qgraphicslayout.h:58
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLayout(QGraphicsLayoutItem *)
@@ -98,7 +96,7 @@ func NewQGraphicsLayout(parent QGraphicsLayoutItem_ITF /*777 QGraphicsLayoutItem
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayout.h:57
+// /usr/include/qt/QtWidgets/qgraphicslayout.h:58
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLayout(QGraphicsLayoutItem *)
@@ -123,7 +121,7 @@ func NewQGraphicsLayoutp() *QGraphicsLayout {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayout.h:58
+// /usr/include/qt/QtWidgets/qgraphicslayout.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsLayout()
@@ -138,7 +136,7 @@ func DeleteQGraphicsLayout(this *QGraphicsLayout) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayout.h:60
+// /usr/include/qt/QtWidgets/qgraphicslayout.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContentsMargins(qreal, qreal, qreal, qreal)
@@ -157,7 +155,7 @@ func (this *QGraphicsLayout) SetContentsMargins(left float64, top float64, right
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayout.h:61
+// /usr/include/qt/QtWidgets/qgraphicslayout.h:62
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void getContentsMargins(qreal *, qreal *, qreal *, qreal *) const
@@ -170,7 +168,7 @@ func (this *QGraphicsLayout) GetContentsMargins(left unsafe.Pointer /*666*/, top
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayout.h:63
+// /usr/include/qt/QtWidgets/qgraphicslayout.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activate()
@@ -189,7 +187,7 @@ func (this *QGraphicsLayout) Activate() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayout.h:64
+// /usr/include/qt/QtWidgets/qgraphicslayout.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isActivated() const
@@ -205,7 +203,7 @@ func (this *QGraphicsLayout) IsActivated() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayout.h:65
+// /usr/include/qt/QtWidgets/qgraphicslayout.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void invalidate()
@@ -220,7 +218,7 @@ func (this *QGraphicsLayout) Invalidate() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayout.h:66
+// /usr/include/qt/QtWidgets/qgraphicslayout.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void updateGeometry()
@@ -233,7 +231,7 @@ func (this *QGraphicsLayout) UpdateGeometry() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayout.h:68
+// /usr/include/qt/QtWidgets/qgraphicslayout.h:69
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void widgetEvent(QEvent *)
@@ -256,7 +254,7 @@ func (this *QGraphicsLayout) WidgetEvent(e qtcore.QEvent_ITF /*777 QEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayout.h:70
+// /usr/include/qt/QtWidgets/qgraphicslayout.h:71
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int count() const
@@ -274,7 +272,7 @@ func (this *QGraphicsLayout) Count() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayout.h:71
+// /usr/include/qt/QtWidgets/qgraphicslayout.h:72
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QGraphicsLayoutItem * itemAt(int) const
@@ -292,7 +290,7 @@ func (this *QGraphicsLayout) ItemAt(i int) *QGraphicsLayoutItem /*777 QGraphicsL
 	return /*==*/ NewQGraphicsLayoutItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayout.h:72
+// /usr/include/qt/QtWidgets/qgraphicslayout.h:73
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void removeAt(int)
@@ -313,7 +311,7 @@ func (this *QGraphicsLayout) RemoveAt(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayout.h:74
+// /usr/include/qt/QtWidgets/qgraphicslayout.h:75
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setInstantInvalidatePropagation(bool)
@@ -330,7 +328,7 @@ func QGraphicsLayout_SetInstantInvalidatePropagation(enable bool) {
 	nilthis.SetInstantInvalidatePropagation(enable)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayout.h:75
+// /usr/include/qt/QtWidgets/qgraphicslayout.h:76
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool instantInvalidatePropagation()
@@ -349,7 +347,7 @@ func QGraphicsLayout_InstantInvalidatePropagation() bool {
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qgraphicslayout.h:78
+// /usr/include/qt/QtWidgets/qgraphicslayout.h:79
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void addChildLayoutItem(QGraphicsLayoutItem *)

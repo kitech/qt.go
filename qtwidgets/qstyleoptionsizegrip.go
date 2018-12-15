@@ -64,7 +64,7 @@ func (*QStyleOptionSizeGrip) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionS
 	return NewQStyleOptionSizeGripFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:653
+// /usr/include/qt/QtWidgets/qstyleoption.h:642
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionSizeGrip()
@@ -83,7 +83,7 @@ func NewQStyleOptionSizeGrip() *QStyleOptionSizeGrip {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:656
+// /usr/include/qt/QtWidgets/qstyleoption.h:645
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionSizeGrip(int)

@@ -66,7 +66,7 @@ func (*QTimeZone) NewFromPointer(cthis unsafe.Pointer) *QTimeZone {
 	return NewQTimeZoneFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:92
+// /usr/include/qt/QtCore/qtimezone.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeZone()
@@ -85,7 +85,7 @@ func NewQTimeZone() *QTimeZone {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:93
+// /usr/include/qt/QtCore/qtimezone.h:85
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeZone(const QByteArray &)
@@ -108,7 +108,7 @@ func NewQTimeZone1(ianaId QByteArray_ITF) *QTimeZone {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:94
+// /usr/include/qt/QtCore/qtimezone.h:86
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeZone(int)
@@ -127,7 +127,7 @@ func NewQTimeZone2(offsetSeconds int) *QTimeZone {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:95
+// /usr/include/qt/QtCore/qtimezone.h:87
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeZone(const QByteArray &, int, const QString &, const QString &, QLocale::Country, const QString &)
@@ -156,7 +156,7 @@ func NewQTimeZone3(zoneId QByteArray_ITF, offsetSeconds int, name string, abbrev
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:95
+// /usr/include/qt/QtCore/qtimezone.h:87
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeZone(const QByteArray &, int, const QString &, const QString &, QLocale::Country, const QString &)
@@ -187,7 +187,7 @@ func NewQTimeZone3p(zoneId QByteArray_ITF, offsetSeconds int, name string, abbre
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:95
+// /usr/include/qt/QtCore/qtimezone.h:87
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QTimeZone(const QByteArray &, int, const QString &, const QString &, QLocale::Country, const QString &)
@@ -216,7 +216,7 @@ func NewQTimeZone3p1(zoneId QByteArray_ITF, offsetSeconds int, name string, abbr
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:99
+// /usr/include/qt/QtCore/qtimezone.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTimeZone()
@@ -231,7 +231,7 @@ func DeleteQTimeZone(this *QTimeZone) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:101
+// /usr/include/qt/QtCore/qtimezone.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTimeZone & operator=(const QTimeZone &)
@@ -251,7 +251,7 @@ func (this *QTimeZone) Operator_equal(other QTimeZone_ITF) *QTimeZone {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:103
+// /usr/include/qt/QtCore/qtimezone.h:95
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [8] QTimeZone & operator=(QTimeZone &&)
@@ -267,7 +267,7 @@ func (this *QTimeZone) Operator_equal1(other unsafe.Pointer /*333*/) *QTimeZone 
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:106
+// /usr/include/qt/QtCore/qtimezone.h:98
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void swap(QTimeZone &)
@@ -284,7 +284,7 @@ func (this *QTimeZone) Swap(other QTimeZone_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:109
+// /usr/include/qt/QtCore/qtimezone.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator==(const QTimeZone &) const
@@ -302,7 +302,7 @@ func (this *QTimeZone) Operator_equal_equal(other QTimeZone_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:110
+// /usr/include/qt/QtCore/qtimezone.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool operator!=(const QTimeZone &) const
@@ -320,7 +320,7 @@ func (this *QTimeZone) Operator_not_equal(other QTimeZone_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:112
+// /usr/include/qt/QtCore/qtimezone.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -334,7 +334,7 @@ func (this *QTimeZone) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:114
+// /usr/include/qt/QtCore/qtimezone.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray id() const
@@ -352,7 +352,7 @@ func (this *QTimeZone) Id() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:115
+// /usr/include/qt/QtCore/qtimezone.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QLocale::Country country() const
@@ -366,7 +366,7 @@ func (this *QTimeZone) Country() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:116
+// /usr/include/qt/QtCore/qtimezone.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString comment() const
@@ -385,7 +385,7 @@ func (this *QTimeZone) Comment() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:118
+// /usr/include/qt/QtCore/qtimezone.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString displayName(const QDateTime &, QTimeZone::NameType, const QLocale &) const
@@ -416,7 +416,7 @@ func (this *QTimeZone) DisplayName(atDateTime QDateTime_ITF, nameType int, local
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:118
+// /usr/include/qt/QtCore/qtimezone.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString displayName(const QDateTime &, QTimeZone::NameType, const QLocale &) const
@@ -447,7 +447,7 @@ func (this *QTimeZone) DisplayNamep(atDateTime QDateTime_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:118
+// /usr/include/qt/QtCore/qtimezone.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString displayName(const QDateTime &, QTimeZone::NameType, const QLocale &) const
@@ -476,7 +476,7 @@ func (this *QTimeZone) DisplayNamep1(atDateTime QDateTime_ITF, nameType int) str
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:121
+// /usr/include/qt/QtCore/qtimezone.h:113
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString displayName(QTimeZone::TimeType, QTimeZone::NameType, const QLocale &) const
@@ -503,7 +503,7 @@ func (this *QTimeZone) DisplayName1(timeType int, nameType int, locale QLocale_I
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:121
+// /usr/include/qt/QtCore/qtimezone.h:113
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString displayName(QTimeZone::TimeType, QTimeZone::NameType, const QLocale &) const
@@ -530,7 +530,7 @@ func (this *QTimeZone) DisplayName1p(timeType int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:121
+// /usr/include/qt/QtCore/qtimezone.h:113
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString displayName(QTimeZone::TimeType, QTimeZone::NameType, const QLocale &) const
@@ -555,7 +555,7 @@ func (this *QTimeZone) DisplayName1p1(timeType int, nameType int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:124
+// /usr/include/qt/QtCore/qtimezone.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString abbreviation(const QDateTime &) const
@@ -580,7 +580,7 @@ func (this *QTimeZone) Abbreviation(atDateTime QDateTime_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:126
+// /usr/include/qt/QtCore/qtimezone.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int offsetFromUtc(const QDateTime &) const
@@ -602,7 +602,7 @@ func (this *QTimeZone) OffsetFromUtc(atDateTime QDateTime_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:127
+// /usr/include/qt/QtCore/qtimezone.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int standardTimeOffset(const QDateTime &) const
@@ -624,7 +624,7 @@ func (this *QTimeZone) StandardTimeOffset(atDateTime QDateTime_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:128
+// /usr/include/qt/QtCore/qtimezone.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int daylightTimeOffset(const QDateTime &) const
@@ -646,7 +646,7 @@ func (this *QTimeZone) DaylightTimeOffset(atDateTime QDateTime_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:130
+// /usr/include/qt/QtCore/qtimezone.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasDaylightTime() const
@@ -662,7 +662,7 @@ func (this *QTimeZone) HasDaylightTime() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:131
+// /usr/include/qt/QtCore/qtimezone.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isDaylightTime(const QDateTime &) const
@@ -682,7 +682,7 @@ func (this *QTimeZone) IsDaylightTime(atDateTime QDateTime_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:133
+// /usr/include/qt/QtCore/qtimezone.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QTimeZone::OffsetData offsetData(const QDateTime &) const
@@ -702,7 +702,7 @@ func (this *QTimeZone) OffsetData(forDateTime QDateTime_ITF) unsafe.Pointer /*44
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:135
+// /usr/include/qt/QtCore/qtimezone.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasTransitions() const
@@ -720,7 +720,7 @@ func (this *QTimeZone) HasTransitions() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:136
+// /usr/include/qt/QtCore/qtimezone.h:128
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QTimeZone::OffsetData nextTransition(const QDateTime &) const
@@ -744,7 +744,7 @@ func (this *QTimeZone) NextTransition(afterDateTime QDateTime_ITF) unsafe.Pointe
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:137
+// /usr/include/qt/QtCore/qtimezone.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QTimeZone::OffsetData previousTransition(const QDateTime &) const
@@ -768,7 +768,7 @@ func (this *QTimeZone) PreviousTransition(beforeDateTime QDateTime_ITF) unsafe.P
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:140
+// /usr/include/qt/QtCore/qtimezone.h:132
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray systemTimeZoneId()
@@ -791,7 +791,7 @@ func QTimeZone_SystemTimeZoneId() *QByteArray /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:141
+// /usr/include/qt/QtCore/qtimezone.h:133
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QTimeZone systemTimeZone()
@@ -816,7 +816,7 @@ func QTimeZone_SystemTimeZone() *QTimeZone /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:142
+// /usr/include/qt/QtCore/qtimezone.h:134
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QTimeZone utc()
@@ -841,7 +841,7 @@ func QTimeZone_Utc() *QTimeZone /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:144
+// /usr/include/qt/QtCore/qtimezone.h:136
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool isTimeZoneIdAvailable(const QByteArray &)
@@ -866,7 +866,7 @@ func QTimeZone_IsTimeZoneIdAvailable(ianaId QByteArray_ITF) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:150
+// /usr/include/qt/QtCore/qtimezone.h:142
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray ianaIdToWindowsId(const QByteArray &)
@@ -893,7 +893,7 @@ func QTimeZone_IanaIdToWindowsId(ianaId QByteArray_ITF) *QByteArray /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:151
+// /usr/include/qt/QtCore/qtimezone.h:143
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray windowsIdToDefaultIanaId(const QByteArray &)
@@ -922,7 +922,7 @@ func QTimeZone_WindowsIdToDefaultIanaId(windowsId QByteArray_ITF) *QByteArray /*
 	return rv
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:152
+// /usr/include/qt/QtCore/qtimezone.h:144
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QByteArray windowsIdToDefaultIanaId(const QByteArray &, QLocale::Country)
@@ -949,33 +949,6 @@ func QTimeZone_WindowsIdToDefaultIanaId1(windowsId QByteArray_ITF, country int) 
 	var nilthis *QTimeZone
 	rv := nilthis.WindowsIdToDefaultIanaId1(windowsId, country)
 	return rv
-}
-
-/*
-
-
- */
-type QTimeZone__ = int
-
-//
-const QTimeZone__MinUtcOffsetSecs QTimeZone__ = -50400
-
-//
-const QTimeZone__MaxUtcOffsetSecs QTimeZone__ = 50400
-
-func (this *QTimeZone) ItemName(val int) string {
-	switch val {
-	case QTimeZone__MinUtcOffsetSecs: // -50400
-		return "MinUtcOffsetSecs"
-	case QTimeZone__MaxUtcOffsetSecs: // 50400
-		return "MaxUtcOffsetSecs"
-	default:
-		return fmt.Sprintf("%d", val)
-	}
-}
-func QTimeZone_ItemName(val int) string {
-	var nilthis *QTimeZone
-	return nilthis.ItemName(val)
 }
 
 /*

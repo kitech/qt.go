@@ -546,8 +546,6 @@ func (this *QMovie) CurrentPixmap() *QPixmap /*123*/ {
 
 /*
 Returns true if the movie is valid (e.g., the image data is readable and the image format is supported); otherwise returns false.
-
-For information about why the movie is not valid, see lastError().
 */
 func (this *QMovie) IsValid() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie7isValidEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -555,42 +553,7 @@ func (this *QMovie) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qmovie.h:108
-// index:0
-// Public Visibility=Default Availability=Available
-// [4] QImageReader::ImageReaderError lastError() const
-
-/*
-Returns the most recent error that occurred while attempting to read image data.
-
-See also lastErrorString().
-*/
-func (this *QMovie) LastError() int {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie9lastErrorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return int(rv)
-}
-
 // /usr/include/qt/QtGui/qmovie.h:109
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] QString lastErrorString() const
-
-/*
-Returns a human-readable representation of the most recent error that occurred while attempting to read image data.
-
-See also lastError().
-*/
-func (this *QMovie) LastErrorString() string {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK6QMovie15lastErrorStringEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	qtcore.DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtGui/qmovie.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool jumpToFrame(int)
@@ -604,7 +567,7 @@ func (this *QMovie) JumpToFrame(frameNumber int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qmovie.h:112
+// /usr/include/qt/QtGui/qmovie.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int loopCount() const
@@ -620,7 +583,7 @@ func (this *QMovie) LoopCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qmovie.h:113
+// /usr/include/qt/QtGui/qmovie.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int frameCount() const
@@ -636,7 +599,7 @@ func (this *QMovie) FrameCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qmovie.h:114
+// /usr/include/qt/QtGui/qmovie.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int nextFrameDelay() const
@@ -650,7 +613,7 @@ func (this *QMovie) NextFrameDelay() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qmovie.h:115
+// /usr/include/qt/QtGui/qmovie.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentFrameNumber() const
@@ -664,7 +627,7 @@ func (this *QMovie) CurrentFrameNumber() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qmovie.h:117
+// /usr/include/qt/QtGui/qmovie.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int speed() const
@@ -678,7 +641,7 @@ func (this *QMovie) Speed() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qmovie.h:119
+// /usr/include/qt/QtGui/qmovie.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSize scaledSize()
@@ -698,7 +661,7 @@ func (this *QMovie) ScaledSize() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qmovie.h:120
+// /usr/include/qt/QtGui/qmovie.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScaledSize(const QSize &)
@@ -719,7 +682,7 @@ func (this *QMovie) SetScaledSize(size qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qmovie.h:122
+// /usr/include/qt/QtGui/qmovie.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QMovie::CacheMode cacheMode() const
@@ -733,7 +696,7 @@ func (this *QMovie) CacheMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qmovie.h:123
+// /usr/include/qt/QtGui/qmovie.h:121
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCacheMode(QMovie::CacheMode)
@@ -746,7 +709,7 @@ func (this *QMovie) SetCacheMode(mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qmovie.h:126
+// /usr/include/qt/QtGui/qmovie.h:124
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void started()
@@ -759,7 +722,7 @@ func (this *QMovie) Started() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qmovie.h:127
+// /usr/include/qt/QtGui/qmovie.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resized(const QSize &)
@@ -776,7 +739,7 @@ func (this *QMovie) Resized(size qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qmovie.h:128
+// /usr/include/qt/QtGui/qmovie.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void updated(const QRect &)
@@ -793,7 +756,7 @@ func (this *QMovie) Updated(rect qtcore.QRect_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qmovie.h:129
+// /usr/include/qt/QtGui/qmovie.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stateChanged(QMovie::MovieState)
@@ -808,22 +771,20 @@ func (this *QMovie) StateChanged(state int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qmovie.h:130
+// /usr/include/qt/QtGui/qmovie.h:128
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void error(QImageReader::ImageReaderError)
 
 /*
 This signal is emitted by QMovie when the error error occurred during playback. QMovie will stop the movie, and enter QMovie::NotRunning state.
-
-See also lastError() and lastErrorString().
 */
 func (this *QMovie) Error(error int) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN6QMovie5errorEN12QImageReader16ImageReaderErrorE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), error)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qmovie.h:131
+// /usr/include/qt/QtGui/qmovie.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void finished()
@@ -838,7 +799,7 @@ func (this *QMovie) Finished() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qmovie.h:132
+// /usr/include/qt/QtGui/qmovie.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void frameChanged(int)
@@ -853,7 +814,7 @@ func (this *QMovie) FrameChanged(frameNumber int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qmovie.h:135
+// /usr/include/qt/QtGui/qmovie.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void start()
@@ -870,7 +831,7 @@ func (this *QMovie) Start() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qmovie.h:136
+// /usr/include/qt/QtGui/qmovie.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool jumpToNextFrame()
@@ -884,7 +845,7 @@ func (this *QMovie) JumpToNextFrame() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qmovie.h:137
+// /usr/include/qt/QtGui/qmovie.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPaused(bool)
@@ -899,7 +860,7 @@ func (this *QMovie) SetPaused(paused bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qmovie.h:138
+// /usr/include/qt/QtGui/qmovie.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stop()
@@ -916,7 +877,7 @@ func (this *QMovie) Stop() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qmovie.h:139
+// /usr/include/qt/QtGui/qmovie.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSpeed(int)

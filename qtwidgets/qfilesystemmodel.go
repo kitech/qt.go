@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qfilesystemmodel.h
@@ -76,7 +74,7 @@ func (*QFileSystemModel) NewFromPointer(cthis unsafe.Pointer) *QFileSystemModel 
 	return NewQFileSystemModelFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:60
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -90,7 +88,7 @@ func (this *QFileSystemModel) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:66
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void rootPathChanged(const QString &)
@@ -105,7 +103,7 @@ func (this *QFileSystemModel) RootPathChanged(newPath string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:67
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void fileRenamed(const QString &, const QString &, const QString &)
@@ -124,7 +122,7 @@ func (this *QFileSystemModel) FileRenamed(path string, oldName string, newName s
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:68
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void directoryLoaded(const QString &)
@@ -141,7 +139,7 @@ func (this *QFileSystemModel) DirectoryLoaded(path string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:78
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFileSystemModel(QObject *)
@@ -164,7 +162,7 @@ func NewQFileSystemModel(parent qtcore.QObject_ITF /*777 QObject **/) *QFileSyst
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:78
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFileSystemModel(QObject *)
@@ -185,7 +183,7 @@ func NewQFileSystemModelp() *QFileSystemModel {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:79
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFileSystemModel()
@@ -200,7 +198,7 @@ func DeleteQFileSystemModel(this *QFileSystemModel) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:81
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:82
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex index(int, int, const QModelIndex &) const
@@ -220,7 +218,7 @@ func (this *QFileSystemModel) Index(row int, column int, parent qtcore.QModelInd
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:81
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:82
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex index(int, int, const QModelIndex &) const
@@ -238,7 +236,7 @@ func (this *QFileSystemModel) Indexp(row int, column int) *qtcore.QModelIndex /*
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:82
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:83
 // index:1
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex index(const QString &, int) const
@@ -256,7 +254,7 @@ func (this *QFileSystemModel) Index1(path string, column int) *qtcore.QModelInde
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:82
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:83
 // index:1
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex index(const QString &, int) const
@@ -276,7 +274,7 @@ func (this *QFileSystemModel) Index1p(path string) *qtcore.QModelIndex /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:83
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:84
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex parent(const QModelIndex &) const
@@ -296,7 +294,7 @@ func (this *QFileSystemModel) Parent(child qtcore.QModelIndex_ITF) *qtcore.QMode
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:85
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:86
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [24] QModelIndex sibling(int, int, const QModelIndex &) const
@@ -316,7 +314,7 @@ func (this *QFileSystemModel) Sibling(row int, column int, idx qtcore.QModelInde
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:86
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:87
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool hasChildren(const QModelIndex &) const
@@ -334,7 +332,7 @@ func (this *QFileSystemModel) HasChildren(parent qtcore.QModelIndex_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:86
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:87
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool hasChildren(const QModelIndex &) const
@@ -350,7 +348,7 @@ func (this *QFileSystemModel) HasChildrenp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:87
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:88
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool canFetchMore(const QModelIndex &) const
@@ -368,7 +366,7 @@ func (this *QFileSystemModel) CanFetchMore(parent qtcore.QModelIndex_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:88
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:89
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void fetchMore(const QModelIndex &)
@@ -385,7 +383,7 @@ func (this *QFileSystemModel) FetchMore(parent qtcore.QModelIndex_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:90
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:91
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int rowCount(const QModelIndex &) const
@@ -403,7 +401,7 @@ func (this *QFileSystemModel) RowCount(parent qtcore.QModelIndex_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:90
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:91
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int rowCount(const QModelIndex &) const
@@ -419,7 +417,7 @@ func (this *QFileSystemModel) RowCountp() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:91
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:92
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int columnCount(const QModelIndex &) const
@@ -437,7 +435,7 @@ func (this *QFileSystemModel) ColumnCount(parent qtcore.QModelIndex_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:91
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:92
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int columnCount(const QModelIndex &) const
@@ -453,7 +451,7 @@ func (this *QFileSystemModel) ColumnCountp() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:93
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant myComputer(int) const
@@ -471,7 +469,7 @@ func (this *QFileSystemModel) MyComputer(role int) *qtcore.QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:93
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant myComputer(int) const
@@ -491,7 +489,7 @@ func (this *QFileSystemModel) MyComputerp() *qtcore.QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:94
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:95
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(const QModelIndex &, int) const
@@ -513,7 +511,7 @@ func (this *QFileSystemModel) Data(index qtcore.QModelIndex_ITF, role int) *qtco
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:94
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:95
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant data(const QModelIndex &, int) const
@@ -537,7 +535,7 @@ func (this *QFileSystemModel) Datap(index qtcore.QModelIndex_ITF) *qtcore.QVaria
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:95
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:96
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setData(const QModelIndex &, const QVariant &, int)
@@ -561,7 +559,7 @@ func (this *QFileSystemModel) SetData(index qtcore.QModelIndex_ITF, value qtcore
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:95
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:96
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool setData(const QModelIndex &, const QVariant &, int)
@@ -587,7 +585,7 @@ func (this *QFileSystemModel) SetDatap(index qtcore.QModelIndex_ITF, value qtcor
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:97
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:98
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant headerData(int, Qt::Orientation, int) const
@@ -603,7 +601,7 @@ func (this *QFileSystemModel) HeaderData(section int, orientation int, role int)
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:97
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:98
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant headerData(int, Qt::Orientation, int) const
@@ -621,7 +619,7 @@ func (this *QFileSystemModel) HeaderDatap(section int, orientation int) *qtcore.
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:99
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:100
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::ItemFlags flags(const QModelIndex &) const
@@ -639,7 +637,7 @@ func (this *QFileSystemModel) Flags(index qtcore.QModelIndex_ITF) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:101
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:102
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void sort(int, Qt::SortOrder)
@@ -652,7 +650,7 @@ func (this *QFileSystemModel) Sort(column int, order int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:101
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:102
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void sort(int, Qt::SortOrder)
@@ -667,7 +665,7 @@ func (this *QFileSystemModel) Sortp(column int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:103
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:104
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QStringList mimeTypes() const
@@ -685,7 +683,7 @@ func (this *QFileSystemModel) MimeTypes() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:105
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:106
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool dropMimeData(const QMimeData *, Qt::DropAction, int, int, const QModelIndex &)
@@ -711,7 +709,7 @@ func (this *QFileSystemModel) DropMimeData(data qtcore.QMimeData_ITF /*777 const
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:107
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:108
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] Qt::DropActions supportedDropActions() const
@@ -725,7 +723,7 @@ func (this *QFileSystemModel) SupportedDropActions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:110
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex setRootPath(const QString &)
@@ -749,7 +747,7 @@ func (this *QFileSystemModel) SetRootPath(path string) *qtcore.QModelIndex /*123
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:111
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString rootPath() const
@@ -768,7 +766,7 @@ func (this *QFileSystemModel) RootPath() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:112
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDir rootDirectory() const
@@ -786,7 +784,7 @@ func (this *QFileSystemModel) RootDirectory() *qtcore.QDir /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:114
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIconProvider(QFileIconProvider *)
@@ -805,7 +803,7 @@ func (this *QFileSystemModel) SetIconProvider(provider QFileIconProvider_ITF /*7
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:115
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QFileIconProvider * iconProvider() const
@@ -821,7 +819,7 @@ func (this *QFileSystemModel) IconProvider() *QFileIconProvider /*777 QFileIconP
 	return /*==*/ NewQFileIconProviderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:117
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFilter(QDir::Filters)
@@ -838,7 +836,7 @@ func (this *QFileSystemModel) SetFilter(filters int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:118
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDir::Filters filter() const
@@ -856,7 +854,7 @@ func (this *QFileSystemModel) Filter() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:120
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:121
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setResolveSymlinks(bool)
@@ -869,7 +867,7 @@ func (this *QFileSystemModel) SetResolveSymlinks(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:121
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool resolveSymlinks() const
@@ -883,7 +881,7 @@ func (this *QFileSystemModel) ResolveSymlinks() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:123
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:124
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setReadOnly(bool)
@@ -896,7 +894,7 @@ func (this *QFileSystemModel) SetReadOnly(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:124
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isReadOnly() const
@@ -910,7 +908,7 @@ func (this *QFileSystemModel) IsReadOnly() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:126
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNameFilterDisables(bool)
@@ -923,7 +921,7 @@ func (this *QFileSystemModel) SetNameFilterDisables(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:127
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:128
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool nameFilterDisables() const
@@ -937,7 +935,7 @@ func (this *QFileSystemModel) NameFilterDisables() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:129
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNameFilters(const QStringList &)
@@ -956,7 +954,7 @@ func (this *QFileSystemModel) SetNameFilters(filters qtcore.QStringList_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:130
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:131
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList nameFilters() const
@@ -974,7 +972,7 @@ func (this *QFileSystemModel) NameFilters() *qtcore.QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:132
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString filePath(const QModelIndex &) const
@@ -995,7 +993,7 @@ func (this *QFileSystemModel) FilePath(index qtcore.QModelIndex_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:133
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isDir(const QModelIndex &) const
@@ -1013,7 +1011,7 @@ func (this *QFileSystemModel) IsDir(index qtcore.QModelIndex_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:134
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qint64 size(const QModelIndex &) const
@@ -1031,7 +1029,7 @@ func (this *QFileSystemModel) Size(index qtcore.QModelIndex_ITF) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:135
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString type(const QModelIndex &) const
@@ -1052,7 +1050,7 @@ func (this *QFileSystemModel) Type(index qtcore.QModelIndex_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:136
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QDateTime lastModified(const QModelIndex &) const
@@ -1072,7 +1070,7 @@ func (this *QFileSystemModel) LastModified(index qtcore.QModelIndex_ITF) *qtcore
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:138
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex mkdir(const QModelIndex &, const QString &)
@@ -1094,7 +1092,7 @@ func (this *QFileSystemModel) Mkdir(parent qtcore.QModelIndex_ITF, name string) 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:139
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool rmdir(const QModelIndex &)
@@ -1116,7 +1114,7 @@ func (this *QFileSystemModel) Rmdir(index qtcore.QModelIndex_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:140
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:141
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString fileName(const QModelIndex &) const
@@ -1137,7 +1135,7 @@ func (this *QFileSystemModel) FileName(index qtcore.QModelIndex_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:141
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:142
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QIcon fileIcon(const QModelIndex &) const
@@ -1157,7 +1155,7 @@ func (this *QFileSystemModel) FileIcon(index qtcore.QModelIndex_ITF) *qtgui.QIco
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:142
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QFile::Permissions permissions(const QModelIndex &) const
@@ -1175,7 +1173,7 @@ func (this *QFileSystemModel) Permissions(index qtcore.QModelIndex_ITF) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:143
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QFileInfo fileInfo(const QModelIndex &) const
@@ -1195,7 +1193,7 @@ func (this *QFileSystemModel) FileInfo(index qtcore.QModelIndex_ITF) *qtcore.QFi
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:144
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool remove(const QModelIndex &)
@@ -1217,7 +1215,7 @@ func (this *QFileSystemModel) Remove(index qtcore.QModelIndex_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:148
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:149
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
@@ -1234,7 +1232,7 @@ func (this *QFileSystemModel) TimerEvent(event qtcore.QTimerEvent_ITF /*777 QTim
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qfilesystemmodel.h:149
+// /usr/include/qt/QtWidgets/qfilesystemmodel.h:150
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)

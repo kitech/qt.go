@@ -65,7 +65,7 @@ func (*QSurfaceFormat) NewFromPointer(cthis unsafe.Pointer) *QSurfaceFormat {
 	return NewQSurfaceFormatFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:94
+// /usr/include/qt/QtGui/qsurfaceformat.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSurfaceFormat()
@@ -86,7 +86,7 @@ func NewQSurfaceFormat() *QSurfaceFormat {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:95
+// /usr/include/qt/QtGui/qsurfaceformat.h:89
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSurfaceFormat(QSurfaceFormat::FormatOptions)
@@ -107,7 +107,7 @@ func NewQSurfaceFormat1(options int) *QSurfaceFormat {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:97
+// /usr/include/qt/QtGui/qsurfaceformat.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QSurfaceFormat & operator=(const QSurfaceFormat &)
@@ -127,7 +127,7 @@ func (this *QSurfaceFormat) Operator_equal(other QSurfaceFormat_ITF) *QSurfaceFo
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:98
+// /usr/include/qt/QtGui/qsurfaceformat.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QSurfaceFormat()
@@ -142,7 +142,7 @@ func DeleteQSurfaceFormat(this *QSurfaceFormat) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:100
+// /usr/include/qt/QtGui/qsurfaceformat.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDepthBufferSize(int)
@@ -157,7 +157,7 @@ func (this *QSurfaceFormat) SetDepthBufferSize(size int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:101
+// /usr/include/qt/QtGui/qsurfaceformat.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int depthBufferSize() const
@@ -173,7 +173,7 @@ func (this *QSurfaceFormat) DepthBufferSize() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:103
+// /usr/include/qt/QtGui/qsurfaceformat.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStencilBufferSize(int)
@@ -188,7 +188,7 @@ func (this *QSurfaceFormat) SetStencilBufferSize(size int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:104
+// /usr/include/qt/QtGui/qsurfaceformat.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int stencilBufferSize() const
@@ -204,7 +204,7 @@ func (this *QSurfaceFormat) StencilBufferSize() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:106
+// /usr/include/qt/QtGui/qsurfaceformat.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRedBufferSize(int)
@@ -221,7 +221,7 @@ func (this *QSurfaceFormat) SetRedBufferSize(size int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:107
+// /usr/include/qt/QtGui/qsurfaceformat.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int redBufferSize() const
@@ -237,7 +237,7 @@ func (this *QSurfaceFormat) RedBufferSize() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:108
+// /usr/include/qt/QtGui/qsurfaceformat.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setGreenBufferSize(int)
@@ -254,7 +254,7 @@ func (this *QSurfaceFormat) SetGreenBufferSize(size int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:109
+// /usr/include/qt/QtGui/qsurfaceformat.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int greenBufferSize() const
@@ -270,7 +270,7 @@ func (this *QSurfaceFormat) GreenBufferSize() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:110
+// /usr/include/qt/QtGui/qsurfaceformat.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBlueBufferSize(int)
@@ -287,7 +287,7 @@ func (this *QSurfaceFormat) SetBlueBufferSize(size int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:111
+// /usr/include/qt/QtGui/qsurfaceformat.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int blueBufferSize() const
@@ -303,7 +303,7 @@ func (this *QSurfaceFormat) BlueBufferSize() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:112
+// /usr/include/qt/QtGui/qsurfaceformat.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAlphaBufferSize(int)
@@ -318,7 +318,7 @@ func (this *QSurfaceFormat) SetAlphaBufferSize(size int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:113
+// /usr/include/qt/QtGui/qsurfaceformat.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int alphaBufferSize() const
@@ -334,7 +334,7 @@ func (this *QSurfaceFormat) AlphaBufferSize() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:115
+// /usr/include/qt/QtGui/qsurfaceformat.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSamples(int)
@@ -349,7 +349,7 @@ func (this *QSurfaceFormat) SetSamples(numSamples int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:116
+// /usr/include/qt/QtGui/qsurfaceformat.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int samples() const
@@ -365,7 +365,7 @@ func (this *QSurfaceFormat) Samples() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:118
+// /usr/include/qt/QtGui/qsurfaceformat.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSwapBehavior(QSurfaceFormat::SwapBehavior)
@@ -382,7 +382,7 @@ func (this *QSurfaceFormat) SetSwapBehavior(behavior int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:119
+// /usr/include/qt/QtGui/qsurfaceformat.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSurfaceFormat::SwapBehavior swapBehavior() const
@@ -398,7 +398,7 @@ func (this *QSurfaceFormat) SwapBehavior() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:121
+// /usr/include/qt/QtGui/qsurfaceformat.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasAlpha() const
@@ -414,7 +414,7 @@ func (this *QSurfaceFormat) HasAlpha() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:123
+// /usr/include/qt/QtGui/qsurfaceformat.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProfile(QSurfaceFormat::OpenGLContextProfile)
@@ -431,7 +431,7 @@ func (this *QSurfaceFormat) SetProfile(profile int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:124
+// /usr/include/qt/QtGui/qsurfaceformat.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSurfaceFormat::OpenGLContextProfile profile() const
@@ -449,7 +449,7 @@ func (this *QSurfaceFormat) Profile() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:126
+// /usr/include/qt/QtGui/qsurfaceformat.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRenderableType(QSurfaceFormat::RenderableType)
@@ -466,7 +466,7 @@ func (this *QSurfaceFormat) SetRenderableType(type_ int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:127
+// /usr/include/qt/QtGui/qsurfaceformat.h:121
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSurfaceFormat::RenderableType renderableType() const
@@ -484,7 +484,7 @@ func (this *QSurfaceFormat) RenderableType() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:129
+// /usr/include/qt/QtGui/qsurfaceformat.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMajorVersion(int)
@@ -499,7 +499,7 @@ func (this *QSurfaceFormat) SetMajorVersion(majorVersion int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:130
+// /usr/include/qt/QtGui/qsurfaceformat.h:124
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int majorVersion() const
@@ -517,7 +517,7 @@ func (this *QSurfaceFormat) MajorVersion() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:132
+// /usr/include/qt/QtGui/qsurfaceformat.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinorVersion(int)
@@ -534,7 +534,7 @@ func (this *QSurfaceFormat) SetMinorVersion(minorVersion int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:133
+// /usr/include/qt/QtGui/qsurfaceformat.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int minorVersion() const
@@ -550,7 +550,7 @@ func (this *QSurfaceFormat) MinorVersion() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:136
+// /usr/include/qt/QtGui/qsurfaceformat.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVersion(int, int)
@@ -567,7 +567,7 @@ func (this *QSurfaceFormat) SetVersion(major int, minor int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:138
+// /usr/include/qt/QtGui/qsurfaceformat.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool stereo() const
@@ -583,7 +583,7 @@ func (this *QSurfaceFormat) Stereo() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:139
+// /usr/include/qt/QtGui/qsurfaceformat.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStereo(bool)
@@ -602,7 +602,7 @@ func (this *QSurfaceFormat) SetStereo(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:142
+// /usr/include/qt/QtGui/qsurfaceformat.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(QSurfaceFormat::FormatOptions)
@@ -619,7 +619,7 @@ func (this *QSurfaceFormat) SetOption(opt int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:147
+// /usr/include/qt/QtGui/qsurfaceformat.h:141
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(QSurfaceFormat::FormatOption, bool)
@@ -636,7 +636,7 @@ func (this *QSurfaceFormat) SetOption1(option int, on bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:147
+// /usr/include/qt/QtGui/qsurfaceformat.h:141
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setOption(QSurfaceFormat::FormatOption, bool)
@@ -655,7 +655,7 @@ func (this *QSurfaceFormat) SetOption1p(option int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:143
+// /usr/include/qt/QtGui/qsurfaceformat.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool testOption(QSurfaceFormat::FormatOptions) const
@@ -673,7 +673,7 @@ func (this *QSurfaceFormat) TestOption(opt int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:148
+// /usr/include/qt/QtGui/qsurfaceformat.h:142
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool testOption(QSurfaceFormat::FormatOption) const
@@ -691,7 +691,7 @@ func (this *QSurfaceFormat) TestOption1(option int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:146
+// /usr/include/qt/QtGui/qsurfaceformat.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOptions(QSurfaceFormat::FormatOptions)
@@ -708,7 +708,7 @@ func (this *QSurfaceFormat) SetOptions(options int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:149
+// /usr/include/qt/QtGui/qsurfaceformat.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSurfaceFormat::FormatOptions options() const
@@ -726,7 +726,7 @@ func (this *QSurfaceFormat) Options() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:151
+// /usr/include/qt/QtGui/qsurfaceformat.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int swapInterval() const
@@ -744,7 +744,7 @@ func (this *QSurfaceFormat) SwapInterval() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:152
+// /usr/include/qt/QtGui/qsurfaceformat.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSwapInterval(int)
@@ -767,48 +767,7 @@ func (this *QSurfaceFormat) SetSwapInterval(interval int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:154
-// index:0
-// Public Visibility=Default Availability=Available
-// [4] QSurfaceFormat::ColorSpace colorSpace() const
-
-/*
-Returns the color space.
-
-This function was introduced in  Qt 5.10.
-
-See also setColorSpace().
-*/
-func (this *QSurfaceFormat) ColorSpace() int {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK14QSurfaceFormat10colorSpaceEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return int(rv)
-}
-
-// /usr/include/qt/QtGui/qsurfaceformat.h:155
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void setColorSpace(QSurfaceFormat::ColorSpace)
-
-/*
-Sets the preferred colorSpace.
-
-For example, this allows requesting windows with default framebuffers that are sRGB-capable on platforms that support it.
-
-Note: When the requested color space is not supported by the platform, the request is ignored. Query the QSurfaceFormat after window creation to verify if the color space request could be honored or not.
-
-Note: This setting controls if the default framebuffer of the window is capable of updates and blending in a given color space. It does not change applications' output by itself. The applications' rendering code will still have to opt in via the appropriate OpenGL calls to enable updates and blending to be performed in the given color space instead of using the standard linear operations.
-
-This function was introduced in  Qt 5.10.
-
-See also colorSpace().
-*/
-func (this *QSurfaceFormat) SetColorSpace(colorSpace int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QSurfaceFormat13setColorSpaceENS_10ColorSpaceE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), colorSpace)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qsurfaceformat.h:157
+// /usr/include/qt/QtGui/qsurfaceformat.h:148
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setDefaultFormat(const QSurfaceFormat &)
@@ -839,7 +798,7 @@ func QSurfaceFormat_SetDefaultFormat(format QSurfaceFormat_ITF) {
 	nilthis.SetDefaultFormat(format)
 }
 
-// /usr/include/qt/QtGui/qsurfaceformat.h:158
+// /usr/include/qt/QtGui/qsurfaceformat.h:149
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QSurfaceFormat defaultFormat()
@@ -1014,34 +973,6 @@ func (this *QSurfaceFormat) OpenGLContextProfileItemName(val int) string {
 func QSurfaceFormat_OpenGLContextProfileItemName(val int) string {
 	var nilthis *QSurfaceFormat
 	return nilthis.OpenGLContextProfileItemName(val)
-}
-
-/*
-This enum is used to specify the preferred color space, controlling if the window's associated default framebuffer is able to do updates and blending in a given encoding instead of the standard linear operations.
-
-
-*/
-type QSurfaceFormat__ColorSpace = int
-
-// The default, unspecified color space.
-const QSurfaceFormat__DefaultColorSpace QSurfaceFormat__ColorSpace = 0
-
-// When GL_ARB_framebuffer_sRGB or GL_EXT_framebuffer_sRGB is supported by the platform and this value is set, the window will be created with an sRGB-capable default framebuffer. Note that some platforms may return windows with a sRGB-capable default framebuffer even when not requested explicitly.
-const QSurfaceFormat__sRGBColorSpace QSurfaceFormat__ColorSpace = 1
-
-func (this *QSurfaceFormat) ColorSpaceItemName(val int) string {
-	switch val {
-	case QSurfaceFormat__DefaultColorSpace: // 0
-		return "DefaultColorSpace"
-	case QSurfaceFormat__sRGBColorSpace: // 1
-		return "sRGBColorSpace"
-	default:
-		return fmt.Sprintf("%d", val)
-	}
-}
-func QSurfaceFormat_ColorSpaceItemName(val int) string {
-	var nilthis *QSurfaceFormat
-	return nilthis.ColorSpaceItemName(val)
 }
 
 //  body block end

@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qdial.h
@@ -106,7 +104,7 @@ func (*QDial) NewFromPointer(cthis unsafe.Pointer) *QDial {
 	return NewQDialFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:57
+// /usr/include/qt/QtWidgets/qdial.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -120,7 +118,7 @@ func (this *QDial) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ 
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:64
+// /usr/include/qt/QtWidgets/qdial.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDial(QWidget *)
@@ -145,7 +143,7 @@ func NewQDial(parent QWidget_ITF /*777 QWidget **/) *QDial {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:64
+// /usr/include/qt/QtWidgets/qdial.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDial(QWidget *)
@@ -168,7 +166,7 @@ func NewQDialp() *QDial {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:66
+// /usr/include/qt/QtWidgets/qdial.h:67
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDial()
@@ -183,7 +181,7 @@ func DeleteQDial(this *QDial) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:68
+// /usr/include/qt/QtWidgets/qdial.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool wrapping() const
@@ -197,7 +195,7 @@ func (this *QDial) Wrapping() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:70
+// /usr/include/qt/QtWidgets/qdial.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int notchSize() const
@@ -211,7 +209,7 @@ func (this *QDial) NotchSize() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:72
+// /usr/include/qt/QtWidgets/qdial.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNotchTarget(double)
@@ -224,7 +222,7 @@ func (this *QDial) SetNotchTarget(target float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:73
+// /usr/include/qt/QtWidgets/qdial.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal notchTarget() const
@@ -238,7 +236,7 @@ func (this *QDial) NotchTarget() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:74
+// /usr/include/qt/QtWidgets/qdial.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool notchesVisible() const
@@ -252,7 +250,7 @@ func (this *QDial) NotchesVisible() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:76
+// /usr/include/qt/QtWidgets/qdial.h:77
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
@@ -268,7 +266,7 @@ func (this *QDial) SizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:77
+// /usr/include/qt/QtWidgets/qdial.h:78
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
@@ -284,7 +282,7 @@ func (this *QDial) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:80
+// /usr/include/qt/QtWidgets/qdial.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setNotchesVisible(bool)
@@ -297,7 +295,7 @@ func (this *QDial) SetNotchesVisible(visible bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:81
+// /usr/include/qt/QtWidgets/qdial.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWrapping(bool)
@@ -310,7 +308,7 @@ func (this *QDial) SetWrapping(on bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:84
+// /usr/include/qt/QtWidgets/qdial.h:85
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -328,7 +326,7 @@ func (this *QDial) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:85
+// /usr/include/qt/QtWidgets/qdial.h:86
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
@@ -345,7 +343,7 @@ func (this *QDial) ResizeEvent(re qtgui.QResizeEvent_ITF /*777 QResizeEvent **/)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:86
+// /usr/include/qt/QtWidgets/qdial.h:87
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
@@ -362,7 +360,7 @@ func (this *QDial) PaintEvent(pe qtgui.QPaintEvent_ITF /*777 QPaintEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:88
+// /usr/include/qt/QtWidgets/qdial.h:89
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
@@ -379,7 +377,7 @@ func (this *QDial) MousePressEvent(me qtgui.QMouseEvent_ITF /*777 QMouseEvent **
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:89
+// /usr/include/qt/QtWidgets/qdial.h:90
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
@@ -396,7 +394,7 @@ func (this *QDial) MouseReleaseEvent(me qtgui.QMouseEvent_ITF /*777 QMouseEvent 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:90
+// /usr/include/qt/QtWidgets/qdial.h:91
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
@@ -413,7 +411,7 @@ func (this *QDial) MouseMoveEvent(me qtgui.QMouseEvent_ITF /*777 QMouseEvent **/
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:92
+// /usr/include/qt/QtWidgets/qdial.h:93
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void sliderChange(QAbstractSlider::SliderChange)
@@ -426,7 +424,7 @@ func (this *QDial) SliderChange(change int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdial.h:93
+// /usr/include/qt/QtWidgets/qdial.h:94
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionSlider *) const

@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicsitemanimation.h
@@ -76,7 +74,7 @@ func (*QGraphicsItemAnimation) NewFromPointer(cthis unsafe.Pointer) *QGraphicsIt
 	return NewQGraphicsItemAnimationFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:59
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -90,7 +88,7 @@ func (this *QGraphicsItemAnimation) MetaObject() *qtcore.QMetaObject /*777 const
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:61
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsItemAnimation(QObject *)
@@ -113,7 +111,7 @@ func NewQGraphicsItemAnimation(parent qtcore.QObject_ITF /*777 QObject **/) *QGr
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:61
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsItemAnimation(QObject *)
@@ -134,7 +132,7 @@ func NewQGraphicsItemAnimationp() *QGraphicsItemAnimation {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:62
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:63
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsItemAnimation()
@@ -149,7 +147,7 @@ func DeleteQGraphicsItemAnimation(this *QGraphicsItemAnimation) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:64
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsItem * item() const
@@ -165,7 +163,7 @@ func (this *QGraphicsItemAnimation) Item() *QGraphicsItem /*777 QGraphicsItem **
 	return /*==*/ NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:65
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItem(QGraphicsItem *)
@@ -184,7 +182,7 @@ func (this *QGraphicsItemAnimation) SetItem(item QGraphicsItem_ITF /*777 QGraphi
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:67
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTimeLine * timeLine() const
@@ -200,7 +198,7 @@ func (this *QGraphicsItemAnimation) TimeLine() *qtcore.QTimeLine /*777 QTimeLine
 	return qtcore.NewQTimeLineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:68
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTimeLine(QTimeLine *)
@@ -219,7 +217,7 @@ func (this *QGraphicsItemAnimation) SetTimeLine(timeLine qtcore.QTimeLine_ITF /*
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:70
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF posAt(qreal) const
@@ -237,7 +235,7 @@ func (this *QGraphicsItemAnimation) PosAt(step float64) *qtcore.QPointF /*123*/ 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:72
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPosAt(qreal, const QPointF &)
@@ -256,7 +254,7 @@ func (this *QGraphicsItemAnimation) SetPosAt(step float64, pos qtcore.QPointF_IT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:74
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [48] QMatrix matrixAt(qreal) const
@@ -272,7 +270,7 @@ func (this *QGraphicsItemAnimation) MatrixAt(step float64) *qtgui.QMatrix /*123*
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:76
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal rotationAt(qreal) const
@@ -288,7 +286,7 @@ func (this *QGraphicsItemAnimation) RotationAt(step float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:78
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRotationAt(qreal, qreal)
@@ -303,7 +301,7 @@ func (this *QGraphicsItemAnimation) SetRotationAt(step float64, angle float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:80
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal xTranslationAt(qreal) const
@@ -319,7 +317,7 @@ func (this *QGraphicsItemAnimation) XTranslationAt(step float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:81
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal yTranslationAt(qreal) const
@@ -335,7 +333,7 @@ func (this *QGraphicsItemAnimation) YTranslationAt(step float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:83
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTranslationAt(qreal, qreal, qreal)
@@ -350,7 +348,7 @@ func (this *QGraphicsItemAnimation) SetTranslationAt(step float64, dx float64, d
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:85
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal verticalScaleAt(qreal) const
@@ -366,7 +364,7 @@ func (this *QGraphicsItemAnimation) VerticalScaleAt(step float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:86
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal horizontalScaleAt(qreal) const
@@ -382,7 +380,7 @@ func (this *QGraphicsItemAnimation) HorizontalScaleAt(step float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:88
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScaleAt(qreal, qreal, qreal)
@@ -397,7 +395,7 @@ func (this *QGraphicsItemAnimation) SetScaleAt(step float64, sx float64, sy floa
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:90
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal verticalShearAt(qreal) const
@@ -413,7 +411,7 @@ func (this *QGraphicsItemAnimation) VerticalShearAt(step float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:91
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal horizontalShearAt(qreal) const
@@ -429,7 +427,7 @@ func (this *QGraphicsItemAnimation) HorizontalShearAt(step float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:93
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setShearAt(qreal, qreal, qreal)
@@ -444,7 +442,7 @@ func (this *QGraphicsItemAnimation) SetShearAt(step float64, sh float64, sv floa
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:95
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
@@ -457,7 +455,7 @@ func (this *QGraphicsItemAnimation) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:98
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStep(qreal)
@@ -470,7 +468,7 @@ func (this *QGraphicsItemAnimation) SetStep(x float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:99
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reset()
@@ -483,7 +481,7 @@ func (this *QGraphicsItemAnimation) Reset() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:102
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:103
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void beforeAnimationStep(qreal)
@@ -496,7 +494,7 @@ func (this *QGraphicsItemAnimation) BeforeAnimationStep(step float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:103
+// /usr/include/qt/QtWidgets/qgraphicsitemanimation.h:104
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void afterAnimationStep(qreal)

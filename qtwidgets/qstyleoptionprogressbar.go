@@ -64,7 +64,7 @@ func (*QStyleOptionProgressBar) NewFromPointer(cthis unsafe.Pointer) *QStyleOpti
 	return NewQStyleOptionProgressBarFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:342
+// /usr/include/qt/QtWidgets/qstyleoption.h:331
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionProgressBar()
@@ -83,7 +83,7 @@ func NewQStyleOptionProgressBar() *QStyleOptionProgressBar {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:346
+// /usr/include/qt/QtWidgets/qstyleoption.h:335
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionProgressBar(int)

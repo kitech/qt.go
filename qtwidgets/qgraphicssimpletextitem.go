@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h
@@ -81,7 +79,7 @@ func (*QGraphicsSimpleTextItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsS
 	return NewQGraphicsSimpleTextItemFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:968
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:969
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSimpleTextItem(QGraphicsItem *)
@@ -104,7 +102,7 @@ func NewQGraphicsSimpleTextItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:968
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:969
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSimpleTextItem(QGraphicsItem *)
@@ -125,7 +123,7 @@ func NewQGraphicsSimpleTextItemp() *QGraphicsSimpleTextItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:969
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:970
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSimpleTextItem(const QString &, QGraphicsItem *)
@@ -150,7 +148,7 @@ func NewQGraphicsSimpleTextItem1(text string, parent QGraphicsItem_ITF /*777 QGr
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:969
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:970
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSimpleTextItem(const QString &, QGraphicsItem *)
@@ -173,7 +171,7 @@ func NewQGraphicsSimpleTextItem1p(text string) *QGraphicsSimpleTextItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:970
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:971
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsSimpleTextItem()
@@ -188,7 +186,7 @@ func DeleteQGraphicsSimpleTextItem(this *QGraphicsSimpleTextItem) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:972
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:973
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setText(const QString &)
@@ -203,7 +201,7 @@ func (this *QGraphicsSimpleTextItem) SetText(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:973
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:974
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text() const
@@ -220,7 +218,7 @@ func (this *QGraphicsSimpleTextItem) Text() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:975
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:976
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFont(const QFont &)
@@ -237,7 +235,7 @@ func (this *QGraphicsSimpleTextItem) SetFont(font qtgui.QFont_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:976
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:977
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QFont font() const
@@ -253,7 +251,7 @@ func (this *QGraphicsSimpleTextItem) Font() *qtgui.QFont /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:978
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:979
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF boundingRect() const
@@ -291,7 +289,7 @@ func (this *QGraphicsSimpleTextItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:979
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:980
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QPainterPath shape() const
@@ -325,7 +323,7 @@ func (this *QGraphicsSimpleTextItem) Shape() *qtgui.QPainterPath /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:980
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:981
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool contains(const QPointF &) const
@@ -347,7 +345,7 @@ func (this *QGraphicsSimpleTextItem) Contains(point qtcore.QPointF_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:982
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:983
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
@@ -396,7 +394,7 @@ func (this *QGraphicsSimpleTextItem) Paint(painter qtgui.QPainter_ITF /*777 QPai
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:984
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:985
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isObscuredBy(const QGraphicsItem *) const
@@ -420,7 +418,7 @@ func (this *QGraphicsSimpleTextItem) IsObscuredBy(item QGraphicsItem_ITF /*777 c
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:985
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:986
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QPainterPath opaqueArea() const
@@ -442,7 +440,7 @@ func (this *QGraphicsSimpleTextItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:988
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:989
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int type() const
@@ -480,7 +478,7 @@ func (this *QGraphicsSimpleTextItem) Type() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:991
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:992
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool supportsExtension(QGraphicsItem::Extension) const
@@ -494,7 +492,7 @@ func (this *QGraphicsSimpleTextItem) SupportsExtension(extension int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:992
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:993
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setExtension(QGraphicsItem::Extension, const QVariant &)
@@ -511,7 +509,7 @@ func (this *QGraphicsSimpleTextItem) SetExtension(extension int, variant qtcore.
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:993
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:994
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant extension(const QVariant &) const

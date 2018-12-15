@@ -90,7 +90,7 @@ func (this *QDialogButtonBox) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:120
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(QWidget *)
@@ -115,7 +115,7 @@ func NewQDialogButtonBox(parent QWidget_ITF /*777 QWidget **/) *QDialogButtonBox
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:120
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(QWidget *)
@@ -138,7 +138,7 @@ func NewQDialogButtonBoxp() *QDialogButtonBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:121
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:119
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(Qt::Orientation, QWidget *)
@@ -163,7 +163,7 @@ func NewQDialogButtonBox1(orientation int, parent QWidget_ITF /*777 QWidget **/)
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:121
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:119
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(Qt::Orientation, QWidget *)
@@ -186,7 +186,7 @@ func NewQDialogButtonBox1p(orientation int) *QDialogButtonBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:122
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:120
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(QDialogButtonBox::StandardButtons, QWidget *)
@@ -211,7 +211,7 @@ func NewQDialogButtonBox2(buttons int, parent QWidget_ITF /*777 QWidget **/) *QD
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:122
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:120
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(QDialogButtonBox::StandardButtons, QWidget *)
@@ -234,7 +234,7 @@ func NewQDialogButtonBox2p(buttons int) *QDialogButtonBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:123
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:121
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(QDialogButtonBox::StandardButtons, Qt::Orientation, QWidget *)
@@ -259,7 +259,7 @@ func NewQDialogButtonBox3(buttons int, orientation int, parent QWidget_ITF /*777
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:123
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:121
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QDialogButtonBox(QDialogButtonBox::StandardButtons, Qt::Orientation, QWidget *)
@@ -282,7 +282,7 @@ func NewQDialogButtonBox3p(buttons int, orientation int) *QDialogButtonBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:125
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:123
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDialogButtonBox()
@@ -297,7 +297,7 @@ func DeleteQDialogButtonBox(this *QDialogButtonBox) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:127
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:125
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOrientation(Qt::Orientation)
@@ -310,7 +310,7 @@ func (this *QDialogButtonBox) SetOrientation(orientation int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:128
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:126
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Orientation orientation() const
@@ -324,7 +324,7 @@ func (this *QDialogButtonBox) Orientation() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:130
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:128
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addButton(QAbstractButton *, QDialogButtonBox::ButtonRole)
@@ -347,7 +347,7 @@ func (this *QDialogButtonBox) AddButton(button QAbstractButton_ITF /*777 QAbstra
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:131
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:129
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QPushButton * addButton(const QString &, QDialogButtonBox::ButtonRole)
@@ -369,7 +369,7 @@ func (this *QDialogButtonBox) AddButton1(text string, role int) *QPushButton /*7
 	return /*==*/ NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:132
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:130
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QPushButton * addButton(QDialogButtonBox::StandardButton)
@@ -389,7 +389,7 @@ func (this *QDialogButtonBox) AddButton2(button int) *QPushButton /*777 QPushBut
 	return /*==*/ NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:133
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:131
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeButton(QAbstractButton *)
@@ -408,7 +408,7 @@ func (this *QDialogButtonBox) RemoveButton(button QAbstractButton_ITF /*777 QAbs
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:134
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
@@ -423,7 +423,7 @@ func (this *QDialogButtonBox) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:137
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDialogButtonBox::ButtonRole buttonRole(QAbstractButton *) const
@@ -443,7 +443,7 @@ func (this *QDialogButtonBox) ButtonRole(button QAbstractButton_ITF /*777 QAbstr
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:139
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setStandardButtons(QDialogButtonBox::StandardButtons)
@@ -456,7 +456,7 @@ func (this *QDialogButtonBox) SetStandardButtons(buttons int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:140
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDialogButtonBox::StandardButtons standardButtons() const
@@ -470,7 +470,7 @@ func (this *QDialogButtonBox) StandardButtons() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:141
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDialogButtonBox::StandardButton standardButton(QAbstractButton *) const
@@ -490,7 +490,7 @@ func (this *QDialogButtonBox) StandardButton(button QAbstractButton_ITF /*777 QA
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:142
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPushButton * button(QDialogButtonBox::StandardButton) const
@@ -506,7 +506,7 @@ func (this *QDialogButtonBox) Button(which int) *QPushButton /*777 QPushButton *
 	return /*==*/ NewQPushButtonFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:144
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:142
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCenterButtons(bool)
@@ -519,7 +519,7 @@ func (this *QDialogButtonBox) SetCenterButtons(center bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:145
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool centerButtons() const
@@ -533,7 +533,7 @@ func (this *QDialogButtonBox) CenterButtons() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:148
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clicked(QAbstractButton *)
@@ -552,7 +552,7 @@ func (this *QDialogButtonBox) Clicked(button QAbstractButton_ITF /*777 QAbstract
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:149
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void accepted()
@@ -567,7 +567,7 @@ func (this *QDialogButtonBox) Accepted() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:150
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void helpRequested()
@@ -582,7 +582,7 @@ func (this *QDialogButtonBox) HelpRequested() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:151
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void rejected()
@@ -597,7 +597,7 @@ func (this *QDialogButtonBox) Rejected() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:154
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:152
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
@@ -614,7 +614,7 @@ func (this *QDialogButtonBox) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:155
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:153
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -781,9 +781,6 @@ const QDialogButtonBox__KdeLayout QDialogButtonBox__ButtonLayout = 2
 
 // Use a policy appropriate for applications on GNOME.
 const QDialogButtonBox__GnomeLayout QDialogButtonBox__ButtonLayout = 3
-
-//
-const QDialogButtonBox__AndroidLayout QDialogButtonBox__ButtonLayout = 5
 
 func (this *QDialogButtonBox) ButtonLayoutItemName(val int) string {
 	return qtrt.GetClassEnumItemName(this, val)

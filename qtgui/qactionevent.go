@@ -63,7 +63,7 @@ func (*QActionEvent) NewFromPointer(cthis unsafe.Pointer) *QActionEvent {
 	return NewQActionEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:727
+// /usr/include/qt/QtGui/qevent.h:720
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QActionEvent(int, QAction *, QAction *)
@@ -82,7 +82,7 @@ func NewQActionEvent(type_ int, action unsafe.Pointer /*666*/, before unsafe.Poi
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:727
+// /usr/include/qt/QtGui/qevent.h:720
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QActionEvent(int, QAction *, QAction *)
@@ -103,7 +103,7 @@ func NewQActionEventp(type_ int, action unsafe.Pointer /*666*/) *QActionEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:728
+// /usr/include/qt/QtGui/qevent.h:721
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QActionEvent()
@@ -118,7 +118,7 @@ func DeleteQActionEvent(this *QActionEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:730
+// /usr/include/qt/QtGui/qevent.h:723
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QAction * action() const
@@ -132,7 +132,7 @@ func (this *QActionEvent) Action() unsafe.Pointer /*666*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtGui/qevent.h:731
+// /usr/include/qt/QtGui/qevent.h:724
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QAction * before() const

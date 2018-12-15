@@ -64,7 +64,7 @@ func (*QStyleOptionTabBarBase) NewFromPointer(cthis unsafe.Pointer) *QStyleOptio
 	return NewQStyleOptionTabBarBaseFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:195
+// /usr/include/qt/QtWidgets/qstyleoption.h:184
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionTabBarBase()
@@ -83,7 +83,7 @@ func NewQStyleOptionTabBarBase() *QStyleOptionTabBarBase {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:199
+// /usr/include/qt/QtWidgets/qstyleoption.h:188
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionTabBarBase(int)

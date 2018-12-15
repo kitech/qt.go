@@ -62,15 +62,15 @@ func init() {
 //  header block end
 
 //  body block begin
-// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:82
-// index:86
+// /usr/include/qt/QtWebEngineWidgets/qwebenginehistory.h:83
+// index:81
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QWebEngineHistoryItem &, QWebEngineHistoryItem &)
 
 /*
 
  */
-func Swap86(value1 QWebEngineHistoryItem_ITF, value2 QWebEngineHistoryItem_ITF) {
+func Swap81(value1 QWebEngineHistoryItem_ITF, value2 QWebEngineHistoryItem_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QWebEngineHistoryItem_PTR() != nil {
 		convArg0 = value1.QWebEngineHistoryItem_PTR().GetCthis()
@@ -83,15 +83,15 @@ func Swap86(value1 QWebEngineHistoryItem_ITF, value2 QWebEngineHistoryItem_ITF) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginescript.h:105
-// index:87
+// /usr/include/qt/QtWebEngineWidgets/qwebenginescript.h:106
+// index:82
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QWebEngineScript &, QWebEngineScript &)
 
 /*
 
  */
-func Swap87(value1 QWebEngineScript_ITF, value2 QWebEngineScript_ITF) {
+func Swap82(value1 QWebEngineScript_ITF, value2 QWebEngineScript_ITF) {
 	var convArg0 unsafe.Pointer
 	if value1 != nil && value1.QWebEngineScript_PTR() != nil {
 		convArg0 = value1.QWebEngineScript_PTR().GetCthis()

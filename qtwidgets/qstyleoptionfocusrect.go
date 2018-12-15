@@ -64,7 +64,7 @@ func (*QStyleOptionFocusRect) NewFromPointer(cthis unsafe.Pointer) *QStyleOption
 	return NewQStyleOptionFocusRectFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:119
+// /usr/include/qt/QtWidgets/qstyleoption.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionFocusRect()
@@ -83,7 +83,7 @@ func NewQStyleOptionFocusRect() *QStyleOptionFocusRect {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:123
+// /usr/include/qt/QtWidgets/qstyleoption.h:112
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionFocusRect(int)

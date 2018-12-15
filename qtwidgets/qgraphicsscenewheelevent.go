@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicssceneevent.h
@@ -68,7 +66,7 @@ func (*QGraphicsSceneWheelEvent) NewFromPointer(cthis unsafe.Pointer) *QGraphics
 	return NewQGraphicsSceneWheelEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:139
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneWheelEvent(QEvent::Type)
@@ -87,7 +85,7 @@ func NewQGraphicsSceneWheelEvent(type_ int) *QGraphicsSceneWheelEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:139
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsSceneWheelEvent(QEvent::Type)
@@ -108,7 +106,7 @@ func NewQGraphicsSceneWheelEventp() *QGraphicsSceneWheelEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:140
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:141
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsSceneWheelEvent()
@@ -123,7 +121,7 @@ func DeleteQGraphicsSceneWheelEvent(this *QGraphicsSceneWheelEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:142
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF pos() const
@@ -139,7 +137,7 @@ func (this *QGraphicsSceneWheelEvent) Pos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:143
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPos(const QPointF &)
@@ -156,7 +154,7 @@ func (this *QGraphicsSceneWheelEvent) SetPos(pos qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:145
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF scenePos() const
@@ -172,7 +170,7 @@ func (this *QGraphicsSceneWheelEvent) ScenePos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:146
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScenePos(const QPointF &)
@@ -189,7 +187,7 @@ func (this *QGraphicsSceneWheelEvent) SetScenePos(pos qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:148
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPoint screenPos() const
@@ -205,7 +203,7 @@ func (this *QGraphicsSceneWheelEvent) ScreenPos() *qtcore.QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:149
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScreenPos(const QPoint &)
@@ -222,7 +220,7 @@ func (this *QGraphicsSceneWheelEvent) SetScreenPos(pos qtcore.QPoint_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:151
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:152
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::MouseButtons buttons() const
@@ -236,7 +234,7 @@ func (this *QGraphicsSceneWheelEvent) Buttons() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:152
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setButtons(Qt::MouseButtons)
@@ -249,7 +247,7 @@ func (this *QGraphicsSceneWheelEvent) SetButtons(buttons int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:154
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::KeyboardModifiers modifiers() const
@@ -263,7 +261,7 @@ func (this *QGraphicsSceneWheelEvent) Modifiers() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:155
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setModifiers(Qt::KeyboardModifiers)
@@ -276,7 +274,7 @@ func (this *QGraphicsSceneWheelEvent) SetModifiers(modifiers int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:157
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int delta() const
@@ -290,7 +288,7 @@ func (this *QGraphicsSceneWheelEvent) Delta() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:158
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDelta(int)
@@ -303,7 +301,7 @@ func (this *QGraphicsSceneWheelEvent) SetDelta(delta int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:160
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:161
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Orientation orientation() const
@@ -317,7 +315,7 @@ func (this *QGraphicsSceneWheelEvent) Orientation() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:161
+// /usr/include/qt/QtWidgets/qgraphicssceneevent.h:162
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOrientation(Qt::Orientation)

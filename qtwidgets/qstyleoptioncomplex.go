@@ -64,7 +64,7 @@ func (*QStyleOptionComplex) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionCo
 	return NewQStyleOptionComplexFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:509
+// /usr/include/qt/QtWidgets/qstyleoption.h:498
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionComplex(int, int)
@@ -83,7 +83,7 @@ func NewQStyleOptionComplex(version int, type_ int) *QStyleOptionComplex {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:509
+// /usr/include/qt/QtWidgets/qstyleoption.h:498
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionComplex(int, int)
@@ -106,7 +106,7 @@ func NewQStyleOptionComplexp() *QStyleOptionComplex {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:509
+// /usr/include/qt/QtWidgets/qstyleoption.h:498
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionComplex(int, int)

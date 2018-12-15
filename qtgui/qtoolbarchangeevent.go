@@ -63,7 +63,7 @@ func (*QToolBarChangeEvent) NewFromPointer(cthis unsafe.Pointer) *QToolBarChange
 	return NewQToolBarChangeEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:754
+// /usr/include/qt/QtGui/qevent.h:747
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QToolBarChangeEvent(bool)
@@ -82,7 +82,7 @@ func NewQToolBarChangeEvent(t bool) *QToolBarChangeEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:755
+// /usr/include/qt/QtGui/qevent.h:748
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QToolBarChangeEvent()
@@ -97,7 +97,7 @@ func DeleteQToolBarChangeEvent(this *QToolBarChangeEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:757
+// /usr/include/qt/QtGui/qevent.h:750
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool toggle() const

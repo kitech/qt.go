@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qdatawidgetmapper.h
@@ -66,7 +64,7 @@ func (*QDataWidgetMapper) NewFromPointer(cthis unsafe.Pointer) *QDataWidgetMappe
 	return NewQDataWidgetMapperFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:57
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -80,7 +78,7 @@ func (this *QDataWidgetMapper) MetaObject() *qtcore.QMetaObject /*777 const QMet
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:64
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDataWidgetMapper(QObject *)
@@ -105,7 +103,7 @@ func NewQDataWidgetMapper(parent qtcore.QObject_ITF /*777 QObject **/) *QDataWid
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:64
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDataWidgetMapper(QObject *)
@@ -128,7 +126,7 @@ func NewQDataWidgetMapperp() *QDataWidgetMapper {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:65
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDataWidgetMapper()
@@ -143,7 +141,7 @@ func DeleteQDataWidgetMapper(this *QDataWidgetMapper) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:67
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setModel(QAbstractItemModel *)
@@ -162,7 +160,7 @@ func (this *QDataWidgetMapper) SetModel(model qtcore.QAbstractItemModel_ITF /*77
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:68
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractItemModel * model() const
@@ -178,7 +176,7 @@ func (this *QDataWidgetMapper) Model() *qtcore.QAbstractItemModel /*777 QAbstrac
 	return qtcore.NewQAbstractItemModelFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:70
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setItemDelegate(QAbstractItemDelegate *)
@@ -201,7 +199,7 @@ func (this *QDataWidgetMapper) SetItemDelegate(delegate QAbstractItemDelegate_IT
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:71
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAbstractItemDelegate * itemDelegate() const
@@ -217,7 +215,7 @@ func (this *QDataWidgetMapper) ItemDelegate() *QAbstractItemDelegate /*777 QAbst
 	return /*==*/ NewQAbstractItemDelegateFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:73
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRootIndex(const QModelIndex &)
@@ -236,7 +234,7 @@ func (this *QDataWidgetMapper) SetRootIndex(index qtcore.QModelIndex_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:74
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QModelIndex rootIndex() const
@@ -254,7 +252,7 @@ func (this *QDataWidgetMapper) RootIndex() *qtcore.QModelIndex /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:76
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOrientation(Qt::Orientation)
@@ -267,7 +265,7 @@ func (this *QDataWidgetMapper) SetOrientation(aOrientation int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:77
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Orientation orientation() const
@@ -281,7 +279,7 @@ func (this *QDataWidgetMapper) Orientation() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:81
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSubmitPolicy(QDataWidgetMapper::SubmitPolicy)
@@ -294,7 +292,7 @@ func (this *QDataWidgetMapper) SetSubmitPolicy(policy int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:82
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDataWidgetMapper::SubmitPolicy submitPolicy() const
@@ -308,7 +306,7 @@ func (this *QDataWidgetMapper) SubmitPolicy() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:84
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addMapping(QWidget *, int)
@@ -344,7 +342,7 @@ func (this *QDataWidgetMapper) AddMapping(widget QWidget_ITF /*777 QWidget **/, 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:85
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:86
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void addMapping(QWidget *, int, const QByteArray &)
@@ -384,7 +382,7 @@ func (this *QDataWidgetMapper) AddMapping1(widget QWidget_ITF /*777 QWidget **/,
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:86
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeMapping(QWidget *)
@@ -403,7 +401,7 @@ func (this *QDataWidgetMapper) RemoveMapping(widget QWidget_ITF /*777 QWidget **
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:87
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int mappedSection(QWidget *) const
@@ -423,7 +421,7 @@ func (this *QDataWidgetMapper) MappedSection(widget QWidget_ITF /*777 QWidget **
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:88
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray mappedPropertyName(QWidget *) const
@@ -447,7 +445,7 @@ func (this *QDataWidgetMapper) MappedPropertyName(widget QWidget_ITF /*777 QWidg
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:89
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * mappedWidgetAt(int) const
@@ -463,7 +461,7 @@ func (this *QDataWidgetMapper) MappedWidgetAt(section int) *QWidget /*777 QWidge
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:90
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clearMapping()
@@ -478,7 +476,7 @@ func (this *QDataWidgetMapper) ClearMapping() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:92
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int currentIndex() const
@@ -492,7 +490,7 @@ func (this *QDataWidgetMapper) CurrentIndex() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:95
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void revert()
@@ -507,7 +505,7 @@ func (this *QDataWidgetMapper) Revert() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:96
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool submit()
@@ -529,7 +527,7 @@ func (this *QDataWidgetMapper) Submit() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:98
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void toFirst()
@@ -546,7 +544,7 @@ func (this *QDataWidgetMapper) ToFirst() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:99
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void toLast()
@@ -563,7 +561,7 @@ func (this *QDataWidgetMapper) ToLast() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:100
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void toNext()
@@ -580,7 +578,7 @@ func (this *QDataWidgetMapper) ToNext() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:101
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void toPrevious()
@@ -597,7 +595,7 @@ func (this *QDataWidgetMapper) ToPrevious() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:102
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:103
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void setCurrentIndex(int)
@@ -610,7 +608,7 @@ func (this *QDataWidgetMapper) SetCurrentIndex(index int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:103
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCurrentModelIndex(const QModelIndex &)
@@ -640,7 +638,7 @@ func (this *QDataWidgetMapper) SetCurrentModelIndex(index qtcore.QModelIndex_ITF
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:106
+// /usr/include/qt/QtWidgets/qdatawidgetmapper.h:107
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void currentIndexChanged(int)

@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qstatusbar.h
@@ -96,7 +94,7 @@ func (*QStatusBar) NewFromPointer(cthis unsafe.Pointer) *QStatusBar {
 	return NewQStatusBarFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:54
+// /usr/include/qt/QtWidgets/qstatusbar.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -110,7 +108,7 @@ func (this *QStatusBar) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:59
+// /usr/include/qt/QtWidgets/qstatusbar.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStatusBar(QWidget *)
@@ -135,7 +133,7 @@ func NewQStatusBar(parent QWidget_ITF /*777 QWidget **/) *QStatusBar {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:59
+// /usr/include/qt/QtWidgets/qstatusbar.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStatusBar(QWidget *)
@@ -158,7 +156,7 @@ func NewQStatusBarp() *QStatusBar {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:60
+// /usr/include/qt/QtWidgets/qstatusbar.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QStatusBar()
@@ -173,7 +171,7 @@ func DeleteQStatusBar(this *QStatusBar) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:62
+// /usr/include/qt/QtWidgets/qstatusbar.h:63
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addWidget(QWidget *, int)
@@ -194,7 +192,7 @@ func (this *QStatusBar) AddWidget(widget QWidget_ITF /*777 QWidget **/, stretch 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:62
+// /usr/include/qt/QtWidgets/qstatusbar.h:63
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addWidget(QWidget *, int)
@@ -217,7 +215,7 @@ func (this *QStatusBar) AddWidgetp(widget QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:63
+// /usr/include/qt/QtWidgets/qstatusbar.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int insertWidget(int, QWidget *, int)
@@ -243,7 +241,7 @@ func (this *QStatusBar) InsertWidget(index int, widget QWidget_ITF /*777 QWidget
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:63
+// /usr/include/qt/QtWidgets/qstatusbar.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int insertWidget(int, QWidget *, int)
@@ -271,7 +269,7 @@ func (this *QStatusBar) InsertWidgetp(index int, widget QWidget_ITF /*777 QWidge
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:64
+// /usr/include/qt/QtWidgets/qstatusbar.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addPermanentWidget(QWidget *, int)
@@ -292,7 +290,7 @@ func (this *QStatusBar) AddPermanentWidget(widget QWidget_ITF /*777 QWidget **/,
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:64
+// /usr/include/qt/QtWidgets/qstatusbar.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addPermanentWidget(QWidget *, int)
@@ -315,7 +313,7 @@ func (this *QStatusBar) AddPermanentWidgetp(widget QWidget_ITF /*777 QWidget **/
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:65
+// /usr/include/qt/QtWidgets/qstatusbar.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int insertPermanentWidget(int, QWidget *, int)
@@ -341,7 +339,7 @@ func (this *QStatusBar) InsertPermanentWidget(index int, widget QWidget_ITF /*77
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:65
+// /usr/include/qt/QtWidgets/qstatusbar.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int insertPermanentWidget(int, QWidget *, int)
@@ -369,7 +367,7 @@ func (this *QStatusBar) InsertPermanentWidgetp(index int, widget QWidget_ITF /*7
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:66
+// /usr/include/qt/QtWidgets/qstatusbar.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeWidget(QWidget *)
@@ -390,7 +388,7 @@ func (this *QStatusBar) RemoveWidget(widget QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:68
+// /usr/include/qt/QtWidgets/qstatusbar.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSizeGripEnabled(bool)
@@ -403,7 +401,7 @@ func (this *QStatusBar) SetSizeGripEnabled(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:69
+// /usr/include/qt/QtWidgets/qstatusbar.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSizeGripEnabled() const
@@ -417,7 +415,7 @@ func (this *QStatusBar) IsSizeGripEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:71
+// /usr/include/qt/QtWidgets/qstatusbar.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString currentMessage() const
@@ -436,7 +434,7 @@ func (this *QStatusBar) CurrentMessage() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:74
+// /usr/include/qt/QtWidgets/qstatusbar.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showMessage(const QString &, int)
@@ -455,7 +453,7 @@ func (this *QStatusBar) ShowMessage(text string, timeout int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:74
+// /usr/include/qt/QtWidgets/qstatusbar.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showMessage(const QString &, int)
@@ -476,7 +474,7 @@ func (this *QStatusBar) ShowMessagep(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:75
+// /usr/include/qt/QtWidgets/qstatusbar.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clearMessage()
@@ -491,7 +489,7 @@ func (this *QStatusBar) ClearMessage() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:79
+// /usr/include/qt/QtWidgets/qstatusbar.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void messageChanged(const QString &)
@@ -508,7 +506,7 @@ func (this *QStatusBar) MessageChanged(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:82
+// /usr/include/qt/QtWidgets/qstatusbar.h:83
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
@@ -525,7 +523,7 @@ func (this *QStatusBar) ShowEvent(arg0 qtgui.QShowEvent_ITF /*777 QShowEvent **/
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:83
+// /usr/include/qt/QtWidgets/qstatusbar.h:84
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
@@ -544,7 +542,7 @@ func (this *QStatusBar) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:84
+// /usr/include/qt/QtWidgets/qstatusbar.h:85
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
@@ -561,7 +559,7 @@ func (this *QStatusBar) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEve
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:87
+// /usr/include/qt/QtWidgets/qstatusbar.h:88
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void reformat()
@@ -576,7 +574,7 @@ func (this *QStatusBar) Reformat() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:88
+// /usr/include/qt/QtWidgets/qstatusbar.h:89
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void hideOrShow()
@@ -591,7 +589,7 @@ func (this *QStatusBar) HideOrShow() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qstatusbar.h:89
+// /usr/include/qt/QtWidgets/qstatusbar.h:90
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)

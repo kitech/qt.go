@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qundogroup.h
@@ -20,7 +18,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 66
+// extern C begin: 65
 */
 // import "C"
 import "unsafe"
@@ -66,7 +64,7 @@ func (*QUndoGroup) NewFromPointer(cthis unsafe.Pointer) *QUndoGroup {
 	return NewQUndoGroupFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:57
+// /usr/include/qt/QtWidgets/qundogroup.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -80,7 +78,7 @@ func (this *QUndoGroup) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:61
+// /usr/include/qt/QtWidgets/qundogroup.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QUndoGroup(QObject *)
@@ -105,7 +103,7 @@ func NewQUndoGroup(parent qtcore.QObject_ITF /*777 QObject **/) *QUndoGroup {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:61
+// /usr/include/qt/QtWidgets/qundogroup.h:62
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QUndoGroup(QObject *)
@@ -128,7 +126,7 @@ func NewQUndoGroupp() *QUndoGroup {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:62
+// /usr/include/qt/QtWidgets/qundogroup.h:63
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QUndoGroup()
@@ -143,7 +141,7 @@ func DeleteQUndoGroup(this *QUndoGroup) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:64
+// /usr/include/qt/QtWidgets/qundogroup.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addStack(QUndoStack *)
@@ -162,7 +160,7 @@ func (this *QUndoGroup) AddStack(stack QUndoStack_ITF /*777 QUndoStack **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:65
+// /usr/include/qt/QtWidgets/qundogroup.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeStack(QUndoStack *)
@@ -181,7 +179,7 @@ func (this *QUndoGroup) RemoveStack(stack QUndoStack_ITF /*777 QUndoStack **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:67
+// /usr/include/qt/QtWidgets/qundogroup.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QUndoStack * activeStack() const
@@ -199,7 +197,7 @@ func (this *QUndoGroup) ActiveStack() *QUndoStack /*777 QUndoStack **/ {
 	return /*==*/ NewQUndoStackFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:70
+// /usr/include/qt/QtWidgets/qundogroup.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * createUndoAction(QObject *, const QString &) const
@@ -225,7 +223,7 @@ func (this *QUndoGroup) CreateUndoAction(parent qtcore.QObject_ITF /*777 QObject
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:70
+// /usr/include/qt/QtWidgets/qundogroup.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * createUndoAction(QObject *, const QString &) const
@@ -251,7 +249,7 @@ func (this *QUndoGroup) CreateUndoActionp(parent qtcore.QObject_ITF /*777 QObjec
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:72
+// /usr/include/qt/QtWidgets/qundogroup.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * createRedoAction(QObject *, const QString &) const
@@ -277,7 +275,7 @@ func (this *QUndoGroup) CreateRedoAction(parent qtcore.QObject_ITF /*777 QObject
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:72
+// /usr/include/qt/QtWidgets/qundogroup.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * createRedoAction(QObject *, const QString &) const
@@ -303,7 +301,7 @@ func (this *QUndoGroup) CreateRedoActionp(parent qtcore.QObject_ITF /*777 QObjec
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:75
+// /usr/include/qt/QtWidgets/qundogroup.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool canUndo() const
@@ -321,7 +319,7 @@ func (this *QUndoGroup) CanUndo() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:76
+// /usr/include/qt/QtWidgets/qundogroup.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool canRedo() const
@@ -339,7 +337,7 @@ func (this *QUndoGroup) CanRedo() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:77
+// /usr/include/qt/QtWidgets/qundogroup.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString undoText() const
@@ -360,7 +358,7 @@ func (this *QUndoGroup) UndoText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:78
+// /usr/include/qt/QtWidgets/qundogroup.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString redoText() const
@@ -381,7 +379,7 @@ func (this *QUndoGroup) RedoText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:79
+// /usr/include/qt/QtWidgets/qundogroup.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isClean() const
@@ -399,7 +397,7 @@ func (this *QUndoGroup) IsClean() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:82
+// /usr/include/qt/QtWidgets/qundogroup.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void undo()
@@ -416,7 +414,7 @@ func (this *QUndoGroup) Undo() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:83
+// /usr/include/qt/QtWidgets/qundogroup.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void redo()
@@ -433,7 +431,7 @@ func (this *QUndoGroup) Redo() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:84
+// /usr/include/qt/QtWidgets/qundogroup.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setActiveStack(QUndoStack *)
@@ -458,7 +456,7 @@ func (this *QUndoGroup) SetActiveStack(stack QUndoStack_ITF /*777 QUndoStack **/
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:87
+// /usr/include/qt/QtWidgets/qundogroup.h:88
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void activeStackChanged(QUndoStack *)
@@ -477,7 +475,7 @@ func (this *QUndoGroup) ActiveStackChanged(stack QUndoStack_ITF /*777 QUndoStack
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:88
+// /usr/include/qt/QtWidgets/qundogroup.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void indexChanged(int)
@@ -494,7 +492,7 @@ func (this *QUndoGroup) IndexChanged(idx int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:89
+// /usr/include/qt/QtWidgets/qundogroup.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cleanChanged(bool)
@@ -511,7 +509,7 @@ func (this *QUndoGroup) CleanChanged(clean bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:90
+// /usr/include/qt/QtWidgets/qundogroup.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void canUndoChanged(bool)
@@ -528,7 +526,7 @@ func (this *QUndoGroup) CanUndoChanged(canUndo bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:91
+// /usr/include/qt/QtWidgets/qundogroup.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void canRedoChanged(bool)
@@ -545,7 +543,7 @@ func (this *QUndoGroup) CanRedoChanged(canRedo bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:92
+// /usr/include/qt/QtWidgets/qundogroup.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void undoTextChanged(const QString &)
@@ -564,7 +562,7 @@ func (this *QUndoGroup) UndoTextChanged(undoText string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qundogroup.h:93
+// /usr/include/qt/QtWidgets/qundogroup.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void redoTextChanged(const QString &)

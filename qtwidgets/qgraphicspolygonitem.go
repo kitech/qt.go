@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h
@@ -81,7 +79,7 @@ func (*QGraphicsPolygonItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsPoly
 	return NewQGraphicsPolygonItemFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:743
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:744
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsPolygonItem(QGraphicsItem *)
@@ -104,7 +102,7 @@ func NewQGraphicsPolygonItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:743
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:744
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsPolygonItem(QGraphicsItem *)
@@ -125,7 +123,7 @@ func NewQGraphicsPolygonItemp() *QGraphicsPolygonItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:744
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:745
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsPolygonItem(const QPolygonF &, QGraphicsItem *)
@@ -152,7 +150,7 @@ func NewQGraphicsPolygonItem1(polygon qtgui.QPolygonF_ITF, parent QGraphicsItem_
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:744
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:745
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsPolygonItem(const QPolygonF &, QGraphicsItem *)
@@ -177,7 +175,7 @@ func NewQGraphicsPolygonItem1p(polygon qtgui.QPolygonF_ITF) *QGraphicsPolygonIte
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:746
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:747
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsPolygonItem()
@@ -192,7 +190,7 @@ func DeleteQGraphicsPolygonItem(this *QGraphicsPolygonItem) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:748
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:749
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF polygon() const
@@ -208,7 +206,7 @@ func (this *QGraphicsPolygonItem) Polygon() *qtgui.QPolygonF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:749
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:750
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPolygon(const QPolygonF &)
@@ -225,7 +223,7 @@ func (this *QGraphicsPolygonItem) SetPolygon(polygon qtgui.QPolygonF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:751
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:752
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::FillRule fillRule() const
@@ -239,7 +237,7 @@ func (this *QGraphicsPolygonItem) FillRule() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:752
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:753
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFillRule(Qt::FillRule)
@@ -252,7 +250,7 @@ func (this *QGraphicsPolygonItem) SetFillRule(rule int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:754
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:755
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF boundingRect() const
@@ -290,7 +288,7 @@ func (this *QGraphicsPolygonItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:755
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:756
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QPainterPath shape() const
@@ -324,7 +322,7 @@ func (this *QGraphicsPolygonItem) Shape() *qtgui.QPainterPath /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:756
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:757
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool contains(const QPointF &) const
@@ -346,7 +344,7 @@ func (this *QGraphicsPolygonItem) Contains(point qtcore.QPointF_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:758
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:759
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
@@ -395,7 +393,7 @@ func (this *QGraphicsPolygonItem) Paint(painter qtgui.QPainter_ITF /*777 QPainte
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:758
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:759
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
@@ -442,7 +440,7 @@ func (this *QGraphicsPolygonItem) Paintp(painter qtgui.QPainter_ITF /*777 QPaint
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:760
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:761
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isObscuredBy(const QGraphicsItem *) const
@@ -466,7 +464,7 @@ func (this *QGraphicsPolygonItem) IsObscuredBy(item QGraphicsItem_ITF /*777 cons
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:761
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:762
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QPainterPath opaqueArea() const
@@ -488,7 +486,7 @@ func (this *QGraphicsPolygonItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:764
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:765
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int type() const
@@ -526,7 +524,7 @@ func (this *QGraphicsPolygonItem) Type() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:767
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:768
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool supportsExtension(QGraphicsItem::Extension) const
@@ -540,7 +538,7 @@ func (this *QGraphicsPolygonItem) SupportsExtension(extension int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:768
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:769
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setExtension(QGraphicsItem::Extension, const QVariant &)
@@ -557,7 +555,7 @@ func (this *QGraphicsPolygonItem) SetExtension(extension int, variant qtcore.QVa
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:769
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:770
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant extension(const QVariant &) const

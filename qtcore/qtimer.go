@@ -295,7 +295,7 @@ This sample program automatically terminates after 10 minutes (600,000 milliseco
 
 The receiver is the receiving object and the member is the slot. The time interval is msec milliseconds.
 
-Note: This function is reentrant.
+Note: This function is reentrant
 
 See also setSingleShot() and start().
 */
@@ -344,7 +344,7 @@ This sample program automatically terminates after 10 minutes (600,000 milliseco
 
 The receiver is the receiving object and the member is the slot. The time interval is msec milliseconds.
 
-Note: This function is reentrant.
+Note: This function is reentrant
 
 See also setSingleShot() and start().
 */
@@ -412,7 +412,7 @@ func (this *QTimer) Stop() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qtimer.h:173
+// /usr/include/qt/QtCore/qtimer.h:175
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] std::chrono::milliseconds intervalAsDuration() const
@@ -430,7 +430,7 @@ func (this *QTimer) IntervalAsDuration() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qtimer.h:178
+// /usr/include/qt/QtCore/qtimer.h:181
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] std::chrono::milliseconds remainingTimeAsDuration() const
@@ -448,7 +448,7 @@ func (this *QTimer) RemainingTimeAsDuration() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qtimer.h:200
+// /usr/include/qt/QtCore/qtimer.h:206
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)

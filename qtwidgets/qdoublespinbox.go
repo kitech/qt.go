@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qspinbox.h
@@ -66,7 +64,7 @@ func (*QDoubleSpinBox) NewFromPointer(cthis unsafe.Pointer) *QDoubleSpinBox {
 	return NewQDoubleSpinBoxFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:115
+// /usr/include/qt/QtWidgets/qspinbox.h:116
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -80,7 +78,7 @@ func (this *QDoubleSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaOb
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:126
+// /usr/include/qt/QtWidgets/qspinbox.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDoubleSpinBox(QWidget *)
@@ -103,7 +101,7 @@ func NewQDoubleSpinBox(parent QWidget_ITF /*777 QWidget **/) *QDoubleSpinBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:126
+// /usr/include/qt/QtWidgets/qspinbox.h:127
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDoubleSpinBox(QWidget *)
@@ -124,7 +122,7 @@ func NewQDoubleSpinBoxp() *QDoubleSpinBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:127
+// /usr/include/qt/QtWidgets/qspinbox.h:128
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDoubleSpinBox()
@@ -139,7 +137,7 @@ func DeleteQDoubleSpinBox(this *QDoubleSpinBox) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:129
+// /usr/include/qt/QtWidgets/qspinbox.h:130
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double value() const
@@ -153,7 +151,7 @@ func (this *QDoubleSpinBox) Value() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:131
+// /usr/include/qt/QtWidgets/qspinbox.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString prefix() const
@@ -170,7 +168,7 @@ func (this *QDoubleSpinBox) Prefix() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:132
+// /usr/include/qt/QtWidgets/qspinbox.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPrefix(const QString &)
@@ -185,7 +183,7 @@ func (this *QDoubleSpinBox) SetPrefix(prefix string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:134
+// /usr/include/qt/QtWidgets/qspinbox.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString suffix() const
@@ -202,7 +200,7 @@ func (this *QDoubleSpinBox) Suffix() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:135
+// /usr/include/qt/QtWidgets/qspinbox.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSuffix(const QString &)
@@ -217,7 +215,7 @@ func (this *QDoubleSpinBox) SetSuffix(suffix string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:137
+// /usr/include/qt/QtWidgets/qspinbox.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString cleanText() const
@@ -234,7 +232,7 @@ func (this *QDoubleSpinBox) CleanText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:139
+// /usr/include/qt/QtWidgets/qspinbox.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double singleStep() const
@@ -248,7 +246,7 @@ func (this *QDoubleSpinBox) SingleStep() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:140
+// /usr/include/qt/QtWidgets/qspinbox.h:141
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSingleStep(double)
@@ -261,7 +259,7 @@ func (this *QDoubleSpinBox) SetSingleStep(val float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:142
+// /usr/include/qt/QtWidgets/qspinbox.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double minimum() const
@@ -275,7 +273,7 @@ func (this *QDoubleSpinBox) Minimum() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:143
+// /usr/include/qt/QtWidgets/qspinbox.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMinimum(double)
@@ -288,7 +286,7 @@ func (this *QDoubleSpinBox) SetMinimum(min float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:145
+// /usr/include/qt/QtWidgets/qspinbox.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] double maximum() const
@@ -302,7 +300,7 @@ func (this *QDoubleSpinBox) Maximum() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:146
+// /usr/include/qt/QtWidgets/qspinbox.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaximum(double)
@@ -315,7 +313,7 @@ func (this *QDoubleSpinBox) SetMaximum(max float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:148
+// /usr/include/qt/QtWidgets/qspinbox.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRange(double, double)
@@ -343,7 +341,7 @@ func (this *QDoubleSpinBox) SetRange(min float64, max float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:150
+// /usr/include/qt/QtWidgets/qspinbox.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int decimals() const
@@ -357,7 +355,7 @@ func (this *QDoubleSpinBox) Decimals() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:151
+// /usr/include/qt/QtWidgets/qspinbox.h:152
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDecimals(int)
@@ -370,7 +368,7 @@ func (this *QDoubleSpinBox) SetDecimals(prec int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:153
+// /usr/include/qt/QtWidgets/qspinbox.h:154
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QValidator::State validate(QString &, int &) const
@@ -386,7 +384,7 @@ func (this *QDoubleSpinBox) Validate(input string, pos int) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:154
+// /usr/include/qt/QtWidgets/qspinbox.h:155
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] double valueFromText(const QString &) const
@@ -408,7 +406,7 @@ func (this *QDoubleSpinBox) ValueFromText(text string) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:155
+// /usr/include/qt/QtWidgets/qspinbox.h:156
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QString textFromValue(double) const
@@ -431,7 +429,7 @@ func (this *QDoubleSpinBox) TextFromValue(val float64) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:156
+// /usr/include/qt/QtWidgets/qspinbox.h:157
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void fixup(QString &) const
@@ -446,7 +444,7 @@ func (this *QDoubleSpinBox) Fixup(str string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:159
+// /usr/include/qt/QtWidgets/qspinbox.h:160
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setValue(double)
@@ -459,7 +457,7 @@ func (this *QDoubleSpinBox) SetValue(val float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:162
+// /usr/include/qt/QtWidgets/qspinbox.h:163
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void valueChanged(double)
@@ -467,10 +465,10 @@ func (this *QDoubleSpinBox) SetValue(val float64) {
 /*
 This signal is emitted whenever the spin box's value is changed. The new value's integer value is passed in i.
 
-Note: Signal valueChanged is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal valueChanged is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(spinBox, QOverload<int>::of(&QSpinBox::valueChanged),
+  connect(spinBox, static_cast<void(QSpinBox::*)(int)>(&QSpinBox::valueChanged),
       [=](int i){ /-* ... *-/ });
 
 
@@ -482,7 +480,7 @@ func (this *QDoubleSpinBox) ValueChanged(arg0 float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qspinbox.h:163
+// /usr/include/qt/QtWidgets/qspinbox.h:164
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void valueChanged(const QString &)
@@ -490,10 +488,10 @@ func (this *QDoubleSpinBox) ValueChanged(arg0 float64) {
 /*
 This signal is emitted whenever the spin box's value is changed. The new value's integer value is passed in i.
 
-Note: Signal valueChanged is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal valueChanged is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(spinBox, QOverload<int>::of(&QSpinBox::valueChanged),
+  connect(spinBox, static_cast<void(QSpinBox::*)(int)>(&QSpinBox::valueChanged),
       [=](int i){ /-* ... *-/ });
 
 

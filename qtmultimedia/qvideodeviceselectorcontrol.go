@@ -197,10 +197,10 @@ func (this *QVideoDeviceSelectorControl) SetSelectedDevice(index int) {
 /*
 Signals that the selected video device index has changed.
 
-Note: Signal selectedDeviceChanged is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal selectedDeviceChanged is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(videoDeviceSelectorControl, QOverload<int>::of(&QVideoDeviceSelectorControl::selectedDeviceChanged),
+  connect(videoDeviceSelectorControl, static_cast<void(QVideoDeviceSelectorControl::*)(int)>(&QVideoDeviceSelectorControl::selectedDeviceChanged),
       [=](int index){ /-* ... *-/ });
 */
 func (this *QVideoDeviceSelectorControl) SelectedDeviceChanged(index int) {
@@ -216,10 +216,10 @@ func (this *QVideoDeviceSelectorControl) SelectedDeviceChanged(index int) {
 /*
 Signals that the selected video device index has changed.
 
-Note: Signal selectedDeviceChanged is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal selectedDeviceChanged is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(videoDeviceSelectorControl, QOverload<int>::of(&QVideoDeviceSelectorControl::selectedDeviceChanged),
+  connect(videoDeviceSelectorControl, static_cast<void(QVideoDeviceSelectorControl::*)(int)>(&QVideoDeviceSelectorControl::selectedDeviceChanged),
       [=](int index){ /-* ... *-/ });
 */
 func (this *QVideoDeviceSelectorControl) SelectedDeviceChanged1(deviceName string) {

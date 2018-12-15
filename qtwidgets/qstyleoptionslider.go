@@ -64,7 +64,7 @@ func (*QStyleOptionSlider) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionSli
 	return NewQStyleOptionSliderFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:533
+// /usr/include/qt/QtWidgets/qstyleoption.h:522
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QStyleOptionSlider()
@@ -83,7 +83,7 @@ func NewQStyleOptionSlider() *QStyleOptionSlider {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:537
+// /usr/include/qt/QtWidgets/qstyleoption.h:526
 // index:1
 // Protected Visibility=Default Availability=Available
 // [-2] void QStyleOptionSlider(int)

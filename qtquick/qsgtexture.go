@@ -114,7 +114,7 @@ func DeleteQSGTexture(this *QSGTexture) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:79
+// /usr/include/qt/QtQuick/qsgtexture.h:78
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int textureId() const
@@ -134,7 +134,7 @@ func (this *QSGTexture) TextureId() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:80
+// /usr/include/qt/QtQuick/qsgtexture.h:79
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QSize textureSize() const
@@ -150,7 +150,7 @@ func (this *QSGTexture) TextureSize() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:81
+// /usr/include/qt/QtQuick/qsgtexture.h:80
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool hasAlphaChannel() const
@@ -164,7 +164,7 @@ func (this *QSGTexture) HasAlphaChannel() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:82
+// /usr/include/qt/QtQuick/qsgtexture.h:81
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [1] bool hasMipmaps() const
@@ -178,7 +178,7 @@ func (this *QSGTexture) HasMipmaps() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:84
+// /usr/include/qt/QtQuick/qsgtexture.h:83
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF normalizedTextureSubRect() const
@@ -196,7 +196,7 @@ func (this *QSGTexture) NormalizedTextureSubRect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:86
+// /usr/include/qt/QtQuick/qsgtexture.h:85
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isAtlasTexture() const
@@ -212,7 +212,7 @@ func (this *QSGTexture) IsAtlasTexture() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:88
+// /usr/include/qt/QtQuick/qsgtexture.h:87
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSGTexture * removedFromAtlas() const
@@ -236,7 +236,7 @@ func (this *QSGTexture) RemovedFromAtlas() *QSGTexture /*777 QSGTexture **/ {
 	return /*==*/ NewQSGTextureFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:90
+// /usr/include/qt/QtQuick/qsgtexture.h:89
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void bind()
@@ -253,7 +253,7 @@ func (this *QSGTexture) Bind() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:91
+// /usr/include/qt/QtQuick/qsgtexture.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void updateBindOptions(bool)
@@ -268,7 +268,7 @@ func (this *QSGTexture) UpdateBindOptions(force bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:91
+// /usr/include/qt/QtQuick/qsgtexture.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void updateBindOptions(bool)
@@ -285,7 +285,7 @@ func (this *QSGTexture) UpdateBindOptionsp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:93
+// /usr/include/qt/QtQuick/qsgtexture.h:92
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMipmapFiltering(QSGTexture::Filtering)
@@ -302,7 +302,7 @@ func (this *QSGTexture) SetMipmapFiltering(filter int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:94
+// /usr/include/qt/QtQuick/qsgtexture.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSGTexture::Filtering mipmapFiltering() const
@@ -318,7 +318,7 @@ func (this *QSGTexture) MipmapFiltering() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:96
+// /usr/include/qt/QtQuick/qsgtexture.h:95
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFiltering(QSGTexture::Filtering)
@@ -333,7 +333,7 @@ func (this *QSGTexture) SetFiltering(filter int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:97
+// /usr/include/qt/QtQuick/qsgtexture.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSGTexture::Filtering filtering() const
@@ -349,7 +349,7 @@ func (this *QSGTexture) Filtering() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:99
+// /usr/include/qt/QtQuick/qsgtexture.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAnisotropyLevel(QSGTexture::AnisotropyLevel)
@@ -366,7 +366,7 @@ func (this *QSGTexture) SetAnisotropyLevel(level int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:100
+// /usr/include/qt/QtQuick/qsgtexture.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSGTexture::AnisotropyLevel anisotropyLevel() const
@@ -384,7 +384,7 @@ func (this *QSGTexture) AnisotropyLevel() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:102
+// /usr/include/qt/QtQuick/qsgtexture.h:101
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHorizontalWrapMode(QSGTexture::WrapMode)
@@ -399,7 +399,7 @@ func (this *QSGTexture) SetHorizontalWrapMode(hwrap int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:103
+// /usr/include/qt/QtQuick/qsgtexture.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSGTexture::WrapMode horizontalWrapMode() const
@@ -415,7 +415,7 @@ func (this *QSGTexture) HorizontalWrapMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:105
+// /usr/include/qt/QtQuick/qsgtexture.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVerticalWrapMode(QSGTexture::WrapMode)
@@ -430,7 +430,7 @@ func (this *QSGTexture) SetVerticalWrapMode(vwrap int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:106
+// /usr/include/qt/QtQuick/qsgtexture.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSGTexture::WrapMode verticalWrapMode() const
@@ -446,7 +446,7 @@ func (this *QSGTexture) VerticalWrapMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtQuick/qsgtexture.h:108
+// /usr/include/qt/QtQuick/qsgtexture.h:107
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [32] QRectF convertToNormalizedSourceRect(const QRectF &) const
@@ -480,9 +480,6 @@ const QSGTexture__Repeat QSGTexture__WrapMode = 0
 
 //
 const QSGTexture__ClampToEdge QSGTexture__WrapMode = 1
-
-//
-const QSGTexture__MirroredRepeat QSGTexture__WrapMode = 2
 
 func (this *QSGTexture) WrapModeItemName(val int) string {
 	return qtrt.GetClassEnumItemName(this, val)

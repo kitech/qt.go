@@ -449,6 +449,8 @@ Note that display of messages are dependent on the system configuration and user
 
 On Windows, the millisecondsTimeoutHint is usually ignored by the system when the application has focus.
 
+On macOS, the Growl notification system must be installed for this function to display messages.
+
 Has been turned into a slot in Qt 5.2.
 
 This function was introduced in  Qt 4.3.
@@ -481,6 +483,8 @@ Message can be clicked by the user; the messageClicked() signal will emitted whe
 Note that display of messages are dependent on the system configuration and user preferences, and that messages may not appear at all. Hence, it should not be relied upon as the sole means for providing critical information.
 
 On Windows, the millisecondsTimeoutHint is usually ignored by the system when the application has focus.
+
+On macOS, the Growl notification system must be installed for this function to display messages.
 
 Has been turned into a slot in Qt 5.2.
 
@@ -517,6 +521,8 @@ Note that display of messages are dependent on the system configuration and user
 
 On Windows, the millisecondsTimeoutHint is usually ignored by the system when the application has focus.
 
+On macOS, the Growl notification system must be installed for this function to display messages.
+
 Has been turned into a slot in Qt 5.2.
 
 This function was introduced in  Qt 4.3.
@@ -545,6 +551,8 @@ Message can be clicked by the user; the messageClicked() signal will emitted whe
 Note that display of messages are dependent on the system configuration and user preferences, and that messages may not appear at all. Hence, it should not be relied upon as the sole means for providing critical information.
 
 On Windows, the millisecondsTimeoutHint is usually ignored by the system when the application has focus.
+
+On macOS, the Growl notification system must be installed for this function to display messages.
 
 Has been turned into a slot in Qt 5.2.
 
@@ -578,6 +586,8 @@ Message can be clicked by the user; the messageClicked() signal will emitted whe
 Note that display of messages are dependent on the system configuration and user preferences, and that messages may not appear at all. Hence, it should not be relied upon as the sole means for providing critical information.
 
 On Windows, the millisecondsTimeoutHint is usually ignored by the system when the application has focus.
+
+On macOS, the Growl notification system must be installed for this function to display messages.
 
 Has been turned into a slot in Qt 5.2.
 
@@ -621,7 +631,7 @@ This signal is emitted when the message displayed using showMessage() was clicke
 
 Currently this signal is not sent on macOS.
 
-Note: We follow Microsoft Windows behavior, so the signal is also emitted when the user clicks on a tray icon with a balloon message displayed.
+Note: We follow Microsoft Windows XP/Vista behavior, so the signal is also emitted when the user clicks on a tray icon with a balloon message displayed.
 
 See also activated().
 */
@@ -653,10 +663,6 @@ This enum describes the reason the system tray was activated.
 
 
 
-Note: On macOS, a double click will only be emitted if no context menu is set, since the menu opens on mouse press
-
-
-
 See also activated().
 
 */
@@ -668,7 +674,7 @@ const QSystemTrayIcon__Unknown QSystemTrayIcon__ActivationReason = 0
 // The context menu for the system tray entry was requested
 const QSystemTrayIcon__Context QSystemTrayIcon__ActivationReason = 1
 
-// The system tray entry was double clicked.
+// The system tray entry was double clicked
 const QSystemTrayIcon__DoubleClick QSystemTrayIcon__ActivationReason = 2
 
 // The system tray entry was clicked

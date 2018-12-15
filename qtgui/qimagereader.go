@@ -883,11 +883,9 @@ Returns true if an image can be read for the device (i.e., the image format is s
 
 canRead() is a lightweight function that only does a quick test to see if the image data is valid. read() may still return false after canRead() returns true, if the image data is corrupt.
 
-Note: A QMimeDatabase lookup is normally a better approach than this function for identifying potentially non-image files or data.
-
 For images that support animation, canRead() returns false when all frames have been read.
 
-See also read(), supportedImageFormats(), and QMimeDatabase.
+See also read() and supportedImageFormats().
 */
 func (this *QImageReader) CanRead() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK12QImageReader7canReadEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())

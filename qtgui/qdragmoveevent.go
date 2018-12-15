@@ -63,7 +63,7 @@ func (*QDragMoveEvent) NewFromPointer(cthis unsafe.Pointer) *QDragMoveEvent {
 	return NewQDragMoveEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:642
+// /usr/include/qt/QtGui/qevent.h:635
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDragMoveEvent(const QPoint &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, QEvent::Type)
@@ -90,7 +90,7 @@ func NewQDragMoveEvent(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeData
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:642
+// /usr/include/qt/QtGui/qevent.h:635
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDragMoveEvent(const QPoint &, Qt::DropActions, const QMimeData *, Qt::MouseButtons, Qt::KeyboardModifiers, QEvent::Type)
@@ -119,7 +119,7 @@ func NewQDragMoveEventp(pos qtcore.QPoint_ITF, actions int, data qtcore.QMimeDat
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:644
+// /usr/include/qt/QtGui/qevent.h:637
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDragMoveEvent()
@@ -134,7 +134,7 @@ func DeleteQDragMoveEvent(this *QDragMoveEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:646
+// /usr/include/qt/QtGui/qevent.h:639
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QRect answerRect() const
@@ -150,7 +150,7 @@ func (this *QDragMoveEvent) AnswerRect() *qtcore.QRect /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:648
+// /usr/include/qt/QtGui/qevent.h:641
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void accept()
@@ -163,7 +163,7 @@ func (this *QDragMoveEvent) Accept() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:651
+// /usr/include/qt/QtGui/qevent.h:644
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void accept(const QRect &)
@@ -180,7 +180,7 @@ func (this *QDragMoveEvent) Accept1(r qtcore.QRect_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:649
+// /usr/include/qt/QtGui/qevent.h:642
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void ignore()
@@ -193,7 +193,7 @@ func (this *QDragMoveEvent) Ignore() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:652
+// /usr/include/qt/QtGui/qevent.h:645
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void ignore(const QRect &)

@@ -220,10 +220,6 @@ Sets the QTemporaryFile into auto-remove mode if b is true.
 
 Auto-remove is on by default.
 
-If you set this property to false, ensure the application provides a way to remove the file once it is no longer needed, including passing the responsibility on to another process. Always use the fileName() function to obtain the name and never try to guess the name that QTemporaryFile has generated.
-
-On some systems, if fileName() is not called before closing the file, the temporary file may be removed regardless of the state of this property. This behavior should not be relied upon, so application code should either call fileName() or leave the auto removal functionality enabled.
-
 See also autoRemove() and remove().
 */
 func (this *QTemporaryFile) SetAutoRemove(b bool) {
@@ -247,7 +243,7 @@ func (this *QTemporaryFile) Open() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qtemporaryfile.h:98
+// /usr/include/qt/QtCore/qtemporaryfile.h:94
 // index:1
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool open(QIODevice::OpenMode)
@@ -322,23 +318,7 @@ func (this *QTemporaryFile) SetFileTemplate(name string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qtemporaryfile.h:85
-// index:0
-// Public Visibility=Default Availability=Available
-// [1] bool rename(const QString &)
-
-/*
-
- */
-func (this *QTemporaryFile) Rename(newName string) bool {
-	var tmpArg0 = NewQString5(newName)
-	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QTemporaryFile6renameERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtCore/qtemporaryfile.h:88
+// /usr/include/qt/QtCore/qtemporaryfile.h:84
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QTemporaryFile * createLocalFile(const QString &)
@@ -359,7 +339,7 @@ func QTemporaryFile_CreateLocalFile(fileName string) *QTemporaryFile /*777 QTemp
 	return rv
 }
 
-// /usr/include/qt/QtCore/qtemporaryfile.h:90
+// /usr/include/qt/QtCore/qtemporaryfile.h:86
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [8] QTemporaryFile * createLocalFile(QFile &)
@@ -382,7 +362,7 @@ func QTemporaryFile_CreateLocalFile1(file QFile_ITF) *QTemporaryFile /*777 QTemp
 	return rv
 }
 
-// /usr/include/qt/QtCore/qtemporaryfile.h:93
+// /usr/include/qt/QtCore/qtemporaryfile.h:89
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [8] QTemporaryFile * createNativeFile(const QString &)
@@ -416,7 +396,7 @@ func QTemporaryFile_CreateNativeFile(fileName string) *QTemporaryFile /*777 QTem
 	return rv
 }
 
-// /usr/include/qt/QtCore/qtemporaryfile.h:95
+// /usr/include/qt/QtCore/qtemporaryfile.h:91
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QTemporaryFile * createNativeFile(QFile &)

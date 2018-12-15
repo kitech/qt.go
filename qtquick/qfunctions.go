@@ -226,7 +226,7 @@ func Operator_or101(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtQuick/qquickitem.h:464
+// /usr/include/qt/QtQuick/qquickitem.h:459
 // index:102
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QQuickItem::Flags::enum_type, int)

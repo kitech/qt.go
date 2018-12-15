@@ -63,7 +63,7 @@ func (*QShortcutEvent) NewFromPointer(cthis unsafe.Pointer) *QShortcutEvent {
 	return NewQShortcutEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:767
+// /usr/include/qt/QtGui/qevent.h:760
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QShortcutEvent(const QKeySequence &, int, bool)
@@ -86,7 +86,7 @@ func NewQShortcutEvent(key QKeySequence_ITF, id int, ambiguous bool) *QShortcutE
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:767
+// /usr/include/qt/QtGui/qevent.h:760
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QShortcutEvent(const QKeySequence &, int, bool)
@@ -111,7 +111,7 @@ func NewQShortcutEventp(key QKeySequence_ITF, id int) *QShortcutEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:768
+// /usr/include/qt/QtGui/qevent.h:761
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QShortcutEvent()
@@ -126,7 +126,7 @@ func DeleteQShortcutEvent(this *QShortcutEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:770
+// /usr/include/qt/QtGui/qevent.h:763
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] const QKeySequence & key() const
@@ -142,7 +142,7 @@ func (this *QShortcutEvent) Key() *QKeySequence {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:771
+// /usr/include/qt/QtGui/qevent.h:764
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int shortcutId() const
@@ -156,7 +156,7 @@ func (this *QShortcutEvent) ShortcutId() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qevent.h:772
+// /usr/include/qt/QtGui/qevent.h:765
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isAmbiguous() const

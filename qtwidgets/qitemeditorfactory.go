@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qitemeditorfactory.h
@@ -68,7 +66,7 @@ func (*QItemEditorFactory) NewFromPointer(cthis unsafe.Pointer) *QItemEditorFact
 	return NewQItemEditorFactoryFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qitemeditorfactory.h:98
+// /usr/include/qt/QtWidgets/qitemeditorfactory.h:99
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QItemEditorFactory()
@@ -87,7 +85,7 @@ func NewQItemEditorFactory() *QItemEditorFactory {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qitemeditorfactory.h:99
+// /usr/include/qt/QtWidgets/qitemeditorfactory.h:100
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QItemEditorFactory()
@@ -102,7 +100,7 @@ func DeleteQItemEditorFactory(this *QItemEditorFactory) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qitemeditorfactory.h:101
+// /usr/include/qt/QtWidgets/qitemeditorfactory.h:102
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QWidget * createEditor(int, QWidget *) const
@@ -122,7 +120,7 @@ func (this *QItemEditorFactory) CreateEditor(userType int, parent QWidget_ITF /*
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qitemeditorfactory.h:102
+// /usr/include/qt/QtWidgets/qitemeditorfactory.h:103
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QByteArray valuePropertyName(int) const
@@ -138,7 +136,7 @@ func (this *QItemEditorFactory) ValuePropertyName(userType int) *qtcore.QByteArr
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qitemeditorfactory.h:104
+// /usr/include/qt/QtWidgets/qitemeditorfactory.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void registerEditor(int, QItemEditorCreatorBase *)
@@ -159,7 +157,7 @@ func (this *QItemEditorFactory) RegisterEditor(userType int, creator QItemEditor
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qitemeditorfactory.h:106
+// /usr/include/qt/QtWidgets/qitemeditorfactory.h:107
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] const QItemEditorFactory * defaultFactory()
@@ -180,7 +178,7 @@ func QItemEditorFactory_DefaultFactory() *QItemEditorFactory /*777 const QItemEd
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qitemeditorfactory.h:107
+// /usr/include/qt/QtWidgets/qitemeditorfactory.h:108
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setDefaultFactory(QItemEditorFactory *)

@@ -63,7 +63,7 @@ func (*QFocusEvent) NewFromPointer(cthis unsafe.Pointer) *QFocusEvent {
 	return NewQFocusEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:389
+// /usr/include/qt/QtGui/qevent.h:382
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFocusEvent(QEvent::Type, Qt::FocusReason)
@@ -82,7 +82,7 @@ func NewQFocusEvent(type_ int, reason int) *QFocusEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:389
+// /usr/include/qt/QtGui/qevent.h:382
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QFocusEvent(QEvent::Type, Qt::FocusReason)
@@ -103,7 +103,7 @@ func NewQFocusEventp(type_ int) *QFocusEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:390
+// /usr/include/qt/QtGui/qevent.h:383
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QFocusEvent()
@@ -118,7 +118,7 @@ func DeleteQFocusEvent(this *QFocusEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:392
+// /usr/include/qt/QtGui/qevent.h:385
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool gotFocus() const
@@ -132,7 +132,7 @@ func (this *QFocusEvent) GotFocus() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qevent.h:393
+// /usr/include/qt/QtGui/qevent.h:386
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool lostFocus() const
@@ -146,7 +146,7 @@ func (this *QFocusEvent) LostFocus() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qevent.h:395
+// /usr/include/qt/QtGui/qevent.h:388
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::FocusReason reason() const

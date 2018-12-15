@@ -76,7 +76,7 @@ func (this *QThreadPool) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qthreadpool.h:65
+// /usr/include/qt/QtCore/qthreadpool.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QThreadPool(QObject *)
@@ -99,7 +99,7 @@ func NewQThreadPool(parent QObject_ITF /*777 QObject **/) *QThreadPool {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qthreadpool.h:65
+// /usr/include/qt/QtCore/qthreadpool.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QThreadPool(QObject *)
@@ -120,7 +120,7 @@ func NewQThreadPoolp() *QThreadPool {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qthreadpool.h:66
+// /usr/include/qt/QtCore/qthreadpool.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QThreadPool()
@@ -135,7 +135,7 @@ func DeleteQThreadPool(this *QThreadPool) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qthreadpool.h:68
+// /usr/include/qt/QtCore/qthreadpool.h:67
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QThreadPool * globalInstance()
@@ -154,7 +154,7 @@ func QThreadPool_GlobalInstance() *QThreadPool /*777 QThreadPool **/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qthreadpool.h:70
+// /usr/include/qt/QtCore/qthreadpool.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void start(QRunnable *, int)
@@ -173,7 +173,7 @@ func (this *QThreadPool) Start(runnable QRunnable_ITF /*777 QRunnable **/, prior
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qthreadpool.h:70
+// /usr/include/qt/QtCore/qthreadpool.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void start(QRunnable *, int)
@@ -194,7 +194,7 @@ func (this *QThreadPool) Startp(runnable QRunnable_ITF /*777 QRunnable **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qthreadpool.h:71
+// /usr/include/qt/QtCore/qthreadpool.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool tryStart(QRunnable *)
@@ -216,7 +216,7 @@ func (this *QThreadPool) TryStart(runnable QRunnable_ITF /*777 QRunnable **/) bo
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qthreadpool.h:73
+// /usr/include/qt/QtCore/qthreadpool.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int expiryTimeout() const
@@ -230,7 +230,7 @@ func (this *QThreadPool) ExpiryTimeout() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qthreadpool.h:74
+// /usr/include/qt/QtCore/qthreadpool.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setExpiryTimeout(int)
@@ -243,7 +243,7 @@ func (this *QThreadPool) SetExpiryTimeout(expiryTimeout int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qthreadpool.h:76
+// /usr/include/qt/QtCore/qthreadpool.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int maxThreadCount() const
@@ -257,7 +257,7 @@ func (this *QThreadPool) MaxThreadCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qthreadpool.h:77
+// /usr/include/qt/QtCore/qthreadpool.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaxThreadCount(int)
@@ -270,7 +270,7 @@ func (this *QThreadPool) SetMaxThreadCount(maxThreadCount int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qthreadpool.h:79
+// /usr/include/qt/QtCore/qthreadpool.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int activeThreadCount() const
@@ -284,34 +284,7 @@ func (this *QThreadPool) ActiveThreadCount() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qthreadpool.h:81
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void setStackSize(uint)
-
-/*
-
- */
-func (this *QThreadPool) SetStackSize(stackSize uint) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QThreadPool12setStackSizeEj", qtrt.FFI_TYPE_POINTER, this.GetCthis(), stackSize)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtCore/qthreadpool.h:82
-// index:0
-// Public Visibility=Default Availability=Available
-// [4] uint stackSize() const
-
-/*
-
- */
-func (this *QThreadPool) StackSize() uint {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK11QThreadPool9stackSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return uint(rv) // 222
-}
-
-// /usr/include/qt/QtCore/qthreadpool.h:84
+// /usr/include/qt/QtCore/qthreadpool.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void reserveThread()
@@ -330,7 +303,7 @@ func (this *QThreadPool) ReserveThread() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qthreadpool.h:85
+// /usr/include/qt/QtCore/qthreadpool.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void releaseThread()
@@ -347,7 +320,7 @@ func (this *QThreadPool) ReleaseThread() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qthreadpool.h:87
+// /usr/include/qt/QtCore/qthreadpool.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForDone(int)
@@ -361,7 +334,7 @@ func (this *QThreadPool) WaitForDone(msecs int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qthreadpool.h:87
+// /usr/include/qt/QtCore/qthreadpool.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForDone(int)
@@ -377,7 +350,7 @@ func (this *QThreadPool) WaitForDonep() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qthreadpool.h:89
+// /usr/include/qt/QtCore/qthreadpool.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
@@ -394,7 +367,7 @@ func (this *QThreadPool) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qthreadpool.h:93
+// /usr/include/qt/QtCore/qthreadpool.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cancel(QRunnable *)
@@ -411,7 +384,7 @@ func (this *QThreadPool) Cancel(runnable QRunnable_ITF /*777 QRunnable **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qthreadpool.h:95
+// /usr/include/qt/QtCore/qthreadpool.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool tryTake(QRunnable *)

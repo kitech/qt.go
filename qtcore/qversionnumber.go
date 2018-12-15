@@ -386,7 +386,7 @@ func QVersionNumber_CommonPrefix(v1 QVersionNumber_ITF, v2 QVersionNumber_ITF) *
 // [8] QString toString() const
 
 /*
-Returns a string with all of the segments delimited by a period (.).
+Returns a string with all of the segments delimited by a '.'.
 
 See also majorVersion(), minorVersion(), microVersion(), and segments().
 */
@@ -399,13 +399,13 @@ func (this *QVersionNumber) ToString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qversionnumber.h:284
+// /usr/include/qt/QtCore/qversionnumber.h:283
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QVersionNumber fromString(const QString &, int *)
 
 /*
-Constructs a QVersionNumber from a specially formatted string of non-negative decimal numbers delimited by a period (.).
+Constructs a QVersionNumber from a specially formatted string of non-negative decimal numbers delimited by '.'.
 
 Once the numerical segments have been parsed, the remainder of the string is considered to be the suffix string. The start index of that string will be stored in suffixIndex if it is not null.
 
@@ -435,13 +435,13 @@ func QVersionNumber_FromString(string string, suffixIndex unsafe.Pointer /*666*/
 	return rv
 }
 
-// /usr/include/qt/QtCore/qversionnumber.h:284
+// /usr/include/qt/QtCore/qversionnumber.h:283
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QVersionNumber fromString(const QString &, int *)
 
 /*
-Constructs a QVersionNumber from a specially formatted string of non-negative decimal numbers delimited by a period (.).
+Constructs a QVersionNumber from a specially formatted string of non-negative decimal numbers delimited by '.'.
 
 Once the numerical segments have been parsed, the remainder of the string is considered to be the suffix string. The start index of that string will be stored in suffixIndex if it is not null.
 
@@ -462,152 +462,6 @@ func (this *QVersionNumber) FromStringp(string string) *QVersionNumber /*123*/ {
 	// arg: 1, int *=Pointer, =Invalid, , Invalid
 	var suffixIndex unsafe.Pointer
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringERK7QStringPi", qtrt.FFI_TYPE_POINTER, convArg0, suffixIndex)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVersionNumber)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qversionnumber.h:286
-// index:1
-// Public static Visibility=Default Availability=Available
-// [8] QVersionNumber fromString(QLatin1String, int *)
-
-/*
-Constructs a QVersionNumber from a specially formatted string of non-negative decimal numbers delimited by a period (.).
-
-Once the numerical segments have been parsed, the remainder of the string is considered to be the suffix string. The start index of that string will be stored in suffixIndex if it is not null.
-
-
-  QString string("5.4.0-alpha");
-  int suffixIndex;
-  QVersionNumber version = QVersionNumber::fromString(string, &suffixIndex);
-  // version is 5.4.0
-  // suffixIndex is 5
-
-
-
-See also isNull().
-*/
-func (this *QVersionNumber) FromString1(string QLatin1String_ITF /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
-	var convArg0 unsafe.Pointer
-	if string != nil && string.QLatin1String_PTR() != nil {
-		convArg0 = string.QLatin1String_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringE13QLatin1StringPi", qtrt.FFI_TYPE_POINTER, convArg0, suffixIndex)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVersionNumber)
-	return rv2
-}
-func QVersionNumber_FromString1(string QLatin1String_ITF /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
-	var nilthis *QVersionNumber
-	rv := nilthis.FromString1(string, suffixIndex)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qversionnumber.h:286
-// index:1
-// Public static Visibility=Default Availability=Available
-// [8] QVersionNumber fromString(QLatin1String, int *)
-
-/*
-Constructs a QVersionNumber from a specially formatted string of non-negative decimal numbers delimited by a period (.).
-
-Once the numerical segments have been parsed, the remainder of the string is considered to be the suffix string. The start index of that string will be stored in suffixIndex if it is not null.
-
-
-  QString string("5.4.0-alpha");
-  int suffixIndex;
-  QVersionNumber version = QVersionNumber::fromString(string, &suffixIndex);
-  // version is 5.4.0
-  // suffixIndex is 5
-
-
-
-See also isNull().
-*/
-func (this *QVersionNumber) FromString1p(string QLatin1String_ITF /*123*/) *QVersionNumber /*123*/ {
-	var convArg0 unsafe.Pointer
-	if string != nil && string.QLatin1String_PTR() != nil {
-		convArg0 = string.QLatin1String_PTR().GetCthis()
-	}
-	// arg: 1, int *=Pointer, =Invalid, , Invalid
-	var suffixIndex unsafe.Pointer
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringE13QLatin1StringPi", qtrt.FFI_TYPE_POINTER, convArg0, suffixIndex)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVersionNumber)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qversionnumber.h:287
-// index:2
-// Public static Visibility=Default Availability=Available
-// [8] QVersionNumber fromString(QStringView, int *)
-
-/*
-Constructs a QVersionNumber from a specially formatted string of non-negative decimal numbers delimited by a period (.).
-
-Once the numerical segments have been parsed, the remainder of the string is considered to be the suffix string. The start index of that string will be stored in suffixIndex if it is not null.
-
-
-  QString string("5.4.0-alpha");
-  int suffixIndex;
-  QVersionNumber version = QVersionNumber::fromString(string, &suffixIndex);
-  // version is 5.4.0
-  // suffixIndex is 5
-
-
-
-See also isNull().
-*/
-func (this *QVersionNumber) FromString2(string QStringView_ITF /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
-	var convArg0 unsafe.Pointer
-	if string != nil && string.QStringView_PTR() != nil {
-		convArg0 = string.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringE11QStringViewPi", qtrt.FFI_TYPE_POINTER, convArg0, suffixIndex)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVersionNumber)
-	return rv2
-}
-func QVersionNumber_FromString2(string QStringView_ITF /*123*/, suffixIndex unsafe.Pointer /*666*/) *QVersionNumber /*123*/ {
-	var nilthis *QVersionNumber
-	rv := nilthis.FromString2(string, suffixIndex)
-	return rv
-}
-
-// /usr/include/qt/QtCore/qversionnumber.h:287
-// index:2
-// Public static Visibility=Default Availability=Available
-// [8] QVersionNumber fromString(QStringView, int *)
-
-/*
-Constructs a QVersionNumber from a specially formatted string of non-negative decimal numbers delimited by a period (.).
-
-Once the numerical segments have been parsed, the remainder of the string is considered to be the suffix string. The start index of that string will be stored in suffixIndex if it is not null.
-
-
-  QString string("5.4.0-alpha");
-  int suffixIndex;
-  QVersionNumber version = QVersionNumber::fromString(string, &suffixIndex);
-  // version is 5.4.0
-  // suffixIndex is 5
-
-
-
-See also isNull().
-*/
-func (this *QVersionNumber) FromString2p(string QStringView_ITF /*123*/) *QVersionNumber /*123*/ {
-	var convArg0 unsafe.Pointer
-	if string != nil && string.QStringView_PTR() != nil {
-		convArg0 = string.QStringView_PTR().GetCthis()
-	}
-	// arg: 1, int *=Pointer, =Invalid, , Invalid
-	var suffixIndex unsafe.Pointer
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QVersionNumber10fromStringE11QStringViewPi", qtrt.FFI_TYPE_POINTER, convArg0, suffixIndex)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQVersionNumberFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQVersionNumber)

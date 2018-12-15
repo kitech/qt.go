@@ -430,7 +430,7 @@ This function returns immediately. The event is added to the state machine's eve
 
 You can only post events when the state machine is running or when it is starting up.
 
-Note: This function is thread-safe.
+Note: This function is thread-safe
 
 See also postDelayedEvent().
 */
@@ -455,7 +455,7 @@ This function returns immediately. The event is added to the state machine's eve
 
 You can only post events when the state machine is running or when it is starting up.
 
-Note: This function is thread-safe.
+Note: This function is thread-safe
 
 See also postDelayedEvent().
 */
@@ -482,7 +482,7 @@ This function returns immediately. When the delay has expired, the event will be
 
 You can only post events when the state machine is running.
 
-Note: This function is thread-safe.
+Note: This function is thread-safe
 
 See also cancelDelayedEvent() and postEvent().
 */
@@ -504,7 +504,7 @@ func (this *QStateMachine) PostDelayedEvent(event QEvent_ITF /*777 QEvent **/, d
 /*
 Cancels the delayed event identified by the given id. The id should be a value returned by a call to postDelayedEvent(). Returns true if the event was successfully cancelled, otherwise returns false.
 
-Note: This function is thread-safe.
+Note: This function is thread-safe
 
 See also postDelayedEvent().
 */

@@ -1233,13 +1233,11 @@ func (this *QVariant) CanConvert(targetTypeId int) bool {
 // [1] bool convert(int)
 
 /*
-Casts the variant to the requested type, targetTypeId. If the cast cannot be done, the variant is still changed to the requested type, but is left in a cleared null state similar to that constructed by QVariant(Type).
-
-Returns true if the current type of the variant was successfully cast; otherwise returns false.
+Casts the variant to the requested type, targetTypeId. If the cast cannot be done, the variant is cleared. Returns true if the current type of the variant was successfully cast; otherwise returns false.
 
 A QVariant containing a pointer to a type derived from QObject will also convert and return true for this function if a qobject_cast to the type described by targetTypeId would succeed. Note that this only works for QObject subclasses which use the Q_OBJECT macro.
 
-Note: converting QVariants that are null due to not being initialized or having failed a previous conversion will always fail, changing the type, remaining null, and returning false.
+Warning: For historical reasons, converting a null QVariant results in a null value of the desired type (e.g., an empty string for QString) and a result of false.
 
 See also canConvert() and clear().
 */
@@ -1255,13 +1253,11 @@ func (this *QVariant) Convert(targetTypeId int) bool {
 // [1] bool convert(const int, void *) const
 
 /*
-Casts the variant to the requested type, targetTypeId. If the cast cannot be done, the variant is still changed to the requested type, but is left in a cleared null state similar to that constructed by QVariant(Type).
-
-Returns true if the current type of the variant was successfully cast; otherwise returns false.
+Casts the variant to the requested type, targetTypeId. If the cast cannot be done, the variant is cleared. Returns true if the current type of the variant was successfully cast; otherwise returns false.
 
 A QVariant containing a pointer to a type derived from QObject will also convert and return true for this function if a qobject_cast to the type described by targetTypeId would succeed. Note that this only works for QObject subclasses which use the Q_OBJECT macro.
 
-Note: converting QVariants that are null due to not being initialized or having failed a previous conversion will always fail, changing the type, remaining null, and returning false.
+Warning: For historical reasons, converting a null QVariant results in a null value of the desired type (e.g., an empty string for QString) and a result of false.
 
 See also canConvert() and clear().
 */
@@ -1291,11 +1287,9 @@ func (this *QVariant) IsValid() bool {
 // [1] bool isNull() const
 
 /*
-Returns true if this is a null variant, false otherwise. A variant is considered null if it contains no initialized value, or the contained value is a null pointer or is an instance of a built-in type that has an isNull method, in which case the result would be the same as calling isNull on the wrapped object.
+Returns true if this is a null variant, false otherwise. A variant is considered null if it contains a default constructed value or a built-in type instance that has an isNull method, in which case the result would be the same as calling isNull on the wrapped object.
 
-Warning: Null variants is not a single state and two null variants may easily return false on the == operator if they do not contain similar null values.
-
-See also QVariant(Type) and convert(int).
+Warning: The result of the function doesn't affect == operator, which means that two values can be equal even if one of them is null and another is not.
 */
 func (this *QVariant) IsNull() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK8QVariant6isNullEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())

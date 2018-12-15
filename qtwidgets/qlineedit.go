@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qlineedit.h
@@ -151,7 +149,7 @@ func (*QLineEdit) NewFromPointer(cthis unsafe.Pointer) *QLineEdit {
 	return NewQLineEditFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:65
+// /usr/include/qt/QtWidgets/qlineedit.h:66
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -165,7 +163,7 @@ func (this *QLineEdit) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:93
+// /usr/include/qt/QtWidgets/qlineedit.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QLineEdit(QWidget *)
@@ -194,7 +192,7 @@ func NewQLineEdit(parent QWidget_ITF /*777 QWidget **/) *QLineEdit {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:93
+// /usr/include/qt/QtWidgets/qlineedit.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QLineEdit(QWidget *)
@@ -221,7 +219,7 @@ func NewQLineEditp() *QLineEdit {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:94
+// /usr/include/qt/QtWidgets/qlineedit.h:95
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QLineEdit(const QString &, QWidget *)
@@ -252,7 +250,7 @@ func NewQLineEdit1(arg0 string, parent QWidget_ITF /*777 QWidget **/) *QLineEdit
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:94
+// /usr/include/qt/QtWidgets/qlineedit.h:95
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QLineEdit(const QString &, QWidget *)
@@ -281,7 +279,7 @@ func NewQLineEdit1p(arg0 string) *QLineEdit {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:95
+// /usr/include/qt/QtWidgets/qlineedit.h:96
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QLineEdit()
@@ -296,7 +294,7 @@ func DeleteQLineEdit(this *QLineEdit) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:97
+// /usr/include/qt/QtWidgets/qlineedit.h:98
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text() const
@@ -313,7 +311,7 @@ func (this *QLineEdit) Text() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:99
+// /usr/include/qt/QtWidgets/qlineedit.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString displayText() const
@@ -330,7 +328,7 @@ func (this *QLineEdit) DisplayText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:101
+// /usr/include/qt/QtWidgets/qlineedit.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString placeholderText() const
@@ -347,7 +345,7 @@ func (this *QLineEdit) PlaceholderText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:102
+// /usr/include/qt/QtWidgets/qlineedit.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPlaceholderText(const QString &)
@@ -362,7 +360,7 @@ func (this *QLineEdit) SetPlaceholderText(arg0 string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:104
+// /usr/include/qt/QtWidgets/qlineedit.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int maxLength() const
@@ -376,7 +374,7 @@ func (this *QLineEdit) MaxLength() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:105
+// /usr/include/qt/QtWidgets/qlineedit.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaxLength(int)
@@ -389,7 +387,7 @@ func (this *QLineEdit) SetMaxLength(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:107
+// /usr/include/qt/QtWidgets/qlineedit.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFrame(bool)
@@ -402,7 +400,7 @@ func (this *QLineEdit) SetFrame(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:108
+// /usr/include/qt/QtWidgets/qlineedit.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasFrame() const
@@ -416,7 +414,7 @@ func (this *QLineEdit) HasFrame() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:110
+// /usr/include/qt/QtWidgets/qlineedit.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setClearButtonEnabled(bool)
@@ -429,7 +427,7 @@ func (this *QLineEdit) SetClearButtonEnabled(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:111
+// /usr/include/qt/QtWidgets/qlineedit.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isClearButtonEnabled() const
@@ -443,7 +441,7 @@ func (this *QLineEdit) IsClearButtonEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:115
+// /usr/include/qt/QtWidgets/qlineedit.h:116
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QLineEdit::EchoMode echoMode() const
@@ -457,7 +455,7 @@ func (this *QLineEdit) EchoMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:116
+// /usr/include/qt/QtWidgets/qlineedit.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEchoMode(QLineEdit::EchoMode)
@@ -470,7 +468,7 @@ func (this *QLineEdit) SetEchoMode(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:118
+// /usr/include/qt/QtWidgets/qlineedit.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isReadOnly() const
@@ -484,7 +482,7 @@ func (this *QLineEdit) IsReadOnly() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:119
+// /usr/include/qt/QtWidgets/qlineedit.h:120
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setReadOnly(bool)
@@ -497,7 +495,7 @@ func (this *QLineEdit) SetReadOnly(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:122
+// /usr/include/qt/QtWidgets/qlineedit.h:123
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setValidator(const QValidator *)
@@ -518,7 +516,7 @@ func (this *QLineEdit) SetValidator(arg0 qtgui.QValidator_ITF /*777 const QValid
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:123
+// /usr/include/qt/QtWidgets/qlineedit.h:124
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] const QValidator * validator() const
@@ -534,7 +532,7 @@ func (this *QLineEdit) Validator() *qtgui.QValidator /*777 const QValidator **/ 
 	return qtgui.NewQValidatorFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:127
+// /usr/include/qt/QtWidgets/qlineedit.h:128
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCompleter(QCompleter *)
@@ -559,7 +557,7 @@ func (this *QLineEdit) SetCompleter(completer QCompleter_ITF /*777 QCompleter **
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:128
+// /usr/include/qt/QtWidgets/qlineedit.h:129
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QCompleter * completer() const
@@ -577,7 +575,7 @@ func (this *QLineEdit) Completer() *QCompleter /*777 QCompleter **/ {
 	return /*==*/ NewQCompleterFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:131
+// /usr/include/qt/QtWidgets/qlineedit.h:132
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
@@ -597,7 +595,7 @@ func (this *QLineEdit) SizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:132
+// /usr/include/qt/QtWidgets/qlineedit.h:133
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
@@ -617,7 +615,7 @@ func (this *QLineEdit) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:134
+// /usr/include/qt/QtWidgets/qlineedit.h:135
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int cursorPosition() const
@@ -631,7 +629,7 @@ func (this *QLineEdit) CursorPosition() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:135
+// /usr/include/qt/QtWidgets/qlineedit.h:136
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCursorPosition(int)
@@ -644,7 +642,7 @@ func (this *QLineEdit) SetCursorPosition(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:136
+// /usr/include/qt/QtWidgets/qlineedit.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int cursorPositionAt(const QPoint &)
@@ -662,7 +660,7 @@ func (this *QLineEdit) CursorPositionAt(pos qtcore.QPoint_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:138
+// /usr/include/qt/QtWidgets/qlineedit.h:139
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAlignment(Qt::Alignment)
@@ -675,7 +673,7 @@ func (this *QLineEdit) SetAlignment(flag int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:139
+// /usr/include/qt/QtWidgets/qlineedit.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Alignment alignment() const
@@ -689,7 +687,7 @@ func (this *QLineEdit) Alignment() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:141
+// /usr/include/qt/QtWidgets/qlineedit.h:142
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cursorForward(bool, int)
@@ -704,7 +702,7 @@ func (this *QLineEdit) CursorForward(mark bool, steps int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:141
+// /usr/include/qt/QtWidgets/qlineedit.h:142
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cursorForward(bool, int)
@@ -721,7 +719,7 @@ func (this *QLineEdit) CursorForwardp(mark bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:142
+// /usr/include/qt/QtWidgets/qlineedit.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cursorBackward(bool, int)
@@ -736,7 +734,7 @@ func (this *QLineEdit) CursorBackward(mark bool, steps int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:142
+// /usr/include/qt/QtWidgets/qlineedit.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cursorBackward(bool, int)
@@ -753,7 +751,7 @@ func (this *QLineEdit) CursorBackwardp(mark bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:143
+// /usr/include/qt/QtWidgets/qlineedit.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cursorWordForward(bool)
@@ -768,7 +766,7 @@ func (this *QLineEdit) CursorWordForward(mark bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:144
+// /usr/include/qt/QtWidgets/qlineedit.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cursorWordBackward(bool)
@@ -783,7 +781,7 @@ func (this *QLineEdit) CursorWordBackward(mark bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:145
+// /usr/include/qt/QtWidgets/qlineedit.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void backspace()
@@ -798,7 +796,7 @@ func (this *QLineEdit) Backspace() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:146
+// /usr/include/qt/QtWidgets/qlineedit.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void del()
@@ -813,7 +811,7 @@ func (this *QLineEdit) Del() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:147
+// /usr/include/qt/QtWidgets/qlineedit.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void home(bool)
@@ -828,7 +826,7 @@ func (this *QLineEdit) Home(mark bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:148
+// /usr/include/qt/QtWidgets/qlineedit.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void end(bool)
@@ -843,7 +841,7 @@ func (this *QLineEdit) End(mark bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:150
+// /usr/include/qt/QtWidgets/qlineedit.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isModified() const
@@ -857,7 +855,7 @@ func (this *QLineEdit) IsModified() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:151
+// /usr/include/qt/QtWidgets/qlineedit.h:152
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setModified(bool)
@@ -870,7 +868,7 @@ func (this *QLineEdit) SetModified(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:153
+// /usr/include/qt/QtWidgets/qlineedit.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSelection(int, int)
@@ -885,7 +883,7 @@ func (this *QLineEdit) SetSelection(arg0 int, arg1 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:154
+// /usr/include/qt/QtWidgets/qlineedit.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasSelectedText() const
@@ -899,7 +897,7 @@ func (this *QLineEdit) HasSelectedText() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:155
+// /usr/include/qt/QtWidgets/qlineedit.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString selectedText() const
@@ -916,15 +914,15 @@ func (this *QLineEdit) SelectedText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:156
+// /usr/include/qt/QtWidgets/qlineedit.h:157
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int selectionStart() const
 
 /*
-Returns the index of the first selected character in the line edit or -1 if no text is selected.
+selectionStart() returns the index of the first selected character in the line edit or -1 if no text is selected.
 
-See also selectedText(), selectionEnd(), and selectionLength().
+See also selectedText().
 */
 func (this *QLineEdit) SelectionStart() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK9QLineEdit14selectionStartEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -932,43 +930,7 @@ func (this *QLineEdit) SelectionStart() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:157
-// index:0
-// Public Visibility=Default Availability=Available
-// [4] int selectionEnd() const
-
-/*
-Returns the index of the character directly after the selection in the line edit or -1 if no text is selected.
-
-This function was introduced in  Qt 5.10.
-
-See also selectedText(), selectionStart(), and selectionLength().
-*/
-func (this *QLineEdit) SelectionEnd() int {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK9QLineEdit12selectionEndEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
-}
-
-// /usr/include/qt/QtWidgets/qlineedit.h:158
-// index:0
-// Public Visibility=Default Availability=Available
-// [4] int selectionLength() const
-
-/*
-Returns the length of the selection.
-
-This function was introduced in  Qt 5.10.
-
-See also selectedText(), selectionStart(), and selectionEnd().
-*/
-func (this *QLineEdit) SelectionLength() int {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK9QLineEdit15selectionLengthEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
-}
-
-// /usr/include/qt/QtWidgets/qlineedit.h:160
+// /usr/include/qt/QtWidgets/qlineedit.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isUndoAvailable() const
@@ -982,7 +944,7 @@ func (this *QLineEdit) IsUndoAvailable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:161
+// /usr/include/qt/QtWidgets/qlineedit.h:160
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isRedoAvailable() const
@@ -996,7 +958,7 @@ func (this *QLineEdit) IsRedoAvailable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:163
+// /usr/include/qt/QtWidgets/qlineedit.h:162
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDragEnabled(bool)
@@ -1009,7 +971,7 @@ func (this *QLineEdit) SetDragEnabled(b bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:164
+// /usr/include/qt/QtWidgets/qlineedit.h:163
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool dragEnabled() const
@@ -1023,7 +985,7 @@ func (this *QLineEdit) DragEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:166
+// /usr/include/qt/QtWidgets/qlineedit.h:165
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCursorMoveStyle(Qt::CursorMoveStyle)
@@ -1036,7 +998,7 @@ func (this *QLineEdit) SetCursorMoveStyle(style int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:167
+// /usr/include/qt/QtWidgets/qlineedit.h:166
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::CursorMoveStyle cursorMoveStyle() const
@@ -1050,7 +1012,7 @@ func (this *QLineEdit) CursorMoveStyle() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:169
+// /usr/include/qt/QtWidgets/qlineedit.h:168
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString inputMask() const
@@ -1067,7 +1029,7 @@ func (this *QLineEdit) InputMask() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:170
+// /usr/include/qt/QtWidgets/qlineedit.h:169
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setInputMask(const QString &)
@@ -1082,7 +1044,7 @@ func (this *QLineEdit) SetInputMask(inputMask string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:171
+// /usr/include/qt/QtWidgets/qlineedit.h:170
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasAcceptableInput() const
@@ -1096,7 +1058,7 @@ func (this *QLineEdit) HasAcceptableInput() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:173
+// /usr/include/qt/QtWidgets/qlineedit.h:172
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTextMargins(int, int, int, int)
@@ -1115,7 +1077,7 @@ func (this *QLineEdit) SetTextMargins(left int, top int, right int, bottom int) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:174
+// /usr/include/qt/QtWidgets/qlineedit.h:173
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setTextMargins(const QMargins &)
@@ -1138,7 +1100,7 @@ func (this *QLineEdit) SetTextMargins1(margins qtcore.QMargins_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:175
+// /usr/include/qt/QtWidgets/qlineedit.h:174
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void getTextMargins(int *, int *, int *, int *) const
@@ -1155,7 +1117,7 @@ func (this *QLineEdit) GetTextMargins(left unsafe.Pointer /*666*/, top unsafe.Po
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:176
+// /usr/include/qt/QtWidgets/qlineedit.h:175
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QMargins textMargins() const
@@ -1175,7 +1137,7 @@ func (this *QLineEdit) TextMargins() *qtcore.QMargins /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:180
+// /usr/include/qt/QtWidgets/qlineedit.h:179
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void addAction(QAction *, QLineEdit::ActionPosition)
@@ -1196,7 +1158,7 @@ func (this *QLineEdit) AddAction(action QAction_ITF /*777 QAction **/, position 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:181
+// /usr/include/qt/QtWidgets/qlineedit.h:180
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QAction * addAction(const QIcon &, QLineEdit::ActionPosition)
@@ -1218,7 +1180,7 @@ func (this *QLineEdit) AddAction1(icon qtgui.QIcon_ITF, position int) *QAction /
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:185
+// /usr/include/qt/QtWidgets/qlineedit.h:184
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setText(const QString &)
@@ -1233,7 +1195,7 @@ func (this *QLineEdit) SetText(arg0 string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:186
+// /usr/include/qt/QtWidgets/qlineedit.h:185
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
@@ -1248,7 +1210,7 @@ func (this *QLineEdit) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:187
+// /usr/include/qt/QtWidgets/qlineedit.h:186
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void selectAll()
@@ -1263,7 +1225,7 @@ func (this *QLineEdit) SelectAll() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:188
+// /usr/include/qt/QtWidgets/qlineedit.h:187
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void undo()
@@ -1276,7 +1238,7 @@ func (this *QLineEdit) Undo() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:189
+// /usr/include/qt/QtWidgets/qlineedit.h:188
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void redo()
@@ -1289,7 +1251,7 @@ func (this *QLineEdit) Redo() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:191
+// /usr/include/qt/QtWidgets/qlineedit.h:190
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cut()
@@ -1306,7 +1268,7 @@ func (this *QLineEdit) Cut() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:192
+// /usr/include/qt/QtWidgets/qlineedit.h:191
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void copy() const
@@ -1321,7 +1283,7 @@ func (this *QLineEdit) Copy() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:193
+// /usr/include/qt/QtWidgets/qlineedit.h:192
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void paste()
@@ -1338,7 +1300,7 @@ func (this *QLineEdit) Paste() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:197
+// /usr/include/qt/QtWidgets/qlineedit.h:196
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void deselect()
@@ -1353,7 +1315,7 @@ func (this *QLineEdit) Deselect() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:200
+// /usr/include/qt/QtWidgets/qlineedit.h:199
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QMenu * createStandardContextMenu()
@@ -1367,7 +1329,7 @@ func (this *QLineEdit) CreateStandardContextMenu() *QMenu /*777 QMenu **/ {
 	return /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:204
+// /usr/include/qt/QtWidgets/qlineedit.h:203
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void textChanged(const QString &)
@@ -1386,7 +1348,7 @@ func (this *QLineEdit) TextChanged(arg0 string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:205
+// /usr/include/qt/QtWidgets/qlineedit.h:204
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void textEdited(const QString &)
@@ -1403,7 +1365,7 @@ func (this *QLineEdit) TextEdited(arg0 string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:206
+// /usr/include/qt/QtWidgets/qlineedit.h:205
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void cursorPositionChanged(int, int)
@@ -1418,7 +1380,7 @@ func (this *QLineEdit) CursorPositionChanged(arg0 int, arg1 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:207
+// /usr/include/qt/QtWidgets/qlineedit.h:206
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void returnPressed()
@@ -1431,7 +1393,7 @@ func (this *QLineEdit) ReturnPressed() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:208
+// /usr/include/qt/QtWidgets/qlineedit.h:207
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void editingFinished()
@@ -1444,7 +1406,7 @@ func (this *QLineEdit) EditingFinished() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:209
+// /usr/include/qt/QtWidgets/qlineedit.h:208
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void selectionChanged()
@@ -1459,7 +1421,7 @@ func (this *QLineEdit) SelectionChanged() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:212
+// /usr/include/qt/QtWidgets/qlineedit.h:211
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
@@ -1476,7 +1438,7 @@ func (this *QLineEdit) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEv
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:213
+// /usr/include/qt/QtWidgets/qlineedit.h:212
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
@@ -1493,7 +1455,7 @@ func (this *QLineEdit) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEve
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:214
+// /usr/include/qt/QtWidgets/qlineedit.h:213
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
@@ -1510,7 +1472,7 @@ func (this *QLineEdit) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouse
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:215
+// /usr/include/qt/QtWidgets/qlineedit.h:214
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickEvent(QMouseEvent *)
@@ -1527,7 +1489,7 @@ func (this *QLineEdit) MouseDoubleClickEvent(arg0 qtgui.QMouseEvent_ITF /*777 QM
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:216
+// /usr/include/qt/QtWidgets/qlineedit.h:215
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
@@ -1550,7 +1512,7 @@ func (this *QLineEdit) KeyPressEvent(arg0 qtgui.QKeyEvent_ITF /*777 QKeyEvent **
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:217
+// /usr/include/qt/QtWidgets/qlineedit.h:216
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
@@ -1567,7 +1529,7 @@ func (this *QLineEdit) FocusInEvent(arg0 qtgui.QFocusEvent_ITF /*777 QFocusEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:218
+// /usr/include/qt/QtWidgets/qlineedit.h:217
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
@@ -1584,7 +1546,7 @@ func (this *QLineEdit) FocusOutEvent(arg0 qtgui.QFocusEvent_ITF /*777 QFocusEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:219
+// /usr/include/qt/QtWidgets/qlineedit.h:218
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
@@ -1601,7 +1563,7 @@ func (this *QLineEdit) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:221
+// /usr/include/qt/QtWidgets/qlineedit.h:220
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragEnterEvent(QDragEnterEvent *)
@@ -1618,7 +1580,7 @@ func (this *QLineEdit) DragEnterEvent(arg0 qtgui.QDragEnterEvent_ITF /*777 QDrag
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:222
+// /usr/include/qt/QtWidgets/qlineedit.h:221
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragMoveEvent(QDragMoveEvent *)
@@ -1635,7 +1597,7 @@ func (this *QLineEdit) DragMoveEvent(e qtgui.QDragMoveEvent_ITF /*777 QDragMoveE
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:223
+// /usr/include/qt/QtWidgets/qlineedit.h:222
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragLeaveEvent(QDragLeaveEvent *)
@@ -1652,7 +1614,7 @@ func (this *QLineEdit) DragLeaveEvent(e qtgui.QDragLeaveEvent_ITF /*777 QDragLea
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:224
+// /usr/include/qt/QtWidgets/qlineedit.h:223
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QDropEvent *)
@@ -1669,7 +1631,7 @@ func (this *QLineEdit) DropEvent(arg0 qtgui.QDropEvent_ITF /*777 QDropEvent **/)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:226
+// /usr/include/qt/QtWidgets/qlineedit.h:225
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
@@ -1686,7 +1648,7 @@ func (this *QLineEdit) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:228
+// /usr/include/qt/QtWidgets/qlineedit.h:227
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QContextMenuEvent *)
@@ -1723,7 +1685,7 @@ func (this *QLineEdit) ContextMenuEvent(arg0 qtgui.QContextMenuEvent_ITF /*777 Q
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:231
+// /usr/include/qt/QtWidgets/qlineedit.h:230
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void inputMethodEvent(QInputMethodEvent *)
@@ -1740,7 +1702,7 @@ func (this *QLineEdit) InputMethodEvent(arg0 qtgui.QInputMethodEvent_ITF /*777 Q
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:232
+// /usr/include/qt/QtWidgets/qlineedit.h:231
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionFrame *) const
@@ -1759,7 +1721,7 @@ func (this *QLineEdit) InitStyleOption(option QStyleOptionFrame_ITF /*777 QStyle
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:234
+// /usr/include/qt/QtWidgets/qlineedit.h:233
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant inputMethodQuery(Qt::InputMethodQuery) const
@@ -1775,7 +1737,7 @@ func (this *QLineEdit) InputMethodQuery(arg0 int) *qtcore.QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:235
+// /usr/include/qt/QtWidgets/qlineedit.h:234
 // index:1
 // Public Visibility=Default Availability=Available
 // [16] QVariant inputMethodQuery(Qt::InputMethodQuery, QVariant) const
@@ -1795,7 +1757,7 @@ func (this *QLineEdit) InputMethodQuery1(property int, argument qtcore.QVariant_
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:236
+// /usr/include/qt/QtWidgets/qlineedit.h:235
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -1813,7 +1775,7 @@ func (this *QLineEdit) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qlineedit.h:238
+// /usr/include/qt/QtWidgets/qlineedit.h:237
 // index:0
 // Protected Visibility=Default Availability=Available
 // [16] QRect cursorRect() const

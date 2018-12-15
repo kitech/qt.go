@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qdockwidget.h
@@ -91,7 +89,7 @@ func (*QDockWidget) NewFromPointer(cthis unsafe.Pointer) *QDockWidget {
 	return NewQDockWidgetFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:57
+// /usr/include/qt/QtWidgets/qdockwidget.h:58
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -105,7 +103,7 @@ func (this *QDockWidget) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:66
+// /usr/include/qt/QtWidgets/qdockwidget.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDockWidget(const QString &, QWidget *, Qt::WindowFlags)
@@ -134,7 +132,7 @@ func NewQDockWidget(title string, parent QWidget_ITF /*777 QWidget **/, flags in
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:66
+// /usr/include/qt/QtWidgets/qdockwidget.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDockWidget(const QString &, QWidget *, Qt::WindowFlags)
@@ -163,7 +161,7 @@ func NewQDockWidgetp(title string) *QDockWidget {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:66
+// /usr/include/qt/QtWidgets/qdockwidget.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QDockWidget(const QString &, QWidget *, Qt::WindowFlags)
@@ -194,7 +192,7 @@ func NewQDockWidgetp1(title string, parent QWidget_ITF /*777 QWidget **/) *QDock
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:68
+// /usr/include/qt/QtWidgets/qdockwidget.h:69
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDockWidget(QWidget *, Qt::WindowFlags)
@@ -221,7 +219,7 @@ func NewQDockWidget1(parent QWidget_ITF /*777 QWidget **/, flags int) *QDockWidg
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:68
+// /usr/include/qt/QtWidgets/qdockwidget.h:69
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDockWidget(QWidget *, Qt::WindowFlags)
@@ -248,7 +246,7 @@ func NewQDockWidget1p() *QDockWidget {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:68
+// /usr/include/qt/QtWidgets/qdockwidget.h:69
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QDockWidget(QWidget *, Qt::WindowFlags)
@@ -277,7 +275,7 @@ func NewQDockWidget1p1(parent QWidget_ITF /*777 QWidget **/) *QDockWidget {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:69
+// /usr/include/qt/QtWidgets/qdockwidget.h:70
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QDockWidget()
@@ -292,7 +290,7 @@ func DeleteQDockWidget(this *QDockWidget) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:71
+// /usr/include/qt/QtWidgets/qdockwidget.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * widget() const
@@ -308,7 +306,7 @@ func (this *QDockWidget) Widget() *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:72
+// /usr/include/qt/QtWidgets/qdockwidget.h:73
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWidget(QWidget *)
@@ -331,7 +329,7 @@ func (this *QDockWidget) SetWidget(widget QWidget_ITF /*777 QWidget **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:89
+// /usr/include/qt/QtWidgets/qdockwidget.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFeatures(QDockWidget::DockWidgetFeatures)
@@ -344,7 +342,7 @@ func (this *QDockWidget) SetFeatures(features int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:90
+// /usr/include/qt/QtWidgets/qdockwidget.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QDockWidget::DockWidgetFeatures features() const
@@ -358,7 +356,7 @@ func (this *QDockWidget) Features() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:92
+// /usr/include/qt/QtWidgets/qdockwidget.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFloating(bool)
@@ -371,7 +369,7 @@ func (this *QDockWidget) SetFloating(floating bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:93
+// /usr/include/qt/QtWidgets/qdockwidget.h:94
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isFloating() const
@@ -385,7 +383,7 @@ func (this *QDockWidget) IsFloating() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:95
+// /usr/include/qt/QtWidgets/qdockwidget.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAllowedAreas(Qt::DockWidgetAreas)
@@ -398,7 +396,7 @@ func (this *QDockWidget) SetAllowedAreas(areas int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:96
+// /usr/include/qt/QtWidgets/qdockwidget.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::DockWidgetAreas allowedAreas() const
@@ -412,7 +410,7 @@ func (this *QDockWidget) AllowedAreas() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:98
+// /usr/include/qt/QtWidgets/qdockwidget.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTitleBarWidget(QWidget *)
@@ -455,7 +453,7 @@ func (this *QDockWidget) SetTitleBarWidget(widget QWidget_ITF /*777 QWidget **/)
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:99
+// /usr/include/qt/QtWidgets/qdockwidget.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QWidget * titleBarWidget() const
@@ -473,7 +471,7 @@ func (this *QDockWidget) TitleBarWidget() *QWidget /*777 QWidget **/ {
 	return /*==*/ NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:101
+// /usr/include/qt/QtWidgets/qdockwidget.h:102
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isAreaAllowed(Qt::DockWidgetArea) const
@@ -487,7 +485,7 @@ func (this *QDockWidget) IsAreaAllowed(area int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:105
+// /usr/include/qt/QtWidgets/qdockwidget.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QAction * toggleViewAction() const
@@ -505,7 +503,7 @@ func (this *QDockWidget) ToggleViewAction() *QAction /*777 QAction **/ {
 	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:109
+// /usr/include/qt/QtWidgets/qdockwidget.h:110
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void featuresChanged(QDockWidget::DockWidgetFeatures)
@@ -520,7 +518,7 @@ func (this *QDockWidget) FeaturesChanged(features int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:110
+// /usr/include/qt/QtWidgets/qdockwidget.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void topLevelChanged(bool)
@@ -535,7 +533,7 @@ func (this *QDockWidget) TopLevelChanged(topLevel bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:111
+// /usr/include/qt/QtWidgets/qdockwidget.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void allowedAreasChanged(Qt::DockWidgetAreas)
@@ -550,7 +548,7 @@ func (this *QDockWidget) AllowedAreasChanged(allowedAreas int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:112
+// /usr/include/qt/QtWidgets/qdockwidget.h:113
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void visibilityChanged(bool)
@@ -565,7 +563,7 @@ func (this *QDockWidget) VisibilityChanged(visible bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:113
+// /usr/include/qt/QtWidgets/qdockwidget.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void dockLocationChanged(Qt::DockWidgetArea)
@@ -580,7 +578,7 @@ func (this *QDockWidget) DockLocationChanged(area int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:116
+// /usr/include/qt/QtWidgets/qdockwidget.h:117
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
@@ -597,7 +595,7 @@ func (this *QDockWidget) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:117
+// /usr/include/qt/QtWidgets/qdockwidget.h:118
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void closeEvent(QCloseEvent *)
@@ -614,7 +612,7 @@ func (this *QDockWidget) CloseEvent(event qtgui.QCloseEvent_ITF /*777 QCloseEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:118
+// /usr/include/qt/QtWidgets/qdockwidget.h:119
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
@@ -631,7 +629,7 @@ func (this *QDockWidget) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:119
+// /usr/include/qt/QtWidgets/qdockwidget.h:120
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -649,7 +647,7 @@ func (this *QDockWidget) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:120
+// /usr/include/qt/QtWidgets/qdockwidget.h:121
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionDockWidget *) const

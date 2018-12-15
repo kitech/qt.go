@@ -358,48 +358,6 @@ func (this *QVariantHash) KeyEnd0() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// QHash::key_value_iterator keyValueBegin()
-func (this *QVariantHash) KeyValueBegin0() {
-	// QVariantHash_keyValueBegin_0()
-	rv, err := qtrt.InvokeQtFunc6("C_QVariantHash_keyValueBegin_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
-	qtrt.ErrPrint(err, rv)
-}
-
-// QHash::key_value_iterator keyValueEnd()
-func (this *QVariantHash) KeyValueEnd0() {
-	// QVariantHash_keyValueEnd_0()
-	rv, err := qtrt.InvokeQtFunc6("C_QVariantHash_keyValueEnd_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
-	qtrt.ErrPrint(err, rv)
-}
-
-// QHash::const_key_value_iterator keyValueBegin()
-func (this *QVariantHash) KeyValueBegin1() {
-	// QVariantHash_keyValueBegin_1()
-	rv, err := qtrt.InvokeQtFunc6("C_QVariantHash_keyValueBegin_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
-	qtrt.ErrPrint(err, rv)
-}
-
-// QHash::const_key_value_iterator constKeyValueBegin()
-func (this *QVariantHash) ConstKeyValueBegin0() {
-	// QVariantHash_constKeyValueBegin_0()
-	rv, err := qtrt.InvokeQtFunc6("C_QVariantHash_constKeyValueBegin_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
-	qtrt.ErrPrint(err, rv)
-}
-
-// QHash::const_key_value_iterator keyValueEnd()
-func (this *QVariantHash) KeyValueEnd1() {
-	// QVariantHash_keyValueEnd_1()
-	rv, err := qtrt.InvokeQtFunc6("C_QVariantHash_keyValueEnd_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
-	qtrt.ErrPrint(err, rv)
-}
-
-// QHash::const_key_value_iterator constKeyValueEnd()
-func (this *QVariantHash) ConstKeyValueEnd0() {
-	// QVariantHash_constKeyValueEnd_0()
-	rv, err := qtrt.InvokeQtFunc6("C_QVariantHash_constKeyValueEnd_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
-	qtrt.ErrPrint(err, rv)
-}
-
 // QPair<QHash::iterator, QHash::iterator> equal_range(const Key &)
 func (this *QVariantHash) Equal_range0() {
 	// QVariantHash_equal_range_0()

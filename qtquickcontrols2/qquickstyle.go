@@ -127,8 +127,6 @@ func QQuickStyle_Path() string {
 Sets the application style to style.
 
 Note: The style must be configured before loading QML that imports Qt Quick Controls 2. It is not possible to change the style after the QML types have been registered.
-
-See also setFallbackStyle() and Using Styles in Qt Quick Controls 2.
 */
 func (this *QQuickStyle) SetStyle(style string) {
 	var tmpArg0 = qtcore.NewQString5(style)
@@ -156,8 +154,6 @@ Note: The style must be configured before loading QML that imports Qt Quick Cont
 The fallback style can be also specified by setting the QT_QUICK_CONTROLS_FALLBACK_STYLE environment variable.
 
 This function was introduced in  Qt 5.8.
-
-See also setStyle() and Using Styles in Qt Quick Controls 2.
 */
 func (this *QQuickStyle) SetFallbackStyle(style string) {
 	var tmpArg0 = qtcore.NewQString5(style)

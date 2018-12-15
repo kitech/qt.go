@@ -26,7 +26,7 @@ func init() {
 //  header block end
 
 //  body block begin
-// /usr/include/qt/QtWidgets/qtextedit.h:326
+// /usr/include/qt/QtWidgets/qtextedit.h:320
 // index:103
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QTextEdit::AutoFormatting::enum_type, int)
@@ -42,7 +42,7 @@ func Operator_or103(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qmdiarea.h:169
+// /usr/include/qt/QtWidgets/qmdiarea.h:168
 // index:104
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QMdiArea::AreaOptions::enum_type, int)
@@ -58,7 +58,7 @@ func Operator_or104(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qwizard.h:207
+// /usr/include/qt/QtWidgets/qwizard.h:209
 // index:105
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QWizard::WizardOptions::enum_type, int)
@@ -90,7 +90,7 @@ func Operator_or106(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:868
+// /usr/include/qt/QtWidgets/qstyle.h:866
 // index:107
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QStyle::State::enum_type, int)
@@ -106,7 +106,7 @@ func Operator_or107(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyle.h:869
+// /usr/include/qt/QtWidgets/qstyle.h:867
 // index:108
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QStyle::SubControls::enum_type, int)
@@ -122,7 +122,7 @@ func Operator_or108(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:146
+// /usr/include/qt/QtWidgets/qtreewidgetitemiterator.h:147
 // index:109
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QTreeWidgetItemIterator::IteratorFlags::enum_type, int)
@@ -138,7 +138,7 @@ func Operator_or109(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:586
+// /usr/include/qt/QtWidgets/qstyleoption.h:575
 // index:110
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QStyleOptionToolButton::ToolButtonFeatures::enum_type, int)
@@ -154,7 +154,7 @@ func Operator_or110(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:449
+// /usr/include/qt/QtWidgets/qstyleoption.h:438
 // index:111
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QStyleOptionViewItem::ViewItemFeatures::enum_type, int)
@@ -170,7 +170,7 @@ func Operator_or111(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:322
+// /usr/include/qt/QtWidgets/qstyleoption.h:311
 // index:112
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QStyleOptionToolBar::ToolBarFeatures::enum_type, int)
@@ -202,7 +202,7 @@ func Operator_or113(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:255
+// /usr/include/qt/QtWidgets/qstyleoption.h:244
 // index:114
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QStyleOptionButton::ButtonFeatures::enum_type, int)
@@ -234,7 +234,7 @@ func Operator_or115(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:150
+// /usr/include/qt/QtWidgets/qstyleoption.h:139
 // index:116
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QStyleOptionFrame::FrameFeatures::enum_type, int)
@@ -282,7 +282,7 @@ func Operator_or118(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:164
+// /usr/include/qt/QtWidgets/qdialogbuttonbox.h:162
 // index:119
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QDialogButtonBox::StandardButtons::enum_type, int)
@@ -298,7 +298,7 @@ func Operator_or119(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:175
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:176
 // index:120
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QAbstractSpinBox::StepEnabled::enum_type, int)
@@ -314,7 +314,7 @@ func Operator_or120(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:292
+// /usr/include/qt/QtWidgets/qstyleoption.h:281
 // index:121
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QStyleOptionTab::CornerWidgets::enum_type, int)
@@ -346,7 +346,7 @@ func Operator_or122(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsscene.h:328
+// /usr/include/qt/QtWidgets/qgraphicsscene.h:329
 // index:123
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QGraphicsScene::SceneLayers::enum_type, int)
@@ -378,7 +378,7 @@ func Operator_or124(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qmdisubwindow.h:146
+// /usr/include/qt/QtWidgets/qmdisubwindow.h:147
 // index:125
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QMdiSubWindow::SubWindowOptions::enum_type, int)
@@ -394,7 +394,7 @@ func Operator_or125(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsview.h:290
+// /usr/include/qt/QtWidgets/qgraphicsview.h:291
 // index:126
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QGraphicsView::OptimizationFlags::enum_type, int)
@@ -410,7 +410,7 @@ func Operator_or126(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsview.h:289
+// /usr/include/qt/QtWidgets/qgraphicsview.h:290
 // index:127
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QGraphicsView::CacheMode::enum_type, int)
@@ -426,7 +426,7 @@ func Operator_or127(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:489
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:490
 // index:128
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QGraphicsItem::GraphicsItemFlags::enum_type, int)
@@ -442,7 +442,7 @@ func Operator_or128(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdatetimeedit.h:228
+// /usr/include/qt/QtWidgets/qdatetimeedit.h:229
 // index:129
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QDateTimeEdit::Sections::enum_type, int)
@@ -458,7 +458,7 @@ func Operator_or129(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qinputdialog.h:218
+// /usr/include/qt/QtWidgets/qinputdialog.h:211
 // index:130
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QInputDialog::InputDialogOptions::enum_type, int)
@@ -474,7 +474,7 @@ func Operator_or130(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qcolordialog.h:125
+// /usr/include/qt/QtWidgets/qcolordialog.h:126
 // index:131
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QColorDialog::ColorDialogOptions::enum_type, int)
@@ -506,7 +506,7 @@ func Operator_or132(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:308
+// /usr/include/qt/QtWidgets/qmessagebox.h:309
 // index:133
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QMessageBox::StandardButtons::enum_type, int)
@@ -522,7 +522,7 @@ func Operator_or133(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qmainwindow.h:215
+// /usr/include/qt/QtWidgets/qmainwindow.h:214
 // index:134
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QMainWindow::DockOptions::enum_type, int)
@@ -538,7 +538,7 @@ func Operator_or134(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qfiledialog.h:313
+// /usr/include/qt/QtWidgets/qfiledialog.h:315
 // index:135
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QFileDialog::Options::enum_type, int)
@@ -554,7 +554,7 @@ func Operator_or135(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qdockwidget.h:134
+// /usr/include/qt/QtWidgets/qdockwidget.h:135
 // index:136
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QDockWidget::DockWidgetFeatures::enum_type, int)
@@ -571,7 +571,7 @@ func Operator_or136(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:68
-// index:44
+// index:43
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(QSizePolicy, uint)
 
@@ -580,7 +580,7 @@ Returns the hash value for key, using seed to seed the calculation.
 
 This function was introduced in  Qt 5.6.
 */
-func QHash44(key QSizePolicy_ITF /*123*/, seed uint) uint {
+func QHash43(key QSizePolicy_ITF /*123*/, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QSizePolicy_PTR() != nil {
 		convArg0 = key.QSizePolicy_PTR().GetCthis()

@@ -130,22 +130,6 @@ func (this *QHostInfo) Operator_equal(d QHostInfo_ITF) *QHostInfo {
 }
 
 // /usr/include/qt/QtNetwork/qhostinfo.h:66
-// index:1
-// Public inline Visibility=Default Availability=Available
-// [8] QHostInfo & operator=(QHostInfo &&)
-
-/*
-
- */
-func (this *QHostInfo) Operator_equal1(other unsafe.Pointer /*333*/) *QHostInfo {
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QHostInfoaSEOS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), other)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQHostInfoFromPointer(unsafe.Pointer(uintptr(rv))) // 4441
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQHostInfo)
-	return rv2
-}
-
-// /usr/include/qt/QtNetwork/qhostinfo.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QHostInfo()
@@ -160,26 +144,7 @@ func DeleteQHostInfo(this *QHostInfo) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qhostinfo.h:69
-// index:0
-// Public inline Visibility=Default Availability=Available
-// [-2] void swap(QHostInfo &)
-
-/*
-Swaps host-info other with this host-info. This operation is very fast and never fails.
-
-This function was introduced in  Qt 5.10.
-*/
-func (this *QHostInfo) Swap(other QHostInfo_ITF) {
-	var convArg0 unsafe.Pointer
-	if other != nil && other.QHostInfo_PTR() != nil {
-		convArg0 = other.QHostInfo_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QHostInfo4swapERS_", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtNetwork/qhostinfo.h:71
+// /usr/include/qt/QtNetwork/qhostinfo.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString hostName() const
@@ -198,7 +163,7 @@ func (this *QHostInfo) HostName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qhostinfo.h:72
+// /usr/include/qt/QtNetwork/qhostinfo.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHostName(const QString &)
@@ -215,7 +180,7 @@ func (this *QHostInfo) SetHostName(name string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qhostinfo.h:77
+// /usr/include/qt/QtNetwork/qhostinfo.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QHostInfo::HostInfoError error() const
@@ -231,7 +196,7 @@ func (this *QHostInfo) Error() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtNetwork/qhostinfo.h:78
+// /usr/include/qt/QtNetwork/qhostinfo.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setError(QHostInfo::HostInfoError)
@@ -246,7 +211,7 @@ func (this *QHostInfo) SetError(error int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qhostinfo.h:80
+// /usr/include/qt/QtNetwork/qhostinfo.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString errorString() const
@@ -265,7 +230,7 @@ func (this *QHostInfo) ErrorString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qhostinfo.h:81
+// /usr/include/qt/QtNetwork/qhostinfo.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setErrorString(const QString &)
@@ -282,7 +247,7 @@ func (this *QHostInfo) SetErrorString(errorString string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qhostinfo.h:83
+// /usr/include/qt/QtNetwork/qhostinfo.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLookupId(int)
@@ -297,7 +262,7 @@ func (this *QHostInfo) SetLookupId(id int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qhostinfo.h:84
+// /usr/include/qt/QtNetwork/qhostinfo.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int lookupId() const
@@ -313,7 +278,7 @@ func (this *QHostInfo) LookupId() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtNetwork/qhostinfo.h:86
+// /usr/include/qt/QtNetwork/qhostinfo.h:83
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] int lookupHost(const QString &, QObject *, const char *)
@@ -377,7 +342,7 @@ func QHostInfo_LookupHost(name string, receiver qtcore.QObject_ITF /*777 QObject
 	return rv
 }
 
-// /usr/include/qt/QtNetwork/qhostinfo.h:87
+// /usr/include/qt/QtNetwork/qhostinfo.h:84
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void abortHostLookup(int)
@@ -396,7 +361,7 @@ func QHostInfo_AbortHostLookup(lookupId int) {
 	nilthis.AbortHostLookup(lookupId)
 }
 
-// /usr/include/qt/QtNetwork/qhostinfo.h:89
+// /usr/include/qt/QtNetwork/qhostinfo.h:86
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QHostInfo fromName(const QString &)
@@ -423,7 +388,7 @@ func QHostInfo_FromName(name string) *QHostInfo /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtNetwork/qhostinfo.h:90
+// /usr/include/qt/QtNetwork/qhostinfo.h:87
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString localHostName()
@@ -451,7 +416,7 @@ func QHostInfo_LocalHostName() string {
 	return rv
 }
 
-// /usr/include/qt/QtNetwork/qhostinfo.h:91
+// /usr/include/qt/QtNetwork/qhostinfo.h:88
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QString localDomainName()

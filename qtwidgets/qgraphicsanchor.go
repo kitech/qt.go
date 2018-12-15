@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h
@@ -66,7 +64,7 @@ func (*QGraphicsAnchor) NewFromPointer(cthis unsafe.Pointer) *QGraphicsAnchor {
 	return NewQGraphicsAnchorFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:57
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -80,7 +78,7 @@ func (this *QGraphicsAnchor) MetaObject() *qtcore.QMetaObject /*777 const QMetaO
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:61
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:63
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSpacing(qreal)
@@ -99,7 +97,7 @@ func (this *QGraphicsAnchor) SetSpacing(spacing float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:62
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:64
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void unsetSpacing()
@@ -112,7 +110,7 @@ func (this *QGraphicsAnchor) UnsetSpacing() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:63
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal spacing() const
@@ -126,7 +124,7 @@ func (this *QGraphicsAnchor) Spacing() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:64
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSizePolicy(QSizePolicy::Policy)
@@ -139,7 +137,7 @@ func (this *QGraphicsAnchor) SetSizePolicy(policy int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:65
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSizePolicy::Policy sizePolicy() const
@@ -153,7 +151,7 @@ func (this *QGraphicsAnchor) SizePolicy() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:66
+// /usr/include/qt/QtWidgets/qgraphicsanchorlayout.h:68
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsAnchor()

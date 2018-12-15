@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h
@@ -81,7 +79,7 @@ func (*QGraphicsLineItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsLineIte
 	return NewQGraphicsLineItemFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:780
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:781
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLineItem(QGraphicsItem *)
@@ -104,7 +102,7 @@ func NewQGraphicsLineItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGr
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:780
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:781
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLineItem(QGraphicsItem *)
@@ -125,7 +123,7 @@ func NewQGraphicsLineItemp() *QGraphicsLineItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:781
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:782
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLineItem(const QLineF &, QGraphicsItem *)
@@ -152,7 +150,7 @@ func NewQGraphicsLineItem1(line qtcore.QLineF_ITF, parent QGraphicsItem_ITF /*77
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:781
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:782
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLineItem(const QLineF &, QGraphicsItem *)
@@ -177,7 +175,7 @@ func NewQGraphicsLineItem1p(line qtcore.QLineF_ITF) *QGraphicsLineItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:782
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:783
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLineItem(qreal, qreal, qreal, qreal, QGraphicsItem *)
@@ -200,7 +198,7 @@ func NewQGraphicsLineItem2(x1 float64, y1 float64, x2 float64, y2 float64, paren
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:782
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:783
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsLineItem(qreal, qreal, qreal, qreal, QGraphicsItem *)
@@ -221,7 +219,7 @@ func NewQGraphicsLineItem2p(x1 float64, y1 float64, x2 float64, y2 float64) *QGr
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:783
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:784
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsLineItem()
@@ -236,7 +234,7 @@ func DeleteQGraphicsLineItem(this *QGraphicsLineItem) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:785
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:786
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPen pen() const
@@ -252,7 +250,7 @@ func (this *QGraphicsLineItem) Pen() *qtgui.QPen /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:786
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:787
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPen(const QPen &)
@@ -269,7 +267,7 @@ func (this *QGraphicsLineItem) SetPen(pen qtgui.QPen_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:788
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:789
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QLineF line() const
@@ -285,7 +283,7 @@ func (this *QGraphicsLineItem) Line() *qtcore.QLineF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:789
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:790
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setLine(const QLineF &)
@@ -302,7 +300,7 @@ func (this *QGraphicsLineItem) SetLine(line qtcore.QLineF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:790
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:791
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setLine(qreal, qreal, qreal, qreal)
@@ -315,7 +313,7 @@ func (this *QGraphicsLineItem) SetLine1(x1 float64, y1 float64, x2 float64, y2 f
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:793
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:794
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [32] QRectF boundingRect() const
@@ -353,7 +351,7 @@ func (this *QGraphicsLineItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:794
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:795
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QPainterPath shape() const
@@ -387,7 +385,7 @@ func (this *QGraphicsLineItem) Shape() *qtgui.QPainterPath /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:795
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:796
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool contains(const QPointF &) const
@@ -409,7 +407,7 @@ func (this *QGraphicsLineItem) Contains(point qtcore.QPointF_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:797
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:798
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
@@ -458,7 +456,7 @@ func (this *QGraphicsLineItem) Paint(painter qtgui.QPainter_ITF /*777 QPainter *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:797
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:798
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
@@ -505,7 +503,7 @@ func (this *QGraphicsLineItem) Paintp(painter qtgui.QPainter_ITF /*777 QPainter 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:799
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:800
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isObscuredBy(const QGraphicsItem *) const
@@ -529,7 +527,7 @@ func (this *QGraphicsLineItem) IsObscuredBy(item QGraphicsItem_ITF /*777 const Q
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:800
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:801
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QPainterPath opaqueArea() const
@@ -551,7 +549,7 @@ func (this *QGraphicsLineItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:803
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:804
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int type() const
@@ -589,7 +587,7 @@ func (this *QGraphicsLineItem) Type() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:806
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:807
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool supportsExtension(QGraphicsItem::Extension) const
@@ -603,7 +601,7 @@ func (this *QGraphicsLineItem) SupportsExtension(extension int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:807
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:808
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setExtension(QGraphicsItem::Extension, const QVariant &)
@@ -620,7 +618,7 @@ func (this *QGraphicsLineItem) SetExtension(extension int, variant qtcore.QVaria
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:808
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:809
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant extension(const QVariant &) const

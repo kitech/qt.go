@@ -18,7 +18,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 112
+// extern C begin: 111
 */
 // import "C"
 import "unsafe"

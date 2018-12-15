@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qerrormessage.h
@@ -76,7 +74,7 @@ func (*QErrorMessage) NewFromPointer(cthis unsafe.Pointer) *QErrorMessage {
 	return NewQErrorMessageFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qerrormessage.h:55
+// /usr/include/qt/QtWidgets/qerrormessage.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -90,7 +88,7 @@ func (this *QErrorMessage) MetaObject() *qtcore.QMetaObject /*777 const QMetaObj
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qerrormessage.h:58
+// /usr/include/qt/QtWidgets/qerrormessage.h:59
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QErrorMessage(QWidget *)
@@ -113,7 +111,7 @@ func NewQErrorMessage(parent QWidget_ITF /*777 QWidget **/) *QErrorMessage {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qerrormessage.h:58
+// /usr/include/qt/QtWidgets/qerrormessage.h:59
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QErrorMessage(QWidget *)
@@ -134,7 +132,7 @@ func NewQErrorMessagep() *QErrorMessage {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qerrormessage.h:59
+// /usr/include/qt/QtWidgets/qerrormessage.h:60
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QErrorMessage()
@@ -149,7 +147,7 @@ func DeleteQErrorMessage(this *QErrorMessage) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qerrormessage.h:61
+// /usr/include/qt/QtWidgets/qerrormessage.h:62
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QErrorMessage * qtHandler()
@@ -168,7 +166,7 @@ func QErrorMessage_QtHandler() *QErrorMessage /*777 QErrorMessage **/ {
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qerrormessage.h:64
+// /usr/include/qt/QtWidgets/qerrormessage.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void showMessage(const QString &)
@@ -185,7 +183,7 @@ func (this *QErrorMessage) ShowMessage(message string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qerrormessage.h:65
+// /usr/include/qt/QtWidgets/qerrormessage.h:66
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void showMessage(const QString &, const QString &)
@@ -204,7 +202,7 @@ func (this *QErrorMessage) ShowMessage1(message string, type_ string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qerrormessage.h:68
+// /usr/include/qt/QtWidgets/qerrormessage.h:69
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void done(int)
@@ -217,7 +215,7 @@ func (this *QErrorMessage) Done(arg0 int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qerrormessage.h:69
+// /usr/include/qt/QtWidgets/qerrormessage.h:70
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)

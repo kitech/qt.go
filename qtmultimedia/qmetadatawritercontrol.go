@@ -193,10 +193,10 @@ Signal the changes of meta-data.
 
 If multiple meta-data elements are changed, metaDataChanged(const QString &key, const QVariant &value) signal is emitted for each of them with metaDataChanged() changed emitted once.
 
-Note: Signal metaDataChanged is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal metaDataChanged is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(metaDataWriterControl, QOverload<>::of(&QMetaDataWriterControl::metaDataChanged),
+  connect(metaDataWriterControl, static_cast<void(QMetaDataWriterControl::*)()>(&QMetaDataWriterControl::metaDataChanged),
       [=](){ /-* ... *-/ });
 */
 func (this *QMetaDataWriterControl) MetaDataChanged() {
@@ -214,10 +214,10 @@ Signal the changes of meta-data.
 
 If multiple meta-data elements are changed, metaDataChanged(const QString &key, const QVariant &value) signal is emitted for each of them with metaDataChanged() changed emitted once.
 
-Note: Signal metaDataChanged is overloaded in this class. To connect to this signal by using the function pointer syntax, Qt provides a convenient helper for obtaining the function pointer as shown in this example:
+Note: Signal metaDataChanged is overloaded in this class. To connect to this one using the function pointer syntax, you must specify the signal type in a static cast, as shown in this example:
 
 
-  connect(metaDataWriterControl, QOverload<>::of(&QMetaDataWriterControl::metaDataChanged),
+  connect(metaDataWriterControl, static_cast<void(QMetaDataWriterControl::*)()>(&QMetaDataWriterControl::metaDataChanged),
       [=](){ /-* ... *-/ });
 */
 func (this *QMetaDataWriterControl) MetaDataChanged1(key string, value qtcore.QVariant_ITF) {

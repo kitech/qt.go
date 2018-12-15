@@ -1681,10 +1681,7 @@ const Qt__WA_AlwaysStackOnTop Qt__WidgetAttribute = 128
 const Qt__WA_TabletTracking Qt__WidgetAttribute = 129
 
 //
-const Qt__WA_ContentsMarginsRespectsSafeArea Qt__WidgetAttribute = 130
-
-//
-const Qt__WA_AttributeCount Qt__WidgetAttribute = 131
+const Qt__WA_AttributeCount Qt__WidgetAttribute = 130
 
 func WidgetAttributeItemName(val int) string {
 	switch val {
@@ -1912,9 +1909,7 @@ func WidgetAttributeItemName(val int) string {
 		return "WA_AlwaysStackOnTop"
 	case Qt__WA_TabletTracking: // 129
 		return "WA_TabletTracking"
-	case Qt__WA_ContentsMarginsRespectsSafeArea: // 130
-		return "WA_ContentsMarginsRespectsSafeArea"
-	case Qt__WA_AttributeCount: // 131
+	case Qt__WA_AttributeCount: // 130
 		return "WA_AttributeCount"
 	default:
 		return fmt.Sprintf("%d", val)
@@ -1924,11 +1919,11 @@ func WidgetAttributeItemName(val int) string {
 /*
 This enum describes attributes that change the behavior of application-wide features. These are enabled and disabled using QCoreApplication::setAttribute(), and can be tested for with QCoreApplication::testAttribute().
 
-
-
-The following values are deprecated or obsolete:
-
 Qt::AA_MacPluginApplicationAA_PluginApplicationThis attribute has been deprecated. Use AA_PluginApplication instead.
+
+
+The following values are obsolete:
+
 
 */
 type Qt__ApplicationAttribute = int // core
@@ -2017,16 +2012,7 @@ const Qt__AA_DontCheckOpenGLContextThreadAffinity Qt__ApplicationAttribute = 26
 const Qt__AA_DisableShaderDiskCache Qt__ApplicationAttribute = 27
 
 //
-const Qt__AA_DontShowShortcutsInContextMenus Qt__ApplicationAttribute = 28
-
-//
-const Qt__AA_CompressTabletEvents Qt__ApplicationAttribute = 29
-
-//
-const Qt__AA_DisableWindowContextHelpButton Qt__ApplicationAttribute = 30
-
-//
-const Qt__AA_AttributeCount Qt__ApplicationAttribute = 31
+const Qt__AA_AttributeCount Qt__ApplicationAttribute = 28
 
 func ApplicationAttributeItemName(val int) string {
 	switch val {
@@ -2086,13 +2072,7 @@ func ApplicationAttributeItemName(val int) string {
 		return "AA_DontCheckOpenGLContextThreadAffinity"
 	case Qt__AA_DisableShaderDiskCache: // 27
 		return "AA_DisableShaderDiskCache"
-	case Qt__AA_DontShowShortcutsInContextMenus: // 28
-		return "AA_DontShowShortcutsInContextMenus"
-	case Qt__AA_CompressTabletEvents: // 29
-		return "AA_CompressTabletEvents"
-	case Qt__AA_DisableWindowContextHelpButton: // 30
-		return "AA_DisableWindowContextHelpButton"
-	case Qt__AA_AttributeCount: // 31
+	case Qt__AA_AttributeCount: // 28
 		return "AA_AttributeCount"
 	default:
 		return fmt.Sprintf("%d", val)
@@ -6878,10 +6858,10 @@ This enum was introduced or modified in  Qt 4.6.
 
 */
 type Qt__CoordinateSystem = int // core
-// Coordinates are relative to the top-left corner of the object's paint device.
+// Coordinates are relative to the upper-left corner of the object's paint device.
 const Qt__DeviceCoordinates Qt__CoordinateSystem = 0
 
-// Coordinates are relative to the top-left corner of the object.
+// Coordinates are relative to the upper-left corner of the object.
 const Qt__LogicalCoordinates Qt__CoordinateSystem = 1
 
 func CoordinateSystemItemName(val int) string {
@@ -8083,119 +8063,6 @@ func _Manager_operationItemName(val int) string {
 
 
  */
-type Qt___Lock_policy = int // stdglobal
-//
-const Qt___S_single Qt___Lock_policy = 0
-
-//
-const Qt___S_mutex Qt___Lock_policy = 1
-
-//
-const Qt___S_atomic Qt___Lock_policy = 2
-
-func _Lock_policyItemName(val int) string {
-	switch val {
-	case Qt___S_single: // 0
-		return "_S_single"
-	case Qt___S_mutex: // 1
-		return "_S_mutex"
-	case Qt___S_atomic: // 2
-		return "_S_atomic"
-	default:
-		return fmt.Sprintf("%d", val)
-	}
-}
-
-/*
-
-
- */
-type Qt__pointer_safety = int // stdglobal
-//
-const Qt__relaxed Qt__pointer_safety = 0
-
-//
-const Qt__preferred Qt__pointer_safety = 1
-
-//
-const Qt__strict Qt__pointer_safety = 2
-
-func pointer_safetyItemName(val int) string {
-	switch val {
-	case Qt__relaxed: // 0
-		return "relaxed"
-	case Qt__preferred: // 1
-		return "preferred"
-	case Qt__strict: // 2
-		return "strict"
-	default:
-		return fmt.Sprintf("%d", val)
-	}
-}
-
-/*
-
-
- */
-type Qt__future_errc = int // stdglobal
-//
-const Qt__future_already_retrieved Qt__future_errc = 1
-
-//
-const Qt__promise_already_satisfied Qt__future_errc = 2
-
-//
-const Qt__no_state Qt__future_errc = 3
-
-//
-const Qt__broken_promise Qt__future_errc = 4
-
-func future_errcItemName(val int) string {
-	switch val {
-	case Qt__future_already_retrieved: // 1
-		return "future_already_retrieved"
-	case Qt__promise_already_satisfied: // 2
-		return "promise_already_satisfied"
-	case Qt__no_state: // 3
-		return "no_state"
-	case Qt__broken_promise: // 4
-		return "broken_promise"
-	default:
-		return fmt.Sprintf("%d", val)
-	}
-}
-
-/*
-
-
- */
-type Qt__future_status = int // stdglobal
-//
-const Qt__ready Qt__future_status = 0
-
-//
-const Qt__timeout Qt__future_status = 1
-
-//
-const Qt__deferred Qt__future_status = 2
-
-func future_statusItemName(val int) string {
-	switch val {
-	case Qt__ready: // 0
-		return "ready"
-	case Qt__timeout: // 1
-		return "timeout"
-	case Qt__deferred: // 2
-		return "deferred"
-	default:
-		return fmt.Sprintf("%d", val)
-	}
-}
-
-/*
-
-
- */
 type Qt__DrawingHint = int // widgets
 //
 const Qt__OpaqueTopLeft Qt__DrawingHint = 1
@@ -8767,7 +8634,7 @@ type Qt__State = int // multimedia
 // Audio data is being processed, this state is set after start() is called and while audio data is available to be processed.
 const Qt__ActiveState Qt__State = 0
 
-// The audio stream is in a suspended state. Entered after suspend() is called or when another stream takes control of the audio device. In the later case, a call to resume will return control of the audio device to this stream. This should usually only be done upon user request.
+// The audio device is in a suspended state, this state will only be entered after suspend() is called.
 const Qt__SuspendedState Qt__State = 1
 
 // The audio device is closed, and is not processing any audio data
@@ -8775,9 +8642,6 @@ const Qt__StoppedState Qt__State = 2
 
 // The QIODevice passed in has no data and audio system's buffer is empty, this state is set after start() is called and while no audio data is available to be processed.
 const Qt__IdleState Qt__State = 3
-
-// This stream is in a suspended state because another higher priority stream currently has control of the audio device. Playback cannot resume until the higher priority stream relinquishes control of the audio device.
-const Qt__InterruptedState Qt__State = 4
 
 func StateItemName(val int) string {
 	switch val {
@@ -8789,8 +8653,6 @@ func StateItemName(val int) string {
 		return "StoppedState"
 	case Qt__IdleState: // 3
 		return "IdleState"
-	case Qt__InterruptedState: // 4
-		return "InterruptedState"
 	default:
 		return fmt.Sprintf("%d", val)
 	}
@@ -11064,6 +10926,80 @@ func _PROC_THREAD_ATTRIBUTE_NUMItemName(val int) string {
 		return "ProcThreadAttributeWin32kFilter"
 	case Qt__ProcThreadAttributeSafeOpenPromptOriginClaim: // 17
 		return "ProcThreadAttributeSafeOpenPromptOriginClaim"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagINPUT_MESSAGE_DEVICE_TYPE = int // stdglobal
+//
+const Qt__IMDT_UNAVAILABLE Qt__tagINPUT_MESSAGE_DEVICE_TYPE = 0
+
+//
+const Qt__IMDT_KEYBOARD Qt__tagINPUT_MESSAGE_DEVICE_TYPE = 1
+
+//
+const Qt__IMDT_MOUSE Qt__tagINPUT_MESSAGE_DEVICE_TYPE = 2
+
+//
+const Qt__IMDT_TOUCH Qt__tagINPUT_MESSAGE_DEVICE_TYPE = 4
+
+//
+const Qt__IMDT_PEN Qt__tagINPUT_MESSAGE_DEVICE_TYPE = 8
+
+//
+const Qt__IMDT_TOUCHPAD Qt__tagINPUT_MESSAGE_DEVICE_TYPE = 16
+
+func tagINPUT_MESSAGE_DEVICE_TYPEItemName(val int) string {
+	switch val {
+	case Qt__IMDT_UNAVAILABLE: // 0
+		return "IMDT_UNAVAILABLE"
+	case Qt__IMDT_KEYBOARD: // 1
+		return "IMDT_KEYBOARD"
+	case Qt__IMDT_MOUSE: // 2
+		return "IMDT_MOUSE"
+	case Qt__IMDT_TOUCH: // 4
+		return "IMDT_TOUCH"
+	case Qt__IMDT_PEN: // 8
+		return "IMDT_PEN"
+	case Qt__IMDT_TOUCHPAD: // 16
+		return "IMDT_TOUCHPAD"
+	default:
+		return fmt.Sprintf("%d", val)
+	}
+}
+
+/*
+
+
+ */
+type Qt__tagINPUT_MESSAGE_ORIGIN_ID = int // stdglobal
+//
+const Qt__IMO_UNAVAILABLE Qt__tagINPUT_MESSAGE_ORIGIN_ID = 0
+
+//
+const Qt__IMO_HARDWARE Qt__tagINPUT_MESSAGE_ORIGIN_ID = 1
+
+//
+const Qt__IMO_INJECTED Qt__tagINPUT_MESSAGE_ORIGIN_ID = 2
+
+//
+const Qt__IMO_SYSTEM Qt__tagINPUT_MESSAGE_ORIGIN_ID = 4
+
+func tagINPUT_MESSAGE_ORIGIN_IDItemName(val int) string {
+	switch val {
+	case Qt__IMO_UNAVAILABLE: // 0
+		return "IMO_UNAVAILABLE"
+	case Qt__IMO_HARDWARE: // 1
+		return "IMO_HARDWARE"
+	case Qt__IMO_INJECTED: // 2
+		return "IMO_INJECTED"
+	case Qt__IMO_SYSTEM: // 4
+		return "IMO_SYSTEM"
 	default:
 		return fmt.Sprintf("%d", val)
 	}
@@ -16933,90 +16869,6 @@ func jobjectRefTypeItemName(val int) string {
 		return "JNIGlobalRefType"
 	case Qt__JNIWeakGlobalRefType: // 3
 		return "JNIWeakGlobalRefType"
-	default:
-		return fmt.Sprintf("%d", val)
-	}
-}
-
-/*
-
-
- */
-type Qt__BindFlag = int // androidextras
-//
-const Qt__None Qt__BindFlag = 0
-
-//
-const Qt__AutoCreate Qt__BindFlag = 1
-
-//
-const Qt__DebugUnbind Qt__BindFlag = 2
-
-//
-const Qt__NotForeground Qt__BindFlag = 4
-
-//
-const Qt__AboveClient Qt__BindFlag = 8
-
-//
-const Qt__AllowOomManagement Qt__BindFlag = 16
-
-//
-const Qt__WaivePriority Qt__BindFlag = 32
-
-//
-const Qt__Important Qt__BindFlag = 64
-
-//
-const Qt__AdjustWithActivity Qt__BindFlag = 128
-
-//
-const Qt__ExternalService Qt__BindFlag = -2147483648
-
-func BindFlagItemName(val int) string {
-	switch val {
-	case Qt__None: // 0
-		return "None"
-	case Qt__AutoCreate: // 1
-		return "AutoCreate"
-	case Qt__DebugUnbind: // 2
-		return "DebugUnbind"
-	case Qt__NotForeground: // 4
-		return "NotForeground"
-	case Qt__AboveClient: // 8
-		return "AboveClient"
-	case Qt__AllowOomManagement: // 16
-		return "AllowOomManagement"
-	case Qt__WaivePriority: // 32
-		return "WaivePriority"
-	case Qt__Important: // 64
-		return "Important"
-	case Qt__AdjustWithActivity: // 128
-		return "AdjustWithActivity"
-	case Qt__ExternalService: // -2147483648
-		return "ExternalService"
-	default:
-		return fmt.Sprintf("%d", val)
-	}
-}
-
-/*
-
-
- */
-type Qt__PermissionResult = int // androidextras
-//
-const Qt__Granted Qt__PermissionResult = 0
-
-//
-const Qt__Denied Qt__PermissionResult = 1
-
-func PermissionResultItemName(val int) string {
-	switch val {
-	case Qt__Granted: // 0
-		return "Granted"
-	case Qt__Denied: // 1
-		return "Denied"
 	default:
 		return fmt.Sprintf("%d", val)
 	}

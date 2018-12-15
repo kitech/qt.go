@@ -63,7 +63,7 @@ func (*QScrollPrepareEvent) NewFromPointer(cthis unsafe.Pointer) *QScrollPrepare
 	return NewQScrollPrepareEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:990
+// /usr/include/qt/QtGui/qevent.h:983
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QScrollPrepareEvent(const QPointF &)
@@ -86,7 +86,7 @@ func NewQScrollPrepareEvent(startPos qtcore.QPointF_ITF) *QScrollPrepareEvent {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qevent.h:991
+// /usr/include/qt/QtGui/qevent.h:984
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QScrollPrepareEvent()
@@ -101,7 +101,7 @@ func DeleteQScrollPrepareEvent(this *QScrollPrepareEvent) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qevent.h:993
+// /usr/include/qt/QtGui/qevent.h:986
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF startPos() const
@@ -117,7 +117,7 @@ func (this *QScrollPrepareEvent) StartPos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:995
+// /usr/include/qt/QtGui/qevent.h:988
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QSizeF viewportSize() const
@@ -133,7 +133,7 @@ func (this *QScrollPrepareEvent) ViewportSize() *qtcore.QSizeF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:996
+// /usr/include/qt/QtGui/qevent.h:989
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF contentPosRange() const
@@ -149,7 +149,7 @@ func (this *QScrollPrepareEvent) ContentPosRange() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:997
+// /usr/include/qt/QtGui/qevent.h:990
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF contentPos() const
@@ -165,7 +165,7 @@ func (this *QScrollPrepareEvent) ContentPos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qevent.h:999
+// /usr/include/qt/QtGui/qevent.h:992
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setViewportSize(const QSizeF &)
@@ -182,7 +182,7 @@ func (this *QScrollPrepareEvent) SetViewportSize(size qtcore.QSizeF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:1000
+// /usr/include/qt/QtGui/qevent.h:993
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContentPosRange(const QRectF &)
@@ -199,7 +199,7 @@ func (this *QScrollPrepareEvent) SetContentPosRange(rect qtcore.QRectF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qevent.h:1001
+// /usr/include/qt/QtGui/qevent.h:994
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setContentPos(const QPointF &)

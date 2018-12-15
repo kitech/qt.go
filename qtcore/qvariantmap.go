@@ -359,48 +359,6 @@ func (this *QVariantMap) KeyEnd0() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// QMap::key_value_iterator keyValueBegin()
-func (this *QVariantMap) KeyValueBegin0() {
-	// QVariantMap_keyValueBegin_0()
-	rv, err := qtrt.InvokeQtFunc6("C_QVariantMap_keyValueBegin_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
-	qtrt.ErrPrint(err, rv)
-}
-
-// QMap::key_value_iterator keyValueEnd()
-func (this *QVariantMap) KeyValueEnd0() {
-	// QVariantMap_keyValueEnd_0()
-	rv, err := qtrt.InvokeQtFunc6("C_QVariantMap_keyValueEnd_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
-	qtrt.ErrPrint(err, rv)
-}
-
-// QMap::const_key_value_iterator keyValueBegin()
-func (this *QVariantMap) KeyValueBegin1() {
-	// QVariantMap_keyValueBegin_1()
-	rv, err := qtrt.InvokeQtFunc6("C_QVariantMap_keyValueBegin_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
-	qtrt.ErrPrint(err, rv)
-}
-
-// QMap::const_key_value_iterator constKeyValueBegin()
-func (this *QVariantMap) ConstKeyValueBegin0() {
-	// QVariantMap_constKeyValueBegin_0()
-	rv, err := qtrt.InvokeQtFunc6("C_QVariantMap_constKeyValueBegin_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
-	qtrt.ErrPrint(err, rv)
-}
-
-// QMap::const_key_value_iterator keyValueEnd()
-func (this *QVariantMap) KeyValueEnd1() {
-	// QVariantMap_keyValueEnd_1()
-	rv, err := qtrt.InvokeQtFunc6("C_QVariantMap_keyValueEnd_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
-	qtrt.ErrPrint(err, rv)
-}
-
-// QMap::const_key_value_iterator constKeyValueEnd()
-func (this *QVariantMap) ConstKeyValueEnd0() {
-	// QVariantMap_constKeyValueEnd_0()
-	rv, err := qtrt.InvokeQtFunc6("C_QVariantMap_constKeyValueEnd_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
-	qtrt.ErrPrint(err, rv)
-}
-
 // QMap::iterator erase(QMap::iterator)
 func (this *QVariantMap) Erase0() {
 	// QVariantMap_erase_0()

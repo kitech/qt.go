@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 39
+// extern C begin: 38
 */
 // import "C"
 import "unsafe"
@@ -64,7 +64,7 @@ func (*QTime) NewFromPointer(cthis unsafe.Pointer) *QTime {
 	return NewQTimeFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:159
+// /usr/include/qt/QtCore/qdatetime.h:152
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTime()
@@ -83,7 +83,7 @@ func NewQTime() *QTime {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:161
+// /usr/include/qt/QtCore/qdatetime.h:154
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTime(int, int, int, int)
@@ -102,7 +102,7 @@ func NewQTime1(h int, m int, s int, ms int) *QTime {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:161
+// /usr/include/qt/QtCore/qdatetime.h:154
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTime(int, int, int, int)
@@ -125,7 +125,7 @@ func NewQTime1p(h int, m int) *QTime {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:161
+// /usr/include/qt/QtCore/qdatetime.h:154
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTime(int, int, int, int)
@@ -146,7 +146,7 @@ func NewQTime1p1(h int, m int, s int) *QTime {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:163
+// /usr/include/qt/QtCore/qdatetime.h:156
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull() const
@@ -162,7 +162,7 @@ func (this *QTime) IsNull() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:164
+// /usr/include/qt/QtCore/qdatetime.h:157
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isValid() const
@@ -180,7 +180,7 @@ func (this *QTime) IsValid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:199
+// /usr/include/qt/QtCore/qdatetime.h:189
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool isValid(int, int, int, int)
@@ -203,7 +203,7 @@ func QTime_IsValid1(h int, m int, s int, ms int) bool {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:199
+// /usr/include/qt/QtCore/qdatetime.h:189
 // index:1
 // Public static Visibility=Default Availability=Available
 // [1] bool isValid(int, int, int, int)
@@ -223,7 +223,7 @@ func (this *QTime) IsValid1p(h int, m int, s int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:166
+// /usr/include/qt/QtCore/qdatetime.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int hour() const
@@ -237,7 +237,7 @@ func (this *QTime) Hour() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:167
+// /usr/include/qt/QtCore/qdatetime.h:160
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int minute() const
@@ -251,7 +251,7 @@ func (this *QTime) Minute() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:168
+// /usr/include/qt/QtCore/qdatetime.h:161
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int second() const
@@ -265,7 +265,7 @@ func (this *QTime) Second() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:169
+// /usr/include/qt/QtCore/qdatetime.h:162
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int msec() const
@@ -279,7 +279,7 @@ func (this *QTime) Msec() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:171
+// /usr/include/qt/QtCore/qdatetime.h:164
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString(Qt::DateFormat) const
@@ -313,10 +313,10 @@ Hthe hour without a leading zero (0 to 23, even with AM/PM display)
 HHthe hour with a leading zero (00 to 23, even with AM/PM display)
 mthe minute without a leading zero (0 to 59)
 mmthe minute with a leading zero (00 to 59)
-sthe whole second without a leading zero (0 to 59)
-ssthe whole second with a leading zero where applicable (00 to 59)
-zthe fractional part of the second, to go after a decimal point, without trailing zeroes (0 to 999). Thus "s.z" reports the seconds to full available (millisecond) precision without trailing zeroes.
-zzzthe fractional part of the second, to millisecond precision, including trailing zeroes where applicable (000 to 999).
+sthe second without a leading zero (0 to 59)
+ssthe second with a leading zero (00 to 59)
+zthe milliseconds without leading zeroes (0 to 999)
+zzzthe milliseconds with leading zeroes (000 to 999)
 AP or Ause AM/PM display. A/AP will be replaced by either "AM" or "PM".
 ap or ause am/pm display. a/ap will be replaced by either "am" or "pm".
 tthe timezone (for example "CEST")
@@ -324,14 +324,13 @@ tthe timezone (for example "CEST")
 
 All other input characters will be ignored. Any sequence of characters that are enclosed in single quotes will be treated as text and not be used as an expression. Two consecutive single quotes ("''") are replaced by a singlequote in the output. Formats without separators (e.g. "HHmm") are currently not supported.
 
-Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09.120):
+Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09):
 
 
  FormatResult
 dd.MM.yyyy21.05.2001
 ddd MMMM d yyTue May 21 01
-hh:mm:ss.zzz14:13:09.120
-hh:mm:ss.z14:13:09.12
+hh:mm:ss.zzz14:13:09.042
 h:m:s ap2:13:9 pm
 
 
@@ -348,7 +347,7 @@ func (this *QTime) ToString(f int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:171
+// /usr/include/qt/QtCore/qdatetime.h:164
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toString(Qt::DateFormat) const
@@ -382,10 +381,10 @@ Hthe hour without a leading zero (0 to 23, even with AM/PM display)
 HHthe hour with a leading zero (00 to 23, even with AM/PM display)
 mthe minute without a leading zero (0 to 59)
 mmthe minute with a leading zero (00 to 59)
-sthe whole second without a leading zero (0 to 59)
-ssthe whole second with a leading zero where applicable (00 to 59)
-zthe fractional part of the second, to go after a decimal point, without trailing zeroes (0 to 999). Thus "s.z" reports the seconds to full available (millisecond) precision without trailing zeroes.
-zzzthe fractional part of the second, to millisecond precision, including trailing zeroes where applicable (000 to 999).
+sthe second without a leading zero (0 to 59)
+ssthe second with a leading zero (00 to 59)
+zthe milliseconds without leading zeroes (0 to 999)
+zzzthe milliseconds with leading zeroes (000 to 999)
 AP or Ause AM/PM display. A/AP will be replaced by either "AM" or "PM".
 ap or ause am/pm display. a/ap will be replaced by either "am" or "pm".
 tthe timezone (for example "CEST")
@@ -393,14 +392,13 @@ tthe timezone (for example "CEST")
 
 All other input characters will be ignored. Any sequence of characters that are enclosed in single quotes will be treated as text and not be used as an expression. Two consecutive single quotes ("''") are replaced by a singlequote in the output. Formats without separators (e.g. "HHmm") are currently not supported.
 
-Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09.120):
+Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09):
 
 
  FormatResult
 dd.MM.yyyy21.05.2001
 ddd MMMM d yyTue May 21 01
-hh:mm:ss.zzz14:13:09.120
-hh:mm:ss.z14:13:09.12
+hh:mm:ss.zzz14:13:09.042
 h:m:s ap2:13:9 pm
 
 
@@ -419,7 +417,7 @@ func (this *QTime) ToStringp() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:173
+// /usr/include/qt/QtCore/qdatetime.h:165
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString toString(const QString &) const
@@ -453,10 +451,10 @@ Hthe hour without a leading zero (0 to 23, even with AM/PM display)
 HHthe hour with a leading zero (00 to 23, even with AM/PM display)
 mthe minute without a leading zero (0 to 59)
 mmthe minute with a leading zero (00 to 59)
-sthe whole second without a leading zero (0 to 59)
-ssthe whole second with a leading zero where applicable (00 to 59)
-zthe fractional part of the second, to go after a decimal point, without trailing zeroes (0 to 999). Thus "s.z" reports the seconds to full available (millisecond) precision without trailing zeroes.
-zzzthe fractional part of the second, to millisecond precision, including trailing zeroes where applicable (000 to 999).
+sthe second without a leading zero (0 to 59)
+ssthe second with a leading zero (00 to 59)
+zthe milliseconds without leading zeroes (0 to 999)
+zzzthe milliseconds with leading zeroes (000 to 999)
 AP or Ause AM/PM display. A/AP will be replaced by either "AM" or "PM".
 ap or ause am/pm display. a/ap will be replaced by either "am" or "pm".
 tthe timezone (for example "CEST")
@@ -464,14 +462,13 @@ tthe timezone (for example "CEST")
 
 All other input characters will be ignored. Any sequence of characters that are enclosed in single quotes will be treated as text and not be used as an expression. Two consecutive single quotes ("''") are replaced by a singlequote in the output. Formats without separators (e.g. "HHmm") are currently not supported.
 
-Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09.120):
+Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09):
 
 
  FormatResult
 dd.MM.yyyy21.05.2001
 ddd MMMM d yyTue May 21 01
-hh:mm:ss.zzz14:13:09.120
-hh:mm:ss.z14:13:09.12
+hh:mm:ss.zzz14:13:09.042
 h:m:s ap2:13:9 pm
 
 
@@ -490,80 +487,7 @@ func (this *QTime) ToString1(format string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:175
-// index:2
-// Public Visibility=Default Availability=Available
-// [8] QString toString(QStringView) const
-
-/*
-Returns the datetime as a string. The format parameter determines the format of the result string.
-
-These expressions may be used for the date:
-
-
- ExpressionOutput
-dthe day as number without a leading zero (1 to 31)
-ddthe day as number with a leading zero (01 to 31)
-dddthe abbreviated localized day name (e.g. 'Mon' to 'Sun'). Uses the system locale to localize the name, i.e. QLocale::system().
-ddddthe long localized day name (e.g. 'Monday' to 'Sunday'). Uses the system locale to localize the name, i.e. QLocale::system().
-Mthe month as number without a leading zero (1-12)
-MMthe month as number with a leading zero (01-12)
-MMMthe abbreviated localized month name (e.g. 'Jan' to 'Dec'). Uses the system locale to localize the name, i.e. QLocale::system().
-MMMMthe long localized month name (e.g. 'January' to 'December'). Uses the system locale to localize the name, i.e. QLocale::system().
-yythe year as two digit number (00-99)
-yyyythe year as four digit number
-
-
-These expressions may be used for the time:
-
-
- ExpressionOutput
-hthe hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)
-hhthe hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)
-Hthe hour without a leading zero (0 to 23, even with AM/PM display)
-HHthe hour with a leading zero (00 to 23, even with AM/PM display)
-mthe minute without a leading zero (0 to 59)
-mmthe minute with a leading zero (00 to 59)
-sthe whole second without a leading zero (0 to 59)
-ssthe whole second with a leading zero where applicable (00 to 59)
-zthe fractional part of the second, to go after a decimal point, without trailing zeroes (0 to 999). Thus "s.z" reports the seconds to full available (millisecond) precision without trailing zeroes.
-zzzthe fractional part of the second, to millisecond precision, including trailing zeroes where applicable (000 to 999).
-AP or Ause AM/PM display. A/AP will be replaced by either "AM" or "PM".
-ap or ause am/pm display. a/ap will be replaced by either "am" or "pm".
-tthe timezone (for example "CEST")
-
-
-All other input characters will be ignored. Any sequence of characters that are enclosed in single quotes will be treated as text and not be used as an expression. Two consecutive single quotes ("''") are replaced by a singlequote in the output. Formats without separators (e.g. "HHmm") are currently not supported.
-
-Example format strings (assumed that the QDateTime is 21 May 2001 14:13:09.120):
-
-
- FormatResult
-dd.MM.yyyy21.05.2001
-ddd MMMM d yyTue May 21 01
-hh:mm:ss.zzz14:13:09.120
-hh:mm:ss.z14:13:09.12
-h:m:s ap2:13:9 pm
-
-
-If the datetime is invalid, an empty string will be returned.
-
-See also fromString(), QDate::toString(), QTime::toString(), and QLocale::toString().
-*/
-func (this *QTime) ToString2(format QStringView_ITF /*123*/) string {
-	var convArg0 unsafe.Pointer
-	if format != nil && format.QStringView_PTR() != nil {
-		convArg0 = format.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK5QTime8toStringE11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	/*==*/ DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtCore/qdatetime.h:177
+// /usr/include/qt/QtCore/qdatetime.h:167
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setHMS(int, int, int, int)
@@ -577,7 +501,7 @@ func (this *QTime) SetHMS(h int, m int, s int, ms int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:177
+// /usr/include/qt/QtCore/qdatetime.h:167
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool setHMS(int, int, int, int)
@@ -593,7 +517,7 @@ func (this *QTime) SetHMSp(h int, m int, s int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:179
+// /usr/include/qt/QtCore/qdatetime.h:169
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QTime addSecs(int) const
@@ -613,7 +537,7 @@ func (this *QTime) AddSecs(secs int) *QTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:180
+// /usr/include/qt/QtCore/qdatetime.h:170
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int secsTo(const QTime &) const
@@ -646,7 +570,7 @@ func (this *QTime) SecsTo(arg0 QTime_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:181
+// /usr/include/qt/QtCore/qdatetime.h:171
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QTime addMSecs(int) const
@@ -666,7 +590,7 @@ func (this *QTime) AddMSecs(ms int) *QTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:182
+// /usr/include/qt/QtCore/qdatetime.h:172
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int msecsTo(const QTime &) const
@@ -690,7 +614,7 @@ func (this *QTime) MsecsTo(arg0 QTime_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:184
+// /usr/include/qt/QtCore/qdatetime.h:174
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QTime &) const
@@ -708,7 +632,7 @@ func (this *QTime) Operator_equal_equal(other QTime_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:185
+// /usr/include/qt/QtCore/qdatetime.h:175
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QTime &) const
@@ -726,7 +650,7 @@ func (this *QTime) Operator_not_equal(other QTime_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:186
+// /usr/include/qt/QtCore/qdatetime.h:176
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<(const QTime &) const
@@ -744,7 +668,7 @@ func (this *QTime) Operator_less_than(other QTime_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:187
+// /usr/include/qt/QtCore/qdatetime.h:177
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<=(const QTime &) const
@@ -762,7 +686,7 @@ func (this *QTime) Operator_less_than_equal(other QTime_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:188
+// /usr/include/qt/QtCore/qdatetime.h:178
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>(const QTime &) const
@@ -780,7 +704,7 @@ func (this *QTime) Operator_greater_than(other QTime_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:189
+// /usr/include/qt/QtCore/qdatetime.h:179
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator>=(const QTime &) const
@@ -798,7 +722,7 @@ func (this *QTime) Operator_greater_than_equal(other QTime_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:191
+// /usr/include/qt/QtCore/qdatetime.h:181
 // index:0
 // Public static inline Visibility=Default Availability=Available
 // [4] QTime fromMSecsSinceStartOfDay(int)
@@ -819,7 +743,7 @@ func QTime_FromMSecsSinceStartOfDay(msecs int) *QTime /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:192
+// /usr/include/qt/QtCore/qdatetime.h:182
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int msecsSinceStartOfDay() const
@@ -833,7 +757,7 @@ func (this *QTime) MsecsSinceStartOfDay() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:194
+// /usr/include/qt/QtCore/qdatetime.h:184
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QTime currentTime()
@@ -854,7 +778,7 @@ func QTime_CurrentTime() *QTime /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:196
+// /usr/include/qt/QtCore/qdatetime.h:186
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QTime fromString(const QString &, Qt::DateFormat)
@@ -881,7 +805,7 @@ func QTime_FromString(s string, f int) *QTime /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:196
+// /usr/include/qt/QtCore/qdatetime.h:186
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QTime fromString(const QString &, Qt::DateFormat)
@@ -905,7 +829,7 @@ func (this *QTime) FromStringp(s string) *QTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:197
+// /usr/include/qt/QtCore/qdatetime.h:187
 // index:1
 // Public static Visibility=Default Availability=Available
 // [4] QTime fromString(const QString &, const QString &)
@@ -934,7 +858,7 @@ func QTime_FromString1(s string, format string) *QTime /*123*/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:201
+// /usr/include/qt/QtCore/qdatetime.h:191
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void start()
@@ -947,7 +871,7 @@ func (this *QTime) Start() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:202
+// /usr/include/qt/QtCore/qdatetime.h:192
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int restart()
@@ -961,7 +885,7 @@ func (this *QTime) Restart() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qdatetime.h:203
+// /usr/include/qt/QtCore/qdatetime.h:193
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int elapsed() const

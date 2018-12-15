@@ -65,7 +65,7 @@ func (*QImageWriter) NewFromPointer(cthis unsafe.Pointer) *QImageWriter {
 	return NewQImageWriterFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:67
+// /usr/include/qt/QtGui/qimagewriter.h:66
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QImageWriter()
@@ -84,7 +84,7 @@ func NewQImageWriter() *QImageWriter {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:68
+// /usr/include/qt/QtGui/qimagewriter.h:67
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QImageWriter(QIODevice *, const QByteArray &)
@@ -111,7 +111,7 @@ func NewQImageWriter1(device qtcore.QIODevice_ITF /*777 QIODevice **/, format qt
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:69
+// /usr/include/qt/QtGui/qimagewriter.h:68
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QImageWriter(const QString &, const QByteArray &)
@@ -136,7 +136,7 @@ func NewQImageWriter2(fileName string, format qtcore.QByteArray_ITF) *QImageWrit
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:69
+// /usr/include/qt/QtGui/qimagewriter.h:68
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QImageWriter(const QString &, const QByteArray &)
@@ -159,7 +159,7 @@ func NewQImageWriter2p(fileName string) *QImageWriter {
 	return gothis
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:70
+// /usr/include/qt/QtGui/qimagewriter.h:69
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QImageWriter()
@@ -174,7 +174,7 @@ func DeleteQImageWriter(this *QImageWriter) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:72
+// /usr/include/qt/QtGui/qimagewriter.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFormat(const QByteArray &)
@@ -201,7 +201,7 @@ func (this *QImageWriter) SetFormat(format qtcore.QByteArray_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:73
+// /usr/include/qt/QtGui/qimagewriter.h:72
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray format() const
@@ -219,7 +219,7 @@ func (this *QImageWriter) Format() *qtcore.QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:75
+// /usr/include/qt/QtGui/qimagewriter.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDevice(QIODevice *)
@@ -240,7 +240,7 @@ func (this *QImageWriter) SetDevice(device qtcore.QIODevice_ITF /*777 QIODevice 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:76
+// /usr/include/qt/QtGui/qimagewriter.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QIODevice * device() const
@@ -256,7 +256,7 @@ func (this *QImageWriter) Device() *qtcore.QIODevice /*777 QIODevice **/ {
 	return qtcore.NewQIODeviceFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:78
+// /usr/include/qt/QtGui/qimagewriter.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFileName(const QString &)
@@ -273,7 +273,7 @@ func (this *QImageWriter) SetFileName(fileName string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:79
+// /usr/include/qt/QtGui/qimagewriter.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString fileName() const
@@ -292,7 +292,7 @@ func (this *QImageWriter) FileName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:81
+// /usr/include/qt/QtGui/qimagewriter.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setQuality(int)
@@ -311,7 +311,7 @@ func (this *QImageWriter) SetQuality(quality int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:82
+// /usr/include/qt/QtGui/qimagewriter.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int quality() const
@@ -327,7 +327,7 @@ func (this *QImageWriter) Quality() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:84
+// /usr/include/qt/QtGui/qimagewriter.h:83
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCompression(int)
@@ -344,7 +344,7 @@ func (this *QImageWriter) SetCompression(compression int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:85
+// /usr/include/qt/QtGui/qimagewriter.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int compression() const
@@ -360,7 +360,7 @@ func (this *QImageWriter) Compression() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:87
+// /usr/include/qt/QtGui/qimagewriter.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setGamma(float)
@@ -377,7 +377,7 @@ func (this *QImageWriter) SetGamma(gamma float32) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:88
+// /usr/include/qt/QtGui/qimagewriter.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] float gamma() const
@@ -393,7 +393,7 @@ func (this *QImageWriter) Gamma() float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:90
+// /usr/include/qt/QtGui/qimagewriter.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSubType(const QByteArray &)
@@ -424,7 +424,7 @@ func (this *QImageWriter) SetSubType(type_ qtcore.QByteArray_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:91
+// /usr/include/qt/QtGui/qimagewriter.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray subType() const
@@ -444,7 +444,7 @@ func (this *QImageWriter) SubType() *qtcore.QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:94
+// /usr/include/qt/QtGui/qimagewriter.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOptimizedWrite(bool)
@@ -463,7 +463,7 @@ func (this *QImageWriter) SetOptimizedWrite(optimize bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:95
+// /usr/include/qt/QtGui/qimagewriter.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool optimizedWrite() const
@@ -481,7 +481,7 @@ func (this *QImageWriter) OptimizedWrite() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:97
+// /usr/include/qt/QtGui/qimagewriter.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setProgressiveScanWrite(bool)
@@ -500,7 +500,7 @@ func (this *QImageWriter) SetProgressiveScanWrite(progressive bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:98
+// /usr/include/qt/QtGui/qimagewriter.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool progressiveScanWrite() const
@@ -518,7 +518,7 @@ func (this *QImageWriter) ProgressiveScanWrite() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:100
+// /usr/include/qt/QtGui/qimagewriter.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] QImageIOHandler::Transformations transformation() const
@@ -536,7 +536,7 @@ func (this *QImageWriter) Transformation() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:101
+// /usr/include/qt/QtGui/qimagewriter.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTransformation(QImageIOHandler::Transformations)
@@ -555,7 +555,7 @@ func (this *QImageWriter) SetTransformation(orientation int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:104
+// /usr/include/qt/QtGui/qimagewriter.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setDescription(const QString &)
@@ -570,7 +570,7 @@ func (this *QImageWriter) SetDescription(description string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:105
+// /usr/include/qt/QtGui/qimagewriter.h:104
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString description() const
@@ -587,7 +587,7 @@ func (this *QImageWriter) Description() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:107
+// /usr/include/qt/QtGui/qimagewriter.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setText(const QString &, const QString &)
@@ -622,7 +622,7 @@ func (this *QImageWriter) SetText(key string, text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:109
+// /usr/include/qt/QtGui/qimagewriter.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool canWrite() const
@@ -638,7 +638,7 @@ func (this *QImageWriter) CanWrite() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:110
+// /usr/include/qt/QtGui/qimagewriter.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool write(const QImage &)
@@ -658,7 +658,7 @@ func (this *QImageWriter) Write(image QImage_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:112
+// /usr/include/qt/QtGui/qimagewriter.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QImageWriter::ImageWriterError error() const
@@ -674,7 +674,7 @@ func (this *QImageWriter) Error() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:113
+// /usr/include/qt/QtGui/qimagewriter.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString errorString() const
@@ -693,7 +693,7 @@ func (this *QImageWriter) ErrorString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtGui/qimagewriter.h:115
+// /usr/include/qt/QtGui/qimagewriter.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool supportsOption(QImageIOHandler::ImageOption) const
@@ -738,9 +738,6 @@ const QImageWriter__DeviceError QImageWriter__ImageWriterError = 1
 // Qt does not support the requested image format.
 const QImageWriter__UnsupportedFormatError QImageWriter__ImageWriterError = 2
 
-// An attempt was made to write an invalid QImage. An example of an invalid image would be a null QImage.
-const QImageWriter__InvalidImageError QImageWriter__ImageWriterError = 3
-
 func (this *QImageWriter) ImageWriterErrorItemName(val int) string {
 	switch val {
 	case QImageWriter__UnknownError: // 0
@@ -749,8 +746,6 @@ func (this *QImageWriter) ImageWriterErrorItemName(val int) string {
 		return "DeviceError"
 	case QImageWriter__UnsupportedFormatError: // 2
 		return "UnsupportedFormatError"
-	case QImageWriter__InvalidImageError: // 3
-		return "InvalidImageError"
 	default:
 		return fmt.Sprintf("%d", val)
 	}

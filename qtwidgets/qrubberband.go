@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qrubberband.h
@@ -101,7 +99,7 @@ func (*QRubberBand) NewFromPointer(cthis unsafe.Pointer) *QRubberBand {
 	return NewQRubberBandFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qrubberband.h:55
+// /usr/include/qt/QtWidgets/qrubberband.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -115,7 +113,7 @@ func (this *QRubberBand) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qrubberband.h:59
+// /usr/include/qt/QtWidgets/qrubberband.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRubberBand(QRubberBand::Shape, QWidget *)
@@ -140,7 +138,7 @@ func NewQRubberBand(arg0 int, arg1 QWidget_ITF /*777 QWidget **/) *QRubberBand {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qrubberband.h:59
+// /usr/include/qt/QtWidgets/qrubberband.h:60
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QRubberBand(QRubberBand::Shape, QWidget *)
@@ -163,7 +161,7 @@ func NewQRubberBandp(arg0 int) *QRubberBand {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qrubberband.h:60
+// /usr/include/qt/QtWidgets/qrubberband.h:61
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QRubberBand()
@@ -178,7 +176,7 @@ func DeleteQRubberBand(this *QRubberBand) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qrubberband.h:62
+// /usr/include/qt/QtWidgets/qrubberband.h:63
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QRubberBand::Shape shape() const
@@ -192,7 +190,7 @@ func (this *QRubberBand) Shape() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qrubberband.h:64
+// /usr/include/qt/QtWidgets/qrubberband.h:65
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setGeometry(const QRect &)
@@ -211,7 +209,7 @@ func (this *QRubberBand) SetGeometry(r qtcore.QRect_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qrubberband.h:66
+// /usr/include/qt/QtWidgets/qrubberband.h:67
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setGeometry(int, int, int, int)
@@ -226,7 +224,7 @@ func (this *QRubberBand) SetGeometry1(x int, y int, w int, h int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qrubberband.h:67
+// /usr/include/qt/QtWidgets/qrubberband.h:68
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void move(int, int)
@@ -241,7 +239,7 @@ func (this *QRubberBand) Move(x int, y int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qrubberband.h:68
+// /usr/include/qt/QtWidgets/qrubberband.h:69
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void move(const QPoint &)
@@ -260,7 +258,7 @@ func (this *QRubberBand) Move1(p qtcore.QPoint_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qrubberband.h:70
+// /usr/include/qt/QtWidgets/qrubberband.h:71
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void resize(int, int)
@@ -275,7 +273,7 @@ func (this *QRubberBand) Resize(w int, h int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qrubberband.h:72
+// /usr/include/qt/QtWidgets/qrubberband.h:73
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void resize(const QSize &)
@@ -294,7 +292,7 @@ func (this *QRubberBand) Resize1(s qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qrubberband.h:76
+// /usr/include/qt/QtWidgets/qrubberband.h:77
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -312,7 +310,7 @@ func (this *QRubberBand) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qrubberband.h:77
+// /usr/include/qt/QtWidgets/qrubberband.h:78
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
@@ -329,7 +327,7 @@ func (this *QRubberBand) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPaintEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qrubberband.h:78
+// /usr/include/qt/QtWidgets/qrubberband.h:79
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
@@ -346,7 +344,7 @@ func (this *QRubberBand) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qrubberband.h:79
+// /usr/include/qt/QtWidgets/qrubberband.h:80
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
@@ -363,7 +361,7 @@ func (this *QRubberBand) ShowEvent(arg0 qtgui.QShowEvent_ITF /*777 QShowEvent **
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qrubberband.h:80
+// /usr/include/qt/QtWidgets/qrubberband.h:81
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
@@ -380,7 +378,7 @@ func (this *QRubberBand) ResizeEvent(arg0 qtgui.QResizeEvent_ITF /*777 QResizeEv
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qrubberband.h:81
+// /usr/include/qt/QtWidgets/qrubberband.h:82
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void moveEvent(QMoveEvent *)
@@ -397,7 +395,7 @@ func (this *QRubberBand) MoveEvent(arg0 qtgui.QMoveEvent_ITF /*777 QMoveEvent **
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qrubberband.h:82
+// /usr/include/qt/QtWidgets/qrubberband.h:83
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionRubberBand *) const

@@ -595,7 +595,7 @@ func (this *QNetworkReply) PreSharedKeyAuthenticationRequired(authenticator QSsl
 // [-2] void redirected(const QUrl &)
 
 /*
-This signal is emitted if the QNetworkRequest::FollowRedirectsAttribute was set in the request and the server responded with a 3xx status (specifically 301, 302, 303, 305, 307 or 308 status code) with a valid url in the location header, indicating a HTTP redirect. The url parameter contains the new redirect url as returned by the server in the location header.
+This signal is emitted if the QNetworkRequest::FollowRedirectsAttribute was set in the request and the server responded with a 3xx status (specifically 301, 302, 303, 305 or 307 status code) with a valid url in the location header, indicating a HTTP redirect. The url parameter contains the new redirect url as returned by the server in the location header.
 
 This function was introduced in  Qt 5.6.
 
@@ -616,7 +616,7 @@ func (this *QNetworkReply) Redirected(url qtcore.QUrl_ITF) {
 // [-2] void redirectAllowed()
 
 /*
-When client code handling the redirected() signal has verified the new URL, it emits this signal to allow the redirect to go ahead. This protocol applies to network requests whose redirects policy is set to QNetworkRequest::UserVerifiedRedirectPolicy
+When client code handling the redirected() signal has verified the new URL, it emits this signal to allow the redirect to go ahead. This protocol applies to network requests whose redirects policy is set to QNetworkRequest::UserVerifiedRedirectsPolicy.
 
 This function was introduced in  Qt 5.9.
 

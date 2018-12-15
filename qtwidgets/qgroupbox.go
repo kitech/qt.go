@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgroupbox.h
@@ -116,7 +114,7 @@ func (*QGroupBox) NewFromPointer(cthis unsafe.Pointer) *QGroupBox {
 	return NewQGroupBoxFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:54
+// /usr/include/qt/QtWidgets/qgroupbox.h:55
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -130,7 +128,7 @@ func (this *QGroupBox) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject 
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:62
+// /usr/include/qt/QtWidgets/qgroupbox.h:63
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGroupBox(QWidget *)
@@ -153,7 +151,7 @@ func NewQGroupBox(parent QWidget_ITF /*777 QWidget **/) *QGroupBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:62
+// /usr/include/qt/QtWidgets/qgroupbox.h:63
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGroupBox(QWidget *)
@@ -174,7 +172,7 @@ func NewQGroupBoxp() *QGroupBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:63
+// /usr/include/qt/QtWidgets/qgroupbox.h:64
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGroupBox(const QString &, QWidget *)
@@ -199,7 +197,7 @@ func NewQGroupBox1(title string, parent QWidget_ITF /*777 QWidget **/) *QGroupBo
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:63
+// /usr/include/qt/QtWidgets/qgroupbox.h:64
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QGroupBox(const QString &, QWidget *)
@@ -222,7 +220,7 @@ func NewQGroupBox1p(title string) *QGroupBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:64
+// /usr/include/qt/QtWidgets/qgroupbox.h:65
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGroupBox()
@@ -237,7 +235,7 @@ func DeleteQGroupBox(this *QGroupBox) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:66
+// /usr/include/qt/QtWidgets/qgroupbox.h:67
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString title() const
@@ -254,7 +252,7 @@ func (this *QGroupBox) Title() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:67
+// /usr/include/qt/QtWidgets/qgroupbox.h:68
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTitle(const QString &)
@@ -269,7 +267,7 @@ func (this *QGroupBox) SetTitle(title string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:69
+// /usr/include/qt/QtWidgets/qgroupbox.h:70
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Alignment alignment() const
@@ -283,7 +281,7 @@ func (this *QGroupBox) Alignment() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:70
+// /usr/include/qt/QtWidgets/qgroupbox.h:71
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAlignment(int)
@@ -296,7 +294,7 @@ func (this *QGroupBox) SetAlignment(alignment int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:72
+// /usr/include/qt/QtWidgets/qgroupbox.h:73
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
@@ -312,7 +310,7 @@ func (this *QGroupBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:74
+// /usr/include/qt/QtWidgets/qgroupbox.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isFlat() const
@@ -326,7 +324,7 @@ func (this *QGroupBox) IsFlat() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:75
+// /usr/include/qt/QtWidgets/qgroupbox.h:76
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlat(bool)
@@ -339,7 +337,7 @@ func (this *QGroupBox) SetFlat(flat bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:76
+// /usr/include/qt/QtWidgets/qgroupbox.h:77
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isCheckable() const
@@ -353,7 +351,7 @@ func (this *QGroupBox) IsCheckable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:77
+// /usr/include/qt/QtWidgets/qgroupbox.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCheckable(bool)
@@ -366,7 +364,7 @@ func (this *QGroupBox) SetCheckable(checkable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:78
+// /usr/include/qt/QtWidgets/qgroupbox.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isChecked() const
@@ -380,7 +378,7 @@ func (this *QGroupBox) IsChecked() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:81
+// /usr/include/qt/QtWidgets/qgroupbox.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setChecked(bool)
@@ -393,7 +391,7 @@ func (this *QGroupBox) SetChecked(checked bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:84
+// /usr/include/qt/QtWidgets/qgroupbox.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clicked(bool)
@@ -412,7 +410,7 @@ func (this *QGroupBox) Clicked(checked bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:84
+// /usr/include/qt/QtWidgets/qgroupbox.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clicked(bool)
@@ -433,7 +431,7 @@ func (this *QGroupBox) Clickedp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:85
+// /usr/include/qt/QtWidgets/qgroupbox.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void toggled(bool)
@@ -450,7 +448,7 @@ func (this *QGroupBox) Toggled(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:88
+// /usr/include/qt/QtWidgets/qgroupbox.h:89
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -468,7 +466,7 @@ func (this *QGroupBox) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:89
+// /usr/include/qt/QtWidgets/qgroupbox.h:90
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void childEvent(QChildEvent *)
@@ -485,7 +483,7 @@ func (this *QGroupBox) ChildEvent(event qtcore.QChildEvent_ITF /*777 QChildEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:90
+// /usr/include/qt/QtWidgets/qgroupbox.h:91
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
@@ -502,7 +500,7 @@ func (this *QGroupBox) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QResizeEve
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:91
+// /usr/include/qt/QtWidgets/qgroupbox.h:92
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
@@ -519,7 +517,7 @@ func (this *QGroupBox) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:92
+// /usr/include/qt/QtWidgets/qgroupbox.h:93
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
@@ -536,7 +534,7 @@ func (this *QGroupBox) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QFocusEven
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:93
+// /usr/include/qt/QtWidgets/qgroupbox.h:94
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
@@ -553,7 +551,7 @@ func (this *QGroupBox) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:94
+// /usr/include/qt/QtWidgets/qgroupbox.h:95
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
@@ -570,7 +568,7 @@ func (this *QGroupBox) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 QMouseE
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:95
+// /usr/include/qt/QtWidgets/qgroupbox.h:96
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
@@ -587,7 +585,7 @@ func (this *QGroupBox) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 QMouseEv
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:96
+// /usr/include/qt/QtWidgets/qgroupbox.h:97
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
@@ -604,7 +602,7 @@ func (this *QGroupBox) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*777 QMous
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgroupbox.h:97
+// /usr/include/qt/QtWidgets/qgroupbox.h:98
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionGroupBox *) const

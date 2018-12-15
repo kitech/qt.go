@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 22
+// extern C begin: 20
 */
 // import "C"
 import "unsafe"
@@ -64,7 +64,7 @@ func (*QTextEncoder) NewFromPointer(cthis unsafe.Pointer) *QTextEncoder {
 	return NewQTextEncoderFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:141
+// /usr/include/qt/QtCore/qtextcodec.h:135
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTextEncoder(const QTextCodec *)
@@ -87,7 +87,7 @@ func NewQTextEncoder(codec QTextCodec_ITF /*777 const QTextCodec **/) *QTextEnco
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:142
+// /usr/include/qt/QtCore/qtextcodec.h:136
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTextEncoder(const QTextCodec *, QTextCodec::ConversionFlags)
@@ -110,7 +110,7 @@ func NewQTextEncoder1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags int
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:143
+// /usr/include/qt/QtCore/qtextcodec.h:137
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTextEncoder()
@@ -125,7 +125,7 @@ func DeleteQTextEncoder(this *QTextEncoder) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:145
+// /usr/include/qt/QtCore/qtextcodec.h:138
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray fromUnicode(const QString &)
@@ -143,35 +143,15 @@ func (this *QTextEncoder) FromUnicode(str string) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:147
+// /usr/include/qt/QtCore/qtextcodec.h:139
 // index:1
-// Public Visibility=Default Availability=Available
-// [8] QByteArray fromUnicode(QStringView)
-
-/*
-Converts str from Unicode to the encoding of this codec, and returns the result in a QByteArray.
-*/
-func (this *QTextEncoder) FromUnicode1(str QStringView_ITF /*123*/) *QByteArray /*123*/ {
-	var convArg0 unsafe.Pointer
-	if str != nil && str.QStringView_PTR() != nil {
-		convArg0 = str.QStringView_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QTextEncoder11fromUnicodeE11QStringView", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQByteArrayFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qtextcodec.h:148
-// index:2
 // Public Visibility=Default Availability=Available
 // [8] QByteArray fromUnicode(const QChar *, int)
 
 /*
 Converts str from Unicode to the encoding of this codec, and returns the result in a QByteArray.
 */
-func (this *QTextEncoder) FromUnicode2(uc QChar_ITF /*777 const QChar **/, len_ int) *QByteArray /*123*/ {
+func (this *QTextEncoder) FromUnicode1(uc QChar_ITF /*777 const QChar **/, len_ int) *QByteArray /*123*/ {
 	var convArg0 unsafe.Pointer
 	if uc != nil && uc.QChar_PTR() != nil {
 		convArg0 = uc.QChar_PTR().GetCthis()
@@ -183,7 +163,7 @@ func (this *QTextEncoder) FromUnicode2(uc QChar_ITF /*777 const QChar **/, len_ 
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:149
+// /usr/include/qt/QtCore/qtextcodec.h:140
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasFailure() const

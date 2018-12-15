@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qabstractspinbox.h
@@ -166,7 +164,7 @@ func (*QAbstractSpinBox) NewFromPointer(cthis unsafe.Pointer) *QAbstractSpinBox 
 	return NewQAbstractSpinBoxFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:58
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:59
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -180,7 +178,7 @@ func (this *QAbstractSpinBox) MetaObject() *qtcore.QMetaObject /*777 const QMeta
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:73
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractSpinBox(QWidget *)
@@ -203,7 +201,7 @@ func NewQAbstractSpinBox(parent QWidget_ITF /*777 QWidget **/) *QAbstractSpinBox
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:73
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:74
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QAbstractSpinBox(QWidget *)
@@ -224,7 +222,7 @@ func NewQAbstractSpinBoxp() *QAbstractSpinBox {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:74
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:75
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QAbstractSpinBox()
@@ -239,7 +237,7 @@ func DeleteQAbstractSpinBox(this *QAbstractSpinBox) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:83
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAbstractSpinBox::ButtonSymbols buttonSymbols() const
@@ -253,7 +251,7 @@ func (this *QAbstractSpinBox) ButtonSymbols() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:84
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:85
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setButtonSymbols(QAbstractSpinBox::ButtonSymbols)
@@ -266,7 +264,7 @@ func (this *QAbstractSpinBox) SetButtonSymbols(bs int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:89
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCorrectionMode(QAbstractSpinBox::CorrectionMode)
@@ -279,7 +277,7 @@ func (this *QAbstractSpinBox) SetCorrectionMode(cm int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:90
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAbstractSpinBox::CorrectionMode correctionMode() const
@@ -293,7 +291,7 @@ func (this *QAbstractSpinBox) CorrectionMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:92
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasAcceptableInput() const
@@ -307,7 +305,7 @@ func (this *QAbstractSpinBox) HasAcceptableInput() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:93
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString text() const
@@ -324,7 +322,7 @@ func (this *QAbstractSpinBox) Text() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:95
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:96
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString specialValueText() const
@@ -341,7 +339,7 @@ func (this *QAbstractSpinBox) SpecialValueText() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:96
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:97
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSpecialValueText(const QString &)
@@ -356,7 +354,7 @@ func (this *QAbstractSpinBox) SetSpecialValueText(txt string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:98
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:99
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool wrapping() const
@@ -370,7 +368,7 @@ func (this *QAbstractSpinBox) Wrapping() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:99
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:100
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setWrapping(bool)
@@ -383,7 +381,7 @@ func (this *QAbstractSpinBox) SetWrapping(w bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:101
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:102
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setReadOnly(bool)
@@ -396,7 +394,7 @@ func (this *QAbstractSpinBox) SetReadOnly(r bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:102
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:103
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isReadOnly() const
@@ -410,7 +408,7 @@ func (this *QAbstractSpinBox) IsReadOnly() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:104
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:105
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setKeyboardTracking(bool)
@@ -423,7 +421,7 @@ func (this *QAbstractSpinBox) SetKeyboardTracking(kt bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:105
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:106
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool keyboardTracking() const
@@ -437,7 +435,7 @@ func (this *QAbstractSpinBox) KeyboardTracking() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:107
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:108
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAlignment(Qt::Alignment)
@@ -450,7 +448,7 @@ func (this *QAbstractSpinBox) SetAlignment(flag int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:108
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:109
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::Alignment alignment() const
@@ -464,7 +462,7 @@ func (this *QAbstractSpinBox) Alignment() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:110
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:111
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFrame(bool)
@@ -477,7 +475,7 @@ func (this *QAbstractSpinBox) SetFrame(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:111
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:112
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasFrame() const
@@ -491,7 +489,7 @@ func (this *QAbstractSpinBox) HasFrame() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:113
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:114
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAccelerated(bool)
@@ -504,7 +502,7 @@ func (this *QAbstractSpinBox) SetAccelerated(on bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:114
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:115
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isAccelerated() const
@@ -518,7 +516,7 @@ func (this *QAbstractSpinBox) IsAccelerated() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:116
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:117
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setGroupSeparatorShown(bool)
@@ -531,7 +529,7 @@ func (this *QAbstractSpinBox) SetGroupSeparatorShown(shown bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:117
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isGroupSeparatorShown() const
@@ -545,7 +543,7 @@ func (this *QAbstractSpinBox) IsGroupSeparatorShown() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:119
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:120
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
@@ -561,7 +559,7 @@ func (this *QAbstractSpinBox) SizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:120
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:121
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QSize minimumSizeHint() const
@@ -577,7 +575,7 @@ func (this *QAbstractSpinBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:121
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:122
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void interpretText()
@@ -590,7 +588,7 @@ func (this *QAbstractSpinBox) InterpretText() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:122
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:123
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)
@@ -608,7 +606,7 @@ func (this *QAbstractSpinBox) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bo
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:124
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:125
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [16] QVariant inputMethodQuery(Qt::InputMethodQuery) const
@@ -624,7 +622,7 @@ func (this *QAbstractSpinBox) InputMethodQuery(arg0 int) *qtcore.QVariant /*123*
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:126
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:127
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] QValidator::State validate(QString &, int &) const
@@ -640,7 +638,7 @@ func (this *QAbstractSpinBox) Validate(input string, pos int) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:127
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:128
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void fixup(QString &) const
@@ -655,7 +653,7 @@ func (this *QAbstractSpinBox) Fixup(input string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:129
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:130
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void stepBy(int)
@@ -670,7 +668,7 @@ func (this *QAbstractSpinBox) StepBy(steps int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:131
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:132
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stepUp()
@@ -685,7 +683,7 @@ func (this *QAbstractSpinBox) StepUp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:132
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:133
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stepDown()
@@ -700,7 +698,7 @@ func (this *QAbstractSpinBox) StepDown() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:133
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:134
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void selectAll()
@@ -713,7 +711,7 @@ func (this *QAbstractSpinBox) SelectAll() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:134
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:135
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void clear()
@@ -726,7 +724,7 @@ func (this *QAbstractSpinBox) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:136
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:137
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void resizeEvent(QResizeEvent *)
@@ -743,7 +741,7 @@ func (this *QAbstractSpinBox) ResizeEvent(event qtgui.QResizeEvent_ITF /*777 QRe
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:137
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:138
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
@@ -771,7 +769,7 @@ func (this *QAbstractSpinBox) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKey
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:138
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:139
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
@@ -788,7 +786,7 @@ func (this *QAbstractSpinBox) KeyReleaseEvent(event qtgui.QKeyEvent_ITF /*777 QK
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:140
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:141
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QWheelEvent *)
@@ -805,7 +803,7 @@ func (this *QAbstractSpinBox) WheelEvent(event qtgui.QWheelEvent_ITF /*777 QWhee
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:142
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:143
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
@@ -822,7 +820,7 @@ func (this *QAbstractSpinBox) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QFo
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:143
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:144
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
@@ -839,7 +837,7 @@ func (this *QAbstractSpinBox) FocusOutEvent(event qtgui.QFocusEvent_ITF /*777 QF
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:145
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:146
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QContextMenuEvent *)
@@ -856,7 +854,7 @@ func (this *QAbstractSpinBox) ContextMenuEvent(event qtgui.QContextMenuEvent_ITF
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:147
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:148
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void changeEvent(QEvent *)
@@ -873,7 +871,7 @@ func (this *QAbstractSpinBox) ChangeEvent(event qtcore.QEvent_ITF /*777 QEvent *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:148
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:149
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void closeEvent(QCloseEvent *)
@@ -890,7 +888,7 @@ func (this *QAbstractSpinBox) CloseEvent(event qtgui.QCloseEvent_ITF /*777 QClos
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:149
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:150
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hideEvent(QHideEvent *)
@@ -907,7 +905,7 @@ func (this *QAbstractSpinBox) HideEvent(event qtgui.QHideEvent_ITF /*777 QHideEv
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:150
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:151
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QMouseEvent *)
@@ -924,7 +922,7 @@ func (this *QAbstractSpinBox) MousePressEvent(event qtgui.QMouseEvent_ITF /*777 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:151
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:152
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QMouseEvent *)
@@ -941,7 +939,7 @@ func (this *QAbstractSpinBox) MouseReleaseEvent(event qtgui.QMouseEvent_ITF /*77
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:152
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:153
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QMouseEvent *)
@@ -958,7 +956,7 @@ func (this *QAbstractSpinBox) MouseMoveEvent(event qtgui.QMouseEvent_ITF /*777 Q
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:153
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:154
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void timerEvent(QTimerEvent *)
@@ -975,7 +973,7 @@ func (this *QAbstractSpinBox) TimerEvent(event qtcore.QTimerEvent_ITF /*777 QTim
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:154
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:155
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void paintEvent(QPaintEvent *)
@@ -992,7 +990,7 @@ func (this *QAbstractSpinBox) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPain
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:155
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:156
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void showEvent(QShowEvent *)
@@ -1009,7 +1007,7 @@ func (this *QAbstractSpinBox) ShowEvent(event qtgui.QShowEvent_ITF /*777 QShowEv
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:156
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:157
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void initStyleOption(QStyleOptionSpinBox *) const
@@ -1028,7 +1026,7 @@ func (this *QAbstractSpinBox) InitStyleOption(option QStyleOptionSpinBox_ITF /*7
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:158
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:159
 // index:0
 // Protected Visibility=Default Availability=Available
 // [8] QLineEdit * lineEdit() const
@@ -1044,7 +1042,7 @@ func (this *QAbstractSpinBox) LineEdit() *QLineEdit /*777 QLineEdit **/ {
 	return /*==*/ NewQLineEditFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:159
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:160
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void setLineEdit(QLineEdit *)
@@ -1067,7 +1065,7 @@ func (this *QAbstractSpinBox) SetLineEdit(edit QLineEdit_ITF /*777 QLineEdit **/
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:161
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:162
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [4] QAbstractSpinBox::StepEnabled stepEnabled() const
@@ -1089,7 +1087,7 @@ func (this *QAbstractSpinBox) StepEnabled() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:163
+// /usr/include/qt/QtWidgets/qabstractspinbox.h:164
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void editingFinished()

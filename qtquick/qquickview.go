@@ -18,7 +18,7 @@ package qtquick
 
 /*
 #include <stdlib.h>
-// extern C begin: 69
+// extern C begin: 67
 */
 // import "C"
 import "unsafe"

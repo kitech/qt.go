@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtnetwork
 
 // /usr/include/qt/QtNetwork/qlocalserver.h
@@ -70,7 +68,7 @@ func (*QLocalServer) NewFromPointer(cthis unsafe.Pointer) *QLocalServer {
 	return NewQLocalServerFromPointer(cthis)
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:55
+// /usr/include/qt/QtNetwork/qlocalserver.h:56
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -84,7 +82,7 @@ func (this *QLocalServer) MetaObject() *qtcore.QMetaObject /*777 const QMetaObje
 	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:60
+// /usr/include/qt/QtNetwork/qlocalserver.h:61
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void newConnection()
@@ -99,7 +97,7 @@ func (this *QLocalServer) NewConnection() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:74
+// /usr/include/qt/QtNetwork/qlocalserver.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QLocalServer(QObject *)
@@ -124,7 +122,7 @@ func NewQLocalServer(parent qtcore.QObject_ITF /*777 QObject **/) *QLocalServer 
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:74
+// /usr/include/qt/QtNetwork/qlocalserver.h:75
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QLocalServer(QObject *)
@@ -147,7 +145,7 @@ func NewQLocalServerp() *QLocalServer {
 	return gothis
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:75
+// /usr/include/qt/QtNetwork/qlocalserver.h:76
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QLocalServer()
@@ -162,7 +160,7 @@ func DeleteQLocalServer(this *QLocalServer) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:77
+// /usr/include/qt/QtNetwork/qlocalserver.h:78
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void close()
@@ -177,7 +175,7 @@ func (this *QLocalServer) Close() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:78
+// /usr/include/qt/QtNetwork/qlocalserver.h:79
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString errorString() const
@@ -196,7 +194,7 @@ func (this *QLocalServer) ErrorString() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:79
+// /usr/include/qt/QtNetwork/qlocalserver.h:80
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool hasPendingConnections() const
@@ -212,7 +210,7 @@ func (this *QLocalServer) HasPendingConnections() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:80
+// /usr/include/qt/QtNetwork/qlocalserver.h:81
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isListening() const
@@ -228,7 +226,7 @@ func (this *QLocalServer) IsListening() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:81
+// /usr/include/qt/QtNetwork/qlocalserver.h:82
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool listen(const QString &)
@@ -252,7 +250,7 @@ func (this *QLocalServer) Listen(name string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:82
+// /usr/include/qt/QtNetwork/qlocalserver.h:83
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool listen(qintptr)
@@ -274,7 +272,7 @@ func (this *QLocalServer) Listen1(socketDescriptor int64) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:83
+// /usr/include/qt/QtNetwork/qlocalserver.h:84
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int maxPendingConnections() const
@@ -290,7 +288,7 @@ func (this *QLocalServer) MaxPendingConnections() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:84
+// /usr/include/qt/QtNetwork/qlocalserver.h:85
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QLocalSocket * nextPendingConnection()
@@ -310,7 +308,7 @@ func (this *QLocalServer) NextPendingConnection() *QLocalSocket /*777 QLocalSock
 	return /*==*/ NewQLocalSocketFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:85
+// /usr/include/qt/QtNetwork/qlocalserver.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString serverName() const
@@ -329,7 +327,7 @@ func (this *QLocalServer) ServerName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:86
+// /usr/include/qt/QtNetwork/qlocalserver.h:87
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString fullServerName() const
@@ -350,7 +348,7 @@ func (this *QLocalServer) FullServerName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:87
+// /usr/include/qt/QtNetwork/qlocalserver.h:88
 // index:0
 // Public static Visibility=Default Availability=Available
 // [1] bool removeServer(const QString &)
@@ -377,7 +375,7 @@ func QLocalServer_RemoveServer(name string) bool {
 	return rv
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:88
+// /usr/include/qt/QtNetwork/qlocalserver.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QAbstractSocket::SocketError serverError() const
@@ -393,7 +391,7 @@ func (this *QLocalServer) ServerError() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:89
+// /usr/include/qt/QtNetwork/qlocalserver.h:90
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMaxPendingConnections(int)
@@ -410,7 +408,7 @@ func (this *QLocalServer) SetMaxPendingConnections(numConnections int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:90
+// /usr/include/qt/QtNetwork/qlocalserver.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForNewConnection(int, bool *)
@@ -432,7 +430,7 @@ func (this *QLocalServer) WaitForNewConnection(msec int, timedOut *bool) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:90
+// /usr/include/qt/QtNetwork/qlocalserver.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForNewConnection(int, bool *)
@@ -458,7 +456,7 @@ func (this *QLocalServer) WaitForNewConnectionp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:90
+// /usr/include/qt/QtNetwork/qlocalserver.h:91
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool waitForNewConnection(int, bool *)
@@ -482,7 +480,7 @@ func (this *QLocalServer) WaitForNewConnectionp1(msec int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:92
+// /usr/include/qt/QtNetwork/qlocalserver.h:93
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSocketOptions(QLocalServer::SocketOptions)
@@ -495,7 +493,7 @@ func (this *QLocalServer) SetSocketOptions(options int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:93
+// /usr/include/qt/QtNetwork/qlocalserver.h:94
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QLocalServer::SocketOptions socketOptions() const
@@ -515,33 +513,7 @@ func (this *QLocalServer) SocketOptions() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:95
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] qintptr socketDescriptor() const
-
-/*
-Returns the native socket descriptor the server uses to listen for incoming instructions, or -1 if the server is not listening.
-
-The type of the descriptor depends on the platform:
-
-
-On Windows, the returned value is a Winsock 2 Socket Handle.
-With WinRT and on INTEGRITY, the returned value is the QTcpServer socket descriptor and the type is defined by socketDescriptor.
-On all other UNIX-like operating systems, the type is a file descriptor representing a listening socket.
-
-
-This function was introduced in  Qt 5.10.
-
-See also listen().
-*/
-func (this *QLocalServer) SocketDescriptor() int64 {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK12QLocalServer16socketDescriptorEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return int64(rv) // 222
-}
-
-// /usr/include/qt/QtNetwork/qlocalserver.h:98
+// /usr/include/qt/QtNetwork/qlocalserver.h:97
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void incomingConnection(quintptr)

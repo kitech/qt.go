@@ -1,5 +1,3 @@
-// +build !minimal
-
 package qtwidgets
 
 // /usr/include/qt/QtWidgets/qgraphicsitem.h
@@ -213,7 +211,7 @@ func (*QGraphicsItem) NewFromPointer(cthis unsafe.Pointer) *QGraphicsItem {
 	return NewQGraphicsItemFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:161
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:162
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsItem(QGraphicsItem *)
@@ -240,7 +238,7 @@ func NewQGraphicsItem(parent QGraphicsItem_ITF /*777 QGraphicsItem **/) *QGraphi
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:161
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:162
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QGraphicsItem(QGraphicsItem *)
@@ -265,7 +263,7 @@ func NewQGraphicsItemp() *QGraphicsItem {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:162
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:163
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QGraphicsItem()
@@ -280,7 +278,7 @@ func DeleteQGraphicsItem(this *QGraphicsItem) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:164
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:165
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsScene * scene() const
@@ -296,7 +294,7 @@ func (this *QGraphicsItem) Scene() *QGraphicsScene /*777 QGraphicsScene **/ {
 	return /*==*/ NewQGraphicsSceneFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:166
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:167
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsItem * parentItem() const
@@ -312,7 +310,7 @@ func (this *QGraphicsItem) ParentItem() *QGraphicsItem /*777 QGraphicsItem **/ {
 	return /*==*/ NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:167
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:168
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsItem * topLevelItem() const
@@ -328,7 +326,7 @@ func (this *QGraphicsItem) TopLevelItem() *QGraphicsItem /*777 QGraphicsItem **/
 	return /*==*/ NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:169
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:170
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsWidget * parentWidget() const
@@ -346,7 +344,7 @@ func (this *QGraphicsItem) ParentWidget() *QGraphicsWidget /*777 QGraphicsWidget
 	return /*==*/ NewQGraphicsWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:170
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:171
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsWidget * topLevelWidget() const
@@ -362,7 +360,7 @@ func (this *QGraphicsItem) TopLevelWidget() *QGraphicsWidget /*777 QGraphicsWidg
 	return /*==*/ NewQGraphicsWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:171
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:172
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsWidget * window() const
@@ -380,7 +378,7 @@ func (this *QGraphicsItem) Window() *QGraphicsWidget /*777 QGraphicsWidget **/ {
 	return /*==*/ NewQGraphicsWidgetFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:172
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:173
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsItem * panel() const
@@ -398,7 +396,7 @@ func (this *QGraphicsItem) Panel() *QGraphicsItem /*777 QGraphicsItem **/ {
 	return /*==*/ NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:173
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:174
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setParentItem(QGraphicsItem *)
@@ -421,7 +419,7 @@ func (this *QGraphicsItem) SetParentItem(parent QGraphicsItem_ITF /*777 QGraphic
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:177
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:178
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QList<QGraphicsItem *> childItems() const
@@ -442,7 +440,7 @@ func (this *QGraphicsItem) ChildItems() *QGraphicsItemList /*lll*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:178
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:179
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isWidget() const
@@ -458,7 +456,7 @@ func (this *QGraphicsItem) IsWidget() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:179
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:180
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isWindow() const
@@ -476,7 +474,7 @@ func (this *QGraphicsItem) IsWindow() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:180
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:181
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isPanel() const
@@ -494,7 +492,7 @@ func (this *QGraphicsItem) IsPanel() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:185
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:186
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsItemGroup * group() const
@@ -510,7 +508,7 @@ func (this *QGraphicsItem) Group() *QGraphicsItemGroup /*777 QGraphicsItemGroup 
 	return /*==*/ NewQGraphicsItemGroupFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:186
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:187
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setGroup(QGraphicsItemGroup *)
@@ -529,7 +527,7 @@ func (this *QGraphicsItem) SetGroup(group QGraphicsItemGroup_ITF /*777 QGraphics
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:188
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:189
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QGraphicsItem::GraphicsItemFlags flags() const
@@ -547,7 +545,7 @@ func (this *QGraphicsItem) Flags() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:189
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:190
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlag(QGraphicsItem::GraphicsItemFlag, bool)
@@ -562,7 +560,7 @@ func (this *QGraphicsItem) SetFlag(flag int, enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:189
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:190
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlag(QGraphicsItem::GraphicsItemFlag, bool)
@@ -579,7 +577,7 @@ func (this *QGraphicsItem) SetFlagp(flag int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:190
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:191
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFlags(QGraphicsItem::GraphicsItemFlags)
@@ -598,7 +596,7 @@ func (this *QGraphicsItem) SetFlags(flags int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:192
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:193
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QGraphicsItem::CacheMode cacheMode() const
@@ -616,7 +614,7 @@ func (this *QGraphicsItem) CacheMode() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:193
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:194
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCacheMode(QGraphicsItem::CacheMode, const QSize &)
@@ -649,7 +647,7 @@ func (this *QGraphicsItem) SetCacheMode(mode int, cacheSize qtcore.QSize_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:193
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:194
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCacheMode(QGraphicsItem::CacheMode, const QSize &)
@@ -680,7 +678,7 @@ func (this *QGraphicsItem) SetCacheModep(mode int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:195
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:196
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QGraphicsItem::PanelModality panelModality() const
@@ -698,7 +696,7 @@ func (this *QGraphicsItem) PanelModality() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:196
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:197
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPanelModality(QGraphicsItem::PanelModality)
@@ -717,7 +715,7 @@ func (this *QGraphicsItem) SetPanelModality(panelModality int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:197
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:198
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isBlockedByModalPanel(QGraphicsItem **) const
@@ -741,7 +739,7 @@ func (this *QGraphicsItem) IsBlockedByModalPanel(blockingPanel QGraphicsItem_ITF
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:197
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:198
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isBlockedByModalPanel(QGraphicsItem **) const
@@ -763,7 +761,7 @@ func (this *QGraphicsItem) IsBlockedByModalPanelp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:200
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:201
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toolTip() const
@@ -782,7 +780,7 @@ func (this *QGraphicsItem) ToolTip() string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:201
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:202
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setToolTip(const QString &)
@@ -799,7 +797,7 @@ func (this *QGraphicsItem) SetToolTip(toolTip string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:205
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:206
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QCursor cursor() const
@@ -826,7 +824,7 @@ func (this *QGraphicsItem) Cursor() *qtgui.QCursor /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:206
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:207
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setCursor(const QCursor &)
@@ -854,7 +852,7 @@ func (this *QGraphicsItem) SetCursor(cursor qtgui.QCursor_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:207
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:208
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasCursor() const
@@ -872,7 +870,7 @@ func (this *QGraphicsItem) HasCursor() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:208
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:209
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void unsetCursor()
@@ -887,7 +885,7 @@ func (this *QGraphicsItem) UnsetCursor() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:211
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:212
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isVisible() const
@@ -905,7 +903,7 @@ func (this *QGraphicsItem) IsVisible() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:212
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:213
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isVisibleTo(const QGraphicsItem *) const
@@ -929,7 +927,7 @@ func (this *QGraphicsItem) IsVisibleTo(parent QGraphicsItem_ITF /*777 const QGra
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:213
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:214
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setVisible(bool)
@@ -954,7 +952,7 @@ func (this *QGraphicsItem) SetVisible(visible bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:214
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:215
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void hide()
@@ -971,7 +969,7 @@ func (this *QGraphicsItem) Hide() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:215
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:216
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void show()
@@ -988,7 +986,7 @@ func (this *QGraphicsItem) Show() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:217
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:218
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isEnabled() const
@@ -1004,7 +1002,7 @@ func (this *QGraphicsItem) IsEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:218
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:219
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setEnabled(bool)
@@ -1029,7 +1027,7 @@ func (this *QGraphicsItem) SetEnabled(enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:220
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:221
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isSelected() const
@@ -1049,7 +1047,7 @@ func (this *QGraphicsItem) IsSelected() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:221
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:222
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setSelected(bool)
@@ -1072,7 +1070,7 @@ func (this *QGraphicsItem) SetSelected(selected bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:223
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:224
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool acceptDrops() const
@@ -1088,7 +1086,7 @@ func (this *QGraphicsItem) AcceptDrops() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:224
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:225
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAcceptDrops(bool)
@@ -1103,7 +1101,7 @@ func (this *QGraphicsItem) SetAcceptDrops(on bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:226
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:227
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal opacity() const
@@ -1125,7 +1123,7 @@ func (this *QGraphicsItem) Opacity() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:227
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:228
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal effectiveOpacity() const
@@ -1143,7 +1141,7 @@ func (this *QGraphicsItem) EffectiveOpacity() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:228
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:229
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setOpacity(qreal)
@@ -1168,7 +1166,7 @@ func (this *QGraphicsItem) SetOpacity(opacity float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:232
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:233
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsEffect * graphicsEffect() const
@@ -1186,7 +1184,7 @@ func (this *QGraphicsItem) GraphicsEffect() *QGraphicsEffect /*777 QGraphicsEffe
 	return /*==*/ NewQGraphicsEffectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:233
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:234
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setGraphicsEffect(QGraphicsEffect *)
@@ -1213,7 +1211,7 @@ func (this *QGraphicsItem) SetGraphicsEffect(effect QGraphicsEffect_ITF /*777 QG
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:236
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:237
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::MouseButtons acceptedMouseButtons() const
@@ -1231,7 +1229,7 @@ func (this *QGraphicsItem) AcceptedMouseButtons() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:237
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:238
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAcceptedMouseButtons(Qt::MouseButtons)
@@ -1250,7 +1248,7 @@ func (this *QGraphicsItem) SetAcceptedMouseButtons(buttons int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:242
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:243
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool acceptHoverEvents() const
@@ -1268,7 +1266,7 @@ func (this *QGraphicsItem) AcceptHoverEvents() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:243
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:244
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAcceptHoverEvents(bool)
@@ -1293,7 +1291,7 @@ func (this *QGraphicsItem) SetAcceptHoverEvents(enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:244
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:245
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool acceptTouchEvents() const
@@ -1311,7 +1309,7 @@ func (this *QGraphicsItem) AcceptTouchEvents() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:245
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:246
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAcceptTouchEvents(bool)
@@ -1328,7 +1326,7 @@ func (this *QGraphicsItem) SetAcceptTouchEvents(enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:247
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:248
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool filtersChildEvents() const
@@ -1348,7 +1346,7 @@ func (this *QGraphicsItem) FiltersChildEvents() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:248
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:249
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFiltersChildEvents(bool)
@@ -1365,7 +1363,7 @@ func (this *QGraphicsItem) SetFiltersChildEvents(enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:250
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:251
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool handlesChildEvents() const
@@ -1379,7 +1377,7 @@ func (this *QGraphicsItem) HandlesChildEvents() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:251
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:252
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setHandlesChildEvents(bool)
@@ -1392,7 +1390,7 @@ func (this *QGraphicsItem) SetHandlesChildEvents(enabled bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:253
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:254
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isActive() const
@@ -1416,7 +1414,7 @@ func (this *QGraphicsItem) IsActive() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:254
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:255
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setActive(bool)
@@ -1435,7 +1433,7 @@ func (this *QGraphicsItem) SetActive(active bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:256
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:257
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasFocus() const
@@ -1451,7 +1449,7 @@ func (this *QGraphicsItem) HasFocus() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:257
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:258
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFocus(Qt::FocusReason)
@@ -1472,7 +1470,7 @@ func (this *QGraphicsItem) SetFocus(focusReason int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:257
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:258
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFocus(Qt::FocusReason)
@@ -1495,7 +1493,7 @@ func (this *QGraphicsItem) SetFocusp() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:258
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:259
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clearFocus()
@@ -1514,7 +1512,7 @@ func (this *QGraphicsItem) ClearFocus() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:260
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:261
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsItem * focusProxy() const
@@ -1532,7 +1530,7 @@ func (this *QGraphicsItem) FocusProxy() *QGraphicsItem /*777 QGraphicsItem **/ {
 	return /*==*/ NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:261
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:262
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFocusProxy(QGraphicsItem *)
@@ -1559,7 +1557,7 @@ func (this *QGraphicsItem) SetFocusProxy(item QGraphicsItem_ITF /*777 QGraphicsI
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:263
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:264
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsItem * focusItem() const
@@ -1577,7 +1575,7 @@ func (this *QGraphicsItem) FocusItem() *QGraphicsItem /*777 QGraphicsItem **/ {
 	return /*==*/ NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:264
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:265
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsItem * focusScopeItem() const
@@ -1591,7 +1589,7 @@ func (this *QGraphicsItem) FocusScopeItem() *QGraphicsItem /*777 QGraphicsItem *
 	return /*==*/ NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:266
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:267
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void grabMouse()
@@ -1626,7 +1624,7 @@ func (this *QGraphicsItem) GrabMouse() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:267
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:268
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ungrabMouse()
@@ -1643,7 +1641,7 @@ func (this *QGraphicsItem) UngrabMouse() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:268
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:269
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void grabKeyboard()
@@ -1678,7 +1676,7 @@ func (this *QGraphicsItem) GrabKeyboard() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:269
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:270
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ungrabKeyboard()
@@ -1695,7 +1693,7 @@ func (this *QGraphicsItem) UngrabKeyboard() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:272
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:273
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF pos() const
@@ -1717,7 +1715,7 @@ func (this *QGraphicsItem) Pos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:273
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:274
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal x() const
@@ -1733,7 +1731,7 @@ func (this *QGraphicsItem) X() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:274
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:275
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setX(qreal)
@@ -1750,7 +1748,7 @@ func (this *QGraphicsItem) SetX(x float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:275
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:276
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qreal y() const
@@ -1766,7 +1764,7 @@ func (this *QGraphicsItem) Y() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:276
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:277
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setY(qreal)
@@ -1783,7 +1781,7 @@ func (this *QGraphicsItem) SetY(y float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:277
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:278
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF scenePos() const
@@ -1801,7 +1799,7 @@ func (this *QGraphicsItem) ScenePos() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:278
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:279
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setPos(const QPointF &)
@@ -1822,7 +1820,7 @@ func (this *QGraphicsItem) SetPos(pos qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:279
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:280
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setPos(qreal, qreal)
@@ -1839,7 +1837,7 @@ func (this *QGraphicsItem) SetPos1(x float64, y float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:280
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:281
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void moveBy(qreal, qreal)
@@ -1852,7 +1850,7 @@ func (this *QGraphicsItem) MoveBy(dx float64, dy float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:282
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:283
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ensureVisible(const QRectF &, int, int)
@@ -1875,7 +1873,7 @@ func (this *QGraphicsItem) EnsureVisible(rect qtcore.QRectF_ITF, xmargin int, ym
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:282
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:283
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ensureVisible(const QRectF &, int, int)
@@ -1900,7 +1898,7 @@ func (this *QGraphicsItem) EnsureVisiblep() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:282
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:283
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ensureVisible(const QRectF &, int, int)
@@ -1927,7 +1925,7 @@ func (this *QGraphicsItem) EnsureVisiblep1(rect qtcore.QRectF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:282
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:283
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ensureVisible(const QRectF &, int, int)
@@ -1952,7 +1950,7 @@ func (this *QGraphicsItem) EnsureVisiblep2(rect qtcore.QRectF_ITF, xmargin int) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:283
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:284
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void ensureVisible(qreal, qreal, qreal, qreal, int, int)
@@ -1971,7 +1969,7 @@ func (this *QGraphicsItem) EnsureVisible1(x float64, y float64, w float64, h flo
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:283
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:284
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void ensureVisible(qreal, qreal, qreal, qreal, int, int)
@@ -1994,7 +1992,7 @@ func (this *QGraphicsItem) EnsureVisible1p(x float64, y float64, w float64, h fl
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:283
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:284
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void ensureVisible(qreal, qreal, qreal, qreal, int, int)
@@ -2015,7 +2013,7 @@ func (this *QGraphicsItem) EnsureVisible1p1(x float64, y float64, w float64, h f
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:286
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:287
 // index:0
 // Public Visibility=Default Availability=Available
 // [48] QMatrix matrix() const
@@ -2031,7 +2029,7 @@ func (this *QGraphicsItem) Matrix() *qtgui.QMatrix /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:287
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:288
 // index:0
 // Public Visibility=Default Availability=Available
 // [48] QMatrix sceneMatrix() const
@@ -2047,7 +2045,7 @@ func (this *QGraphicsItem) SceneMatrix() *qtgui.QMatrix /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:288
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:289
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMatrix(const QMatrix &, bool)
@@ -2064,7 +2062,7 @@ func (this *QGraphicsItem) SetMatrix(matrix qtgui.QMatrix_ITF, combine bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:288
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:289
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setMatrix(const QMatrix &, bool)
@@ -2083,7 +2081,7 @@ func (this *QGraphicsItem) SetMatrixp(matrix qtgui.QMatrix_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:289
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:290
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetMatrix()
@@ -2096,7 +2094,7 @@ func (this *QGraphicsItem) ResetMatrix() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:290
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:291
 // index:0
 // Public Visibility=Default Availability=Available
 // [88] QTransform transform() const
@@ -2120,7 +2118,7 @@ func (this *QGraphicsItem) Transform() *qtgui.QTransform /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:291
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:292
 // index:0
 // Public Visibility=Default Availability=Available
 // [88] QTransform sceneTransform() const
@@ -2156,7 +2154,7 @@ func (this *QGraphicsItem) SceneTransform() *qtgui.QTransform /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:292
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:293
 // index:0
 // Public Visibility=Default Availability=Available
 // [88] QTransform deviceTransform(const QTransform &) const
@@ -2196,7 +2194,7 @@ func (this *QGraphicsItem) DeviceTransform(viewportTransform qtgui.QTransform_IT
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:293
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:294
 // index:0
 // Public Visibility=Default Availability=Available
 // [88] QTransform itemTransform(const QGraphicsItem *, bool *) const
@@ -2224,7 +2222,7 @@ func (this *QGraphicsItem) ItemTransform(other QGraphicsItem_ITF /*777 const QGr
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:293
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:294
 // index:0
 // Public Visibility=Default Availability=Available
 // [88] QTransform itemTransform(const QGraphicsItem *, bool *) const
@@ -2254,7 +2252,7 @@ func (this *QGraphicsItem) ItemTransformp(other QGraphicsItem_ITF /*777 const QG
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:294
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:295
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTransform(const QTransform &, bool)
@@ -2281,7 +2279,7 @@ func (this *QGraphicsItem) SetTransform(matrix qtgui.QTransform_ITF, combine boo
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:294
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:295
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTransform(const QTransform &, bool)
@@ -2310,7 +2308,7 @@ func (this *QGraphicsItem) SetTransformp(matrix qtgui.QTransform_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:295
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:296
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void resetTransform()
@@ -2327,7 +2325,7 @@ func (this *QGraphicsItem) ResetTransform() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:302
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:303
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setRotation(qreal)
@@ -2348,7 +2346,7 @@ func (this *QGraphicsItem) SetRotation(angle float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:303
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:304
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal rotation() const
@@ -2368,7 +2366,7 @@ func (this *QGraphicsItem) Rotation() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:305
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:306
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setScale(qreal)
@@ -2389,7 +2387,7 @@ func (this *QGraphicsItem) SetScale(scale float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:306
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:307
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal scale() const
@@ -2409,7 +2407,7 @@ func (this *QGraphicsItem) Scale() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:311
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:312
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF transformOriginPoint() const
@@ -2431,7 +2429,7 @@ func (this *QGraphicsItem) TransformOriginPoint() *qtcore.QPointF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:312
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:313
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setTransformOriginPoint(const QPointF &)
@@ -2452,7 +2450,7 @@ func (this *QGraphicsItem) SetTransformOriginPoint(origin qtcore.QPointF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:313
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:314
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void setTransformOriginPoint(qreal, qreal)
@@ -2469,7 +2467,7 @@ func (this *QGraphicsItem) SetTransformOriginPoint1(ax float64, ay float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:316
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:317
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void advance(int)
@@ -2488,7 +2486,7 @@ func (this *QGraphicsItem) Advance(phase int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:319
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:320
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal zValue() const
@@ -2506,7 +2504,7 @@ func (this *QGraphicsItem) ZValue() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:320
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:321
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setZValue(qreal)
@@ -2527,7 +2525,7 @@ func (this *QGraphicsItem) SetZValue(z float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:321
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:322
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void stackBefore(const QGraphicsItem *)
@@ -2550,7 +2548,7 @@ func (this *QGraphicsItem) StackBefore(sibling QGraphicsItem_ITF /*777 const QGr
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:324
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:325
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [32] QRectF boundingRect() const
@@ -2588,7 +2586,7 @@ func (this *QGraphicsItem) BoundingRect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:325
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:326
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF childrenBoundingRect() const
@@ -2610,7 +2608,7 @@ func (this *QGraphicsItem) ChildrenBoundingRect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:326
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:327
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF sceneBoundingRect() const
@@ -2628,7 +2626,7 @@ func (this *QGraphicsItem) SceneBoundingRect() *qtcore.QRectF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:327
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:328
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QPainterPath shape() const
@@ -2662,7 +2660,7 @@ func (this *QGraphicsItem) Shape() *qtgui.QPainterPath /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:328
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:329
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isClipped() const
@@ -2680,7 +2678,7 @@ func (this *QGraphicsItem) IsClipped() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:329
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:330
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QPainterPath clipPath() const
@@ -2704,7 +2702,7 @@ func (this *QGraphicsItem) ClipPath() *qtgui.QPainterPath /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:330
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:331
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool contains(const QPointF &) const
@@ -2726,7 +2724,7 @@ func (this *QGraphicsItem) Contains(point qtcore.QPointF_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:331
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:332
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool collidesWithItem(const QGraphicsItem *, Qt::ItemSelectionMode) const
@@ -2752,7 +2750,7 @@ func (this *QGraphicsItem) CollidesWithItem(other QGraphicsItem_ITF /*777 const 
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:331
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:332
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool collidesWithItem(const QGraphicsItem *, Qt::ItemSelectionMode) const
@@ -2780,7 +2778,7 @@ func (this *QGraphicsItem) CollidesWithItemp(other QGraphicsItem_ITF /*777 const
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:332
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:333
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool collidesWithPath(const QPainterPath &, Qt::ItemSelectionMode) const
@@ -2804,7 +2802,7 @@ func (this *QGraphicsItem) CollidesWithPath(path qtgui.QPainterPath_ITF, mode in
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:332
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:333
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool collidesWithPath(const QPainterPath &, Qt::ItemSelectionMode) const
@@ -2830,7 +2828,7 @@ func (this *QGraphicsItem) CollidesWithPathp(path qtgui.QPainterPath_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:333
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:334
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QList<QGraphicsItem *> collidingItems(Qt::ItemSelectionMode) const
@@ -2849,7 +2847,7 @@ func (this *QGraphicsItem) CollidingItems(mode int) *QGraphicsItemList /*lll*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:333
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:334
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QList<QGraphicsItem *> collidingItems(Qt::ItemSelectionMode) const
@@ -2870,7 +2868,7 @@ func (this *QGraphicsItem) CollidingItemsp() *QGraphicsItemList /*lll*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:334
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:335
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isObscured(const QRectF &) const
@@ -2894,7 +2892,7 @@ func (this *QGraphicsItem) IsObscured(rect qtcore.QRectF_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:334
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:335
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isObscured(const QRectF &) const
@@ -2916,7 +2914,7 @@ func (this *QGraphicsItem) IsObscuredp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:335
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:336
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool isObscured(qreal, qreal, qreal, qreal) const
@@ -2936,7 +2934,7 @@ func (this *QGraphicsItem) IsObscured1(x float64, y float64, w float64, h float6
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:336
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:337
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [1] bool isObscuredBy(const QGraphicsItem *) const
@@ -2960,7 +2958,7 @@ func (this *QGraphicsItem) IsObscuredBy(item QGraphicsItem_ITF /*777 const QGrap
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:337
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:338
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] QPainterPath opaqueArea() const
@@ -2982,7 +2980,7 @@ func (this *QGraphicsItem) OpaqueArea() *qtgui.QPainterPath /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:339
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:340
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QRegion boundingRegion(const QTransform &) const
@@ -3010,7 +3008,7 @@ func (this *QGraphicsItem) BoundingRegion(itemToDeviceTransform qtgui.QTransform
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:340
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:341
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] qreal boundingRegionGranularity() const
@@ -3028,7 +3026,7 @@ func (this *QGraphicsItem) BoundingRegionGranularity() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:341
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:342
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setBoundingRegionGranularity(qreal)
@@ -3047,7 +3045,7 @@ func (this *QGraphicsItem) SetBoundingRegionGranularity(granularity float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:344
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:345
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
@@ -3096,7 +3094,7 @@ func (this *QGraphicsItem) Paint(painter qtgui.QPainter_ITF /*777 QPainter **/, 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:344
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:345
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [-2] void paint(QPainter *, const QStyleOptionGraphicsItem *, QWidget *)
@@ -3143,7 +3141,7 @@ func (this *QGraphicsItem) Paintp(painter qtgui.QPainter_ITF /*777 QPainter **/,
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:345
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:346
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void update(const QRectF &)
@@ -3168,7 +3166,7 @@ func (this *QGraphicsItem) Update(rect qtcore.QRectF_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:345
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:346
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void update(const QRectF &)
@@ -3191,7 +3189,7 @@ func (this *QGraphicsItem) Updatep() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:346
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:347
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [-2] void update(qreal, qreal, qreal, qreal)
@@ -3212,7 +3210,7 @@ func (this *QGraphicsItem) Update1(x float64, y float64, width float64, height f
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:347
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:348
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void scroll(qreal, qreal, const QRectF &)
@@ -3246,7 +3244,7 @@ func (this *QGraphicsItem) Scroll(dx float64, dy float64, rect qtcore.QRectF_ITF
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:347
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:348
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void scroll(qreal, qreal, const QRectF &)
@@ -3278,7 +3276,7 @@ func (this *QGraphicsItem) Scrollp(dx float64, dy float64) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:350
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:351
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF mapToItem(const QGraphicsItem *, const QPointF &) const
@@ -3306,7 +3304,7 @@ func (this *QGraphicsItem) MapToItem(item QGraphicsItem_ITF /*777 const QGraphic
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:353
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:354
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF mapToItem(const QGraphicsItem *, const QRectF &) const
@@ -3334,7 +3332,7 @@ func (this *QGraphicsItem) MapToItem1(item QGraphicsItem_ITF /*777 const QGraphi
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:359
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:360
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF mapToItem(const QGraphicsItem *, const QPolygonF &) const
@@ -3362,7 +3360,7 @@ func (this *QGraphicsItem) MapToItem2(item QGraphicsItem_ITF /*777 const QGraphi
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:362
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:363
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QPainterPath mapToItem(const QGraphicsItem *, const QPainterPath &) const
@@ -3390,7 +3388,7 @@ func (this *QGraphicsItem) MapToItem3(item QGraphicsItem_ITF /*777 const QGraphi
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:381
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:382
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [16] QPointF mapToItem(const QGraphicsItem *, qreal, qreal) const
@@ -3414,7 +3412,7 @@ func (this *QGraphicsItem) MapToItem4(item QGraphicsItem_ITF /*777 const QGraphi
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:384
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:385
 // index:5
 // Public inline Visibility=Default Availability=Available
 // [8] QPolygonF mapToItem(const QGraphicsItem *, qreal, qreal, qreal, qreal) const
@@ -3438,7 +3436,7 @@ func (this *QGraphicsItem) MapToItem5(item QGraphicsItem_ITF /*777 const QGraphi
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:351
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:352
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF mapToParent(const QPointF &) const
@@ -3460,7 +3458,7 @@ func (this *QGraphicsItem) MapToParent(point qtcore.QPointF_ITF) *qtcore.QPointF
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:354
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:355
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF mapToParent(const QRectF &) const
@@ -3482,7 +3480,7 @@ func (this *QGraphicsItem) MapToParent1(rect qtcore.QRectF_ITF) *qtgui.QPolygonF
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:360
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:361
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF mapToParent(const QPolygonF &) const
@@ -3504,7 +3502,7 @@ func (this *QGraphicsItem) MapToParent2(polygon qtgui.QPolygonF_ITF) *qtgui.QPol
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:363
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:364
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QPainterPath mapToParent(const QPainterPath &) const
@@ -3526,7 +3524,7 @@ func (this *QGraphicsItem) MapToParent3(path qtgui.QPainterPath_ITF) *qtgui.QPai
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:382
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:383
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [16] QPointF mapToParent(qreal, qreal) const
@@ -3544,7 +3542,7 @@ func (this *QGraphicsItem) MapToParent4(x float64, y float64) *qtcore.QPointF /*
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:385
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:386
 // index:5
 // Public inline Visibility=Default Availability=Available
 // [8] QPolygonF mapToParent(qreal, qreal, qreal, qreal) const
@@ -3562,7 +3560,7 @@ func (this *QGraphicsItem) MapToParent5(x float64, y float64, w float64, h float
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:352
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:353
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF mapToScene(const QPointF &) const
@@ -3584,7 +3582,7 @@ func (this *QGraphicsItem) MapToScene(point qtcore.QPointF_ITF) *qtcore.QPointF 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:355
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:356
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF mapToScene(const QRectF &) const
@@ -3606,7 +3604,7 @@ func (this *QGraphicsItem) MapToScene1(rect qtcore.QRectF_ITF) *qtgui.QPolygonF 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:361
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:362
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF mapToScene(const QPolygonF &) const
@@ -3628,7 +3626,7 @@ func (this *QGraphicsItem) MapToScene2(polygon qtgui.QPolygonF_ITF) *qtgui.QPoly
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:364
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:365
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QPainterPath mapToScene(const QPainterPath &) const
@@ -3650,7 +3648,7 @@ func (this *QGraphicsItem) MapToScene3(path qtgui.QPainterPath_ITF) *qtgui.QPain
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:383
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:384
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [16] QPointF mapToScene(qreal, qreal) const
@@ -3668,7 +3666,7 @@ func (this *QGraphicsItem) MapToScene4(x float64, y float64) *qtcore.QPointF /*1
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:386
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:387
 // index:5
 // Public inline Visibility=Default Availability=Available
 // [8] QPolygonF mapToScene(qreal, qreal, qreal, qreal) const
@@ -3686,7 +3684,7 @@ func (this *QGraphicsItem) MapToScene5(x float64, y float64, w float64, h float6
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:356
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:357
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF mapRectToItem(const QGraphicsItem *, const QRectF &) const
@@ -3716,7 +3714,7 @@ func (this *QGraphicsItem) MapRectToItem(item QGraphicsItem_ITF /*777 const QGra
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:387
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:388
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [32] QRectF mapRectToItem(const QGraphicsItem *, qreal, qreal, qreal, qreal) const
@@ -3742,7 +3740,7 @@ func (this *QGraphicsItem) MapRectToItem1(item QGraphicsItem_ITF /*777 const QGr
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:357
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:358
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF mapRectToParent(const QRectF &) const
@@ -3766,7 +3764,7 @@ func (this *QGraphicsItem) MapRectToParent(rect qtcore.QRectF_ITF) *qtcore.QRect
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:388
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:389
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [32] QRectF mapRectToParent(qreal, qreal, qreal, qreal) const
@@ -3786,7 +3784,7 @@ func (this *QGraphicsItem) MapRectToParent1(x float64, y float64, w float64, h f
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:358
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:359
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF mapRectToScene(const QRectF &) const
@@ -3810,7 +3808,7 @@ func (this *QGraphicsItem) MapRectToScene(rect qtcore.QRectF_ITF) *qtcore.QRectF
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:389
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:390
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [32] QRectF mapRectToScene(qreal, qreal, qreal, qreal) const
@@ -3830,7 +3828,7 @@ func (this *QGraphicsItem) MapRectToScene1(x float64, y float64, w float64, h fl
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:365
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:366
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF mapFromItem(const QGraphicsItem *, const QPointF &) const
@@ -3858,7 +3856,7 @@ func (this *QGraphicsItem) MapFromItem(item QGraphicsItem_ITF /*777 const QGraph
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:368
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:369
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF mapFromItem(const QGraphicsItem *, const QRectF &) const
@@ -3886,7 +3884,7 @@ func (this *QGraphicsItem) MapFromItem1(item QGraphicsItem_ITF /*777 const QGrap
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:374
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:375
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF mapFromItem(const QGraphicsItem *, const QPolygonF &) const
@@ -3914,7 +3912,7 @@ func (this *QGraphicsItem) MapFromItem2(item QGraphicsItem_ITF /*777 const QGrap
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:377
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:378
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QPainterPath mapFromItem(const QGraphicsItem *, const QPainterPath &) const
@@ -3942,7 +3940,7 @@ func (this *QGraphicsItem) MapFromItem3(item QGraphicsItem_ITF /*777 const QGrap
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:390
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:391
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [16] QPointF mapFromItem(const QGraphicsItem *, qreal, qreal) const
@@ -3966,7 +3964,7 @@ func (this *QGraphicsItem) MapFromItem4(item QGraphicsItem_ITF /*777 const QGrap
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:393
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:394
 // index:5
 // Public inline Visibility=Default Availability=Available
 // [8] QPolygonF mapFromItem(const QGraphicsItem *, qreal, qreal, qreal, qreal) const
@@ -3990,7 +3988,7 @@ func (this *QGraphicsItem) MapFromItem5(item QGraphicsItem_ITF /*777 const QGrap
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:366
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:367
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF mapFromParent(const QPointF &) const
@@ -4012,7 +4010,7 @@ func (this *QGraphicsItem) MapFromParent(point qtcore.QPointF_ITF) *qtcore.QPoin
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:369
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:370
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF mapFromParent(const QRectF &) const
@@ -4034,7 +4032,7 @@ func (this *QGraphicsItem) MapFromParent1(rect qtcore.QRectF_ITF) *qtgui.QPolygo
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:375
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:376
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF mapFromParent(const QPolygonF &) const
@@ -4056,7 +4054,7 @@ func (this *QGraphicsItem) MapFromParent2(polygon qtgui.QPolygonF_ITF) *qtgui.QP
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:378
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:379
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QPainterPath mapFromParent(const QPainterPath &) const
@@ -4078,7 +4076,7 @@ func (this *QGraphicsItem) MapFromParent3(path qtgui.QPainterPath_ITF) *qtgui.QP
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:391
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:392
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [16] QPointF mapFromParent(qreal, qreal) const
@@ -4096,7 +4094,7 @@ func (this *QGraphicsItem) MapFromParent4(x float64, y float64) *qtcore.QPointF 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:394
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:395
 // index:5
 // Public inline Visibility=Default Availability=Available
 // [8] QPolygonF mapFromParent(qreal, qreal, qreal, qreal) const
@@ -4114,7 +4112,7 @@ func (this *QGraphicsItem) MapFromParent5(x float64, y float64, w float64, h flo
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:367
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:368
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QPointF mapFromScene(const QPointF &) const
@@ -4136,7 +4134,7 @@ func (this *QGraphicsItem) MapFromScene(point qtcore.QPointF_ITF) *qtcore.QPoint
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:370
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:371
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF mapFromScene(const QRectF &) const
@@ -4158,7 +4156,7 @@ func (this *QGraphicsItem) MapFromScene1(rect qtcore.QRectF_ITF) *qtgui.QPolygon
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:376
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:377
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QPolygonF mapFromScene(const QPolygonF &) const
@@ -4180,7 +4178,7 @@ func (this *QGraphicsItem) MapFromScene2(polygon qtgui.QPolygonF_ITF) *qtgui.QPo
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:379
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:380
 // index:3
 // Public Visibility=Default Availability=Available
 // [8] QPainterPath mapFromScene(const QPainterPath &) const
@@ -4202,7 +4200,7 @@ func (this *QGraphicsItem) MapFromScene3(path qtgui.QPainterPath_ITF) *qtgui.QPa
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:392
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:393
 // index:4
 // Public inline Visibility=Default Availability=Available
 // [16] QPointF mapFromScene(qreal, qreal) const
@@ -4220,7 +4218,7 @@ func (this *QGraphicsItem) MapFromScene4(x float64, y float64) *qtcore.QPointF /
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:395
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:396
 // index:5
 // Public inline Visibility=Default Availability=Available
 // [8] QPolygonF mapFromScene(qreal, qreal, qreal, qreal) const
@@ -4238,7 +4236,7 @@ func (this *QGraphicsItem) MapFromScene5(x float64, y float64, w float64, h floa
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:371
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:372
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF mapRectFromItem(const QGraphicsItem *, const QRectF &) const
@@ -4268,7 +4266,7 @@ func (this *QGraphicsItem) MapRectFromItem(item QGraphicsItem_ITF /*777 const QG
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:396
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:397
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [32] QRectF mapRectFromItem(const QGraphicsItem *, qreal, qreal, qreal, qreal) const
@@ -4294,7 +4292,7 @@ func (this *QGraphicsItem) MapRectFromItem1(item QGraphicsItem_ITF /*777 const Q
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:372
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:373
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF mapRectFromParent(const QRectF &) const
@@ -4318,7 +4316,7 @@ func (this *QGraphicsItem) MapRectFromParent(rect qtcore.QRectF_ITF) *qtcore.QRe
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:397
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:398
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [32] QRectF mapRectFromParent(qreal, qreal, qreal, qreal) const
@@ -4338,7 +4336,7 @@ func (this *QGraphicsItem) MapRectFromParent1(x float64, y float64, w float64, h
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:373
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:374
 // index:0
 // Public Visibility=Default Availability=Available
 // [32] QRectF mapRectFromScene(const QRectF &) const
@@ -4362,7 +4360,7 @@ func (this *QGraphicsItem) MapRectFromScene(rect qtcore.QRectF_ITF) *qtcore.QRec
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:398
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:399
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [32] QRectF mapRectFromScene(qreal, qreal, qreal, qreal) const
@@ -4382,7 +4380,7 @@ func (this *QGraphicsItem) MapRectFromScene1(x float64, y float64, w float64, h 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:400
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:401
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isAncestorOf(const QGraphicsItem *) const
@@ -4402,7 +4400,7 @@ func (this *QGraphicsItem) IsAncestorOf(child QGraphicsItem_ITF /*777 const QGra
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:401
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:402
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QGraphicsItem * commonAncestorItem(const QGraphicsItem *) const
@@ -4424,7 +4422,7 @@ func (this *QGraphicsItem) CommonAncestorItem(other QGraphicsItem_ITF /*777 cons
 	return /*==*/ NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:402
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:403
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isUnderMouse() const
@@ -4442,7 +4440,7 @@ func (this *QGraphicsItem) IsUnderMouse() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:405
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:406
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant data(int) const
@@ -4475,7 +4473,7 @@ func (this *QGraphicsItem) Data(key int) *qtcore.QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:406
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:407
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setData(int, const QVariant &)
@@ -4496,7 +4494,7 @@ func (this *QGraphicsItem) SetData(key int, value qtcore.QVariant_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:408
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:409
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] Qt::InputMethodHints inputMethodHints() const
@@ -4518,7 +4516,7 @@ func (this *QGraphicsItem) InputMethodHints() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:409
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:410
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setInputMethodHints(Qt::InputMethodHints)
@@ -4535,7 +4533,7 @@ func (this *QGraphicsItem) SetInputMethodHints(hints int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:415
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:416
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [4] int type() const
@@ -4573,7 +4571,7 @@ func (this *QGraphicsItem) Type() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:417
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:418
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void installSceneEventFilter(QGraphicsItem *)
@@ -4611,7 +4609,7 @@ func (this *QGraphicsItem) InstallSceneEventFilter(filterItem QGraphicsItem_ITF 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:418
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:419
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void removeSceneEventFilter(QGraphicsItem *)
@@ -4630,7 +4628,7 @@ func (this *QGraphicsItem) RemoveSceneEventFilter(filterItem QGraphicsItem_ITF /
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:421
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:422
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void updateMicroFocus()
@@ -4647,7 +4645,7 @@ func (this *QGraphicsItem) UpdateMicroFocus() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:422
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:423
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool sceneEventFilter(QGraphicsItem *, QEvent *)
@@ -4675,7 +4673,7 @@ func (this *QGraphicsItem) SceneEventFilter(watched QGraphicsItem_ITF /*777 QGra
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:423
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:424
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool sceneEvent(QEvent *)
@@ -4697,7 +4695,7 @@ func (this *QGraphicsItem) SceneEvent(event qtcore.QEvent_ITF /*777 QEvent **/) 
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:424
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:425
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void contextMenuEvent(QGraphicsSceneContextMenuEvent *)
@@ -4734,7 +4732,7 @@ func (this *QGraphicsItem) ContextMenuEvent(event QGraphicsSceneContextMenuEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:425
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:426
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragEnterEvent(QGraphicsSceneDragDropEvent *)
@@ -4775,7 +4773,7 @@ func (this *QGraphicsItem) DragEnterEvent(event QGraphicsSceneDragDropEvent_ITF 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:426
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:427
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragLeaveEvent(QGraphicsSceneDragDropEvent *)
@@ -4800,7 +4798,7 @@ func (this *QGraphicsItem) DragLeaveEvent(event QGraphicsSceneDragDropEvent_ITF 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:427
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:428
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dragMoveEvent(QGraphicsSceneDragDropEvent *)
@@ -4825,7 +4823,7 @@ func (this *QGraphicsItem) DragMoveEvent(event QGraphicsSceneDragDropEvent_ITF /
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:428
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:429
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void dropEvent(QGraphicsSceneDragDropEvent *)
@@ -4850,7 +4848,7 @@ func (this *QGraphicsItem) DropEvent(event QGraphicsSceneDragDropEvent_ITF /*777
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:429
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:430
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusInEvent(QFocusEvent *)
@@ -4869,7 +4867,7 @@ func (this *QGraphicsItem) FocusInEvent(event qtgui.QFocusEvent_ITF /*777 QFocus
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:430
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:431
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void focusOutEvent(QFocusEvent *)
@@ -4888,7 +4886,7 @@ func (this *QGraphicsItem) FocusOutEvent(event qtgui.QFocusEvent_ITF /*777 QFocu
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:431
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:432
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hoverEnterEvent(QGraphicsSceneHoverEvent *)
@@ -4909,7 +4907,7 @@ func (this *QGraphicsItem) HoverEnterEvent(event QGraphicsSceneHoverEvent_ITF /*
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:432
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:433
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hoverMoveEvent(QGraphicsSceneHoverEvent *)
@@ -4930,7 +4928,7 @@ func (this *QGraphicsItem) HoverMoveEvent(event QGraphicsSceneHoverEvent_ITF /*7
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:433
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:434
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void hoverLeaveEvent(QGraphicsSceneHoverEvent *)
@@ -4951,7 +4949,7 @@ func (this *QGraphicsItem) HoverLeaveEvent(event QGraphicsSceneHoverEvent_ITF /*
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:434
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:435
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyPressEvent(QKeyEvent *)
@@ -4972,7 +4970,7 @@ func (this *QGraphicsItem) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEve
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:435
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:436
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void keyReleaseEvent(QKeyEvent *)
@@ -4993,7 +4991,7 @@ func (this *QGraphicsItem) KeyReleaseEvent(event qtgui.QKeyEvent_ITF /*777 QKeyE
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:436
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:437
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mousePressEvent(QGraphicsSceneMouseEvent *)
@@ -5020,7 +5018,7 @@ func (this *QGraphicsItem) MousePressEvent(event QGraphicsSceneMouseEvent_ITF /*
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:437
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:438
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseMoveEvent(QGraphicsSceneMouseEvent *)
@@ -5045,7 +5043,7 @@ func (this *QGraphicsItem) MouseMoveEvent(event QGraphicsSceneMouseEvent_ITF /*7
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:438
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:439
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseReleaseEvent(QGraphicsSceneMouseEvent *)
@@ -5070,7 +5068,7 @@ func (this *QGraphicsItem) MouseReleaseEvent(event QGraphicsSceneMouseEvent_ITF 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:439
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:440
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *)
@@ -5097,7 +5095,7 @@ func (this *QGraphicsItem) MouseDoubleClickEvent(event QGraphicsSceneMouseEvent_
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:440
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:441
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void wheelEvent(QGraphicsSceneWheelEvent *)
@@ -5120,7 +5118,7 @@ func (this *QGraphicsItem) WheelEvent(event QGraphicsSceneWheelEvent_ITF /*777 Q
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:441
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:442
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void inputMethodEvent(QInputMethodEvent *)
@@ -5139,7 +5137,7 @@ func (this *QGraphicsItem) InputMethodEvent(event qtgui.QInputMethodEvent_ITF /*
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:442
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:443
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant inputMethodQuery(Qt::InputMethodQuery) const
@@ -5157,7 +5155,7 @@ func (this *QGraphicsItem) InputMethodQuery(query int) *qtcore.QVariant /*123*/ 
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:444
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:445
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant itemChange(QGraphicsItem::GraphicsItemChange, const QVariant &)
@@ -5206,7 +5204,7 @@ func (this *QGraphicsItem) ItemChange(change int, value qtcore.QVariant_ITF) *qt
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:449
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:450
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool supportsExtension(QGraphicsItem::Extension) const
@@ -5220,7 +5218,7 @@ func (this *QGraphicsItem) SupportsExtension(extension int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:450
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:451
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void setExtension(QGraphicsItem::Extension, const QVariant &)
@@ -5237,7 +5235,7 @@ func (this *QGraphicsItem) SetExtension(extension int, variant qtcore.QVariant_I
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:451
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:452
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [16] QVariant extension(const QVariant &) const
@@ -5257,7 +5255,7 @@ func (this *QGraphicsItem) Extension(variant qtcore.QVariant_ITF) *qtcore.QVaria
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:457
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:458
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void addToIndex()
@@ -5270,7 +5268,7 @@ func (this *QGraphicsItem) AddToIndex() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:458
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:459
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void removeFromIndex()
@@ -5283,7 +5281,7 @@ func (this *QGraphicsItem) RemoveFromIndex() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qgraphicsitem.h:459
+// /usr/include/qt/QtWidgets/qgraphicsitem.h:460
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void prepareGeometryChange()
