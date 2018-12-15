@@ -1,4 +1,4 @@
-module github.com/kitech/qt.go
+module github.com/kitech/qt.go/v5
 
 require (
 	github.com/Workiva/go-datastructures v1.0.44 // indirect
