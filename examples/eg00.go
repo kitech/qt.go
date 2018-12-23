@@ -5,11 +5,11 @@ package main
 #include <stdint.h>
 */
 import "C"
-import "qtcore"
+import "github.com/kitech/qt.go/qtcore"
 import "fmt"
 import "reflect"
 import "time"
-import "qtrt"
+import "github.com/kitech/qt.go/qtrt"
 
 func testResolve(args ...interface{}) {
 	var vtys = make(map[int32]map[int32]reflect.Type)
