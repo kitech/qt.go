@@ -106,8 +106,11 @@ func main() {
 }
 
 func transformMember(line string) {
+
 	home := os.Getenv("HOME")
-	line = strings.Replace(line, home, "/home/me", -1)
+	if home != "" {
+		line = strings.Replace(line, home, "/home/me", -1)
+	}
 	cp.APf("body", line)
 }
 
