@@ -179,6 +179,7 @@ func onSetupUi(line string) {
 	} else {
 		reg1 := regexp.MustCompile(`(.*) = new (Q.+)\(([0-9A-Za-z_]*)?\);`)
 		reg2 := regexp.MustCompile(`(.*)->setObjectName\(QStringLiteral\((.+)\)\);`)
+		reg2_1 := regexp.MustCompile(`(.*)->setObjectName\(QString::fromUtf8\((.+)\)\)`)
 		reg3 := regexp.MustCompile(`(.*)->(set.+Size)\(QSize\((.+)\)\);`)
 		reg4 := regexp.MustCompile(`([^->]+)[->.]+set([^(]+)\((.+)\);`)
 		reg5 := regexp.MustCompile(`([^->]+)[->.]+(add[^(]+)\((.+)\);`)
@@ -235,6 +236,13 @@ func onSetupUi(line string) {
 		} else if reg2.MatchString(line) {
 			mats := reg2.FindAllStringSubmatch(line, -1)
 			log.Println(mats)
+			cp.APf("setupUi", "this.%s.SetObjectName(%s) // 112",
+				strings.Title(mats[0][1]), strings.Title(mats[0][2]))
+		} else if reg2_1.MatchString(line) {
+			log.Println("reg2_1")
+			mats := reg2_1.FindAllStringSubmatch(line, -1)
+			log.Println(mats)
+			log.Println(strings.Title(mats[0][2]))
 			cp.APf("setupUi", "this.%s.SetObjectName(%s) // 112",
 				strings.Title(mats[0][1]), strings.Title(mats[0][2]))
 		} else if reg3.MatchString(line) {
