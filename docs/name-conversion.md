@@ -49,6 +49,18 @@ func (this *QCoreApplication) Flush()
 func QCoreApplication_Flush()
 ```
 
+### protected methods
+
+qt.go use `Inherit` prefix with protected method name as override method.
+
+Original method has sementic means: call parent corresponding method.
+
+```
+func (this *QWidget) InheritEvent(func(evt *qtcore.Event) {
+   this.Event(evt)
+})
+```
+
 ### class constructor
 
 Add `New` prefix to class name: `NewQPushButton(...)` 
