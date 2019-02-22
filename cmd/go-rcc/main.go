@@ -9,7 +9,6 @@ import (
 	"path"
 	"strings"
 
-	"github.com/kitech/qt.go/qtrt"
 	"github.com/kitech/qt.go/toolutil"
 )
 
@@ -32,11 +31,11 @@ func main() {
 	log.SetFlags(log.Flags() | log.Lshortfile)
 	file = os.Args[1]
 	filep = path.Base(file)[0:strings.LastIndex(path.Base(file), ".")]
-	filep = qtrt.IfElseStr(path.Dir(file) == "", filep, path.Dir(file)+"/"+filep)
+	filep = IfElseStr(path.Dir(file) == "", filep, path.Dir(file)+"/"+filep)
 	log.Println(file, filep)
 
 	scc, err := toolutil.RunCmdOut("rcc", file)
-	qtrt.ErrPrint(err, "rcc", file)
+	ErrPrint(err, "rcc", file)
 	if err != nil {
 		os.Exit(1)
 	}
@@ -148,15 +147,49 @@ func saveCode() {
 	code += cp.ExportAll()
 	savefile := fmt.Sprintf("%s_rc.go", filep)
 	err := ioutil.WriteFile(savefile, []byte(code), mod)
-	qtrt.ErrPrint(err, savefile)
+	ErrPrint(err, savefile)
 
 	// gofmt the code
 	gofmtPath, err := exec.LookPath("gofmt")
-	qtrt.ErrPrint(err)
+	ErrPrint(err)
 	cmd := exec.Command(gofmtPath, "-w", savefile)
 	err = cmd.Run()
-	qtrt.ErrPrint(err, cmd)
+	ErrPrint(err, cmd)
 }
 
 func colon2uline(s string) string { return strings.Replace(s, ":", "_", -1) }
 func untitle(s string) string     { return strings.ToLower(s[0:1]) + s[1:] }
+
+///
+func printq(v interface{}, args ...interface{}) string {
+	msg := fmt.Sprintf("%+v", v)
+	for _, arg := range args {
+		msg += fmt.Sprintf(" %+v", arg)
+	}
+	return msg
+}
+
+func ErrPrint(err error, args ...interface{}) error {
+	if err != nil {
+		log.Output(2, printq(err, args...))
+	}
+	return err
+}
+
+// TODO 要是侯选可以惰性求值就好了，否则在只能一个求值的场景则会有问题
+// 简单的三元去处模拟函数
+func IfElse(q bool, tv interface{}, fv interface{}) interface{} {
+	if q == true {
+		return tv
+	} else {
+		return fv
+	}
+}
+
+func IfElseInt(q bool, tv int, fv int) int {
+	return IfElse(q, tv, fv).(int)
+}
+
+func IfElseStr(q bool, tv string, fv string) string {
+	return IfElse(q, tv, fv).(string)
+}
