@@ -196,6 +196,11 @@ func init_ffi_invoke() {
 			bcc, err := ioutil.ReadFile(fmt.Sprintf("/proc/%d/cmdline", os.Getpid()))
 			ErrPrint(err)
 			appdir := string(bcc[:bytes.IndexByte(bcc, 0)])
+			sepos := strings.Index(appdir, ":") // for service process name
+			if sepos != -1 {
+				appdir = appdir[:sepos]
+			}
+
 			for i := 0; i < 9; i++ {
 				d := fmt.Sprintf("/data/app/%s-%s/lib/%s/", appdir,
 					IfElseStr(i == 0, "", fmt.Sprintf("%d", i)), archs[runtime.GOARCH])

@@ -10,7 +10,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/kitech/qt.go.bak/miscutil"
+	"github.com/kitech/qt.go/miscutil"
 	"github.com/kitech/qt.go/toolutil"
 )
 
