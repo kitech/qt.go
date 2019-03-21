@@ -173,17 +173,6 @@ func init() {
 }
 
 func init_ffi_invoke() {
-	loadModule := func(libpath string, modname string) error {
-		var err error
-		var lib FFILibrary
-		lib, err = NewFFILibrary(libpath)
-		ErrPrint(err, lib)
-		// log.Println(lib)
-		if err == nil {
-			qtlibs[modname] = lib
-		}
-		return err
-	}
 
 	// lib dir prefix
 	// go arch name => android lib name
@@ -213,6 +202,9 @@ func init_ffi_invoke() {
 			if len(dirs) > 0 {
 				return dirs[0] + fmt.Sprintf("/lib/%s/", archs[runtime.GOARCH])
 			}
+			if FileExist(fmt.Sprintf("/data/data/%s/lib/", appdir)) {
+				return fmt.Sprintf("/data/data/%s/lib/", appdir)
+			}
 		}
 		return ""
 	}
@@ -228,11 +220,23 @@ func init_ffi_invoke() {
 		return fmt.Sprintf("%slibQt5%s.%s", dirp, modname, oslibexts["linux"])
 	}
 
+	loadModule := func(libpath string, modname string) error {
+		var err error
+		var lib FFILibrary
+		lib, err = NewFFILibrary(libpath)
+		ErrPrint(err, lib, libpath, modname)
+		if err == nil {
+			qtlibs[modname] = lib
+		}
+		return err
+	}
+
 	mods := []string{"Inline"}
 	// TODO auto check static and omit load other module
 	if !UseWrapSymbols { // raw c++ symbols
 		mods = append([]string{"Core", "Gui", "Widgets", "Network", "Qml", "Quick", "QuickControls2", "QuickWidgets"}, mods...)
 	}
+
 	for _, modname := range mods {
 		libpath := getLibFile(getLibDirp(), modname)
 		loadModule(libpath, modname)
@@ -339,6 +343,9 @@ func ForwardFFIFunc(pxysymname string, symname string, args ...interface{}) (VRe
 func isUndefinedSymbolErr(err error) bool {
 	return err != nil && strings.Contains(err.Error(), ": undefined symbol: ")
 }
+func isNotfoundSymbolErr(err error) bool {
+	return err != nil && strings.Contains(err.Error(), "Symbol not found:")
+}
 
 // 直接使用封装的C++ symbols。好像在这设置没有用啊，符号不同，因为参数表的处理也不同，还是要改生成的调用代码。
 var UseWrapSymbols bool = true // see also qtrt.UseCppSymbols TODO merge
@@ -355,8 +362,8 @@ func GetQtSymAddr(symname string) unsafe.Pointer {
 func GetQtSymAddrRaw(symname string) unsafe.Pointer {
 	for _, lib := range qtlibs {
 		addr, err := lib.Symbol(symname)
-		if !isUndefinedSymbolErr(err) {
-			ErrPrint(err, "")
+		if !isUndefinedSymbolErr(err) && !isNotfoundSymbolErr(err) {
+			ErrPrint(err, lib.Name(), symname)
 		}
 		if err != nil {
 			continue
