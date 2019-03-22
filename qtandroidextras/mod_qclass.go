@@ -152,6 +152,8 @@ type JNIEnv struct {
 	cthis unsafe.Pointer
 }
 
+func (this *JNIEnv) GetCthis() unsafe.Pointer { return this.cthis }
+
 func (this *QAndroidJniEnvironment) JNIEnv() *JNIEnv {
 	rv, err := qtrt.InvokeQtFunc6("C_ZNK22QAndroidJniEnvironmentcvP7_JNIEnvEv",
 		qtrt.FFI_TYPE_POINTER, this.GetCthis())
