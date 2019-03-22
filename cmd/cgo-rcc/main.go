@@ -10,7 +10,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/kitech/qt.go/qtrt"
+	"github.com/kitech/qt.go/miscutil"
 	"github.com/kitech/qt.go/toolutil"
 )
 
@@ -42,11 +42,11 @@ func main() {
 	file = flag.Arg(0)
 	log.Println(flag.Arg(0))
 	filep = path.Base(file)[0:strings.LastIndex(path.Base(file), ".")]
-	filep = qtrt.IfElseStr(path.Dir(file) == "", filep, path.Dir(file)+"/"+filep)
+	filep = miscutil.IfElseStr(path.Dir(file) == "", filep, path.Dir(file)+"/"+filep)
 	log.Println(file, filep)
 
 	scc, err := toolutil.RunCmdOut("rcc", file)
-	qtrt.ErrPrint(err, "rcc", file)
+	miscutil.ErrPrint(err, "rcc", file)
 	if err != nil {
 		os.Exit(1)
 	}
@@ -164,14 +164,14 @@ func saveCode() {
 	code += cp.ExportAll()
 	savefile := fmt.Sprintf("%s_rc.go", filep)
 	err := ioutil.WriteFile(savefile, []byte(code), mod)
-	qtrt.ErrPrint(err, savefile)
+	miscutil.ErrPrint(err, savefile)
 
 	// gofmt the code
 	gofmtPath, err := exec.LookPath("gofmt")
-	qtrt.ErrPrint(err)
+	miscutil.ErrPrint(err)
 	cmd := exec.Command(gofmtPath, "-w", savefile)
 	err = cmd.Run()
-	qtrt.ErrPrint(err, cmd)
+	miscutil.ErrPrint(err, cmd)
 }
 
 func colon2uline(s string) string { return strings.Replace(s, ":", "_", -1) }
