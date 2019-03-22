@@ -10,7 +10,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/kitech/qt.go/qtrt"
+	"github.com/kitech/qt.go/miscutil"
 	"github.com/kitech/qt.go/toolutil"
 )
 
@@ -38,11 +38,11 @@ func main() {
 	file = os.Args[1]
 
 	filep = "ui_" + path.Base(file)[0:strings.LastIndex(path.Base(file), ".")]
-	filep = qtrt.IfElseStr(path.Dir(file) == "", filep, path.Dir(file)+"/"+filep)
+	filep = miscutil.IfElseStr(path.Dir(file) == "", filep, path.Dir(file)+"/"+filep)
 	log.Println(file, filep)
 
 	scc, err := toolutil.RunCmdOut("uic", "-g", "cpp", file)
-	qtrt.ErrPrint(err)
+	miscutil.ErrPrint(err)
 	if err != nil {
 		os.Exit(1)
 	}
@@ -179,6 +179,7 @@ func onSetupUi(line string) {
 	} else {
 		reg1 := regexp.MustCompile(`(.*) = new (Q.+)\(([0-9A-Za-z_]*)?\);`)
 		reg2 := regexp.MustCompile(`(.*)->setObjectName\(QStringLiteral\((.+)\)\);`)
+		reg2_1 := regexp.MustCompile(`(.*)->setObjectName\(QString::fromUtf8\((.+)\)\)`)
 		reg3 := regexp.MustCompile(`(.*)->(set.+Size)\(QSize\((.+)\)\);`)
 		reg4 := regexp.MustCompile(`([^->]+)[->.]+set([^(]+)\((.+)\);`)
 		reg5 := regexp.MustCompile(`([^->]+)[->.]+(add[^(]+)\((.+)\);`)
@@ -235,6 +236,13 @@ func onSetupUi(line string) {
 		} else if reg2.MatchString(line) {
 			mats := reg2.FindAllStringSubmatch(line, -1)
 			log.Println(mats)
+			cp.APf("setupUi", "this.%s.SetObjectName(%s) // 112",
+				strings.Title(mats[0][1]), strings.Title(mats[0][2]))
+		} else if reg2_1.MatchString(line) {
+			log.Println("reg2_1")
+			mats := reg2_1.FindAllStringSubmatch(line, -1)
+			log.Println(mats)
+			log.Println(strings.Title(mats[0][2]))
 			cp.APf("setupUi", "this.%s.SetObjectName(%s) // 112",
 				strings.Title(mats[0][1]), strings.Title(mats[0][2]))
 		} else if reg3.MatchString(line) {
@@ -498,14 +506,14 @@ func saveCode() {
 	code += cp.ExportAll()
 	savefile := fmt.Sprintf("%s.go", filep)
 	err := ioutil.WriteFile(savefile, []byte(code), mod)
-	qtrt.ErrPrint(err, savefile)
+	miscutil.ErrPrint(err, savefile)
 
 	// gofmt the code
 	gofmtPath, err := exec.LookPath("gofmt")
-	qtrt.ErrPrint(err)
+	miscutil.ErrPrint(err)
 	cmd := exec.Command(gofmtPath, []string{"-w", savefile}...)
 	err = cmd.Run()
-	qtrt.ErrPrint(err, cmd)
+	miscutil.ErrPrint(err, cmd)
 }
 
 func colon2uline(s string) string { return strings.Replace(s, ":", "_", -1) }

@@ -14,7 +14,7 @@ echo "Server = https://martchus.no-ip.biz/repo/arch/ownstuff/os/\$arch" >> /etc/
 
 pacman -Suyy --noconfirm
 pacman -S --noconfirm go git make wget
-pacman -S --noconfirm mingw-w64-gcc mingw-w64-libffi
+pacman -S --noconfirm mingw-w64-gcc mingw-w64-libffi mingw-w64-dlfcn mingw-w64-pkg-config
 
 pwd
 
@@ -30,14 +30,15 @@ export CGO_ENABLED=1
 export GOOS=windows
 if [ x"$WINARCH" = x"x64" ]; then
     ### build x64 version
-    wget http://pkg.mxe.cc/repos/tar/mxe-x86-64-w64-mingw32.static/mxe-x86-64-w64-mingw32.static-dlfcn-win32_0.e19bf07.tar.xz
-    tar xvf mxe-x86-64-w64-mingw32.static-dlfcn-win32_0.e19bf07.tar.xz
-    cp -va usr/x86_64-w64-mingw32.static/* /usr/x86_64-w64-mingw32/
+    #wget http://pkg.mxe.cc/repos/tar/mxe-x86-64-w64-mingw32.static/mxe-x86-64-w64-mingw32.static-dlfcn-win32_0.e19bf07.tar.xz
+    #tar xvf mxe-x86-64-w64-mingw32.static-dlfcn-win32_0.e19bf07.tar.xz
+    #cp -va usr/x86_64-w64-mingw32.static/* /usr/x86_64-w64-mingw32/
 
     export GOARCH=amd64
     export CC=x86_64-w64-mingw32-gcc
     export CGO_LDFLAGS="-L/usr/x86_64-w64-mingw32/lib/ -ldl -lpsapi -lkernel32"
     export CGO_CFLAGS="-I/usr/x86_64-w64-mingw32/lib/libffi-3.2.1/include/"
+    # alias pkg-config=/usr/bin/x86_64-w64-mingw32-pkg-config
 
     go get -v github.com/kitech/dl
     go get -v github.com/emirpasic/gods/lists/arraylist
@@ -50,14 +51,15 @@ if [ x"$WINARCH" = x"x64" ]; then
 
 else
     ### build x32 version dll
-    wget http://pkg.mxe.cc/repos/tar/mxe-i686-w64-mingw32.static/mxe-i686-w64-mingw32.static-dlfcn-win32_0.e19bf07.tar.xz
-    tar xvf mxe-i686-w64-mingw32.static-dlfcn-win32_0.e19bf07.tar.xz
-    cp -va usr/i686-w64-mingw32.static/* /usr/i686-w64-mingw32/
+    #wget http://pkg.mxe.cc/repos/tar/mxe-i686-w64-mingw32.static/mxe-i686-w64-mingw32.static-dlfcn-win32_0.e19bf07.tar.xz
+    #tar xvf mxe-i686-w64-mingw32.static-dlfcn-win32_0.e19bf07.tar.xz
+    #cp -va usr/i686-w64-mingw32.static/* /usr/i686-w64-mingw32/
 
     export GOARCH=386
     export CC=i686-w64-mingw32-gcc
     export CGO_LDFLAGS="-L/usr/i686-w64-mingw32/lib/ -ldl -lpsapi -lkernel32"
     export CGO_CFLAGS="-I/usr/i686-w64-mingw32/lib/libffi-3.2.1/include/"
+    # alias pkg-config=/usr/bin/x86_64-w64-mingw32-pkg-config
 
     go get -v github.com/kitech/dl
     go get -v github.com/emirpasic/gods/lists/arraylist
