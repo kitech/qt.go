@@ -1464,6 +1464,8 @@ func (this *QLineEdit) SelectionChanged() {
 This signal is emitted when the user presses a key that is not considered to be acceptable input. For example, if a key press results in a validator's validate() call to return Invalid. Another case is when trying to enter in more characters beyond the maximum length of the line edit.
 
 Note: This signal will still be emitted in a case where part of the text is accepted but not all of it is. For example, if there is a maximum length set and the clipboard text is longer than the maximum length when it is pasted.
+
+This function was introduced in  Qt 5.12.
 */
 func (this *QLineEdit) InputRejected() {
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QLineEdit13inputRejectedEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())

@@ -419,6 +419,8 @@ func (this *QNetworkConfiguration) ConnectTimeout() int {
 /*
 Sets the connect timeout of this configuration to timeout. This allows control of the timeout used by QAbstractSocket to establish a connection.
 
+Note: timeout is in millisecond.
+
 Warning: This will have no effect if the bearer plugin doesn't have the CanStartAndStopInterfaces capability.
 
 Returns true if succeeded.

@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qtextcodec.h
@@ -64,7 +66,7 @@ func (*QTextEncoder) NewFromPointer(cthis unsafe.Pointer) *QTextEncoder {
 	return NewQTextEncoderFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:141
+// /usr/include/qt/QtCore/qtextcodec.h:140
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTextEncoder(const QTextCodec *)
@@ -87,7 +89,7 @@ func NewQTextEncoder(codec QTextCodec_ITF /*777 const QTextCodec **/) *QTextEnco
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:142
+// /usr/include/qt/QtCore/qtextcodec.h:141
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTextEncoder(const QTextCodec *, QTextCodec::ConversionFlags)
@@ -110,7 +112,7 @@ func NewQTextEncoder1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags int
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:143
+// /usr/include/qt/QtCore/qtextcodec.h:142
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTextEncoder()
@@ -125,7 +127,7 @@ func DeleteQTextEncoder(this *QTextEncoder) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:145
+// /usr/include/qt/QtCore/qtextcodec.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray fromUnicode(const QString &)
@@ -143,7 +145,7 @@ func (this *QTextEncoder) FromUnicode(str string) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:147
+// /usr/include/qt/QtCore/qtextcodec.h:146
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QByteArray fromUnicode(QStringView)
@@ -163,7 +165,7 @@ func (this *QTextEncoder) FromUnicode1(str QStringView_ITF /*123*/) *QByteArray 
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:148
+// /usr/include/qt/QtCore/qtextcodec.h:147
 // index:2
 // Public Visibility=Default Availability=Available
 // [8] QByteArray fromUnicode(const QChar *, int)
@@ -183,7 +185,7 @@ func (this *QTextEncoder) FromUnicode2(uc QChar_ITF /*777 const QChar **/, len_ 
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:149
+// /usr/include/qt/QtCore/qtextcodec.h:148
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasFailure() const

@@ -1221,6 +1221,12 @@ func (this *QFileDialog) ProxyModel() *qtcore.QAbstractProxyModel /*777 QAbstrac
 /*
 Sets the given option to be enabled if on is true; otherwise, clears the given option.
 
+Options (particularly the DontUseNativeDialogs option) should be set before changing dialog properties or showing the dialog.
+
+Setting options while the dialog is visible is not guaranteed to have an immediate effect on the dialog (depending on the option and on the platform).
+
+Setting options after changing other properties may cause these values to have no effect.
+
 This function was introduced in  Qt 4.5.
 
 See also options and testOption().
@@ -1237,6 +1243,12 @@ func (this *QFileDialog) SetOption(option int, on bool) {
 
 /*
 Sets the given option to be enabled if on is true; otherwise, clears the given option.
+
+Options (particularly the DontUseNativeDialogs option) should be set before changing dialog properties or showing the dialog.
+
+Setting options while the dialog is visible is not guaranteed to have an immediate effect on the dialog (depending on the option and on the platform).
+
+Setting options after changing other properties may cause these values to have no effect.
 
 This function was introduced in  Qt 4.5.
 

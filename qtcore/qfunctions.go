@@ -132,7 +132,7 @@ func Operator_add4(lhs int, rhs QMargins_ITF) *QMargins /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:202
+// /usr/include/qt/QtCore/qfloat16.h:204
 // index:5
 // Invalid inline Visibility=Default Availability=Available
 // [8] double operator+(int, qfloat16)
@@ -146,7 +146,7 @@ func Operator_add5(lhs int, rhs unsafe.Pointer /*444*/) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:195
+// /usr/include/qt/QtCore/qfloat16.h:197
 // index:6
 // Invalid inline Visibility=Default Availability=Available
 // [4] float operator+(float, qfloat16)
@@ -160,7 +160,7 @@ func Operator_add6(lhs float32, rhs unsafe.Pointer /*444*/) float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:193
+// /usr/include/qt/QtCore/qfloat16.h:195
 // index:7
 // Invalid inline Visibility=Default Availability=Available
 // [16] long double operator+(long double, qfloat16)
@@ -194,7 +194,7 @@ func Operator_add8(lhs float64, rhs QMarginsF_ITF) *QMarginsF /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:194
+// /usr/include/qt/QtCore/qfloat16.h:196
 // index:9
 // Invalid inline Visibility=Default Availability=Available
 // [8] double operator+(double, qfloat16)
@@ -887,7 +887,7 @@ func Operator_add39(a1 string, a2 QByteArray_ITF) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:202
+// /usr/include/qt/QtCore/qfloat16.h:204
 // index:40
 // Invalid inline Visibility=Default Availability=Available
 // [8] double operator+(qfloat16, int)
@@ -901,7 +901,7 @@ func Operator_add40(lhs unsafe.Pointer /*444*/, rhs int) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:195
+// /usr/include/qt/QtCore/qfloat16.h:197
 // index:41
 // Invalid inline Visibility=Default Availability=Available
 // [4] float operator+(qfloat16, float)
@@ -915,7 +915,7 @@ func Operator_add41(lhs unsafe.Pointer /*444*/, rhs float32) float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:193
+// /usr/include/qt/QtCore/qfloat16.h:195
 // index:42
 // Invalid inline Visibility=Default Availability=Available
 // [16] long double operator+(qfloat16, long double)
@@ -929,7 +929,7 @@ func Operator_add42(lhs unsafe.Pointer /*444*/, rhs float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:194
+// /usr/include/qt/QtCore/qfloat16.h:196
 // index:43
 // Invalid inline Visibility=Default Availability=Available
 // [8] double operator+(qfloat16, double)
@@ -943,7 +943,7 @@ func Operator_add43(lhs unsafe.Pointer /*444*/, rhs float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:173
+// /usr/include/qt/QtCore/qfloat16.h:175
 // index:44
 // Invalid inline Visibility=Default Availability=Available
 // [2] qfloat16 operator+(qfloat16, qfloat16)
@@ -1030,7 +1030,7 @@ func Operator_add47(s1 QLatin1String_ITF /*123*/, s2 QStringRef_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:195
+// /usr/include/qt/QtCore/qfloat16.h:197
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [2] qfloat16 & operator+=(qfloat16 &, float)
@@ -1044,7 +1044,7 @@ func Operator_add_equal(lhs unsafe.Pointer /*555*/, rhs float32) unsafe.Pointer 
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:193
+// /usr/include/qt/QtCore/qfloat16.h:195
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [2] qfloat16 & operator+=(qfloat16 &, long double)
@@ -1058,7 +1058,7 @@ func Operator_add_equal1(lhs unsafe.Pointer /*555*/, rhs float64) unsafe.Pointer
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:194
+// /usr/include/qt/QtCore/qfloat16.h:196
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [2] qfloat16 & operator+=(qfloat16 &, double)
@@ -1484,7 +1484,7 @@ func Operator_or25(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:136
+// /usr/include/qt/QtCore/qtextcodec.h:135
 // index:26
 // Invalid inline Visibility=Default Availability=Available
 // [4] QIncompatibleFlag operator|(QTextCodec::ConversionFlags::enum_type, int)
@@ -1696,7 +1696,7 @@ func Operator_minus3(p QPoint_ITF) *QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:166
+// /usr/include/qt/QtCore/qfloat16.h:168
 // index:4
 // Invalid inline Visibility=Default Availability=Available
 // [2] qfloat16 operator-(qfloat16)
@@ -1710,7 +1710,7 @@ func Operator_minus4(a unsafe.Pointer /*444*/) unsafe.Pointer /*444*/ {
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:243
+// /usr/include/qt/QtCore/qfloat16.h:245
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(int, qfloat16)
@@ -1724,7 +1724,7 @@ func Operator_not_equal1(a int, b unsafe.Pointer /*444*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:231
+// /usr/include/qt/QtCore/qfloat16.h:233
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(float, qfloat16)
@@ -1738,7 +1738,7 @@ func Operator_not_equal2(lhs float32, rhs unsafe.Pointer /*444*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:229
+// /usr/include/qt/QtCore/qfloat16.h:231
 // index:3
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(long double, qfloat16)
@@ -1752,7 +1752,7 @@ func Operator_not_equal3(lhs float64, rhs unsafe.Pointer /*444*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:230
+// /usr/include/qt/QtCore/qfloat16.h:232
 // index:4
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(double, qfloat16)
@@ -2384,7 +2384,7 @@ func Operator_not_equal34(arg0 int, rhs QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:243
+// /usr/include/qt/QtCore/qfloat16.h:245
 // index:35
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(qfloat16, int)
@@ -2398,7 +2398,7 @@ func Operator_not_equal35(a unsafe.Pointer /*444*/, b int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:231
+// /usr/include/qt/QtCore/qfloat16.h:233
 // index:36
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(qfloat16, float)
@@ -2412,7 +2412,7 @@ func Operator_not_equal36(lhs unsafe.Pointer /*444*/, rhs float32) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:229
+// /usr/include/qt/QtCore/qfloat16.h:231
 // index:37
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(qfloat16, long double)
@@ -2426,7 +2426,7 @@ func Operator_not_equal37(lhs unsafe.Pointer /*444*/, rhs float64) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:230
+// /usr/include/qt/QtCore/qfloat16.h:232
 // index:38
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(qfloat16, double)
@@ -2440,7 +2440,7 @@ func Operator_not_equal38(lhs unsafe.Pointer /*444*/, rhs float64) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:217
+// /usr/include/qt/QtCore/qfloat16.h:219
 // index:39
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator!=(qfloat16, qfloat16)
@@ -2802,7 +2802,7 @@ func Operator_mul1(factor int, p QPoint_ITF) *QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:204
+// /usr/include/qt/QtCore/qfloat16.h:206
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [8] double operator*(int, qfloat16)
@@ -2836,7 +2836,7 @@ func Operator_mul3(factor float32, p QPoint_ITF) *QPoint /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:195
+// /usr/include/qt/QtCore/qfloat16.h:197
 // index:4
 // Invalid inline Visibility=Default Availability=Available
 // [4] float operator*(float, qfloat16)
@@ -2850,7 +2850,7 @@ func Operator_mul4(lhs float32, rhs unsafe.Pointer /*444*/) float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:193
+// /usr/include/qt/QtCore/qfloat16.h:195
 // index:5
 // Invalid inline Visibility=Default Availability=Available
 // [16] long double operator*(long double, qfloat16)
@@ -2984,7 +2984,7 @@ func Operator_mul11(c float64, s QSize_ITF) *QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:194
+// /usr/include/qt/QtCore/qfloat16.h:196
 // index:12
 // Invalid inline Visibility=Default Availability=Available
 // [8] double operator*(double, qfloat16)
@@ -3178,7 +3178,7 @@ func Operator_mul21(s QSize_ITF, c float64) *QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:204
+// /usr/include/qt/QtCore/qfloat16.h:206
 // index:22
 // Invalid inline Visibility=Default Availability=Available
 // [8] double operator*(qfloat16, int)
@@ -3192,7 +3192,7 @@ func Operator_mul22(lhs unsafe.Pointer /*444*/, rhs int) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:195
+// /usr/include/qt/QtCore/qfloat16.h:197
 // index:23
 // Invalid inline Visibility=Default Availability=Available
 // [4] float operator*(qfloat16, float)
@@ -3206,7 +3206,7 @@ func Operator_mul23(lhs unsafe.Pointer /*444*/, rhs float32) float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:193
+// /usr/include/qt/QtCore/qfloat16.h:195
 // index:24
 // Invalid inline Visibility=Default Availability=Available
 // [16] long double operator*(qfloat16, long double)
@@ -3220,7 +3220,7 @@ func Operator_mul24(lhs unsafe.Pointer /*444*/, rhs float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:194
+// /usr/include/qt/QtCore/qfloat16.h:196
 // index:25
 // Invalid inline Visibility=Default Availability=Available
 // [8] double operator*(qfloat16, double)
@@ -3234,7 +3234,7 @@ func Operator_mul25(lhs unsafe.Pointer /*444*/, rhs float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:175
+// /usr/include/qt/QtCore/qfloat16.h:177
 // index:26
 // Invalid inline Visibility=Default Availability=Available
 // [2] qfloat16 operator*(qfloat16, qfloat16)
@@ -3248,7 +3248,7 @@ func Operator_mul26(a unsafe.Pointer /*444*/, b unsafe.Pointer /*444*/) unsafe.P
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:203
+// /usr/include/qt/QtCore/qfloat16.h:205
 // index:5
 // Invalid inline Visibility=Default Availability=Available
 // [8] double operator-(int, qfloat16)
@@ -3262,7 +3262,7 @@ func Operator_minus5(lhs int, rhs unsafe.Pointer /*444*/) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:195
+// /usr/include/qt/QtCore/qfloat16.h:197
 // index:6
 // Invalid inline Visibility=Default Availability=Available
 // [4] float operator-(float, qfloat16)
@@ -3276,7 +3276,7 @@ func Operator_minus6(lhs float32, rhs unsafe.Pointer /*444*/) float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:193
+// /usr/include/qt/QtCore/qfloat16.h:195
 // index:7
 // Invalid inline Visibility=Default Availability=Available
 // [16] long double operator-(long double, qfloat16)
@@ -3290,7 +3290,7 @@ func Operator_minus7(lhs float64, rhs unsafe.Pointer /*444*/) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:194
+// /usr/include/qt/QtCore/qfloat16.h:196
 // index:8
 // Invalid inline Visibility=Default Availability=Available
 // [8] double operator-(double, qfloat16)
@@ -3560,7 +3560,7 @@ func Operator_minus18(lhs QRect_ITF, rhs QMargins_ITF) *QRect /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:203
+// /usr/include/qt/QtCore/qfloat16.h:205
 // index:19
 // Invalid inline Visibility=Default Availability=Available
 // [8] double operator-(qfloat16, int)
@@ -3574,7 +3574,7 @@ func Operator_minus19(lhs unsafe.Pointer /*444*/, rhs int) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:195
+// /usr/include/qt/QtCore/qfloat16.h:197
 // index:20
 // Invalid inline Visibility=Default Availability=Available
 // [4] float operator-(qfloat16, float)
@@ -3588,7 +3588,7 @@ func Operator_minus20(lhs unsafe.Pointer /*444*/, rhs float32) float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:193
+// /usr/include/qt/QtCore/qfloat16.h:195
 // index:21
 // Invalid inline Visibility=Default Availability=Available
 // [16] long double operator-(qfloat16, long double)
@@ -3602,7 +3602,7 @@ func Operator_minus21(lhs unsafe.Pointer /*444*/, rhs float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:194
+// /usr/include/qt/QtCore/qfloat16.h:196
 // index:22
 // Invalid inline Visibility=Default Availability=Available
 // [8] double operator-(qfloat16, double)
@@ -3616,7 +3616,7 @@ func Operator_minus22(lhs unsafe.Pointer /*444*/, rhs float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:174
+// /usr/include/qt/QtCore/qfloat16.h:176
 // index:23
 // Invalid inline Visibility=Default Availability=Available
 // [2] qfloat16 operator-(qfloat16, qfloat16)
@@ -3630,7 +3630,7 @@ func Operator_minus23(a unsafe.Pointer /*444*/, b unsafe.Pointer /*444*/) unsafe
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:195
+// /usr/include/qt/QtCore/qfloat16.h:197
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [2] qfloat16 & operator*=(qfloat16 &, float)
@@ -3644,7 +3644,7 @@ func Operator_mul_equal(lhs unsafe.Pointer /*555*/, rhs float32) unsafe.Pointer 
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:193
+// /usr/include/qt/QtCore/qfloat16.h:195
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [2] qfloat16 & operator*=(qfloat16 &, long double)
@@ -3658,7 +3658,7 @@ func Operator_mul_equal1(lhs unsafe.Pointer /*555*/, rhs float64) unsafe.Pointer
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:194
+// /usr/include/qt/QtCore/qfloat16.h:196
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [2] qfloat16 & operator*=(qfloat16 &, double)
@@ -3672,7 +3672,7 @@ func Operator_mul_equal2(lhs unsafe.Pointer /*555*/, rhs float64) unsafe.Pointer
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:195
+// /usr/include/qt/QtCore/qfloat16.h:197
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [2] qfloat16 & operator-=(qfloat16 &, float)
@@ -3686,7 +3686,7 @@ func Operator_minus_equal(lhs unsafe.Pointer /*555*/, rhs float32) unsafe.Pointe
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:193
+// /usr/include/qt/QtCore/qfloat16.h:195
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [2] qfloat16 & operator-=(qfloat16 &, long double)
@@ -3700,7 +3700,7 @@ func Operator_minus_equal1(lhs unsafe.Pointer /*555*/, rhs float64) unsafe.Point
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:194
+// /usr/include/qt/QtCore/qfloat16.h:196
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [2] qfloat16 & operator-=(qfloat16 &, double)
@@ -3714,7 +3714,7 @@ func Operator_minus_equal2(lhs unsafe.Pointer /*555*/, rhs float64) unsafe.Point
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:242
+// /usr/include/qt/QtCore/qfloat16.h:244
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(int, qfloat16)
@@ -3728,7 +3728,7 @@ func Operator_equal_equal1(a int, b unsafe.Pointer /*444*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:231
+// /usr/include/qt/QtCore/qfloat16.h:233
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(float, qfloat16)
@@ -3742,7 +3742,7 @@ func Operator_equal_equal2(lhs float32, rhs unsafe.Pointer /*444*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:229
+// /usr/include/qt/QtCore/qfloat16.h:231
 // index:3
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(long double, qfloat16)
@@ -3756,7 +3756,7 @@ func Operator_equal_equal3(lhs float64, rhs unsafe.Pointer /*444*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:230
+// /usr/include/qt/QtCore/qfloat16.h:232
 // index:4
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(double, qfloat16)
@@ -4410,7 +4410,7 @@ func Operator_equal_equal35(arg0 int, rhs QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:242
+// /usr/include/qt/QtCore/qfloat16.h:244
 // index:36
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(qfloat16, int)
@@ -4424,7 +4424,7 @@ func Operator_equal_equal36(a unsafe.Pointer /*444*/, b int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:231
+// /usr/include/qt/QtCore/qfloat16.h:233
 // index:37
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(qfloat16, float)
@@ -4438,7 +4438,7 @@ func Operator_equal_equal37(lhs unsafe.Pointer /*444*/, rhs float32) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:229
+// /usr/include/qt/QtCore/qfloat16.h:231
 // index:38
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(qfloat16, long double)
@@ -4452,7 +4452,7 @@ func Operator_equal_equal38(lhs unsafe.Pointer /*444*/, rhs float64) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:230
+// /usr/include/qt/QtCore/qfloat16.h:232
 // index:39
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(qfloat16, double)
@@ -4466,7 +4466,7 @@ func Operator_equal_equal39(lhs unsafe.Pointer /*444*/, rhs float64) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:216
+// /usr/include/qt/QtCore/qfloat16.h:218
 // index:40
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool operator==(qfloat16, qfloat16)
@@ -4812,7 +4812,7 @@ func Operator_caret(arg0 QBitArray_ITF, arg1 QBitArray_ITF) *QBitArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:205
+// /usr/include/qt/QtCore/qfloat16.h:207
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [8] double operator/(int, qfloat16)
@@ -4826,7 +4826,7 @@ func Operator_div(lhs int, rhs unsafe.Pointer /*444*/) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:195
+// /usr/include/qt/QtCore/qfloat16.h:197
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [4] float operator/(float, qfloat16)
@@ -4840,7 +4840,7 @@ func Operator_div1(lhs float32, rhs unsafe.Pointer /*444*/) float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:193
+// /usr/include/qt/QtCore/qfloat16.h:195
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [16] long double operator/(long double, qfloat16)
@@ -4854,7 +4854,7 @@ func Operator_div2(lhs float64, rhs unsafe.Pointer /*444*/) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:194
+// /usr/include/qt/QtCore/qfloat16.h:196
 // index:3
 // Invalid inline Visibility=Default Availability=Available
 // [8] double operator/(double, qfloat16)
@@ -5008,7 +5008,7 @@ func Operator_div10(s QSize_ITF, c float64) *QSize /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:205
+// /usr/include/qt/QtCore/qfloat16.h:207
 // index:11
 // Invalid inline Visibility=Default Availability=Available
 // [8] double operator/(qfloat16, int)
@@ -5022,7 +5022,7 @@ func Operator_div11(lhs unsafe.Pointer /*444*/, rhs int) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:195
+// /usr/include/qt/QtCore/qfloat16.h:197
 // index:12
 // Invalid inline Visibility=Default Availability=Available
 // [4] float operator/(qfloat16, float)
@@ -5036,7 +5036,7 @@ func Operator_div12(lhs unsafe.Pointer /*444*/, rhs float32) float32 {
 	return qtrt.Cretval2go("float32", rv).(float32) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:193
+// /usr/include/qt/QtCore/qfloat16.h:195
 // index:13
 // Invalid inline Visibility=Default Availability=Available
 // [16] long double operator/(qfloat16, long double)
@@ -5050,7 +5050,7 @@ func Operator_div13(lhs unsafe.Pointer /*444*/, rhs float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:194
+// /usr/include/qt/QtCore/qfloat16.h:196
 // index:14
 // Invalid inline Visibility=Default Availability=Available
 // [8] double operator/(qfloat16, double)
@@ -5064,7 +5064,7 @@ func Operator_div14(lhs unsafe.Pointer /*444*/, rhs float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:176
+// /usr/include/qt/QtCore/qfloat16.h:178
 // index:15
 // Invalid inline Visibility=Default Availability=Available
 // [2] qfloat16 operator/(qfloat16, qfloat16)
@@ -5078,7 +5078,7 @@ func Operator_div15(a unsafe.Pointer /*444*/, b unsafe.Pointer /*444*/) unsafe.P
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:195
+// /usr/include/qt/QtCore/qfloat16.h:197
 // index:0
 // Invalid inline Visibility=Default Availability=Available
 // [2] qfloat16 & operator/=(qfloat16 &, float)
@@ -5092,7 +5092,7 @@ func Operator_div_equal(lhs unsafe.Pointer /*555*/, rhs float32) unsafe.Pointer 
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:193
+// /usr/include/qt/QtCore/qfloat16.h:195
 // index:1
 // Invalid inline Visibility=Default Availability=Available
 // [2] qfloat16 & operator/=(qfloat16 &, long double)
@@ -5106,7 +5106,7 @@ func Operator_div_equal1(lhs unsafe.Pointer /*555*/, rhs float64) unsafe.Pointer
 	return unsafe.Pointer(uintptr(rv))
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:194
+// /usr/include/qt/QtCore/qfloat16.h:196
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [2] qfloat16 & operator/=(qfloat16 &, double)
@@ -9703,6 +9703,48 @@ func Qsrand(seed uint) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtCore/qendian.h:170
+// index:0
+// Invalid inline Visibility=Default Availability=Available
+// [4] float qbswap(float)
+
+/*
+
+ */
+func Qbswap(source float32) float32 {
+	rv, err := qtrt.InvokeQtFunc6("_Z6qbswapf", qtrt.FFI_TYPE_POINTER, source)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float32", rv).(float32) // 1111
+}
+
+// /usr/include/qt/QtCore/qendian.h:175
+// index:1
+// Invalid inline Visibility=Default Availability=Available
+// [8] double qbswap(double)
+
+/*
+
+ */
+func Qbswap1(source float64) float64 {
+	rv, err := qtrt.InvokeQtFunc6("_Z6qbswapd", qtrt.FFI_TYPE_POINTER, source)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("float64", rv).(float64) // 1111
+}
+
+// /usr/include/qt/QtCore/qendian.h:165
+// index:2
+// Invalid inline Visibility=Default Availability=Available
+// [2] qfloat16 qbswap(qfloat16)
+
+/*
+
+ */
+func Qbswap2(source unsafe.Pointer /*444*/) unsafe.Pointer /*444*/ {
+	rv, err := qtrt.InvokeQtFunc6("_Z6qbswap8qfloat16", qtrt.FFI_TYPE_POINTER, source)
+	qtrt.ErrPrint(err, rv)
+	return unsafe.Pointer(uintptr(rv))
+}
+
 // /usr/include/qt/QtCore/qglobal.h:585
 // index:0
 // Invalid inline Visibility=Default Availability=Available
@@ -10653,15 +10695,29 @@ func QHash39(arg0 int, seed uint) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qhashfunctions.h:96
+// /usr/include/qt/QtCore/qcborcommon.h:141
 // index:40
+// Invalid inline Visibility=Default Availability=Available
+// [4] uint qHash(QCborTag, uint)
+
+/*
+
+ */
+func QHash40(tag int, seed uint) uint {
+	rv, err := qtrt.InvokeQtFunc6("_Z5qHash8QCborTagj", qtrt.FFI_TYPE_POINTER, tag, seed)
+	qtrt.ErrPrint(err, rv)
+	return uint(rv) // 222
+}
+
+// /usr/include/qt/QtCore/qhashfunctions.h:96
+// index:41
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(const QChar, uint)
 
 /*
 
  */
-func QHash40(key QChar_ITF /*123*/, seed uint) uint {
+func QHash41(key QChar_ITF /*123*/, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QChar_PTR() != nil {
 		convArg0 = key.QChar_PTR().GetCthis()
@@ -10671,15 +10727,29 @@ func QHash40(key QChar_ITF /*123*/, seed uint) uint {
 	return uint(rv) // 222
 }
 
+// /usr/include/qt/QtCore/qcborcommon.h:136
+// index:42
+// Invalid inline Visibility=Default Availability=Available
+// [4] uint qHash(QCborSimpleType, uint)
+
+/*
+
+ */
+func QHash42(tag int, seed uint) uint {
+	rv, err := qtrt.InvokeQtFunc6("_Z5qHash15QCborSimpleTypej", qtrt.FFI_TYPE_POINTER, tag, seed)
+	qtrt.ErrPrint(err, rv)
+	return uint(rv) // 222
+}
+
 // /usr/include/qt/QtCore/qhashfunctions.h:104
-// index:41
+// index:43
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(QLatin1String, uint)
 
 /*
 
  */
-func QHash41(key QLatin1String_ITF /*123*/, seed uint) uint {
+func QHash43(key QLatin1String_ITF /*123*/, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QLatin1String_PTR() != nil {
 		convArg0 = key.QLatin1String_PTR().GetCthis()
@@ -10690,14 +10760,14 @@ func QHash41(key QLatin1String_ITF /*123*/, seed uint) uint {
 }
 
 // /usr/include/qt/QtCore/qhashfunctions.h:102
-// index:42
+// index:44
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(QStringView, uint)
 
 /*
 
  */
-func QHash42(key QStringView_ITF /*123*/, seed uint) uint {
+func QHash44(key QStringView_ITF /*123*/, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QStringView_PTR() != nil {
 		convArg0 = key.QStringView_PTR().GetCthis()
@@ -12160,9 +12230,9 @@ func QSetGlobalQHashSeed(newSeed int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qobject.h:467
+// /usr/include/qt/QtCore/qnamespace.h:53
 // index:0
-// Invalid inline Visibility=Default Availability=Available
+// Invalid Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getQtMetaObject()
 
 /*
@@ -12174,9 +12244,9 @@ func Qt_getQtMetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qnamespace.h:53
+// /usr/include/qt/QtCore/qobject.h:467
 // index:1
-// Invalid Visibility=Default Availability=Available
+// Invalid inline Visibility=Default Availability=Available
 // [8] const QMetaObject * qt_getQtMetaObject()
 
 /*
@@ -12817,7 +12887,7 @@ func QSharedBuild() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qfloat16.h:251
+// /usr/include/qt/QtCore/qfloat16.h:253
 // index:2
 // Invalid inline Visibility=Default Availability=Available
 // [1] bool qFuzzyIsNull(qfloat16)

@@ -571,7 +571,7 @@ func Operator_or141(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 }
 
 // /usr/include/qt/QtWidgets/qsizepolicy.h:68
-// index:51
+// index:53
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(QSizePolicy, uint)
 
@@ -580,7 +580,7 @@ Returns the hash value for key, using seed to seed the calculation.
 
 This function was introduced in  Qt 5.6.
 */
-func QHash51(key QSizePolicy_ITF /*123*/, seed uint) uint {
+func QHash53(key QSizePolicy_ITF /*123*/, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QSizePolicy_PTR() != nil {
 		convArg0 = key.QSizePolicy_PTR().GetCthis()

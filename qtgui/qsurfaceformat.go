@@ -355,7 +355,7 @@ func (this *QSurfaceFormat) SetSamples(numSamples int) {
 // [4] int samples() const
 
 /*
-Returns the number of samples per pixel when multisampling is enabled. By default, multisampling is disabled.
+Returns the number of samples per pixel when multisampling is enabled, or -1 when multisampling is disabled. The default return value is -1.
 
 See also setSamples().
 */

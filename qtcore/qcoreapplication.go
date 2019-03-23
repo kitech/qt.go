@@ -1606,7 +1606,7 @@ func (this *QCoreApplication) Event(arg0 QEvent_ITF /*777 QEvent **/) bool {
 type QCoreApplication__ = int
 
 //
-const QCoreApplication__ApplicationFlags QCoreApplication__ = 330752
+const QCoreApplication__ApplicationFlags QCoreApplication__ = 330753
 
 func (this *QCoreApplication) ItemName(val int) string {
 	return qtrt.GetClassEnumItemName(this, val)

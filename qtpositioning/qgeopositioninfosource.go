@@ -152,7 +152,7 @@ Sets the preferred positioning methods for this source to methods.
 
 If methods includes a method that is not supported by the source, the unsupported method will be ignored.
 
-If methods does not include any methods supported by the source, the preferred methods will be set to the set of methods which the source supports.
+If methods does not include a single method available/supported by the source, the preferred methods will be set to the set of methods which the source has available. If the source has no method availabe (e.g. because its Location service is turned off or it does not offer a Location service), the passed methods are accepted as they are.
 
 Note: When reimplementing this method, subclasses must call the base method implementation to ensure preferredPositioningMethods() returns the correct value.
 
@@ -223,9 +223,21 @@ func (this *QGeoPositionInfoSource) LastKnownPositionp() *QGeoPositionInfo /*123
 // [4] QGeoPositionInfoSource::PositioningMethods supportedPositioningMethods() const
 
 /*
-Returns the positioning methods available to this source.
+Returns the positioning methods available to this source. Availability is defined as being usable at the time of calling this function. Therefore user settings like turned off location service or limitations to Satellite-based position providers are reflected by this function. Runtime notifications when the status changes can be obtained via supportedPositioningMethodsChanged().
 
-See also setPreferredPositioningMethods().
+Not all platforms distinguish the different positioning methods or communicate the current user configuration of the device. The following table provides an overview of the current platform situation:
+
+
+ PlatformBrief Description
+AndroidIndividual provider status and general Location service state are known and communicated when location service is active.
+GeoClueHardcoced to always return AllPositioningMethods.
+GeoClue2Individual providers are not distinguishable but disabled Location services reflected.
+iOS/tvOSHardcoced to always return AllPositioningMethods.
+macOSHardcoced to always return AllPositioningMethods.
+Windows (UWP)Individual providers are not distinguishable but disabled Location services reflected.
+
+
+See also supportedPositioningMethodsChanged() and setPreferredPositioningMethods().
 */
 func (this *QGeoPositionInfoSource) SupportedPositioningMethods() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK22QGeoPositionInfoSource27supportedPositioningMethodsEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
@@ -478,7 +490,7 @@ func (this *QGeoPositionInfoSource) UpdateTimeout() {
 // [-2] void supportedPositioningMethodsChanged()
 
 /*
-This signal is emitted after the supportedPositioningMethods change.
+This signal is emitted when the supported positioning methods changed. The cause for a change could be a user turning Location services on/off or restricting Location services to certain types (e.g. GPS only). Note that changes to the supported positioning methods cannot be detected on all platforms. supportedPositioningMethods() provides an overview of the current platform support.
 
 This function was introduced in  Qt 5.12.
 */

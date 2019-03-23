@@ -421,14 +421,14 @@ func DeriveKeyPbkdf1(algorithm int, password qtcore.QByteArray_ITF, salt qtcore.
 }
 
 // /usr/include/qt/QtNetwork/qsslerror.h:115
-// index:43
+// index:45
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QSslError &, uint)
 
 /*
 
  */
-func QHash43(key QSslError_ITF, seed uint) uint {
+func QHash45(key QSslError_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QSslError_PTR() != nil {
 		convArg0 = key.QSslError_PTR().GetCthis()
@@ -439,7 +439,7 @@ func QHash43(key QSslError_ITF, seed uint) uint {
 }
 
 // /usr/include/qt/QtNetwork/qssldiffiehellmanparameters.h:59
-// index:44
+// index:46
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QSslDiffieHellmanParameters &, uint)
 
@@ -448,7 +448,7 @@ Returns an hash value for dhparam, using seed to seed the calculation.
 
 This function was introduced in  Qt 5.8.
 */
-func QHash44(dhparam QSslDiffieHellmanParameters_ITF, seed uint) uint {
+func QHash46(dhparam QSslDiffieHellmanParameters_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if dhparam != nil && dhparam.QSslDiffieHellmanParameters_PTR() != nil {
 		convArg0 = dhparam.QSslDiffieHellmanParameters_PTR().GetCthis()
@@ -459,14 +459,14 @@ func QHash44(dhparam QSslDiffieHellmanParameters_ITF, seed uint) uint {
 }
 
 // /usr/include/qt/QtNetwork/qsslcertificate.h:69
-// index:45
+// index:47
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QSslCertificate &, uint)
 
 /*
 
  */
-func QHash45(key QSslCertificate_ITF, seed uint) uint {
+func QHash47(key QSslCertificate_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QSslCertificate_PTR() != nil {
 		convArg0 = key.QSslCertificate_PTR().GetCthis()
@@ -477,7 +477,7 @@ func QHash45(key QSslCertificate_ITF, seed uint) uint {
 }
 
 // /usr/include/qt/QtNetwork/qhostaddress.h:69
-// index:46
+// index:48
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QHostAddress &, uint)
 
@@ -486,7 +486,7 @@ Returns a hash of the host address key, using seed to seed the calculation.
 
 This function was introduced in  Qt 5.0.
 */
-func QHash46(key QHostAddress_ITF, seed uint) uint {
+func QHash48(key QHostAddress_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QHostAddress_PTR() != nil {
 		convArg0 = key.QHostAddress_PTR().GetCthis()
@@ -497,14 +497,14 @@ func QHash46(key QHostAddress_ITF, seed uint) uint {
 }
 
 // /usr/include/qt/QtNetwork/qsslellipticcurve.h:55
-// index:47
+// index:49
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(QSslEllipticCurve, uint)
 
 /*
 
  */
-func QHash47(curve QSslEllipticCurve_ITF /*123*/, seed uint) uint {
+func QHash49(curve QSslEllipticCurve_ITF /*123*/, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if curve != nil && curve.QSslEllipticCurve_PTR() != nil {
 		convArg0 = curve.QSslEllipticCurve_PTR().GetCthis()
@@ -515,14 +515,14 @@ func QHash47(curve QSslEllipticCurve_ITF /*123*/, seed uint) uint {
 }
 
 // /usr/include/qt/QtNetwork/qsslellipticcurve.h:90
-// index:48
+// index:50
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(QSslEllipticCurve, uint)
 
 /*
 
  */
-func QHash48(curve QSslEllipticCurve_ITF /*123*/, seed uint) uint {
+func QHash50(curve QSslEllipticCurve_ITF /*123*/, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if curve != nil && curve.QSslEllipticCurve_PTR() != nil {
 		convArg0 = curve.QSslEllipticCurve_PTR().GetCthis()

@@ -1335,7 +1335,9 @@ func (this *QLocale) ToULongLong2p(s QStringView_ITF /*123*/) uint64 {
 // [4] float toFloat(const QString &, bool *) const
 
 /*
-Returns the float represented by the localized string s, or 0.0 if the conversion failed.
+Returns the float represented by the localized string s.
+
+Returns an infinity if the conversion overflows or 0.0 if the conversion fails for any other reason (e.g. underflow).
 
 If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
@@ -1359,7 +1361,9 @@ func (this *QLocale) ToFloat(s string, ok *bool) float32 {
 // [4] float toFloat(const QString &, bool *) const
 
 /*
-Returns the float represented by the localized string s, or 0.0 if the conversion failed.
+Returns the float represented by the localized string s.
+
+Returns an infinity if the conversion overflows or 0.0 if the conversion fails for any other reason (e.g. underflow).
 
 If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
@@ -1385,7 +1389,9 @@ func (this *QLocale) ToFloatp(s string) float32 {
 // [4] float toFloat(const QStringRef &, bool *) const
 
 /*
-Returns the float represented by the localized string s, or 0.0 if the conversion failed.
+Returns the float represented by the localized string s.
+
+Returns an infinity if the conversion overflows or 0.0 if the conversion fails for any other reason (e.g. underflow).
 
 If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
@@ -1411,7 +1417,9 @@ func (this *QLocale) ToFloat1(s QStringRef_ITF, ok *bool) float32 {
 // [4] float toFloat(const QStringRef &, bool *) const
 
 /*
-Returns the float represented by the localized string s, or 0.0 if the conversion failed.
+Returns the float represented by the localized string s.
+
+Returns an infinity if the conversion overflows or 0.0 if the conversion fails for any other reason (e.g. underflow).
 
 If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
@@ -1439,7 +1447,9 @@ func (this *QLocale) ToFloat1p(s QStringRef_ITF) float32 {
 // [4] float toFloat(QStringView, bool *) const
 
 /*
-Returns the float represented by the localized string s, or 0.0 if the conversion failed.
+Returns the float represented by the localized string s.
+
+Returns an infinity if the conversion overflows or 0.0 if the conversion fails for any other reason (e.g. underflow).
 
 If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
@@ -1465,7 +1475,9 @@ func (this *QLocale) ToFloat2(s QStringView_ITF /*123*/, ok *bool) float32 {
 // [4] float toFloat(QStringView, bool *) const
 
 /*
-Returns the float represented by the localized string s, or 0.0 if the conversion failed.
+Returns the float represented by the localized string s.
+
+Returns an infinity if the conversion overflows or 0.0 if the conversion fails for any other reason (e.g. underflow).
 
 If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
@@ -1493,7 +1505,9 @@ func (this *QLocale) ToFloat2p(s QStringView_ITF /*123*/) float32 {
 // [8] double toDouble(const QString &, bool *) const
 
 /*
-Returns the double represented by the localized string s, or 0.0 if the conversion failed.
+Returns the double represented by the localized string s.
+
+Returns an infinity if the conversion overflows or 0.0 if the conversion fails for any other reason (e.g. underflow).
 
 If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
@@ -1537,7 +1551,9 @@ func (this *QLocale) ToDouble(s string, ok *bool) float64 {
 // [8] double toDouble(const QString &, bool *) const
 
 /*
-Returns the double represented by the localized string s, or 0.0 if the conversion failed.
+Returns the double represented by the localized string s.
+
+Returns an infinity if the conversion overflows or 0.0 if the conversion fails for any other reason (e.g. underflow).
 
 If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
@@ -1583,7 +1599,9 @@ func (this *QLocale) ToDoublep(s string) float64 {
 // [8] double toDouble(const QStringRef &, bool *) const
 
 /*
-Returns the double represented by the localized string s, or 0.0 if the conversion failed.
+Returns the double represented by the localized string s.
+
+Returns an infinity if the conversion overflows or 0.0 if the conversion fails for any other reason (e.g. underflow).
 
 If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
@@ -1629,7 +1647,9 @@ func (this *QLocale) ToDouble1(s QStringRef_ITF, ok *bool) float64 {
 // [8] double toDouble(const QStringRef &, bool *) const
 
 /*
-Returns the double represented by the localized string s, or 0.0 if the conversion failed.
+Returns the double represented by the localized string s.
+
+Returns an infinity if the conversion overflows or 0.0 if the conversion fails for any other reason (e.g. underflow).
 
 If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
@@ -1677,7 +1697,9 @@ func (this *QLocale) ToDouble1p(s QStringRef_ITF) float64 {
 // [8] double toDouble(QStringView, bool *) const
 
 /*
-Returns the double represented by the localized string s, or 0.0 if the conversion failed.
+Returns the double represented by the localized string s.
+
+Returns an infinity if the conversion overflows or 0.0 if the conversion fails for any other reason (e.g. underflow).
 
 If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
@@ -1723,7 +1745,9 @@ func (this *QLocale) ToDouble2(s QStringView_ITF /*123*/, ok *bool) float64 {
 // [8] double toDouble(QStringView, bool *) const
 
 /*
-Returns the double represented by the localized string s, or 0.0 if the conversion failed.
+Returns the double represented by the localized string s.
+
+Returns an infinity if the conversion overflows or 0.0 if the conversion fails for any other reason (e.g. underflow).
 
 If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 

@@ -334,14 +334,14 @@ func QjsEngine(arg0 qtcore.QObject_ITF /*777 const QObject **/) *QJSEngine /*777
 }
 
 // /usr/include/qt/QtQml/qqmlproperty.h:130
-// index:50
+// index:52
 // Invalid inline Visibility=Default Availability=Available
 // [4] uint qHash(const QQmlProperty &)
 
 /*
 
  */
-func QHash50(key QQmlProperty_ITF) uint {
+func QHash52(key QQmlProperty_ITF) uint {
 	var convArg0 unsafe.Pointer
 	if key != nil && key.QQmlProperty_PTR() != nil {
 		convArg0 = key.QQmlProperty_PTR().GetCthis()

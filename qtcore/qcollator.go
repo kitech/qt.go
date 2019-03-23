@@ -260,8 +260,6 @@ This will enable proper sorting of numeric digits, so that e.g. 100 sorts after 
 
 By default this mode is off.
 
-Note: On Windows, this functionality makes use of the ICU library. If Qt was compiled without ICU support, it falls back to code using native Windows API, which only works from Windows 7 onwards. On older versions of Windows, it will not work and a warning will be emitted at runtime.
-
 See also numericMode().
 */
 func (this *QCollator) SetNumericMode(on bool) {
@@ -409,6 +407,8 @@ func (this *QCollator) Operator_fncall(s1 string, s2 string) bool {
 Returns a sortKey for string.
 
 Creating the sort key is usually somewhat slower, than using the compare() methods directly. But if the string is compared repeatedly (e.g. when sorting a whole list of strings), it's usually faster to create the sort keys for each string and then sort using the keys.
+
+Note: Not supported with the C (a.k.a. POSIX) locale on Darwin.
 */
 func (this *QCollator) SortKey(string string) *QCollatorSortKey /*123*/ {
 	var tmpArg0 = NewQString5(string)

@@ -76,10 +76,8 @@ func (*QQuickStyle) NewFromPointer(cthis unsafe.Pointer) *QQuickStyle {
 // [8] QString name()
 
 /*
-Returns the name of the application style.
 
-Note: The application style can be specified by passing a -style command line argument. Therefore name() may not return a fully resolved value if called before constructing a QGuiApplication.
-*/
+ */
 func (this *QQuickStyle) Name() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle4nameEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -100,10 +98,8 @@ func QQuickStyle_Name() string {
 // [8] QString path()
 
 /*
-Returns the path of an overridden application style, or an empty string if the style is one of the built-in Qt Quick Controls 2 styles.
 
-Note: The application style can be specified by passing a -style command line argument. Therefore path() may not return a fully resolved value if called before constructing a QGuiApplication.
-*/
+ */
 func (this *QQuickStyle) Path() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle4pathEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -124,12 +120,8 @@ func QQuickStyle_Path() string {
 // [-2] void setStyle(const QString &)
 
 /*
-Sets the application style to style.
 
-Note: The style must be configured before loading QML that imports Qt Quick Controls 2. It is not possible to change the style after the QML types have been registered.
-
-See also setFallbackStyle() and Using Styles in Qt Quick Controls 2.
-*/
+ */
 func (this *QQuickStyle) SetStyle(style string) {
 	var tmpArg0 = qtcore.NewQString5(style)
 	var convArg0 = tmpArg0.GetCthis()
@@ -147,18 +139,8 @@ func QQuickStyle_SetStyle(style string) {
 // [-2] void setFallbackStyle(const QString &)
 
 /*
-Sets the application fallback style to style.
 
-Note: The fallback style must be the name of one of the built-in Qt Quick Controls 2 styles, e.g. "Material".
-
-Note: The style must be configured before loading QML that imports Qt Quick Controls 2. It is not possible to change the style after the QML types have been registered.
-
-The fallback style can be also specified by setting the QT_QUICK_CONTROLS_FALLBACK_STYLE environment variable.
-
-This function was introduced in  Qt 5.8.
-
-See also setStyle() and Using Styles in Qt Quick Controls 2.
-*/
+ */
 func (this *QQuickStyle) SetFallbackStyle(style string) {
 	var tmpArg0 = qtcore.NewQString5(style)
 	var convArg0 = tmpArg0.GetCthis()
@@ -176,14 +158,8 @@ func QQuickStyle_SetFallbackStyle(style string) {
 // [8] QStringList availableStyles()
 
 /*
-Returns the names of the available styles.
 
-Note: The method must be called after creating an instance of QGuiApplication.
-
-This function was introduced in  Qt 5.9.
-
-See also stylePathList() and addStylePath().
-*/
+ */
 func (this *QQuickStyle) AvailableStyles() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle15availableStylesEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -203,14 +179,8 @@ func QQuickStyle_AvailableStyles() *qtcore.QStringList /*123*/ {
 // [8] QStringList stylePathList()
 
 /*
-Returns the list of directories where Qt Quick Controls 2 searches for available styles.
 
-By default, the list contains paths specified in the QT_QUICK_CONTROLS_STYLE_PATH environment variable, and any existing QtQuick/Controls.2 sub-directories in QQmlEngine::importPathList().
-
-This function was introduced in  Qt 5.12.
-
-See also addStylePath() and availableStyles().
-*/
+ */
 func (this *QQuickStyle) StylePathList() *qtcore.QStringList /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QQuickStyle13stylePathListEv", qtrt.FFI_TYPE_POINTER)
 	qtrt.ErrPrint(err, rv)
@@ -230,25 +200,8 @@ func QQuickStyle_StylePathList() *qtcore.QStringList /*123*/ {
 // [-2] void addStylePath(const QString &)
 
 /*
-Adds path as a directory where Qt Quick Controls 2 searches for available styles.
 
-The path may be any local filesystem directory or Qt Resource directory. For example, the following paths are all valid:
-
-
-/path/to/styles/
-file:///path/to/styles/
-:/path/to/styles/
-qrc:/path/to/styles/)
-
-
-The path will be converted into canonical form before it is added to the style path list.
-
-The newly added path will be first in the stylePathList().
-
-This function was introduced in  Qt 5.12.
-
-See also stylePathList() and availableStyles().
-*/
+ */
 func (this *QQuickStyle) AddStylePath(path string) {
 	var tmpArg0 = qtcore.NewQString5(path)
 	var convArg0 = tmpArg0.GetCthis()

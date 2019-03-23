@@ -4401,7 +4401,7 @@ func (this *QStringRef) ToULongLongp1(ok *bool) uint64 {
 /*
 Returns the string converted to a float value.
 
-Returns 0.0 if the conversion fails.
+Returns an infinity if the conversion overflows or 0.0 if the conversion fails for other reasons (e.g. underflow).
 
 If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
@@ -4444,7 +4444,7 @@ func (this *QStringRef) ToFloat(ok *bool) float32 {
 /*
 Returns the string converted to a float value.
 
-Returns 0.0 if the conversion fails.
+Returns an infinity if the conversion overflows or 0.0 if the conversion fails for other reasons (e.g. underflow).
 
 If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
@@ -4489,7 +4489,7 @@ func (this *QStringRef) ToFloatp() float32 {
 /*
 Returns the string converted to a double value.
 
-Returns 0.0 if the conversion fails.
+Returns an infinity if the conversion overflows or 0.0 if the conversion fails for other reasons (e.g. underflow).
 
 If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 
@@ -4545,7 +4545,7 @@ func (this *QStringRef) ToDouble(ok *bool) float64 {
 /*
 Returns the string converted to a double value.
 
-Returns 0.0 if the conversion fails.
+Returns an infinity if the conversion overflows or 0.0 if the conversion fails for other reasons (e.g. underflow).
 
 If ok is not nullptr, failure is reported by setting *ok to false, and success by setting *ok to true.
 

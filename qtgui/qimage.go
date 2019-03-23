@@ -2452,7 +2452,7 @@ func (this *QImage) InvertPixelsp() {
 /*
 Loads an image from the file with the given fileName. Returns true if the image was successfully loaded; otherwise invalidates the image and returns false.
 
-The loader attempts to read the image using the specified format, e.g., PNG or JPG. If format is not specified (which is the default), it is auto-detected based on the file's suffix and header. For details, see {QImageReader::setAutoDetectImageFormat()}{QImageReader}.
+The loader attempts to read the image using the specified format, e.g., PNG or JPG. If format is not specified (which is the default), it is auto-detected based on the file's suffix and header. For details, see QImageReader::setAutoDetectImageFormat().
 
 The file name can either refer to an actual file on disk or to one of the application's embedded resources. See the Resource System overview for details on how to embed images and other resource files in the application's executable.
 
@@ -2478,7 +2478,7 @@ func (this *QImage) Load(device qtcore.QIODevice_ITF /*777 QIODevice **/, format
 /*
 Loads an image from the file with the given fileName. Returns true if the image was successfully loaded; otherwise invalidates the image and returns false.
 
-The loader attempts to read the image using the specified format, e.g., PNG or JPG. If format is not specified (which is the default), it is auto-detected based on the file's suffix and header. For details, see {QImageReader::setAutoDetectImageFormat()}{QImageReader}.
+The loader attempts to read the image using the specified format, e.g., PNG or JPG. If format is not specified (which is the default), it is auto-detected based on the file's suffix and header. For details, see QImageReader::setAutoDetectImageFormat().
 
 The file name can either refer to an actual file on disk or to one of the application's embedded resources. See the Resource System overview for details on how to embed images and other resource files in the application's executable.
 
@@ -2502,7 +2502,7 @@ func (this *QImage) Load1(fileName string, format string) bool {
 /*
 Loads an image from the file with the given fileName. Returns true if the image was successfully loaded; otherwise invalidates the image and returns false.
 
-The loader attempts to read the image using the specified format, e.g., PNG or JPG. If format is not specified (which is the default), it is auto-detected based on the file's suffix and header. For details, see {QImageReader::setAutoDetectImageFormat()}{QImageReader}.
+The loader attempts to read the image using the specified format, e.g., PNG or JPG. If format is not specified (which is the default), it is auto-detected based on the file's suffix and header. For details, see QImageReader::setAutoDetectImageFormat().
 
 The file name can either refer to an actual file on disk or to one of the application's embedded resources. See the Resource System overview for details on how to embed images and other resource files in the application's executable.
 

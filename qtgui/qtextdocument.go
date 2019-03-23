@@ -1341,7 +1341,7 @@ func (this *QTextDocument) IsModified() bool {
 // [-2] void print(QPagedPaintDevice *) const
 
 /*
-Prints the document to the given printer. The QPageablePaintDevice must be set up before being used with this function.
+Prints the document to the given printer. The QPagedPaintDevice must be set up before being used with this function.
 
 This is only a convenience method to print the whole document to the printer.
 

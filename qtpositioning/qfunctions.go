@@ -39,14 +39,14 @@ func Operator_or87(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 }
 
 // /usr/include/qt/QtPositioning/qgeocoordinate.h:125
-// index:49
+// index:51
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QGeoCoordinate &, uint)
 
 /*
 
  */
-func QHash49(coordinate QGeoCoordinate_ITF, seed uint) uint {
+func QHash51(coordinate QGeoCoordinate_ITF, seed uint) uint {
 	var convArg0 unsafe.Pointer
 	if coordinate != nil && coordinate.QGeoCoordinate_PTR() != nil {
 		convArg0 = coordinate.QGeoCoordinate_PTR().GetCthis()

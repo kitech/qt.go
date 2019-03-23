@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qtextcodec.h
@@ -64,7 +66,7 @@ func (*QTextDecoder) NewFromPointer(cthis unsafe.Pointer) *QTextDecoder {
 	return NewQTextDecoderFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:158
+// /usr/include/qt/QtCore/qtextcodec.h:157
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [-2] void QTextDecoder(const QTextCodec *)
@@ -87,7 +89,7 @@ func NewQTextDecoder(codec QTextCodec_ITF /*777 const QTextCodec **/) *QTextDeco
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:159
+// /usr/include/qt/QtCore/qtextcodec.h:158
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QTextDecoder(const QTextCodec *, QTextCodec::ConversionFlags)
@@ -110,7 +112,7 @@ func NewQTextDecoder1(codec QTextCodec_ITF /*777 const QTextCodec **/, flags int
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:160
+// /usr/include/qt/QtCore/qtextcodec.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void ~QTextDecoder()
@@ -125,7 +127,7 @@ func DeleteQTextDecoder(this *QTextDecoder) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:161
+// /usr/include/qt/QtCore/qtextcodec.h:160
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toUnicode(const char *, int)
@@ -144,7 +146,7 @@ func (this *QTextDecoder) ToUnicode(chars string, len_ int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:162
+// /usr/include/qt/QtCore/qtextcodec.h:161
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString toUnicode(const QByteArray &)
@@ -165,7 +167,7 @@ func (this *QTextDecoder) ToUnicode1(ba QByteArray_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:163
+// /usr/include/qt/QtCore/qtextcodec.h:162
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void toUnicode(QString *, const char *, int)
@@ -182,7 +184,7 @@ func (this *QTextDecoder) ToUnicode2(target string, chars string, len_ int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:164
+// /usr/include/qt/QtCore/qtextcodec.h:163
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool hasFailure() const
@@ -196,7 +198,7 @@ func (this *QTextDecoder) HasFailure() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:165
+// /usr/include/qt/QtCore/qtextcodec.h:164
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool needsMoreData() const

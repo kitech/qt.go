@@ -415,7 +415,22 @@ func (this *QToolButton) SetToolButtonStyle(style int) {
 /*
 Sets the default action to action.
 
-If a tool button has a default action, the action defines the button's properties like text, icon, tool tip, etc.
+If a tool button has a default action, the action defines the following properties of the button:
+
+
+checkable
+checked
+enabled
+font
+icon
+popupMode (assuming the action has a menu)
+statusTip
+text
+toolTip
+whatsThis
+
+
+Other properties, such as autoRepeat, are not affected by actions.
 
 See also defaultAction().
 */

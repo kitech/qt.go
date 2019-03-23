@@ -472,7 +472,7 @@ func (this *QQuickWebEngineProfile) UrlSchemeHandler(arg0 qtcore.QByteArray_ITF)
 /*
 Registers a handler handler for custom URL scheme scheme in the profile.
 
-It is recommended to first register the scheme with QWebEngineUrlScheme::registerScheme at application startup.
+It is necessary to first register the scheme with QWebEngineUrlScheme::registerScheme at application startup.
 */
 func (this *QQuickWebEngineProfile) InstallUrlSchemeHandler(scheme qtcore.QByteArray_ITF, arg1 qtwebenginecore.QWebEngineUrlSchemeHandler_ITF /*777 QWebEngineUrlSchemeHandler **/) {
 	var convArg0 unsafe.Pointer

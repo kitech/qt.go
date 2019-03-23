@@ -343,11 +343,11 @@ func (this *QTextStream) Codec() *QTextCodec /*777 QTextCodec **/ {
 // [-2] void setAutoDetectUnicode(bool)
 
 /*
-If enabled is true, QTextStream will attempt to detect Unicode encoding by peeking into the stream data to see if it can find the UTF-16 or UTF-32 BOM (Byte Order Mark). If this mark is found, QTextStream will replace the current codec with the UTF codec.
+If enabled is true, QTextStream will attempt to detect Unicode encoding by peeking into the stream data to see if it can find the UTF-8, UTF-16, or UTF-32 Byte Order Mark (BOM). If this mark is found, QTextStream will replace the current codec with the UTF codec.
 
 This function can be used together with setCodec(). It is common to set the codec to UTF-8, and then enable UTF-16 detection.
 
-See also autoDetectUnicode() and setCodec().
+See also autoDetectUnicode(), setCodec(), and QTextCodec::codecForUtfText().
 */
 func (this *QTextStream) SetAutoDetectUnicode(enabled bool) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN11QTextStream20setAutoDetectUnicodeEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enabled)
@@ -362,7 +362,7 @@ func (this *QTextStream) SetAutoDetectUnicode(enabled bool) {
 /*
 Returns true if automatic Unicode detection is enabled, otherwise returns false. Automatic Unicode detection is enabled by default.
 
-See also setAutoDetectUnicode() and setCodec().
+See also setAutoDetectUnicode(), setCodec(), and QTextCodec::codecForUtfText().
 */
 func (this *QTextStream) AutoDetectUnicode() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QTextStream17autoDetectUnicodeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())

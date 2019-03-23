@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qsettings.h
@@ -67,7 +69,7 @@ func (*QSettings) NewFromPointer(cthis unsafe.Pointer) *QSettings {
 	return NewQSettingsFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:71
+// /usr/include/qt/QtCore/qsettings.h:68
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [8] const QMetaObject * metaObject() const
@@ -81,7 +83,7 @@ func (this *QSettings) MetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	return /*==*/ NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qsettings.h:127
+// /usr/include/qt/QtCore/qsettings.h:124
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSettings(const QString &, const QString &, QObject *)
@@ -119,7 +121,7 @@ func NewQSettings(organization string, application string, parent QObject_ITF /*
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsettings.h:127
+// /usr/include/qt/QtCore/qsettings.h:124
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSettings(const QString &, const QString &, QObject *)
@@ -155,7 +157,7 @@ func NewQSettingsp(organization string) *QSettings {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsettings.h:127
+// /usr/include/qt/QtCore/qsettings.h:124
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QSettings(const QString &, const QString &, QObject *)
@@ -191,7 +193,7 @@ func NewQSettingsp1(organization string, application string) *QSettings {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsettings.h:129
+// /usr/include/qt/QtCore/qsettings.h:126
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSettings(QSettings::Scope, const QString &, const QString &, QObject *)
@@ -229,7 +231,7 @@ func NewQSettings1(scope int, organization string, application string, parent QO
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsettings.h:129
+// /usr/include/qt/QtCore/qsettings.h:126
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSettings(QSettings::Scope, const QString &, const QString &, QObject *)
@@ -265,7 +267,7 @@ func NewQSettings1p(scope int, organization string) *QSettings {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsettings.h:129
+// /usr/include/qt/QtCore/qsettings.h:126
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void QSettings(QSettings::Scope, const QString &, const QString &, QObject *)
@@ -301,7 +303,7 @@ func NewQSettings1p1(scope int, organization string, application string) *QSetti
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsettings.h:131
+// /usr/include/qt/QtCore/qsettings.h:128
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QSettings(QSettings::Format, QSettings::Scope, const QString &, const QString &, QObject *)
@@ -339,7 +341,7 @@ func NewQSettings2(format int, scope int, organization string, application strin
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsettings.h:131
+// /usr/include/qt/QtCore/qsettings.h:128
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QSettings(QSettings::Format, QSettings::Scope, const QString &, const QString &, QObject *)
@@ -375,7 +377,7 @@ func NewQSettings2p(format int, scope int, organization string) *QSettings {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsettings.h:131
+// /usr/include/qt/QtCore/qsettings.h:128
 // index:2
 // Public Visibility=Default Availability=Available
 // [-2] void QSettings(QSettings::Format, QSettings::Scope, const QString &, const QString &, QObject *)
@@ -411,7 +413,7 @@ func NewQSettings2p1(format int, scope int, organization string, application str
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsettings.h:133
+// /usr/include/qt/QtCore/qsettings.h:130
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QSettings(const QString &, QSettings::Format, QObject *)
@@ -447,7 +449,7 @@ func NewQSettings3(fileName string, format int, parent QObject_ITF /*777 QObject
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsettings.h:133
+// /usr/include/qt/QtCore/qsettings.h:130
 // index:3
 // Public Visibility=Default Availability=Available
 // [-2] void QSettings(const QString &, QSettings::Format, QObject *)
@@ -481,7 +483,7 @@ func NewQSettings3p(fileName string, format int) *QSettings {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsettings.h:134
+// /usr/include/qt/QtCore/qsettings.h:131
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QSettings(QObject *)
@@ -515,7 +517,7 @@ func NewQSettings4(parent QObject_ITF /*777 QObject **/) *QSettings {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsettings.h:134
+// /usr/include/qt/QtCore/qsettings.h:131
 // index:4
 // Public Visibility=Default Availability=Available
 // [-2] void QSettings(QObject *)
@@ -547,7 +549,7 @@ func NewQSettings4p() *QSettings {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qsettings.h:144
+// /usr/include/qt/QtCore/qsettings.h:141
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void ~QSettings()
@@ -562,7 +564,7 @@ func DeleteQSettings(this *QSettings) {
 	this.SetCthis(nil)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:146
+// /usr/include/qt/QtCore/qsettings.h:143
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void clear()
@@ -581,7 +583,7 @@ func (this *QSettings) Clear() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:147
+// /usr/include/qt/QtCore/qsettings.h:144
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void sync()
@@ -598,7 +600,7 @@ func (this *QSettings) Sync() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:148
+// /usr/include/qt/QtCore/qsettings.h:145
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSettings::Status status() const
@@ -616,7 +618,7 @@ func (this *QSettings) Status() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:149
+// /usr/include/qt/QtCore/qsettings.h:146
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isAtomicSyncRequired() const
@@ -636,7 +638,7 @@ func (this *QSettings) IsAtomicSyncRequired() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qsettings.h:150
+// /usr/include/qt/QtCore/qsettings.h:147
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setAtomicSyncRequired(bool)
@@ -657,7 +659,7 @@ func (this *QSettings) SetAtomicSyncRequired(enable bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:152
+// /usr/include/qt/QtCore/qsettings.h:149
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void beginGroup(const QString &)
@@ -700,7 +702,7 @@ func (this *QSettings) BeginGroup(prefix string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:153
+// /usr/include/qt/QtCore/qsettings.h:150
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void endGroup()
@@ -732,7 +734,7 @@ func (this *QSettings) EndGroup() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:154
+// /usr/include/qt/QtCore/qsettings.h:151
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString group() const
@@ -751,7 +753,7 @@ func (this *QSettings) Group() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qsettings.h:156
+// /usr/include/qt/QtCore/qsettings.h:153
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] int beginReadArray(const QString &)
@@ -794,7 +796,7 @@ func (this *QSettings) BeginReadArray(prefix string) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qsettings.h:157
+// /usr/include/qt/QtCore/qsettings.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void beginWriteArray(const QString &, int)
@@ -847,7 +849,7 @@ func (this *QSettings) BeginWriteArray(prefix string, size int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:157
+// /usr/include/qt/QtCore/qsettings.h:154
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void beginWriteArray(const QString &, int)
@@ -902,7 +904,7 @@ func (this *QSettings) BeginWriteArrayp(prefix string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:158
+// /usr/include/qt/QtCore/qsettings.h:155
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void endArray()
@@ -917,7 +919,7 @@ func (this *QSettings) EndArray() {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:159
+// /usr/include/qt/QtCore/qsettings.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setArrayIndex(int)
@@ -932,7 +934,7 @@ func (this *QSettings) SetArrayIndex(i int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:161
+// /usr/include/qt/QtCore/qsettings.h:158
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList allKeys() const
@@ -973,7 +975,7 @@ func (this *QSettings) AllKeys() *QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qsettings.h:162
+// /usr/include/qt/QtCore/qsettings.h:159
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList childKeys() const
@@ -1016,7 +1018,7 @@ func (this *QSettings) ChildKeys() *QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qsettings.h:163
+// /usr/include/qt/QtCore/qsettings.h:160
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QStringList childGroups() const
@@ -1059,7 +1061,7 @@ func (this *QSettings) ChildGroups() *QStringList /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qsettings.h:164
+// /usr/include/qt/QtCore/qsettings.h:161
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool isWritable() const
@@ -1079,7 +1081,7 @@ func (this *QSettings) IsWritable() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qsettings.h:166
+// /usr/include/qt/QtCore/qsettings.h:163
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setValue(const QString &, const QVariant &)
@@ -1114,7 +1116,7 @@ func (this *QSettings) SetValue(key string, value QVariant_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:167
+// /usr/include/qt/QtCore/qsettings.h:164
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant value(const QString &, const QVariant &) const
@@ -1153,7 +1155,7 @@ func (this *QSettings) Value(key string, defaultValue QVariant_ITF) *QVariant /*
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qsettings.h:167
+// /usr/include/qt/QtCore/qsettings.h:164
 // index:0
 // Public Visibility=Default Availability=Available
 // [16] QVariant value(const QString &, const QVariant &) const
@@ -1190,7 +1192,7 @@ func (this *QSettings) Valuep(key string) *QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qsettings.h:169
+// /usr/include/qt/QtCore/qsettings.h:166
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void remove(const QString &)
@@ -1244,7 +1246,7 @@ func (this *QSettings) Remove(key string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:170
+// /usr/include/qt/QtCore/qsettings.h:167
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool contains(const QString &) const
@@ -1266,7 +1268,7 @@ func (this *QSettings) Contains(key string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qsettings.h:172
+// /usr/include/qt/QtCore/qsettings.h:169
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setFallbacksEnabled(bool)
@@ -1283,7 +1285,7 @@ func (this *QSettings) SetFallbacksEnabled(b bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:173
+// /usr/include/qt/QtCore/qsettings.h:170
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool fallbacksEnabled() const
@@ -1301,7 +1303,7 @@ func (this *QSettings) FallbacksEnabled() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qsettings.h:175
+// /usr/include/qt/QtCore/qsettings.h:172
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString fileName() const
@@ -1322,7 +1324,7 @@ func (this *QSettings) FileName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qsettings.h:176
+// /usr/include/qt/QtCore/qsettings.h:173
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSettings::Format format() const
@@ -1340,7 +1342,7 @@ func (this *QSettings) Format() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:177
+// /usr/include/qt/QtCore/qsettings.h:174
 // index:0
 // Public Visibility=Default Availability=Available
 // [4] QSettings::Scope scope() const
@@ -1358,7 +1360,7 @@ func (this *QSettings) Scope() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:178
+// /usr/include/qt/QtCore/qsettings.h:175
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString organizationName() const
@@ -1379,7 +1381,7 @@ func (this *QSettings) OrganizationName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qsettings.h:179
+// /usr/include/qt/QtCore/qsettings.h:176
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString applicationName() const
@@ -1400,7 +1402,7 @@ func (this *QSettings) ApplicationName() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qsettings.h:182
+// /usr/include/qt/QtCore/qsettings.h:179
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void setIniCodec(QTextCodec *)
@@ -1423,7 +1425,7 @@ func (this *QSettings) SetIniCodec(codec QTextCodec_ITF /*777 QTextCodec **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:183
+// /usr/include/qt/QtCore/qsettings.h:180
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void setIniCodec(const char *)
@@ -1444,7 +1446,7 @@ func (this *QSettings) SetIniCodec1(codecName string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:184
+// /usr/include/qt/QtCore/qsettings.h:181
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextCodec * iniCodec() const
@@ -1462,7 +1464,7 @@ func (this *QSettings) IniCodec() *QTextCodec /*777 QTextCodec **/ {
 	return /*==*/ NewQTextCodecFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qsettings.h:187
+// /usr/include/qt/QtCore/qsettings.h:184
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setDefaultFormat(QSettings::Format)
@@ -1485,7 +1487,7 @@ func QSettings_SetDefaultFormat(format int) {
 	nilthis.SetDefaultFormat(format)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:188
+// /usr/include/qt/QtCore/qsettings.h:185
 // index:0
 // Public static Visibility=Default Availability=Available
 // [4] QSettings::Format defaultFormat()
@@ -1508,7 +1510,7 @@ func QSettings_DefaultFormat() int {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qsettings.h:189
+// /usr/include/qt/QtCore/qsettings.h:186
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setSystemIniPath(const QString &)
@@ -1527,7 +1529,7 @@ func QSettings_SetSystemIniPath(dir string) {
 	nilthis.SetSystemIniPath(dir)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:190
+// /usr/include/qt/QtCore/qsettings.h:187
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setUserIniPath(const QString &)
@@ -1546,7 +1548,7 @@ func QSettings_SetUserIniPath(dir string) {
 	nilthis.SetUserIniPath(dir)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:191
+// /usr/include/qt/QtCore/qsettings.h:188
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setPath(QSettings::Format, QSettings::Scope, const QString &)
@@ -1589,7 +1591,7 @@ func QSettings_SetPath(format int, scope int, path string) {
 	nilthis.SetPath(format, scope, path)
 }
 
-// /usr/include/qt/QtCore/qsettings.h:202
+// /usr/include/qt/QtCore/qsettings.h:199
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [1] bool event(QEvent *)

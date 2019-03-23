@@ -227,15 +227,13 @@ func (this *QAbstractSocket) SetPauseMode(pauseMode int) {
 /*
 Binds to address on port port, using the BindMode mode.
 
-Binds this socket to the address address and the port port.
-
-For UDP sockets, after binding, the signal QUdpSocket::readyRead() is emitted whenever a UDP datagram arrives on the specified address and port. Thus, This function is useful to write UDP servers.
+For UDP sockets, after binding, the signal QUdpSocket::readyRead() is emitted whenever a UDP datagram arrives on the specified address and port. Thus, this function is useful to write UDP servers.
 
 For TCP sockets, this function may be used to specify which interface to use for an outgoing connection, which is useful in case of multiple network interfaces.
 
 By default, the socket is bound using the DefaultForPlatform BindMode. If a port is not specified, a random port is chosen.
 
-On success, the functions returns true and the socket enters BoundState; otherwise it returns false.
+On success, the function returns true and the socket enters BoundState; otherwise it returns false.
 
 This function was introduced in  Qt 5.0.
 */
@@ -257,15 +255,13 @@ func (this *QAbstractSocket) Bind(address QHostAddress_ITF, port uint16, mode in
 /*
 Binds to address on port port, using the BindMode mode.
 
-Binds this socket to the address address and the port port.
-
-For UDP sockets, after binding, the signal QUdpSocket::readyRead() is emitted whenever a UDP datagram arrives on the specified address and port. Thus, This function is useful to write UDP servers.
+For UDP sockets, after binding, the signal QUdpSocket::readyRead() is emitted whenever a UDP datagram arrives on the specified address and port. Thus, this function is useful to write UDP servers.
 
 For TCP sockets, this function may be used to specify which interface to use for an outgoing connection, which is useful in case of multiple network interfaces.
 
 By default, the socket is bound using the DefaultForPlatform BindMode. If a port is not specified, a random port is chosen.
 
-On success, the functions returns true and the socket enters BoundState; otherwise it returns false.
+On success, the function returns true and the socket enters BoundState; otherwise it returns false.
 
 This function was introduced in  Qt 5.0.
 */
@@ -291,15 +287,13 @@ func (this *QAbstractSocket) Bindp(address QHostAddress_ITF) bool {
 /*
 Binds to address on port port, using the BindMode mode.
 
-Binds this socket to the address address and the port port.
-
-For UDP sockets, after binding, the signal QUdpSocket::readyRead() is emitted whenever a UDP datagram arrives on the specified address and port. Thus, This function is useful to write UDP servers.
+For UDP sockets, after binding, the signal QUdpSocket::readyRead() is emitted whenever a UDP datagram arrives on the specified address and port. Thus, this function is useful to write UDP servers.
 
 For TCP sockets, this function may be used to specify which interface to use for an outgoing connection, which is useful in case of multiple network interfaces.
 
 By default, the socket is bound using the DefaultForPlatform BindMode. If a port is not specified, a random port is chosen.
 
-On success, the functions returns true and the socket enters BoundState; otherwise it returns false.
+On success, the function returns true and the socket enters BoundState; otherwise it returns false.
 
 This function was introduced in  Qt 5.0.
 */
@@ -323,15 +317,13 @@ func (this *QAbstractSocket) Bindp1(address QHostAddress_ITF, port uint16) bool 
 /*
 Binds to address on port port, using the BindMode mode.
 
-Binds this socket to the address address and the port port.
-
-For UDP sockets, after binding, the signal QUdpSocket::readyRead() is emitted whenever a UDP datagram arrives on the specified address and port. Thus, This function is useful to write UDP servers.
+For UDP sockets, after binding, the signal QUdpSocket::readyRead() is emitted whenever a UDP datagram arrives on the specified address and port. Thus, this function is useful to write UDP servers.
 
 For TCP sockets, this function may be used to specify which interface to use for an outgoing connection, which is useful in case of multiple network interfaces.
 
 By default, the socket is bound using the DefaultForPlatform BindMode. If a port is not specified, a random port is chosen.
 
-On success, the functions returns true and the socket enters BoundState; otherwise it returns false.
+On success, the function returns true and the socket enters BoundState; otherwise it returns false.
 
 This function was introduced in  Qt 5.0.
 */
@@ -349,15 +341,13 @@ func (this *QAbstractSocket) Bind1(port uint16, mode int) bool {
 /*
 Binds to address on port port, using the BindMode mode.
 
-Binds this socket to the address address and the port port.
-
-For UDP sockets, after binding, the signal QUdpSocket::readyRead() is emitted whenever a UDP datagram arrives on the specified address and port. Thus, This function is useful to write UDP servers.
+For UDP sockets, after binding, the signal QUdpSocket::readyRead() is emitted whenever a UDP datagram arrives on the specified address and port. Thus, this function is useful to write UDP servers.
 
 For TCP sockets, this function may be used to specify which interface to use for an outgoing connection, which is useful in case of multiple network interfaces.
 
 By default, the socket is bound using the DefaultForPlatform BindMode. If a port is not specified, a random port is chosen.
 
-On success, the functions returns true and the socket enters BoundState; otherwise it returns false.
+On success, the function returns true and the socket enters BoundState; otherwise it returns false.
 
 This function was introduced in  Qt 5.0.
 */
@@ -379,15 +369,13 @@ func (this *QAbstractSocket) Bind1p() bool {
 /*
 Binds to address on port port, using the BindMode mode.
 
-Binds this socket to the address address and the port port.
-
-For UDP sockets, after binding, the signal QUdpSocket::readyRead() is emitted whenever a UDP datagram arrives on the specified address and port. Thus, This function is useful to write UDP servers.
+For UDP sockets, after binding, the signal QUdpSocket::readyRead() is emitted whenever a UDP datagram arrives on the specified address and port. Thus, this function is useful to write UDP servers.
 
 For TCP sockets, this function may be used to specify which interface to use for an outgoing connection, which is useful in case of multiple network interfaces.
 
 By default, the socket is bound using the DefaultForPlatform BindMode. If a port is not specified, a random port is chosen.
 
-On success, the functions returns true and the socket enters BoundState; otherwise it returns false.
+On success, the function returns true and the socket enters BoundState; otherwise it returns false.
 
 This function was introduced in  Qt 5.0.
 */

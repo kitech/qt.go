@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtcore
 
 // /usr/include/qt/QtCore/qtextcodec.h
@@ -64,7 +66,7 @@ func (*QTextCodec) NewFromPointer(cthis unsafe.Pointer) *QTextCodec {
 	return NewQTextCodecFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:61
+// /usr/include/qt/QtCore/qtextcodec.h:60
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QTextCodec * codecForName(const QByteArray &)
@@ -89,7 +91,7 @@ func QTextCodec_CodecForName(name QByteArray_ITF) *QTextCodec /*777 QTextCodec *
 	return rv
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:62
+// /usr/include/qt/QtCore/qtextcodec.h:61
 // index:1
 // Public static inline Visibility=Default Availability=Available
 // [8] QTextCodec * codecForName(const char *)
@@ -112,7 +114,7 @@ func QTextCodec_CodecForName1(name string) *QTextCodec /*777 QTextCodec **/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:63
+// /usr/include/qt/QtCore/qtextcodec.h:62
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QTextCodec * codecForMib(int)
@@ -133,7 +135,7 @@ func QTextCodec_CodecForMib(mib int) *QTextCodec /*777 QTextCodec **/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:68
+// /usr/include/qt/QtCore/qtextcodec.h:67
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QTextCodec * codecForLocale()
@@ -160,7 +162,7 @@ func QTextCodec_CodecForLocale() *QTextCodec /*777 QTextCodec **/ {
 	return rv
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:69
+// /usr/include/qt/QtCore/qtextcodec.h:68
 // index:0
 // Public static Visibility=Default Availability=Available
 // [-2] void setCodecForLocale(QTextCodec *)
@@ -187,7 +189,7 @@ func QTextCodec_SetCodecForLocale(c QTextCodec_ITF /*777 QTextCodec **/) {
 	nilthis.SetCodecForLocale(c)
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:75
+// /usr/include/qt/QtCore/qtextcodec.h:74
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QTextCodec * codecForHtml(const QByteArray &)
@@ -214,7 +216,7 @@ func QTextCodec_CodecForHtml(ba QByteArray_ITF) *QTextCodec /*777 QTextCodec **/
 	return rv
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:76
+// /usr/include/qt/QtCore/qtextcodec.h:75
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QTextCodec * codecForHtml(const QByteArray &, QTextCodec *)
@@ -245,13 +247,23 @@ func QTextCodec_CodecForHtml1(ba QByteArray_ITF, defaultCodec QTextCodec_ITF /*7
 	return rv
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:78
+// /usr/include/qt/QtCore/qtextcodec.h:77
 // index:0
 // Public static Visibility=Default Availability=Available
 // [8] QTextCodec * codecForUtfText(const QByteArray &)
 
 /*
-Tries to detect the encoding of the provided snippet ba by using the BOM (Byte Order Mark) and returns a QTextCodec instance that is capable of decoding the text to unicode. If the codec cannot be detected from the content provided, defaultCodec is returned.
+Tries to detect the encoding of the provided snippet ba by using the BOM (Byte Order Mark) and returns a QTextCodec instance that is capable of decoding the text to unicode. This function can detect one of the following codecs:
+
+
+UTF-32 Little Endian
+UTF-32 Big Endian
+UTF-16 Little Endian
+UTF-16 Big Endian
+UTF-8
+
+
+If the codec cannot be detected from the content provided, defaultCodec is returned.
 
 This function was introduced in  Qt 4.6.
 
@@ -272,13 +284,23 @@ func QTextCodec_CodecForUtfText(ba QByteArray_ITF) *QTextCodec /*777 QTextCodec 
 	return rv
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:79
+// /usr/include/qt/QtCore/qtextcodec.h:78
 // index:1
 // Public static Visibility=Default Availability=Available
 // [8] QTextCodec * codecForUtfText(const QByteArray &, QTextCodec *)
 
 /*
-Tries to detect the encoding of the provided snippet ba by using the BOM (Byte Order Mark) and returns a QTextCodec instance that is capable of decoding the text to unicode. If the codec cannot be detected from the content provided, defaultCodec is returned.
+Tries to detect the encoding of the provided snippet ba by using the BOM (Byte Order Mark) and returns a QTextCodec instance that is capable of decoding the text to unicode. This function can detect one of the following codecs:
+
+
+UTF-32 Little Endian
+UTF-32 Big Endian
+UTF-16 Little Endian
+UTF-16 Big Endian
+UTF-8
+
+
+If the codec cannot be detected from the content provided, defaultCodec is returned.
 
 This function was introduced in  Qt 4.6.
 
@@ -303,7 +325,7 @@ func QTextCodec_CodecForUtfText1(ba QByteArray_ITF, defaultCodec QTextCodec_ITF 
 	return rv
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:81
+// /usr/include/qt/QtCore/qtextcodec.h:80
 // index:0
 // Public Visibility=Default Availability=Available
 // [1] bool canEncode(QChar) const
@@ -321,7 +343,7 @@ func (this *QTextCodec) CanEncode(arg0 QChar_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:83
+// /usr/include/qt/QtCore/qtextcodec.h:82
 // index:1
 // Public Visibility=Default Availability=Available
 // [1] bool canEncode(const QString &) const
@@ -337,7 +359,7 @@ func (this *QTextCodec) CanEncode1(arg0 string) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:85
+// /usr/include/qt/QtCore/qtextcodec.h:84
 // index:2
 // Public Visibility=Default Availability=Available
 // [1] bool canEncode(QStringView) const
@@ -355,7 +377,7 @@ func (this *QTextCodec) CanEncode2(arg0 QStringView_ITF /*123*/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:87
+// /usr/include/qt/QtCore/qtextcodec.h:86
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QString toUnicode(const QByteArray &) const
@@ -376,7 +398,7 @@ func (this *QTextCodec) ToUnicode(arg0 QByteArray_ITF) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:88
+// /usr/include/qt/QtCore/qtextcodec.h:87
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QString toUnicode(const char *) const
@@ -395,7 +417,7 @@ func (this *QTextCodec) ToUnicode1(chars string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:90
+// /usr/include/qt/QtCore/qtextcodec.h:89
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QByteArray fromUnicode(const QString &) const
@@ -413,7 +435,7 @@ func (this *QTextCodec) FromUnicode(uc string) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:92
+// /usr/include/qt/QtCore/qtextcodec.h:91
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QByteArray fromUnicode(QStringView) const
@@ -433,7 +455,7 @@ func (this *QTextCodec) FromUnicode1(uc QStringView_ITF /*123*/) *QByteArray /*1
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:119
+// /usr/include/qt/QtCore/qtextcodec.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextDecoder * makeDecoder(QTextCodec::ConversionFlags) const
@@ -451,7 +473,7 @@ func (this *QTextCodec) MakeDecoder(flags int) *QTextDecoder /*777 QTextDecoder 
 	return /*==*/ NewQTextDecoderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:119
+// /usr/include/qt/QtCore/qtextcodec.h:118
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextDecoder * makeDecoder(QTextCodec::ConversionFlags) const
@@ -471,7 +493,7 @@ func (this *QTextCodec) MakeDecoderp() *QTextDecoder /*777 QTextDecoder **/ {
 	return /*==*/ NewQTextDecoderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:120
+// /usr/include/qt/QtCore/qtextcodec.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextEncoder * makeEncoder(QTextCodec::ConversionFlags) const
@@ -489,7 +511,7 @@ func (this *QTextCodec) MakeEncoder(flags int) *QTextEncoder /*777 QTextEncoder 
 	return /*==*/ NewQTextEncoderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:120
+// /usr/include/qt/QtCore/qtextcodec.h:119
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QTextEncoder * makeEncoder(QTextCodec::ConversionFlags) const
@@ -509,7 +531,7 @@ func (this *QTextCodec) MakeEncoderp() *QTextEncoder /*777 QTextEncoder **/ {
 	return /*==*/ NewQTextEncoderFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:122
+// /usr/include/qt/QtCore/qtextcodec.h:121
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [8] QByteArray name() const
@@ -527,7 +549,7 @@ func (this *QTextCodec) Name() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:124
+// /usr/include/qt/QtCore/qtextcodec.h:123
 // index:0
 // Public purevirtual virtual Visibility=Default Availability=Available
 // [4] int mibEnum() const
@@ -541,7 +563,7 @@ func (this *QTextCodec) MibEnum() int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:130
+// /usr/include/qt/QtCore/qtextcodec.h:129
 // index:0
 // Protected Visibility=Default Availability=Available
 // [-2] void QTextCodec()
@@ -560,7 +582,7 @@ func NewQTextCodec() *QTextCodec {
 	return gothis
 }
 
-// /usr/include/qt/QtCore/qtextcodec.h:131
+// /usr/include/qt/QtCore/qtextcodec.h:130
 // index:0
 // Protected virtual Visibility=Default Availability=Available
 // [-2] void ~QTextCodec()

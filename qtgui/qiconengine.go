@@ -401,7 +401,7 @@ func (this *QIconEngine) ScaledPixmap(size qtcore.QSize_ITF, mode int, state int
 	return rv2
 }
 
-// /usr/include/qt/QtGui/qiconengine.h:93
+// /usr/include/qt/QtGui/qiconengine.h:94
 // index:0
 // Public virtual Visibility=Default Availability=Available
 // [-2] void virtual_hook(int, void *)

@@ -601,6 +601,8 @@ Creates and returns a pixmap constructed by grabbing the contents of the given w
 
 The arguments (x, y) specify the offset in the window, whereas (width, height) specify the area to be copied. If width is negative, the function copies everything to the right border of the window. If height is negative, the function copies everything to the bottom of the window.
 
+The offset and size arguments are specified in device independent pixels. The returned pixmap may be larger than the requested size when grabbing from a high-DPI screen. Call QPixmap::devicePixelRatio() to determine if this is the case.
+
 The window system identifier (WId) can be retrieved using the QWidget::winId() function. The rationale for using a window identifier and not a QWidget, is to enable grabbing of windows that are not part of the application, window system frames, and so on.
 
 Warning: Grabbing windows that are not part of the application is not supported on systems such as iOS, where sandboxing/security prevents reading pixels of windows not owned by the application.
@@ -630,6 +632,8 @@ func (this *QScreen) GrabWindow(window uint64, x int, y int, w int, h int) *QPix
 Creates and returns a pixmap constructed by grabbing the contents of the given window restricted by QRect(x, y, width, height).
 
 The arguments (x, y) specify the offset in the window, whereas (width, height) specify the area to be copied. If width is negative, the function copies everything to the right border of the window. If height is negative, the function copies everything to the bottom of the window.
+
+The offset and size arguments are specified in device independent pixels. The returned pixmap may be larger than the requested size when grabbing from a high-DPI screen. Call QPixmap::devicePixelRatio() to determine if this is the case.
 
 The window system identifier (WId) can be retrieved using the QWidget::winId() function. The rationale for using a window identifier and not a QWidget, is to enable grabbing of windows that are not part of the application, window system frames, and so on.
 
@@ -669,6 +673,8 @@ Creates and returns a pixmap constructed by grabbing the contents of the given w
 
 The arguments (x, y) specify the offset in the window, whereas (width, height) specify the area to be copied. If width is negative, the function copies everything to the right border of the window. If height is negative, the function copies everything to the bottom of the window.
 
+The offset and size arguments are specified in device independent pixels. The returned pixmap may be larger than the requested size when grabbing from a high-DPI screen. Call QPixmap::devicePixelRatio() to determine if this is the case.
+
 The window system identifier (WId) can be retrieved using the QWidget::winId() function. The rationale for using a window identifier and not a QWidget, is to enable grabbing of windows that are not part of the application, window system frames, and so on.
 
 Warning: Grabbing windows that are not part of the application is not supported on systems such as iOS, where sandboxing/security prevents reading pixels of windows not owned by the application.
@@ -705,6 +711,8 @@ Creates and returns a pixmap constructed by grabbing the contents of the given w
 
 The arguments (x, y) specify the offset in the window, whereas (width, height) specify the area to be copied. If width is negative, the function copies everything to the right border of the window. If height is negative, the function copies everything to the bottom of the window.
 
+The offset and size arguments are specified in device independent pixels. The returned pixmap may be larger than the requested size when grabbing from a high-DPI screen. Call QPixmap::devicePixelRatio() to determine if this is the case.
+
 The window system identifier (WId) can be retrieved using the QWidget::winId() function. The rationale for using a window identifier and not a QWidget, is to enable grabbing of windows that are not part of the application, window system frames, and so on.
 
 Warning: Grabbing windows that are not part of the application is not supported on systems such as iOS, where sandboxing/security prevents reading pixels of windows not owned by the application.
@@ -738,6 +746,8 @@ func (this *QScreen) GrabWindowp2(window uint64, x int, y int) *QPixmap /*123*/ 
 Creates and returns a pixmap constructed by grabbing the contents of the given window restricted by QRect(x, y, width, height).
 
 The arguments (x, y) specify the offset in the window, whereas (width, height) specify the area to be copied. If width is negative, the function copies everything to the right border of the window. If height is negative, the function copies everything to the bottom of the window.
+
+The offset and size arguments are specified in device independent pixels. The returned pixmap may be larger than the requested size when grabbing from a high-DPI screen. Call QPixmap::devicePixelRatio() to determine if this is the case.
 
 The window system identifier (WId) can be retrieved using the QWidget::winId() function. The rationale for using a window identifier and not a QWidget, is to enable grabbing of windows that are not part of the application, window system frames, and so on.
 

@@ -637,6 +637,10 @@ func (this *QThread) Waitp() bool {
 /*
 Forces the current thread to sleep for secs seconds.
 
+Avoid using this function if you need to wait for a given condition to change. Instead, connect a slot to the signal that indicates the change or use an event handler (see QObject::event()).
+
+Note: This function does not guarantee accuracy. The application may sleep longer than secs under heavy load conditions.
+
 See also msleep() and usleep().
 */
 func (this *QThread) Sleep(arg0 uint) {
@@ -656,6 +660,10 @@ func QThread_Sleep(arg0 uint) {
 /*
 Forces the current thread to sleep for msecs milliseconds.
 
+Avoid using this function if you need to wait for a given condition to change. Instead, connect a slot to the signal that indicates the change or use an event handler (see QObject::event()).
+
+Note: This function does not guarantee accuracy. The application may sleep longer than msecs under heavy load conditions. Some OSes might round msecs up to 10 ms or 15 ms.
+
 See also sleep() and usleep().
 */
 func (this *QThread) Msleep(arg0 uint) {
@@ -674,6 +682,10 @@ func QThread_Msleep(arg0 uint) {
 
 /*
 Forces the current thread to sleep for usecs microseconds.
+
+Avoid using this function if you need to wait for a given condition to change. Instead, connect a slot to the signal that indicates the change or use an event handler (see QObject::event()).
+
+Note: This function does not guarantee accuracy. The application may sleep longer than usecs under heavy load conditions. Some OSes might round usecs up to 10 ms or 15 ms; on Windows, it will be rounded up to a multiple of 1 ms.
 
 See also sleep() and msleep().
 */
