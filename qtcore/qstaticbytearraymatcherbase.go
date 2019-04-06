@@ -120,7 +120,7 @@ func DeleteQStaticByteArrayMatcherBase(this *QStaticByteArrayMatcherBase) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10315() {
 	if false {
 		reflect.TypeOf(123)
 	}

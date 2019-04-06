@@ -174,7 +174,7 @@ func (this *QSGRectangleNode) Color() *qtgui.QColor /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_11611() {
 	if false {
 		reflect.TypeOf(123)
 	}

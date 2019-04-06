@@ -330,7 +330,7 @@ func (this *QAndroidJniObject) IsValid() bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_14903() {
 	if false {
 		reflect.TypeOf(123)
 	}

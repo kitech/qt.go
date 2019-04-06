@@ -277,7 +277,7 @@ func DeleteQTextTableFormat(this *QTextTableFormat) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10773() {
 	if false {
 		reflect.TypeOf(123)
 	}

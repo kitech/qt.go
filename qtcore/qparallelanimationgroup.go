@@ -232,7 +232,7 @@ func (this *QParallelAnimationGroup) UpdateDirection(direction int) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10493() {
 	if false {
 		reflect.TypeOf(123)
 	}

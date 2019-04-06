@@ -245,7 +245,7 @@ func (this *QFileSelector) AllSelectors() *QStringList /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10407() {
 	if false {
 		reflect.TypeOf(123)
 	}

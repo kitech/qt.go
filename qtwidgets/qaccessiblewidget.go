@@ -480,7 +480,7 @@ func (this *QAccessibleWidget) AddControllingSignal(signal string) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11063() {
 	if false {
 		reflect.TypeOf(123)
 	}

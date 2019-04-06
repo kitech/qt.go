@@ -449,7 +449,7 @@ func (this *QQmlInfo) Operator_left_shift20(t qtcore.QUrl_ITF) *QQmlInfo {
 
 //  keep block begin
 
-func init() {
+func init_unused_11537() {
 	if false {
 		reflect.TypeOf(123)
 	}

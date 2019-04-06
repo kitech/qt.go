@@ -202,7 +202,7 @@ func (this *QTouchEvent) SetDevice(adevice QTouchDevice_ITF /*777 QTouchDevice *
 
 //  keep block begin
 
-func init() {
+func init_unused_10711() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -610,7 +610,7 @@ func QStandardPaths_LocateOptionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10549() {
 	if false {
 		reflect.TypeOf(123)
 	}

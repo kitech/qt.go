@@ -294,7 +294,7 @@ func (this *QTextList) Format() *QTextListFormat /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10963() {
 	if false {
 		reflect.TypeOf(123)
 	}

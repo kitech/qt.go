@@ -124,7 +124,7 @@ func DeleteQBitRef(this *QBitRef) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10307() {
 	if false {
 		reflect.TypeOf(123)
 	}

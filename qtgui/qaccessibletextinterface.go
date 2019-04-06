@@ -325,7 +325,7 @@ func (this *QAccessibleTextInterface) Attributes(offset int, startOffset unsafe.
 
 //  keep block begin
 
-func init() {
+func init_unused_10805() {
 	if false {
 		reflect.TypeOf(123)
 	}

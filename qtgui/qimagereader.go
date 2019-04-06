@@ -1170,7 +1170,7 @@ func QImageReader_ImageReaderErrorItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10885() {
 	if false {
 		reflect.TypeOf(123)
 	}

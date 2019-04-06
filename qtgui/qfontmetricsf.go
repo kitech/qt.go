@@ -1061,7 +1061,7 @@ func (this *QFontMetricsF) Operator_not_equal(other QFontMetricsF_ITF) bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10867() {
 	if false {
 		reflect.TypeOf(123)
 	}

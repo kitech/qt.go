@@ -492,7 +492,7 @@ func (this *QMediaTimeRange) Clear() {
 
 //  keep block begin
 
-func init() {
+func init_unused_11865() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -75,7 +75,7 @@ func DeleteQBrushData(this *QBrushData) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10745() {
 	if false {
 		reflect.TypeOf(123)
 	}

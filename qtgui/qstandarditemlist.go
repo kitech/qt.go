@@ -26,7 +26,7 @@ import "github.com/kitech/qt.go/qtcore"
 
 //  keep block begin
 
-func init() {
+func init_unused_10099() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -101,7 +101,7 @@ func DeleteQCloseEvent(this *QCloseEvent) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10671() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -312,7 +312,7 @@ func QGraphicsSceneContextMenuEvent_ReasonItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11223() {
 	if false {
 		reflect.TypeOf(123)
 	}

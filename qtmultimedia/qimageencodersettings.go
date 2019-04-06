@@ -317,7 +317,7 @@ func (this *QImageEncoderSettings) SetEncodingOption(option string, value qtcore
 
 //  keep block begin
 
-func init() {
+func init_unused_11765() {
 	if false {
 		reflect.TypeOf(123)
 	}

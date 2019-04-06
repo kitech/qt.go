@@ -78,7 +78,7 @@ func DeleteRegisterCompositeSingletonType(this *RegisterCompositeSingletonType) 
 
 //  keep block begin
 
-func init() {
+func init_unused_11493() {
 	if false {
 		reflect.TypeOf(123)
 	}

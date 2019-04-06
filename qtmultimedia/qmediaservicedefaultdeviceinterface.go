@@ -108,7 +108,7 @@ func (this *QMediaServiceDefaultDeviceInterface) DefaultDevice(service qtcore.QB
 
 //  keep block begin
 
-func init() {
+func init_unused_11881() {
 	if false {
 		reflect.TypeOf(123)
 	}

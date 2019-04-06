@@ -496,7 +496,7 @@ func QTextBlockFormat_LineHeightTypesItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10765() {
 	if false {
 		reflect.TypeOf(123)
 	}

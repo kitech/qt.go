@@ -165,7 +165,7 @@ func (this *QAccessibleTextRemoveEvent) ChangePosition() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10827() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -515,41 +515,6 @@ func (this *QAction) Priority() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtWidgets/qaction.h:125
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] QMenu * menu() const
-
-/*
-Returns the menu contained by this action. Actions that contain menus can be used to create menu items with submenus, or inserted into toolbars to create buttons with popup menus.
-
-See also setMenu() and QMenu::addAction().
-*/
-func (this *QAction) Menu() *QMenu /*777 QMenu **/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QAction4menuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-}
-
-// /usr/include/qt/QtWidgets/qaction.h:126
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void setMenu(QMenu *)
-
-/*
-Sets the menu contained by this action to the specified menu.
-
-See also menu().
-*/
-func (this *QAction) SetMenu(menu QMenu_ITF /*777 QMenu **/) {
-	var convArg0 unsafe.Pointer
-	if menu != nil && menu.QMenu_PTR() != nil {
-		convArg0 = menu.QMenu_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QAction7setMenuEP5QMenu", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtWidgets/qaction.h:129
 // index:0
 // Public Visibility=Default Availability=Available
@@ -1271,7 +1236,7 @@ func QAction_ActionEventItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11065() {
 	if false {
 		reflect.TypeOf(123)
 	}

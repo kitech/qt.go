@@ -231,7 +231,7 @@ func (this *QXmlStreamNamespaceDeclaration) Operator_not_equal(other QXmlStreamN
 
 //  keep block begin
 
-func init() {
+func init_unused_10619() {
 	if false {
 		reflect.TypeOf(123)
 	}

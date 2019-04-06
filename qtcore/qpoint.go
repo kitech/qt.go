@@ -414,7 +414,7 @@ func DeleteQPoint(this *QPoint) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10455() {
 	if false {
 		reflect.TypeOf(123)
 	}

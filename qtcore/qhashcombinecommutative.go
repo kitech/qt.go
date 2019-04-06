@@ -74,7 +74,7 @@ func DeleteQHashCombineCommutative(this *QHashCombineCommutative) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10197() {
 	if false {
 		reflect.TypeOf(123)
 	}

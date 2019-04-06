@@ -342,7 +342,7 @@ func QCryptographicHash_AlgorithmItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10383() {
 	if false {
 		reflect.TypeOf(123)
 	}

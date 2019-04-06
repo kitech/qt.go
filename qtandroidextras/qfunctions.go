@@ -4,7 +4,7 @@ import "unsafe"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
-func init() {
+func init_unused_10001() {
 	if false {
 		_ = unsafe.Pointer(uintptr(0))
 	}

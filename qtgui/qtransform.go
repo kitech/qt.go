@@ -1634,7 +1634,7 @@ func QTransform_TransformationTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10733() {
 	if false {
 		reflect.TypeOf(123)
 	}

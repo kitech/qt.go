@@ -170,7 +170,7 @@ func (this *QGraphicsSceneMoveEvent) SetNewPos(pos qtcore.QPointF_ITF) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11233() {
 	if false {
 		reflect.TypeOf(123)
 	}

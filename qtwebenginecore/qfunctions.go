@@ -10,7 +10,7 @@ import "github.com/kitech/qt.go/qtnetwork"
 import "github.com/kitech/qt.go/qtgui"
 import "github.com/kitech/qt.go/qtquick"
 
-func init() {
+func init_unused_10023() {
 	if false {
 		_ = unsafe.Pointer(uintptr(0))
 	}

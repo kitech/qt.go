@@ -598,7 +598,7 @@ func (this *QAudioInput) Notify() {
 
 //  keep block begin
 
-func init() {
+func init_unused_11773() {
 	if false {
 		reflect.TypeOf(123)
 	}

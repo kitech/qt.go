@@ -310,7 +310,7 @@ func (this *QAnimationGroup) Event(event QEvent_ITF /*777 QEvent **/) bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10301() {
 	if false {
 		reflect.TypeOf(123)
 	}

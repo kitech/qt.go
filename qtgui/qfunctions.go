@@ -4,7 +4,7 @@ import "unsafe"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
-func init() {
+func init_unused_10005() {
 	if false {
 		_ = unsafe.Pointer(uintptr(0))
 	}
@@ -749,24 +749,6 @@ func MightBeRichText(arg0 string) bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt15mightBeRichTextERK7QString", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
-}
-
-// /usr/include/qt/QtGui/qtextdocument.h:79
-// index:0
-// Invalid Visibility=Default Availability=Available
-// [8] QTextCodec * codecForHtml(const QByteArray &)
-
-/*
-
- */
-func CodecForHtml(ba qtcore.QByteArray_ITF) *qtcore.QTextCodec /*777 QTextCodec **/ {
-	var convArg0 unsafe.Pointer
-	if ba != nil && ba.QByteArray_PTR() != nil {
-		convArg0 = ba.QByteArray_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN2Qt12codecForHtmlERK10QByteArray", qtrt.FFI_TYPE_POINTER, convArg0)
-	qtrt.ErrPrint(err, rv)
-	return qtcore.NewQTextCodecFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qrgb.h:78

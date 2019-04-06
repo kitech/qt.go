@@ -321,7 +321,7 @@ func (this *QPainterPathStroker) CreateStroke(path QPainterPath_ITF) *QPainterPa
 
 //  keep block begin
 
-func init() {
+func init_unused_10731() {
 	if false {
 		reflect.TypeOf(123)
 	}

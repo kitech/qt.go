@@ -274,7 +274,7 @@ func QCameraImageProcessingControl_ProcessingParameterItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11829() {
 	if false {
 		reflect.TypeOf(123)
 	}

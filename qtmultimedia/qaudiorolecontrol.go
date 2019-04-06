@@ -186,7 +186,7 @@ func NewQAudioRoleControlp() *QAudioRoleControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11785() {
 	if false {
 		reflect.TypeOf(123)
 	}

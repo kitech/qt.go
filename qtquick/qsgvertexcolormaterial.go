@@ -151,7 +151,7 @@ func DeleteQSGVertexColorMaterial(this *QSGVertexColorMaterial) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11625() {
 	if false {
 		reflect.TypeOf(123)
 	}

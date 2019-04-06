@@ -1897,7 +1897,7 @@ func QPainterPath_ElementTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10729() {
 	if false {
 		reflect.TypeOf(123)
 	}

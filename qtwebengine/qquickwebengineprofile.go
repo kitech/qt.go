@@ -841,7 +841,7 @@ func QQuickWebEngineProfile_PersistentCookiesPolicyItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11687() {
 	if false {
 		reflect.TypeOf(123)
 	}

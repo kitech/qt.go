@@ -68,46 +68,11 @@ func (*QQmlNetworkAccessManagerFactory) NewFromPointer(cthis unsafe.Pointer) *QQ
 	return NewQQmlNetworkAccessManagerFactoryFromPointer(cthis)
 }
 
-// /usr/include/qt/QtQml/qqmlnetworkaccessmanagerfactory.h:54
-// index:0
-// Public virtual Visibility=Default Availability=Available
-// [-2] void ~QQmlNetworkAccessManagerFactory()
-
-/*
-
- */
-func DeleteQQmlNetworkAccessManagerFactory(this *QQmlNetworkAccessManagerFactory) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN31QQmlNetworkAccessManagerFactoryD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	qtrt.Cmemset(this.GetCthis(), 9, 8)
-	qtrt.ErrPrint(err, rv)
-	this.SetCthis(nil)
-}
-
-// /usr/include/qt/QtQml/qqmlnetworkaccessmanagerfactory.h:55
-// index:0
-// Public purevirtual virtual Visibility=Default Availability=Available
-// [8] QNetworkAccessManager * create(QObject *)
-
-/*
-Creates and returns a network access manager with the specified parent. This method must return a new QNetworkAccessManager instance each time it is called.
-
-Note: this method may be called by multiple threads, so ensure the implementation of this method is reentrant.
-*/
-func (this *QQmlNetworkAccessManagerFactory) Create(parent qtcore.QObject_ITF /*777 QObject **/) *qtnetwork.QNetworkAccessManager /*777 QNetworkAccessManager **/ {
-	var convArg0 unsafe.Pointer
-	if parent != nil && parent.QObject_PTR() != nil {
-		convArg0 = parent.QObject_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN31QQmlNetworkAccessManagerFactory6createEP7QObject", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-	return qtnetwork.NewQNetworkAccessManagerFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-}
-
 //  body block end
 
 //  keep block begin
 
-func init() {
+func init_unused_11539() {
 	if false {
 		reflect.TypeOf(123)
 	}

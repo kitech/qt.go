@@ -1055,7 +1055,7 @@ func DeleteQQuaternion(this *QQuaternion) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10893() {
 	if false {
 		reflect.TypeOf(123)
 	}

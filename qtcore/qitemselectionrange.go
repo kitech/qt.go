@@ -517,7 +517,7 @@ func DeleteQItemSelectionRange(this *QItemSelectionRange) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10429() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -113,7 +113,7 @@ func (this *QMediaServiceSupportedDevicesInterface) DeviceDescription(service qt
 
 //  keep block begin
 
-func init() {
+func init_unused_11879() {
 	if false {
 		reflect.TypeOf(123)
 	}

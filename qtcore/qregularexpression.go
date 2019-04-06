@@ -1114,7 +1114,7 @@ func QRegularExpression_MatchOptionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10339() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -293,7 +293,7 @@ func QContextMenuEvent_ReasonItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10679() {
 	if false {
 		reflect.TypeOf(123)
 	}

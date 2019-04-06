@@ -268,7 +268,7 @@ func DeleteQPixmapCache(this *QPixmapCache) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10927() {
 	if false {
 		reflect.TypeOf(123)
 	}

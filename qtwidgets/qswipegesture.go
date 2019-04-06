@@ -225,7 +225,7 @@ func QSwipeGesture_SwipeDirectionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11155() {
 	if false {
 		reflect.TypeOf(123)
 	}

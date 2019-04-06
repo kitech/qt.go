@@ -368,7 +368,7 @@ func (this *QTextTableCell) TableCellFormatIndex() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10965() {
 	if false {
 		reflect.TypeOf(123)
 	}

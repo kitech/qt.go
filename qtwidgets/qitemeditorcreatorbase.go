@@ -121,7 +121,7 @@ func (this *QItemEditorCreatorBase) ValuePropertyName() *qtcore.QByteArray /*123
 
 //  keep block begin
 
-func init() {
+func init_unused_11255() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -348,7 +348,7 @@ func (this *QQmlPropertyMap) UpdateValue(key string, input qtcore.QVariant_ITF) 
 
 //  keep block begin
 
-func init() {
+func init_unused_11543() {
 	if false {
 		reflect.TypeOf(123)
 	}

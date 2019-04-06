@@ -557,7 +557,7 @@ func QTextLine_CursorPositionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10789() {
 	if false {
 		reflect.TypeOf(123)
 	}

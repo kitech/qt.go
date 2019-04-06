@@ -234,7 +234,7 @@ func (this *QSGGeometryNode) InheritedOpacity() float64 {
 
 //  keep block begin
 
-func init() {
+func init_unused_11573() {
 	if false {
 		reflect.TypeOf(123)
 	}

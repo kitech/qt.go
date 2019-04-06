@@ -534,7 +534,7 @@ func (this *QTranslator) Load2p(data unsafe.Pointer /*666*/, len_ int) bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10607() {
 	if false {
 		reflect.TypeOf(123)
 	}

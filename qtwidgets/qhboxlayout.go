@@ -139,7 +139,7 @@ func DeleteQHBoxLayout(this *QHBoxLayout) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11085() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -78,7 +78,7 @@ func DeleteQSGMaterialType(this *QSGMaterialType) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11597() {
 	if false {
 		reflect.TypeOf(123)
 	}

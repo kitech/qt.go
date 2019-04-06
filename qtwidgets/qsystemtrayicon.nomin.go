@@ -1,0 +1,109 @@
+//  header block begin
+
+// +build !minimal
+
+package qtwidgets
+
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h
+// #include <qsystemtrayicon.h>
+// #include <QtWidgets>
+
+//  header block end
+
+//  main block begin
+
+//  main block end
+
+//  use block begin
+
+//  use block end
+
+//  ext block begin
+
+/*
+#include <stdlib.h>
+// extern C begin: 4
+*/
+// import "C"
+import "unsafe"
+import "reflect"
+import "fmt"
+import "log"
+import "github.com/kitech/qt.go/qtrt"
+import "github.com/kitech/qt.go/qtcore"
+import "github.com/kitech/qt.go/qtgui"
+
+//  ext block end
+
+//  body block begin
+
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:82
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setContextMenu(QMenu *)
+
+/*
+Sets the specified menu to be the context menu for the system tray icon.
+
+The menu will pop up when the user requests the context menu for the system tray icon by clicking the mouse button.
+
+On macOS, this is currenly converted to a NSMenu, so the aboutToHide() signal is not emitted.
+
+Note: The system tray icon does not take ownership of the menu. You must ensure that it is deleted at the appropriate time by, for example, creating the menu with a suitable parent object.
+
+See also contextMenu().
+*/
+func (this *QSystemTrayIcon) SetContextMenu(menu QMenu_ITF /*777 QMenu **/) {
+	var convArg0 unsafe.Pointer
+	if menu != nil && menu.QMenu_PTR() != nil {
+		convArg0 = menu.QMenu_PTR().GetCthis()
+	}
+	rv, err := qtrt.InvokeQtFunc6("_ZN15QSystemTrayIcon14setContextMenuEP5QMenu", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:83
+// index:0
+// Public Visibility=Default Availability=Available
+// [8] QMenu * contextMenu() const
+
+/*
+Returns the current context menu for the system tray entry.
+
+See also setContextMenu().
+*/
+func (this *QSystemTrayIcon) ContextMenu() *QMenu /*777 QMenu **/ {
+	rv, err := qtrt.InvokeQtFunc6("_ZNK15QSystemTrayIcon11contextMenuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+//  body block end
+
+//  keep block begin
+
+func init_unused_11336() {
+	if false {
+		reflect.TypeOf(123)
+	}
+	if false {
+		reflect.TypeOf(unsafe.Sizeof(0))
+	}
+	if false {
+		fmt.Println(123)
+	}
+	if false {
+		log.Println(123)
+	}
+	if false {
+		qtrt.KeepMe()
+	}
+	if false {
+		qtcore.KeepMe()
+	}
+	if false {
+		qtgui.KeepMe()
+	}
+}
+
+//  keep block end

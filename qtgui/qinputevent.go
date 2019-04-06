@@ -176,7 +176,7 @@ func (this *QInputEvent) SetTimestamp(atimestamp uint) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10643() {
 	if false {
 		reflect.TypeOf(123)
 	}

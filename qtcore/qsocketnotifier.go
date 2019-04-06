@@ -270,7 +270,7 @@ func QSocketNotifier_TypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10545() {
 	if false {
 		reflect.TypeOf(123)
 	}

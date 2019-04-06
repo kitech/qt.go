@@ -262,7 +262,7 @@ func (this *QAndroidIntent) Handle() *QAndroidJniObject /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_14909() {
 	if false {
 		reflect.TypeOf(123)
 	}

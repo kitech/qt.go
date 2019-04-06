@@ -346,7 +346,7 @@ func QLockFile_LockErrorItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10465() {
 	if false {
 		reflect.TypeOf(123)
 	}

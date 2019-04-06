@@ -160,7 +160,7 @@ func QNetworkProxyFactory_SetApplicationProxyFactory(factory QNetworkProxyFactor
 
 //  keep block begin
 
-func init() {
+func init_unused_11455() {
 	if false {
 		reflect.TypeOf(123)
 	}

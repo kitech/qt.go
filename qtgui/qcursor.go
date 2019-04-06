@@ -592,7 +592,7 @@ func QCursor_SetPos3(screen QScreen_ITF /*777 QScreen **/, p qtcore.QPoint_ITF) 
 
 //  keep block begin
 
-func init() {
+func init_unused_10849() {
 	if false {
 		reflect.TypeOf(123)
 	}

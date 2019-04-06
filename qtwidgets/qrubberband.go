@@ -441,7 +441,7 @@ func QRubberBand_ShapeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10999() {
 	if false {
 		reflect.TypeOf(123)
 	}

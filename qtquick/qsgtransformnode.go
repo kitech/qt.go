@@ -170,7 +170,7 @@ func (this *QSGTransformNode) CombinedMatrix() *qtgui.QMatrix4x4 {
 
 //  keep block begin
 
-func init() {
+func init_unused_11577() {
 	if false {
 		reflect.TypeOf(123)
 	}

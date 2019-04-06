@@ -538,7 +538,7 @@ func (this *QGeoAddress) IsTextGenerated() bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_11631() {
 	if false {
 		reflect.TypeOf(123)
 	}

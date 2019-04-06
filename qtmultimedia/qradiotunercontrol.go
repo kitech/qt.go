@@ -674,7 +674,7 @@ func NewQRadioTunerControlp() *QRadioTunerControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11903() {
 	if false {
 		reflect.TypeOf(123)
 	}

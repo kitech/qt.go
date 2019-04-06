@@ -285,7 +285,7 @@ func (this *QTextFrame) End() unsafe.Pointer /*444*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10949() {
 	if false {
 		reflect.TypeOf(123)
 	}

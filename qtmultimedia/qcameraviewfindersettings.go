@@ -391,7 +391,7 @@ func (this *QCameraViewfinderSettings) SetPixelAspectRatio1(horizontal int, vert
 
 //  keep block begin
 
-func init() {
+func init_unused_11807() {
 	if false {
 		reflect.TypeOf(123)
 	}

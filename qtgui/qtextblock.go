@@ -613,7 +613,7 @@ func DeleteQTextBlock(this *QTextBlock) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10953() {
 	if false {
 		reflect.TypeOf(123)
 	}

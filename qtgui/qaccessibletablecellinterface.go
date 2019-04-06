@@ -170,7 +170,7 @@ func (this *QAccessibleTableCellInterface) Table() *QAccessibleInterface /*777 Q
 
 //  keep block begin
 
-func init() {
+func init_unused_10811() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -849,7 +849,7 @@ func QFile_SetPermissions1(filename string, permissionSpec int) bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10393() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -275,7 +275,7 @@ func (this *QByteArrayMatcher) Pattern() *QByteArray /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10313() {
 	if false {
 		reflect.TypeOf(123)
 	}

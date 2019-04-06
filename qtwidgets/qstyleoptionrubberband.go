@@ -64,50 +64,6 @@ func (*QStyleOptionRubberBand) NewFromPointer(cthis unsafe.Pointer) *QStyleOptio
 	return NewQStyleOptionRubberBandFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:491
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void QStyleOptionRubberBand()
-
-/*
-
- */
-func (*QStyleOptionRubberBand) NewForInherit() *QStyleOptionRubberBand {
-	return NewQStyleOptionRubberBand()
-}
-func NewQStyleOptionRubberBand() *QStyleOptionRubberBand {
-	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionRubberBandC2Ev", qtrt.FFI_TYPE_POINTER)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQStyleOptionRubberBandFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQStyleOptionRubberBand)
-	return gothis
-}
-
-// /usr/include/qt/QtWidgets/qstyleoption.h:495
-// index:1
-// Protected Visibility=Default Availability=Available
-// [-2] void QStyleOptionRubberBand(int)
-
-/*
-
- */
-func (*QStyleOptionRubberBand) NewForInherit1(version int) *QStyleOptionRubberBand {
-	return NewQStyleOptionRubberBand1(version)
-}
-func NewQStyleOptionRubberBand1(version int) *QStyleOptionRubberBand {
-	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionRubberBandC2Ei", qtrt.FFI_TYPE_POINTER, version)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQStyleOptionRubberBandFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQStyleOptionRubberBand)
-	return gothis
-}
-
-func DeleteQStyleOptionRubberBand(this *QStyleOptionRubberBand) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionRubberBandD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	this.SetCthis(nil)
-}
-
 /*
 This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
 
@@ -169,7 +125,7 @@ func QStyleOptionRubberBand_StyleOptionVersionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11031() {
 	if false {
 		reflect.TypeOf(123)
 	}

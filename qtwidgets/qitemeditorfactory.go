@@ -207,7 +207,7 @@ func QItemEditorFactory_SetDefaultFactory(factory QItemEditorFactory_ITF /*777 Q
 
 //  keep block begin
 
-func init() {
+func init_unused_11257() {
 	if false {
 		reflect.TypeOf(123)
 	}

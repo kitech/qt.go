@@ -290,7 +290,7 @@ func NewQVideoDeviceSelectorControlp() *QVideoDeviceSelectorControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11909() {
 	if false {
 		reflect.TypeOf(123)
 	}

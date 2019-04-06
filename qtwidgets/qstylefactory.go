@@ -126,7 +126,7 @@ func DeleteQStyleFactory(this *QStyleFactory) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11329() {
 	if false {
 		reflect.TypeOf(123)
 	}

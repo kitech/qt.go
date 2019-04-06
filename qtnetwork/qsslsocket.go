@@ -2010,7 +2010,7 @@ func QSslSocket_PeerVerifyModeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11407() {
 	if false {
 		reflect.TypeOf(123)
 	}

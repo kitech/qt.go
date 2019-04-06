@@ -340,7 +340,7 @@ func (this *QAnimationDriver) Stop() {
 
 //  keep block begin
 
-func init() {
+func init_unused_10259() {
 	if false {
 		reflect.TypeOf(123)
 	}

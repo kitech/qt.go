@@ -177,7 +177,7 @@ func QQmlImageProviderBase_FlagItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11509() {
 	if false {
 		reflect.TypeOf(123)
 	}

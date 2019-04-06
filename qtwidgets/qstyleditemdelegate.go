@@ -499,7 +499,7 @@ func (this *QStyledItemDelegate) EditorEvent(event qtcore.QEvent_ITF /*777 QEven
 
 //  keep block begin
 
-func init() {
+func init_unused_11327() {
 	if false {
 		reflect.TypeOf(123)
 	}

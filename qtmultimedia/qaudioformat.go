@@ -567,7 +567,7 @@ func QAudioFormat_EndianItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11747() {
 	if false {
 		reflect.TypeOf(123)
 	}

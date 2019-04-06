@@ -106,7 +106,7 @@ func DeleteQMapDataBase(this *QMapDataBase) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10269() {
 	if false {
 		reflect.TypeOf(123)
 	}

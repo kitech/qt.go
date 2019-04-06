@@ -156,7 +156,7 @@ func (this *QAccessibleBridgePlugin) Create(key string) *QAccessibleBridge /*777
 
 //  keep block begin
 
-func init() {
+func init_unused_10837() {
 	if false {
 		reflect.TypeOf(123)
 	}

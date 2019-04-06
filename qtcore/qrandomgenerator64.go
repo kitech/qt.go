@@ -311,7 +311,7 @@ func DeleteQRandomGenerator64(this *QRandomGenerator64) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10511() {
 	if false {
 		reflect.TypeOf(123)
 	}

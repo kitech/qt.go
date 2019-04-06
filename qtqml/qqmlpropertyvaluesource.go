@@ -121,7 +121,7 @@ func (this *QQmlPropertyValueSource) SetTarget(arg0 QQmlProperty_ITF) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11501() {
 	if false {
 		reflect.TypeOf(123)
 	}

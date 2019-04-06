@@ -500,7 +500,7 @@ func QQuickWebEngineScript_ScriptWorldIdItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11689() {
 	if false {
 		reflect.TypeOf(123)
 	}

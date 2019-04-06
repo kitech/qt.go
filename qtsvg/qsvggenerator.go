@@ -400,7 +400,7 @@ func (this *QSvgGenerator) Metric(metric int) int {
 
 //  keep block begin
 
-func init() {
+func init_unused_11921() {
 	if false {
 		reflect.TypeOf(123)
 	}

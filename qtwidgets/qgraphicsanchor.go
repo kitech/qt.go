@@ -172,7 +172,7 @@ func DeleteQGraphicsAnchor(this *QGraphicsAnchor) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11191() {
 	if false {
 		reflect.TypeOf(123)
 	}

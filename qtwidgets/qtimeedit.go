@@ -212,7 +212,7 @@ func (this *QTimeEdit) UserTimeChanged(time qtcore.QTime_ITF) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11117() {
 	if false {
 		reflect.TypeOf(123)
 	}

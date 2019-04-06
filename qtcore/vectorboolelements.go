@@ -74,7 +74,7 @@ func DeleteVectorBoolElements(this *VectorBoolElements) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10243() {
 	if false {
 		reflect.TypeOf(123)
 	}

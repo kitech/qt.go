@@ -695,7 +695,7 @@ func QSizePolicy_ControlTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10979() {
 	if false {
 		reflect.TypeOf(123)
 	}

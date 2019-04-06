@@ -387,7 +387,7 @@ func (this *QSslCipher) Protocol() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_11465() {
 	if false {
 		reflect.TypeOf(123)
 	}

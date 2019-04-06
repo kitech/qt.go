@@ -216,7 +216,7 @@ func QStyleOptionToolButton_ToolButtonFeatureItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11039() {
 	if false {
 		reflect.TypeOf(123)
 	}

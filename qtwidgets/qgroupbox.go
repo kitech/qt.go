@@ -627,7 +627,7 @@ func (this *QGroupBox) InitStyleOption(option QStyleOptionGroupBox_ITF /*777 QSt
 
 //  keep block begin
 
-func init() {
+func init_unused_11245() {
 	if false {
 		reflect.TypeOf(123)
 	}

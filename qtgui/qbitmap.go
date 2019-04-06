@@ -505,7 +505,7 @@ func (this *QBitmap) Transformed1(matrix QTransform_ITF) *QBitmap /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10855() {
 	if false {
 		reflect.TypeOf(123)
 	}

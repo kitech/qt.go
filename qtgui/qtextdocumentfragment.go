@@ -331,7 +331,7 @@ func QTextDocumentFragment_FromHtml1(html string, resourceProvider QTextDocument
 
 //  keep block begin
 
-func init() {
+func init_unused_10959() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -158,7 +158,7 @@ func DeleteQAbstractAudioDeviceInfo(this *QAbstractAudioDeviceInfo) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11787() {
 	if false {
 		reflect.TypeOf(123)
 	}

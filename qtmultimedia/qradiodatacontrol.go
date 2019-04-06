@@ -383,7 +383,7 @@ func NewQRadioDataControlp() *QRadioDataControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11899() {
 	if false {
 		reflect.TypeOf(123)
 	}

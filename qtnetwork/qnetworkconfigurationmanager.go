@@ -329,7 +329,7 @@ func QNetworkConfigurationManager_CapabilityItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11437() {
 	if false {
 		reflect.TypeOf(123)
 	}

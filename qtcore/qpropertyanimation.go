@@ -334,7 +334,7 @@ func (this *QPropertyAnimation) UpdateState(newState int, oldState int) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10507() {
 	if false {
 		reflect.TypeOf(123)
 	}

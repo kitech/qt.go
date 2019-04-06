@@ -403,7 +403,7 @@ func (this *QMouseEvent) Flags() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10647() {
 	if false {
 		reflect.TypeOf(123)
 	}

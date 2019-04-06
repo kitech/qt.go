@@ -227,7 +227,7 @@ func DeleteQAccessibleApplication(this *QAccessibleApplication) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10839() {
 	if false {
 		reflect.TypeOf(123)
 	}

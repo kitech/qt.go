@@ -449,7 +449,7 @@ func (this *QDial) InitStyleOption(option QStyleOptionSlider_ITF /*777 QStyleOpt
 
 //  keep block begin
 
-func init() {
+func init_unused_11123() {
 	if false {
 		reflect.TypeOf(123)
 	}

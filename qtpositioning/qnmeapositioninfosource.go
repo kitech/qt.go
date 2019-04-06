@@ -427,7 +427,7 @@ func QNmeaPositionInfoSource_UpdateModeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11661() {
 	if false {
 		reflect.TypeOf(123)
 	}

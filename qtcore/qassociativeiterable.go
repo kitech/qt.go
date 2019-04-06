@@ -202,7 +202,7 @@ func DeleteQAssociativeIterable(this *QAssociativeIterable) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10281() {
 	if false {
 		reflect.TypeOf(123)
 	}

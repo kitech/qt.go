@@ -4599,7 +4599,7 @@ func (this *QStringRef) ToDoublep() float64 {
 
 //  keep block begin
 
-func init() {
+func init_unused_10193() {
 	if false {
 		reflect.TypeOf(123)
 	}

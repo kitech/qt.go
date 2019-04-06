@@ -64,50 +64,6 @@ func (*QStyleOptionToolBar) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionTo
 	return NewQStyleOptionToolBarFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:315
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void QStyleOptionToolBar()
-
-/*
-
- */
-func (*QStyleOptionToolBar) NewForInherit() *QStyleOptionToolBar {
-	return NewQStyleOptionToolBar()
-}
-func NewQStyleOptionToolBar() *QStyleOptionToolBar {
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionToolBarC2Ev", qtrt.FFI_TYPE_POINTER)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQStyleOptionToolBarFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQStyleOptionToolBar)
-	return gothis
-}
-
-// /usr/include/qt/QtWidgets/qstyleoption.h:319
-// index:1
-// Protected Visibility=Default Availability=Available
-// [-2] void QStyleOptionToolBar(int)
-
-/*
-
- */
-func (*QStyleOptionToolBar) NewForInherit1(version int) *QStyleOptionToolBar {
-	return NewQStyleOptionToolBar1(version)
-}
-func NewQStyleOptionToolBar1(version int) *QStyleOptionToolBar {
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionToolBarC2Ei", qtrt.FFI_TYPE_POINTER, version)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQStyleOptionToolBarFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQStyleOptionToolBar)
-	return gothis
-}
-
-func DeleteQStyleOptionToolBar(this *QStyleOptionToolBar) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionToolBarD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	this.SetCthis(nil)
-}
-
 /*
 This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
 
@@ -233,7 +189,7 @@ func QStyleOptionToolBar_ToolBarFeatureItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11019() {
 	if false {
 		reflect.TypeOf(123)
 	}

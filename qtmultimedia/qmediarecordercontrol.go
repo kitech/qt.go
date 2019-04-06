@@ -417,7 +417,7 @@ func NewQMediaRecorderControlp() *QMediaRecorderControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11871() {
 	if false {
 		reflect.TypeOf(123)
 	}

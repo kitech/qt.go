@@ -529,7 +529,7 @@ func (this *QAbstractEventDispatcher) Awake() {
 
 //  keep block begin
 
-func init() {
+func init_unused_10265() {
 	if false {
 		reflect.TypeOf(123)
 	}

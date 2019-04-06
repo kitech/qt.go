@@ -166,7 +166,7 @@ func QAndroidJniExceptionCleaner_OutputModeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_14913() {
 	if false {
 		reflect.TypeOf(123)
 	}

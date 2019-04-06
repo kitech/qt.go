@@ -930,7 +930,7 @@ func (this *QScreen) RefreshRateChanged(refreshRate float64) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10931() {
 	if false {
 		reflect.TypeOf(123)
 	}

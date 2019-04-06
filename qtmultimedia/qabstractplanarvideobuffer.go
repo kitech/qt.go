@@ -157,7 +157,7 @@ func (this *QAbstractPlanarVideoBuffer) Map1(mode int, numBytes unsafe.Pointer /
 
 //  keep block begin
 
-func init() {
+func init_unused_11735() {
 	if false {
 		reflect.TypeOf(123)
 	}

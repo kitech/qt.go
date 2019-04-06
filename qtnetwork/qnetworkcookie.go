@@ -643,7 +643,7 @@ func QNetworkCookie_RawFormItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11439() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -990,7 +990,7 @@ func (this *QMenuBar) InitStyleOption(option QStyleOptionMenuItem_ITF /*777 QSty
 
 //  keep block begin
 
-func init() {
+func init_unused_11281() {
 	if false {
 		reflect.TypeOf(123)
 	}

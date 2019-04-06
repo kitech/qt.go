@@ -66,50 +66,6 @@ func (*QStyleOptionTabWidgetFrame) NewFromPointer(cthis unsafe.Pointer) *QStyleO
 	return NewQStyleOptionTabWidgetFrameFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:171
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void QStyleOptionTabWidgetFrame()
-
-/*
-
- */
-func (*QStyleOptionTabWidgetFrame) NewForInherit() *QStyleOptionTabWidgetFrame {
-	return NewQStyleOptionTabWidgetFrame()
-}
-func NewQStyleOptionTabWidgetFrame() *QStyleOptionTabWidgetFrame {
-	rv, err := qtrt.InvokeQtFunc6("_ZN26QStyleOptionTabWidgetFrameC2Ev", qtrt.FFI_TYPE_POINTER)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQStyleOptionTabWidgetFrameFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQStyleOptionTabWidgetFrame)
-	return gothis
-}
-
-// /usr/include/qt/QtWidgets/qstyleoption.h:176
-// index:1
-// Protected Visibility=Default Availability=Available
-// [-2] void QStyleOptionTabWidgetFrame(int)
-
-/*
-
- */
-func (*QStyleOptionTabWidgetFrame) NewForInherit1(version int) *QStyleOptionTabWidgetFrame {
-	return NewQStyleOptionTabWidgetFrame1(version)
-}
-func NewQStyleOptionTabWidgetFrame1(version int) *QStyleOptionTabWidgetFrame {
-	rv, err := qtrt.InvokeQtFunc6("_ZN26QStyleOptionTabWidgetFrameC2Ei", qtrt.FFI_TYPE_POINTER, version)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQStyleOptionTabWidgetFrameFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQStyleOptionTabWidgetFrame)
-	return gothis
-}
-
-func DeleteQStyleOptionTabWidgetFrame(this *QStyleOptionTabWidgetFrame) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN26QStyleOptionTabWidgetFrameD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	this.SetCthis(nil)
-}
-
 /*
 This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
 
@@ -171,7 +127,7 @@ func QStyleOptionTabWidgetFrame_StyleOptionVersionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11009() {
 	if false {
 		reflect.TypeOf(123)
 	}

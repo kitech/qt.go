@@ -310,7 +310,7 @@ func (this *QSemaphore) Available() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10531() {
 	if false {
 		reflect.TypeOf(123)
 	}

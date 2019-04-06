@@ -314,7 +314,7 @@ func (this *QMacToolBar) NativeToolbar() unsafe.Pointer /*666*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_14885() {
 	if false {
 		reflect.TypeOf(123)
 	}

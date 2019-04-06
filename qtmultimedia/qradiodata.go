@@ -673,7 +673,7 @@ func QRadioData_ProgramTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11897() {
 	if false {
 		reflect.TypeOf(123)
 	}

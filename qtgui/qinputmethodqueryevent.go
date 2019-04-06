@@ -148,7 +148,7 @@ func (this *QInputMethodQueryEvent) Value(query int) *qtcore.QVariant /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10683() {
 	if false {
 		reflect.TypeOf(123)
 	}

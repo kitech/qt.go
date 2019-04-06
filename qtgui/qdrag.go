@@ -482,7 +482,7 @@ func (this *QDrag) TargetChanged(newTarget qtcore.QObject_ITF /*777 QObject **/)
 
 //  keep block begin
 
-func init() {
+func init_unused_10861() {
 	if false {
 		reflect.TypeOf(123)
 	}

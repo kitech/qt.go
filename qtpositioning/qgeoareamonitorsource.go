@@ -492,7 +492,7 @@ func QGeoAreaMonitorSource_AreaMonitorFeatureItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11643() {
 	if false {
 		reflect.TypeOf(123)
 	}

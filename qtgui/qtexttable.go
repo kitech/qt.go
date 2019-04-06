@@ -456,7 +456,7 @@ func (this *QTextTable) Format() *QTextTableFormat /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10967() {
 	if false {
 		reflect.TypeOf(123)
 	}

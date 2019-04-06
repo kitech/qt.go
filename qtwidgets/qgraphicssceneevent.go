@@ -135,7 +135,7 @@ func (this *QGraphicsSceneEvent) SetWidget(widget QWidget_ITF /*777 QWidget **/)
 
 //  keep block begin
 
-func init() {
+func init_unused_11217() {
 	if false {
 		reflect.TypeOf(123)
 	}

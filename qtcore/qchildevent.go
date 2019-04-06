@@ -160,7 +160,7 @@ func (this *QChildEvent) Removed() bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10373() {
 	if false {
 		reflect.TypeOf(123)
 	}

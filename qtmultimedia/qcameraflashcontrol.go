@@ -216,7 +216,7 @@ func NewQCameraFlashControlp() *QCameraFlashControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11823() {
 	if false {
 		reflect.TypeOf(123)
 	}

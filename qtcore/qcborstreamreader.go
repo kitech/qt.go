@@ -1053,7 +1053,7 @@ func QCborStreamReader_StringResultCodeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10361() {
 	if false {
 		reflect.TypeOf(123)
 	}

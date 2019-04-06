@@ -1380,7 +1380,7 @@ func (this *QFileInfo) SetCaching(on bool) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10395() {
 	if false {
 		reflect.TypeOf(123)
 	}

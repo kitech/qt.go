@@ -635,7 +635,7 @@ func QNetworkConfiguration_BearerTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11435() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -272,72 +272,6 @@ func (this *QToolButton) SetArrowType(type_ int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtoolbutton.h:86
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void setMenu(QMenu *)
-
-/*
-Associates the given menu with this tool button.
-
-The menu will be shown according to the button's popupMode.
-
-Ownership of the menu is not transferred to the tool button.
-
-See also menu().
-*/
-func (this *QToolButton) SetMenu(menu QMenu_ITF /*777 QMenu **/) {
-	var convArg0 unsafe.Pointer
-	if menu != nil && menu.QMenu_PTR() != nil {
-		convArg0 = menu.QMenu_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QToolButton7setMenuEP5QMenu", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qtoolbutton.h:87
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] QMenu * menu() const
-
-/*
-Returns the associated menu, or 0 if no menu has been defined.
-
-See also setMenu().
-*/
-func (this *QToolButton) Menu() *QMenu /*777 QMenu **/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton4menuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return /*==*/ NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-}
-
-// /usr/include/qt/QtWidgets/qtoolbutton.h:89
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void setPopupMode(QToolButton::ToolButtonPopupMode)
-
-/*
-
- */
-func (this *QToolButton) SetPopupMode(mode int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QToolButton12setPopupModeENS_19ToolButtonPopupModeE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), mode)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qtoolbutton.h:90
-// index:0
-// Public Visibility=Default Availability=Available
-// [4] QToolButton::ToolButtonPopupMode popupMode() const
-
-/*
-
- */
-func (this *QToolButton) PopupMode() int {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton9popupModeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return int(rv)
-}
-
 // /usr/include/qt/QtWidgets/qtoolbutton.h:93
 // index:0
 // Public Visibility=Default Availability=Available
@@ -379,19 +313,6 @@ func (this *QToolButton) AutoRaise() bool {
 	rv, err := qtrt.InvokeQtFunc6("_ZNK11QToolButton9autoRaiseEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return rv != 0
-}
-
-// /usr/include/qt/QtWidgets/qtoolbutton.h:100
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void showMenu()
-
-/*
-Shows (pops up) the associated popup menu. If there is no such menu, this function does nothing. This function does not return until the popup menu has been closed by the user.
-*/
-func (this *QToolButton) ShowMenu() {
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QToolButton8showMenuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtoolbutton.h:102
@@ -696,7 +617,7 @@ func QToolButton_ToolButtonPopupModeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11351() {
 	if false {
 		reflect.TypeOf(123)
 	}

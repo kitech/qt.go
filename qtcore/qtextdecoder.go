@@ -216,7 +216,7 @@ func (this *QTextDecoder) NeedsMoreData() bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10573() {
 	if false {
 		reflect.TypeOf(123)
 	}

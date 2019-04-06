@@ -154,7 +154,7 @@ func (this *QAndroidService) OnBind(intent QAndroidIntent_ITF) *QAndroidBinder /
 
 //  keep block begin
 
-func init() {
+func init_unused_14917() {
 	if false {
 		reflect.TypeOf(123)
 	}

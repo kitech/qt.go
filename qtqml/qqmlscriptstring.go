@@ -247,7 +247,7 @@ func (this *QQmlScriptString) BooleanLiteral(ok *bool) bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_11519() {
 	if false {
 		reflect.TypeOf(123)
 	}

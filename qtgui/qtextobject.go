@@ -209,7 +209,7 @@ func (this *QTextObject) ObjectIndex() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10943() {
 	if false {
 		reflect.TypeOf(123)
 	}

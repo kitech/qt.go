@@ -243,7 +243,7 @@ func (this *QAbstractGraphicsShapeItem) OpaqueArea() *qtgui.QPainterPath /*123*/
 
 //  keep block begin
 
-func init() {
+func init_unused_11167() {
 	if false {
 		reflect.TypeOf(123)
 	}

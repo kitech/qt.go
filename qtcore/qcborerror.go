@@ -183,7 +183,7 @@ func QCborError_CodeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10337() {
 	if false {
 		reflect.TypeOf(123)
 	}

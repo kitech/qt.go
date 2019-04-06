@@ -348,7 +348,7 @@ func (this *QQuickRenderControl) SceneChanged() {
 
 //  keep block begin
 
-func init() {
+func init_unused_11563() {
 	if false {
 		reflect.TypeOf(123)
 	}

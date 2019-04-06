@@ -276,7 +276,7 @@ func (this *QXmlStreamStringRef) Size() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10613() {
 	if false {
 		reflect.TypeOf(123)
 	}

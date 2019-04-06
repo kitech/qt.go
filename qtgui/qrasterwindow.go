@@ -182,7 +182,7 @@ func (this *QRasterWindow) Redirected(arg0 qtcore.QPoint_ITF /*777 QPoint **/) *
 
 //  keep block begin
 
-func init() {
+func init_unused_10929() {
 	if false {
 		reflect.TypeOf(123)
 	}

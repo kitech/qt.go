@@ -738,7 +738,7 @@ func QMediaResource_PropertyItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11853() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -101,7 +101,7 @@ func DeleteQHideEvent(this *QHideEvent) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10677() {
 	if false {
 		reflect.TypeOf(123)
 	}

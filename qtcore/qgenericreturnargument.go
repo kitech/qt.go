@@ -139,7 +139,7 @@ func DeleteQGenericReturnArgument(this *QGenericReturnArgument) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10157() {
 	if false {
 		reflect.TypeOf(123)
 	}

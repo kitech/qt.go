@@ -564,46 +564,6 @@ func (this *QTabBar) TabToolTip(index int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:126
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void setTabWhatsThis(int, const QString &)
-
-/*
-Sets the What's This help text of the tab at position index to text.
-
-This function was introduced in  Qt 4.1.
-
-See also tabWhatsThis().
-*/
-func (this *QTabBar) SetTabWhatsThis(index int, text string) {
-	var tmpArg1 = qtcore.NewQString5(text)
-	var convArg1 = tmpArg1.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QTabBar15setTabWhatsThisEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qtabbar.h:127
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] QString tabWhatsThis(int) const
-
-/*
-Returns the What's This help text of the tab at position index, or an empty string if index is out of range.
-
-This function was introduced in  Qt 4.1.
-
-See also setTabWhatsThis().
-*/
-func (this *QTabBar) TabWhatsThis(index int) string {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK7QTabBar12tabWhatsThisEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), index)
-	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	qtcore.DeleteQString(rv2)
-	return rv3
-}
-
 // /usr/include/qt/QtWidgets/qtabbar.h:130
 // index:0
 // Public Visibility=Default Availability=Available
@@ -1404,23 +1364,6 @@ func (this *QTabBar) MouseReleaseEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEv
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtabbar.h:206
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void wheelEvent(QWheelEvent *)
-
-/*
-Reimplemented from QWidget::wheelEvent().
-*/
-func (this *QTabBar) WheelEvent(event qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
-	var convArg0 unsafe.Pointer
-	if event != nil && event.QWheelEvent_PTR() != nil {
-		convArg0 = event.QWheelEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QTabBar10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtWidgets/qtabbar.h:208
 // index:0
 // Protected virtual Visibility=Default Availability=Available
@@ -1585,7 +1528,7 @@ func QTabBar_SelectionBehaviorItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10995() {
 	if false {
 		reflect.TypeOf(123)
 	}

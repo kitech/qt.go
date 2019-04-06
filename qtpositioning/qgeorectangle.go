@@ -698,7 +698,7 @@ func (this *QGeoRectangle) ToString() string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11645() {
 	if false {
 		reflect.TypeOf(123)
 	}

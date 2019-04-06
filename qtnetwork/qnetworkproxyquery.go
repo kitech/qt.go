@@ -860,7 +860,7 @@ func QNetworkProxyQuery_QueryTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11451() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -893,7 +893,7 @@ func (this *QGraphicsGridLayout) SizeHintp(which int) *qtcore.QSizeF /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_11205() {
 	if false {
 		reflect.TypeOf(123)
 	}

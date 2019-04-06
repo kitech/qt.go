@@ -11,7 +11,7 @@ import "github.com/kitech/qt.go/qtgui"
 import "github.com/kitech/qt.go/qtquick"
 import "github.com/kitech/qt.go/qtwebenginecore"
 
-func init() {
+func init_unused_10021() {
 	if false {
 		_ = unsafe.Pointer(uintptr(0))
 	}

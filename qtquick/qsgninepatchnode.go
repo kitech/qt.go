@@ -191,7 +191,7 @@ func QSGNinePatchNode_RebuildGeometry(texture QSGTexture_ITF /*777 QSGTexture **
 
 //  keep block begin
 
-func init() {
+func init_unused_11609() {
 	if false {
 		reflect.TypeOf(123)
 	}

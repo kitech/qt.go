@@ -1434,23 +1434,6 @@ func (this *QMenu) MouseMoveEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMouseEvent *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmenu.h:240
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void wheelEvent(QWheelEvent *)
-
-/*
-Reimplemented from QWidget::wheelEvent().
-*/
-func (this *QMenu) WheelEvent(arg0 qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
-	var convArg0 unsafe.Pointer
-	if arg0 != nil && arg0.QWheelEvent_PTR() != nil {
-		convArg0 = arg0.QWheelEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN5QMenu10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtWidgets/qmenu.h:242
 // index:0
 // Protected virtual Visibility=Default Availability=Available
@@ -1612,7 +1595,7 @@ func (this *QMenu) InitStyleOption(option QStyleOptionMenuItem_ITF /*777 QStyleO
 
 //  keep block begin
 
-func init() {
+func init_unused_11279() {
 	if false {
 		reflect.TypeOf(123)
 	}

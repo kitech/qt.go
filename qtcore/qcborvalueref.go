@@ -64,7 +64,7 @@ func (*QCborValueRef) NewFromPointer(cthis unsafe.Pointer) *QCborValueRef {
 	return NewQCborValueRefFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:328
+// /usr/include/qt/QtCore/qcborvalue.h:334
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QCborValueRef & operator=(const QCborValue &)
@@ -84,7 +84,7 @@ func (this *QCborValueRef) Operator_equal(other QCborValue_ITF) *QCborValueRef {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:330
+// /usr/include/qt/QtCore/qcborvalue.h:336
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [16] QCborValueRef & operator=(QCborValue &&)
@@ -100,7 +100,7 @@ func (this *QCborValueRef) Operator_equal1(other unsafe.Pointer /*333*/) *QCborV
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:332
+// /usr/include/qt/QtCore/qcborvalue.h:338
 // index:2
 // Public inline Visibility=Default Availability=Available
 // [16] QCborValueRef & operator=(const QCborValueRef &)
@@ -120,7 +120,7 @@ func (this *QCborValueRef) Operator_equal2(other QCborValueRef_ITF) *QCborValueR
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:335
+// /usr/include/qt/QtCore/qcborvalue.h:341
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] QCborValue::Type type() const
@@ -136,7 +136,7 @@ func (this *QCborValueRef) Type() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:336
+// /usr/include/qt/QtCore/qcborvalue.h:342
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isInteger() const
@@ -152,7 +152,7 @@ func (this *QCborValueRef) IsInteger() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:337
+// /usr/include/qt/QtCore/qcborvalue.h:343
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isByteArray() const
@@ -168,7 +168,7 @@ func (this *QCborValueRef) IsByteArray() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:338
+// /usr/include/qt/QtCore/qcborvalue.h:344
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isString() const
@@ -184,7 +184,7 @@ func (this *QCborValueRef) IsString() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:339
+// /usr/include/qt/QtCore/qcborvalue.h:345
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isArray() const
@@ -200,7 +200,7 @@ func (this *QCborValueRef) IsArray() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:340
+// /usr/include/qt/QtCore/qcborvalue.h:346
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isMap() const
@@ -216,7 +216,7 @@ func (this *QCborValueRef) IsMap() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:341
+// /usr/include/qt/QtCore/qcborvalue.h:347
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isTag() const
@@ -234,7 +234,7 @@ func (this *QCborValueRef) IsTag() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:342
+// /usr/include/qt/QtCore/qcborvalue.h:348
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isFalse() const
@@ -250,7 +250,7 @@ func (this *QCborValueRef) IsFalse() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:343
+// /usr/include/qt/QtCore/qcborvalue.h:349
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isTrue() const
@@ -266,7 +266,7 @@ func (this *QCborValueRef) IsTrue() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:344
+// /usr/include/qt/QtCore/qcborvalue.h:350
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isBool() const
@@ -282,7 +282,7 @@ func (this *QCborValueRef) IsBool() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:345
+// /usr/include/qt/QtCore/qcborvalue.h:351
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isNull() const
@@ -302,7 +302,7 @@ func (this *QCborValueRef) IsNull() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:346
+// /usr/include/qt/QtCore/qcborvalue.h:352
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isUndefined() const
@@ -324,7 +324,7 @@ func (this *QCborValueRef) IsUndefined() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:347
+// /usr/include/qt/QtCore/qcborvalue.h:353
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isDouble() const
@@ -340,7 +340,7 @@ func (this *QCborValueRef) IsDouble() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:348
+// /usr/include/qt/QtCore/qcborvalue.h:354
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isDateTime() const
@@ -358,7 +358,7 @@ func (this *QCborValueRef) IsDateTime() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:349
+// /usr/include/qt/QtCore/qcborvalue.h:355
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isUrl() const
@@ -374,7 +374,7 @@ func (this *QCborValueRef) IsUrl() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:350
+// /usr/include/qt/QtCore/qcborvalue.h:356
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isRegularExpression() const
@@ -390,7 +390,7 @@ func (this *QCborValueRef) IsRegularExpression() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:351
+// /usr/include/qt/QtCore/qcborvalue.h:357
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isUuid() const
@@ -406,7 +406,7 @@ func (this *QCborValueRef) IsUuid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:352
+// /usr/include/qt/QtCore/qcborvalue.h:358
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isInvalid() const
@@ -422,7 +422,7 @@ func (this *QCborValueRef) IsInvalid() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:353
+// /usr/include/qt/QtCore/qcborvalue.h:359
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isContainer() const
@@ -438,7 +438,7 @@ func (this *QCborValueRef) IsContainer() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:354
+// /usr/include/qt/QtCore/qcborvalue.h:360
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool isSimpleType() const
@@ -454,7 +454,7 @@ func (this *QCborValueRef) IsSimpleType() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:358
+// /usr/include/qt/QtCore/qcborvalue.h:364
 // index:1
 // Public inline Visibility=Default Availability=Available
 // [1] bool isSimpleType(QCborSimpleType) const
@@ -470,7 +470,7 @@ func (this *QCborValueRef) IsSimpleType1(st int) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:363
+// /usr/include/qt/QtCore/qcborvalue.h:369
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QCborTag tag(QCborTag) const
@@ -488,7 +488,7 @@ func (this *QCborValueRef) Tag(defaultValue int) int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:363
+// /usr/include/qt/QtCore/qcborvalue.h:369
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QCborTag tag(QCborTag) const
@@ -508,7 +508,7 @@ func (this *QCborValueRef) Tagp() int {
 	return int(rv)
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:365
+// /usr/include/qt/QtCore/qcborvalue.h:371
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [24] QCborValue taggedValue(const QCborValue &) const
@@ -532,7 +532,7 @@ func (this *QCborValueRef) TaggedValue(defaultValue QCborValue_ITF) *QCborValue 
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:365
+// /usr/include/qt/QtCore/qcborvalue.h:371
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [24] QCborValue taggedValue(const QCborValue &) const
@@ -554,7 +554,7 @@ func (this *QCborValueRef) TaggedValuep() *QCborValue /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:368
+// /usr/include/qt/QtCore/qcborvalue.h:374
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qint64 toInteger(qint64) const
@@ -570,7 +570,7 @@ func (this *QCborValueRef) ToInteger(defaultValue int64) int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:368
+// /usr/include/qt/QtCore/qcborvalue.h:374
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] qint64 toInteger(qint64) const
@@ -588,7 +588,7 @@ func (this *QCborValueRef) ToIntegerp() int64 {
 	return int64(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:370
+// /usr/include/qt/QtCore/qcborvalue.h:376
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool toBool(bool) const
@@ -604,7 +604,7 @@ func (this *QCborValueRef) ToBool(defaultValue bool) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:370
+// /usr/include/qt/QtCore/qcborvalue.h:376
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool toBool(bool) const
@@ -622,7 +622,7 @@ func (this *QCborValueRef) ToBoolp() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:372
+// /usr/include/qt/QtCore/qcborvalue.h:378
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] double toDouble(double) const
@@ -638,7 +638,7 @@ func (this *QCborValueRef) ToDouble(defaultValue float64) float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:372
+// /usr/include/qt/QtCore/qcborvalue.h:378
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] double toDouble(double) const
@@ -656,7 +656,7 @@ func (this *QCborValueRef) ToDoublep() float64 {
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:375
+// /usr/include/qt/QtCore/qcborvalue.h:381
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toByteArray(const QByteArray &) const
@@ -680,7 +680,7 @@ func (this *QCborValueRef) ToByteArray(defaultValue QByteArray_ITF) *QByteArray 
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:375
+// /usr/include/qt/QtCore/qcborvalue.h:381
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toByteArray(const QByteArray &) const
@@ -702,7 +702,7 @@ func (this *QCborValueRef) ToByteArrayp() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:377
+// /usr/include/qt/QtCore/qcborvalue.h:383
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString toString(const QString &) const
@@ -725,7 +725,7 @@ func (this *QCborValueRef) ToString(defaultValue string) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:377
+// /usr/include/qt/QtCore/qcborvalue.h:383
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString toString(const QString &) const
@@ -748,7 +748,7 @@ func (this *QCborValueRef) ToStringp() string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:379
+// /usr/include/qt/QtCore/qcborvalue.h:385
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QDateTime toDateTime(const QDateTime &) const
@@ -772,7 +772,7 @@ func (this *QCborValueRef) ToDateTime(defaultValue QDateTime_ITF) *QDateTime /*1
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:379
+// /usr/include/qt/QtCore/qcborvalue.h:385
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QDateTime toDateTime(const QDateTime &) const
@@ -794,7 +794,7 @@ func (this *QCborValueRef) ToDateTimep() *QDateTime /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:381
+// /usr/include/qt/QtCore/qcborvalue.h:387
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QUrl toUrl(const QUrl &) const
@@ -818,7 +818,7 @@ func (this *QCborValueRef) ToUrl(defaultValue QUrl_ITF) *QUrl /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:381
+// /usr/include/qt/QtCore/qcborvalue.h:387
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QUrl toUrl(const QUrl &) const
@@ -840,53 +840,7 @@ func (this *QCborValueRef) ToUrlp() *QUrl /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:383
-// index:0
-// Public inline Visibility=Default Availability=Available
-// [8] QRegularExpression toRegularExpression(const QRegularExpression &) const
-
-/*
-Returns the regular expression value stored in this QCborValue, if it is of the regular expression pattern extended type. Otherwise, it returns defaultValue.
-
-Note that this function performs no conversion from other types to QRegularExpression.
-
-See also isRegularExpression(), isTag(), and taggedValue().
-*/
-func (this *QCborValueRef) ToRegularExpression(defaultValue QRegularExpression_ITF) *QRegularExpression /*123*/ {
-	var convArg0 unsafe.Pointer
-	if defaultValue != nil && defaultValue.QRegularExpression_PTR() != nil {
-		convArg0 = defaultValue.QRegularExpression_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZNK13QCborValueRef19toRegularExpressionERK18QRegularExpression", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQRegularExpressionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegularExpression)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qcborvalue.h:383
-// index:0
-// Public inline Visibility=Default Availability=Available
-// [8] QRegularExpression toRegularExpression(const QRegularExpression &) const
-
-/*
-Returns the regular expression value stored in this QCborValue, if it is of the regular expression pattern extended type. Otherwise, it returns defaultValue.
-
-Note that this function performs no conversion from other types to QRegularExpression.
-
-See also isRegularExpression(), isTag(), and taggedValue().
-*/
-func (this *QCborValueRef) ToRegularExpressionp() *QRegularExpression /*123*/ {
-	// arg: 0, const QRegularExpression &=LValueReference, QRegularExpression=Record, , Invalid
-	var convArg0 unsafe.Pointer
-	rv, err := qtrt.InvokeQtFunc6("_ZNK13QCborValueRef19toRegularExpressionERK18QRegularExpression", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQRegularExpressionFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRegularExpression)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qcborvalue.h:385
+// /usr/include/qt/QtCore/qcborvalue.h:393
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QUuid toUuid(const QUuid &) const
@@ -910,7 +864,7 @@ func (this *QCborValueRef) ToUuid(defaultValue QUuid_ITF) *QUuid /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:385
+// /usr/include/qt/QtCore/qcborvalue.h:393
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QUuid toUuid(const QUuid &) const
@@ -932,7 +886,7 @@ func (this *QCborValueRef) ToUuidp() *QUuid /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:393
+// /usr/include/qt/QtCore/qcborvalue.h:401
 // index:0
 // Public Visibility=Default Availability=Available
 // [8] QCborArray toArray() const
@@ -952,7 +906,7 @@ func (this *QCborValueRef) ToArray() *QCborArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:394
+// /usr/include/qt/QtCore/qcborvalue.h:402
 // index:1
 // Public Visibility=Default Availability=Available
 // [8] QCborArray toArray(const QCborArray &) const
@@ -976,7 +930,7 @@ func (this *QCborValueRef) ToArray1(a QCborArray_ITF) *QCborArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:399
+// /usr/include/qt/QtCore/qcborvalue.h:407
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [4] int compare(const QCborValue &) const
@@ -996,7 +950,7 @@ func (this *QCborValueRef) Compare(other QCborValue_ITF) int {
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:410
+// /usr/include/qt/QtCore/qcborvalue.h:418
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator==(const QCborValue &) const
@@ -1014,7 +968,7 @@ func (this *QCborValueRef) Operator_equal_equal(other QCborValue_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:412
+// /usr/include/qt/QtCore/qcborvalue.h:420
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator!=(const QCborValue &) const
@@ -1032,7 +986,7 @@ func (this *QCborValueRef) Operator_not_equal(other QCborValue_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:414
+// /usr/include/qt/QtCore/qcborvalue.h:422
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [1] bool operator<(const QCborValue &) const
@@ -1050,7 +1004,7 @@ func (this *QCborValueRef) Operator_less_than(other QCborValue_ITF) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:418
+// /usr/include/qt/QtCore/qcborvalue.h:426
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [16] QVariant toVariant() const
@@ -1093,7 +1047,7 @@ func (this *QCborValueRef) ToVariant() *QVariant /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:419
+// /usr/include/qt/QtCore/qcborvalue.h:427
 // index:0
 // Public Visibility=Default Availability=Available
 // [24] QJsonValue toJsonValue() const
@@ -1130,7 +1084,7 @@ func (this *QCborValueRef) ToJsonValue() *QJsonValue /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:421
+// /usr/include/qt/QtCore/qcborvalue.h:429
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toCbor(QCborValue::EncodingOptions)
@@ -1156,7 +1110,7 @@ func (this *QCborValueRef) ToCbor(opt int) *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:421
+// /usr/include/qt/QtCore/qcborvalue.h:429
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QByteArray toCbor(QCborValue::EncodingOptions)
@@ -1184,7 +1138,7 @@ func (this *QCborValueRef) ToCborp() *QByteArray /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:423
+// /usr/include/qt/QtCore/qcborvalue.h:431
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void toCbor(QCborStreamWriter &, QCborValue::EncodingOptions)
@@ -1211,7 +1165,7 @@ func (this *QCborValueRef) ToCbor1(writer QCborStreamWriter_ITF, opt int) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:423
+// /usr/include/qt/QtCore/qcborvalue.h:431
 // index:1
 // Public Visibility=Default Availability=Available
 // [-2] void toCbor(QCborStreamWriter &, QCborValue::EncodingOptions)
@@ -1240,7 +1194,7 @@ func (this *QCborValueRef) ToCbor1p(writer QCborStreamWriter_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:425
+// /usr/include/qt/QtCore/qcborvalue.h:433
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString toDiagnosticNotation(QCborValue::DiagnosticNotationOptions)
@@ -1263,7 +1217,7 @@ func (this *QCborValueRef) ToDiagnosticNotation(opt int) string {
 	return rv3
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:425
+// /usr/include/qt/QtCore/qcborvalue.h:433
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString toDiagnosticNotation(QCborValue::DiagnosticNotationOptions)
@@ -1298,7 +1252,7 @@ func DeleteQCborValueRef(this *QCborValueRef) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10353() {
 	if false {
 		reflect.TypeOf(123)
 	}

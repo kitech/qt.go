@@ -410,7 +410,7 @@ func QDoubleValidator_NotationItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10973() {
 	if false {
 		reflect.TypeOf(123)
 	}

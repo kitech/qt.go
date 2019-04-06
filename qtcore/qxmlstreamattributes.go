@@ -249,7 +249,7 @@ func DeleteQXmlStreamAttributes(this *QXmlStreamAttributes) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10617() {
 	if false {
 		reflect.TypeOf(123)
 	}

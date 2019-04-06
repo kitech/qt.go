@@ -193,7 +193,7 @@ func (this *QQmlIncubationController) IncubatingObjectCountChanged(arg0 int) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11535() {
 	if false {
 		reflect.TypeOf(123)
 	}

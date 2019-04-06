@@ -205,7 +205,7 @@ func (this *QDnsHostAddressRecord) Value() *QHostAddress /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_11391() {
 	if false {
 		reflect.TypeOf(123)
 	}

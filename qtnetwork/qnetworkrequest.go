@@ -997,7 +997,7 @@ func QNetworkRequest_RedirectPolicyItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11379() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -114,7 +114,7 @@ func (this *QTimerEvent) TimerId() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10371() {
 	if false {
 		reflect.TypeOf(123)
 	}

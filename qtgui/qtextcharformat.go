@@ -1124,7 +1124,7 @@ func QTextCharFormat_FontPropertiesInheritanceBehaviorItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10763() {
 	if false {
 		reflect.TypeOf(123)
 	}

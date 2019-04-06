@@ -714,7 +714,7 @@ func NewQMediaPlayerControlp() *QMediaPlayerControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11867() {
 	if false {
 		reflect.TypeOf(123)
 	}

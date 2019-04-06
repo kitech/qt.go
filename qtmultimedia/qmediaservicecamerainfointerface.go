@@ -124,7 +124,7 @@ func (this *QMediaServiceCameraInfoInterface) CameraOrientation(device qtcore.QB
 
 //  keep block begin
 
-func init() {
+func init_unused_11883() {
 	if false {
 		reflect.TypeOf(123)
 	}

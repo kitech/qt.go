@@ -516,7 +516,7 @@ func QStaticText_PerformanceHintItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10939() {
 	if false {
 		reflect.TypeOf(123)
 	}

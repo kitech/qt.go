@@ -774,7 +774,7 @@ func QCameraImageCapture_CaptureDestinationItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11811() {
 	if false {
 		reflect.TypeOf(123)
 	}

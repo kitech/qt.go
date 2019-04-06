@@ -335,7 +335,7 @@ func (this *QAuthenticator) Detach() {
 
 //  keep block begin
 
-func init() {
+func init_unused_11387() {
 	if false {
 		reflect.TypeOf(123)
 	}

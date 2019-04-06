@@ -661,7 +661,7 @@ func QGraphicsPixmapItem_ItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11179() {
 	if false {
 		reflect.TypeOf(123)
 	}

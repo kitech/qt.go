@@ -261,7 +261,7 @@ func DeleteQWebEngineHistory(this *QWebEngineHistory) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11719() {
 	if false {
 		reflect.TypeOf(123)
 	}

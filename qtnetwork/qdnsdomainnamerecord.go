@@ -206,7 +206,7 @@ func (this *QDnsDomainNameRecord) Value() string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11389() {
 	if false {
 		reflect.TypeOf(123)
 	}

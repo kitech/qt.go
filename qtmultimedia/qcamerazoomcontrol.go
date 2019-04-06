@@ -325,7 +325,7 @@ func NewQCameraZoomControlp() *QCameraZoomControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11841() {
 	if false {
 		reflect.TypeOf(123)
 	}

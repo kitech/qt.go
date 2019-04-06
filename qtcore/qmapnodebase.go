@@ -220,7 +220,7 @@ func QMapNodeBase_ItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10267() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -120,7 +120,7 @@ func (this *QAbstractUndoItem) Redo() {
 
 //  keep block begin
 
-func init() {
+func init_unused_10791() {
 	if false {
 		reflect.TypeOf(123)
 	}

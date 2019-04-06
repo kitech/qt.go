@@ -626,7 +626,7 @@ func QWebEngineDownloadItem_DownloadTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11713() {
 	if false {
 		reflect.TypeOf(123)
 	}

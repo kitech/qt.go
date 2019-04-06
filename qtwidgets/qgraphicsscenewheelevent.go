@@ -334,7 +334,7 @@ func (this *QGraphicsSceneWheelEvent) SetOrientation(orientation int) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11221() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -182,7 +182,7 @@ func (this *QWebChannelAbstractTransport) MessageReceived(message qtcore.QJsonOb
 
 //  keep block begin
 
-func init() {
+func init_unused_11667() {
 	if false {
 		reflect.TypeOf(123)
 	}

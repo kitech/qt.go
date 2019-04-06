@@ -409,7 +409,7 @@ func QWebEngineScript_ScriptWorldIdItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11725() {
 	if false {
 		reflect.TypeOf(123)
 	}

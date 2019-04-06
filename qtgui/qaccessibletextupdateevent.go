@@ -186,7 +186,7 @@ func (this *QAccessibleTextUpdateEvent) ChangePosition() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10829() {
 	if false {
 		reflect.TypeOf(123)
 	}

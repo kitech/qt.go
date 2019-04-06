@@ -280,7 +280,7 @@ func (this *QFocusFrame) InitStyleOption(option QStyleOption_ITF /*777 QStyleOpt
 
 //  keep block begin
 
-func init() {
+func init_unused_11141() {
 	if false {
 		reflect.TypeOf(123)
 	}

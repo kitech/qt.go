@@ -343,7 +343,7 @@ func QOperatingSystemVersion_OSTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10491() {
 	if false {
 		reflect.TypeOf(123)
 	}

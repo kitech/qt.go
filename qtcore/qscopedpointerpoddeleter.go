@@ -93,7 +93,7 @@ func DeleteQScopedPointerPodDeleter(this *QScopedPointerPodDeleter) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10211() {
 	if false {
 		reflect.TypeOf(123)
 	}

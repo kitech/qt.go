@@ -491,7 +491,7 @@ func (this *QShortcut) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_11307() {
 	if false {
 		reflect.TypeOf(123)
 	}

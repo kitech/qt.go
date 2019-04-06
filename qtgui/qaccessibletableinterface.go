@@ -333,7 +333,7 @@ func (this *QAccessibleTableInterface) ModelChange(event QAccessibleTableModelCh
 
 //  keep block begin
 
-func init() {
+func init_unused_10813() {
 	if false {
 		reflect.TypeOf(123)
 	}

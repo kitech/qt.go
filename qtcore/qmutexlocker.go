@@ -148,7 +148,7 @@ func (this *QMutexLocker) Mutex() *QMutex /*777 QMutex **/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10419() {
 	if false {
 		reflect.TypeOf(123)
 	}

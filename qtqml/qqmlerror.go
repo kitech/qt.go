@@ -360,7 +360,7 @@ func (this *QQmlError) ToString() string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11507() {
 	if false {
 		reflect.TypeOf(123)
 	}

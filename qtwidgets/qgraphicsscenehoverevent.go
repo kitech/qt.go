@@ -352,7 +352,7 @@ func (this *QGraphicsSceneHoverEvent) SetModifiers(modifiers int) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11225() {
 	if false {
 		reflect.TypeOf(123)
 	}

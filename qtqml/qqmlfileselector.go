@@ -243,7 +243,7 @@ func QQmlFileSelector_Get(arg0 QQmlEngine_ITF /*777 QQmlEngine **/) *QQmlFileSel
 
 //  keep block begin
 
-func init() {
+func init_unused_11531() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -727,7 +727,7 @@ func QDeadlineTimer_ForeverConstantItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10389() {
 	if false {
 		reflect.TypeOf(123)
 	}

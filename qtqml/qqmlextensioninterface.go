@@ -102,7 +102,7 @@ func (this *QQmlExtensionInterface) InitializeEngine(engine QQmlEngine_ITF /*777
 
 //  keep block begin
 
-func init() {
+func init_unused_11525() {
 	if false {
 		reflect.TypeOf(123)
 	}

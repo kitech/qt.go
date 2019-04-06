@@ -517,7 +517,7 @@ func QHostInfo_HostInfoErrorItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11417() {
 	if false {
 		reflect.TypeOf(123)
 	}

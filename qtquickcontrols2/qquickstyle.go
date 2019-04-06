@@ -223,7 +223,7 @@ func DeleteQQuickStyle(this *QQuickStyle) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11627() {
 	if false {
 		reflect.TypeOf(123)
 	}

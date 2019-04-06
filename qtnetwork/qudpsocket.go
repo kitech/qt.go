@@ -547,7 +547,7 @@ func (this *QUdpSocket) WriteDatagram2(datagram qtcore.QByteArray_ITF, host QHos
 
 //  keep block begin
 
-func init() {
+func init_unused_11473() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -236,7 +236,7 @@ func (this *QVideoProbe) Flush() {
 
 //  keep block begin
 
-func init() {
+func init_unused_11913() {
 	if false {
 		reflect.TypeOf(123)
 	}

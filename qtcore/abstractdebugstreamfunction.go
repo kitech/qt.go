@@ -76,7 +76,7 @@ func DeleteAbstractDebugStreamFunction(this *AbstractDebugStreamFunction) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10235() {
 	if false {
 		reflect.TypeOf(123)
 	}

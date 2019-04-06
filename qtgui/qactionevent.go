@@ -150,7 +150,7 @@ func (this *QActionEvent) Before() unsafe.Pointer /*666*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10699() {
 	if false {
 		reflect.TypeOf(123)
 	}

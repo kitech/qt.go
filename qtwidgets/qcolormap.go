@@ -297,7 +297,7 @@ func QColormap_ModeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11099() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -133,7 +133,7 @@ func (this *QWinColorizationChangeEvent) OpaqueBlend() bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_11929() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -559,7 +559,7 @@ func QAbstractItemDelegate_EndEditHintItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11057() {
 	if false {
 		reflect.TypeOf(123)
 	}

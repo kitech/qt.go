@@ -653,7 +653,7 @@ func QQuickView_StatusItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11589() {
 	if false {
 		reflect.TypeOf(123)
 	}

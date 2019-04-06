@@ -658,7 +658,7 @@ func (this *QColumnView) InitializeColumn(column QAbstractItemView_ITF /*777 QAb
 
 //  keep block begin
 
-func init() {
+func init_unused_11101() {
 	if false {
 		reflect.TypeOf(123)
 	}

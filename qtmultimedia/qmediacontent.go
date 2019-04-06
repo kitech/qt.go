@@ -404,7 +404,7 @@ func (this *QMediaContent) Playlist() *QMediaPlaylist /*777 QMediaPlaylist **/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_11855() {
 	if false {
 		reflect.TypeOf(123)
 	}

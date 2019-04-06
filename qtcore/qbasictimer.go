@@ -193,7 +193,7 @@ func (this *QBasicTimer) Stop() {
 
 //  keep block begin
 
-func init() {
+func init_unused_10303() {
 	if false {
 		reflect.TypeOf(123)
 	}

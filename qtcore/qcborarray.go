@@ -908,7 +908,7 @@ func (this *QCborArray) ToJsonArray() *QJsonArray /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10355() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -541,7 +541,7 @@ func QInputMethod_ActionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10873() {
 	if false {
 		reflect.TypeOf(123)
 	}

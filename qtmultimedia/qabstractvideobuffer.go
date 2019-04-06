@@ -341,7 +341,7 @@ func QAbstractVideoBuffer_MapModeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11733() {
 	if false {
 		reflect.TypeOf(123)
 	}

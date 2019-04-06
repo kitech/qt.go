@@ -259,7 +259,7 @@ func (this *QQuickImageProvider) RequestTexture(id string, size qtcore.QSize_ITF
 
 //  keep block begin
 
-func init() {
+func init_unused_11555() {
 	if false {
 		reflect.TypeOf(123)
 	}

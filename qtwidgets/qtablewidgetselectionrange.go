@@ -219,7 +219,7 @@ func (this *QTableWidgetSelectionRange) ColumnCount() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_11339() {
 	if false {
 		reflect.TypeOf(123)
 	}

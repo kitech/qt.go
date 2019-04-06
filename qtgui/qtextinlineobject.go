@@ -277,7 +277,7 @@ func DeleteQTextInlineObject(this *QTextInlineObject) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10785() {
 	if false {
 		reflect.TypeOf(123)
 	}

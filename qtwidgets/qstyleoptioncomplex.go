@@ -194,7 +194,7 @@ func QStyleOptionComplex_StyleOptionVersionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11033() {
 	if false {
 		reflect.TypeOf(123)
 	}

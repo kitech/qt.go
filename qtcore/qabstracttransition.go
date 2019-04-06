@@ -256,44 +256,6 @@ func (this *QAbstractTransition) Machine() *QStateMachine /*777 QStateMachine **
 	return /*==*/ NewQStateMachineFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtCore/qabstracttransition.h:90
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void addAnimation(QAbstractAnimation *)
-
-/*
-Adds the given animation to this transition. The transition does not take ownership of the animation.
-
-See also removeAnimation() and animations().
-*/
-func (this *QAbstractTransition) AddAnimation(animation QAbstractAnimation_ITF /*777 QAbstractAnimation **/) {
-	var convArg0 unsafe.Pointer
-	if animation != nil && animation.QAbstractAnimation_PTR() != nil {
-		convArg0 = animation.QAbstractAnimation_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtCore/qabstracttransition.h:91
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void removeAnimation(QAbstractAnimation *)
-
-/*
-Removes the given animation from this transition.
-
-See also addAnimation().
-*/
-func (this *QAbstractTransition) RemoveAnimation(animation QAbstractAnimation_ITF /*777 QAbstractAnimation **/) {
-	var convArg0 unsafe.Pointer
-	if animation != nil && animation.QAbstractAnimation_PTR() != nil {
-		convArg0 = animation.QAbstractAnimation_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtCore/qabstracttransition.h:101
 // index:0
 // Protected purevirtual virtual Visibility=Default Availability=Available
@@ -375,7 +337,7 @@ func QAbstractTransition_TransitionTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10299() {
 	if false {
 		reflect.TypeOf(123)
 	}

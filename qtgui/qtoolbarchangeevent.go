@@ -115,7 +115,7 @@ func (this *QToolBarChangeEvent) Toggle() bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10703() {
 	if false {
 		reflect.TypeOf(123)
 	}

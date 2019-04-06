@@ -202,49 +202,6 @@ func QWhatsThis_HideText() {
 	nilthis.HideText()
 }
 
-// /usr/include/qt/QtWidgets/qwhatsthis.h:68
-// index:0
-// Public static Visibility=Default Availability=Available
-// [8] QAction * createAction(QObject *)
-
-/*
-Returns a ready-made QAction, used to invoke "What's This?" context help, with the given parent.
-
-The returned QAction provides a convenient way to let users enter "What's This?" mode.
-*/
-func (this *QWhatsThis) CreateAction(parent qtcore.QObject_ITF /*777 QObject **/) *QAction /*777 QAction **/ {
-	var convArg0 unsafe.Pointer
-	if parent != nil && parent.QObject_PTR() != nil {
-		convArg0 = parent.QObject_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QWhatsThis12createActionEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	qtrt.ErrPrint(err, rv)
-	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-}
-func QWhatsThis_CreateAction(parent qtcore.QObject_ITF /*777 QObject **/) *QAction /*777 QAction **/ {
-	var nilthis *QWhatsThis
-	rv := nilthis.CreateAction(parent)
-	return rv
-}
-
-// /usr/include/qt/QtWidgets/qwhatsthis.h:68
-// index:0
-// Public static Visibility=Default Availability=Available
-// [8] QAction * createAction(QObject *)
-
-/*
-Returns a ready-made QAction, used to invoke "What's This?" context help, with the given parent.
-
-The returned QAction provides a convenient way to let users enter "What's This?" mode.
-*/
-func (this *QWhatsThis) CreateActionp() *QAction /*777 QAction **/ {
-	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
-	var convArg0 unsafe.Pointer
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QWhatsThis12createActionEP7QObject", qtrt.FFI_TYPE_POINTER, convArg0)
-	qtrt.ErrPrint(err, rv)
-	return /*==*/ NewQActionFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-}
-
 func DeleteQWhatsThis(this *QWhatsThis) {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QWhatsThisD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -255,7 +212,7 @@ func DeleteQWhatsThis(this *QWhatsThis) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11371() {
 	if false {
 		reflect.TypeOf(123)
 	}

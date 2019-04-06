@@ -297,7 +297,7 @@ func QAndroidBinder_CallTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_14907() {
 	if false {
 		reflect.TypeOf(123)
 	}

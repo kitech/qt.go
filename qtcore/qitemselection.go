@@ -224,7 +224,7 @@ func DeleteQItemSelection(this *QItemSelection) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10433() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -839,7 +839,7 @@ func (this *QSplitter) ClosestLegalPosition(arg0 int, arg1 int) int {
 
 //  keep block begin
 
-func init() {
+func init_unused_11317() {
 	if false {
 		reflect.TypeOf(123)
 	}

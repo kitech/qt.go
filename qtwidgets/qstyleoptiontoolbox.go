@@ -238,7 +238,7 @@ func QStyleOptionToolBox_SelectedPositionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11029() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -164,7 +164,7 @@ func (this *QFocusEvent) Reason() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10659() {
 	if false {
 		reflect.TypeOf(123)
 	}

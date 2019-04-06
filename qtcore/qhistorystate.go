@@ -394,7 +394,7 @@ func QHistoryState_HistoryTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10425() {
 	if false {
 		reflect.TypeOf(123)
 	}

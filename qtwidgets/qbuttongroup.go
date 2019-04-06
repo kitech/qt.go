@@ -538,7 +538,7 @@ func (this *QButtonGroup) ButtonToggled1(arg0 int, arg1 bool) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11089() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -176,7 +176,7 @@ func (this *QQmlWebChannel) DisconnectFrom(transport qtcore.QObject_ITF /*777 QO
 
 //  keep block begin
 
-func init() {
+func init_unused_11665() {
 	if false {
 		reflect.TypeOf(123)
 	}

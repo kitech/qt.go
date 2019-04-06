@@ -291,7 +291,7 @@ func (this *QWinTaskbarButton) ClearOverlayIcon() {
 
 //  keep block begin
 
-func init() {
+func init_unused_14873() {
 	if false {
 		reflect.TypeOf(123)
 	}

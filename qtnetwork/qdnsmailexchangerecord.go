@@ -220,7 +220,7 @@ func (this *QDnsMailExchangeRecord) TimeToLive() uint {
 
 //  keep block begin
 
-func init() {
+func init_unused_11393() {
 	if false {
 		reflect.TypeOf(123)
 	}

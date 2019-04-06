@@ -186,7 +186,7 @@ func (this *QGraphicsTransform) Update() {
 
 //  keep block begin
 
-func init() {
+func init_unused_11235() {
 	if false {
 		reflect.TypeOf(123)
 	}

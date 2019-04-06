@@ -74,7 +74,7 @@ func DeleteQLinkedListData(this *QLinkedListData) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10463() {
 	if false {
 		reflect.TypeOf(123)
 	}

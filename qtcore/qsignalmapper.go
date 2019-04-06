@@ -448,7 +448,7 @@ func (this *QSignalMapper) Map1(sender QObject_ITF /*777 QObject **/) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10541() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -270,7 +270,7 @@ func (this *QNativeGestureEvent) Device() *QTouchDevice /*777 const QTouchDevice
 
 //  keep block begin
 
-func init() {
+func init_unused_10655() {
 	if false {
 		reflect.TypeOf(123)
 	}

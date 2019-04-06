@@ -430,7 +430,7 @@ func (this *QQmlContext) BaseUrl() *qtcore.QUrl /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_11517() {
 	if false {
 		reflect.TypeOf(123)
 	}

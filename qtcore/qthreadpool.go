@@ -441,7 +441,7 @@ func (this *QThreadPool) TryTake(runnable QRunnable_ITF /*777 QRunnable **/) boo
 
 //  keep block begin
 
-func init() {
+func init_unused_10597() {
 	if false {
 		reflect.TypeOf(123)
 	}

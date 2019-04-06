@@ -363,7 +363,7 @@ func (this *QSizeGrip) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_11309() {
 	if false {
 		reflect.TypeOf(123)
 	}

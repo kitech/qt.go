@@ -469,7 +469,7 @@ func (this *QCheckBox) InitStyleOption(option QStyleOptionButton_ITF /*777 QStyl
 
 //  keep block begin
 
-func init() {
+func init_unused_11093() {
 	if false {
 		reflect.TypeOf(123)
 	}

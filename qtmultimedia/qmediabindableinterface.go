@@ -127,7 +127,7 @@ func (this *QMediaBindableInterface) SetMediaObject(object QMediaObject_ITF /*77
 
 //  keep block begin
 
-func init() {
+func init_unused_11767() {
 	if false {
 		reflect.TypeOf(123)
 	}

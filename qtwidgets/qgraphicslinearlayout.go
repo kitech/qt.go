@@ -606,7 +606,7 @@ func (this *QGraphicsLinearLayout) Dumpp() {
 
 //  keep block begin
 
-func init() {
+func init_unused_11209() {
 	if false {
 		reflect.TypeOf(123)
 	}

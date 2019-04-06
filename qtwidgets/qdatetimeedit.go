@@ -1305,23 +1305,6 @@ func (this *QDateTimeEdit) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEve
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qdatetimeedit.h:180
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void wheelEvent(QWheelEvent *)
-
-/*
-Reimplemented from QAbstractSpinBox::wheelEvent().
-*/
-func (this *QDateTimeEdit) WheelEvent(event qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
-	var convArg0 unsafe.Pointer
-	if event != nil && event.QWheelEvent_PTR() != nil {
-		convArg0 = event.QWheelEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN13QDateTimeEdit10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtWidgets/qdatetimeedit.h:182
 // index:0
 // Protected virtual Visibility=Default Availability=Available
@@ -1549,7 +1532,7 @@ func QDateTimeEdit_SectionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11115() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -427,7 +427,7 @@ func QSGImageNode_TextureCoordinatesTransformFlagItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11607() {
 	if false {
 		reflect.TypeOf(123)
 	}

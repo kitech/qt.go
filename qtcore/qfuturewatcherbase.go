@@ -629,7 +629,7 @@ func DeleteQFutureWatcherBase(this *QFutureWatcherBase) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10423() {
 	if false {
 		reflect.TypeOf(123)
 	}

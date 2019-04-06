@@ -158,7 +158,7 @@ func NewQMediaService(parent qtcore.QObject_ITF /*777 QObject **/) *QMediaServic
 
 //  keep block begin
 
-func init() {
+func init_unused_11797() {
 	if false {
 		reflect.TypeOf(123)
 	}

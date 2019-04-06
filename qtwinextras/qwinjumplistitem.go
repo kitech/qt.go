@@ -402,7 +402,7 @@ func QWinJumpListItem_TypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_14869() {
 	if false {
 		reflect.TypeOf(123)
 	}

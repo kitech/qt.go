@@ -122,7 +122,7 @@ func (this *QAndroidActivityResultReceiver) HandleActivityResult(receiverRequest
 
 //  keep block begin
 
-func init() {
+func init_unused_14905() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -735,7 +735,7 @@ func QFileDevice_MemoryMapFlagsItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10391() {
 	if false {
 		reflect.TypeOf(123)
 	}

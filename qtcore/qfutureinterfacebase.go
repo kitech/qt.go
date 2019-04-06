@@ -798,7 +798,7 @@ func QFutureInterfaceBase_StateItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10421() {
 	if false {
 		reflect.TypeOf(123)
 	}

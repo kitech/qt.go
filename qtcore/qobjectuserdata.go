@@ -83,7 +83,7 @@ func DeleteQObjectUserData(this *QObjectUserData) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10253() {
 	if false {
 		reflect.TypeOf(123)
 	}

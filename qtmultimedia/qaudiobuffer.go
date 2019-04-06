@@ -407,7 +407,7 @@ func (this *QAudioBuffer) Data1() unsafe.Pointer /*666*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_11749() {
 	if false {
 		reflect.TypeOf(123)
 	}

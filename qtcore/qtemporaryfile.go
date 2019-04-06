@@ -456,7 +456,7 @@ func QTemporaryFile_CreateNativeFile1(file QFile_ITF) *QTemporaryFile /*777 QTem
 
 //  keep block begin
 
-func init() {
+func init_unused_10565() {
 	if false {
 		reflect.TypeOf(123)
 	}

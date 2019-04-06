@@ -398,7 +398,7 @@ func (this *QVideoEncoderSettings) SetEncodingOption(option string, value qtcore
 
 //  keep block begin
 
-func init() {
+func init_unused_11763() {
 	if false {
 		reflect.TypeOf(123)
 	}

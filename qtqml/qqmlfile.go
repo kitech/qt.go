@@ -369,82 +369,6 @@ func (this *QQmlFile) Clear1(arg0 qtcore.QObject_ITF /*777 QObject **/) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtQml/qqmlfile.h:84
-// index:0
-// Public Visibility=Default Availability=Available
-// [1] bool connectFinished(QObject *, const char *)
-
-/*
-
- */
-func (this *QQmlFile) ConnectFinished(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string) bool {
-	var convArg0 unsafe.Pointer
-	if arg0 != nil && arg0.QObject_PTR() != nil {
-		convArg0 = arg0.QObject_PTR().GetCthis()
-	}
-	var convArg1 = qtrt.CString(arg1)
-	defer qtrt.FreeMem(convArg1)
-	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile15connectFinishedEP7QObjectPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtQml/qqmlfile.h:85
-// index:1
-// Public Visibility=Default Availability=Available
-// [1] bool connectFinished(QObject *, int)
-
-/*
-
- */
-func (this *QQmlFile) ConnectFinished1(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 int) bool {
-	var convArg0 unsafe.Pointer
-	if arg0 != nil && arg0.QObject_PTR() != nil {
-		convArg0 = arg0.QObject_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile15connectFinishedEP7QObjecti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtQml/qqmlfile.h:86
-// index:0
-// Public Visibility=Default Availability=Available
-// [1] bool connectDownloadProgress(QObject *, const char *)
-
-/*
-
- */
-func (this *QQmlFile) ConnectDownloadProgress(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 string) bool {
-	var convArg0 unsafe.Pointer
-	if arg0 != nil && arg0.QObject_PTR() != nil {
-		convArg0 = arg0.QObject_PTR().GetCthis()
-	}
-	var convArg1 = qtrt.CString(arg1)
-	defer qtrt.FreeMem(convArg1)
-	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile23connectDownloadProgressEP7QObjectPKc", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
-// /usr/include/qt/QtQml/qqmlfile.h:87
-// index:1
-// Public Visibility=Default Availability=Available
-// [1] bool connectDownloadProgress(QObject *, int)
-
-/*
-
- */
-func (this *QQmlFile) ConnectDownloadProgress1(arg0 qtcore.QObject_ITF /*777 QObject **/, arg1 int) bool {
-	var convArg0 unsafe.Pointer
-	if arg0 != nil && arg0.QObject_PTR() != nil {
-		convArg0 = arg0.QObject_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN8QQmlFile23connectDownloadProgressEP7QObjecti", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0, arg1)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
 // /usr/include/qt/QtQml/qqmlfile.h:90
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -624,7 +548,7 @@ func QQmlFile_StatusItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11529() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -303,7 +303,7 @@ func (this *QAbstractListModel) Flags(index QModelIndex_ITF) int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10291() {
 	if false {
 		reflect.TypeOf(123)
 	}

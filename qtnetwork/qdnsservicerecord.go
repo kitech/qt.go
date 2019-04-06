@@ -248,7 +248,7 @@ func (this *QDnsServiceRecord) Weight() uint16 {
 
 //  keep block begin
 
-func init() {
+func init_unused_11395() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -119,7 +119,7 @@ func (this *QWinCompositionChangeEvent) IsCompositionEnabled() bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_11931() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -137,7 +137,7 @@ func (this *QTextObjectInterface) DrawObject(painter QPainter_ITF /*777 QPainter
 
 //  keep block begin
 
-func init() {
+func init_unused_10799() {
 	if false {
 		reflect.TypeOf(123)
 	}

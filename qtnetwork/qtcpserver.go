@@ -667,7 +667,7 @@ func (this *QTcpServer) AcceptError(socketError int) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11461() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -184,7 +184,7 @@ func (this *QObjectCleanupHandler) Clear() {
 
 //  keep block begin
 
-func init() {
+func init_unused_10489() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -937,7 +937,7 @@ func DeleteQVector3D(this *QVector3D) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10889() {
 	if false {
 		reflect.TypeOf(123)
 	}

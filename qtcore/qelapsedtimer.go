@@ -436,7 +436,7 @@ func QElapsedTimer_ClockTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10387() {
 	if false {
 		reflect.TypeOf(123)
 	}

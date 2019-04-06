@@ -312,7 +312,7 @@ func (this *QIntValidator) TopChanged(top int) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10971() {
 	if false {
 		reflect.TypeOf(123)
 	}

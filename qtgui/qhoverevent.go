@@ -202,7 +202,7 @@ func (this *QHoverEvent) OldPosF() *qtcore.QPointF {
 
 //  keep block begin
 
-func init() {
+func init_unused_10649() {
 	if false {
 		reflect.TypeOf(123)
 	}

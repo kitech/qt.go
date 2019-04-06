@@ -157,7 +157,7 @@ func (this *QAccessibleTextCursorEvent) CursorPosition() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10821() {
 	if false {
 		reflect.TypeOf(123)
 	}

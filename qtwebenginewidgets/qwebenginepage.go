@@ -403,20 +403,6 @@ func (this *QWebEnginePage) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool 
 	return rv != 0
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebenginepage.h:252
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] QMenu * createStandardContextMenu()
-
-/*
-
- */
-func (this *QWebEnginePage) CreateStandardContextMenu() *qtwidgets.QMenu /*777 QMenu **/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QWebEnginePage25createStandardContextMenuEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return qtwidgets.NewQMenuFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-}
-
 // /usr/include/qt/QtWebEngineWidgets/qwebenginepage.h:255
 // index:0
 // Public Visibility=Default Availability=Available
@@ -2023,7 +2009,7 @@ func QWebEnginePage_RenderProcessTerminationStatusItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11721() {
 	if false {
 		reflect.TypeOf(123)
 	}

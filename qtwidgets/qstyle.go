@@ -3728,7 +3728,7 @@ func QStyle_StandardPixmapItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10993() {
 	if false {
 		reflect.TypeOf(123)
 	}

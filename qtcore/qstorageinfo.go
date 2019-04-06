@@ -537,7 +537,7 @@ func QStorageInfo_Root() *QStorageInfo /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10555() {
 	if false {
 		reflect.TypeOf(123)
 	}

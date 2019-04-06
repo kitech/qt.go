@@ -1418,7 +1418,7 @@ func (this *QStandardItemModel) ItemChanged(item QStandardItem_ITF /*777 QStanda
 
 //  keep block begin
 
-func init() {
+func init_unused_10937() {
 	if false {
 		reflect.TypeOf(123)
 	}

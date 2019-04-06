@@ -316,7 +316,7 @@ func (this *QXmlStreamAttribute) Operator_not_equal(other QXmlStreamAttribute_IT
 
 //  keep block begin
 
-func init() {
+func init_unused_10615() {
 	if false {
 		reflect.TypeOf(123)
 	}

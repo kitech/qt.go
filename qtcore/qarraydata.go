@@ -254,7 +254,7 @@ func QArrayData_AllocationOptionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10165() {
 	if false {
 		reflect.TypeOf(123)
 	}

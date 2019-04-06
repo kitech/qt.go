@@ -64,7 +64,7 @@ func (*QCborParserError) NewFromPointer(cthis unsafe.Pointer) *QCborParserError 
 	return NewQCborParserErrorFromPointer(cthis)
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:76
+// /usr/include/qt/QtCore/qcborvalue.h:78
 // index:0
 // Public inline Visibility=Default Availability=Available
 // [8] QString errorString() const
@@ -91,7 +91,7 @@ func DeleteQCborParserError(this *QCborParserError) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10349() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -345,7 +345,7 @@ func (this *QRadioButton) InitStyleOption(button QStyleOptionButton_ITF /*777 QS
 
 //  keep block begin
 
-func init() {
+func init_unused_11299() {
 	if false {
 		reflect.TypeOf(123)
 	}

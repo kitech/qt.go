@@ -253,7 +253,7 @@ func (this *QPauseAnimation) UpdateCurrentTime(arg0 int) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10495() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -909,7 +909,7 @@ func (this *QCommonStyle) Unpolish1(application QApplication_ITF /*777 QApplicat
 
 //  keep block begin
 
-func init() {
+func init_unused_11109() {
 	if false {
 		reflect.TypeOf(123)
 	}

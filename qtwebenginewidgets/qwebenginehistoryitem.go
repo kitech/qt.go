@@ -226,7 +226,7 @@ func (this *QWebEngineHistoryItem) Swap(other QWebEngineHistoryItem_ITF) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11717() {
 	if false {
 		reflect.TypeOf(123)
 	}

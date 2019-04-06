@@ -559,7 +559,7 @@ func (this *QGraphicsSceneMouseEvent) SetFlags(arg0 int) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11219() {
 	if false {
 		reflect.TypeOf(123)
 	}

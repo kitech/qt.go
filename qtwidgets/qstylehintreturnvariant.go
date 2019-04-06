@@ -159,7 +159,7 @@ func QStyleHintReturnVariant_StyleOptionVersionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11055() {
 	if false {
 		reflect.TypeOf(123)
 	}

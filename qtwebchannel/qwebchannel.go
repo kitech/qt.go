@@ -276,7 +276,7 @@ func (this *QWebChannel) DisconnectFrom(transport QWebChannelAbstractTransport_I
 
 //  keep block begin
 
-func init() {
+func init_unused_11663() {
 	if false {
 		reflect.TypeOf(123)
 	}

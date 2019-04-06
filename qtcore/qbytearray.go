@@ -5628,7 +5628,7 @@ func QByteArray_Base64OptionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10179() {
 	if false {
 		reflect.TypeOf(123)
 	}

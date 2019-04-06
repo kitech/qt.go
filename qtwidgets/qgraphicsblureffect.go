@@ -318,7 +318,7 @@ func QGraphicsBlurEffect_BlurHintItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11199() {
 	if false {
 		reflect.TypeOf(123)
 	}

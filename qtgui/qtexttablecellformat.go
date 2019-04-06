@@ -250,7 +250,7 @@ func DeleteQTextTableCellFormat(this *QTextTableCellFormat) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10775() {
 	if false {
 		reflect.TypeOf(123)
 	}

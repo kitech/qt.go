@@ -271,7 +271,7 @@ func DeleteQTextFragment(this *QTextFragment) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10955() {
 	if false {
 		reflect.TypeOf(123)
 	}

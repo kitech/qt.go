@@ -651,7 +651,7 @@ func (this *QIdentityProxyModel) RemoveRowsp(row int, count int) bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10427() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -132,7 +132,7 @@ func QVideoFilterRunnable_RunFlagItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11741() {
 	if false {
 		reflect.TypeOf(123)
 	}

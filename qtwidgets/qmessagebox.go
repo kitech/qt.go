@@ -2946,38 +2946,6 @@ func (this *QMessageBox) SetInformativeText(text string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qmessagebox.h:274
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] QString detailedText() const
-
-/*
-
- */
-func (this *QMessageBox) DetailedText() string {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK11QMessageBox12detailedTextEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	qtcore.DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtWidgets/qmessagebox.h:275
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void setDetailedText(const QString &)
-
-/*
-
- */
-func (this *QMessageBox) SetDetailedText(text string) {
-	var tmpArg0 = qtcore.NewQString5(text)
-	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QMessageBox15setDetailedTextERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtWidgets/qmessagebox.h:278
 // index:0
 // Public Visibility=Default Availability=Available
@@ -3333,7 +3301,7 @@ func QMessageBox_StandardButtonItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11283() {
 	if false {
 		reflect.TypeOf(123)
 	}

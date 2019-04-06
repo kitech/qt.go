@@ -199,7 +199,7 @@ func DeleteQBasicMutex(this *QBasicMutex) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10415() {
 	if false {
 		reflect.TypeOf(123)
 	}

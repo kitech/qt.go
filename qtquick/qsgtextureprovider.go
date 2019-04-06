@@ -117,7 +117,7 @@ func DeleteQSGTextureProvider(this *QSGTextureProvider) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11623() {
 	if false {
 		reflect.TypeOf(123)
 	}

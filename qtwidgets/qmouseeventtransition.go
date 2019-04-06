@@ -347,7 +347,7 @@ func (this *QMouseEventTransition) EventTest(event qtcore.QEvent_ITF /*777 QEven
 
 //  keep block begin
 
-func init() {
+func init_unused_11285() {
 	if false {
 		reflect.TypeOf(123)
 	}

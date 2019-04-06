@@ -587,7 +587,7 @@ func (this *QUndoGroup) RedoTextChanged(redoText string) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11363() {
 	if false {
 		reflect.TypeOf(123)
 	}

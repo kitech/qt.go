@@ -436,7 +436,7 @@ func (this *QGraphicsSceneDragDropEvent) SetMimeData(data qtcore.QMimeData_ITF /
 
 //  keep block begin
 
-func init() {
+func init_unused_11229() {
 	if false {
 		reflect.TypeOf(123)
 	}

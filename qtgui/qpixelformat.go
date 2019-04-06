@@ -981,7 +981,7 @@ func QPixelFormat_ByteOrderItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10737() {
 	if false {
 		reflect.TypeOf(123)
 	}

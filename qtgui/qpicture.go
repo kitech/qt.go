@@ -630,7 +630,7 @@ func (this *QPicture) Metric(m int) int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10921() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -27,7 +27,7 @@ import "github.com/kitech/qt.go/qtqml"
 
 //  keep block begin
 
-func init() {
+func init_unused_10195() {
 	if false {
 		reflect.TypeOf(123)
 	}

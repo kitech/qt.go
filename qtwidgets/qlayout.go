@@ -1190,7 +1190,7 @@ func QLayout_SizeConstraintItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11079() {
 	if false {
 		reflect.TypeOf(123)
 	}

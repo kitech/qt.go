@@ -851,7 +851,7 @@ func QRadioTuner_SearchModeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11901() {
 	if false {
 		reflect.TypeOf(123)
 	}

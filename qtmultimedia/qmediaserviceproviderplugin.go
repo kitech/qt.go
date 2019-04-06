@@ -130,7 +130,7 @@ func DeleteQMediaServiceProviderPlugin(this *QMediaServiceProviderPlugin) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11887() {
 	if false {
 		reflect.TypeOf(123)
 	}

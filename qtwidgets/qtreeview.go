@@ -1808,23 +1808,6 @@ func (this *QTreeView) KeyPressEvent(event qtgui.QKeyEvent_ITF /*777 QKeyEvent *
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreeview.h:205
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void dragMoveEvent(QDragMoveEvent *)
-
-/*
-Reimplemented from QAbstractItemView::dragMoveEvent().
-*/
-func (this *QTreeView) DragMoveEvent(event qtgui.QDragMoveEvent_ITF /*777 QDragMoveEvent **/) {
-	var convArg0 unsafe.Pointer
-	if event != nil && event.QDragMoveEvent_PTR() != nil {
-		convArg0 = event.QDragMoveEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QTreeView13dragMoveEventEP14QDragMoveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtWidgets/qtreeview.h:207
 // index:0
 // Protected virtual Visibility=Default Availability=Available
@@ -2013,7 +1996,7 @@ func (this *QTreeView) CurrentChanged(current qtcore.QModelIndex_ITF, previous q
 
 //  keep block begin
 
-func init() {
+func init_unused_11355() {
 	if false {
 		reflect.TypeOf(123)
 	}

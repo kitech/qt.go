@@ -283,7 +283,7 @@ func (this *QGraphicsColorizeEffect) Draw(painter qtgui.QPainter_ITF /*777 QPain
 
 //  keep block begin
 
-func init() {
+func init_unused_11197() {
 	if false {
 		reflect.TypeOf(123)
 	}

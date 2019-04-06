@@ -4,7 +4,7 @@ import "unsafe"
 import "github.com/kitech/qt.go/qtrt"
 import "github.com/kitech/qt.go/qtcore"
 
-func init() {
+func init_unused_10011() {
 	if false {
 		_ = unsafe.Pointer(uintptr(0))
 	}
@@ -118,22 +118,6 @@ func Operator_or83(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtNetwork/qlocalserver.h:105
-// index:84
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(QLocalServer::SocketOptions::enum_type, int)
-
-/*
-
- */
-func Operator_or84(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN12QLocalServer12SocketOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
-	return rv2
-}
-
 // /usr/include/qt/QtNetwork/qhostaddress.h:165
 // index:85
 // Invalid inline Visibility=Default Availability=Available
@@ -164,28 +148,6 @@ func Operator_or86(f1 int, f2 int) *qtcore.QIncompatibleFlag /*123*/ {
 	rv2 := qtcore.NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQIncompatibleFlag)
 	return rv2
-}
-
-// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:86
-// index:64
-// Invalid inline Visibility=Default Availability=Available
-// [1] bool operator!=(const QSslPreSharedKeyAuthenticator &, const QSslPreSharedKeyAuthenticator &)
-
-/*
-
- */
-func Operator_not_equal64(lhs QSslPreSharedKeyAuthenticator_ITF, rhs QSslPreSharedKeyAuthenticator_ITF) bool {
-	var convArg0 unsafe.Pointer
-	if lhs != nil && lhs.QSslPreSharedKeyAuthenticator_PTR() != nil {
-		convArg0 = lhs.QSslPreSharedKeyAuthenticator_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if rhs != nil && rhs.QSslPreSharedKeyAuthenticator_PTR() != nil {
-		convArg1 = rhs.QSslPreSharedKeyAuthenticator_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZneRK29QSslPreSharedKeyAuthenticatorS1_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
 }
 
 // /usr/include/qt/QtNetwork/qssldiffiehellmanparameters.h:68
@@ -555,27 +517,6 @@ func Swap62(value1 QSslError_ITF, value2 QSslError_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qhttpmultipart.h:86
-// index:63
-// Invalid inline Visibility=Default Availability=Available
-// [-2] void swap(QHttpPart &, QHttpPart &)
-
-/*
-
- */
-func Swap63(value1 QHttpPart_ITF, value2 QHttpPart_ITF) {
-	var convArg0 unsafe.Pointer
-	if value1 != nil && value1.QHttpPart_PTR() != nil {
-		convArg0 = value1.QHttpPart_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if value2 != nil && value2.QHttpPart_PTR() != nil {
-		convArg1 = value2.QHttpPart_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z4swapR9QHttpPartS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtNetwork/qhostinfo.h:160
 // index:64
 // Invalid inline Visibility=Default Availability=Available
@@ -622,27 +563,6 @@ func Swap65(value1 QSslKey_ITF, value2 QSslKey_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qsslpresharedkeyauthenticator.h:91
-// index:66
-// Invalid inline Visibility=Default Availability=Available
-// [-2] void swap(QSslPreSharedKeyAuthenticator &, QSslPreSharedKeyAuthenticator &)
-
-/*
-Swaps the QSslPreSharedKeyAuthenticator object authenticator with this object. This operation is very fast and never fails.
-*/
-func Swap66(value1 QSslPreSharedKeyAuthenticator_ITF, value2 QSslPreSharedKeyAuthenticator_ITF) {
-	var convArg0 unsafe.Pointer
-	if value1 != nil && value1.QSslPreSharedKeyAuthenticator_PTR() != nil {
-		convArg0 = value1.QSslPreSharedKeyAuthenticator_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if value2 != nil && value2.QSslPreSharedKeyAuthenticator_PTR() != nil {
-		convArg1 = value2.QSslPreSharedKeyAuthenticator_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z4swapR29QSslPreSharedKeyAuthenticatorS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtNetwork/qssldiffiehellmanparameters.h:112
 // index:67
 // Invalid inline Visibility=Default Availability=Available
@@ -682,27 +602,6 @@ func Swap68(value1 QSslCertificateExtension_ITF, value2 QSslCertificateExtension
 		convArg1 = value2.QSslCertificateExtension_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_Z4swapR24QSslCertificateExtensionS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtNetwork/qdnslookup.h:133
-// index:69
-// Invalid inline Visibility=Default Availability=Available
-// [-2] void swap(QDnsMailExchangeRecord &, QDnsMailExchangeRecord &)
-
-/*
-
- */
-func Swap69(value1 QDnsMailExchangeRecord_ITF, value2 QDnsMailExchangeRecord_ITF) {
-	var convArg0 unsafe.Pointer
-	if value1 != nil && value1.QDnsMailExchangeRecord_PTR() != nil {
-		convArg0 = value1.QDnsMailExchangeRecord_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if value2 != nil && value2.QDnsMailExchangeRecord_PTR() != nil {
-		convArg1 = value2.QDnsMailExchangeRecord_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z4swapR22QDnsMailExchangeRecordS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -750,27 +649,6 @@ func Swap71(value1 QNetworkCacheMetaData_ITF, value2 QNetworkCacheMetaData_ITF) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtNetwork/qdnslookup.h:108
-// index:72
-// Invalid inline Visibility=Default Availability=Available
-// [-2] void swap(QDnsHostAddressRecord &, QDnsHostAddressRecord &)
-
-/*
-
- */
-func Swap72(value1 QDnsHostAddressRecord_ITF, value2 QDnsHostAddressRecord_ITF) {
-	var convArg0 unsafe.Pointer
-	if value1 != nil && value1.QDnsHostAddressRecord_PTR() != nil {
-		convArg0 = value1.QDnsHostAddressRecord_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if value2 != nil && value2.QDnsHostAddressRecord_PTR() != nil {
-		convArg1 = value2.QDnsHostAddressRecord_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z4swapR21QDnsHostAddressRecordS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtNetwork/qnetworkinterface.h:105
 // index:73
 // Invalid inline Visibility=Default Availability=Available
@@ -791,27 +669,6 @@ func Swap73(value1 QNetworkAddressEntry_ITF, value2 QNetworkAddressEntry_ITF) {
 		convArg1 = value2.QNetworkAddressEntry_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_Z4swapR20QNetworkAddressEntryS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtNetwork/qdnslookup.h:84
-// index:74
-// Invalid inline Visibility=Default Availability=Available
-// [-2] void swap(QDnsDomainNameRecord &, QDnsDomainNameRecord &)
-
-/*
-
- */
-func Swap74(value1 QDnsDomainNameRecord_ITF, value2 QDnsDomainNameRecord_ITF) {
-	var convArg0 unsafe.Pointer
-	if value1 != nil && value1.QDnsDomainNameRecord_PTR() != nil {
-		convArg0 = value1.QDnsDomainNameRecord_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if value2 != nil && value2.QDnsDomainNameRecord_PTR() != nil {
-		convArg1 = value2.QDnsDomainNameRecord_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z4swapR20QDnsDomainNameRecordS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -881,27 +738,6 @@ func Swap77(value1 QNetworkInterface_ITF, value2 QNetworkInterface_ITF) {
 		convArg1 = value2.QNetworkInterface_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_Z4swapR17QNetworkInterfaceS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtNetwork/qdnslookup.h:160
-// index:78
-// Invalid inline Visibility=Default Availability=Available
-// [-2] void swap(QDnsServiceRecord &, QDnsServiceRecord &)
-
-/*
-
- */
-func Swap78(value1 QDnsServiceRecord_ITF, value2 QDnsServiceRecord_ITF) {
-	var convArg0 unsafe.Pointer
-	if value1 != nil && value1.QDnsServiceRecord_PTR() != nil {
-		convArg0 = value1.QDnsServiceRecord_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if value2 != nil && value2.QDnsServiceRecord_PTR() != nil {
-		convArg1 = value2.QDnsServiceRecord_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z4swapR17QDnsServiceRecordS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -992,27 +828,6 @@ func Swap82(value1 QNetworkCookie_ITF, value2 QNetworkCookie_ITF) {
 		convArg1 = value2.QNetworkCookie_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_Z4swapR14QNetworkCookieS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtNetwork/qdnslookup.h:184
-// index:83
-// Invalid inline Visibility=Default Availability=Available
-// [-2] void swap(QDnsTextRecord &, QDnsTextRecord &)
-
-/*
-
- */
-func Swap83(value1 QDnsTextRecord_ITF, value2 QDnsTextRecord_ITF) {
-	var convArg0 unsafe.Pointer
-	if value1 != nil && value1.QDnsTextRecord_PTR() != nil {
-		convArg0 = value1.QDnsTextRecord_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if value2 != nil && value2.QDnsTextRecord_PTR() != nil {
-		convArg1 = value2.QDnsTextRecord_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z4swapR14QDnsTextRecordS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
 

@@ -172,7 +172,7 @@ func (this *QIconEnginePlugin) Createp() *QIconEngine /*777 QIconEngine **/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10879() {
 	if false {
 		reflect.TypeOf(123)
 	}

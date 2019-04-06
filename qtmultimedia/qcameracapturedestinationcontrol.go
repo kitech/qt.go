@@ -202,7 +202,7 @@ func NewQCameraCaptureDestinationControlp() *QCameraCaptureDestinationControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11815() {
 	if false {
 		reflect.TypeOf(123)
 	}

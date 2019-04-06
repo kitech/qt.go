@@ -459,7 +459,7 @@ func (this *QMediaObject) RemovePropertyWatch(name qtcore.QByteArray_ITF) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11751() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -169,7 +169,7 @@ func QStyleOptionGroupBox_StyleOptionVersionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11045() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -2146,7 +2146,7 @@ func (this *QObject) DisconnectNotify(signal QMetaMethod_ITF) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10251() {
 	if false {
 		reflect.TypeOf(123)
 	}

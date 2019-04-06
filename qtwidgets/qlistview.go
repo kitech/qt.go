@@ -964,23 +964,6 @@ func (this *QListView) MouseReleaseEvent(e qtgui.QMouseEvent_ITF /*777 QMouseEve
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qlistview.h:160
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void wheelEvent(QWheelEvent *)
-
-/*
-Reimplemented from QAbstractScrollArea::wheelEvent().
-*/
-func (this *QListView) WheelEvent(e qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
-	var convArg0 unsafe.Pointer
-	if e != nil && e.QWheelEvent_PTR() != nil {
-		convArg0 = e.QWheelEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtWidgets/qlistview.h:163
 // index:0
 // Protected virtual Visibility=Default Availability=Available
@@ -1012,70 +995,6 @@ func (this *QListView) ResizeEvent(e qtgui.QResizeEvent_ITF /*777 QResizeEvent *
 		convArg0 = e.QResizeEvent_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView11resizeEventEP12QResizeEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qlistview.h:166
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void dragMoveEvent(QDragMoveEvent *)
-
-/*
-Reimplemented from QAbstractItemView::dragMoveEvent().
-*/
-func (this *QListView) DragMoveEvent(e qtgui.QDragMoveEvent_ITF /*777 QDragMoveEvent **/) {
-	var convArg0 unsafe.Pointer
-	if e != nil && e.QDragMoveEvent_PTR() != nil {
-		convArg0 = e.QDragMoveEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView13dragMoveEventEP14QDragMoveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qlistview.h:167
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void dragLeaveEvent(QDragLeaveEvent *)
-
-/*
-Reimplemented from QAbstractItemView::dragLeaveEvent().
-*/
-func (this *QListView) DragLeaveEvent(e qtgui.QDragLeaveEvent_ITF /*777 QDragLeaveEvent **/) {
-	var convArg0 unsafe.Pointer
-	if e != nil && e.QDragLeaveEvent_PTR() != nil {
-		convArg0 = e.QDragLeaveEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView14dragLeaveEventEP15QDragLeaveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qlistview.h:168
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void dropEvent(QDropEvent *)
-
-/*
-Reimplemented from QAbstractItemView::dropEvent().
-*/
-func (this *QListView) DropEvent(e qtgui.QDropEvent_ITF /*777 QDropEvent **/) {
-	var convArg0 unsafe.Pointer
-	if e != nil && e.QDropEvent_PTR() != nil {
-		convArg0 = e.QDropEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView9dropEventEP10QDropEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qlistview.h:169
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void startDrag(Qt::DropActions)
-
-/*
-Reimplemented from QAbstractItemView::startDrag().
-*/
-func (this *QListView) StartDrag(supportedActions int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QListView9startDragE6QFlagsIN2Qt10DropActionEE", qtrt.FFI_TYPE_POINTER, this.GetCthis(), supportedActions)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -1451,7 +1370,7 @@ func QListView_ViewModeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11267() {
 	if false {
 		reflect.TypeOf(123)
 	}

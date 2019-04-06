@@ -76,7 +76,7 @@ func DeleteRegisterType(this *RegisterType) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11483() {
 	if false {
 		reflect.TypeOf(123)
 	}

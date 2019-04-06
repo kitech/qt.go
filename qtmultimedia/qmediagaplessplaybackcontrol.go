@@ -279,7 +279,7 @@ func NewQMediaGaplessPlaybackControlp() *QMediaGaplessPlaybackControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11857() {
 	if false {
 		reflect.TypeOf(123)
 	}

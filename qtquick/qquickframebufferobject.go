@@ -297,7 +297,7 @@ func DeleteQQuickFramebufferObject(this *QQuickFramebufferObject) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11549() {
 	if false {
 		reflect.TypeOf(123)
 	}

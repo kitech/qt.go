@@ -120,7 +120,7 @@ func (this *QStatusTipEvent) Tip() string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10695() {
 	if false {
 		reflect.TypeOf(123)
 	}

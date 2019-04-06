@@ -177,7 +177,7 @@ func (this *QFileOpenEvent) OpenFile(file qtcore.QFile_ITF, flags int) bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10701() {
 	if false {
 		reflect.TypeOf(123)
 	}

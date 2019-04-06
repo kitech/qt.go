@@ -289,7 +289,7 @@ func (this *QPlainTextDocumentLayout) DocumentChanged(from int, arg1 int, charsA
 
 //  keep block begin
 
-func init() {
+func init_unused_11291() {
 	if false {
 		reflect.TypeOf(123)
 	}

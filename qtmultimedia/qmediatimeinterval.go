@@ -203,7 +203,7 @@ func DeleteQMediaTimeInterval(this *QMediaTimeInterval) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11863() {
 	if false {
 		reflect.TypeOf(123)
 	}

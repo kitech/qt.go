@@ -183,7 +183,7 @@ func QJsonParseError_ParseErrorItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10445() {
 	if false {
 		reflect.TypeOf(123)
 	}

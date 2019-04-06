@@ -211,7 +211,7 @@ func NewQSGBasicGeometryNode(type_ int) *QSGBasicGeometryNode {
 
 //  keep block begin
 
-func init() {
+func init_unused_11571() {
 	if false {
 		reflect.TypeOf(123)
 	}

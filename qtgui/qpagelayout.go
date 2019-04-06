@@ -960,7 +960,7 @@ func QPageLayout_ModeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10907() {
 	if false {
 		reflect.TypeOf(123)
 	}

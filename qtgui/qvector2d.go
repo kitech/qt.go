@@ -656,7 +656,7 @@ func DeleteQVector2D(this *QVector2D) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10639() {
 	if false {
 		reflect.TypeOf(123)
 	}

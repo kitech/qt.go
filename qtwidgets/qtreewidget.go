@@ -1516,28 +1516,11 @@ func (this *QTreeWidget) ItemFromIndex(index qtcore.QModelIndex_ITF) *QTreeWidge
 	return /*==*/ NewQTreeWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:376
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void dropEvent(QDropEvent *)
-
-/*
-Reimplemented from QAbstractItemView::dropEvent().
-*/
-func (this *QTreeWidget) DropEvent(event qtgui.QDropEvent_ITF /*777 QDropEvent **/) {
-	var convArg0 unsafe.Pointer
-	if event != nil && event.QDropEvent_PTR() != nil {
-		convArg0 = event.QDropEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QTreeWidget9dropEventEP10QDropEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
 //  body block end
 
 //  keep block begin
 
-func init() {
+func init_unused_11361() {
 	if false {
 		reflect.TypeOf(123)
 	}

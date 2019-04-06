@@ -245,7 +245,7 @@ func (this *QSemaphoreReleaser) Cancel() *QSemaphore /*777 QSemaphore **/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10533() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -172,7 +172,7 @@ func (this *QGraphicsSceneResizeEvent) SetNewSize(size qtcore.QSizeF_ITF) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11231() {
 	if false {
 		reflect.TypeOf(123)
 	}

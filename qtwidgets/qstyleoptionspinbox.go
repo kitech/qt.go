@@ -64,50 +64,6 @@ func (*QStyleOptionSpinBox) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionSp
 	return NewQStyleOptionSpinBoxFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:552
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void QStyleOptionSpinBox()
-
-/*
-
- */
-func (*QStyleOptionSpinBox) NewForInherit() *QStyleOptionSpinBox {
-	return NewQStyleOptionSpinBox()
-}
-func NewQStyleOptionSpinBox() *QStyleOptionSpinBox {
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ev", qtrt.FFI_TYPE_POINTER)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQStyleOptionSpinBoxFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQStyleOptionSpinBox)
-	return gothis
-}
-
-// /usr/include/qt/QtWidgets/qstyleoption.h:556
-// index:1
-// Protected Visibility=Default Availability=Available
-// [-2] void QStyleOptionSpinBox(int)
-
-/*
-
- */
-func (*QStyleOptionSpinBox) NewForInherit1(version int) *QStyleOptionSpinBox {
-	return NewQStyleOptionSpinBox1(version)
-}
-func NewQStyleOptionSpinBox1(version int) *QStyleOptionSpinBox {
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxC2Ei", qtrt.FFI_TYPE_POINTER, version)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQStyleOptionSpinBoxFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQStyleOptionSpinBox)
-	return gothis
-}
-
-func DeleteQStyleOptionSpinBox(this *QStyleOptionSpinBox) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN19QStyleOptionSpinBoxD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	this.SetCthis(nil)
-}
-
 /*
 This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
 
@@ -169,7 +125,7 @@ func QStyleOptionSpinBox_StyleOptionVersionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11037() {
 	if false {
 		reflect.TypeOf(123)
 	}

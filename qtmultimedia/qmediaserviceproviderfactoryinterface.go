@@ -123,7 +123,7 @@ func DeleteQMediaServiceProviderFactoryInterface(this *QMediaServiceProviderFact
 
 //  keep block begin
 
-func init() {
+func init_unused_11875() {
 	if false {
 		reflect.TypeOf(123)
 	}

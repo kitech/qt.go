@@ -355,7 +355,7 @@ func (this *QActionGroup) Hovered(arg0 QAction_ITF /*777 QAction **/) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11067() {
 	if false {
 		reflect.TypeOf(123)
 	}

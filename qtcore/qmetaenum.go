@@ -331,7 +331,7 @@ func DeleteQMetaEnum(this *QMetaEnum) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10477() {
 	if false {
 		reflect.TypeOf(123)
 	}

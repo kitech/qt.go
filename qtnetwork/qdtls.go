@@ -755,7 +755,7 @@ func QDtls_HandshakeStateItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11411() {
 	if false {
 		reflect.TypeOf(123)
 	}

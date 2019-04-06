@@ -99,7 +99,7 @@ func DeleteQVariantComparisonHelper(this *QVariantComparisonHelper) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10277() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -469,7 +469,7 @@ func (this *QTimer) TimerEvent(arg0 QTimerEvent_ITF /*777 QTimerEvent **/) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10603() {
 	if false {
 		reflect.TypeOf(123)
 	}

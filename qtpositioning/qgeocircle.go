@@ -385,7 +385,7 @@ func (this *QGeoCircle) ToString() string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11647() {
 	if false {
 		reflect.TypeOf(123)
 	}

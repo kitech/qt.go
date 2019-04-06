@@ -468,7 +468,7 @@ func (this *QWinTaskbarProgress) StoppedChanged(stopped bool) {
 
 //  keep block begin
 
-func init() {
+func init_unused_14875() {
 	if false {
 		reflect.TypeOf(123)
 	}

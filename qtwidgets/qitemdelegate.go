@@ -855,7 +855,7 @@ func (this *QItemDelegate) TextRectangle(painter qtgui.QPainter_ITF /*777 QPaint
 
 //  keep block begin
 
-func init() {
+func init_unused_11253() {
 	if false {
 		reflect.TypeOf(123)
 	}

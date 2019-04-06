@@ -154,7 +154,7 @@ func (this *QRunnable) SetAutoDelete(_autoDelete bool) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10413() {
 	if false {
 		reflect.TypeOf(123)
 	}

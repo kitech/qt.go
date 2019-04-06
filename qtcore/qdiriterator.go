@@ -516,7 +516,7 @@ func QDirIterator_IteratorFlagItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10399() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -197,7 +197,7 @@ func DeleteQWebEngineRegisterProtocolHandlerRequest(this *QWebEngineRegisterProt
 
 //  keep block begin
 
-func init() {
+func init_unused_11675() {
 	if false {
 		reflect.TypeOf(123)
 	}

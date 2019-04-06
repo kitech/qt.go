@@ -171,7 +171,7 @@ func NewQMediaAvailabilityControlp() *QMediaAvailabilityControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11849() {
 	if false {
 		reflect.TypeOf(123)
 	}

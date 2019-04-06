@@ -1545,7 +1545,7 @@ func (this *QGuiApplication) Event(arg0 qtcore.QEvent_ITF /*777 QEvent **/) bool
 
 //  keep block begin
 
-func init() {
+func init_unused_10875() {
 	if false {
 		reflect.TypeOf(123)
 	}

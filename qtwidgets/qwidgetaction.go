@@ -297,7 +297,7 @@ func (this *QWidgetAction) DeleteWidget(widget QWidget_ITF /*777 QWidget **/) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11373() {
 	if false {
 		reflect.TypeOf(123)
 	}

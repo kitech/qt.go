@@ -1248,7 +1248,7 @@ func QRegExp_CaretModeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10205() {
 	if false {
 		reflect.TypeOf(123)
 	}

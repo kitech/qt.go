@@ -278,7 +278,7 @@ func QHttpMultiPart_ContentTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11423() {
 	if false {
 		reflect.TypeOf(123)
 	}

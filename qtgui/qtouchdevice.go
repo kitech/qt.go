@@ -316,7 +316,7 @@ func QTouchDevice_CapabilityFlagItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10641() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -380,7 +380,7 @@ func (this *QNetworkDiskCache) Expire() int64 {
 
 //  keep block begin
 
-func init() {
+func init_unused_11445() {
 	if false {
 		reflect.TypeOf(123)
 	}

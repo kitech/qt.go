@@ -25,7 +25,7 @@ import "github.com/kitech/qt.go/qtnetwork"
 
 //  keep block begin
 
-func init() {
+func init_unused_10067() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -1164,7 +1164,7 @@ func (this *QCborMap) ToJsonObject() *QJsonObject /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10357() {
 	if false {
 		reflect.TypeOf(123)
 	}

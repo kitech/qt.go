@@ -3673,7 +3673,7 @@ func QMetaObject_CallItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10159() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -764,7 +764,7 @@ func QImageWriter_ImageWriterErrorItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10887() {
 	if false {
 		reflect.TypeOf(123)
 	}

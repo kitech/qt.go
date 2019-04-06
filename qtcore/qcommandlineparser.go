@@ -881,7 +881,7 @@ func QCommandLineParser_OptionsAfterPositionalArgumentsModeItemName(val int) str
 
 //  keep block begin
 
-func init() {
+func init_unused_10381() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -641,7 +641,7 @@ func (this *QToolBox) ChangeEvent(arg0 qtcore.QEvent_ITF /*777 QEvent **/) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11349() {
 	if false {
 		reflect.TypeOf(123)
 	}

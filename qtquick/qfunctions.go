@@ -7,7 +7,7 @@ import "github.com/kitech/qt.go/qtnetwork"
 import "github.com/kitech/qt.go/qtgui"
 import "github.com/kitech/qt.go/qtqml"
 
-func init() {
+func init_unused_10019() {
 	if false {
 		_ = unsafe.Pointer(uintptr(0))
 	}

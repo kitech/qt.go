@@ -64,50 +64,6 @@ func (*QStyleOptionTab) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionTab {
 	return NewQStyleOptionTabFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:285
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void QStyleOptionTab()
-
-/*
-
- */
-func (*QStyleOptionTab) NewForInherit() *QStyleOptionTab {
-	return NewQStyleOptionTab()
-}
-func NewQStyleOptionTab() *QStyleOptionTab {
-	rv, err := qtrt.InvokeQtFunc6("_ZN15QStyleOptionTabC2Ev", qtrt.FFI_TYPE_POINTER)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQStyleOptionTabFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQStyleOptionTab)
-	return gothis
-}
-
-// /usr/include/qt/QtWidgets/qstyleoption.h:289
-// index:1
-// Protected Visibility=Default Availability=Available
-// [-2] void QStyleOptionTab(int)
-
-/*
-
- */
-func (*QStyleOptionTab) NewForInherit1(version int) *QStyleOptionTab {
-	return NewQStyleOptionTab1(version)
-}
-func NewQStyleOptionTab1(version int) *QStyleOptionTab {
-	rv, err := qtrt.InvokeQtFunc6("_ZN15QStyleOptionTabC2Ei", qtrt.FFI_TYPE_POINTER, version)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQStyleOptionTabFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQStyleOptionTab)
-	return gothis
-}
-
-func DeleteQStyleOptionTab(this *QStyleOptionTab) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN15QStyleOptionTabD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	this.SetCthis(nil)
-}
-
 /*
 This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
 
@@ -297,7 +253,7 @@ func QStyleOptionTab_TabFeatureItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11017() {
 	if false {
 		reflect.TypeOf(123)
 	}

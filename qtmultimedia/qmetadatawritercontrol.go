@@ -305,7 +305,7 @@ func NewQMetaDataWriterControlp() *QMetaDataWriterControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11895() {
 	if false {
 		reflect.TypeOf(123)
 	}

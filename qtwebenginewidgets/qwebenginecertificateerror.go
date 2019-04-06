@@ -274,7 +274,7 @@ func QWebEngineCertificateError_ErrorItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11707() {
 	if false {
 		reflect.TypeOf(123)
 	}

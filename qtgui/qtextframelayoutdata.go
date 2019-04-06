@@ -84,7 +84,7 @@ func DeleteQTextFrameLayoutData(this *QTextFrameLayoutData) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10947() {
 	if false {
 		reflect.TypeOf(123)
 	}

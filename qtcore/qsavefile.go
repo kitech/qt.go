@@ -346,7 +346,7 @@ func (this *QSaveFile) WriteData(data string, len_ int64) int64 {
 
 //  keep block begin
 
-func init() {
+func init_unused_10529() {
 	if false {
 		reflect.TypeOf(123)
 	}

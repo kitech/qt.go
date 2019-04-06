@@ -3282,7 +3282,7 @@ func QChar_UnicodeVersionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10163() {
 	if false {
 		reflect.TypeOf(123)
 	}

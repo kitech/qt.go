@@ -618,7 +618,7 @@ func (this *QQmlExpression) ValueChanged() {
 
 //  keep block begin
 
-func init() {
+func init_unused_11521() {
 	if false {
 		reflect.TypeOf(123)
 	}

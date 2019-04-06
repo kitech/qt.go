@@ -143,7 +143,7 @@ func DeleteQPointingDeviceUniqueId(this *QPointingDeviceUniqueId) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10709() {
 	if false {
 		reflect.TypeOf(123)
 	}

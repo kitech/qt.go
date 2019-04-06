@@ -101,7 +101,7 @@ func DeleteQShowEvent(this *QShowEvent) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10675() {
 	if false {
 		reflect.TypeOf(123)
 	}

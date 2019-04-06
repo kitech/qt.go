@@ -205,7 +205,7 @@ func (this *QQmlExtensionPlugin) InitializeEngine(engine QQmlEngine_ITF /*777 QQ
 
 //  keep block begin
 
-func init() {
+func init_unused_11527() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -689,7 +689,7 @@ func (this *QSvgRenderer) RepaintNeeded() {
 
 //  keep block begin
 
-func init() {
+func init_unused_11923() {
 	if false {
 		reflect.TypeOf(123)
 	}

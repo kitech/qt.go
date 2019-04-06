@@ -1117,7 +1117,7 @@ func QXmlStreamReader_ErrorItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10627() {
 	if false {
 		reflect.TypeOf(123)
 	}

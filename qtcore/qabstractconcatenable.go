@@ -151,7 +151,7 @@ func DeleteQAbstractConcatenable(this *QAbstractConcatenable) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10557() {
 	if false {
 		reflect.TypeOf(123)
 	}

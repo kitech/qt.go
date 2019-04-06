@@ -205,7 +205,7 @@ func QQuickTextureFactory_TextureFactoryForImage(image qtgui.QImage_ITF) *QQuick
 
 //  keep block begin
 
-func init() {
+func init_unused_11551() {
 	if false {
 		reflect.TypeOf(123)
 	}

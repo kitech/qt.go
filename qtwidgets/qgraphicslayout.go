@@ -378,7 +378,7 @@ func (this *QGraphicsLayout) AddChildLayoutItem(layoutItem QGraphicsLayoutItem_I
 
 //  keep block begin
 
-func init() {
+func init_unused_11189() {
 	if false {
 		reflect.TypeOf(123)
 	}

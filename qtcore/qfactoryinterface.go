@@ -99,7 +99,7 @@ func (this *QFactoryInterface) Keys() *QStringList /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10405() {
 	if false {
 		reflect.TypeOf(123)
 	}

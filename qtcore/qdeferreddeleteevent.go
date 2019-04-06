@@ -114,7 +114,7 @@ func (this *QDeferredDeleteEvent) LoopLevel() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10377() {
 	if false {
 		reflect.TypeOf(123)
 	}

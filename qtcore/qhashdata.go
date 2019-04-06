@@ -182,7 +182,7 @@ func DeleteQHashData(this *QHashData) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10271() {
 	if false {
 		reflect.TypeOf(123)
 	}

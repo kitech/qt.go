@@ -135,7 +135,7 @@ func (this *QAccessibleImageInterface) ImagePosition() *qtcore.QPoint /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10815() {
 	if false {
 		reflect.TypeOf(123)
 	}

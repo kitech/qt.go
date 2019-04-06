@@ -63,45 +63,11 @@ func (*QDragLeaveEvent) NewFromPointer(cthis unsafe.Pointer) *QDragLeaveEvent {
 	return NewQDragLeaveEventFromPointer(cthis)
 }
 
-// /usr/include/qt/QtGui/qevent.h:676
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void QDragLeaveEvent()
-
-/*
-
- */
-func (*QDragLeaveEvent) NewForInherit() *QDragLeaveEvent {
-	return NewQDragLeaveEvent()
-}
-func NewQDragLeaveEvent() *QDragLeaveEvent {
-	rv, err := qtrt.InvokeQtFunc6("_ZN15QDragLeaveEventC2Ev", qtrt.FFI_TYPE_POINTER)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQDragLeaveEventFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQDragLeaveEvent)
-	return gothis
-}
-
-// /usr/include/qt/QtGui/qevent.h:677
-// index:0
-// Public virtual Visibility=Default Availability=Available
-// [-2] void ~QDragLeaveEvent()
-
-/*
-
- */
-func DeleteQDragLeaveEvent(this *QDragLeaveEvent) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN15QDragLeaveEventD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	qtrt.Cmemset(this.GetCthis(), 9, 24)
-	qtrt.ErrPrint(err, rv)
-	this.SetCthis(nil)
-}
-
 //  body block end
 
 //  keep block begin
 
-func init() {
+func init_unused_10691() {
 	if false {
 		reflect.TypeOf(123)
 	}

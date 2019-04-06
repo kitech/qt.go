@@ -471,7 +471,7 @@ func QTextBoundaryFinder_BoundaryReasonItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10567() {
 	if false {
 		reflect.TypeOf(123)
 	}

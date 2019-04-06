@@ -966,7 +966,7 @@ func (this *QGridLayout) GetItemPosition(idx int, row unsafe.Pointer /*666*/, co
 
 //  keep block begin
 
-func init() {
+func init_unused_11081() {
 	if false {
 		reflect.TypeOf(123)
 	}

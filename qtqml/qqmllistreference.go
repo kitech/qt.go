@@ -348,7 +348,7 @@ func (this *QQmlListReference) Count() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_11503() {
 	if false {
 		reflect.TypeOf(123)
 	}

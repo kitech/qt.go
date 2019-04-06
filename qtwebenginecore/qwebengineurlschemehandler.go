@@ -182,7 +182,7 @@ func (this *QWebEngineUrlSchemeHandler) _q_destroyedUrlSchemeHandler(arg0 QWebEn
 
 //  keep block begin
 
-func init() {
+func init_unused_11685() {
 	if false {
 		reflect.TypeOf(123)
 	}

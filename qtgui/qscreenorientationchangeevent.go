@@ -135,7 +135,7 @@ func (this *QScreenOrientationChangeEvent) Orientation() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10717() {
 	if false {
 		reflect.TypeOf(123)
 	}

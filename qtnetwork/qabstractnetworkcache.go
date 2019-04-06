@@ -298,7 +298,7 @@ func NewQAbstractNetworkCachep() *QAbstractNetworkCache {
 
 //  keep block begin
 
-func init() {
+func init_unused_11383() {
 	if false {
 		reflect.TypeOf(123)
 	}

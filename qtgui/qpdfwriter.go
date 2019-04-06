@@ -382,7 +382,7 @@ func (this *QPdfWriter) Metric(id int) int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10919() {
 	if false {
 		reflect.TypeOf(123)
 	}

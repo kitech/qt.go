@@ -91,7 +91,7 @@ func DeleteQTextStreamManipulator(this *QTextStreamManipulator) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10329() {
 	if false {
 		reflect.TypeOf(123)
 	}

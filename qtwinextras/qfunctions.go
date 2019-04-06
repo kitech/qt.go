@@ -6,7 +6,7 @@ import "github.com/kitech/qt.go/qtcore"
 import "github.com/kitech/qt.go/qtgui"
 import "github.com/kitech/qt.go/qtwidgets"
 
-func init() {
+func init_unused_10029() {
 	if false {
 		_ = unsafe.Pointer(uintptr(0))
 	}

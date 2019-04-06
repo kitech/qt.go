@@ -257,7 +257,7 @@ func DeleteQTextImageFormat(this *QTextImageFormat) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10769() {
 	if false {
 		reflect.TypeOf(123)
 	}

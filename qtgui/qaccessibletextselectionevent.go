@@ -171,7 +171,7 @@ func (this *QAccessibleTextSelectionEvent) SelectionEnd() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10823() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -337,7 +337,7 @@ func DeleteQStylePainter(this *QStylePainter) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11331() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -842,38 +842,6 @@ func (this *QTreeWidgetItem) SetToolTip(column int, toolTip string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtreewidget.h:123
-// index:0
-// Public inline Visibility=Default Availability=Available
-// [8] QString whatsThis(int) const
-
-/*
-
- */
-func (this *QTreeWidgetItem) WhatsThis(column int) string {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK15QTreeWidgetItem9whatsThisEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column)
-	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	qtcore.DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtWidgets/qtreewidget.h:125
-// index:0
-// Public inline Visibility=Default Availability=Available
-// [-2] void setWhatsThis(int, const QString &)
-
-/*
-
- */
-func (this *QTreeWidgetItem) SetWhatsThis(column int, whatsThis string) {
-	var tmpArg1 = qtcore.NewQString5(whatsThis)
-	var convArg1 = tmpArg1.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN15QTreeWidgetItem12setWhatsThisEiRK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), column, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtWidgets/qtreewidget.h:128
 // index:0
 // Public inline Visibility=Default Availability=Available
@@ -1473,7 +1441,7 @@ func QTreeWidgetItem_ChildIndicatorPolicyItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11359() {
 	if false {
 		reflect.TypeOf(123)
 	}

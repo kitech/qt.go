@@ -138,7 +138,7 @@ func (this *QAbstractOpenGLFunctions) IsInitialized() bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10901() {
 	if false {
 		reflect.TypeOf(123)
 	}

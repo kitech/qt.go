@@ -286,7 +286,7 @@ func (this *QGeoLocation) IsEmpty() bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_11649() {
 	if false {
 		reflect.TypeOf(123)
 	}

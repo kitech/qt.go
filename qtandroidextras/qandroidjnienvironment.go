@@ -167,7 +167,7 @@ func (this *QAndroidJniEnvironment) FindClass(className string) unsafe.Pointer /
 
 //  keep block begin
 
-func init() {
+func init_unused_14911() {
 	if false {
 		reflect.TypeOf(123)
 	}

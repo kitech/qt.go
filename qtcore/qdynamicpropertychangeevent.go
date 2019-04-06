@@ -122,7 +122,7 @@ func (this *QDynamicPropertyChangeEvent) PropertyName() *QByteArray /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10375() {
 	if false {
 		reflect.TypeOf(123)
 	}

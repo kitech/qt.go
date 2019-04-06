@@ -419,7 +419,7 @@ func (this *QLayoutItem) ControlTypes() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_11071() {
 	if false {
 		reflect.TypeOf(123)
 	}

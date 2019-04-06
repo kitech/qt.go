@@ -126,7 +126,7 @@ func QWinMime_RegisterMimeType(mime string) int {
 
 //  keep block begin
 
-func init() {
+func init_unused_14871() {
 	if false {
 		reflect.TypeOf(123)
 	}

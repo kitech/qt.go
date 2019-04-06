@@ -310,7 +310,7 @@ func (this *QKeyEventTransition) EventTest(event qtcore.QEvent_ITF /*777 QEvent 
 
 //  keep block begin
 
-func init() {
+func init_unused_11259() {
 	if false {
 		reflect.TypeOf(123)
 	}

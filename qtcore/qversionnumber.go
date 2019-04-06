@@ -656,7 +656,7 @@ func QVersionNumber_ItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10453() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -745,7 +745,7 @@ func QLineF_IntersectTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10461() {
 	if false {
 		reflect.TypeOf(123)
 	}

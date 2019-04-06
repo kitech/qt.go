@@ -361,7 +361,7 @@ func (this *QStringMatcher) CaseSensitivity() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10207() {
 	if false {
 		reflect.TypeOf(123)
 	}

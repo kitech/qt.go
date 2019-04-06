@@ -721,7 +721,7 @@ func (this *QBrush) IsDetached() bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10743() {
 	if false {
 		reflect.TypeOf(123)
 	}

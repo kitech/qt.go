@@ -427,7 +427,7 @@ func (this *QMimeType) FilterString() string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10485() {
 	if false {
 		reflect.TypeOf(123)
 	}

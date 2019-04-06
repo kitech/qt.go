@@ -532,7 +532,7 @@ func (this *QMimeData) RetrieveData(mimetype string, preferredType int) *QVarian
 
 //  keep block begin
 
-func init() {
+func init_unused_10483() {
 	if false {
 		reflect.TypeOf(123)
 	}

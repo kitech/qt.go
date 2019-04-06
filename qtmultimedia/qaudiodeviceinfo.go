@@ -332,7 +332,7 @@ func QAudioDeviceInfo_DefaultOutputDevice() *QAudioDeviceInfo /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_11759() {
 	if false {
 		reflect.TypeOf(123)
 	}

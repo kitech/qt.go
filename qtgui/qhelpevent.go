@@ -197,7 +197,7 @@ func (this *QHelpEvent) GlobalPos() *qtcore.QPoint {
 
 //  keep block begin
 
-func init() {
+func init_unused_10693() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -2418,7 +2418,7 @@ func (this *QPixmap) FromImageInPlacep(image QImage_ITF) *QPixmap /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10741() {
 	if false {
 		reflect.TypeOf(123)
 	}

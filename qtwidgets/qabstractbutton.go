@@ -499,24 +499,6 @@ func (this *QAbstractButton) AutoExclusive() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qabstractbutton.h:112
-// index:0
-// Public Visibility=Default Availability=Available
-// [8] QButtonGroup * group() const
-
-/*
-Returns the group that this button belongs to.
-
-If the button is not a member of any QButtonGroup, this function returns 0.
-
-See also QButtonGroup.
-*/
-func (this *QAbstractButton) Group() *QButtonGroup /*777 QButtonGroup **/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK15QAbstractButton5groupEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return /*==*/ NewQButtonGroupFromPointer(unsafe.Pointer(uintptr(rv))) // 444
-}
-
 // /usr/include/qt/QtWidgets/qabstractbutton.h:116
 // index:0
 // Public Visibility=Default Availability=Available
@@ -969,7 +951,7 @@ func (this *QAbstractButton) TimerEvent(e qtcore.QTimerEvent_ITF /*777 QTimerEve
 
 //  keep block begin
 
-func init() {
+func init_unused_10985() {
 	if false {
 		reflect.TypeOf(123)
 	}

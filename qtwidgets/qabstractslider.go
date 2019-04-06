@@ -744,23 +744,6 @@ func (this *QAbstractSlider) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTimer
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractslider.h:150
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void wheelEvent(QWheelEvent *)
-
-/*
-Reimplemented from QWidget::wheelEvent().
-*/
-func (this *QAbstractSlider) WheelEvent(e qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
-	var convArg0 unsafe.Pointer
-	if e != nil && e.QWheelEvent_PTR() != nil {
-		convArg0 = e.QWheelEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN15QAbstractSlider10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtWidgets/qabstractslider.h:152
 // index:0
 // Protected virtual Visibility=Default Availability=Available
@@ -858,7 +841,7 @@ func QAbstractSlider_SliderChangeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10989() {
 	if false {
 		reflect.TypeOf(123)
 	}

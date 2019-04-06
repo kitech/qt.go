@@ -76,7 +76,7 @@ func DeleteRegisterInterface(this *RegisterInterface) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11485() {
 	if false {
 		reflect.TypeOf(123)
 	}

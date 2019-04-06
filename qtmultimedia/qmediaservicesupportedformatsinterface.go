@@ -124,7 +124,7 @@ func (this *QMediaServiceSupportedFormatsInterface) SupportedMimeTypes() *qtcore
 
 //  keep block begin
 
-func init() {
+func init_unused_11877() {
 	if false {
 		reflect.TypeOf(123)
 	}

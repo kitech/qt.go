@@ -106,7 +106,7 @@ func (this *QMediaServiceFeaturesInterface) SupportedFeatures(service qtcore.QBy
 
 //  keep block begin
 
-func init() {
+func init_unused_11885() {
 	if false {
 		reflect.TypeOf(123)
 	}

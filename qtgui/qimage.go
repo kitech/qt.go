@@ -3490,7 +3490,7 @@ func QImage_FormatItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10739() {
 	if false {
 		reflect.TypeOf(123)
 	}

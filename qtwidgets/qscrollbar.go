@@ -278,23 +278,6 @@ func (this *QScrollBar) Event(event qtcore.QEvent_ITF /*777 QEvent **/) bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qscrollbar.h:68
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void wheelEvent(QWheelEvent *)
-
-/*
-Reimplemented from QAbstractSlider::wheelEvent().
-*/
-func (this *QScrollBar) WheelEvent(arg0 qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
-	var convArg0 unsafe.Pointer
-	if arg0 != nil && arg0.QWheelEvent_PTR() != nil {
-		convArg0 = arg0.QWheelEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QScrollBar10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtWidgets/qscrollbar.h:70
 // index:0
 // Protected virtual Visibility=Default Availability=Available
@@ -433,7 +416,7 @@ func (this *QScrollBar) InitStyleOption(option QStyleOptionSlider_ITF /*777 QSty
 
 //  keep block begin
 
-func init() {
+func init_unused_11301() {
 	if false {
 		reflect.TypeOf(123)
 	}

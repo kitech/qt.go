@@ -550,7 +550,7 @@ func (this *QDoubleSpinBox) ValueChanged1(arg0 string) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11313() {
 	if false {
 		reflect.TypeOf(123)
 	}

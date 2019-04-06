@@ -793,23 +793,6 @@ func (this *QAbstractSpinBox) KeyReleaseEvent(event qtgui.QKeyEvent_ITF /*777 QK
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:147
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void wheelEvent(QWheelEvent *)
-
-/*
-Reimplemented from QWidget::wheelEvent().
-*/
-func (this *QAbstractSpinBox) WheelEvent(event qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
-	var convArg0 unsafe.Pointer
-	if event != nil && event.QWheelEvent_PTR() != nil {
-		convArg0 = event.QWheelEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtWidgets/qabstractspinbox.h:149
 // index:0
 // Protected virtual Visibility=Default Availability=Available
@@ -841,23 +824,6 @@ func (this *QAbstractSpinBox) FocusOutEvent(event qtgui.QFocusEvent_ITF /*777 QF
 		convArg0 = event.QFocusEvent_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox13focusOutEventEP11QFocusEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qabstractspinbox.h:152
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void contextMenuEvent(QContextMenuEvent *)
-
-/*
-Reimplemented from QWidget::contextMenuEvent().
-*/
-func (this *QAbstractSpinBox) ContextMenuEvent(event qtgui.QContextMenuEvent_ITF /*777 QContextMenuEvent **/) {
-	var convArg0 unsafe.Pointer
-	if event != nil && event.QContextMenuEvent_PTR() != nil {
-		convArg0 = event.QContextMenuEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN16QAbstractSpinBox16contextMenuEventEP17QContextMenuEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -1209,7 +1175,7 @@ func QAbstractSpinBox_StepTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10987() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -519,7 +519,7 @@ func NewQVideoWindowControlp() *QVideoWindowControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11917() {
 	if false {
 		reflect.TypeOf(123)
 	}

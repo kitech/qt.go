@@ -135,7 +135,7 @@ func DeleteQMessageLogContext(this *QMessageLogContext) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10141() {
 	if false {
 		reflect.TypeOf(123)
 	}

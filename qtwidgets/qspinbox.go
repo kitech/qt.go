@@ -597,7 +597,7 @@ func (this *QSpinBox) ValueChanged1(arg0 string) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11311() {
 	if false {
 		reflect.TypeOf(123)
 	}

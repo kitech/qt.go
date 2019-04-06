@@ -424,7 +424,7 @@ func (this *QCollator) SortKey(string string) *QCollatorSortKey /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10365() {
 	if false {
 		reflect.TypeOf(123)
 	}

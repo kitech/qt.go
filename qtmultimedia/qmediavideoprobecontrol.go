@@ -172,7 +172,7 @@ func NewQMediaVideoProbeControlp() *QMediaVideoProbeControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11891() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -493,7 +493,7 @@ func DeleteQLine(this *QLine) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10459() {
 	if false {
 		reflect.TypeOf(123)
 	}

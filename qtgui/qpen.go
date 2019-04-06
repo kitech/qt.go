@@ -721,7 +721,7 @@ func (this *QPen) IsDetached() bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10755() {
 	if false {
 		reflect.TypeOf(123)
 	}

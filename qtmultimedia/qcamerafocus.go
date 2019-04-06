@@ -442,7 +442,7 @@ func QCameraFocus_FocusPointModeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11803() {
 	if false {
 		reflect.TypeOf(123)
 	}

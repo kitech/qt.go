@@ -266,7 +266,7 @@ func (this *QHttpPart) SetBodyDevice(device qtcore.QIODevice_ITF /*777 QIODevice
 
 //  keep block begin
 
-func init() {
+func init_unused_11421() {
 	if false {
 		reflect.TypeOf(123)
 	}

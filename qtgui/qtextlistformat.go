@@ -309,7 +309,7 @@ func QTextListFormat_StyleItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10767() {
 	if false {
 		reflect.TypeOf(123)
 	}

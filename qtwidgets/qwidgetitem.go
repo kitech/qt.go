@@ -308,7 +308,7 @@ func (this *QWidgetItem) ControlTypes() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_11075() {
 	if false {
 		reflect.TypeOf(123)
 	}

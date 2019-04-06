@@ -108,7 +108,7 @@ func DeleteQApplicationStateChangeEvent(this *QApplicationStateChangeEvent) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10719() {
 	if false {
 		reflect.TypeOf(123)
 	}

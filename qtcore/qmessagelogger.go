@@ -141,7 +141,7 @@ func DeleteQMessageLogger(this *QMessageLogger) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10143() {
 	if false {
 		reflect.TypeOf(123)
 	}

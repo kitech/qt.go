@@ -509,7 +509,7 @@ func (this *QScrollArea) ViewportSizeHint() *qtcore.QSize /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_11241() {
 	if false {
 		reflect.TypeOf(123)
 	}

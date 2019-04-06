@@ -487,7 +487,7 @@ func QNetworkAddressEntry_DnsEligibilityStatusItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11447() {
 	if false {
 		reflect.TypeOf(123)
 	}

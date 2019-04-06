@@ -458,38 +458,6 @@ func (this *QTableWidgetItem) SetToolTip(toolTip string) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:120
-// index:0
-// Public inline Visibility=Default Availability=Available
-// [8] QString whatsThis() const
-
-/*
-
- */
-func (this *QTableWidgetItem) WhatsThis() string {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK16QTableWidgetItem9whatsThisEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.NewQStringFromPointer(unsafe.Pointer(uintptr(rv)))
-	rv3 := rv2.ToUtf8().Data()
-	qtcore.DeleteQString(rv2)
-	return rv3
-}
-
-// /usr/include/qt/QtWidgets/qtablewidget.h:122
-// index:0
-// Public inline Visibility=Default Availability=Available
-// [-2] void setWhatsThis(const QString &)
-
-/*
-
- */
-func (this *QTableWidgetItem) SetWhatsThis(whatsThis string) {
-	var tmpArg0 = qtcore.NewQString5(whatsThis)
-	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN16QTableWidgetItem12setWhatsThisERK7QString", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtWidgets/qtablewidget.h:125
 // index:0
 // Public inline Visibility=Default Availability=Available
@@ -892,7 +860,7 @@ func QTableWidgetItem_ItemTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11341() {
 	if false {
 		reflect.TypeOf(123)
 	}

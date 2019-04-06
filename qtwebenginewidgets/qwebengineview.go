@@ -780,23 +780,6 @@ func (this *QWebEngineView) CreateWindow(type_ int) *QWebEngineView /*777 QWebEn
 	return /*==*/ NewQWebEngineViewFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:124
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void contextMenuEvent(QContextMenuEvent *)
-
-/*
-
- */
-func (this *QWebEngineView) ContextMenuEvent(arg0 qtgui.QContextMenuEvent_ITF /*777 QContextMenuEvent **/) {
-	var convArg0 unsafe.Pointer
-	if arg0 != nil && arg0.QContextMenuEvent_PTR() != nil {
-		convArg0 = arg0.QContextMenuEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QWebEngineView16contextMenuEventEP17QContextMenuEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:126
 // index:0
 // Protected virtual Visibility=Default Availability=Available
@@ -849,79 +832,11 @@ func (this *QWebEngineView) HideEvent(arg0 qtgui.QHideEvent_ITF /*777 QHideEvent
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:130
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void dragEnterEvent(QDragEnterEvent *)
-
-/*
-
- */
-func (this *QWebEngineView) DragEnterEvent(e qtgui.QDragEnterEvent_ITF /*777 QDragEnterEvent **/) {
-	var convArg0 unsafe.Pointer
-	if e != nil && e.QDragEnterEvent_PTR() != nil {
-		convArg0 = e.QDragEnterEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QWebEngineView14dragEnterEventEP15QDragEnterEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:131
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void dragLeaveEvent(QDragLeaveEvent *)
-
-/*
-
- */
-func (this *QWebEngineView) DragLeaveEvent(e qtgui.QDragLeaveEvent_ITF /*777 QDragLeaveEvent **/) {
-	var convArg0 unsafe.Pointer
-	if e != nil && e.QDragLeaveEvent_PTR() != nil {
-		convArg0 = e.QDragLeaveEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QWebEngineView14dragLeaveEventEP15QDragLeaveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:132
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void dragMoveEvent(QDragMoveEvent *)
-
-/*
-
- */
-func (this *QWebEngineView) DragMoveEvent(e qtgui.QDragMoveEvent_ITF /*777 QDragMoveEvent **/) {
-	var convArg0 unsafe.Pointer
-	if e != nil && e.QDragMoveEvent_PTR() != nil {
-		convArg0 = e.QDragMoveEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QWebEngineView13dragMoveEventEP14QDragMoveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWebEngineWidgets/qwebengineview.h:133
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void dropEvent(QDropEvent *)
-
-/*
-
- */
-func (this *QWebEngineView) DropEvent(e qtgui.QDropEvent_ITF /*777 QDropEvent **/) {
-	var convArg0 unsafe.Pointer
-	if e != nil && e.QDropEvent_PTR() != nil {
-		convArg0 = e.QDropEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QWebEngineView9dropEventEP10QDropEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
 //  body block end
 
 //  keep block begin
 
-func init() {
+func init_unused_11731() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -101,7 +101,7 @@ func DeleteQIconDragEvent(this *QIconDragEvent) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10673() {
 	if false {
 		reflect.TypeOf(123)
 	}

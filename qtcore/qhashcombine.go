@@ -74,7 +74,7 @@ func DeleteQHashCombine(this *QHashCombine) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10195() {
 	if false {
 		reflect.TypeOf(123)
 	}

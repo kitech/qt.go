@@ -218,7 +218,7 @@ func NewQAudioEncoderSettingsControlp() *QAudioEncoderSettingsControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11771() {
 	if false {
 		reflect.TypeOf(123)
 	}

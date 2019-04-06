@@ -76,7 +76,7 @@ func DeleteAbstractComparatorFunction(this *AbstractComparatorFunction) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10237() {
 	if false {
 		reflect.TypeOf(123)
 	}

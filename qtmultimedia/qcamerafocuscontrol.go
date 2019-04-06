@@ -354,7 +354,7 @@ func NewQCameraFocusControlp() *QCameraFocusControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11825() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -367,7 +367,7 @@ func (this *QWinThumbnailToolBar) IconicLivePreviewPixmapRequested() {
 
 //  keep block begin
 
-func init() {
+func init_unused_14877() {
 	if false {
 		reflect.TypeOf(123)
 	}

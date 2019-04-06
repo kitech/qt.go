@@ -283,7 +283,7 @@ func (this *QGraphicsOpacityEffect) Draw(painter qtgui.QPainter_ITF /*777 QPaint
 
 //  keep block begin
 
-func init() {
+func init_unused_11203() {
 	if false {
 		reflect.TypeOf(123)
 	}

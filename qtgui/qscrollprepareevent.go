@@ -220,7 +220,7 @@ func (this *QScrollPrepareEvent) SetContentPos(pos qtcore.QPointF_ITF) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10713() {
 	if false {
 		reflect.TypeOf(123)
 	}

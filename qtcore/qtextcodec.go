@@ -638,7 +638,7 @@ func QTextCodec_ConversionFlagItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10569() {
 	if false {
 		reflect.TypeOf(123)
 	}

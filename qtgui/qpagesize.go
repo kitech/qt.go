@@ -1666,7 +1666,7 @@ func QPageSize_SizeMatchPolicyItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10905() {
 	if false {
 		reflect.TypeOf(123)
 	}

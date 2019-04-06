@@ -150,7 +150,7 @@ func DeleteQFlag(this *QFlag) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10145() {
 	if false {
 		reflect.TypeOf(123)
 	}

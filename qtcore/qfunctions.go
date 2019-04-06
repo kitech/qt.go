@@ -3,7 +3,7 @@ package qtcore
 import "unsafe"
 import "github.com/kitech/qt.go/qtrt"
 
-func init() {
+func init_unused_10003() {
 	if false {
 		_ = unsafe.Pointer(uintptr(0))
 	}
@@ -1128,22 +1128,6 @@ func Operator_or2(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qlibrary.h:100
-// index:3
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(QLibrary::LoadHints::enum_type, int)
-
-/*
-
- */
-func Operator_or3(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN8QLibrary8LoadHintEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
 // /usr/include/qt/QtCore/qstring.h:1420
 // index:4
 // Invalid inline Visibility=Default Availability=Available
@@ -1340,86 +1324,6 @@ func Operator_or16(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	return rv2
 }
 
-// /usr/include/qt/QtCore/qitemselectionmodel.h:226
-// index:17
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(QItemSelectionModel::SelectionFlags::enum_type, int)
-
-/*
-
- */
-func Operator_or17(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN19QItemSelectionModel13SelectionFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qregularexpression.h:167
-// index:18
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(QRegularExpression::PatternOptions::enum_type, int)
-
-/*
-
- */
-func Operator_or18(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN18QRegularExpression13PatternOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qregularexpression.h:168
-// index:19
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(QRegularExpression::MatchOptions::enum_type, int)
-
-/*
-
- */
-func Operator_or19(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN18QRegularExpression11MatchOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qcommandlineoption.h:109
-// index:20
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(QCommandLineOption::Flags::enum_type, int)
-
-/*
-
- */
-func Operator_or20(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN18QCommandLineOption4FlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qabstractitemmodel.h:364
-// index:21
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(QAbstractItemModel::CheckIndexOptions::enum_type, int)
-
-/*
-
- */
-func Operator_or21(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN18QAbstractItemModel16CheckIndexOptionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
 // /usr/include/qt/QtCore/qstandardpaths.h:111
 // index:22
 // Invalid inline Visibility=Default Availability=Available
@@ -1478,22 +1382,6 @@ func Operator_or24(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
  */
 func Operator_or25(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
 	rv, err := qtrt.InvokeQtFunc6("_ZorN11QFileDevice10PermissionEi", qtrt.FFI_TYPE_POINTER, f1, f2)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qtextcodec.h:135
-// index:26
-// Invalid inline Visibility=Default Availability=Available
-// [4] QIncompatibleFlag operator|(QTextCodec::ConversionFlags::enum_type, int)
-
-/*
-
- */
-func Operator_or26(f1 int, f2 int) *QIncompatibleFlag /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZorN10QTextCodec14ConversionFlagEi", qtrt.FFI_TYPE_POINTER, f1, f2)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQIncompatibleFlagFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQIncompatibleFlag)
@@ -5457,29 +5345,6 @@ func QStringList_replaceInStrings1(that QStringList_ITF /*777 QStringList **/, r
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:185
-// index:2
-// Invalid Visibility=Default Availability=Available
-// [-2] void QStringList_replaceInStrings(QStringList *, const QRegularExpression &, const QString &)
-
-/*
-
- */
-func QStringList_replaceInStrings2(that QStringList_ITF /*777 QStringList **/, rx QRegularExpression_ITF, after string) {
-	var convArg0 unsafe.Pointer
-	if that != nil && that.QStringList_PTR() != nil {
-		convArg0 = that.QStringList_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if rx != nil && rx.QRegularExpression_PTR() != nil {
-		convArg1 = rx.QRegularExpression_PTR().GetCthis()
-	}
-	var tmpArg2 = NewQString5(after)
-	var convArg2 = tmpArg2.GetCthis()
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate28QStringList_replaceInStringsEP11QStringListRK18QRegularExpressionRK7QString", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, convArg2)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtCore/qstringlist.h:161
 // index:0
 // Invalid Visibility=Default Availability=Available
@@ -5516,28 +5381,6 @@ func QStringList_lastIndexOf(that QStringList_ITF /*777 const QStringList **/, r
 		convArg1 = rx.QRegExp_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate23QStringList_lastIndexOfEPK11QStringListRK7QRegExpi", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, from)
-	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
-}
-
-// /usr/include/qt/QtCore/qstringlist.h:188
-// index:1
-// Invalid Visibility=Default Availability=Available
-// [4] int QStringList_lastIndexOf(const QStringList *, const QRegularExpression &, int)
-
-/*
-
- */
-func QStringList_lastIndexOf1(that QStringList_ITF /*777 const QStringList **/, re QRegularExpression_ITF, from int) int {
-	var convArg0 unsafe.Pointer
-	if that != nil && that.QStringList_PTR() != nil {
-		convArg0 = that.QStringList_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if re != nil && re.QRegularExpression_PTR() != nil {
-		convArg1 = re.QRegularExpression_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate23QStringList_lastIndexOfEPK11QStringListRK18QRegularExpressioni", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, from)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
@@ -5690,28 +5533,6 @@ func QStringList_indexOf(that QStringList_ITF /*777 const QStringList **/, rx QR
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
-// /usr/include/qt/QtCore/qstringlist.h:187
-// index:1
-// Invalid Visibility=Default Availability=Available
-// [4] int QStringList_indexOf(const QStringList *, const QRegularExpression &, int)
-
-/*
-
- */
-func QStringList_indexOf1(that QStringList_ITF /*777 const QStringList **/, re QRegularExpression_ITF, from int) int {
-	var convArg0 unsafe.Pointer
-	if that != nil && that.QStringList_PTR() != nil {
-		convArg0 = that.QStringList_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if re != nil && re.QRegularExpression_PTR() != nil {
-		convArg1 = re.QRegularExpression_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate19QStringList_indexOfEPK11QStringListRK18QRegularExpressioni", qtrt.FFI_TYPE_POINTER, convArg0, convArg1, from)
-	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
-}
-
 // /usr/include/qt/QtCore/qstringlist.h:180
 // index:2
 // Invalid Visibility=Default Availability=Available
@@ -5816,30 +5637,6 @@ func QStringList_filter1(that QStringList_ITF /*777 const QStringList **/, re QR
 		convArg1 = re.QRegExp_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate18QStringList_filterEPK11QStringListRK7QRegExp", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
-	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
-	return rv2
-}
-
-// /usr/include/qt/QtCore/qstringlist.h:186
-// index:2
-// Invalid Visibility=Default Availability=Available
-// [8] QStringList QStringList_filter(const QStringList *, const QRegularExpression &)
-
-/*
-
- */
-func QStringList_filter2(that QStringList_ITF /*777 const QStringList **/, re QRegularExpression_ITF) *QStringList /*123*/ {
-	var convArg0 unsafe.Pointer
-	if that != nil && that.QStringList_PTR() != nil {
-		convArg0 = that.QStringList_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if re != nil && re.QRegularExpression_PTR() != nil {
-		convArg1 = re.QRegularExpression_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN9QtPrivate18QStringList_filterEPK11QStringListRK18QRegularExpression", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 	rv2 := /*==*/ NewQStringListFromPointer(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQStringList)
@@ -10241,26 +10038,6 @@ func QHash14(key QUrlQuery_ITF, seed uint) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qmimetype.h:58
-// index:15
-// Invalid Visibility=Default Availability=Available
-// [4] uint qHash(const QMimeType &, uint)
-
-/*
-Returns the hash value for key, using seed to seed the calculation.
-
-This function was introduced in  Qt 5.6.
-*/
-func QHash15(key QMimeType_ITF, seed uint) uint {
-	var convArg0 unsafe.Pointer
-	if key != nil && key.QMimeType_PTR() != nil {
-		convArg0 = key.QMimeType_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK9QMimeTypej", qtrt.FFI_TYPE_POINTER, convArg0, seed)
-	qtrt.ErrPrint(err, rv)
-	return uint(rv) // 222
-}
-
 // /usr/include/qt/QtCore/qdatetime.h:412
 // index:16
 // Invalid Visibility=Default Availability=Available
@@ -10445,80 +10222,6 @@ func QHash25(url QUrl_ITF, seed uint) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qabstractitemmodel.h:106
-// index:26
-// Invalid Visibility=Default Availability=Available
-// [4] uint qHash(const QPersistentModelIndex &, uint)
-
-/*
-
- */
-func QHash26(index QPersistentModelIndex_ITF, seed uint) uint {
-	var convArg0 unsafe.Pointer
-	if index != nil && index.QPersistentModelIndex_PTR() != nil {
-		convArg0 = index.QPersistentModelIndex_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK21QPersistentModelIndexj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
-	qtrt.ErrPrint(err, rv)
-	return uint(rv) // 222
-}
-
-// /usr/include/qt/QtCore/qabstractitemmodel.h:153
-// index:27
-// Invalid inline Visibility=Default Availability=Available
-// [4] uint qHash(const QPersistentModelIndex &, uint)
-
-/*
-
- */
-func QHash27(index QPersistentModelIndex_ITF, seed uint) uint {
-	var convArg0 unsafe.Pointer
-	if index != nil && index.QPersistentModelIndex_PTR() != nil {
-		convArg0 = index.QPersistentModelIndex_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK21QPersistentModelIndexj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
-	qtrt.ErrPrint(err, rv)
-	return uint(rv) // 222
-}
-
-// /usr/include/qt/QtCore/qitemselectionmodel.h:229
-// index:28
-// Invalid inline Visibility=Default Availability=Available
-// [4] uint qHash(const QItemSelectionRange &)
-
-/*
-
- */
-func QHash28(arg0 QItemSelectionRange_ITF) uint {
-	var convArg0 unsafe.Pointer
-	if arg0 != nil && arg0.QItemSelectionRange_PTR() != nil {
-		convArg0 = arg0.QItemSelectionRange_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK19QItemSelectionRange", qtrt.FFI_TYPE_POINTER, convArg0)
-	qtrt.ErrPrint(err, rv)
-	return uint(rv) // 222
-}
-
-// /usr/include/qt/QtCore/qregularexpression.h:62
-// index:29
-// Invalid Visibility=Default Availability=Available
-// [4] uint qHash(const QRegularExpression &, uint)
-
-/*
-Returns the hash value for key, using seed to seed the calculation.
-
-This function was introduced in  Qt 5.6.
-*/
-func QHash29(key QRegularExpression_ITF, seed uint) uint {
-	var convArg0 unsafe.Pointer
-	if key != nil && key.QRegularExpression_PTR() != nil {
-		convArg0 = key.QRegularExpression_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK18QRegularExpressionj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
-	qtrt.ErrPrint(err, rv)
-	return uint(rv) // 222
-}
-
 // /usr/include/qt/QtCore/qversionnumber.h:54
 // index:30
 // Invalid Visibility=Default Availability=Available
@@ -10533,24 +10236,6 @@ func QHash30(key QVersionNumber_ITF, seed uint) uint {
 		convArg0 = key.QVersionNumber_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK14QVersionNumberj", qtrt.FFI_TYPE_POINTER, convArg0, seed)
-	qtrt.ErrPrint(err, rv)
-	return uint(rv) // 222
-}
-
-// /usr/include/qt/QtCore/qabstractitemmodel.h:463
-// index:31
-// Invalid inline Visibility=Default Availability=Available
-// [4] uint qHash(const QModelIndex &)
-
-/*
-
- */
-func QHash31(index QModelIndex_ITF) uint {
-	var convArg0 unsafe.Pointer
-	if index != nil && index.QModelIndex_PTR() != nil {
-		convArg0 = index.QModelIndex_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z5qHashRK11QModelIndex", qtrt.FFI_TYPE_POINTER, convArg0)
 	qtrt.ErrPrint(err, rv)
 	return uint(rv) // 222
 }
@@ -10627,7 +10312,7 @@ func QHash35(array QJsonArray_ITF, seed uint) uint {
 	return uint(rv) // 222
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:454
+// /usr/include/qt/QtCore/qcborvalue.h:462
 // index:36
 // Invalid Visibility=Default Availability=Available
 // [4] uint qHash(const QCborValue &, uint)
@@ -10912,52 +10597,6 @@ func Swap(value1 QUrlQuery_ITF, value2 QUrlQuery_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qtimezone.h:177
-// index:1
-// Invalid inline Visibility=Default Availability=Available
-// [-2] void swap(QTimeZone &, QTimeZone &)
-
-/*
-Swaps this time zone instance with other. This function is very fast and never fails.
-*/
-func Swap1(value1 QTimeZone_ITF, value2 QTimeZone_ITF) {
-	var convArg0 unsafe.Pointer
-	if value1 != nil && value1.QTimeZone_PTR() != nil {
-		convArg0 = value1.QTimeZone_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if value2 != nil && value2.QTimeZone_PTR() != nil {
-		convArg1 = value2.QTimeZone_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z4swapR9QTimeZoneS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtCore/qmimetype.h:129
-// index:2
-// Invalid inline Visibility=Default Availability=Available
-// [-2] void swap(QMimeType &, QMimeType &)
-
-/*
-Swaps QMimeType other with this QMimeType object.
-
-This operation is very fast and never fails.
-
-The swap() method helps with the implementation of assignment operators in an exception-safe way. For more information consult More C++ Idioms - Copy-and-swap.
-*/
-func Swap2(value1 QMimeType_ITF, value2 QMimeType_ITF) {
-	var convArg0 unsafe.Pointer
-	if value1 != nil && value1.QMimeType_PTR() != nil {
-		convArg0 = value1.QMimeType_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if value2 != nil && value2.QMimeType_PTR() != nil {
-		convArg1 = value2.QMimeType_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z4swapR9QMimeTypeS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtCore/qfileinfo.h:157
 // index:3
 // Invalid inline Visibility=Default Availability=Available
@@ -11180,69 +10819,6 @@ func Swap12(value1 QDir_ITF, value2 QDir_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qregularexpression.h:283
-// index:13
-// Invalid inline Visibility=Default Availability=Available
-// [-2] void swap(QRegularExpressionMatchIterator &, QRegularExpressionMatchIterator &)
-
-/*
-Swaps the regular expression other with this regular expression. This operation is very fast and never fails.
-*/
-func Swap13(value1 QRegularExpressionMatchIterator_ITF, value2 QRegularExpressionMatchIterator_ITF) {
-	var convArg0 unsafe.Pointer
-	if value1 != nil && value1.QRegularExpressionMatchIterator_PTR() != nil {
-		convArg0 = value1.QRegularExpressionMatchIterator_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if value2 != nil && value2.QRegularExpressionMatchIterator_PTR() != nil {
-		convArg1 = value2.QRegularExpressionMatchIterator_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z4swapR31QRegularExpressionMatchIteratorS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtCore/qregularexpression.h:245
-// index:14
-// Invalid inline Visibility=Default Availability=Available
-// [-2] void swap(QRegularExpressionMatch &, QRegularExpressionMatch &)
-
-/*
-Swaps the regular expression other with this regular expression. This operation is very fast and never fails.
-*/
-func Swap14(value1 QRegularExpressionMatch_ITF, value2 QRegularExpressionMatch_ITF) {
-	var convArg0 unsafe.Pointer
-	if value1 != nil && value1.QRegularExpressionMatch_PTR() != nil {
-		convArg0 = value1.QRegularExpressionMatch_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if value2 != nil && value2.QRegularExpressionMatch_PTR() != nil {
-		convArg1 = value2.QRegularExpressionMatch_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z4swapR23QRegularExpressionMatchS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtCore/qabstractitemmodel.h:151
-// index:15
-// Invalid inline Visibility=Default Availability=Available
-// [-2] void swap(QPersistentModelIndex &, QPersistentModelIndex &)
-
-/*
-
- */
-func Swap15(value1 QPersistentModelIndex_ITF, value2 QPersistentModelIndex_ITF) {
-	var convArg0 unsafe.Pointer
-	if value1 != nil && value1.QPersistentModelIndex_PTR() != nil {
-		convArg0 = value1.QPersistentModelIndex_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if value2 != nil && value2.QPersistentModelIndex_PTR() != nil {
-		convArg1 = value2.QPersistentModelIndex_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z4swapR21QPersistentModelIndexS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtCore/qxmlstream.h:95
 // index:16
 // Invalid inline Visibility=Default Availability=Available
@@ -11264,69 +10840,6 @@ func Swap16(value1 QXmlStreamStringRef_ITF, value2 QXmlStreamStringRef_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qprocess.h:106
-// index:17
-// Invalid inline Visibility=Default Availability=Available
-// [-2] void swap(QProcessEnvironment &, QProcessEnvironment &)
-
-/*
-
- */
-func Swap17(value1 QProcessEnvironment_ITF, value2 QProcessEnvironment_ITF) {
-	var convArg0 unsafe.Pointer
-	if value1 != nil && value1.QProcessEnvironment_PTR() != nil {
-		convArg0 = value1.QProcessEnvironment_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if value2 != nil && value2.QProcessEnvironment_PTR() != nil {
-		convArg1 = value2.QProcessEnvironment_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z4swapR19QProcessEnvironmentS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtCore/qregularexpression.h:166
-// index:18
-// Invalid inline Visibility=Default Availability=Available
-// [-2] void swap(QRegularExpression &, QRegularExpression &)
-
-/*
-Swaps the regular expression other with this regular expression. This operation is very fast and never fails.
-*/
-func Swap18(value1 QRegularExpression_ITF, value2 QRegularExpression_ITF) {
-	var convArg0 unsafe.Pointer
-	if value1 != nil && value1.QRegularExpression_PTR() != nil {
-		convArg0 = value1.QRegularExpression_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if value2 != nil && value2.QRegularExpression_PTR() != nil {
-		convArg1 = value2.QRegularExpression_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z4swapR18QRegularExpressionS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtCore/qcommandlineoption.h:108
-// index:19
-// Invalid inline Visibility=Default Availability=Available
-// [-2] void swap(QCommandLineOption &, QCommandLineOption &)
-
-/*
-Swaps option other with this option. This operation is very fast and never fails.
-*/
-func Swap19(value1 QCommandLineOption_ITF, value2 QCommandLineOption_ITF) {
-	var convArg0 unsafe.Pointer
-	if value1 != nil && value1.QCommandLineOption_PTR() != nil {
-		convArg0 = value1.QCommandLineOption_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if value2 != nil && value2.QCommandLineOption_PTR() != nil {
-		convArg1 = value2.QCommandLineOption_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z4swapR18QCommandLineOptionS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtCore/qcollator.h:127
 // index:20
 // Invalid inline Visibility=Default Availability=Available
@@ -11345,27 +10858,6 @@ func Swap20(value1 QCollatorSortKey_ITF, value2 QCollatorSortKey_ITF) {
 		convArg1 = value2.QCollatorSortKey_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_Z4swapR16QCollatorSortKeyS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtCore/qitemselectionmodel.h:265
-// index:21
-// Invalid inline Visibility=Default Availability=Available
-// [-2] void swap(QItemSelection &, QItemSelection &)
-
-/*
-
- */
-func Swap21(value1 QItemSelection_ITF, value2 QItemSelection_ITF) {
-	var convArg0 unsafe.Pointer
-	if value1 != nil && value1.QItemSelection_PTR() != nil {
-		convArg0 = value1.QItemSelection_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if value2 != nil && value2.QItemSelection_PTR() != nil {
-		convArg1 = value2.QItemSelection_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_Z4swapR14QItemSelectionS0_", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -11526,7 +11018,7 @@ func Swap28(value1 QJsonArray_ITF, value2 QJsonArray_ITF) {
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtCore/qcborvalue.h:319
+// /usr/include/qt/QtCore/qcborvalue.h:325
 // index:29
 // Invalid inline Visibility=Default Availability=Available
 // [-2] void swap(QCborValue &, QCborValue &)

@@ -176,7 +176,7 @@ func (this *QSGOpacityNode) IsSubtreeBlocked() bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_11581() {
 	if false {
 		reflect.TypeOf(123)
 	}

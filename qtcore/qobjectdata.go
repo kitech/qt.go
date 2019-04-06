@@ -97,7 +97,7 @@ func (this *QObjectData) DynamicMetaObject() *QMetaObject /*777 QMetaObject **/ 
 
 //  keep block begin
 
-func init() {
+func init_unused_10249() {
 	if false {
 		reflect.TypeOf(123)
 	}

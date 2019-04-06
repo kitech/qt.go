@@ -506,7 +506,7 @@ func (this *QDesktopWidget) ResizeEvent(e qtgui.QResizeEvent_ITF /*777 QResizeEv
 
 //  keep block begin
 
-func init() {
+func init_unused_11121() {
 	if false {
 		reflect.TypeOf(123)
 	}

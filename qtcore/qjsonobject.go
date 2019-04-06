@@ -698,7 +698,7 @@ func (this *QJsonObject) Empty() bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10449() {
 	if false {
 		reflect.TypeOf(123)
 	}

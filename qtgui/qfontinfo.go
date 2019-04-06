@@ -410,7 +410,7 @@ func (this *QFontInfo) ExactMatch() bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10863() {
 	if false {
 		reflect.TypeOf(123)
 	}

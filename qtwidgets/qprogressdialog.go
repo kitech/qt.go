@@ -822,7 +822,7 @@ func (this *QProgressDialog) ForceShow() {
 
 //  keep block begin
 
-func init() {
+func init_unused_11295() {
 	if false {
 		reflect.TypeOf(123)
 	}

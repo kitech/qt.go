@@ -187,7 +187,7 @@ func QScrollEvent_ScrollStateItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10715() {
 	if false {
 		reflect.TypeOf(123)
 	}

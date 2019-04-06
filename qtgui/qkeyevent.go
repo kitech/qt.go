@@ -399,7 +399,7 @@ func (this *QKeyEvent) NativeModifiers() uint {
 
 //  keep block begin
 
-func init() {
+func init_unused_10657() {
 	if false {
 		reflect.TypeOf(123)
 	}

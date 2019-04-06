@@ -189,7 +189,7 @@ func (this *QDnsTextRecord) TimeToLive() uint {
 
 //  keep block begin
 
-func init() {
+func init_unused_11397() {
 	if false {
 		reflect.TypeOf(123)
 	}

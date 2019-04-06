@@ -135,7 +135,7 @@ func DeleteQMetaClassInfo(this *QMetaClassInfo) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10481() {
 	if false {
 		reflect.TypeOf(123)
 	}

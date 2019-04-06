@@ -114,7 +114,7 @@ func DeleteQAtomicInt(this *QAtomicInt) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10153() {
 	if false {
 		reflect.TypeOf(123)
 	}

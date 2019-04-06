@@ -693,33 +693,6 @@ func (this *QTableView) WordWrap() bool {
 	return rv != 0
 }
 
-// /usr/include/qt/QtWidgets/qtableview.h:108
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void setCornerButtonEnabled(bool)
-
-/*
-
- */
-func (this *QTableView) SetCornerButtonEnabled(enable bool) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QTableView22setCornerButtonEnabledEb", qtrt.FFI_TYPE_POINTER, this.GetCthis(), enable)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qtableview.h:109
-// index:0
-// Public Visibility=Default Availability=Available
-// [1] bool isCornerButtonEnabled() const
-
-/*
-
- */
-func (this *QTableView) IsCornerButtonEnabled() bool {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK10QTableView21isCornerButtonEnabledEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return rv != 0
-}
-
 // /usr/include/qt/QtWidgets/qtableview.h:112
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -1495,7 +1468,7 @@ func (this *QTableView) CurrentChanged(current qtcore.QModelIndex_ITF, previous 
 
 //  keep block begin
 
-func init() {
+func init_unused_11337() {
 	if false {
 		reflect.TypeOf(123)
 	}

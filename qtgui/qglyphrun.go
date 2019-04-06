@@ -565,7 +565,7 @@ func QGlyphRun_GlyphRunFlagItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10781() {
 	if false {
 		reflect.TypeOf(123)
 	}

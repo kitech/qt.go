@@ -125,7 +125,7 @@ func DeleteQLatin1Char(this *QLatin1Char) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10161() {
 	if false {
 		reflect.TypeOf(123)
 	}

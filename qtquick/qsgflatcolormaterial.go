@@ -182,7 +182,7 @@ func DeleteQSGFlatColorMaterial(this *QSGFlatColorMaterial) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11601() {
 	if false {
 		reflect.TypeOf(123)
 	}

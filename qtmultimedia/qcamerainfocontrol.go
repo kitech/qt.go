@@ -176,7 +176,7 @@ func NewQCameraInfoControlp() *QCameraInfoControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11833() {
 	if false {
 		reflect.TypeOf(123)
 	}

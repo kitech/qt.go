@@ -820,7 +820,7 @@ func QThread_PriorityItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10595() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -74,7 +74,7 @@ func DeleteQHashDummyValue(this *QHashDummyValue) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10273() {
 	if false {
 		reflect.TypeOf(123)
 	}

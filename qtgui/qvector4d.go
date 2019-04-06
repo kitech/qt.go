@@ -750,7 +750,7 @@ func DeleteQVector4D(this *QVector4D) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10891() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -309,7 +309,7 @@ func DeleteQSGOpaqueTextureMaterial(this *QSGOpaqueTextureMaterial) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11617() {
 	if false {
 		reflect.TypeOf(123)
 	}

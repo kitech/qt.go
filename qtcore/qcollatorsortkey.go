@@ -154,7 +154,7 @@ func (this *QCollatorSortKey) Compare(key QCollatorSortKey_ITF) int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10363() {
 	if false {
 		reflect.TypeOf(123)
 	}

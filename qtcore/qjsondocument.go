@@ -747,7 +747,7 @@ func QJsonDocument_JsonFormatItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10447() {
 	if false {
 		reflect.TypeOf(123)
 	}

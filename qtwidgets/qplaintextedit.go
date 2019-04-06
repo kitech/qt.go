@@ -1891,74 +1891,6 @@ func (this *QPlainTextEdit) ContextMenuEvent(e qtgui.QContextMenuEvent_ITF /*777
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtWidgets/qplaintextedit.h:251
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void dragEnterEvent(QDragEnterEvent *)
-
-/*
-Reimplemented from QAbstractScrollArea::dragEnterEvent().
-*/
-func (this *QPlainTextEdit) DragEnterEvent(e qtgui.QDragEnterEvent_ITF /*777 QDragEnterEvent **/) {
-	var convArg0 unsafe.Pointer
-	if e != nil && e.QDragEnterEvent_PTR() != nil {
-		convArg0 = e.QDragEnterEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QPlainTextEdit14dragEnterEventEP15QDragEnterEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qplaintextedit.h:252
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void dragLeaveEvent(QDragLeaveEvent *)
-
-/*
-Reimplemented from QAbstractScrollArea::dragLeaveEvent().
-*/
-func (this *QPlainTextEdit) DragLeaveEvent(e qtgui.QDragLeaveEvent_ITF /*777 QDragLeaveEvent **/) {
-	var convArg0 unsafe.Pointer
-	if e != nil && e.QDragLeaveEvent_PTR() != nil {
-		convArg0 = e.QDragLeaveEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QPlainTextEdit14dragLeaveEventEP15QDragLeaveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qplaintextedit.h:253
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void dragMoveEvent(QDragMoveEvent *)
-
-/*
-Reimplemented from QAbstractScrollArea::dragMoveEvent().
-*/
-func (this *QPlainTextEdit) DragMoveEvent(e qtgui.QDragMoveEvent_ITF /*777 QDragMoveEvent **/) {
-	var convArg0 unsafe.Pointer
-	if e != nil && e.QDragMoveEvent_PTR() != nil {
-		convArg0 = e.QDragMoveEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QPlainTextEdit13dragMoveEventEP14QDragMoveEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qplaintextedit.h:254
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void dropEvent(QDropEvent *)
-
-/*
-Reimplemented from QAbstractScrollArea::dropEvent().
-*/
-func (this *QPlainTextEdit) DropEvent(e qtgui.QDropEvent_ITF /*777 QDropEvent **/) {
-	var convArg0 unsafe.Pointer
-	if e != nil && e.QDropEvent_PTR() != nil {
-		convArg0 = e.QDropEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QPlainTextEdit9dropEventEP10QDropEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtWidgets/qplaintextedit.h:256
 // index:0
 // Protected virtual Visibility=Default Availability=Available
@@ -2024,23 +1956,6 @@ func (this *QPlainTextEdit) ChangeEvent(e qtcore.QEvent_ITF /*777 QEvent **/) {
 		convArg0 = e.QEvent_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN14QPlainTextEdit11changeEventEP6QEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtWidgets/qplaintextedit.h:261
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void wheelEvent(QWheelEvent *)
-
-/*
-Reimplemented from QAbstractScrollArea::wheelEvent().
-*/
-func (this *QPlainTextEdit) WheelEvent(e qtgui.QWheelEvent_ITF /*777 QWheelEvent **/) {
-	var convArg0 unsafe.Pointer
-	if e != nil && e.QWheelEvent_PTR() != nil {
-		convArg0 = e.QWheelEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN14QPlainTextEdit10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -2277,7 +2192,7 @@ func QPlainTextEdit_LineWrapModeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11289() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -224,7 +224,7 @@ func (this *QXmlStreamNotationDeclaration) Operator_not_equal(other QXmlStreamNo
 
 //  keep block begin
 
-func init() {
+func init_unused_10621() {
 	if false {
 		reflect.TypeOf(123)
 	}

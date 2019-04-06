@@ -211,7 +211,7 @@ func DeleteQSGSimpleRectNode(this *QSGSimpleRectNode) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11615() {
 	if false {
 		reflect.TypeOf(123)
 	}

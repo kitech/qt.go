@@ -332,7 +332,7 @@ func (this *QNetworkCacheMetaData) SetSaveToDisk(allow bool) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11381() {
 	if false {
 		reflect.TypeOf(123)
 	}

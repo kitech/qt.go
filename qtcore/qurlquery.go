@@ -502,7 +502,7 @@ func QUrlQuery_DefaultQueryPairDelimiter() *QChar /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10609() {
 	if false {
 		reflect.TypeOf(123)
 	}

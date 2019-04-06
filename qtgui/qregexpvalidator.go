@@ -260,7 +260,7 @@ func (this *QRegExpValidator) RegExpChanged(regExp qtcore.QRegExp_ITF) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10975() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -469,7 +469,7 @@ func (this *QPolygonF) Intersects(r QPolygonF_ITF) bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10725() {
 	if false {
 		reflect.TypeOf(123)
 	}

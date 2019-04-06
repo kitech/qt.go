@@ -674,7 +674,7 @@ func (this *QAbstractTextDocumentLayout) Format(pos int) *QTextCharFormat /*123*
 
 //  keep block begin
 
-func init() {
+func init_unused_10797() {
 	if false {
 		reflect.TypeOf(123)
 	}

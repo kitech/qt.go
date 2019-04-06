@@ -599,7 +599,7 @@ func (this *QSslKey) Operator_not_equal(key QSslKey_ITF) bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_11471() {
 	if false {
 		reflect.TypeOf(123)
 	}

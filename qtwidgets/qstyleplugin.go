@@ -175,7 +175,7 @@ func (this *QStylePlugin) Create(key string) *QStyle /*777 QStyle **/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_11333() {
 	if false {
 		reflect.TypeOf(123)
 	}

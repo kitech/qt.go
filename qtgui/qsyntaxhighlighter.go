@@ -506,7 +506,7 @@ func (this *QSyntaxHighlighter) CurrentBlock() *QTextBlock /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10957() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -316,7 +316,7 @@ func (this *QCborStreamWriter) EndMap() bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10359() {
 	if false {
 		reflect.TypeOf(123)
 	}

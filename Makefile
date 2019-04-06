@@ -1,15 +1,31 @@
+# make V=0|1|2 P=n MIN=x
 
 # GOPATH := $(PWD):$(GOPATH)
 MINORVER := $(shell go version|awk '{print $$3}'|awk -F. '{print $$2}')
 USEI=$(shell expr "${MINORVER}" ">=" "10")
 ifeq ($(USEI), 1)
-	ARGI="-i"
+		ARGI=-i
+		# ARGI=-i -tags minimal
 endif
+ifeq ($(V), 1)
+	ARGV=-v
+endif
+ifeq ($(V), 2)
+	ARGV=-v -x
+endif
+ifneq ($(P), )
+	ARGP=-p $(P)
+endif
+ifneq ($(MIN), )
+	ARGMIN=-tags minimal
+endif
+ARGA=${ARGI} ${ARGV} ${ARGP} ${ARGMIN}
 
 all:
 	@echo ${GOPATH}
 	@echo ${MINORVER}
-	@echo "dd ${ARGI} dd"
+	@echo "dd ${ARGA} dd"
+	@echo "${V} "
 	# CC=clang CXX=clang++ go install -v -x qt5
 	# go build -v -x core
 	# go build -v -x gui
@@ -19,49 +35,49 @@ realall: rts bases qmls extras webengines multimedias tools
 
 rts: qtrt- mock-
 qtrt-:
-	go install -v -x ${ARGI} ./qtqt
-	go install -v -x ${ARGI} ./qtrt
+	go install ${ARGA} ./qtqt
+	go install ${ARGA} ./qtrt
 mock-:
-	go install -v -x ${ARGI} ./qtmock
+	go install ${ARGA} ./qtmock
 
 bases: qtrt- core- gui- widgets-
 core-:
-	go install -v -x ${ARGI} ./qtcore
+	go install ${ARGA} ./qtcore
 gui-:
-	go install -v -x ${ARGI} ./qtgui
+	go install ${ARGA} ./qtgui
 widgets-:
-	go install -v -x ${ARGI} ./qtwidgets
+	go install ${ARGA} ./qtwidgets
 
 network-:
-	go install -v -x ${ARGI} ./qtnetwork
+	go install ${ARGA} ./qtnetwork
 
 qmls: qml- quick- quickctrl- quickwgt-
 qml-:
-	go install -v -x ${ARGI} ./qtqml
+	go install ${ARGA} ./qtqml
 quick-:
-	go install -v -x ${ARGI} ./qtquick
+	go install ${ARGA} ./qtquick
 quickctrl-:
-	go install -v -x ${ARGI} ./qtquicktemplates2
-	go install -v -x ${ARGI} ./qtquickcontrols2
+	go install ${ARGA} ./qtquicktemplates2
+	go install ${ARGA} ./qtquickcontrols2
 quickwgt-:
-	go install -v -x ${ARGI} ./qtquickwidgets
+	go install ${ARGA} ./qtquickwidgets
 
 extras:
-	go install -v -x ${ARGI} ./qtandroidextras
-	go install -v -x ${ARGI} ./qtmacextras
-	go install -v -x ${ARGI} ./qtwinextras
+	go install ${ARGA} ./qtandroidextras
+	go install ${ARGA} ./qtmacextras
+	go install ${ARGA} ./qtwinextras
 
 webengines:
-	go install -v -x ${ARGI} ./qtpositioning
-	go install -v -x ${ARGI} ./qtprintsupport
-	go install -v -x ${ARGI} ./qtwebchannel
-	go install -v -x ${ARGI} ./qtwebenginecore
-	go install -v -x ${ARGI} ./qtwebengine
-	go install -v -x ${ARGI} ./qtwebenginewidgets
+	go install ${ARGA} ./qtpositioning
+	go install ${ARGA} ./qtprintsupport
+	go install ${ARGA} ./qtwebchannel
+	go install ${ARGA} ./qtwebenginecore
+	go install ${ARGA} ./qtwebengine
+	go install ${ARGA} ./qtwebenginewidgets
 
 multimedias:
-	go install -v -x ${ARGI} ./qtsvg
-	go install -v -x ${ARGI} ./qtmultimedia
+	go install ${ARGA} ./qtsvg
+	go install ${ARGA} ./qtmultimedia
 
 eg-:
 	go build -v -x eg/coreapp.go
@@ -75,14 +91,14 @@ eg-:
 	go build -v -x -o bui bigui/*.go
 
 tools:
-	go build -p 1 -v -i -o bin/go-uic ./cmd/go-uic
-	go build -p 1 -v -i -o bin/go-rcc ./cmd/go-rcc
-	go build -p 1 -v -i -o bin/cgo-rcc ./cmd/cgo-rcc
-	go build -p 1 -v -i -o bin/go-qmlviewer ./cmd/go-qmlviewer
-	go build -p 1 -v -i -o bin/go-dir2qrc ./cmd/dir2qrc
+	go build ${ARGA} -o bin/go-uic ./cmd/go-uic
+	go build ${ARGA} -o bin/go-rcc ./cmd/go-rcc
+	go build ${ARGA} -o bin/cgo-rcc ./cmd/cgo-rcc
+	go build ${ARGA} -o bin/go-qmlviewer ./cmd/go-qmlviewer
+	go build ${ARGA} -o bin/go-dir2qrc ./cmd/dir2qrc
 
 tst:
-	go test -v -x tests/qstring_test.go
+	go test ${ARGA} tests/qstring_test.go
 
 updoc:
 	curl -POST -d "path=github.com/kitech/qt.go/qtcore" "https://godoc.org/-/refresh"

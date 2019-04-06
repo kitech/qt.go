@@ -103,7 +103,7 @@ func DeleteQIPv6Address(this *QIPv6Address) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11413() {
 	if false {
 		reflect.TypeOf(123)
 	}

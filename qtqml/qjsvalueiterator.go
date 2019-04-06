@@ -197,7 +197,7 @@ func (this *QJSValueIterator) Operator_equal(value QJSValue_ITF) *QJSValueIterat
 
 //  keep block begin
 
-func init() {
+func init_unused_11481() {
 	if false {
 		reflect.TypeOf(123)
 	}

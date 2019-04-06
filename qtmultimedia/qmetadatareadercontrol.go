@@ -253,7 +253,7 @@ func NewQMetaDataReaderControlp() *QMetaDataReaderControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11893() {
 	if false {
 		reflect.TypeOf(123)
 	}

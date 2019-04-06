@@ -127,7 +127,7 @@ func DeleteQQuickTextDocument(this *QQuickTextDocument) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11565() {
 	if false {
 		reflect.TypeOf(123)
 	}

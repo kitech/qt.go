@@ -185,7 +185,7 @@ func (this *QTextBlockGroup) BlockFormatChanged(block QTextBlock_ITF) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10945() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -538,7 +538,7 @@ func (this *QGeoPolygon) Perimeter() *qtcore.QVariantList /*667*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_11653() {
 	if false {
 		reflect.TypeOf(123)
 	}

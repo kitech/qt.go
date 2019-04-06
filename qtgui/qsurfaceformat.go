@@ -1048,7 +1048,7 @@ func QSurfaceFormat_ColorSpaceItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10843() {
 	if false {
 		reflect.TypeOf(123)
 	}

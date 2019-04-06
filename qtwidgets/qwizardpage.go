@@ -597,7 +597,7 @@ func (this *QWizardPage) Wizard() *QWizard /*777 QWizard **/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_11377() {
 	if false {
 		reflect.TypeOf(123)
 	}

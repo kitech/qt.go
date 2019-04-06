@@ -126,7 +126,7 @@ func (this *QQuickAsyncImageProvider) RequestImageResponse(id string, requestedS
 
 //  keep block begin
 
-func init() {
+func init_unused_11557() {
 	if false {
 		reflect.TypeOf(123)
 	}

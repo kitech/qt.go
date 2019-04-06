@@ -98,7 +98,7 @@ func (this *QAccessibleStateChangeEvent) ChangedStates() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10819() {
 	if false {
 		reflect.TypeOf(123)
 	}

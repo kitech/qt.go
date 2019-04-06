@@ -437,7 +437,7 @@ func (this *QGraphicsDropShadowEffect) Draw(painter qtgui.QPainter_ITF /*777 QPa
 
 //  keep block begin
 
-func init() {
+func init_unused_11201() {
 	if false {
 		reflect.TypeOf(123)
 	}

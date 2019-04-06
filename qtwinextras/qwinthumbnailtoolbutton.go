@@ -383,7 +383,7 @@ func (this *QWinThumbnailToolButton) Changed() {
 
 //  keep block begin
 
-func init() {
+func init_unused_14879() {
 	if false {
 		reflect.TypeOf(123)
 	}

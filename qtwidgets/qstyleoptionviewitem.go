@@ -64,50 +64,6 @@ func (*QStyleOptionViewItem) NewFromPointer(cthis unsafe.Pointer) *QStyleOptionV
 	return NewQStyleOptionViewItemFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:442
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void QStyleOptionViewItem()
-
-/*
-
- */
-func (*QStyleOptionViewItem) NewForInherit() *QStyleOptionViewItem {
-	return NewQStyleOptionViewItem()
-}
-func NewQStyleOptionViewItem() *QStyleOptionViewItem {
-	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionViewItemC2Ev", qtrt.FFI_TYPE_POINTER)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQStyleOptionViewItemFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQStyleOptionViewItem)
-	return gothis
-}
-
-// /usr/include/qt/QtWidgets/qstyleoption.h:446
-// index:1
-// Protected Visibility=Default Availability=Available
-// [-2] void QStyleOptionViewItem(int)
-
-/*
-
- */
-func (*QStyleOptionViewItem) NewForInherit1(version int) *QStyleOptionViewItem {
-	return NewQStyleOptionViewItem1(version)
-}
-func NewQStyleOptionViewItem1(version int) *QStyleOptionViewItem {
-	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionViewItemC2Ei", qtrt.FFI_TYPE_POINTER, version)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQStyleOptionViewItemFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQStyleOptionViewItem)
-	return gothis
-}
-
-func DeleteQStyleOptionViewItem(this *QStyleOptionViewItem) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN20QStyleOptionViewItemD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	this.SetCthis(nil)
-}
-
 /*
 This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
 
@@ -295,7 +251,7 @@ func QStyleOptionViewItem_ViewItemPositionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11027() {
 	if false {
 		reflect.TypeOf(123)
 	}

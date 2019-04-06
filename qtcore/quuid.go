@@ -801,7 +801,7 @@ func QUuid_StringFormatItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10347() {
 	if false {
 		reflect.TypeOf(123)
 	}

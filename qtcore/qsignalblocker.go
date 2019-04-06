@@ -155,7 +155,7 @@ func (this *QSignalBlocker) Unblock() {
 
 //  keep block begin
 
-func init() {
+func init_unused_10255() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -186,58 +186,6 @@ func NewQCompleter1p(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemMode
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qcompleter.h:88
-// index:2
-// Public Visibility=Default Availability=Available
-// [-2] void QCompleter(const QStringList &, QObject *)
-
-/*
-Constructs a completer object with the given parent.
-*/
-func (*QCompleter) NewForInherit2(completions qtcore.QStringList_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
-	return NewQCompleter2(completions, parent)
-}
-func NewQCompleter2(completions qtcore.QStringList_ITF, parent qtcore.QObject_ITF /*777 QObject **/) *QCompleter {
-	var convArg0 unsafe.Pointer
-	if completions != nil && completions.QStringList_PTR() != nil {
-		convArg0 = completions.QStringList_PTR().GetCthis()
-	}
-	var convArg1 unsafe.Pointer
-	if parent != nil && parent.QObject_PTR() != nil {
-		convArg1 = parent.QObject_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleterC2ERK11QStringListP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQCompleterFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.ConnectDestroyed(gothis, "QCompleter")
-	return gothis
-}
-
-// /usr/include/qt/QtWidgets/qcompleter.h:88
-// index:2
-// Public Visibility=Default Availability=Available
-// [-2] void QCompleter(const QStringList &, QObject *)
-
-/*
-Constructs a completer object with the given parent.
-*/
-func (*QCompleter) NewForInherit2p(completions qtcore.QStringList_ITF) *QCompleter {
-	return NewQCompleter2p(completions)
-}
-func NewQCompleter2p(completions qtcore.QStringList_ITF) *QCompleter {
-	var convArg0 unsafe.Pointer
-	if completions != nil && completions.QStringList_PTR() != nil {
-		convArg0 = completions.QStringList_PTR().GetCthis()
-	}
-	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
-	var convArg1 unsafe.Pointer
-	rv, err := qtrt.InvokeQtFunc6("_ZN10QCompleterC2ERK11QStringListP7QObject", qtrt.FFI_TYPE_POINTER, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQCompleterFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.ConnectDestroyed(gothis, "QCompleter")
-	return gothis
-}
-
 // /usr/include/qt/QtWidgets/qcompleter.h:90
 // index:0
 // Public virtual Visibility=Default Availability=Available
@@ -986,7 +934,7 @@ func QCompleter_ModelSortingItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11111() {
 	if false {
 		reflect.TypeOf(123)
 	}

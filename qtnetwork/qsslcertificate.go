@@ -733,7 +733,7 @@ func QSslCertificate_SubjectInfoItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11403() {
 	if false {
 		reflect.TypeOf(123)
 	}

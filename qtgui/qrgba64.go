@@ -519,7 +519,7 @@ func QRgba64_ShiftsItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10631() {
 	if false {
 		reflect.TypeOf(123)
 	}

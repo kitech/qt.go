@@ -165,7 +165,7 @@ func (this *QAccessibleTextInsertEvent) ChangePosition() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_10825() {
 	if false {
 		reflect.TypeOf(123)
 	}

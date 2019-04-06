@@ -900,7 +900,7 @@ func QTextLayout_CursorModeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10787() {
 	if false {
 		reflect.TypeOf(123)
 	}

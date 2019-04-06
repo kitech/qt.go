@@ -433,7 +433,7 @@ func (this *QAccessibleInterface) Interface_cast(arg0 int) unsafe.Pointer /*666*
 
 //  keep block begin
 
-func init() {
+func init_unused_10803() {
 	if false {
 		reflect.TypeOf(123)
 	}

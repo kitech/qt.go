@@ -1179,7 +1179,7 @@ func QRegion_RegionTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10635() {
 	if false {
 		reflect.TypeOf(123)
 	}

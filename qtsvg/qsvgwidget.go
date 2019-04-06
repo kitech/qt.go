@@ -274,7 +274,7 @@ func (this *QSvgWidget) PaintEvent(event qtgui.QPaintEvent_ITF /*777 QPaintEvent
 
 //  keep block begin
 
-func init() {
+func init_unused_11925() {
 	if false {
 		reflect.TypeOf(123)
 	}

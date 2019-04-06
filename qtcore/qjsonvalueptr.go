@@ -127,7 +127,7 @@ func DeleteQJsonValuePtr(this *QJsonValuePtr) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10439() {
 	if false {
 		reflect.TypeOf(123)
 	}

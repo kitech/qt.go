@@ -244,7 +244,7 @@ func NewQAudioOutputSelectorControlp() *QAudioOutputSelectorControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11779() {
 	if false {
 		reflect.TypeOf(123)
 	}

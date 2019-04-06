@@ -336,7 +336,7 @@ func (this *QSpacerItem) SizePolicy() *QSizePolicy /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_11073() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -593,7 +593,7 @@ func QLocalServer_SocketOptionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11425() {
 	if false {
 		reflect.TypeOf(123)
 	}

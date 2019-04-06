@@ -647,7 +647,7 @@ func QAbstractAnimation_DeletionPolicyItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10257() {
 	if false {
 		reflect.TypeOf(123)
 	}

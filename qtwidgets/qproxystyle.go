@@ -1104,7 +1104,7 @@ func (this *QProxyStyle) Event(e qtcore.QEvent_ITF /*777 QEvent **/) bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_11297() {
 	if false {
 		reflect.TypeOf(123)
 	}

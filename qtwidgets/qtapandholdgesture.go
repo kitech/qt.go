@@ -210,7 +210,7 @@ func QTapAndHoldGesture_Timeout() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_11159() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -607,7 +607,7 @@ func (this *QResource) Children() *QStringList /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10527() {
 	if false {
 		reflect.TypeOf(123)
 	}

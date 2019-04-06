@@ -74,7 +74,7 @@ func DeleteQByteArrayDataPtr(this *QByteArrayDataPtr) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10177() {
 	if false {
 		reflect.TypeOf(123)
 	}

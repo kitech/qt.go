@@ -200,7 +200,7 @@ func (this *QAbstractVideoFilter) ActiveChanged() {
 
 //  keep block begin
 
-func init() {
+func init_unused_11743() {
 	if false {
 		reflect.TypeOf(123)
 	}

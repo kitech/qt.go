@@ -362,7 +362,7 @@ func (this *QKeySequenceEdit) TimerEvent(arg0 qtcore.QTimerEvent_ITF /*777 QTime
 
 //  keep block begin
 
-func init() {
+func init_unused_11261() {
 	if false {
 		reflect.TypeOf(123)
 	}

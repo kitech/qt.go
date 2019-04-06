@@ -215,7 +215,7 @@ func (this *QAccessibleEvent) AccessibleInterface() *QAccessibleInterface /*777 
 
 //  keep block begin
 
-func init() {
+func init_unused_10817() {
 	if false {
 		reflect.TypeOf(123)
 	}

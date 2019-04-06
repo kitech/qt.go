@@ -177,7 +177,7 @@ func NewQCameraViewfinderSettingsControl2p() *QCameraViewfinderSettingsControl2 
 
 //  keep block begin
 
-func init() {
+func init_unused_11839() {
 	if false {
 		reflect.TypeOf(123)
 	}

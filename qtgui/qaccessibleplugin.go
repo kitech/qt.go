@@ -160,7 +160,7 @@ func (this *QAccessiblePlugin) Create(key string, object qtcore.QObject_ITF /*77
 
 //  keep block begin
 
-func init() {
+func init_unused_10841() {
 	if false {
 		reflect.TypeOf(123)
 	}

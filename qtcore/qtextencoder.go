@@ -203,7 +203,7 @@ func (this *QTextEncoder) HasFailure() bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10571() {
 	if false {
 		reflect.TypeOf(123)
 	}

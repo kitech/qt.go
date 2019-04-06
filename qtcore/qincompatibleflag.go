@@ -93,7 +93,7 @@ func DeleteQIncompatibleFlag(this *QIncompatibleFlag) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10147() {
 	if false {
 		reflect.TypeOf(123)
 	}

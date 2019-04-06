@@ -628,7 +628,7 @@ func QTextFrameFormat_BorderStyleItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10771() {
 	if false {
 		reflect.TypeOf(123)
 	}

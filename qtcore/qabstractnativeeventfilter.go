@@ -199,7 +199,7 @@ func (this *QAbstractNativeEventFilter) NativeEventFilter(eventType QByteArray_I
 
 //  keep block begin
 
-func init() {
+func init_unused_10293() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -174,7 +174,7 @@ func (this *QShortcutEvent) IsAmbiguous() bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10705() {
 	if false {
 		reflect.TypeOf(123)
 	}

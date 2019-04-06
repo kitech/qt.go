@@ -90,7 +90,7 @@ func DeleteQStaticPlugin(this *QStaticPlugin) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10497() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -141,7 +141,7 @@ func (this *QMoveEvent) OldPos() *qtcore.QPoint {
 
 //  keep block begin
 
-func init() {
+func init_unused_10663() {
 	if false {
 		reflect.TypeOf(123)
 	}

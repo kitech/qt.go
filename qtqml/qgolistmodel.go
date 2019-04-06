@@ -1,3 +1,5 @@
+// +build !minimal
+
 package qtqml
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h

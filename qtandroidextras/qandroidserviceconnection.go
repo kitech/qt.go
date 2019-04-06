@@ -186,7 +186,7 @@ func (this *QAndroidServiceConnection) Handle() *QAndroidJniObject /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_14919() {
 	if false {
 		reflect.TypeOf(123)
 	}

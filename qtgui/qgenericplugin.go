@@ -162,7 +162,7 @@ func (this *QGenericPlugin) Create(name string, spec string) *qtcore.QObject /*7
 
 //  keep block begin
 
-func init() {
+func init_unused_10869() {
 	if false {
 		reflect.TypeOf(123)
 	}

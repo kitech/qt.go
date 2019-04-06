@@ -709,7 +709,7 @@ func (this *QJsonArray) Empty() bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10443() {
 	if false {
 		reflect.TypeOf(123)
 	}

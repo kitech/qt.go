@@ -76,7 +76,7 @@ func DeleteAbstractConverterFunction(this *AbstractConverterFunction) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10239() {
 	if false {
 		reflect.TypeOf(123)
 	}

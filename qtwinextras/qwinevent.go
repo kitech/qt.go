@@ -103,7 +103,7 @@ func DeleteQWinEvent(this *QWinEvent) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11927() {
 	if false {
 		reflect.TypeOf(123)
 	}

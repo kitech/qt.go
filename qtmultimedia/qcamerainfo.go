@@ -365,7 +365,7 @@ func (this *QCameraInfo) AvailableCamerasp() *QCameraInfoList /*lll*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_11831() {
 	if false {
 		reflect.TypeOf(123)
 	}

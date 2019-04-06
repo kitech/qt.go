@@ -204,7 +204,7 @@ func (this *QPictureFormatPlugin) InstallIOHandler(format string) bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10925() {
 	if false {
 		reflect.TypeOf(123)
 	}

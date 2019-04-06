@@ -177,7 +177,7 @@ func NewQVideoRendererControlp() *QVideoRendererControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11915() {
 	if false {
 		reflect.TypeOf(123)
 	}

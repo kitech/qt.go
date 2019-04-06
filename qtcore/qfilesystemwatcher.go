@@ -333,7 +333,7 @@ func (this *QFileSystemWatcher) Directories() *QStringList /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10409() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -399,7 +399,7 @@ func DeleteQRadialGradient(this *QRadialGradient) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10751() {
 	if false {
 		reflect.TypeOf(123)
 	}

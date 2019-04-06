@@ -1512,28 +1512,11 @@ func (this *QTableWidget) ItemFromIndex(index qtcore.QModelIndex_ITF) *QTableWid
 	return /*==*/ NewQTableWidgetItemFromPointer(unsafe.Pointer(uintptr(rv))) // 444
 }
 
-// /usr/include/qt/QtWidgets/qtablewidget.h:347
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void dropEvent(QDropEvent *)
-
-/*
-Reimplemented from QAbstractItemView::dropEvent().
-*/
-func (this *QTableWidget) DropEvent(event qtgui.QDropEvent_ITF /*777 QDropEvent **/) {
-	var convArg0 unsafe.Pointer
-	if event != nil && event.QDropEvent_PTR() != nil {
-		convArg0 = event.QDropEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QTableWidget9dropEventEP10QDropEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
 //  body block end
 
 //  keep block begin
 
-func init() {
+func init_unused_11343() {
 	if false {
 		reflect.TypeOf(123)
 	}

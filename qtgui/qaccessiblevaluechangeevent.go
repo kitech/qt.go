@@ -171,7 +171,7 @@ func (this *QAccessibleValueChangeEvent) Value() *qtcore.QVariant /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_10831() {
 	if false {
 		reflect.TypeOf(123)
 	}

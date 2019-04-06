@@ -84,7 +84,7 @@ func DeleteQTextBlockUserData(this *QTextBlockUserData) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10951() {
 	if false {
 		reflect.TypeOf(123)
 	}

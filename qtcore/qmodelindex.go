@@ -395,7 +395,7 @@ func DeleteQModelIndex(this *QModelIndex) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10283() {
 	if false {
 		reflect.TypeOf(123)
 	}

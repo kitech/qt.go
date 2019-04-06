@@ -270,7 +270,7 @@ func NewQVideoEncoderSettingsControlp() *QVideoEncoderSettingsControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11911() {
 	if false {
 		reflect.TypeOf(123)
 	}

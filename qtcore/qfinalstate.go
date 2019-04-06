@@ -208,7 +208,7 @@ func (this *QFinalState) Event(e QEvent_ITF /*777 QEvent **/) bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10411() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -230,7 +230,7 @@ func DeleteQLinearGradient(this *QLinearGradient) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10749() {
 	if false {
 		reflect.TypeOf(123)
 	}

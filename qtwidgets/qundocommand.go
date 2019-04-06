@@ -355,7 +355,7 @@ func (this *QUndoCommand) Child(index int) *QUndoCommand /*777 const QUndoComman
 
 //  keep block begin
 
-func init() {
+func init_unused_11365() {
 	if false {
 		reflect.TypeOf(123)
 	}

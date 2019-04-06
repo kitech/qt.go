@@ -669,7 +669,7 @@ func (this *QRegularExpressionMatch) CapturedEnd2(name QStringView_ITF /*123*/) 
 
 //  keep block begin
 
-func init() {
+func init_unused_10341() {
 	if false {
 		reflect.TypeOf(123)
 	}

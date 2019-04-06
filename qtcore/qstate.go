@@ -517,7 +517,7 @@ func QState_RestorePolicyItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10551() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -301,7 +301,7 @@ func (this *QSequentialAnimationGroup) UpdateDirection(direction int) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10535() {
 	if false {
 		reflect.TypeOf(123)
 	}

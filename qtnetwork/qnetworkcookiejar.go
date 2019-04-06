@@ -245,7 +245,7 @@ func (this *QNetworkCookieJar) ValidateCookie(cookie QNetworkCookie_ITF, url qtc
 
 //  keep block begin
 
-func init() {
+func init_unused_11441() {
 	if false {
 		reflect.TypeOf(123)
 	}

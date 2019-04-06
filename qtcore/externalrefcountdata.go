@@ -206,7 +206,7 @@ func ExternalRefCountData_Operator_delete1(arg0 unsafe.Pointer /*666*/, arg1 uns
 
 //  keep block begin
 
-func init() {
+func init_unused_10335() {
 	if false {
 		reflect.TypeOf(123)
 	}

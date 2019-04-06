@@ -125,7 +125,7 @@ func DeleteQGenericPluginFactory(this *QGenericPluginFactory) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10871() {
 	if false {
 		reflect.TypeOf(123)
 	}

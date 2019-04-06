@@ -602,7 +602,7 @@ func (this *QNetworkDatagram) MakeReply1(payload qtcore.QByteArray_ITF) *QNetwor
 
 //  keep block begin
 
-func init() {
+func init_unused_11443() {
 	if false {
 		reflect.TypeOf(123)
 	}

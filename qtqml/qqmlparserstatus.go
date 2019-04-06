@@ -130,7 +130,7 @@ func (this *QQmlParserStatus) ComponentComplete() {
 
 //  keep block begin
 
-func init() {
+func init_unused_11499() {
 	if false {
 		reflect.TypeOf(123)
 	}

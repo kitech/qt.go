@@ -104,7 +104,7 @@ func DeleteQSGRootNode(this *QSGRootNode) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11579() {
 	if false {
 		reflect.TypeOf(123)
 	}

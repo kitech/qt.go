@@ -494,7 +494,7 @@ func QPictureIO_PictureFormat1(arg0 qtcore.QIODevice_ITF /*777 QIODevice **/) *q
 
 //  keep block begin
 
-func init() {
+func init_unused_10923() {
 	if false {
 		reflect.TypeOf(123)
 	}

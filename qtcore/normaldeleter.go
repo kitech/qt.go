@@ -74,7 +74,7 @@ func DeleteNormalDeleter(this *NormalDeleter) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10333() {
 	if false {
 		reflect.TypeOf(123)
 	}

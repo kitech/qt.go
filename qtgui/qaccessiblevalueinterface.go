@@ -167,7 +167,7 @@ func (this *QAccessibleValueInterface) MinimumStepSize() *qtcore.QVariant /*123*
 
 //  keep block begin
 
-func init() {
+func init_unused_10809() {
 	if false {
 		reflect.TypeOf(123)
 	}

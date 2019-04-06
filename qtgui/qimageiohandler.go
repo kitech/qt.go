@@ -612,7 +612,7 @@ func QImageIOHandler_TransformationItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10881() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -479,7 +479,7 @@ func QPinchGesture_ChangeFlagItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11153() {
 	if false {
 		reflect.TypeOf(123)
 	}

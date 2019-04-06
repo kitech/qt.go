@@ -643,7 +643,7 @@ func DeleteQStyleHints(this *QStyleHints) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10941() {
 	if false {
 		reflect.TypeOf(123)
 	}

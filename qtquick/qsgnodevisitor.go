@@ -307,7 +307,7 @@ func (this *QSGNodeVisitor) VisitChildren(n QSGNode_ITF /*777 QSGNode **/) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11583() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -437,7 +437,7 @@ func (this *QOffscreenSurface) ScreenChanged(screen QScreen_ITF /*777 QScreen **
 
 //  keep block begin
 
-func init() {
+func init_unused_10899() {
 	if false {
 		reflect.TypeOf(123)
 	}

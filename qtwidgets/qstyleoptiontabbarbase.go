@@ -64,50 +64,6 @@ func (*QStyleOptionTabBarBase) NewFromPointer(cthis unsafe.Pointer) *QStyleOptio
 	return NewQStyleOptionTabBarBaseFromPointer(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qstyleoption.h:195
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void QStyleOptionTabBarBase()
-
-/*
-
- */
-func (*QStyleOptionTabBarBase) NewForInherit() *QStyleOptionTabBarBase {
-	return NewQStyleOptionTabBarBase()
-}
-func NewQStyleOptionTabBarBase() *QStyleOptionTabBarBase {
-	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionTabBarBaseC2Ev", qtrt.FFI_TYPE_POINTER)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQStyleOptionTabBarBaseFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQStyleOptionTabBarBase)
-	return gothis
-}
-
-// /usr/include/qt/QtWidgets/qstyleoption.h:199
-// index:1
-// Protected Visibility=Default Availability=Available
-// [-2] void QStyleOptionTabBarBase(int)
-
-/*
-
- */
-func (*QStyleOptionTabBarBase) NewForInherit1(version int) *QStyleOptionTabBarBase {
-	return NewQStyleOptionTabBarBase1(version)
-}
-func NewQStyleOptionTabBarBase1(version int) *QStyleOptionTabBarBase {
-	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionTabBarBaseC2Ei", qtrt.FFI_TYPE_POINTER, version)
-	qtrt.ErrPrint(err, rv)
-	gothis := NewQStyleOptionTabBarBaseFromPointer(unsafe.Pointer(uintptr(rv)))
-	qtrt.SetFinalizer(gothis, DeleteQStyleOptionTabBarBase)
-	return gothis
-}
-
-func DeleteQStyleOptionTabBarBase(this *QStyleOptionTabBarBase) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN22QStyleOptionTabBarBaseD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	this.SetCthis(nil)
-}
-
 /*
 This enum is used to hold information about the type of the style option, and is defined for each QStyleOption subclass.
 
@@ -169,7 +125,7 @@ func QStyleOptionTabBarBase_StyleOptionVersionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11011() {
 	if false {
 		reflect.TypeOf(123)
 	}

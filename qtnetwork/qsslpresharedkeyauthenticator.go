@@ -292,7 +292,7 @@ func (this *QSslPreSharedKeyAuthenticator) MaximumPreSharedKeyLength() int {
 
 //  keep block begin
 
-func init() {
+func init_unused_11431() {
 	if false {
 		reflect.TypeOf(123)
 	}

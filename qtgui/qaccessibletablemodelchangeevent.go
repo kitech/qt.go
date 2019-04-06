@@ -312,7 +312,7 @@ func QAccessibleTableModelChangeEvent_ModelChangeTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10833() {
 	if false {
 		reflect.TypeOf(123)
 	}

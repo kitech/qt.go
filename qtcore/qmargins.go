@@ -390,7 +390,7 @@ func DeleteQMargins(this *QMargins) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10469() {
 	if false {
 		reflect.TypeOf(123)
 	}

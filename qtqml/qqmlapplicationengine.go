@@ -384,7 +384,7 @@ func (this *QQmlApplicationEngine) ObjectCreated(object qtcore.QObject_ITF /*777
 
 //  keep block begin
 
-func init() {
+func init_unused_11513() {
 	if false {
 		reflect.TypeOf(123)
 	}

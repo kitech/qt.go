@@ -748,7 +748,7 @@ func DeleteQCharRef(this *QCharRef) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10191() {
 	if false {
 		reflect.TypeOf(123)
 	}

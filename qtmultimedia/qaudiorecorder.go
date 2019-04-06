@@ -264,7 +264,7 @@ func (this *QAudioRecorder) AvailableAudioInputsChanged() {
 
 //  keep block begin
 
-func init() {
+func init_unused_11783() {
 	if false {
 		reflect.TypeOf(123)
 	}

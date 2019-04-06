@@ -248,7 +248,7 @@ func (this *QWinJumpList) Clear() {
 
 //  keep block begin
 
-func init() {
+func init_unused_14865() {
 	if false {
 		reflect.TypeOf(123)
 	}

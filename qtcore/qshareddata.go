@@ -93,7 +93,7 @@ func DeleteQSharedData(this *QSharedData) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10317() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -255,7 +255,7 @@ func (this *QWebEngineCookieStore) CookieRemoved(cookie qtnetwork.QNetworkCookie
 
 //  keep block begin
 
-func init() {
+func init_unused_11669() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -1865,7 +1865,7 @@ func QTextCursor_SelectionTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10783() {
 	if false {
 		reflect.TypeOf(123)
 	}

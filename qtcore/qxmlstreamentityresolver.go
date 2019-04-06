@@ -125,7 +125,7 @@ func (this *QXmlStreamEntityResolver) ResolveUndeclaredEntity(name string) strin
 
 //  keep block begin
 
-func init() {
+func init_unused_10625() {
 	if false {
 		reflect.TypeOf(123)
 	}

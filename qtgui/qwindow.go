@@ -2709,23 +2709,6 @@ func (this *QWindow) MouseMoveEvent(arg0 QMouseEvent_ITF /*777 QMouseEvent **/) 
 	qtrt.ErrPrint(err, rv)
 }
 
-// /usr/include/qt/QtGui/qwindow.h:358
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void wheelEvent(QWheelEvent *)
-
-/*
-Override this to handle mouse wheel or other wheel events (ev).
-*/
-func (this *QWindow) WheelEvent(arg0 QWheelEvent_ITF /*777 QWheelEvent **/) {
-	var convArg0 unsafe.Pointer
-	if arg0 != nil && arg0.QWheelEvent_PTR() != nil {
-		convArg0 = arg0.QWheelEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow10wheelEventEP11QWheelEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
 // /usr/include/qt/QtGui/qwindow.h:360
 // index:0
 // Protected virtual Visibility=Default Availability=Available
@@ -2740,25 +2723,6 @@ func (this *QWindow) TouchEvent(arg0 QTouchEvent_ITF /*777 QTouchEvent **/) {
 		convArg0 = arg0.QTouchEvent_PTR().GetCthis()
 	}
 	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow10touchEventEP11QTouchEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
-}
-
-// /usr/include/qt/QtGui/qwindow.h:362
-// index:0
-// Protected virtual Visibility=Default Availability=Available
-// [-2] void tabletEvent(QTabletEvent *)
-
-/*
-Override this to handle tablet press, move, and release events (ev).
-
-Proximity enter and leave events are not sent to windows, they are delivered to the application instance.
-*/
-func (this *QWindow) TabletEvent(arg0 QTabletEvent_ITF /*777 QTabletEvent **/) {
-	var convArg0 unsafe.Pointer
-	if arg0 != nil && arg0.QTabletEvent_PTR() != nil {
-		convArg0 = arg0.QTabletEvent_PTR().GetCthis()
-	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN7QWindow11tabletEventEP12QTabletEvent", qtrt.FFI_TYPE_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -2845,7 +2809,7 @@ func QWindow_AncestorModeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10851() {
 	if false {
 		reflect.TypeOf(123)
 	}

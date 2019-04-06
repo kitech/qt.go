@@ -191,7 +191,7 @@ func (this *QGraphicsSceneHelpEvent) SetScreenPos(pos qtcore.QPoint_ITF) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11227() {
 	if false {
 		reflect.TypeOf(123)
 	}

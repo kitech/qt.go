@@ -339,7 +339,7 @@ func NewQCameraImageCaptureControlp() *QCameraImageCaptureControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11827() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -141,7 +141,7 @@ func (this *QResizeEvent) OldSize() *qtcore.QSize {
 
 //  keep block begin
 
-func init() {
+func init_unused_10669() {
 	if false {
 		reflect.TypeOf(123)
 	}

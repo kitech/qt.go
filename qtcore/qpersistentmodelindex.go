@@ -504,7 +504,7 @@ func (this *QPersistentModelIndex) IsValid() bool {
 
 //  keep block begin
 
-func init() {
+func init_unused_10285() {
 	if false {
 		reflect.TypeOf(123)
 	}

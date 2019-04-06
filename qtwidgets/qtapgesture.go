@@ -174,7 +174,7 @@ func (this *QTapGesture) SetPosition(pos qtcore.QPointF_ITF) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11157() {
 	if false {
 		reflect.TypeOf(123)
 	}

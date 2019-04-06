@@ -465,7 +465,7 @@ func QIconEngine_IconEngineHookItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10877() {
 	if false {
 		reflect.TypeOf(123)
 	}

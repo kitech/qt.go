@@ -513,7 +513,7 @@ func (this *QSplashScreen) MousePressEvent(arg0 qtgui.QMouseEvent_ITF /*777 QMou
 
 //  keep block begin
 
-func init() {
+func init_unused_11315() {
 	if false {
 		reflect.TypeOf(123)
 	}

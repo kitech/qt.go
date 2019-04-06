@@ -205,7 +205,7 @@ func (this *QWebEngineScriptCollection) Clear() {
 
 //  keep block begin
 
-func init() {
+func init_unused_11727() {
 	if false {
 		reflect.TypeOf(123)
 	}

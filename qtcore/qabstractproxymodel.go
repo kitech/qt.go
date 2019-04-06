@@ -766,7 +766,7 @@ func (this *QAbstractProxyModel) ResetInternalData() {
 
 //  keep block begin
 
-func init() {
+func init_unused_10295() {
 	if false {
 		reflect.TypeOf(123)
 	}

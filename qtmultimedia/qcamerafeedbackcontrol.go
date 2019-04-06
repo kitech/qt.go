@@ -279,7 +279,7 @@ func QCameraFeedbackControl_EventTypeItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11821() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -256,7 +256,7 @@ func (this *QXmlStreamEntityDeclaration) Operator_not_equal(other QXmlStreamEnti
 
 //  keep block begin
 
-func init() {
+func init_unused_10623() {
 	if false {
 		reflect.TypeOf(123)
 	}

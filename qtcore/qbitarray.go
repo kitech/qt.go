@@ -770,7 +770,7 @@ func DeleteQBitArray(this *QBitArray) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10305() {
 	if false {
 		reflect.TypeOf(123)
 	}

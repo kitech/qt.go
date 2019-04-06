@@ -1281,7 +1281,7 @@ func QDataStream_FloatingPointPrecisionItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_10385() {
 	if false {
 		reflect.TypeOf(123)
 	}

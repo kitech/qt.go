@@ -1457,7 +1457,7 @@ func DeleteQRect(this *QRect) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10523() {
 	if false {
 		reflect.TypeOf(123)
 	}

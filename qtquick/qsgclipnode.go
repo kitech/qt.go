@@ -164,7 +164,7 @@ func (this *QSGClipNode) ClipRect() *qtcore.QRectF /*123*/ {
 
 //  keep block begin
 
-func init() {
+func init_unused_11575() {
 	if false {
 		reflect.TypeOf(123)
 	}

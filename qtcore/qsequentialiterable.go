@@ -146,7 +146,7 @@ func DeleteQSequentialIterable(this *QSequentialIterable) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10279() {
 	if false {
 		reflect.TypeOf(123)
 	}

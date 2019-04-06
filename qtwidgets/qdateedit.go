@@ -212,7 +212,7 @@ func (this *QDateEdit) UserDateChanged(date qtcore.QDate_ITF) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11119() {
 	if false {
 		reflect.TypeOf(123)
 	}

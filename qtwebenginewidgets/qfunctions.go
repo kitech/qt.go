@@ -14,7 +14,7 @@ import "github.com/kitech/qt.go/qtprintsupport"
 import "github.com/kitech/qt.go/qtquick"
 import "github.com/kitech/qt.go/qtwebenginecore"
 
-func init() {
+func init_unused_10025() {
 	if false {
 		_ = unsafe.Pointer(uintptr(0))
 	}

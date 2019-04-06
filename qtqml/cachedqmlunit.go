@@ -76,7 +76,7 @@ func DeleteCachedQmlUnit(this *CachedQmlUnit) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11495() {
 	if false {
 		reflect.TypeOf(123)
 	}

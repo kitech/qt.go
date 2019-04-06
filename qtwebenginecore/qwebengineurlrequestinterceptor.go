@@ -156,7 +156,7 @@ func DeleteQWebEngineUrlRequestInterceptor(this *QWebEngineUrlRequestInterceptor
 
 //  keep block begin
 
-func init() {
+func init_unused_11679() {
 	if false {
 		reflect.TypeOf(123)
 	}

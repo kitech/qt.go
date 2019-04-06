@@ -142,7 +142,7 @@ func NewQMediaControlp() *QMediaControl {
 
 //  keep block begin
 
-func init() {
+func init_unused_11755() {
 	if false {
 		reflect.TypeOf(123)
 	}

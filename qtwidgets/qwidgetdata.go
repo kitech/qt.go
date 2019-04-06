@@ -76,7 +76,7 @@ func DeleteQWidgetData(this *QWidgetData) {
 
 //  keep block begin
 
-func init() {
+func init_unused_10981() {
 	if false {
 		reflect.TypeOf(123)
 	}

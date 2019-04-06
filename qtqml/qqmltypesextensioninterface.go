@@ -102,7 +102,7 @@ func (this *QQmlTypesExtensionInterface) RegisterTypes(uri string) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11523() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -238,7 +238,7 @@ func (this *QErrorMessage) ChangeEvent(e qtcore.QEvent_ITF /*777 QEvent **/) {
 
 //  keep block begin
 
-func init() {
+func init_unused_11135() {
 	if false {
 		reflect.TypeOf(123)
 	}

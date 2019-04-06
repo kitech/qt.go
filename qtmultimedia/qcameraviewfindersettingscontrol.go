@@ -232,7 +232,7 @@ func QCameraViewfinderSettingsControl_ViewfinderParameterItemName(val int) strin
 
 //  keep block begin
 
-func init() {
+func init_unused_11837() {
 	if false {
 		reflect.TypeOf(123)
 	}

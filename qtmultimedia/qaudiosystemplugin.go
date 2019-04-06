@@ -200,7 +200,7 @@ func (this *QAudioSystemPlugin) CreateDeviceInfo(device qtcore.QByteArray_ITF, m
 
 //  keep block begin
 
-func init() {
+func init_unused_11795() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -256,7 +256,7 @@ func QMessageAuthenticationCode_Hash(message QByteArray_ITF, key QByteArray_ITF,
 
 //  keep block begin
 
-func init() {
+func init_unused_10473() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -381,7 +381,7 @@ func (this *QCommandLinkButton) PaintEvent(arg0 qtgui.QPaintEvent_ITF /*777 QPai
 
 //  keep block begin
 
-func init() {
+func init_unused_11107() {
 	if false {
 		reflect.TypeOf(123)
 	}

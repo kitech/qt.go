@@ -1114,42 +1114,6 @@ func QApplication_KeyboardInputInterval() int {
 	return rv
 }
 
-// /usr/include/qt/QtWidgets/qapplication.h:158
-// index:0
-// Public static Visibility=Default Availability=Available
-// [-2] void setWheelScrollLines(int)
-
-/*
-
- */
-func (this *QApplication) SetWheelScrollLines(arg0 int) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication19setWheelScrollLinesEi", qtrt.FFI_TYPE_POINTER, arg0)
-	qtrt.ErrPrint(err, rv)
-}
-func QApplication_SetWheelScrollLines(arg0 int) {
-	var nilthis *QApplication
-	nilthis.SetWheelScrollLines(arg0)
-}
-
-// /usr/include/qt/QtWidgets/qapplication.h:159
-// index:0
-// Public static Visibility=Default Availability=Available
-// [4] int wheelScrollLines()
-
-/*
-
- */
-func (this *QApplication) WheelScrollLines() int {
-	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication16wheelScrollLinesEv", qtrt.FFI_TYPE_POINTER)
-	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
-}
-func QApplication_WheelScrollLines() int {
-	var nilthis *QApplication
-	rv := nilthis.WheelScrollLines()
-	return rv
-}
-
 // /usr/include/qt/QtWidgets/qapplication.h:161
 // index:0
 // Public static Visibility=Default Availability=Available
@@ -1564,7 +1528,7 @@ func QApplication_ColorSpecItemName(val int) string {
 
 //  keep block begin
 
-func init() {
+func init_unused_11069() {
 	if false {
 		reflect.TypeOf(123)
 	}

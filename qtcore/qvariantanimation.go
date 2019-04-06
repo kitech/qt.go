@@ -461,7 +461,7 @@ func (this *QVariantAnimation) Interpolated(from QVariant_ITF, to QVariant_ITF, 
 
 //  keep block begin
 
-func init() {
+func init_unused_10505() {
 	if false {
 		reflect.TypeOf(123)
 	}

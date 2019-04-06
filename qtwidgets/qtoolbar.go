@@ -929,7 +929,7 @@ func (this *QToolBar) InitStyleOption(option QStyleOptionToolBar_ITF /*777 QStyl
 
 //  keep block begin
 
-func init() {
+func init_unused_11347() {
 	if false {
 		reflect.TypeOf(123)
 	}
