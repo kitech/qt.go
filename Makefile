@@ -1,4 +1,4 @@
-# make V=0|1|2 P=n MIN=x
+# make [target] [V=0|1|2 P=n MIN=x]
 
 # GOPATH := $(PWD):$(GOPATH)
 MINORVER := $(shell go version|awk '{print $$3}'|awk -F. '{print $$2}')
@@ -19,13 +19,20 @@ endif
 ifneq ($(MIN), )
 	ARGMIN=-tags minimal
 endif
-ARGA=${ARGI} ${ARGV} ${ARGP} ${ARGMIN}
+ifneq ($(GOSO), )
+	ARGGOSO=-pkgdir ~/oss/pkg/linux_amd64 -ldflags "-w -s"
+	ARGGOSOLIB=${ARGGOSO} -buildmode=shared
+	ARGGOSOEXE=${ARGGOSO} -linkshared
+endif
+ARGA=${ARGI} ${ARGV} ${ARGP} ${ARGMIN} ${ARGGOSOLIB}
+ARGEXE=${ARGI} ${ARGV} ${ARGP} ${ARGMIN} # ${ARGGOSOEXE} # For RAM seems not good
 
 all:
 	@echo ${GOPATH}
 	@echo ${MINORVER}
 	@echo "dd ${ARGA} dd"
 	@echo "${V} "
+	@echo "all target do nothing, valid targets: realall"
 	# CC=clang CXX=clang++ go install -v -x qt5
 	# go build -v -x core
 	# go build -v -x gui
@@ -79,6 +86,9 @@ multimedias:
 	go install ${ARGA} ./qtsvg
 	go install ${ARGA} ./qtmultimedia
 
+cleansos:
+	rm -vf ~/oss/pkg/linux_amd64/libgithub.com-kitech-qt.go-*.so
+
 eg-:
 	go build -v -x eg/coreapp.go
 	# go build -v -x eg/guiapp.go
@@ -91,14 +101,14 @@ eg-:
 	go build -v -x -o bui bigui/*.go
 
 tools:
-	go build ${ARGA} -o bin/go-uic ./cmd/go-uic
-	go build ${ARGA} -o bin/go-rcc ./cmd/go-rcc
-	go build ${ARGA} -o bin/cgo-rcc ./cmd/cgo-rcc
-	go build ${ARGA} -o bin/go-qmlviewer ./cmd/go-qmlviewer
-	go build ${ARGA} -o bin/go-dir2qrc ./cmd/dir2qrc
+	go build ${ARGEXE} -o bin/go-uic ./cmd/go-uic
+	go build ${ARGEXE} -o bin/go-rcc ./cmd/go-rcc
+	go build ${ARGEXE} -o bin/cgo-rcc ./cmd/cgo-rcc
+	go build ${ARGEXE} -o bin/go-qmlviewer ./cmd/go-qmlviewer
+	go build ${ARGEXE} -o bin/go-dir2qrc ./cmd/dir2qrc
 
 tst:
-	go test ${ARGA} tests/qstring_test.go
+	go test ${ARGEXE} tests/qstring_test.go
 
 updoc:
 	curl -POST -d "path=github.com/kitech/qt.go/qtcore" "https://godoc.org/-/refresh"
