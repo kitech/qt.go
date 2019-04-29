@@ -14,7 +14,7 @@ and make sure gcc is in %path%
 
 ##### libffi && dlfcn && Qt5Inline.dll
 
-    git clone https://github.com/qtchina/qtenv_win32.git D:/qtenv
+    git clone https://github.com/qtchina/qt512_qtenv_win32.git D:/qtenv
 
 ##### qt.go
 
@@ -44,7 +44,7 @@ xcode8.3 or xcode 9.3 are fine.
 
 ##### Qt5Inline.dylib
 
-wget https://github.com/kitech/qt.inline/releases/download/v1.0-rc4/qt510_macos_x64_xcode9.3.tar.bz2
+wget https://github.com/kitech/qt.inline/releases/download/v5.12.107/qt512_macos_x64_xcode9.3.tar.bz2
 
 extract to $HOME/qtenv/libQt5Inline.dylib
 
@@ -70,7 +70,7 @@ extract to $HOME/qtenv/libQt5Inline.dylib
 
 ##### Qt5Inline.so
 
-wget https://github.com/kitech/qt.inline/releases/download/v1.0-rc4/qt510_linux_x64_static.tar.bz2
+wget https://github.com/kitech/qt.inline/releases/download/v5.12.107/qt512_linux_x64_static.tar.bz2
 
 extract to $HOME/qtenv/libQt5Inline.so
 
