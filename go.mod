@@ -9,7 +9,7 @@ require (
 	github.com/emirpasic/gods v1.9.0
 	github.com/gonuts/dl v0.0.0-20160302100715-9a2e942d3477 // indirect
 	github.com/huandu/xstrings v1.0.0 // indirect
-	github.com/kitech/dl v0.0.0-20160302100715-9a2e942d3477
+	github.com/kitech/dl v0.0.0-20180303092342-fa7e1b9bab3d
 	github.com/kitech/goplusplus v0.0.0-20171220130708-3b7427a37be0
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/lytics/base62 v0.0.0-20180122174218-827c93e361de // indirect
