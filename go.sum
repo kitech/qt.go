@@ -14,6 +14,8 @@ github.com/gonuts/dl v0.0.0-20160302100715-9a2e942d3477 h1:VTyUIe+mjc/gOrrVRYHPZ
 github.com/gonuts/dl v0.0.0-20160302100715-9a2e942d3477/go.mod h1:sJFtK/zMj1tykTU2ImO2VL+7JGn4U7gTiFHt7rYJD+g=
 github.com/huandu/xstrings v1.0.0 h1:pO2K/gKgKaat5LdpAhxhluX2GPQMaI3W5FUz/I/UnWk=
 github.com/huandu/xstrings v1.0.0/go.mod h1:4qWG/gcEcfX4z/mBDHJ++3ReCw9ibxbsNJbcucJdbSo=
+github.com/ianlancetaylor/demangle v0.0.0-20200824232613-28f6c0f3b639 h1:mV02weKRL81bEnm8A0HT1/CAelMQDBuQIfLw8n+d6xI=
+github.com/ianlancetaylor/demangle v0.0.0-20200824232613-28f6c0f3b639/go.mod h1:aSSvb/t6k1mPoxDqO4vJh6VOCGPwU4O0C2/Eqndh1Sc=
 github.com/kitech/dl v0.0.0-20160302100715-9a2e942d3477 h1:d9LQ8IKrFCZFdEPo+FFQhpNnJCZyjvCrSQDbDfTs0YE=
 github.com/kitech/dl v0.0.0-20160302100715-9a2e942d3477/go.mod h1:rs/ASGqdrczQbnYVcZ+x5fk+EHouoBevEXKRqGDm8VI=
 github.com/kitech/goplusplus v0.0.0-20171220130708-3b7427a37be0 h1:EU69So/2tjEcAWABWuR21TiF0uy1mzIC7FX8d2NlyxU=
