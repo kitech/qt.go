@@ -1,4 +1,4 @@
-module github.com/kitech/qt.go
+module github.com/kitech/qt.go/v5
 
 go 1.15
 
