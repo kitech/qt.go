@@ -18,7 +18,26 @@ import (
 	"unsafe"
 )
 
-func CString(s string) unsafe.Pointer          { return unsafe.Pointer(C.CString(s)) }
+func CString(s string) unsafe.Pointer {
+	return unsafe.Pointer(C.CString(s))
+}
+
+// string null terminated
+func Stringnt(s *string) *string {
+	*s = *s + "\x00"
+	return s
+}
+
+// note: s will change
+// ch = ch + "\x00", and it works
+func CStringRef(s *string) unsafe.Pointer {
+	*s = *s + "\x00" // copy once, but still fast than C.CString/C.free
+	strhdr := (*reflect.StringHeader)(unsafe.Pointer(s))
+	if strhdr.Len == 0 {
+		return nil
+	}
+	return unsafe.Pointer(strhdr.Data)
+}
 func GoString(p unsafe.Pointer) string         { return C.GoString((*C.char)(p)) }
 func GoStringN(p unsafe.Pointer, n int) string { return C.GoStringN((*C.char)(p), C.int(n)) }
 func GoStringI(p uint64) string                { return GoString(unsafe.Pointer(uintptr(p))) }
@@ -46,12 +65,15 @@ type GetCthiser interface {
 	GetCthis() unsafe.Pointer
 }
 
-func (this *CObject) GetCthis_() unsafe.Pointer {
+func (this *CObject) GetCthis() unsafe.Pointer {
 	if this == nil {
 		return nil
 	} else {
 		return this.Cthis
 	}
+}
+func (this *CObject) SetCthis(cthis unsafe.Pointer) {
+	this.Cthis = cthis
 }
 
 // some fixed internal names
@@ -61,7 +83,7 @@ const DtorCthisName = "DtorCthis"
 const NewCthisName = "NewCthis"
 const SetInitStObjName = "C_%s_init_staticMetaObject"
 
-func GetCthis(obj interface{}) unsafe.Pointer{
+func GetCthis(obj interface{}) unsafe.Pointer {
 	objval := reflect.ValueOf(obj).Elem()
 	retx := objval.MethodByName(GetCthisName).Call(nil)
 	return retx[0].Interface().(unsafe.Pointer)

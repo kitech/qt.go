@@ -99,3 +99,17 @@ void ffi_call_var_ex(void*fn, int retype, uint64_t* retval, int fixedargc, int t
                           uint8_t* argtys, uint64_t* argvals) {
     ffi_call_var_ex_fnptr(fn, retype, retval, fixedargc, totalargc, argtys, argvals);
 }
+
+void ffi_call_ex_asmcc(struct {void* fn; int retype; uint64_t* retval;
+    int argc; uint8_t* argtys; uint64_t* argvals;} *ax) {
+    ffi_call_ex_fnptr(ax->fn, ax->retype, ax->retval,
+                      ax->argc, ax->argtys, ax->argvals);
+}
+
+void ffi_call_var_ex_asmcc(struct {void*fn; int retype; uint64_t* retval;
+    int fixedargc; int totalargc; uint8_t* argtys; uint64_t* argvals;} *ax) {
+    ffi_call_var_ex_fnptr(ax->fn, ax->retype, ax->retval,
+                          ax->fixedargc, ax->totalargc, ax->argtys, ax->argvals);
+}
+
+

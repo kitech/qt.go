@@ -18,6 +18,8 @@ github.com/ianlancetaylor/demangle v0.0.0-20200824232613-28f6c0f3b639 h1:mV02weK
 github.com/ianlancetaylor/demangle v0.0.0-20200824232613-28f6c0f3b639/go.mod h1:aSSvb/t6k1mPoxDqO4vJh6VOCGPwU4O0C2/Eqndh1Sc=
 github.com/kitech/dl v0.0.0-20160302100715-9a2e942d3477 h1:d9LQ8IKrFCZFdEPo+FFQhpNnJCZyjvCrSQDbDfTs0YE=
 github.com/kitech/dl v0.0.0-20160302100715-9a2e942d3477/go.mod h1:rs/ASGqdrczQbnYVcZ+x5fk+EHouoBevEXKRqGDm8VI=
+github.com/kitech/dl v0.0.0-20201213035930-57687ffb7a48 h1:3+Ty0WfnrhF2Cghcec9h+CvusOeU5+OiPtlsoL3opBQ=
+github.com/kitech/dl v0.0.0-20201213035930-57687ffb7a48/go.mod h1:rs/ASGqdrczQbnYVcZ+x5fk+EHouoBevEXKRqGDm8VI=
 github.com/kitech/goplusplus v0.0.0-20171220130708-3b7427a37be0 h1:EU69So/2tjEcAWABWuR21TiF0uy1mzIC7FX8d2NlyxU=
 github.com/kitech/goplusplus v0.0.0-20171220130708-3b7427a37be0/go.mod h1:cfrzDxXb+5ibsp0Q4G5LDpNs2BC6k7C4MGtflz2cdsQ=
 github.com/kr/pretty v0.1.0 h1:L/CwN0zerZDmRFUapSPitk6f+Q3+0za1rQkzVuMiMFI=

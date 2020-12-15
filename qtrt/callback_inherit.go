@@ -271,7 +271,17 @@ func callbackInheritInvokeGo(f interface{}, args ...uint64) interface{} {
 					prmval.MethodByName("SetCthis").Call([]reflect.Value{
 						reflect.ValueOf(unsafe.Pointer(uintptr(args[i])))})
 					in = append(in, prmval)
+				} else {
+					log.Println("Unsupported:", argty.Kind().String(), argty.String())
 				}
+			}
+		case reflect.Struct: // for qtrel.CCret
+			if argty.String() == "qtrel.CCret" {
+				prmval := reflect.New(argty)
+				rvs := prmval.MethodByName("FromCthis").Call([]reflect.Value{
+					reflect.ValueOf(unsafe.Pointer(uintptr(args[i])))})
+				prmval = rvs[0]
+				in = append(in, prmval)
 			}
 		default:
 			log.Println("Unsupported:", argty.Kind().String(), argty.String())
@@ -279,9 +289,9 @@ func callbackInheritInvokeGo(f interface{}, args ...uint64) interface{} {
 	}
 
 	if len(in) != fv.Type().NumIn() {
-		log.Println("can not fill enough parameters,", len(in), fv.Type().NumIn())
+		log.Println("cannot fill enough parameters,", len(in), fv.Type().NumIn())
 	}
-	Assert(len(in) == fv.Type().NumIn(), "no engouth parameters", len(in), fv.Type().NumIn())
+	Assert(len(in) == fv.Type().NumIn(), "no enough parameters", len(in), fv.Type().NumIn())
 	if true {
 		out := fv.Call(in)
 		if debugIneritCall {
@@ -314,9 +324,9 @@ func IntAsFloat32(v uint64) (n float32) {
 
 func IsQtclass(tystr string) bool {
 	reg := regexp.MustCompile(`^(qt.*\.)?Q[A-Z](.+)`)
-	return  reg.MatchString(tystr)
+	return reg.MatchString(tystr)
 }
-func GetQtclassName (tystr string) string {
+func GetQtclassName(tystr string) string {
 	reg := regexp.MustCompile(`^(qt[a-z]+\.)?(Q[A-Z](.+))`)
 	if reg.MatchString(tystr) {
 		// qt classes

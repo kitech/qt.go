@@ -10,10 +10,12 @@ static char* carr_get_item(char** pp, int idx)
 { return pp[idx]; }
 */
 import "C"
-import "unsafe"
-import "reflect"
-import "log"
-import "math"
+import (
+	"log"
+	"math"
+	"reflect"
+	"unsafe"
+)
 
 func test_123() {
 	// var a0 interface{}
@@ -127,6 +129,12 @@ func Cretval2go(ty string, rv uint64) interface{} {
 	}
 	return rv
 }
+
+func Cretval2go2(ty reflect.Kind, rv uint64) interface{} {
+	return rv
+}
+
+//func (rv VRetype) Ptr() unsafe.Pointer { return unsafe.Pointer(uintptr(rv)) }
 
 func Cpretval2go(ty string, rv uint64) interface{} {
 	switch ty {

@@ -51,6 +51,8 @@ static void ffi_call_0(void*fn) {
 extern void ffi_call_ex(void*fn, int retype, uint64_t *rc, int argc, uint8_t* argtys, uint64_t* argvals);
 extern void ffi_call_var_ex(void*fn, int retype, uint64_t *rc, int fixedargc, int totalargc, uint8_t* argtys, uint64_t* argvals);
 extern void set_so_ffi_call_ex(void* ex_fnptr, void* varex_fnptr);
+extern void ffi_call_ex_asmcc(); // just function name is fine, ignore parameters
+extern void ffi_call_var_ex_asmcc();
 
 static void ffi_call_1(void*fn) {
 
@@ -93,6 +95,8 @@ import (
 	"strings"
 	"sync"
 	"unsafe"
+
+	"github.com/kitech/dl/asmcgocall"
 )
 
 func itype2stype(itype byte) *C.ffi_type {
@@ -243,6 +247,7 @@ func init_ffi_invoke() {
 	}
 }
 
+// load ffi call wrapper from libQt5Inline.so
 func init_so_ffi_call() {
 	ex_fnptr := GetQtSymAddrRaw("ffi_call_ex")
 	varex_fnptr := GetQtSymAddrRaw("ffi_call_var_ex")
@@ -253,7 +258,9 @@ func init_so_ffi_call() {
 
 func deinit() {}
 
+// deprecated
 func InvokeQtFunc(symname string, retype byte, types []byte, args ...interface{}) (VRetype, error) {
+	panic("deprecated " + symname)
 	for modname, lib := range qtlibs {
 		addr, err := lib.Symbol(symname)
 		ErrPrint(err)
@@ -269,7 +276,9 @@ func InvokeQtFunc(symname string, retype byte, types []byte, args ...interface{}
 	return 0, fmt.Errorf("Symbol not found: %s", symname)
 }
 
+// deprecated
 func InvokeQtFunc5(symname string, retype byte, argc int, types []byte, args []uint64) (VRetype, error) {
+	panic("deprecated " + symname)
 	addr := GetQtSymAddr(symname)
 	log.Println("FFI Call:", symname, addr)
 
@@ -280,25 +289,17 @@ func InvokeQtFunc5(symname string, retype byte, argc int, types []byte, args []u
 	return uint64(retval), fmt.Errorf("Symbol not found: %s", symname)
 }
 
+// lagecy
 func InvokeQtFunc6(symname string, retype byte, args ...interface{}) (VRetype, error) {
 	addr := GetQtSymAddr(symname)
 	if debugFFICall {
 		log.Println("FFI Call:", symname, addr, "retype=", retype, "argc=", len(args))
 	}
 
-	argtys, argvals, argrefps := convArgs(args...)
-	_ = argrefps
-	var retval C.uint64_t = 0
-	_, cok := C.ffi_call_ex(addr, C.int(retype), &retval, C.int(len(args)),
-		(*C.uint8_t)(&argtys[0]), (*C.uint64_t)(&argvals[0]))
-	if debugFFICall {
-		ErrPrint(cok, symname, retype, len(args))
-	}
-
-	onCtorAlloc(symname)
-	return uint64(retval), nil
+	return cc0byaddr(symname, addr, retype, args...)
 }
 
+// lagecy
 // for variadic function call
 func InvokeQtFunc6Var(symname string, retype byte, fixedargc int, args ...interface{}) (VRetype, error) {
 	addr := GetQtSymAddr(symname)
@@ -334,6 +335,58 @@ func InvokeQtFunc7(symname string, args ...interface{}) (VRetype, error) {
 	return uint64(uintptr(retval)), nil
 }
 
+// dont use C_xxx, high level process sret, this,
+func Qtcc0(symname string, retype byte, args ...interface{}) (VRetype, error) {
+	addr := GetQtSymAddrRaw(symname)
+	if debugFFICall {
+		log.Println("FFI Call:", symname, addr, "retype=", retype, "argc=", len(args))
+	}
+
+	return cc0byaddr2(symname, addr, retype, args...)
+}
+
+// lagecy
+// compatiable with old version
+// symname just for debug
+func cc0byaddr(symname string, symaddr unsafe.Pointer, retype byte, args ...interface{}) (VRetype, error) {
+	addr := symaddr
+
+	argtys, argvals, argrefps := convArgs(args...)
+	_ = argrefps
+	var retval C.uint64_t = 0
+	_, cok := C.ffi_call_ex(addr, C.int(retype), &retval, C.int(len(args)),
+		(*C.uint8_t)(&argtys[0]), (*C.uint64_t)(&argvals[0]))
+	if debugFFICall {
+		ErrPrint(cok, symname, retype, len(args))
+	}
+
+	onCtorAlloc(symname)
+	return uint64(retval), nil
+}
+
+// this version is 1.3x faster than cc0byaddr
+// symname just for debug
+func cc0byaddr2(symname string, symaddr unsafe.Pointer, retype byte, args ...interface{}) (VRetype, error) {
+	addr := symaddr
+
+	argtys, argvals, argrefps := convArgs(args...)
+	_ = argrefps
+	var retval C.uint64_t = 0
+	var argv = struct {
+		addr    unsafe.Pointer
+		retype  C.int
+		retval  *C.uint64_t
+		argc    C.int
+		argtys  *C.uint8_t
+		argvals *C.uint64_t
+	}{addr, C.int(retype), &retval, C.int(len(args)),
+		(*C.uint8_t)(&argtys[0]), (*C.uint64_t)(&argvals[0])}
+	asmcgocall.Asmcc(C.ffi_call_ex_asmcc, unsafe.Pointer(&argv))
+
+	onCtorAlloc(symname)
+	return uint64(retval), nil
+}
+
 // TODO resolve ffi parameters and then forward to C scope execute
 // C scope receiver func: void(void*fnptr, uint64_t*retval, void* argtys, void* argvals)
 func ForwardFFIFunc(pxysymname string, symname string, args ...interface{}) (VRetype, error) {
@@ -354,6 +407,7 @@ func refmtSymbolName(symname string) string {
 	return IfElseStr(UseWrapSymbols && strings.HasPrefix(symname, "_Z"), "C"+symname, symname)
 }
 
+// lagecy
 func GetQtSymAddr(symname string) unsafe.Pointer {
 	symname = refmtSymbolName(symname)
 	return GetQtSymAddrRaw(symname)
@@ -473,7 +527,7 @@ func convArg(idx int, argx interface{}) (argty byte, argval uint64, argrefp refl
 		//
 
 	default:
-		log.Println("Unknown type:", argty, argval, aty.String(), argx)
+		log.Println("Unknown type:", argty, argval, idx, aty.String(), argx)
 	}
 
 	return
