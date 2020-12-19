@@ -25,6 +25,14 @@ func init() {
 
 func KeepMe() {}
 
+// 阻塞的调用不能用asmcgocall,否则回调崩溃
+func (this *QApplication) Exec() int {
+	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication4execEv", qtrt.FFITY_POINTER)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+	return 0
+}
+
 /////
 type QWidgetListx struct {
 	*qtrt.CObject

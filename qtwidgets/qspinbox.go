@@ -102,6 +102,123 @@ func NewQSpinBoxp() *QSpinBox {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qspinbox.h:69
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [4] int value() const
+
+/*
+ */
+func (this *QSpinBox) Value() int {
+	rv, err := qtrt.Qtcc1(882179790, "_ZNK8QSpinBox5valueEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtWidgets/qspinbox.h:77
+// index:0
+// Public Indirect Visibility=Default Availability=Available
+// [8] QString cleanText() const
+
+/*
+ */
+func (this *QSpinBox) CleanText() string {
+	sretobj := qtrt.Malloc(8) // QString
+	rv, err := qtrt.Qtcc1(1673841482, "_ZNK8QSpinBox9cleanTextEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv = qtrt.VRetype(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtWidgets/qspinbox.h:80
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setSingleStep(int)
+
+/*
+ */
+func (this *QSpinBox) SetSingleStep(val int) {
+	rv, err := qtrt.Qtcc1(3398301100, "_ZN8QSpinBox13setSingleStepEi", qtrt.FFITY_POINTER, this.GetCthis(), val)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qspinbox.h:83
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setMinimum(int)
+
+/*
+ */
+func (this *QSpinBox) SetMinimum(min int) {
+	rv, err := qtrt.Qtcc1(4211881020, "_ZN8QSpinBox10setMinimumEi", qtrt.FFITY_POINTER, this.GetCthis(), min)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qspinbox.h:86
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setMaximum(int)
+
+/*
+ */
+func (this *QSpinBox) SetMaximum(max int) {
+	rv, err := qtrt.Qtcc1(753370749, "_ZN8QSpinBox10setMaximumEi", qtrt.FFITY_POINTER, this.GetCthis(), max)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qspinbox.h:88
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setRange(int, int)
+
+/*
+ */
+func (this *QSpinBox) SetRange(min int, max int) {
+	rv, err := qtrt.Qtcc1(3910809396, "_ZN8QSpinBox8setRangeEii", qtrt.FFITY_POINTER, this.GetCthis(), min, max)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qspinbox.h:105
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setValue(int)
+
+/*
+ */
+func (this *QSpinBox) SetValue(val int) {
+	rv, err := qtrt.Qtcc1(40343854, "_ZN8QSpinBox8setValueEi", qtrt.FFITY_POINTER, this.GetCthis(), val)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qspinbox.h:108
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void valueChanged(int)
+
+/*
+ */
+func (this *QSpinBox) ValueChanged(arg0 int) {
+	rv, err := qtrt.Qtcc1(924629808, "_ZN8QSpinBox12valueChangedEi", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qspinbox.h:109
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void textChanged(const QString &)
+
+/*
+ */
+func (this *QSpinBox) TextChanged(arg0 string) {
+	var tmpArg0 = qtcore.NewQString5(arg0)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.Qtcc1(2388599440, "_ZN8QSpinBox11textChangedERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
 func DeleteQSpinBox(this *QSpinBox) {
 	rv, err := qtrt.Qtcc1(0, "_ZN8QSpinBoxD2Ev", qtrt.FFITY_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -112,7 +229,7 @@ func DeleteQSpinBox(this *QSpinBox) {
 
 //  keep block begin
 
-func init_unused_10145() {
+func init_unused_10149() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -20,7 +20,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 6
+// extern C begin: 28
 */
 // import "C"
 import "unsafe"
@@ -230,6 +230,18 @@ func (this *QPushButton) SetDefault(arg0 bool) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qpushbutton.h:82
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setFlat(bool)
+
+/*
+ */
+func (this *QPushButton) SetFlat(arg0 bool) {
+	rv, err := qtrt.Qtcc1(167659761, "_ZN11QPushButton7setFlatEb", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+}
+
 func DeleteQPushButton(this *QPushButton) {
 	rv, err := qtrt.Qtcc1(0, "_ZN11QPushButtonD2Ev", qtrt.FFITY_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -240,7 +252,7 @@ func DeleteQPushButton(this *QPushButton) {
 
 //  keep block begin
 
-func init_unused_10121() {
+func init_unused_10125() {
 	if false {
 		reflect.TypeOf(123)
 	}

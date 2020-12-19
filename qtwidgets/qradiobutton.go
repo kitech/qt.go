@@ -20,7 +20,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 14
 */
 // import "C"
 import "unsafe"
@@ -190,7 +190,7 @@ func DeleteQRadioButton(this *QRadioButton) {
 
 //  keep block begin
 
-func init_unused_10143() {
+func init_unused_10147() {
 	if false {
 		reflect.TypeOf(123)
 	}

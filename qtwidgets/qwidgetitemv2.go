@@ -18,7 +18,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 6
+// extern C begin: 8
 */
 // import "C"
 import "unsafe"
@@ -174,7 +174,7 @@ func QWidgetItemV2_ItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10105() {
+func init_unused_10109() {
 	if false {
 		reflect.TypeOf(123)
 	}

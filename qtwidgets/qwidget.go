@@ -533,6 +533,31 @@ func (this *QWidget) SetFixedHeight(h int) {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qwidget.h:332
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setMouseTracking(bool)
+
+/*
+ */
+func (this *QWidget) SetMouseTracking(enable bool) {
+	rv, err := qtrt.Qtcc1(3977244840, "_ZN7QWidget16setMouseTrackingEb", qtrt.FFITY_POINTER, this.GetCthis(), enable)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qwidget.h:334
+// index:0
+// Public Extend Visibility=Default Availability=Available
+// [1] bool underMouse() const
+
+/*
+ */
+func (this *QWidget) UnderMouse() bool {
+	rv, err := qtrt.Qtcc1(4034935793, "_ZNK7QWidget10underMouseEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 // /usr/include/qt/QtWidgets/qwidget.h:365
 // index:0
 // Public Ignore Visibility=Default Availability=Available
@@ -849,6 +874,18 @@ func (this *QWidget) Update() {
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qwidget.h:467
+// index:1
+// Public inline Ignore Visibility=Default Availability=Available
+// [-2] void update(int, int, int, int)
+
+/*
+ */
+func (this *QWidget) Update1(x int, y int, w int, h int) {
+	rv, err := qtrt.Qtcc1(2935439564, "_ZN7QWidget6updateEiiii", qtrt.FFITY_POINTER, this.GetCthis(), x, y, w, h)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qwidget.h:464
 // index:0
 // Public Ignore Visibility=Default Availability=Available
@@ -1152,6 +1189,20 @@ func (this *QWidget) ParentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.Qtcc1(2946385333, "_ZNK7QWidget12parentWidgetEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	return /*==*/ QWidgetFromptr(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtWidgets/qwidget.h:612
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void windowTitleChanged(const QString &)
+
+/*
+ */
+func (this *QWidget) WindowTitleChanged(title string) {
+	var tmpArg0 = qtcore.NewQString5(title)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.Qtcc1(3974145108, "_ZN7QWidget18windowTitleChangedERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
 }
 
 func DeleteQWidget(this *QWidget) {

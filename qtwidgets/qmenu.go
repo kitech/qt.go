@@ -150,6 +150,179 @@ func NewQMenu1p(title string) *QMenu {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qmenu.h:79
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [8] QAction * addAction(const QString &)
+
+/*
+ */
+func (this *QMenu) AddAction(text string) *QAction /*777 QAction **/ {
+	var tmpArg0 = qtcore.NewQString5(text)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.Qtcc1(1698034204, "_ZN5QMenu9addActionERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ QActionFromptr(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtWidgets/qmenu.h:152
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [8] QAction * addMenu(QMenu *)
+
+/*
+ */
+func (this *QMenu) AddMenu(menu QMenu_ITF /*777 QMenu **/) *QAction /*777 QAction **/ {
+	var convArg0 unsafe.Pointer
+	if menu != nil && menu.QMenu_PTR() != nil {
+		convArg0 = menu.QMenu_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc1(4017241996, "_ZN5QMenu7addMenuEPS_", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ QActionFromptr(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtWidgets/qmenu.h:153
+// index:1
+// Public Direct Visibility=Default Availability=Available
+// [8] QMenu * addMenu(const QString &)
+
+/*
+ */
+func (this *QMenu) AddMenu1(title string) *QMenu /*777 QMenu **/ {
+	var tmpArg0 = qtcore.NewQString5(title)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.Qtcc1(2540271396, "_ZN5QMenu7addMenuERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ QMenuFromptr(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtWidgets/qmenu.h:156
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [8] QAction * addSeparator()
+
+/*
+ */
+func (this *QMenu) AddSeparator() *QAction /*777 QAction **/ {
+	rv, err := qtrt.Qtcc1(3779268459, "_ZN5QMenu12addSeparatorEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ QActionFromptr(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtWidgets/qmenu.h:166
+// index:0
+// Public Extend Visibility=Default Availability=Available
+// [1] bool isEmpty() const
+
+/*
+ */
+func (this *QMenu) IsEmpty() bool {
+	rv, err := qtrt.Qtcc1(1363387044, "_ZNK5QMenu7isEmptyEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qmenu.h:167
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void clear()
+
+/*
+ */
+func (this *QMenu) Clear() {
+	rv, err := qtrt.Qtcc1(3862211293, "_ZN5QMenu5clearEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmenu.h:200
+// index:0
+// Public Indirect Visibility=Default Availability=Available
+// [8] QString title() const
+
+/*
+ */
+func (this *QMenu) Title() string {
+	sretobj := qtrt.Malloc(8) // QString
+	rv, err := qtrt.Qtcc1(2610552010, "_ZNK5QMenu5titleEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv = qtrt.VRetype(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtWidgets/qmenu.h:201
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setTitle(const QString &)
+
+/*
+ */
+func (this *QMenu) SetTitle(title string) {
+	var tmpArg0 = qtcore.NewQString5(title)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.Qtcc1(841200333, "_ZN5QMenu8setTitleERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmenu.h:222
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void aboutToShow()
+
+/*
+ */
+func (this *QMenu) AboutToShow() {
+	rv, err := qtrt.Qtcc1(1566663078, "_ZN5QMenu11aboutToShowEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmenu.h:223
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void aboutToHide()
+
+/*
+ */
+func (this *QMenu) AboutToHide() {
+	rv, err := qtrt.Qtcc1(3249752657, "_ZN5QMenu11aboutToHideEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmenu.h:224
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void triggered(QAction *)
+
+/*
+ */
+func (this *QMenu) Triggered(action QAction_ITF /*777 QAction **/) {
+	var convArg0 unsafe.Pointer
+	if action != nil && action.QAction_PTR() != nil {
+		convArg0 = action.QAction_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc1(576772310, "_ZN5QMenu9triggeredEP7QAction", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmenu.h:225
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void hovered(QAction *)
+
+/*
+ */
+func (this *QMenu) Hovered(action QAction_ITF /*777 QAction **/) {
+	var convArg0 unsafe.Pointer
+	if action != nil && action.QAction_PTR() != nil {
+		convArg0 = action.QAction_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc1(2472517649, "_ZN5QMenu7hoveredEP7QAction", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
 func DeleteQMenu(this *QMenu) {
 	rv, err := qtrt.Qtcc1(0, "_ZN5QMenuD2Ev", qtrt.FFITY_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -160,7 +333,7 @@ func DeleteQMenu(this *QMenu) {
 
 //  keep block begin
 
-func init_unused_10135() {
+func init_unused_10139() {
 	if false {
 		reflect.TypeOf(123)
 	}

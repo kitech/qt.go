@@ -18,7 +18,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 2
+// extern C begin: 26
 */
 // import "C"
 import "unsafe"
@@ -98,22 +98,88 @@ func NewQApplicationp(argc int, argv []string) *QApplication {
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qapplication.h:183
+// /usr/include/qt/QtWidgets/qapplication.h:147
 // index:0
-// Public static Direct Visibility=Default Availability=Available
-// [4] int exec()
+// Public static Ignore Visibility=Default Availability=Available
+// [-2] void beep()
 
 /*
  */
-func (this *QApplication) Exec() int {
-	rv, err := qtrt.Qtcc1(1512411141, "_ZN12QApplication4execEv", qtrt.FFITY_POINTER)
+func (this *QApplication) Beep() {
+	rv, err := qtrt.Qtcc1(3241209511, "_ZN12QApplication4beepEv", qtrt.FFITY_POINTER)
 	qtrt.ErrPrint(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
-func QApplication_Exec() int {
+func QApplication_Beep() {
 	var nilthis *QApplication
-	rv := nilthis.Exec()
-	return rv
+	nilthis.Beep()
+}
+
+// /usr/include/qt/QtWidgets/qapplication.h:198
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void focusChanged(QWidget *, QWidget *)
+
+/*
+ */
+func (this *QApplication) FocusChanged(old QWidget_ITF /*777 QWidget **/, now QWidget_ITF /*777 QWidget **/) {
+	var convArg0 unsafe.Pointer
+	if old != nil && old.QWidget_PTR() != nil {
+		convArg0 = old.QWidget_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if now != nil && now.QWidget_PTR() != nil {
+		convArg1 = now.QWidget_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc1(299776149, "_ZN12QApplication12focusChangedEP7QWidgetS1_", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qapplication.h:201
+// index:0
+// Public Indirect Visibility=Default Availability=Available
+// [8] QString styleSheet() const
+
+/*
+ */
+func (this *QApplication) StyleSheet() string {
+	sretobj := qtrt.Malloc(8) // QString
+	rv, err := qtrt.Qtcc1(306547508, "_ZNK12QApplication10styleSheetEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv = qtrt.VRetype(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtWidgets/qapplication.h:204
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setStyleSheet(const QString &)
+
+/*
+ */
+func (this *QApplication) SetStyleSheet(sheet string) {
+	var tmpArg0 = qtcore.NewQString5(sheet)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.Qtcc1(412095265, "_ZN12QApplication13setStyleSheetERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qapplication.h:209
+// index:0
+// Public static Ignore Visibility=Default Availability=Available
+// [-2] void aboutQt()
+
+/*
+ */
+func (this *QApplication) AboutQt() {
+	rv, err := qtrt.Qtcc1(799315374, "_ZN12QApplication7aboutQtEv", qtrt.FFITY_POINTER)
+	qtrt.ErrPrint(err, rv)
+}
+func QApplication_AboutQt() {
+	var nilthis *QApplication
+	nilthis.AboutQt()
 }
 
 func DeleteQApplication(this *QApplication) {
@@ -149,7 +215,7 @@ func QApplication_ColorSpecItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10097() {
+func init_unused_10101() {
 	if false {
 		reflect.TypeOf(123)
 	}

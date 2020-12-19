@@ -20,7 +20,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 2
+// extern C begin: 14
 */
 // import "C"
 import "unsafe"
@@ -102,6 +102,179 @@ func NewQMenuBarp() *QMenuBar {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qmenubar.h:67
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [8] QAction * addAction(const QString &)
+
+/*
+ */
+func (this *QMenuBar) AddAction(text string) *QAction /*777 QAction **/ {
+	var tmpArg0 = qtcore.NewQString5(text)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.Qtcc1(524583219, "_ZN8QMenuBar9addActionERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ QActionFromptr(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtWidgets/qmenubar.h:96
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [8] QAction * addMenu(QMenu *)
+
+/*
+ */
+func (this *QMenuBar) AddMenu(menu QMenu_ITF /*777 QMenu **/) *QAction /*777 QAction **/ {
+	var convArg0 unsafe.Pointer
+	if menu != nil && menu.QMenu_PTR() != nil {
+		convArg0 = menu.QMenu_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc1(1432639305, "_ZN8QMenuBar7addMenuEP5QMenu", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ QActionFromptr(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtWidgets/qmenubar.h:97
+// index:1
+// Public Direct Visibility=Default Availability=Available
+// [8] QMenu * addMenu(const QString &)
+
+/*
+ */
+func (this *QMenuBar) AddMenu1(title string) *QMenu /*777 QMenu **/ {
+	var tmpArg0 = qtcore.NewQString5(title)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.Qtcc1(3209398129, "_ZN8QMenuBar7addMenuERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ QMenuFromptr(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtWidgets/qmenubar.h:98
+// index:2
+// Public Direct Visibility=Default Availability=Available
+// [8] QMenu * addMenu(const QIcon &, const QString &)
+
+/*
+ */
+func (this *QMenuBar) AddMenu2(icon qtgui.QIcon_ITF, title string) *QMenu /*777 QMenu **/ {
+	var convArg0 unsafe.Pointer
+	if icon != nil && icon.QIcon_PTR() != nil {
+		convArg0 = icon.QIcon_PTR().GetCthis()
+	}
+	var tmpArg1 = qtcore.NewQString5(title)
+	var convArg1 = tmpArg1.GetCthis()
+	rv, err := qtrt.Qtcc1(3402422444, "_ZN8QMenuBar7addMenuERK5QIconRK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ QMenuFromptr(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtWidgets/qmenubar.h:101
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [8] QAction * addSeparator()
+
+/*
+ */
+func (this *QMenuBar) AddSeparator() *QAction /*777 QAction **/ {
+	rv, err := qtrt.Qtcc1(2911490074, "_ZN8QMenuBar12addSeparatorEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ QActionFromptr(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtWidgets/qmenubar.h:102
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [8] QAction * insertSeparator(QAction *)
+
+/*
+ */
+func (this *QMenuBar) InsertSeparator(before QAction_ITF /*777 QAction **/) *QAction /*777 QAction **/ {
+	var convArg0 unsafe.Pointer
+	if before != nil && before.QAction_PTR() != nil {
+		convArg0 = before.QAction_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc1(136532056, "_ZN8QMenuBar15insertSeparatorEP7QAction", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ QActionFromptr(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtWidgets/qmenubar.h:104
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [8] QAction * insertMenu(QAction *, QMenu *)
+
+/*
+ */
+func (this *QMenuBar) InsertMenu(before QAction_ITF /*777 QAction **/, menu QMenu_ITF /*777 QMenu **/) *QAction /*777 QAction **/ {
+	var convArg0 unsafe.Pointer
+	if before != nil && before.QAction_PTR() != nil {
+		convArg0 = before.QAction_PTR().GetCthis()
+	}
+	var convArg1 unsafe.Pointer
+	if menu != nil && menu.QMenu_PTR() != nil {
+		convArg1 = menu.QMenu_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc1(2471833135, "_ZN8QMenuBar10insertMenuEP7QActionP5QMenu", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, convArg1)
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ QActionFromptr(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtWidgets/qmenubar.h:106
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void clear()
+
+/*
+ */
+func (this *QMenuBar) Clear() {
+	rv, err := qtrt.Qtcc1(1047224492, "_ZN8QMenuBar5clearEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmenubar.h:132
+// index:0
+// Public virtual Ignore Visibility=Default Availability=Available
+// [-2] void setVisible(bool)
+
+/*
+ */
+func (this *QMenuBar) SetVisible(visible bool) {
+	rv, err := qtrt.Qtcc1(1756387468, "_ZN8QMenuBar10setVisibleEb", qtrt.FFITY_POINTER, this.GetCthis(), visible)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmenubar.h:135
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void triggered(QAction *)
+
+/*
+ */
+func (this *QMenuBar) Triggered(action QAction_ITF /*777 QAction **/) {
+	var convArg0 unsafe.Pointer
+	if action != nil && action.QAction_PTR() != nil {
+		convArg0 = action.QAction_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc1(961109853, "_ZN8QMenuBar9triggeredEP7QAction", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qmenubar.h:136
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void hovered(QAction *)
+
+/*
+ */
+func (this *QMenuBar) Hovered(action QAction_ITF /*777 QAction **/) {
+	var convArg0 unsafe.Pointer
+	if action != nil && action.QAction_PTR() != nil {
+		convArg0 = action.QAction_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc1(3004656425, "_ZN8QMenuBar7hoveredEP7QAction", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
 func DeleteQMenuBar(this *QMenuBar) {
 	rv, err := qtrt.Qtcc1(0, "_ZN8QMenuBarD2Ev", qtrt.FFITY_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -112,7 +285,7 @@ func DeleteQMenuBar(this *QMenuBar) {
 
 //  keep block begin
 
-func init_unused_10137() {
+func init_unused_10141() {
 	if false {
 		reflect.TypeOf(123)
 	}

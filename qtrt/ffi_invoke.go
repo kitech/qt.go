@@ -237,7 +237,7 @@ func init_ffi_invoke() {
 
 	mods := []string{"Inline"}
 	// TODO auto check static and omit load other module
-	if !UseWrapSymbols { // raw c++ symbols
+	if UseWrapSymbols { // raw c++ symbols
 		mods = append([]string{"Core", "Gui", "Widgets", "Network", "Qml", "Quick", "QuickControls2", "QuickWidgets"}, mods...)
 	}
 
@@ -421,7 +421,7 @@ func isNotfoundSymbolErr(err error) bool {
 }
 
 // 直接使用封装的C++ symbols。好像在这设置没有用啊，符号不同，因为参数表的处理也不同，还是要改生成的调用代码。
-var UseWrapSymbols bool = true // see also qtrt.UseCppSymbols TODO merge
+var UseWrapSymbols bool = false // see also qtrt.UseCppSymbols TODO merge
 
 func refmtSymbolName(symname string) string {
 	return IfElseStr(UseWrapSymbols && strings.HasPrefix(symname, "_Z"), "C"+symname, symname)
@@ -444,7 +444,7 @@ func GetQtSymAddrRaw(symname string) unsafe.Pointer {
 		}
 		return addr
 	}
-	log.Println(fmt.Errorf("Symbol not found: %s", symname))
+	log.Fatalln(fmt.Errorf("Symbol not found: %s in %d libs(s)", symname, len(qtlibs)))
 	return nil
 }
 

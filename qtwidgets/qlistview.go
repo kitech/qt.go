@@ -20,7 +20,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 7
+// extern C begin: 12
 */
 // import "C"
 import "unsafe"
@@ -215,7 +215,7 @@ func QListView_ViewModeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10131() {
+func init_unused_10135() {
 	if false {
 		reflect.TypeOf(123)
 	}

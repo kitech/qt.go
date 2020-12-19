@@ -20,7 +20,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 2
+// extern C begin: 4
 */
 // import "C"
 import "unsafe"
@@ -102,6 +102,34 @@ func NewQToolButtonp() *QToolButton {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qtoolbutton.h:95
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setAutoRaise(bool)
+
+/*
+ */
+func (this *QToolButton) SetAutoRaise(enable bool) {
+	rv, err := qtrt.Qtcc1(2791407414, "_ZN11QToolButton12setAutoRaiseEb", qtrt.FFITY_POINTER, this.GetCthis(), enable)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtoolbutton.h:106
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void triggered(QAction *)
+
+/*
+ */
+func (this *QToolButton) Triggered(arg0 QAction_ITF /*777 QAction **/) {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QAction_PTR() != nil {
+		convArg0 = arg0.QAction_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc1(784990465, "_ZN11QToolButton9triggeredEP7QAction", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
 func DeleteQToolButton(this *QToolButton) {
 	rv, err := qtrt.Qtcc1(0, "_ZN11QToolButtonD2Ev", qtrt.FFITY_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -135,7 +163,7 @@ func QToolButton_ToolButtonPopupModeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10157() {
+func init_unused_10161() {
 	if false {
 		reflect.TypeOf(123)
 	}

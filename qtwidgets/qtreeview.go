@@ -20,7 +20,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 3
 */
 // import "C"
 import "unsafe"
@@ -102,6 +102,90 @@ func NewQTreeViewp() *QTreeView {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qtreeview.h:74
+// index:0
+// Public virtual Ignore Visibility=Default Availability=Available
+// [-2] void setModel(QAbstractItemModel *)
+
+/*
+ */
+func (this *QTreeView) SetModel(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/) {
+	var convArg0 unsafe.Pointer
+	if model != nil && model.QAbstractItemModel_PTR() != nil {
+		convArg0 = model.QAbstractItemModel_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc1(2108085925, "_ZN9QTreeView8setModelEP18QAbstractItemModel", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtreeview.h:155
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void hideColumn(int)
+
+/*
+ */
+func (this *QTreeView) HideColumn(column int) {
+	rv, err := qtrt.Qtcc1(3246213577, "_ZN9QTreeView10hideColumnEi", qtrt.FFITY_POINTER, this.GetCthis(), column)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtreeview.h:156
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void showColumn(int)
+
+/*
+ */
+func (this *QTreeView) ShowColumn(column int) {
+	rv, err := qtrt.Qtcc1(128929531, "_ZN9QTreeView10showColumnEi", qtrt.FFITY_POINTER, this.GetCthis(), column)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtreeview.h:157
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void expand(const QModelIndex &)
+
+/*
+ */
+func (this *QTreeView) Expand(index qtcore.QModelIndex_ITF) {
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc1(2194613163, "_ZN9QTreeView6expandERK11QModelIndex", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtreeview.h:158
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void collapse(const QModelIndex &)
+
+/*
+ */
+func (this *QTreeView) Collapse(index qtcore.QModelIndex_ITF) {
+	var convArg0 unsafe.Pointer
+	if index != nil && index.QModelIndex_PTR() != nil {
+		convArg0 = index.QModelIndex_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc1(1002132025, "_ZN9QTreeView8collapseERK11QModelIndex", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtreeview.h:159
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void resizeColumnToContents(int)
+
+/*
+ */
+func (this *QTreeView) ResizeColumnToContents(column int) {
+	rv, err := qtrt.Qtcc1(3203152354, "_ZN9QTreeView22resizeColumnToContentsEi", qtrt.FFITY_POINTER, this.GetCthis(), column)
+	qtrt.ErrPrint(err, rv)
+}
+
 func DeleteQTreeView(this *QTreeView) {
 	rv, err := qtrt.Qtcc1(0, "_ZN9QTreeViewD2Ev", qtrt.FFITY_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -112,7 +196,7 @@ func DeleteQTreeView(this *QTreeView) {
 
 //  keep block begin
 
-func init_unused_10159() {
+func init_unused_10163() {
 	if false {
 		reflect.TypeOf(123)
 	}

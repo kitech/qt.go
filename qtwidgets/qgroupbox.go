@@ -150,6 +150,151 @@ func NewQGroupBox1p(title string) *QGroupBox {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qgroupbox.h:66
+// index:0
+// Public Indirect Visibility=Default Availability=Available
+// [8] QString title() const
+
+/*
+ */
+func (this *QGroupBox) Title() string {
+	sretobj := qtrt.Malloc(8) // QString
+	rv, err := qtrt.Qtcc1(3632320991, "_ZNK9QGroupBox5titleEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv = qtrt.VRetype(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtWidgets/qgroupbox.h:67
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setTitle(const QString &)
+
+/*
+ */
+func (this *QGroupBox) SetTitle(title string) {
+	var tmpArg0 = qtcore.NewQString5(title)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.Qtcc1(2779866592, "_ZN9QGroupBox8setTitleERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgroupbox.h:74
+// index:0
+// Public Extend Visibility=Default Availability=Available
+// [1] bool isFlat() const
+
+/*
+ */
+func (this *QGroupBox) IsFlat() bool {
+	rv, err := qtrt.Qtcc1(2002744521, "_ZNK9QGroupBox6isFlatEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qgroupbox.h:75
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setFlat(bool)
+
+/*
+ */
+func (this *QGroupBox) SetFlat(flat bool) {
+	rv, err := qtrt.Qtcc1(2689482562, "_ZN9QGroupBox7setFlatEb", qtrt.FFITY_POINTER, this.GetCthis(), flat)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgroupbox.h:76
+// index:0
+// Public Extend Visibility=Default Availability=Available
+// [1] bool isCheckable() const
+
+/*
+ */
+func (this *QGroupBox) IsCheckable() bool {
+	rv, err := qtrt.Qtcc1(2216875125, "_ZNK9QGroupBox11isCheckableEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qgroupbox.h:77
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setCheckable(bool)
+
+/*
+ */
+func (this *QGroupBox) SetCheckable(checkable bool) {
+	rv, err := qtrt.Qtcc1(2495419631, "_ZN9QGroupBox12setCheckableEb", qtrt.FFITY_POINTER, this.GetCthis(), checkable)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgroupbox.h:78
+// index:0
+// Public Extend Visibility=Default Availability=Available
+// [1] bool isChecked() const
+
+/*
+ */
+func (this *QGroupBox) IsChecked() bool {
+	rv, err := qtrt.Qtcc1(3230016360, "_ZNK9QGroupBox9isCheckedEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qgroupbox.h:81
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setChecked(bool)
+
+/*
+ */
+func (this *QGroupBox) SetChecked(checked bool) {
+	rv, err := qtrt.Qtcc1(2906849573, "_ZN9QGroupBox10setCheckedEb", qtrt.FFITY_POINTER, this.GetCthis(), checked)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgroupbox.h:84
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void clicked(bool)
+
+/*
+ */
+func (this *QGroupBox) Clicked(checked bool) {
+	rv, err := qtrt.Qtcc1(1674438564, "_ZN9QGroupBox7clickedEb", qtrt.FFITY_POINTER, this.GetCthis(), checked)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgroupbox.h:84
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void clicked(bool)
+
+/*
+ */
+func (this *QGroupBox) Clickedp() {
+	// arg: 0, bool=Bool, =Invalid, , Invalid
+	checked := false
+	rv, err := qtrt.Qtcc1(1674438564, "_ZN9QGroupBox7clickedEb", qtrt.FFITY_POINTER, this.GetCthis(), checked)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qgroupbox.h:85
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void toggled(bool)
+
+/*
+ */
+func (this *QGroupBox) Toggled(arg0 bool) {
+	rv, err := qtrt.Qtcc1(1550658212, "_ZN9QGroupBox7toggledEb", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+}
+
 func DeleteQGroupBox(this *QGroupBox) {
 	rv, err := qtrt.Qtcc1(0, "_ZN9QGroupBoxD2Ev", qtrt.FFITY_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -160,7 +305,7 @@ func DeleteQGroupBox(this *QGroupBox) {
 
 //  keep block begin
 
-func init_unused_10127() {
+func init_unused_10131() {
 	if false {
 		reflect.TypeOf(123)
 	}

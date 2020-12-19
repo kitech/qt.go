@@ -22,7 +22,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 12
 */
 // import "C"
 import "unsafe"
@@ -70,7 +70,7 @@ func (this *QSystemTrayIcon) ContextMenu() *QMenu /*777 QMenu **/ {
 
 //  keep block begin
 
-func init_unused_10154() {
+func init_unused_10158() {
 	if false {
 		reflect.TypeOf(123)
 	}

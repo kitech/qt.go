@@ -117,7 +117,7 @@ func QGraphicsEffect_PixmapPadModeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10125() {
+func init_unused_10129() {
 	if false {
 		reflect.TypeOf(123)
 	}

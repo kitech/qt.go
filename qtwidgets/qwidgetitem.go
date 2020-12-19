@@ -150,6 +150,32 @@ func (this *QWidgetItem) IsEmpty() bool {
 	return rv != 0
 }
 
+// /usr/include/qt/QtWidgets/qlayoutitem.h:141
+// index:0
+// Public virtual Direct Visibility=Default Availability=Available
+// [8] QWidget * widget()
+
+/*
+ */
+func (this *QWidgetItem) Widget() *QWidget /*777 QWidget **/ {
+	rv, err := qtrt.Qtcc1(4104848494, "_ZN11QWidgetItem6widgetEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return /*==*/ QWidgetFromptr(unsafe.Pointer(uintptr(rv))) // 444
+}
+
+// /usr/include/qt/QtWidgets/qlayoutitem.h:147
+// index:0
+// Public virtual Direct Visibility=Default Availability=Available
+// [4] int heightForWidth(int) const
+
+/*
+ */
+func (this *QWidgetItem) HeightForWidth(arg0 int) int {
+	rv, err := qtrt.Qtcc1(733877506, "_ZNK11QWidgetItem14heightForWidthEi", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
 func DeleteQWidgetItem(this *QWidgetItem) {
 	rv, err := qtrt.Qtcc1(0, "_ZN11QWidgetItemD2Ev", qtrt.FFITY_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -160,7 +186,7 @@ func DeleteQWidgetItem(this *QWidgetItem) {
 
 //  keep block begin
 
-func init_unused_10103() {
+func init_unused_10107() {
 	if false {
 		reflect.TypeOf(123)
 	}

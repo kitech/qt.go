@@ -68,7 +68,7 @@ func DeleteQButtonGroup(this *QButtonGroup) {
 
 //  keep block begin
 
-func init_unused_10115() {
+func init_unused_10119() {
 	if false {
 		reflect.TypeOf(123)
 	}

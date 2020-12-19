@@ -20,7 +20,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 82
+// extern C begin: 86
 */
 // import "C"
 import "unsafe"
@@ -132,6 +132,255 @@ func (this *QAbstractButton) Text() string {
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:91
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setCheckable(bool)
+
+/*
+ */
+func (this *QAbstractButton) SetCheckable(arg0 bool) {
+	rv, err := qtrt.Qtcc1(2802838592, "_ZN15QAbstractButton12setCheckableEb", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:92
+// index:0
+// Public Extend Visibility=Default Availability=Available
+// [1] bool isCheckable() const
+
+/*
+ */
+func (this *QAbstractButton) IsCheckable() bool {
+	rv, err := qtrt.Qtcc1(1736830991, "_ZNK15QAbstractButton11isCheckableEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:94
+// index:0
+// Public Extend Visibility=Default Availability=Available
+// [1] bool isChecked() const
+
+/*
+ */
+func (this *QAbstractButton) IsChecked() bool {
+	rv, err := qtrt.Qtcc1(3862269578, "_ZNK15QAbstractButton9isCheckedEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:96
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setDown(bool)
+
+/*
+ */
+func (this *QAbstractButton) SetDown(arg0 bool) {
+	rv, err := qtrt.Qtcc1(2815823766, "_ZN15QAbstractButton7setDownEb", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:97
+// index:0
+// Public Extend Visibility=Default Availability=Available
+// [1] bool isDown() const
+
+/*
+ */
+func (this *QAbstractButton) IsDown() bool {
+	rv, err := qtrt.Qtcc1(1977163016, "_ZNK15QAbstractButton6isDownEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:99
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setAutoRepeat(bool)
+
+/*
+ */
+func (this *QAbstractButton) SetAutoRepeat(arg0 bool) {
+	rv, err := qtrt.Qtcc1(1398880692, "_ZN15QAbstractButton13setAutoRepeatEb", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:100
+// index:0
+// Public Extend Visibility=Default Availability=Available
+// [1] bool autoRepeat() const
+
+/*
+ */
+func (this *QAbstractButton) AutoRepeat() bool {
+	rv, err := qtrt.Qtcc1(3492544815, "_ZNK15QAbstractButton10autoRepeatEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:102
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setAutoRepeatDelay(int)
+
+/*
+ */
+func (this *QAbstractButton) SetAutoRepeatDelay(arg0 int) {
+	rv, err := qtrt.Qtcc1(2923678386, "_ZN15QAbstractButton18setAutoRepeatDelayEi", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:103
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [4] int autoRepeatDelay() const
+
+/*
+ */
+func (this *QAbstractButton) AutoRepeatDelay() int {
+	rv, err := qtrt.Qtcc1(4206853868, "_ZNK15QAbstractButton15autoRepeatDelayEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:105
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setAutoRepeatInterval(int)
+
+/*
+ */
+func (this *QAbstractButton) SetAutoRepeatInterval(arg0 int) {
+	rv, err := qtrt.Qtcc1(477848196, "_ZN15QAbstractButton21setAutoRepeatIntervalEi", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:106
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [4] int autoRepeatInterval() const
+
+/*
+ */
+func (this *QAbstractButton) AutoRepeatInterval() int {
+	rv, err := qtrt.Qtcc1(94216004, "_ZNK15QAbstractButton18autoRepeatIntervalEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:108
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setAutoExclusive(bool)
+
+/*
+ */
+func (this *QAbstractButton) SetAutoExclusive(arg0 bool) {
+	rv, err := qtrt.Qtcc1(3712112795, "_ZN15QAbstractButton16setAutoExclusiveEb", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:109
+// index:0
+// Public Extend Visibility=Default Availability=Available
+// [1] bool autoExclusive() const
+
+/*
+ */
+func (this *QAbstractButton) AutoExclusive() bool {
+	rv, err := qtrt.Qtcc1(3776291618, "_ZNK15QAbstractButton13autoExclusiveEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:119
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void toggle()
+
+/*
+ */
+func (this *QAbstractButton) Toggle() {
+	rv, err := qtrt.Qtcc1(3222906074, "_ZN15QAbstractButton6toggleEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:120
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setChecked(bool)
+
+/*
+ */
+func (this *QAbstractButton) SetChecked(arg0 bool) {
+	rv, err := qtrt.Qtcc1(1138771998, "_ZN15QAbstractButton10setCheckedEb", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:123
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void pressed()
+
+/*
+ */
+func (this *QAbstractButton) Pressed() {
+	rv, err := qtrt.Qtcc1(2025725746, "_ZN15QAbstractButton7pressedEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:124
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void released()
+
+/*
+ */
+func (this *QAbstractButton) Released() {
+	rv, err := qtrt.Qtcc1(868254391, "_ZN15QAbstractButton8releasedEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:125
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void clicked(bool)
+
+/*
+ */
+func (this *QAbstractButton) Clicked(checked bool) {
+	rv, err := qtrt.Qtcc1(184427086, "_ZN15QAbstractButton7clickedEb", qtrt.FFITY_POINTER, this.GetCthis(), checked)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:125
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void clicked(bool)
+
+/*
+ */
+func (this *QAbstractButton) Clickedp() {
+	// arg: 0, bool=Bool, =Invalid, , Invalid
+	checked := false
+	rv, err := qtrt.Qtcc1(184427086, "_ZN15QAbstractButton7clickedEb", qtrt.FFITY_POINTER, this.GetCthis(), checked)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qabstractbutton.h:126
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void toggled(bool)
+
+/*
+ */
+func (this *QAbstractButton) Toggled(checked bool) {
+	rv, err := qtrt.Qtcc1(895414094, "_ZN15QAbstractButton7toggledEb", qtrt.FFITY_POINTER, this.GetCthis(), checked)
+	qtrt.ErrPrint(err, rv)
 }
 
 func DeleteQAbstractButton(this *QAbstractButton) {

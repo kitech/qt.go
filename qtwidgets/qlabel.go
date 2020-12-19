@@ -20,7 +20,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 2
+// extern C begin: 12
 */
 // import "C"
 import "unsafe"
@@ -224,6 +224,54 @@ func (this *QLabel) Text() string {
 	return rv3
 }
 
+// /usr/include/qt/QtWidgets/qlabel.h:105
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setWordWrap(bool)
+
+/*
+ */
+func (this *QLabel) SetWordWrap(on bool) {
+	rv, err := qtrt.Qtcc1(405278513, "_ZN6QLabel11setWordWrapEb", qtrt.FFITY_POINTER, this.GetCthis(), on)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qlabel.h:109
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setIndent(int)
+
+/*
+ */
+func (this *QLabel) SetIndent(arg0 int) {
+	rv, err := qtrt.Qtcc1(3589004144, "_ZN6QLabel9setIndentEi", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qlabel.h:125
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setOpenExternalLinks(bool)
+
+/*
+ */
+func (this *QLabel) SetOpenExternalLinks(open bool) {
+	rv, err := qtrt.Qtcc1(496473961, "_ZN6QLabel20setOpenExternalLinksEb", qtrt.FFITY_POINTER, this.GetCthis(), open)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qlabel.h:127
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setTextInteractionFlags(Qt::TextInteractionFlags)
+
+/*
+ */
+func (this *QLabel) SetTextInteractionFlags(flags int) {
+	rv, err := qtrt.Qtcc1(844288563, "_ZN6QLabel23setTextInteractionFlagsE6QFlagsIN2Qt19TextInteractionFlagEE", qtrt.FFITY_POINTER, this.GetCthis(), flags)
+	qtrt.ErrPrint(err, rv)
+}
+
 // /usr/include/qt/QtWidgets/qlabel.h:136
 // index:0
 // Public Ignore Visibility=Default Availability=Available
@@ -235,6 +283,22 @@ func (this *QLabel) SetText(arg0 string) {
 	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc1(1605932811, "_ZN6QLabel7setTextERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qlabel.h:137
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setPixmap(const QPixmap &)
+
+/*
+ */
+func (this *QLabel) SetPixmap(arg0 qtgui.QPixmap_ITF) {
+	var convArg0 unsafe.Pointer
+	if arg0 != nil && arg0.QPixmap_PTR() != nil {
+		convArg0 = arg0.QPixmap_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc1(261774113, "_ZN6QLabel9setPixmapERK7QPixmap", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -284,7 +348,7 @@ func DeleteQLabel(this *QLabel) {
 
 //  keep block begin
 
-func init_unused_10129() {
+func init_unused_10133() {
 	if false {
 		reflect.TypeOf(123)
 	}

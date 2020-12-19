@@ -52,6 +52,25 @@ func (*QVariant) Fromptr(cthis unsafe.Pointer) *QVariant {
 	return QVariantFromptr(cthis)
 }
 
+// /usr/include/qt/QtCore/qvariant.h:208
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QVariant()
+
+/*
+ */
+func (*QVariant) NewForInherit() *QVariant {
+	return NewQVariant()
+}
+func NewQVariant() *QVariant {
+	cthis := qtrt.Malloc(16)
+	rv, err := qtrt.Qtcc1(93067653, "_ZN8QVariantC2Ev", qtrt.FFITY_POINTER, cthis)
+	qtrt.ErrPrint(err, rv)
+	gothis := QVariantFromptr(cthis)
+	qtrt.SetFinalizer(gothis, DeleteQVariant)
+	return gothis
+}
+
 func DeleteQVariant(this *QVariant) {
 	rv, err := qtrt.Qtcc1(0, "_ZN8QVariantD2Ev", qtrt.FFITY_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

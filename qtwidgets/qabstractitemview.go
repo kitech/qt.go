@@ -20,7 +20,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 5
 */
 // import "C"
 import "unsafe"
@@ -379,7 +379,7 @@ func QAbstractItemView_DropIndicatorPositionItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10093() {
+func init_unused_10097() {
 	if false {
 		reflect.TypeOf(123)
 	}

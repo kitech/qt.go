@@ -20,7 +20,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 12
 */
 // import "C"
 import "unsafe"
@@ -150,6 +150,130 @@ func NewQPlainTextEdit1p(text string) *QPlainTextEdit {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qplaintextedit.h:102
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setPlaceholderText(const QString &)
+
+/*
+ */
+func (this *QPlainTextEdit) SetPlaceholderText(placeholderText string) {
+	var tmpArg0 = qtcore.NewQString5(placeholderText)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.Qtcc1(3191527676, "_ZN14QPlainTextEdit18setPlaceholderTextERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qplaintextedit.h:103
+// index:0
+// Public Indirect Visibility=Default Availability=Available
+// [8] QString placeholderText() const
+
+/*
+ */
+func (this *QPlainTextEdit) PlaceholderText() string {
+	sretobj := qtrt.Malloc(8) // QString
+	rv, err := qtrt.Qtcc1(388573047, "_ZNK14QPlainTextEdit15placeholderTextEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv = qtrt.VRetype(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtWidgets/qplaintextedit.h:109
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setReadOnly(bool)
+
+/*
+ */
+func (this *QPlainTextEdit) SetReadOnly(ro bool) {
+	rv, err := qtrt.Qtcc1(3324855670, "_ZN14QPlainTextEdit11setReadOnlyEb", qtrt.FFITY_POINTER, this.GetCthis(), ro)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qplaintextedit.h:111
+// index:0
+// Public Visibility=Default Availability=Available
+// [-2] void setTextInteractionFlags(Qt::TextInteractionFlags)
+
+/*
+ */
+func (this *QPlainTextEdit) SetTextInteractionFlags(flags int) {
+	rv, err := qtrt.Qtcc1(400835228, "_ZN14QPlainTextEdit23setTextInteractionFlagsE6QFlagsIN2Qt19TextInteractionFlagEE", qtrt.FFITY_POINTER, this.GetCthis(), flags)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qplaintextedit.h:143
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setBackgroundVisible(bool)
+
+/*
+ */
+func (this *QPlainTextEdit) SetBackgroundVisible(visible bool) {
+	rv, err := qtrt.Qtcc1(957632610, "_ZN14QPlainTextEdit20setBackgroundVisibleEb", qtrt.FFITY_POINTER, this.GetCthis(), visible)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qplaintextedit.h:157
+// index:0
+// Public inline Indirect Visibility=Default Availability=Available
+// [8] QString toPlainText() const
+
+/*
+ */
+func (this *QPlainTextEdit) ToPlainText() string {
+	sretobj := qtrt.Malloc(8) // QString
+	rv, err := qtrt.Qtcc1(4142553692, "_ZNK14QPlainTextEdit11toPlainTextEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv = qtrt.VRetype(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtWidgets/qplaintextedit.h:160
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void ensureCursorVisible()
+
+/*
+ */
+func (this *QPlainTextEdit) EnsureCursorVisible() {
+	rv, err := qtrt.Qtcc1(3070872959, "_ZN14QPlainTextEdit19ensureCursorVisibleEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qplaintextedit.h:203
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setPlainText(const QString &)
+
+/*
+ */
+func (this *QPlainTextEdit) SetPlainText(text string) {
+	var tmpArg0 = qtcore.NewQString5(text)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.Qtcc1(2634248857, "_ZN14QPlainTextEdit12setPlainTextERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qplaintextedit.h:228
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void textChanged()
+
+/*
+ */
+func (this *QPlainTextEdit) TextChanged() {
+	rv, err := qtrt.Qtcc1(4250366701, "_ZN14QPlainTextEdit11textChangedEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+}
+
 func DeleteQPlainTextEdit(this *QPlainTextEdit) {
 	rv, err := qtrt.Qtcc1(0, "_ZN14QPlainTextEditD2Ev", qtrt.FFITY_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -180,7 +304,7 @@ func QPlainTextEdit_LineWrapModeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10139() {
+func init_unused_10143() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -18,7 +18,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 12
 */
 // import "C"
 import "unsafe"
@@ -346,6 +346,30 @@ func (this *QSystemTrayIcon) ShowMessage1p1(title string, msg string, icon int) 
 	qtrt.ErrPrint(err, rv)
 }
 
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:109
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void activated(QSystemTrayIcon::ActivationReason)
+
+/*
+ */
+func (this *QSystemTrayIcon) Activated(reason int) {
+	rv, err := qtrt.Qtcc1(4062607574, "_ZN15QSystemTrayIcon9activatedENS_16ActivationReasonE", qtrt.FFITY_POINTER, this.GetCthis(), reason)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qsystemtrayicon.h:110
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void messageClicked()
+
+/*
+ */
+func (this *QSystemTrayIcon) MessageClicked() {
+	rv, err := qtrt.Qtcc1(2131465345, "_ZN15QSystemTrayIcon14messageClickedEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+}
+
 func DeleteQSystemTrayIcon(this *QSystemTrayIcon) {
 	rv, err := qtrt.Qtcc1(0, "_ZN15QSystemTrayIconD2Ev", qtrt.FFITY_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -411,7 +435,7 @@ func QSystemTrayIcon_MessageIconItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10153() {
+func init_unused_10157() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -137,7 +137,7 @@ func SetFinalizerObjectFilter(f func(reflect.Value) bool) {
 }
 
 // 直接使用C++ symbols
-var UseCppSymbols bool = false
+const UseCppSymbols = true
 
 /////////
 

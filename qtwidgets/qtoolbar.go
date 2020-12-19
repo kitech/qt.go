@@ -20,7 +20,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 15
+// extern C begin: 17
 */
 // import "C"
 import "unsafe"
@@ -150,6 +150,31 @@ func NewQToolBar1p() *QToolBar {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qtoolbar.h:76
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setMovable(bool)
+
+/*
+ */
+func (this *QToolBar) SetMovable(movable bool) {
+	rv, err := qtrt.Qtcc1(2579160314, "_ZN8QToolBar10setMovableEb", qtrt.FFITY_POINTER, this.GetCthis(), movable)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qtoolbar.h:77
+// index:0
+// Public Extend Visibility=Default Availability=Available
+// [1] bool isMovable() const
+
+/*
+ */
+func (this *QToolBar) IsMovable() bool {
+	rv, err := qtrt.Qtcc1(1223047420, "_ZNK8QToolBar9isMovableEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
 func DeleteQToolBar(this *QToolBar) {
 	rv, err := qtrt.Qtcc1(0, "_ZN8QToolBarD2Ev", qtrt.FFITY_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -160,7 +185,7 @@ func DeleteQToolBar(this *QToolBar) {
 
 //  keep block begin
 
-func init_unused_10155() {
+func init_unused_10159() {
 	if false {
 		reflect.TypeOf(123)
 	}

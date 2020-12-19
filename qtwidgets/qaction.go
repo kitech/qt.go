@@ -148,6 +148,344 @@ func NewQAction1p(text string) *QAction {
 	return gothis
 }
 
+// /usr/include/qt/QtWidgets/qaction.h:106
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setText(const QString &)
+
+/*
+ */
+func (this *QAction) SetText(text string) {
+	var tmpArg0 = qtcore.NewQString5(text)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.Qtcc1(3016118847, "_ZN7QAction7setTextERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:107
+// index:0
+// Public Indirect Visibility=Default Availability=Available
+// [8] QString text() const
+
+/*
+ */
+func (this *QAction) Text() string {
+	sretobj := qtrt.Malloc(8) // QString
+	rv, err := qtrt.Qtcc1(2317398157, "_ZNK7QAction4textEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv = qtrt.VRetype(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:109
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setIconText(const QString &)
+
+/*
+ */
+func (this *QAction) SetIconText(text string) {
+	var tmpArg0 = qtcore.NewQString5(text)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.Qtcc1(4066431650, "_ZN7QAction11setIconTextERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:110
+// index:0
+// Public Indirect Visibility=Default Availability=Available
+// [8] QString iconText() const
+
+/*
+ */
+func (this *QAction) IconText() string {
+	sretobj := qtrt.Malloc(8) // QString
+	rv, err := qtrt.Qtcc1(1536229387, "_ZNK7QAction8iconTextEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv = qtrt.VRetype(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:112
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setToolTip(const QString &)
+
+/*
+ */
+func (this *QAction) SetToolTip(tip string) {
+	var tmpArg0 = qtcore.NewQString5(tip)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.Qtcc1(1685067186, "_ZN7QAction10setToolTipERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:113
+// index:0
+// Public Indirect Visibility=Default Availability=Available
+// [8] QString toolTip() const
+
+/*
+ */
+func (this *QAction) ToolTip() string {
+	sretobj := qtrt.Malloc(8) // QString
+	rv, err := qtrt.Qtcc1(3413091492, "_ZNK7QAction7toolTipEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv = qtrt.VRetype(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:115
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setStatusTip(const QString &)
+
+/*
+ */
+func (this *QAction) SetStatusTip(statusTip string) {
+	var tmpArg0 = qtcore.NewQString5(statusTip)
+	var convArg0 = tmpArg0.GetCthis()
+	rv, err := qtrt.Qtcc1(4184243817, "_ZN7QAction12setStatusTipERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:116
+// index:0
+// Public Indirect Visibility=Default Availability=Available
+// [8] QString statusTip() const
+
+/*
+ */
+func (this *QAction) StatusTip() string {
+	sretobj := qtrt.Malloc(8) // QString
+	rv, err := qtrt.Qtcc1(118887278, "_ZNK7QAction9statusTipEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	rv = qtrt.VRetype(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv3 := rv2.ToUtf8().Data()
+	qtcore.DeleteQString(rv2)
+	return rv3
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:150
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setCheckable(bool)
+
+/*
+ */
+func (this *QAction) SetCheckable(arg0 bool) {
+	rv, err := qtrt.Qtcc1(1026958800, "_ZN7QAction12setCheckableEb", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:151
+// index:0
+// Public Extend Visibility=Default Availability=Available
+// [1] bool isCheckable() const
+
+/*
+ */
+func (this *QAction) IsCheckable() bool {
+	rv, err := qtrt.Qtcc1(3197261506, "_ZNK7QAction11isCheckableEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:156
+// index:0
+// Public Extend Visibility=Default Availability=Available
+// [1] bool isChecked() const
+
+/*
+ */
+func (this *QAction) IsChecked() bool {
+	rv, err := qtrt.Qtcc1(939532047, "_ZNK7QAction9isCheckedEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:158
+// index:0
+// Public Extend Visibility=Default Availability=Available
+// [1] bool isEnabled() const
+
+/*
+ */
+func (this *QAction) IsEnabled() bool {
+	rv, err := qtrt.Qtcc1(4605092, "_ZNK7QAction9isEnabledEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:160
+// index:0
+// Public Extend Visibility=Default Availability=Available
+// [1] bool isVisible() const
+
+/*
+ */
+func (this *QAction) IsVisible() bool {
+	rv, err := qtrt.Qtcc1(3333608945, "_ZNK7QAction9isVisibleEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	return rv != 0
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:187
+// index:0
+// Public inline Ignore Visibility=Default Availability=Available
+// [-2] void trigger()
+
+/*
+ */
+func (this *QAction) Trigger() {
+	rv, err := qtrt.Qtcc1(3248071529, "_ZN7QAction7triggerEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:188
+// index:0
+// Public inline Ignore Visibility=Default Availability=Available
+// [-2] void hover()
+
+/*
+ */
+func (this *QAction) Hover() {
+	rv, err := qtrt.Qtcc1(606202509, "_ZN7QAction5hoverEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:189
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setChecked(bool)
+
+/*
+ */
+func (this *QAction) SetChecked(arg0 bool) {
+	rv, err := qtrt.Qtcc1(3927186894, "_ZN7QAction10setCheckedEb", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:190
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void toggle()
+
+/*
+ */
+func (this *QAction) Toggle() {
+	rv, err := qtrt.Qtcc1(612007024, "_ZN7QAction6toggleEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:191
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setEnabled(bool)
+
+/*
+ */
+func (this *QAction) SetEnabled(arg0 bool) {
+	rv, err := qtrt.Qtcc1(3528607333, "_ZN7QAction10setEnabledEb", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:192
+// index:0
+// Public inline Ignore Visibility=Default Availability=Available
+// [-2] void setDisabled(bool)
+
+/*
+ */
+func (this *QAction) SetDisabled(b bool) {
+	rv, err := qtrt.Qtcc1(964827636, "_ZN7QAction11setDisabledEb", qtrt.FFITY_POINTER, this.GetCthis(), b)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:193
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setVisible(bool)
+
+/*
+ */
+func (this *QAction) SetVisible(arg0 bool) {
+	rv, err := qtrt.Qtcc1(346478384, "_ZN7QAction10setVisibleEb", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:196
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void changed()
+
+/*
+ */
+func (this *QAction) Changed() {
+	rv, err := qtrt.Qtcc1(3892863327, "_ZN7QAction7changedEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:197
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void triggered(bool)
+
+/*
+ */
+func (this *QAction) Triggered(checked bool) {
+	rv, err := qtrt.Qtcc1(3257549264, "_ZN7QAction9triggeredEb", qtrt.FFITY_POINTER, this.GetCthis(), checked)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:197
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void triggered(bool)
+
+/*
+ */
+func (this *QAction) Triggeredp() {
+	// arg: 0, bool=Bool, =Invalid, , Invalid
+	checked := false
+	rv, err := qtrt.Qtcc1(3257549264, "_ZN7QAction9triggeredEb", qtrt.FFITY_POINTER, this.GetCthis(), checked)
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:198
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void hovered()
+
+/*
+ */
+func (this *QAction) Hovered() {
+	rv, err := qtrt.Qtcc1(2538730, "_ZN7QAction7hoveredEv", qtrt.FFITY_POINTER, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+}
+
+// /usr/include/qt/QtWidgets/qaction.h:199
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void toggled(bool)
+
+/*
+ */
+func (this *QAction) Toggled(arg0 bool) {
+	rv, err := qtrt.Qtcc1(62506592, "_ZN7QAction7toggledEb", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
+	qtrt.ErrPrint(err, rv)
+}
+
 func DeleteQAction(this *QAction) {
 	rv, err := qtrt.Qtcc1(0, "_ZN7QActionD2Ev", qtrt.FFITY_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
@@ -236,7 +574,7 @@ func QAction_ActionEventItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10095() {
+func init_unused_10099() {
 	if false {
 		reflect.TypeOf(123)
 	}

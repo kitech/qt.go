@@ -18,7 +18,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 2
+// extern C begin: 6
 */
 // import "C"
 import "unsafe"
@@ -64,7 +64,7 @@ func DeleteQLayoutItem(this *QLayoutItem) {
 
 //  keep block begin
 
-func init_unused_10099() {
+func init_unused_10103() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -20,7 +20,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 8
+// extern C begin: 9
 */
 // import "C"
 import "unsafe"
@@ -483,7 +483,7 @@ func QGraphicsItem_ExtensionItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10123() {
+func init_unused_10127() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -20,7 +20,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 10
 */
 // import "C"
 import "unsafe"
@@ -283,7 +283,7 @@ func DeleteQStackedWidget(this *QStackedWidget) {
 
 //  keep block begin
 
-func init_unused_10149() {
+func init_unused_10153() {
 	if false {
 		reflect.TypeOf(123)
 	}

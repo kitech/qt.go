@@ -18,7 +18,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 0
+// extern C begin: 25
 */
 // import "C"
 import "unsafe"
@@ -268,7 +268,7 @@ func QFrame_StyleMaskItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10089() {
+func init_unused_10093() {
 	if false {
 		reflect.TypeOf(123)
 	}
