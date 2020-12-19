@@ -8,14 +8,14 @@ import (
 	"github.com/kitech/qt.go/qtrt"
 )
 
-func NewQGraphicsItemListFromPointer(cthis unsafe.Pointer) *QGraphicsItemList {
-	return &QGraphicsItemList{&qtrt.CObject{cthis}}
-}
+// func NewQGraphicsItemListFromPointer(cthis unsafe.Pointer) *QGraphicsItemList {
+// 	return &QGraphicsItemList{&qtrt.CObject{cthis}}
+// }
 
 func (this *QGraphicsItemListx) At(i int) *QGraphicsItem {
 	rv, err := qtrt.InvokeQtFunc6("C_QGraphicsItemList_at_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
-	return NewQGraphicsItemFromPointer(unsafe.Pointer(uintptr(rv)))
+	return QGraphicsItemFromptr(unsafe.Pointer(uintptr(rv)))
 }
 
 func (this *QGraphicsItemListx) Count(that *QGraphicsItem) int {

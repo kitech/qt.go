@@ -18,7 +18,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 4
+// extern C begin: 2
 */
 // import "C"
 import "unsafe"
@@ -34,8 +34,8 @@ import "github.com/kitech/qt.go/qtgui"
 //  body block begin
 
 /*
-
  */
+// size 32
 type QVBoxLayout struct {
 	*QBoxLayout
 }
@@ -46,36 +46,14 @@ type QVBoxLayout_ITF interface {
 
 func (ptr *QVBoxLayout) QVBoxLayout_PTR() *QVBoxLayout { return ptr }
 
-func (this *QVBoxLayout) GetCthis() unsafe.Pointer {
-	if this == nil {
-		return nil
-	} else {
-		return this.QBoxLayout.GetCthis()
-	}
-}
-func (this *QVBoxLayout) SetCthis(cthis unsafe.Pointer) {
-	this.QBoxLayout = NewQBoxLayoutFromPointer(cthis)
-}
-func NewQVBoxLayoutFromPointer(cthis unsafe.Pointer) *QVBoxLayout {
-	bcthis0 := NewQBoxLayoutFromPointer(cthis)
+// ignore GetCthis for 1 base
+// ignore SetCthis for 1 base
+func QVBoxLayoutFromptr(cthis unsafe.Pointer) *QVBoxLayout {
+	bcthis0 := QBoxLayoutFromptr(cthis)
 	return &QVBoxLayout{bcthis0}
 }
-func (*QVBoxLayout) NewFromPointer(cthis unsafe.Pointer) *QVBoxLayout {
-	return NewQVBoxLayoutFromPointer(cthis)
-}
-
-// /usr/include/qt/QtWidgets/qboxlayout.h:128
-// index:0
-// Public virtual Visibility=Default Availability=Available
-// [8] const QMetaObject * metaObject() const
-
-/*
-
- */
-func (this *QVBoxLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObject **/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK11QVBoxLayout10metaObjectEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
-	return qtcore.NewQMetaObjectFromPointer(unsafe.Pointer(uintptr(rv))) // 444
+func (*QVBoxLayout) Fromptr(cthis unsafe.Pointer) *QVBoxLayout {
+	return QVBoxLayoutFromptr(cthis)
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:130
@@ -84,15 +62,15 @@ func (this *QVBoxLayout) MetaObject() *qtcore.QMetaObject /*777 const QMetaObjec
 // [-2] void QVBoxLayout()
 
 /*
-
  */
 func (*QVBoxLayout) NewForInherit() *QVBoxLayout {
 	return NewQVBoxLayout()
 }
 func NewQVBoxLayout() *QVBoxLayout {
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QVBoxLayoutC2Ev", qtrt.FFI_TYPE_POINTER)
+	cthis := qtrt.Malloc(32)
+	rv, err := qtrt.Qtcc1(538351151, "_ZN11QVBoxLayoutC2Ev", qtrt.FFITY_POINTER, cthis)
 	qtrt.ErrPrint(err, rv)
-	gothis := NewQVBoxLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	gothis := QVBoxLayoutFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QVBoxLayout")
 	return gothis
 }
@@ -103,7 +81,6 @@ func NewQVBoxLayout() *QVBoxLayout {
 // [-2] void QVBoxLayout(QWidget *)
 
 /*
-
  */
 func (*QVBoxLayout) NewForInherit1(parent QWidget_ITF /*777 QWidget **/) *QVBoxLayout {
 	return NewQVBoxLayout1(parent)
@@ -113,24 +90,16 @@ func NewQVBoxLayout1(parent QWidget_ITF /*777 QWidget **/) *QVBoxLayout {
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QVBoxLayoutC2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	cthis := qtrt.Malloc(32)
+	rv, err := qtrt.Qtcc1(368368412, "_ZN11QVBoxLayoutC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
-	gothis := NewQVBoxLayoutFromPointer(unsafe.Pointer(uintptr(rv)))
+	gothis := QVBoxLayoutFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QVBoxLayout")
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qboxlayout.h:132
-// index:0
-// Public virtual Visibility=Default Availability=Available
-// [-2] void ~QVBoxLayout()
-
-/*
-
- */
 func DeleteQVBoxLayout(this *QVBoxLayout) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN11QVBoxLayoutD2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	qtrt.Cmemset(this.GetCthis(), 9, 32)
+	rv, err := qtrt.Qtcc1(0, "_ZN11QVBoxLayoutD2Ev", qtrt.FFITY_VOID, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	this.SetCthis(nil)
 }
@@ -139,7 +108,7 @@ func DeleteQVBoxLayout(this *QVBoxLayout) {
 
 //  keep block begin
 
-func init_unused_11087() {
+func init_unused_10113() {
 	if false {
 		reflect.TypeOf(123)
 	}

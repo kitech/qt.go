@@ -25,7 +25,7 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  keep block begin
 
-func init_unused_10063() {
+func init_unused_10229() {
 	if false {
 		reflect.TypeOf(123)
 	}
@@ -462,17 +462,17 @@ func (this *QWidgetSet) Operator_minus0() *QWidgetSet {
 	return this
 }
 
-// QList<T> toList()
-func (this *QWidgetSet) ToList0() {
-	// QWidgetSet_toList_0()
-	rv, err := qtrt.InvokeQtFunc6("C_QWidgetSet_toList_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
-	qtrt.ErrPrint(err, rv)
-}
-
 // QList<T> values()
 func (this *QWidgetSet) Values0() {
 	// QWidgetSet_values_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QWidgetSet_values_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
+	qtrt.ErrPrint(err, rv)
+}
+
+// QList<T> toList()
+func (this *QWidgetSet) ToList0() {
+	// QWidgetSet_toList_0()
+	rv, err := qtrt.InvokeQtFunc6("C_QWidgetSet_toList_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 

@@ -18,7 +18,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 13
+// extern C begin: 6
 */
 // import "C"
 import "unsafe"
@@ -34,8 +34,8 @@ import "github.com/kitech/qt.go/qtgui"
 //  body block begin
 
 /*
-
  */
+// size 88
 type QWidgetItemV2 struct {
 	*QWidgetItem
 }
@@ -46,31 +46,22 @@ type QWidgetItemV2_ITF interface {
 
 func (ptr *QWidgetItemV2) QWidgetItemV2_PTR() *QWidgetItemV2 { return ptr }
 
-func (this *QWidgetItemV2) GetCthis() unsafe.Pointer {
-	if this == nil {
-		return nil
-	} else {
-		return this.QWidgetItem.GetCthis()
-	}
-}
-func (this *QWidgetItemV2) SetCthis(cthis unsafe.Pointer) {
-	this.QWidgetItem = NewQWidgetItemFromPointer(cthis)
-}
-func NewQWidgetItemV2FromPointer(cthis unsafe.Pointer) *QWidgetItemV2 {
-	bcthis0 := NewQWidgetItemFromPointer(cthis)
+// ignore GetCthis for 1 base
+// ignore SetCthis for 1 base
+func QWidgetItemV2Fromptr(cthis unsafe.Pointer) *QWidgetItemV2 {
+	bcthis0 := QWidgetItemFromptr(cthis)
 	return &QWidgetItemV2{bcthis0}
 }
-func (*QWidgetItemV2) NewFromPointer(cthis unsafe.Pointer) *QWidgetItemV2 {
-	return NewQWidgetItemV2FromPointer(cthis)
+func (*QWidgetItemV2) Fromptr(cthis unsafe.Pointer) *QWidgetItemV2 {
+	return QWidgetItemV2Fromptr(cthis)
 }
 
-// /usr/include/qt/QtWidgets/qlayoutitem.h:148
+// /usr/include/qt/QtWidgets/qlayoutitem.h:156
 // index:0
 // Public Visibility=Default Availability=Available
 // [-2] void QWidgetItemV2(QWidget *)
 
 /*
-
  */
 func (*QWidgetItemV2) NewForInherit(widget QWidget_ITF /*777 QWidget **/) *QWidgetItemV2 {
 	return NewQWidgetItemV2(widget)
@@ -80,111 +71,76 @@ func NewQWidgetItemV2(widget QWidget_ITF /*777 QWidget **/) *QWidgetItemV2 {
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
-	rv, err := qtrt.InvokeQtFunc6("_ZN13QWidgetItemV2C2EP7QWidget", qtrt.FFI_TYPE_POINTER, convArg0)
+	cthis := qtrt.Malloc(88)
+	rv, err := qtrt.Qtcc1(1692828260, "_ZN13QWidgetItemV2C2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
-	gothis := NewQWidgetItemV2FromPointer(unsafe.Pointer(uintptr(rv)))
+	gothis := QWidgetItemV2Fromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQWidgetItemV2)
 	return gothis
 }
 
-// /usr/include/qt/QtWidgets/qlayoutitem.h:149
+// /usr/include/qt/QtWidgets/qlayoutitem.h:159
 // index:0
-// Public virtual Visibility=Default Availability=Available
-// [-2] void ~QWidgetItemV2()
-
-/*
-
- */
-func DeleteQWidgetItemV2(this *QWidgetItemV2) {
-	rv, err := qtrt.InvokeQtFunc6("_ZN13QWidgetItemV2D2Ev", qtrt.FFI_TYPE_VOID, this.GetCthis())
-	qtrt.Cmemset(this.GetCthis(), 9, 88)
-	qtrt.ErrPrint(err, rv)
-	this.SetCthis(nil)
-}
-
-// /usr/include/qt/QtWidgets/qlayoutitem.h:151
-// index:0
-// Public virtual Visibility=Default Availability=Available
+// Public virtual Direct Visibility=Default Availability=Available
 // [8] QSize sizeHint() const
 
 /*
-Implemented in subclasses to return the preferred size of this item.
-*/
+ */
 func (this *QWidgetItemV2) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK13QWidgetItemV28sizeHintEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.Qtcc1(3325180898, "_ZNK13QWidgetItemV28sizeHintEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := qtcore.QSizeFromptr(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlayoutitem.h:152
+// /usr/include/qt/QtWidgets/qlayoutitem.h:160
 // index:0
-// Public virtual Visibility=Default Availability=Available
+// Public virtual Direct Visibility=Default Availability=Available
 // [8] QSize minimumSize() const
 
 /*
-Implemented in subclasses to return the minimum size of this item.
-*/
+ */
 func (this *QWidgetItemV2) MinimumSize() *qtcore.QSize /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK13QWidgetItemV211minimumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.Qtcc1(3287127018, "_ZNK13QWidgetItemV211minimumSizeEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := qtcore.QSizeFromptr(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlayoutitem.h:153
+// /usr/include/qt/QtWidgets/qlayoutitem.h:161
 // index:0
-// Public virtual Visibility=Default Availability=Available
+// Public virtual Direct Visibility=Default Availability=Available
 // [8] QSize maximumSize() const
 
 /*
-Implemented in subclasses to return the maximum size of this item.
-*/
+ */
 func (this *QWidgetItemV2) MaximumSize() *qtcore.QSize /*123*/ {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK13QWidgetItemV211maximumSizeEv", qtrt.FFI_TYPE_POINTER, this.GetCthis())
+	rv, err := qtrt.Qtcc1(2208492444, "_ZNK13QWidgetItemV211maximumSizeEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.NewQSizeFromPointer(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := qtcore.QSizeFromptr(unsafe.Pointer(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
-// /usr/include/qt/QtWidgets/qlayoutitem.h:154
+// /usr/include/qt/QtWidgets/qlayoutitem.h:162
 // index:0
-// Public virtual Visibility=Default Availability=Available
+// Public virtual Direct Visibility=Default Availability=Available
 // [4] int heightForWidth(int) const
 
 /*
-Returns the preferred height for this layout item, given the width, which is not used in this default implementation.
-
-The default implementation returns -1, indicating that the preferred height is independent of the width of the item. Using the function hasHeightForWidth() will typically be much faster than calling this function and testing for -1.
-
-Reimplement this function in layout managers that support height for width. A typical implementation will look like this:
-
-
-  int MyLayout::heightForWidth(int w) const
-  {
-      if (cache_dirty || cached_width != w) {
-          // not all C++ compilers support "mutable"
-          MyLayout *that = (MyLayout*)this;
-          int h = calculateHeightForWidth(w);
-          that->cached_hfw = h;
-          return h;
-      }
-      return cached_hfw;
-  }
-
-
-
-Caching is strongly recommended; without it layout will take exponential time.
-
-See also hasHeightForWidth().
-*/
+ */
 func (this *QWidgetItemV2) HeightForWidth(width int) int {
-	rv, err := qtrt.InvokeQtFunc6("_ZNK13QWidgetItemV214heightForWidthEi", qtrt.FFI_TYPE_POINTER, this.GetCthis(), width)
+	rv, err := qtrt.Qtcc1(4230616517, "_ZNK13QWidgetItemV214heightForWidthEi", qtrt.FFITY_POINTER, this.GetCthis(), width)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
+func DeleteQWidgetItemV2(this *QWidgetItemV2) {
+	rv, err := qtrt.Qtcc1(0, "_ZN13QWidgetItemV2D2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	qtrt.ErrPrint(err, rv)
+	this.SetCthis(nil)
 }
 
 /*
@@ -218,7 +174,7 @@ func QWidgetItemV2_ItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_11077() {
+func init_unused_10105() {
 	if false {
 		reflect.TypeOf(123)
 	}

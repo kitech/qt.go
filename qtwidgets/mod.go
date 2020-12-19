@@ -47,9 +47,10 @@ func (this *QWidgetListx) SetCthis(cthis unsafe.Pointer) {
 func NewQWidgetListxFromPointer(cthis unsafe.Pointer) *QWidgetListx {
 	return &QWidgetListx{&qtrt.CObject{cthis}}
 }
-func NewQWidgetListFromPointer(cthis unsafe.Pointer) *QWidgetList {
-	return &QWidgetList{&qtrt.CObject{cthis}}
-}
+
+// func NewQWidgetListFromPointer(cthis unsafe.Pointer) *QWidgetList {
+// 	return &QWidgetList{&qtrt.CObject{cthis}}
+// }
 func (*QWidgetListx) NewFromPointer(cthis unsafe.Pointer) *QWidgetListx {
 	return NewQWidgetListxFromPointer(cthis)
 }
@@ -57,7 +58,7 @@ func (*QWidgetListx) NewFromPointer(cthis unsafe.Pointer) *QWidgetListx {
 func (this *QWidgetListx) At(i int) *QWidget {
 	rv, err := qtrt.InvokeQtFunc6("C_QWidgetList_at_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
-	return NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
+	return QWidgetFromptr(unsafe.Pointer(uintptr(rv)))
 }
 
 func (this *QWidgetListx) Count(that *QWidget) int {
@@ -111,7 +112,7 @@ func (*QWidgetSetx) NewFromPointer(cthis unsafe.Pointer) *QWidgetSetx {
 func (this *QWidgetSetx) At(i int) *QWidget {
 	rv, err := qtrt.InvokeQtFunc6("C_QWidgetSet_at_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
-	return NewQWidgetFromPointer(unsafe.Pointer(uintptr(rv)))
+	return QWidgetFromptr(unsafe.Pointer(uintptr(rv)))
 }
 
 func (this *QWidgetSetx) Count(that *QWidget) int {
