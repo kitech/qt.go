@@ -43,9 +43,10 @@ func (this *QWindowListx) SetCthis(cthis unsafe.Pointer) {
 func NewQWindowListxFromPointer(cthis unsafe.Pointer) *QWindowListx {
 	return &QWindowListx{&qtrt.CObject{cthis}}
 }
-func NewQWindowListFromPointer(cthis unsafe.Pointer) *QWindowList {
-	return &QWindowList{&qtrt.CObject{cthis}}
-}
+
+// func NewQWindowListFromPointer(cthis unsafe.Pointer) *QWindowList {
+// 	return &QWindowList{&qtrt.CObject{cthis}}
+// }
 func (*QWindowListx) NewFromPointer(cthis unsafe.Pointer) *QWindowListx {
 	return NewQWindowListxFromPointer(cthis)
 }
@@ -53,7 +54,7 @@ func (*QWindowListx) NewFromPointer(cthis unsafe.Pointer) *QWindowListx {
 func (this *QWindowListx) At(i int) *QWindow {
 	rv, err := qtrt.InvokeQtFunc6("C_QWindowList_at_0", qtrt.FFI_TYPE_POINTER, this.GetCthis(), i)
 	qtrt.ErrPrint(err, rv)
-	return NewQWindowFromPointer(unsafe.Pointer(uintptr(rv)))
+	return QWindowFromptr(unsafe.Pointer(uintptr(rv)))
 }
 
 func (this *QWindowListx) Count(that *QWindow) int {
