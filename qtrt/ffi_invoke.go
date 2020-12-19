@@ -101,9 +101,9 @@ import (
 
 func itype2stype(itype byte) *C.ffi_type {
 	switch itype {
-	case FFI_TYPE_VOID:
+	case FFITY_VOID:
 		return &C.ffi_type_void
-	case FFI_TYPE_POINTER:
+	case FFITY_POINTER:
 		return &C.ffi_type_pointer
 	case FFI_TYPE_INT:
 		return &C.ffi_type_sint32
@@ -323,7 +323,7 @@ func InvokeQtFunc6Var(symname string, retype byte, fixedargc int, args ...interf
 // fix return QSize like pure record, RVO
 func InvokeQtFunc7(symname string, args ...interface{}) (VRetype, error) {
 	addr := GetQtSymAddr(symname)
-	var retype byte = FFI_TYPE_POINTER
+	var retype byte = FFITY_POINTER
 	log.Println("FFI Call:", symname, addr, "retype=", retype, "argc=", len(args))
 
 	var retval unsafe.Pointer = C.calloc(1, 256)
@@ -341,6 +341,26 @@ func Qtcc0(symname string, retype byte, args ...interface{}) (VRetype, error) {
 	if debugFFICall {
 		log.Println("FFI Call:", symname, addr, "retype=", retype, "argc=", len(args))
 	}
+
+	return cc0byaddr2(symname, addr, retype, args...)
+}
+
+// with symbol cache version
+// dont use C_xxx, high level process sret, this,
+func Qtcc1(symcrc uint32, symname string, retype byte, args ...interface{}) (VRetype, error) {
+	var addr unsafe.Pointer
+	addrx, ok := symcache.Load(symcrc)
+	if ok {
+		addr = addrx.(unsafe.Pointer)
+	} else {
+		addr = GetQtSymAddrRaw(symname)
+		symcache.Store(symcrc, addr)
+	}
+
+	if debugFFICall {
+		log.Println("FFI Call:", symname, addr, "retype=", retype, "argc=", len(args))
+	}
+	//
 
 	return cc0byaddr2(symname, addr, retype, args...)
 }
@@ -424,9 +444,7 @@ func GetQtSymAddrRaw(symname string) unsafe.Pointer {
 		}
 		return addr
 	}
-	if debugFFICall {
-		log.Println(fmt.Errorf("Symbol not found: %s", symname))
-	}
+	log.Println(fmt.Errorf("Symbol not found: %s", symname))
 	return nil
 }
 
@@ -441,9 +459,19 @@ func getSymByVTable(ptr unsafe.Pointer, midx int, bidx int) unsafe.Pointer {
 }
 
 func convArgs(args ...interface{}) (argtys []byte, argvals []uint64, argrefps []*reflect.Value) {
-	argtys = make([]byte, 20)
-	argvals = make([]uint64, 20)
-	argrefps = make([]*reflect.Value, 20)
+	/*
+		argtys = make([]byte, 20)
+		argvals = make([]uint64, 20)
+		argrefps = make([]*reflect.Value, 20)
+	*/
+	//*
+	argtys2 := [20]byte{}
+	argvals2 := [20]uint64{}
+	argrefps2 := [20]*reflect.Value{}
+	argtys = argtys2[:]
+	argvals = argvals2[:]
+	argrefps = argrefps2[:]
+	//*/
 	for i, argx := range args {
 		argty, argval, argrefp := convArg(i, argx)
 		argtys[i], argvals[i], argrefps[i] = argty, argval, &argrefp
@@ -507,19 +535,19 @@ func convArg(idx int, argx interface{}) (argty byte, argval uint64, argrefp refl
 		}
 
 	case reflect.Ptr:
-		argty = FFI_TYPE_POINTER
+		argty = FFITY_POINTER
 		argrefp = reflect.New(av.Type())
 		argrefp.Elem().Set(av)
 		argval = refvaluint64(&argrefp)
 
 	case reflect.UnsafePointer:
-		argty = FFI_TYPE_POINTER
+		argty = FFITY_POINTER
 		argrefp = reflect.New(VoidpTy())
 		argrefp.Elem().Set(av)
 		argval = refvaluint64(&argrefp)
 
 	case reflect.String:
-		argty = FFI_TYPE_POINTER
+		argty = FFITY_POINTER
 		argpv := unsafe.Pointer(C.CString(argx.(string))) // TODO free memory
 		argrefp = reflect.New(VoidpTy())
 		argrefp.Elem().Set(reflect.ValueOf(argpv))
@@ -551,7 +579,7 @@ func refvaluint64_(vp *reflect.Value) uint64      { return uint64(refvaluintptr(
 func convRetval(retype byte, retval interface{}) interface{} {
 	refv := reflect.ValueOf(retval)
 	switch retype {
-	case FFI_TYPE_VOID:
+	case FFITY_VOID:
 	case FFI_TYPE_INT:
 		return refv.Convert(IntTy).Interface()
 	case FFI_TYPE_UINT8:
@@ -562,6 +590,7 @@ func convRetval(retype byte, retval interface{}) interface{} {
 	return retval
 }
 
+// TODO deprecated
 const (
 	FFI_TYPE_VOID       = byte(C.FFI_TYPE_VOID)
 	FFI_TYPE_INT        = byte(C.FFI_TYPE_INT)
@@ -579,6 +608,10 @@ const (
 	FFI_TYPE_STRUCT     = byte(C.FFI_TYPE_STRUCT)
 	FFI_TYPE_POINTER    = byte(C.FFI_TYPE_POINTER)
 	// FFI_TYPE_COMPLEX    = byte(C.FFI_TYPE_COMPLEX)
+)
+const (
+	FFITY_VOID    = byte(C.FFI_TYPE_VOID)
+	FFITY_POINTER = byte(C.FFI_TYPE_POINTER)
 )
 
 // func KeepMe() {}
