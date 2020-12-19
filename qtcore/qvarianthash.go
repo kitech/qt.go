@@ -23,7 +23,7 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  keep block begin
 
-func init_unused_10051() {
+func init_unused_10217() {
 	if false {
 		reflect.TypeOf(123)
 	}
@@ -245,13 +245,6 @@ func (this *QVariantHash) Operator_get_index1() *QVariant {
 	return &QVariant{}
 }
 
-// QList<Key> uniqueKeys()
-func (this *QVariantHash) UniqueKeys0() {
-	// QVariantHash_uniqueKeys_0()
-	rv, err := qtrt.InvokeQtFunc6("C_QVariantHash_uniqueKeys_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
-	qtrt.ErrPrint(err, rv)
-}
-
 // QList<Key> keys()
 func (this *QVariantHash) Keys0() {
 	// QVariantHash_keys_0()
@@ -270,6 +263,13 @@ func (this *QVariantHash) Keys1() {
 func (this *QVariantHash) Values0() {
 	// QVariantHash_values_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QVariantHash_values_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
+	qtrt.ErrPrint(err, rv)
+}
+
+// QList<Key> uniqueKeys()
+func (this *QVariantHash) UniqueKeys0() {
+	// QVariantHash_uniqueKeys_0()
+	rv, err := qtrt.InvokeQtFunc6("C_QVariantHash_uniqueKeys_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -461,6 +461,13 @@ func (this *QVariantHash) ConstFind0() {
 func (this *QVariantHash) Insert0() {
 	// QVariantHash_insert_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QVariantHash_insert_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
+	qtrt.ErrPrint(err, rv)
+}
+
+// void insert(const QHash<K, V> &)
+func (this *QVariantHash) Insert1() {
+	// QVariantHash_insert_1()
+	rv, err := qtrt.InvokeQtFunc6("C_QVariantHash_insert_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 

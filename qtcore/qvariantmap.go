@@ -23,7 +23,7 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  keep block begin
 
-func init_unused_10047() {
+func init_unused_10213() {
 	if false {
 		reflect.TypeOf(123)
 	}
@@ -200,13 +200,6 @@ func (this *QVariantMap) Operator_get_index1() *QVariant {
 	return &QVariant{}
 }
 
-// QList<Key> uniqueKeys()
-func (this *QVariantMap) UniqueKeys0() {
-	// QVariantMap_uniqueKeys_0()
-	rv, err := qtrt.InvokeQtFunc6("C_QVariantMap_uniqueKeys_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
-	qtrt.ErrPrint(err, rv)
-}
-
 // QList<Key> keys()
 func (this *QVariantMap) Keys0() {
 	// QVariantMap_keys_0()
@@ -225,6 +218,13 @@ func (this *QVariantMap) Keys1() {
 func (this *QVariantMap) Values0() {
 	// QVariantMap_values_0()
 	rv, err := qtrt.InvokeQtFunc6("C_QVariantMap_values_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
+	qtrt.ErrPrint(err, rv)
+}
+
+// QList<Key> uniqueKeys()
+func (this *QVariantMap) UniqueKeys0() {
+	// QVariantMap_uniqueKeys_0()
+	rv, err := qtrt.InvokeQtFunc6("C_QVariantMap_uniqueKeys_0", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
@@ -476,6 +476,13 @@ func (this *QVariantMap) Insert0() {
 func (this *QVariantMap) Insert1() {
 	// QVariantMap_insert_1()
 	rv, err := qtrt.InvokeQtFunc6("C_QVariantMap_insert_1", qtrt.FFI_TYPE_POINTER, this.Cthis)
+	qtrt.ErrPrint(err, rv)
+}
+
+// void insert(const QMap<Key, T> &)
+func (this *QVariantMap) Insert2() {
+	// QVariantMap_insert_2()
+	rv, err := qtrt.InvokeQtFunc6("C_QVariantMap_insert_2", qtrt.FFI_TYPE_POINTER, this.Cthis)
 	qtrt.ErrPrint(err, rv)
 }
 
