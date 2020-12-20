@@ -45,10 +45,10 @@ func (ptr *QByteArray) QByteArray_PTR() *QByteArray { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QByteArrayFromptr(cthis unsafe.Pointer) *QByteArray {
+func QByteArrayFromptr(cthis Voidptr) *QByteArray {
 	return &QByteArray{&qtrt.CObject{cthis}}
 }
-func (*QByteArray) Fromptr(cthis unsafe.Pointer) *QByteArray {
+func (*QByteArray) Fromptr(cthis Voidptr) *QByteArray {
 	return QByteArrayFromptr(cthis)
 }
 

@@ -48,11 +48,11 @@ func (ptr *QAbstractScrollArea) QAbstractScrollArea_PTR() *QAbstractScrollArea {
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QAbstractScrollAreaFromptr(cthis unsafe.Pointer) *QAbstractScrollArea {
+func QAbstractScrollAreaFromptr(cthis Voidptr) *QAbstractScrollArea {
 	bcthis0 := QFrameFromptr(cthis)
 	return &QAbstractScrollArea{bcthis0}
 }
-func (*QAbstractScrollArea) Fromptr(cthis unsafe.Pointer) *QAbstractScrollArea {
+func (*QAbstractScrollArea) Fromptr(cthis Voidptr) *QAbstractScrollArea {
 	return QAbstractScrollAreaFromptr(cthis)
 }
 

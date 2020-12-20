@@ -50,11 +50,11 @@ func (ptr *QStatusBar) QStatusBar_PTR() *QStatusBar { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QStatusBarFromptr(cthis unsafe.Pointer) *QStatusBar {
+func QStatusBarFromptr(cthis Voidptr) *QStatusBar {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QStatusBar{bcthis0}
 }
-func (*QStatusBar) Fromptr(cthis unsafe.Pointer) *QStatusBar {
+func (*QStatusBar) Fromptr(cthis Voidptr) *QStatusBar {
 	return QStatusBarFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QStatusBar) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QStatusB
 	return NewQStatusBar(parent)
 }
 func NewQStatusBar(parent QWidget_ITF /*777 QWidget **/) *QStatusBar {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QStatusBar) NewForInheritp() *QStatusBar {
 }
 func NewQStatusBarp() *QStatusBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(2740779997, "_ZN10QStatusBarC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -110,7 +110,7 @@ func NewQStatusBarp() *QStatusBar {
 /*
  */
 func (this *QStatusBar) AddWidget(widget QWidget_ITF /*777 QWidget **/, stretch int) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
@@ -126,7 +126,7 @@ func (this *QStatusBar) AddWidget(widget QWidget_ITF /*777 QWidget **/, stretch 
 /*
  */
 func (this *QStatusBar) AddWidgetp(widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
@@ -144,7 +144,7 @@ func (this *QStatusBar) AddWidgetp(widget QWidget_ITF /*777 QWidget **/) {
 /*
  */
 func (this *QStatusBar) InsertWidget(index int, widget QWidget_ITF /*777 QWidget **/, stretch int) int {
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg1 = widget.QWidget_PTR().GetCthis()
 	}
@@ -161,7 +161,7 @@ func (this *QStatusBar) InsertWidget(index int, widget QWidget_ITF /*777 QWidget
 /*
  */
 func (this *QStatusBar) InsertWidgetp(index int, widget QWidget_ITF /*777 QWidget **/) int {
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg1 = widget.QWidget_PTR().GetCthis()
 	}
@@ -180,7 +180,7 @@ func (this *QStatusBar) InsertWidgetp(index int, widget QWidget_ITF /*777 QWidge
 /*
  */
 func (this *QStatusBar) AddPermanentWidget(widget QWidget_ITF /*777 QWidget **/, stretch int) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
@@ -196,7 +196,7 @@ func (this *QStatusBar) AddPermanentWidget(widget QWidget_ITF /*777 QWidget **/,
 /*
  */
 func (this *QStatusBar) AddPermanentWidgetp(widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
@@ -214,7 +214,7 @@ func (this *QStatusBar) AddPermanentWidgetp(widget QWidget_ITF /*777 QWidget **/
 /*
  */
 func (this *QStatusBar) InsertPermanentWidget(index int, widget QWidget_ITF /*777 QWidget **/, stretch int) int {
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg1 = widget.QWidget_PTR().GetCthis()
 	}
@@ -231,7 +231,7 @@ func (this *QStatusBar) InsertPermanentWidget(index int, widget QWidget_ITF /*77
 /*
  */
 func (this *QStatusBar) InsertPermanentWidgetp(index int, widget QWidget_ITF /*777 QWidget **/) int {
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg1 = widget.QWidget_PTR().GetCthis()
 	}
@@ -250,7 +250,7 @@ func (this *QStatusBar) InsertPermanentWidgetp(index int, widget QWidget_ITF /*7
 /*
  */
 func (this *QStatusBar) RemoveWidget(widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
@@ -295,7 +295,7 @@ func (this *QStatusBar) CurrentMessage() string {
 	rv, err := qtrt.Qtcc1(3358295982, "_ZNK10QStatusBar14currentMessageEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3

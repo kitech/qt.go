@@ -46,10 +46,10 @@ func (ptr *QFontInfo) QFontInfo_PTR() *QFontInfo { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QFontInfoFromptr(cthis unsafe.Pointer) *QFontInfo {
+func QFontInfoFromptr(cthis Voidptr) *QFontInfo {
 	return &QFontInfo{&qtrt.CObject{cthis}}
 }
-func (*QFontInfo) Fromptr(cthis unsafe.Pointer) *QFontInfo {
+func (*QFontInfo) Fromptr(cthis Voidptr) *QFontInfo {
 	return QFontInfoFromptr(cthis)
 }
 

@@ -46,11 +46,11 @@ func (ptr *QThread) QThread_PTR() *QThread { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QThreadFromptr(cthis unsafe.Pointer) *QThread {
+func QThreadFromptr(cthis Voidptr) *QThread {
 	bcthis0 := QObjectFromptr(cthis)
 	return &QThread{bcthis0}
 }
-func (*QThread) Fromptr(cthis unsafe.Pointer) *QThread {
+func (*QThread) Fromptr(cthis Voidptr) *QThread {
 	return QThreadFromptr(cthis)
 }
 

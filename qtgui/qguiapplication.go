@@ -47,11 +47,11 @@ func (ptr *QGuiApplication) QGuiApplication_PTR() *QGuiApplication { return ptr 
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QGuiApplicationFromptr(cthis unsafe.Pointer) *QGuiApplication {
+func QGuiApplicationFromptr(cthis Voidptr) *QGuiApplication {
 	bcthis0 := qtcore.QCoreApplicationFromptr(cthis)
 	return &QGuiApplication{bcthis0}
 }
-func (*QGuiApplication) Fromptr(cthis unsafe.Pointer) *QGuiApplication {
+func (*QGuiApplication) Fromptr(cthis Voidptr) *QGuiApplication {
 	return QGuiApplicationFromptr(cthis)
 }
 

@@ -48,11 +48,11 @@ func (ptr *QFrame) QFrame_PTR() *QFrame { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QFrameFromptr(cthis unsafe.Pointer) *QFrame {
+func QFrameFromptr(cthis Voidptr) *QFrame {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QFrame{bcthis0}
 }
-func (*QFrame) Fromptr(cthis unsafe.Pointer) *QFrame {
+func (*QFrame) Fromptr(cthis Voidptr) *QFrame {
 	return QFrameFromptr(cthis)
 }
 
@@ -67,7 +67,7 @@ func (*QFrame) NewForInherit(parent QWidget_ITF /*777 QWidget **/, f int) *QFram
 	return NewQFrame(parent, f)
 }
 func NewQFrame(parent QWidget_ITF /*777 QWidget **/, f int) *QFrame {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -91,7 +91,7 @@ func (*QFrame) NewForInheritp() *QFrame {
 }
 func NewQFramep() *QFrame {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	f := 0
 	cthis := qtrt.Malloc(48)
@@ -113,7 +113,7 @@ func (*QFrame) NewForInheritp1(parent QWidget_ITF /*777 QWidget **/) *QFrame {
 	return NewQFramep1(parent)
 }
 func NewQFramep1(parent QWidget_ITF /*777 QWidget **/) *QFrame {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -175,7 +175,7 @@ func (this *QFrame) FrameWidth() int {
 func (this *QFrame) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc1(2037293193, "_ZNK6QFrame8sizeHintEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.QSizeFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }

@@ -45,10 +45,10 @@ func (ptr *QSize) QSize_PTR() *QSize { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QSizeFromptr(cthis unsafe.Pointer) *QSize {
+func QSizeFromptr(cthis Voidptr) *QSize {
 	return &QSize{&qtrt.CObject{cthis}}
 }
-func (*QSize) Fromptr(cthis unsafe.Pointer) *QSize {
+func (*QSize) Fromptr(cthis Voidptr) *QSize {
 	return QSizeFromptr(cthis)
 }
 

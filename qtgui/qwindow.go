@@ -47,23 +47,23 @@ type QWindow_ITF interface {
 
 func (ptr *QWindow) QWindow_PTR() *QWindow { return ptr }
 
-func (this *QWindow) GetCthis() unsafe.Pointer {
+func (this *QWindow) GetCthis() Voidptr {
 	if this == nil {
 		return nil
 	} else {
 		return this.QObject.GetCthis()
 	}
 }
-func (this *QWindow) SetCthis(cthis unsafe.Pointer) {
+func (this *QWindow) SetCthis(cthis Voidptr) {
 	this.QObject = qtcore.QObjectFromptr(cthis)
 	this.QSurface = QSurfaceFromptr(cthis)
 }
-func QWindowFromptr(cthis unsafe.Pointer) *QWindow {
+func QWindowFromptr(cthis Voidptr) *QWindow {
 	bcthis0 := qtcore.QObjectFromptr(cthis)
 	bcthis1 := QSurfaceFromptr(cthis)
 	return &QWindow{bcthis0, bcthis1}
 }
-func (*QWindow) Fromptr(cthis unsafe.Pointer) *QWindow {
+func (*QWindow) Fromptr(cthis Voidptr) *QWindow {
 	return QWindowFromptr(cthis)
 }
 

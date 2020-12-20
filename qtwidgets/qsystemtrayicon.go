@@ -48,11 +48,11 @@ func (ptr *QSystemTrayIcon) QSystemTrayIcon_PTR() *QSystemTrayIcon { return ptr 
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QSystemTrayIconFromptr(cthis unsafe.Pointer) *QSystemTrayIcon {
+func QSystemTrayIconFromptr(cthis Voidptr) *QSystemTrayIcon {
 	bcthis0 := qtcore.QObjectFromptr(cthis)
 	return &QSystemTrayIcon{bcthis0}
 }
-func (*QSystemTrayIcon) Fromptr(cthis unsafe.Pointer) *QSystemTrayIcon {
+func (*QSystemTrayIcon) Fromptr(cthis Voidptr) *QSystemTrayIcon {
 	return QSystemTrayIconFromptr(cthis)
 }
 
@@ -67,7 +67,7 @@ func (*QSystemTrayIcon) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **
 	return NewQSystemTrayIcon(parent)
 }
 func NewQSystemTrayIcon(parent qtcore.QObject_ITF /*777 QObject **/) *QSystemTrayIcon {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
@@ -91,7 +91,7 @@ func (*QSystemTrayIcon) NewForInheritp() *QSystemTrayIcon {
 }
 func NewQSystemTrayIconp() *QSystemTrayIcon {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(16)
 	rv, err := qtrt.Qtcc1(3284962045, "_ZN15QSystemTrayIconC2EP7QObject", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -112,7 +112,7 @@ func (this *QSystemTrayIcon) Icon() *qtgui.QIcon /*123*/ {
 	rv, err := qtrt.Qtcc1(2914842153, "_ZNK15QSystemTrayIcon4iconEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtgui.QIconFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := qtgui.QIconFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtgui.DeleteQIcon)
 	return rv2
 }
@@ -125,7 +125,7 @@ func (this *QSystemTrayIcon) Icon() *qtgui.QIcon /*123*/ {
 /*
  */
 func (this *QSystemTrayIcon) SetIcon(icon qtgui.QIcon_ITF) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
@@ -145,7 +145,7 @@ func (this *QSystemTrayIcon) ToolTip() string {
 	rv, err := qtrt.Qtcc1(3511699919, "_ZNK15QSystemTrayIcon7toolTipEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -262,7 +262,7 @@ func (this *QSystemTrayIcon) ShowMessage(title string, msg string, icon qtgui.QI
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = qtcore.NewQString5(msg)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 unsafe.Pointer
+	var convArg2 Voidptr
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg2 = icon.QIcon_PTR().GetCthis()
 	}
@@ -282,7 +282,7 @@ func (this *QSystemTrayIcon) ShowMessagep(title string, msg string, icon qtgui.Q
 	var convArg0 = tmpArg0.GetCthis()
 	var tmpArg1 = qtcore.NewQString5(msg)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 unsafe.Pointer
+	var convArg2 Voidptr
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg2 = icon.QIcon_PTR().GetCthis()
 	}

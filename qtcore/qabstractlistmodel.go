@@ -48,11 +48,11 @@ func (ptr *QAbstractListModel) QAbstractListModel_PTR() *QAbstractListModel { re
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QAbstractListModelFromptr(cthis unsafe.Pointer) *QAbstractListModel {
+func QAbstractListModelFromptr(cthis Voidptr) *QAbstractListModel {
 	bcthis0 := QAbstractItemModelFromptr(cthis)
 	return &QAbstractListModel{bcthis0}
 }
-func (*QAbstractListModel) Fromptr(cthis unsafe.Pointer) *QAbstractListModel {
+func (*QAbstractListModel) Fromptr(cthis Voidptr) *QAbstractListModel {
 	return QAbstractListModelFromptr(cthis)
 }
 
@@ -67,7 +67,7 @@ func (*QAbstractListModel) NewForInherit(parent QObject_ITF /*777 QObject **/) *
 	return NewQAbstractListModel(parent)
 }
 func NewQAbstractListModel(parent QObject_ITF /*777 QObject **/) *QAbstractListModel {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
@@ -91,7 +91,7 @@ func (*QAbstractListModel) NewForInheritp() *QAbstractListModel {
 }
 func NewQAbstractListModelp() *QAbstractListModel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(16)
 	rv, err := qtrt.Qtcc1(3627761914, "_ZN18QAbstractListModelC2EP7QObject", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)

@@ -50,11 +50,11 @@ func (ptr *QAbstractButton) QAbstractButton_PTR() *QAbstractButton { return ptr 
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QAbstractButtonFromptr(cthis unsafe.Pointer) *QAbstractButton {
+func QAbstractButtonFromptr(cthis Voidptr) *QAbstractButton {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QAbstractButton{bcthis0}
 }
-func (*QAbstractButton) Fromptr(cthis unsafe.Pointer) *QAbstractButton {
+func (*QAbstractButton) Fromptr(cthis Voidptr) *QAbstractButton {
 	return QAbstractButtonFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QAbstractButton) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QAb
 	return NewQAbstractButton(parent)
 }
 func NewQAbstractButton(parent QWidget_ITF /*777 QWidget **/) *QAbstractButton {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QAbstractButton) NewForInheritp() *QAbstractButton {
 }
 func NewQAbstractButtonp() *QAbstractButton {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(1746901202, "_ZN15QAbstractButtonC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -128,7 +128,7 @@ func (this *QAbstractButton) Text() string {
 	rv, err := qtrt.Qtcc1(786980147, "_ZNK15QAbstractButton4textEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3

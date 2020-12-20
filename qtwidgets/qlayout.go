@@ -48,23 +48,23 @@ type QLayout_ITF interface {
 
 func (ptr *QLayout) QLayout_PTR() *QLayout { return ptr }
 
-func (this *QLayout) GetCthis() unsafe.Pointer {
+func (this *QLayout) GetCthis() Voidptr {
 	if this == nil {
 		return nil
 	} else {
 		return this.QObject.GetCthis()
 	}
 }
-func (this *QLayout) SetCthis(cthis unsafe.Pointer) {
+func (this *QLayout) SetCthis(cthis Voidptr) {
 	this.QObject = qtcore.QObjectFromptr(cthis)
 	this.QLayoutItem = QLayoutItemFromptr(cthis)
 }
-func QLayoutFromptr(cthis unsafe.Pointer) *QLayout {
+func QLayoutFromptr(cthis Voidptr) *QLayout {
 	bcthis0 := qtcore.QObjectFromptr(cthis)
 	bcthis1 := QLayoutItemFromptr(cthis)
 	return &QLayout{bcthis0, bcthis1}
 }
-func (*QLayout) Fromptr(cthis unsafe.Pointer) *QLayout {
+func (*QLayout) Fromptr(cthis Voidptr) *QLayout {
 	return QLayoutFromptr(cthis)
 }
 

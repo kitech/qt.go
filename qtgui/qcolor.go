@@ -46,10 +46,10 @@ func (ptr *QColor) QColor_PTR() *QColor { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QColorFromptr(cthis unsafe.Pointer) *QColor {
+func QColorFromptr(cthis Voidptr) *QColor {
 	return &QColor{&qtrt.CObject{cthis}}
 }
-func (*QColor) Fromptr(cthis unsafe.Pointer) *QColor {
+func (*QColor) Fromptr(cthis Voidptr) *QColor {
 	return QColorFromptr(cthis)
 }
 

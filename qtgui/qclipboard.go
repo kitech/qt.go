@@ -47,11 +47,11 @@ func (ptr *QClipboard) QClipboard_PTR() *QClipboard { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QClipboardFromptr(cthis unsafe.Pointer) *QClipboard {
+func QClipboardFromptr(cthis Voidptr) *QClipboard {
 	bcthis0 := qtcore.QObjectFromptr(cthis)
 	return &QClipboard{bcthis0}
 }
-func (*QClipboard) Fromptr(cthis unsafe.Pointer) *QClipboard {
+func (*QClipboard) Fromptr(cthis Voidptr) *QClipboard {
 	return QClipboardFromptr(cthis)
 }
 

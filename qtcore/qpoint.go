@@ -45,10 +45,10 @@ func (ptr *QPoint) QPoint_PTR() *QPoint { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QPointFromptr(cthis unsafe.Pointer) *QPoint {
+func QPointFromptr(cthis Voidptr) *QPoint {
 	return &QPoint{&qtrt.CObject{cthis}}
 }
-func (*QPoint) Fromptr(cthis unsafe.Pointer) *QPoint {
+func (*QPoint) Fromptr(cthis Voidptr) *QPoint {
 	return QPointFromptr(cthis)
 }
 

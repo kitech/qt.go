@@ -46,10 +46,10 @@ func (ptr *QBrush) QBrush_PTR() *QBrush { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QBrushFromptr(cthis unsafe.Pointer) *QBrush {
+func QBrushFromptr(cthis Voidptr) *QBrush {
 	return &QBrush{&qtrt.CObject{cthis}}
 }
-func (*QBrush) Fromptr(cthis unsafe.Pointer) *QBrush {
+func (*QBrush) Fromptr(cthis Voidptr) *QBrush {
 	return QBrushFromptr(cthis)
 }
 

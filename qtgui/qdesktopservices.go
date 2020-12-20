@@ -46,10 +46,10 @@ func (ptr *QDesktopServices) QDesktopServices_PTR() *QDesktopServices { return p
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QDesktopServicesFromptr(cthis unsafe.Pointer) *QDesktopServices {
+func QDesktopServicesFromptr(cthis Voidptr) *QDesktopServices {
 	return &QDesktopServices{&qtrt.CObject{cthis}}
 }
-func (*QDesktopServices) Fromptr(cthis unsafe.Pointer) *QDesktopServices {
+func (*QDesktopServices) Fromptr(cthis Voidptr) *QDesktopServices {
 	return QDesktopServicesFromptr(cthis)
 }
 
@@ -61,7 +61,7 @@ func (*QDesktopServices) Fromptr(cthis unsafe.Pointer) *QDesktopServices {
 /*
  */
 func (this *QDesktopServices) OpenUrl(url qtcore.QUrl_ITF) bool {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if url != nil && url.QUrl_PTR() != nil {
 		convArg0 = url.QUrl_PTR().GetCthis()
 	}
@@ -85,7 +85,7 @@ func QDesktopServices_OpenUrl(url qtcore.QUrl_ITF) bool {
 func (this *QDesktopServices) SetUrlHandler(scheme string, receiver qtcore.QObject_ITF /*777 QObject **/, method string) {
 	var tmpArg0 = qtcore.NewQString5(scheme)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if receiver != nil && receiver.QObject_PTR() != nil {
 		convArg1 = receiver.QObject_PTR().GetCthis()
 	}

@@ -45,10 +45,10 @@ func (ptr *QRect) QRect_PTR() *QRect { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QRectFromptr(cthis unsafe.Pointer) *QRect {
+func QRectFromptr(cthis Voidptr) *QRect {
 	return &QRect{&qtrt.CObject{cthis}}
 }
-func (*QRect) Fromptr(cthis unsafe.Pointer) *QRect {
+func (*QRect) Fromptr(cthis Voidptr) *QRect {
 	return QRectFromptr(cthis)
 }
 

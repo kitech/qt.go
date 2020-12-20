@@ -46,11 +46,11 @@ func (ptr *QGenericReturnArgument) QGenericReturnArgument_PTR() *QGenericReturnA
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QGenericReturnArgumentFromptr(cthis unsafe.Pointer) *QGenericReturnArgument {
+func QGenericReturnArgumentFromptr(cthis Voidptr) *QGenericReturnArgument {
 	bcthis0 := QGenericArgumentFromptr(cthis)
 	return &QGenericReturnArgument{bcthis0}
 }
-func (*QGenericReturnArgument) Fromptr(cthis unsafe.Pointer) *QGenericReturnArgument {
+func (*QGenericReturnArgument) Fromptr(cthis Voidptr) *QGenericReturnArgument {
 	return QGenericReturnArgumentFromptr(cthis)
 }
 

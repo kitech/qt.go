@@ -45,10 +45,10 @@ func (ptr *QGenericArgument) QGenericArgument_PTR() *QGenericArgument { return p
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QGenericArgumentFromptr(cthis unsafe.Pointer) *QGenericArgument {
+func QGenericArgumentFromptr(cthis Voidptr) *QGenericArgument {
 	return &QGenericArgument{&qtrt.CObject{cthis}}
 }
-func (*QGenericArgument) Fromptr(cthis unsafe.Pointer) *QGenericArgument {
+func (*QGenericArgument) Fromptr(cthis Voidptr) *QGenericArgument {
 	return QGenericArgumentFromptr(cthis)
 }
 

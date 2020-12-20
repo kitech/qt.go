@@ -50,11 +50,11 @@ func (ptr *QDoubleSpinBox) QDoubleSpinBox_PTR() *QDoubleSpinBox { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QDoubleSpinBoxFromptr(cthis unsafe.Pointer) *QDoubleSpinBox {
+func QDoubleSpinBoxFromptr(cthis Voidptr) *QDoubleSpinBox {
 	bcthis0 := QAbstractSpinBoxFromptr(cthis)
 	return &QDoubleSpinBox{bcthis0}
 }
-func (*QDoubleSpinBox) Fromptr(cthis unsafe.Pointer) *QDoubleSpinBox {
+func (*QDoubleSpinBox) Fromptr(cthis Voidptr) *QDoubleSpinBox {
 	return QDoubleSpinBoxFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QDoubleSpinBox) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QDou
 	return NewQDoubleSpinBox(parent)
 }
 func NewQDoubleSpinBox(parent QWidget_ITF /*777 QWidget **/) *QDoubleSpinBox {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QDoubleSpinBox) NewForInheritp() *QDoubleSpinBox {
 }
 func NewQDoubleSpinBoxp() *QDoubleSpinBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(698183486, "_ZN14QDoubleSpinBoxC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -127,7 +127,7 @@ func (this *QDoubleSpinBox) CleanText() string {
 	rv, err := qtrt.Qtcc1(3151881166, "_ZNK14QDoubleSpinBox9cleanTextEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3

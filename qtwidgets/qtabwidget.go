@@ -50,11 +50,11 @@ func (ptr *QTabWidget) QTabWidget_PTR() *QTabWidget { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QTabWidgetFromptr(cthis unsafe.Pointer) *QTabWidget {
+func QTabWidgetFromptr(cthis Voidptr) *QTabWidget {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QTabWidget{bcthis0}
 }
-func (*QTabWidget) Fromptr(cthis unsafe.Pointer) *QTabWidget {
+func (*QTabWidget) Fromptr(cthis Voidptr) *QTabWidget {
 	return QTabWidgetFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QTabWidget) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QTabWidg
 	return NewQTabWidget(parent)
 }
 func NewQTabWidget(parent QWidget_ITF /*777 QWidget **/) *QTabWidget {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QTabWidget) NewForInheritp() *QTabWidget {
 }
 func NewQTabWidgetp() *QTabWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(2398945872, "_ZN10QTabWidgetC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -110,7 +110,7 @@ func NewQTabWidgetp() *QTabWidget {
 /*
  */
 func (this *QTabWidget) AddTab(widget QWidget_ITF /*777 QWidget **/, arg1 string) int {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
@@ -129,7 +129,7 @@ func (this *QTabWidget) AddTab(widget QWidget_ITF /*777 QWidget **/, arg1 string
 /*
  */
 func (this *QTabWidget) InsertTab(index int, widget QWidget_ITF /*777 QWidget **/, arg2 string) int {
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg1 = widget.QWidget_PTR().GetCthis()
 	}
@@ -214,7 +214,7 @@ func (this *QTabWidget) TabText(index int) string {
 	rv, err := qtrt.Qtcc1(3660912747, "_ZNK10QTabWidget7tabTextEi", qtrt.FFITY_POINTER, sretobj, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -257,7 +257,7 @@ func (this *QTabWidget) CurrentIndex() int {
 func (this *QTabWidget) CurrentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.Qtcc1(1593011613, "_ZNK10QTabWidget13currentWidgetEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QWidgetFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QWidgetFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qtabwidget.h:106
@@ -270,7 +270,7 @@ func (this *QTabWidget) CurrentWidget() *QWidget /*777 QWidget **/ {
 func (this *QTabWidget) Widget(index int) *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.Qtcc1(1033250205, "_ZNK10QTabWidget6widgetEi", qtrt.FFITY_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QWidgetFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QWidgetFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qtabwidget.h:107
@@ -281,7 +281,7 @@ func (this *QTabWidget) Widget(index int) *QWidget /*777 QWidget **/ {
 /*
  */
 func (this *QTabWidget) IndexOf(widget QWidget_ITF /*777 QWidget **/) int {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
@@ -373,7 +373,7 @@ func (this *QTabWidget) SetCurrentIndex(index int) {
 /*
  */
 func (this *QTabWidget) SetCurrentWidget(widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}

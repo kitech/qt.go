@@ -50,11 +50,11 @@ func (ptr *QListView) QListView_PTR() *QListView { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QListViewFromptr(cthis unsafe.Pointer) *QListView {
+func QListViewFromptr(cthis Voidptr) *QListView {
 	bcthis0 := QAbstractItemViewFromptr(cthis)
 	return &QListView{bcthis0}
 }
-func (*QListView) Fromptr(cthis unsafe.Pointer) *QListView {
+func (*QListView) Fromptr(cthis Voidptr) *QListView {
 	return QListViewFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QListView) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QListView
 	return NewQListView(parent)
 }
 func NewQListView(parent QWidget_ITF /*777 QWidget **/) *QListView {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QListView) NewForInheritp() *QListView {
 }
 func NewQListViewp() *QListView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(4267936992, "_ZN9QListViewC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)

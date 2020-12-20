@@ -50,11 +50,11 @@ func (ptr *QMenu) QMenu_PTR() *QMenu { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QMenuFromptr(cthis unsafe.Pointer) *QMenu {
+func QMenuFromptr(cthis Voidptr) *QMenu {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QMenu{bcthis0}
 }
-func (*QMenu) Fromptr(cthis unsafe.Pointer) *QMenu {
+func (*QMenu) Fromptr(cthis Voidptr) *QMenu {
 	return QMenuFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QMenu) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QMenu {
 	return NewQMenu(parent)
 }
 func NewQMenu(parent QWidget_ITF /*777 QWidget **/) *QMenu {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QMenu) NewForInheritp() *QMenu {
 }
 func NewQMenup() *QMenu {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(32748694, "_ZN5QMenuC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -115,7 +115,7 @@ func (*QMenu) NewForInherit1(title string, parent QWidget_ITF /*777 QWidget **/)
 func NewQMenu1(title string, parent QWidget_ITF /*777 QWidget **/) *QMenu {
 	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
@@ -141,7 +141,7 @@ func NewQMenu1p(title string) *QMenu {
 	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(2658403316, "_ZN5QMenuC2ERK7QStringP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -162,7 +162,7 @@ func (this *QMenu) AddAction(text string) *QAction /*777 QAction **/ {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc1(1698034204, "_ZN5QMenu9addActionERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QActionFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QActionFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:152
@@ -173,13 +173,13 @@ func (this *QMenu) AddAction(text string) *QAction /*777 QAction **/ {
 /*
  */
 func (this *QMenu) AddMenu(menu QMenu_ITF /*777 QMenu **/) *QAction /*777 QAction **/ {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if menu != nil && menu.QMenu_PTR() != nil {
 		convArg0 = menu.QMenu_PTR().GetCthis()
 	}
 	rv, err := qtrt.Qtcc1(4017241996, "_ZN5QMenu7addMenuEPS_", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QActionFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QActionFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:153
@@ -194,7 +194,7 @@ func (this *QMenu) AddMenu1(title string) *QMenu /*777 QMenu **/ {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc1(2540271396, "_ZN5QMenu7addMenuERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QMenuFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QMenuFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:156
@@ -207,7 +207,7 @@ func (this *QMenu) AddMenu1(title string) *QMenu /*777 QMenu **/ {
 func (this *QMenu) AddSeparator() *QAction /*777 QAction **/ {
 	rv, err := qtrt.Qtcc1(3779268459, "_ZN5QMenu12addSeparatorEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QActionFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QActionFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:166
@@ -247,7 +247,7 @@ func (this *QMenu) Title() string {
 	rv, err := qtrt.Qtcc1(2610552010, "_ZNK5QMenu5titleEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -299,7 +299,7 @@ func (this *QMenu) AboutToHide() {
 /*
  */
 func (this *QMenu) Triggered(action QAction_ITF /*777 QAction **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if action != nil && action.QAction_PTR() != nil {
 		convArg0 = action.QAction_PTR().GetCthis()
 	}
@@ -315,7 +315,7 @@ func (this *QMenu) Triggered(action QAction_ITF /*777 QAction **/) {
 /*
  */
 func (this *QMenu) Hovered(action QAction_ITF /*777 QAction **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if action != nil && action.QAction_PTR() != nil {
 		convArg0 = action.QAction_PTR().GetCthis()
 	}

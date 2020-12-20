@@ -45,10 +45,10 @@ func (ptr *QMetaEnum) QMetaEnum_PTR() *QMetaEnum { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QMetaEnumFromptr(cthis unsafe.Pointer) *QMetaEnum {
+func QMetaEnumFromptr(cthis Voidptr) *QMetaEnum {
 	return &QMetaEnum{&qtrt.CObject{cthis}}
 }
-func (*QMetaEnum) Fromptr(cthis unsafe.Pointer) *QMetaEnum {
+func (*QMetaEnum) Fromptr(cthis Voidptr) *QMetaEnum {
 	return QMetaEnumFromptr(cthis)
 }
 

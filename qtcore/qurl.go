@@ -45,10 +45,10 @@ func (ptr *QUrl) QUrl_PTR() *QUrl { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QUrlFromptr(cthis unsafe.Pointer) *QUrl {
+func QUrlFromptr(cthis Voidptr) *QUrl {
 	return &QUrl{&qtrt.CObject{cthis}}
 }
-func (*QUrl) Fromptr(cthis unsafe.Pointer) *QUrl {
+func (*QUrl) Fromptr(cthis Voidptr) *QUrl {
 	return QUrlFromptr(cthis)
 }
 

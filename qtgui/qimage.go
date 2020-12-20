@@ -47,11 +47,11 @@ func (ptr *QImage) QImage_PTR() *QImage { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QImageFromptr(cthis unsafe.Pointer) *QImage {
+func QImageFromptr(cthis Voidptr) *QImage {
 	bcthis0 := QPaintDeviceFromptr(cthis)
 	return &QImage{bcthis0}
 }
-func (*QImage) Fromptr(cthis unsafe.Pointer) *QImage {
+func (*QImage) Fromptr(cthis Voidptr) *QImage {
 	return QImageFromptr(cthis)
 }
 
@@ -85,7 +85,7 @@ func (*QImage) NewForInherit1(size qtcore.QSize_ITF, format int) *QImage {
 	return NewQImage1(size, format)
 }
 func NewQImage1(size qtcore.QSize_ITF, format int) *QImage {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if size != nil && size.QSize_PTR() != nil {
 		convArg0 = size.QSize_PTR().GetCthis()
 	}

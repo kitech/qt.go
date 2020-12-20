@@ -45,10 +45,10 @@ func (ptr *QMetaMethod) QMetaMethod_PTR() *QMetaMethod { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QMetaMethodFromptr(cthis unsafe.Pointer) *QMetaMethod {
+func QMetaMethodFromptr(cthis Voidptr) *QMetaMethod {
 	return &QMetaMethod{&qtrt.CObject{cthis}}
 }
-func (*QMetaMethod) Fromptr(cthis unsafe.Pointer) *QMetaMethod {
+func (*QMetaMethod) Fromptr(cthis Voidptr) *QMetaMethod {
 	return QMetaMethodFromptr(cthis)
 }
 
@@ -64,7 +64,7 @@ func (this *QMetaMethod) MethodSignature() *QByteArray /*123*/ {
 	rv, err := qtrt.Qtcc1(2549705587, "_ZNK11QMetaMethod15methodSignatureEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := /*==*/ QByteArrayFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := /*==*/ QByteArrayFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
@@ -81,7 +81,7 @@ func (this *QMetaMethod) Name() *QByteArray /*123*/ {
 	rv, err := qtrt.Qtcc1(2756351335, "_ZNK11QMetaMethod4nameEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := /*==*/ QByteArrayFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := /*==*/ QByteArrayFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
@@ -238,7 +238,7 @@ func (this *QMetaMethod) Revision() int {
 func (this *QMetaMethod) EnclosingMetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.Qtcc1(2832786517, "_ZNK11QMetaMethod19enclosingMetaObjectEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QMetaObjectFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QMetaObjectFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 func DeleteQMetaMethod(this *QMetaMethod) {

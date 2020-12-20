@@ -74,6 +74,7 @@ func (this *CObject) GetCthis() Voidptr {
 func (this *CObject) SetCthis(cthis Voidptr) {
 	this.Cthis = cthis
 }
+func (this *CObject) Addr() Voidptr { return Voidptr(&this.Cthis) }
 
 // some fixed internal names
 const GetCthisName = "GetCthis"

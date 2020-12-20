@@ -50,11 +50,11 @@ func (ptr *QTabBar) QTabBar_PTR() *QTabBar { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QTabBarFromptr(cthis unsafe.Pointer) *QTabBar {
+func QTabBarFromptr(cthis Voidptr) *QTabBar {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QTabBar{bcthis0}
 }
-func (*QTabBar) Fromptr(cthis unsafe.Pointer) *QTabBar {
+func (*QTabBar) Fromptr(cthis Voidptr) *QTabBar {
 	return QTabBarFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QTabBar) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QTabBar {
 	return NewQTabBar(parent)
 }
 func NewQTabBar(parent QWidget_ITF /*777 QWidget **/) *QTabBar {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QTabBar) NewForInheritp() *QTabBar {
 }
 func NewQTabBarp() *QTabBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(963516406, "_ZN7QTabBarC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -218,7 +218,7 @@ func (this *QTabBar) TabText(index int) string {
 	rv, err := qtrt.Qtcc1(438043380, "_ZNK7QTabBar7tabTextEi", qtrt.FFITY_POINTER, sretobj, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3

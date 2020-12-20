@@ -45,10 +45,10 @@ func (ptr *QMetaClassInfo) QMetaClassInfo_PTR() *QMetaClassInfo { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QMetaClassInfoFromptr(cthis unsafe.Pointer) *QMetaClassInfo {
+func QMetaClassInfoFromptr(cthis Voidptr) *QMetaClassInfo {
 	return &QMetaClassInfo{&qtrt.CObject{cthis}}
 }
-func (*QMetaClassInfo) Fromptr(cthis unsafe.Pointer) *QMetaClassInfo {
+func (*QMetaClassInfo) Fromptr(cthis Voidptr) *QMetaClassInfo {
 	return QMetaClassInfoFromptr(cthis)
 }
 

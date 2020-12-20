@@ -48,11 +48,11 @@ func (ptr *QApplication) QApplication_PTR() *QApplication { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QApplicationFromptr(cthis unsafe.Pointer) *QApplication {
+func QApplicationFromptr(cthis Voidptr) *QApplication {
 	bcthis0 := qtgui.QGuiApplicationFromptr(cthis)
 	return &QApplication{bcthis0}
 }
-func (*QApplication) Fromptr(cthis unsafe.Pointer) *QApplication {
+func (*QApplication) Fromptr(cthis Voidptr) *QApplication {
 	return QApplicationFromptr(cthis)
 }
 
@@ -122,11 +122,11 @@ func QApplication_Beep() {
 /*
  */
 func (this *QApplication) FocusChanged(old QWidget_ITF /*777 QWidget **/, now QWidget_ITF /*777 QWidget **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if old != nil && old.QWidget_PTR() != nil {
 		convArg0 = old.QWidget_PTR().GetCthis()
 	}
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if now != nil && now.QWidget_PTR() != nil {
 		convArg1 = now.QWidget_PTR().GetCthis()
 	}
@@ -146,7 +146,7 @@ func (this *QApplication) StyleSheet() string {
 	rv, err := qtrt.Qtcc1(306547508, "_ZNK12QApplication10styleSheetEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3

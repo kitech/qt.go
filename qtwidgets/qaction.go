@@ -48,11 +48,11 @@ func (ptr *QAction) QAction_PTR() *QAction { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QActionFromptr(cthis unsafe.Pointer) *QAction {
+func QActionFromptr(cthis Voidptr) *QAction {
 	bcthis0 := qtcore.QObjectFromptr(cthis)
 	return &QAction{bcthis0}
 }
-func (*QAction) Fromptr(cthis unsafe.Pointer) *QAction {
+func (*QAction) Fromptr(cthis Voidptr) *QAction {
 	return QActionFromptr(cthis)
 }
 
@@ -67,7 +67,7 @@ func (*QAction) NewForInherit(parent qtcore.QObject_ITF /*777 QObject **/) *QAct
 	return NewQAction(parent)
 }
 func NewQAction(parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
@@ -91,7 +91,7 @@ func (*QAction) NewForInheritp() *QAction {
 }
 func NewQActionp() *QAction {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(16)
 	rv, err := qtrt.Qtcc1(218008137, "_ZN7QActionC2EP7QObject", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -113,7 +113,7 @@ func (*QAction) NewForInherit1(text string, parent qtcore.QObject_ITF /*777 QObj
 func NewQAction1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
 	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg1 = parent.QObject_PTR().GetCthis()
 	}
@@ -139,7 +139,7 @@ func NewQAction1p(text string) *QAction {
 	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QObject *=Pointer, QObject=Record, , Invalid
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	cthis := qtrt.Malloc(16)
 	rv, err := qtrt.Qtcc1(237064025, "_ZN7QActionC2ERK7QStringP7QObject", qtrt.FFITY_POINTER, cthis, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -174,7 +174,7 @@ func (this *QAction) Text() string {
 	rv, err := qtrt.Qtcc1(2317398157, "_ZNK7QAction4textEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -206,7 +206,7 @@ func (this *QAction) IconText() string {
 	rv, err := qtrt.Qtcc1(1536229387, "_ZNK7QAction8iconTextEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -238,7 +238,7 @@ func (this *QAction) ToolTip() string {
 	rv, err := qtrt.Qtcc1(3413091492, "_ZNK7QAction7toolTipEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -270,7 +270,7 @@ func (this *QAction) StatusTip() string {
 	rv, err := qtrt.Qtcc1(118887278, "_ZNK7QAction9statusTipEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3

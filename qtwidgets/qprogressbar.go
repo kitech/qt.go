@@ -50,11 +50,11 @@ func (ptr *QProgressBar) QProgressBar_PTR() *QProgressBar { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QProgressBarFromptr(cthis unsafe.Pointer) *QProgressBar {
+func QProgressBarFromptr(cthis Voidptr) *QProgressBar {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QProgressBar{bcthis0}
 }
-func (*QProgressBar) Fromptr(cthis unsafe.Pointer) *QProgressBar {
+func (*QProgressBar) Fromptr(cthis Voidptr) *QProgressBar {
 	return QProgressBarFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QProgressBar) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QProgr
 	return NewQProgressBar(parent)
 }
 func NewQProgressBar(parent QWidget_ITF /*777 QWidget **/) *QProgressBar {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QProgressBar) NewForInheritp() *QProgressBar {
 }
 func NewQProgressBarp() *QProgressBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(572852642, "_ZN12QProgressBarC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -153,7 +153,7 @@ func (this *QProgressBar) Text() string {
 	rv, err := qtrt.Qtcc1(4022741238, "_ZNK12QProgressBar4textEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3

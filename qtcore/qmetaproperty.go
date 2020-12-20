@@ -45,10 +45,10 @@ func (ptr *QMetaProperty) QMetaProperty_PTR() *QMetaProperty { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QMetaPropertyFromptr(cthis unsafe.Pointer) *QMetaProperty {
+func QMetaPropertyFromptr(cthis Voidptr) *QMetaProperty {
 	return &QMetaProperty{&qtrt.CObject{cthis}}
 }
-func (*QMetaProperty) Fromptr(cthis unsafe.Pointer) *QMetaProperty {
+func (*QMetaProperty) Fromptr(cthis Voidptr) *QMetaProperty {
 	return QMetaPropertyFromptr(cthis)
 }
 

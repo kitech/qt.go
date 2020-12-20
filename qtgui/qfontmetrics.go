@@ -46,10 +46,10 @@ func (ptr *QFontMetrics) QFontMetrics_PTR() *QFontMetrics { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QFontMetricsFromptr(cthis unsafe.Pointer) *QFontMetrics {
+func QFontMetricsFromptr(cthis Voidptr) *QFontMetrics {
 	return &QFontMetrics{&qtrt.CObject{cthis}}
 }
-func (*QFontMetrics) Fromptr(cthis unsafe.Pointer) *QFontMetrics {
+func (*QFontMetrics) Fromptr(cthis Voidptr) *QFontMetrics {
 	return QFontMetricsFromptr(cthis)
 }
 

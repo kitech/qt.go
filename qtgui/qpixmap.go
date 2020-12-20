@@ -47,11 +47,11 @@ func (ptr *QPixmap) QPixmap_PTR() *QPixmap { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QPixmapFromptr(cthis unsafe.Pointer) *QPixmap {
+func QPixmapFromptr(cthis Voidptr) *QPixmap {
 	bcthis0 := QPaintDeviceFromptr(cthis)
 	return &QPixmap{bcthis0}
 }
-func (*QPixmap) Fromptr(cthis unsafe.Pointer) *QPixmap {
+func (*QPixmap) Fromptr(cthis Voidptr) *QPixmap {
 	return QPixmapFromptr(cthis)
 }
 

@@ -46,10 +46,10 @@ func (ptr *QFont) QFont_PTR() *QFont { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QFontFromptr(cthis unsafe.Pointer) *QFont {
+func QFontFromptr(cthis Voidptr) *QFont {
 	return &QFont{&qtrt.CObject{cthis}}
 }
-func (*QFont) Fromptr(cthis unsafe.Pointer) *QFont {
+func (*QFont) Fromptr(cthis Voidptr) *QFont {
 	return QFontFromptr(cthis)
 }
 
@@ -161,7 +161,7 @@ func (this *QFont) Family() string {
 	rv, err := qtrt.Qtcc1(2393185171, "_ZNK5QFont6familyEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -193,7 +193,7 @@ func (this *QFont) StyleName() string {
 	rv, err := qtrt.Qtcc1(2670374555, "_ZNK5QFont9styleNameEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3

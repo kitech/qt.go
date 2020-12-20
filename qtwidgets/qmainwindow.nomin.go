@@ -47,7 +47,7 @@ import "github.com/kitech/qt.go/qtgui"
 func (this *QMainWindow) MenuBar() *QMenuBar /*777 QMenuBar **/ {
 	rv, err := qtrt.Qtcc1(3966983917, "_ZNK11QMainWindow7menuBarEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QMenuBarFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QMenuBarFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmainwindow.h:127
@@ -58,7 +58,7 @@ func (this *QMainWindow) MenuBar() *QMenuBar /*777 QMenuBar **/ {
 /*
  */
 func (this *QMainWindow) SetMenuBar(menubar QMenuBar_ITF /*777 QMenuBar **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if menubar != nil && menubar.QMenuBar_PTR() != nil {
 		convArg0 = menubar.QMenuBar_PTR().GetCthis()
 	}
@@ -76,7 +76,7 @@ func (this *QMainWindow) SetMenuBar(menubar QMenuBar_ITF /*777 QMenuBar **/) {
 func (this *QMainWindow) MenuWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.Qtcc1(350857657, "_ZNK11QMainWindow10menuWidgetEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QWidgetFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QWidgetFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmainwindow.h:130
@@ -87,7 +87,7 @@ func (this *QMainWindow) MenuWidget() *QWidget /*777 QWidget **/ {
 /*
  */
 func (this *QMainWindow) SetMenuWidget(menubar QWidget_ITF /*777 QWidget **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if menubar != nil && menubar.QWidget_PTR() != nil {
 		convArg0 = menubar.QWidget_PTR().GetCthis()
 	}
@@ -105,7 +105,7 @@ func (this *QMainWindow) SetMenuWidget(menubar QWidget_ITF /*777 QWidget **/) {
 func (this *QMainWindow) StatusBar() *QStatusBar /*777 QStatusBar **/ {
 	rv, err := qtrt.Qtcc1(1994287522, "_ZNK11QMainWindow9statusBarEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QStatusBarFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QStatusBarFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmainwindow.h:135
@@ -116,7 +116,7 @@ func (this *QMainWindow) StatusBar() *QStatusBar /*777 QStatusBar **/ {
 /*
  */
 func (this *QMainWindow) SetStatusBar(statusbar QStatusBar_ITF /*777 QStatusBar **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if statusbar != nil && statusbar.QStatusBar_PTR() != nil {
 		convArg0 = statusbar.QStatusBar_PTR().GetCthis()
 	}
@@ -136,7 +136,7 @@ func (this *QMainWindow) AddToolBar(title string) *QToolBar /*777 QToolBar **/ {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc1(4007182669, "_ZN11QMainWindow10addToolBarERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QToolBarFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QToolBarFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 //  body block end

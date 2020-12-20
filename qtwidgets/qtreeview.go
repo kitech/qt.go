@@ -50,11 +50,11 @@ func (ptr *QTreeView) QTreeView_PTR() *QTreeView { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QTreeViewFromptr(cthis unsafe.Pointer) *QTreeView {
+func QTreeViewFromptr(cthis Voidptr) *QTreeView {
 	bcthis0 := QAbstractItemViewFromptr(cthis)
 	return &QTreeView{bcthis0}
 }
-func (*QTreeView) Fromptr(cthis unsafe.Pointer) *QTreeView {
+func (*QTreeView) Fromptr(cthis Voidptr) *QTreeView {
 	return QTreeViewFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QTreeView) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QTreeView
 	return NewQTreeView(parent)
 }
 func NewQTreeView(parent QWidget_ITF /*777 QWidget **/) *QTreeView {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QTreeView) NewForInheritp() *QTreeView {
 }
 func NewQTreeViewp() *QTreeView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(2330190834, "_ZN9QTreeViewC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -110,7 +110,7 @@ func NewQTreeViewp() *QTreeView {
 /*
  */
 func (this *QTreeView) SetModel(model qtcore.QAbstractItemModel_ITF /*777 QAbstractItemModel **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if model != nil && model.QAbstractItemModel_PTR() != nil {
 		convArg0 = model.QAbstractItemModel_PTR().GetCthis()
 	}
@@ -150,7 +150,7 @@ func (this *QTreeView) ShowColumn(column int) {
 /*
  */
 func (this *QTreeView) Expand(index qtcore.QModelIndex_ITF) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
 	}
@@ -166,7 +166,7 @@ func (this *QTreeView) Expand(index qtcore.QModelIndex_ITF) {
 /*
  */
 func (this *QTreeView) Collapse(index qtcore.QModelIndex_ITF) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if index != nil && index.QModelIndex_PTR() != nil {
 		convArg0 = index.QModelIndex_PTR().GetCthis()
 	}

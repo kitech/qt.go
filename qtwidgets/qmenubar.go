@@ -50,11 +50,11 @@ func (ptr *QMenuBar) QMenuBar_PTR() *QMenuBar { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QMenuBarFromptr(cthis unsafe.Pointer) *QMenuBar {
+func QMenuBarFromptr(cthis Voidptr) *QMenuBar {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QMenuBar{bcthis0}
 }
-func (*QMenuBar) Fromptr(cthis unsafe.Pointer) *QMenuBar {
+func (*QMenuBar) Fromptr(cthis Voidptr) *QMenuBar {
 	return QMenuBarFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QMenuBar) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QMenuBar {
 	return NewQMenuBar(parent)
 }
 func NewQMenuBar(parent QWidget_ITF /*777 QWidget **/) *QMenuBar {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QMenuBar) NewForInheritp() *QMenuBar {
 }
 func NewQMenuBarp() *QMenuBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(4217600900, "_ZN8QMenuBarC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -114,7 +114,7 @@ func (this *QMenuBar) AddAction(text string) *QAction /*777 QAction **/ {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc1(524583219, "_ZN8QMenuBar9addActionERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QActionFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QActionFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:96
@@ -125,13 +125,13 @@ func (this *QMenuBar) AddAction(text string) *QAction /*777 QAction **/ {
 /*
  */
 func (this *QMenuBar) AddMenu(menu QMenu_ITF /*777 QMenu **/) *QAction /*777 QAction **/ {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if menu != nil && menu.QMenu_PTR() != nil {
 		convArg0 = menu.QMenu_PTR().GetCthis()
 	}
 	rv, err := qtrt.Qtcc1(1432639305, "_ZN8QMenuBar7addMenuEP5QMenu", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QActionFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QActionFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:97
@@ -146,7 +146,7 @@ func (this *QMenuBar) AddMenu1(title string) *QMenu /*777 QMenu **/ {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc1(3209398129, "_ZN8QMenuBar7addMenuERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QMenuFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QMenuFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:98
@@ -157,7 +157,7 @@ func (this *QMenuBar) AddMenu1(title string) *QMenu /*777 QMenu **/ {
 /*
  */
 func (this *QMenuBar) AddMenu2(icon qtgui.QIcon_ITF, title string) *QMenu /*777 QMenu **/ {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if icon != nil && icon.QIcon_PTR() != nil {
 		convArg0 = icon.QIcon_PTR().GetCthis()
 	}
@@ -165,7 +165,7 @@ func (this *QMenuBar) AddMenu2(icon qtgui.QIcon_ITF, title string) *QMenu /*777 
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.Qtcc1(3402422444, "_ZN8QMenuBar7addMenuERK5QIconRK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QMenuFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QMenuFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:101
@@ -178,7 +178,7 @@ func (this *QMenuBar) AddMenu2(icon qtgui.QIcon_ITF, title string) *QMenu /*777 
 func (this *QMenuBar) AddSeparator() *QAction /*777 QAction **/ {
 	rv, err := qtrt.Qtcc1(2911490074, "_ZN8QMenuBar12addSeparatorEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QActionFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QActionFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:102
@@ -189,13 +189,13 @@ func (this *QMenuBar) AddSeparator() *QAction /*777 QAction **/ {
 /*
  */
 func (this *QMenuBar) InsertSeparator(before QAction_ITF /*777 QAction **/) *QAction /*777 QAction **/ {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if before != nil && before.QAction_PTR() != nil {
 		convArg0 = before.QAction_PTR().GetCthis()
 	}
 	rv, err := qtrt.Qtcc1(136532056, "_ZN8QMenuBar15insertSeparatorEP7QAction", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QActionFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QActionFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:104
@@ -206,17 +206,17 @@ func (this *QMenuBar) InsertSeparator(before QAction_ITF /*777 QAction **/) *QAc
 /*
  */
 func (this *QMenuBar) InsertMenu(before QAction_ITF /*777 QAction **/, menu QMenu_ITF /*777 QMenu **/) *QAction /*777 QAction **/ {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if before != nil && before.QAction_PTR() != nil {
 		convArg0 = before.QAction_PTR().GetCthis()
 	}
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if menu != nil && menu.QMenu_PTR() != nil {
 		convArg1 = menu.QMenu_PTR().GetCthis()
 	}
 	rv, err := qtrt.Qtcc1(2471833135, "_ZN8QMenuBar10insertMenuEP7QActionP5QMenu", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QActionFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QActionFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:106
@@ -251,7 +251,7 @@ func (this *QMenuBar) SetVisible(visible bool) {
 /*
  */
 func (this *QMenuBar) Triggered(action QAction_ITF /*777 QAction **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if action != nil && action.QAction_PTR() != nil {
 		convArg0 = action.QAction_PTR().GetCthis()
 	}
@@ -267,7 +267,7 @@ func (this *QMenuBar) Triggered(action QAction_ITF /*777 QAction **/) {
 /*
  */
 func (this *QMenuBar) Hovered(action QAction_ITF /*777 QAction **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if action != nil && action.QAction_PTR() != nil {
 		convArg0 = action.QAction_PTR().GetCthis()
 	}

@@ -50,11 +50,11 @@ func (ptr *QToolButton) QToolButton_PTR() *QToolButton { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QToolButtonFromptr(cthis unsafe.Pointer) *QToolButton {
+func QToolButtonFromptr(cthis Voidptr) *QToolButton {
 	bcthis0 := QAbstractButtonFromptr(cthis)
 	return &QToolButton{bcthis0}
 }
-func (*QToolButton) Fromptr(cthis unsafe.Pointer) *QToolButton {
+func (*QToolButton) Fromptr(cthis Voidptr) *QToolButton {
 	return QToolButtonFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QToolButton) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QToolBu
 	return NewQToolButton(parent)
 }
 func NewQToolButton(parent QWidget_ITF /*777 QWidget **/) *QToolButton {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QToolButton) NewForInheritp() *QToolButton {
 }
 func NewQToolButtonp() *QToolButton {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(719486503, "_ZN11QToolButtonC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -122,7 +122,7 @@ func (this *QToolButton) SetAutoRaise(enable bool) {
 /*
  */
 func (this *QToolButton) Triggered(arg0 QAction_ITF /*777 QAction **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if arg0 != nil && arg0.QAction_PTR() != nil {
 		convArg0 = arg0.QAction_PTR().GetCthis()
 	}

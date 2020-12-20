@@ -47,10 +47,10 @@ func (ptr *QLayoutItem) QLayoutItem_PTR() *QLayoutItem { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QLayoutItemFromptr(cthis unsafe.Pointer) *QLayoutItem {
+func QLayoutItemFromptr(cthis Voidptr) *QLayoutItem {
 	return &QLayoutItem{&qtrt.CObject{cthis}}
 }
-func (*QLayoutItem) Fromptr(cthis unsafe.Pointer) *QLayoutItem {
+func (*QLayoutItem) Fromptr(cthis Voidptr) *QLayoutItem {
 	return QLayoutItemFromptr(cthis)
 }
 

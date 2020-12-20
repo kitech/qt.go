@@ -47,10 +47,10 @@ func (ptr *QPersistentModelIndex) QPersistentModelIndex_PTR() *QPersistentModelI
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QPersistentModelIndexFromptr(cthis unsafe.Pointer) *QPersistentModelIndex {
+func QPersistentModelIndexFromptr(cthis Voidptr) *QPersistentModelIndex {
 	return &QPersistentModelIndex{&qtrt.CObject{cthis}}
 }
-func (*QPersistentModelIndex) Fromptr(cthis unsafe.Pointer) *QPersistentModelIndex {
+func (*QPersistentModelIndex) Fromptr(cthis Voidptr) *QPersistentModelIndex {
 	return QPersistentModelIndexFromptr(cthis)
 }
 

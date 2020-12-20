@@ -48,11 +48,11 @@ func (ptr *QHBoxLayout) QHBoxLayout_PTR() *QHBoxLayout { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QHBoxLayoutFromptr(cthis unsafe.Pointer) *QHBoxLayout {
+func QHBoxLayoutFromptr(cthis Voidptr) *QHBoxLayout {
 	bcthis0 := QBoxLayoutFromptr(cthis)
 	return &QHBoxLayout{bcthis0}
 }
-func (*QHBoxLayout) Fromptr(cthis unsafe.Pointer) *QHBoxLayout {
+func (*QHBoxLayout) Fromptr(cthis Voidptr) *QHBoxLayout {
 	return QHBoxLayoutFromptr(cthis)
 }
 
@@ -86,7 +86,7 @@ func (*QHBoxLayout) NewForInherit1(parent QWidget_ITF /*777 QWidget **/) *QHBoxL
 	return NewQHBoxLayout1(parent)
 }
 func NewQHBoxLayout1(parent QWidget_ITF /*777 QWidget **/) *QHBoxLayout {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}

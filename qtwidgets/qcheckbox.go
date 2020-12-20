@@ -50,11 +50,11 @@ func (ptr *QCheckBox) QCheckBox_PTR() *QCheckBox { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QCheckBoxFromptr(cthis unsafe.Pointer) *QCheckBox {
+func QCheckBoxFromptr(cthis Voidptr) *QCheckBox {
 	bcthis0 := QAbstractButtonFromptr(cthis)
 	return &QCheckBox{bcthis0}
 }
-func (*QCheckBox) Fromptr(cthis unsafe.Pointer) *QCheckBox {
+func (*QCheckBox) Fromptr(cthis Voidptr) *QCheckBox {
 	return QCheckBoxFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QCheckBox) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QCheckBox
 	return NewQCheckBox(parent)
 }
 func NewQCheckBox(parent QWidget_ITF /*777 QWidget **/) *QCheckBox {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QCheckBox) NewForInheritp() *QCheckBox {
 }
 func NewQCheckBoxp() *QCheckBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(421980486, "_ZN9QCheckBoxC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -115,7 +115,7 @@ func (*QCheckBox) NewForInherit1(text string, parent QWidget_ITF /*777 QWidget *
 func NewQCheckBox1(text string, parent QWidget_ITF /*777 QWidget **/) *QCheckBox {
 	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
@@ -141,7 +141,7 @@ func NewQCheckBox1p(text string) *QCheckBox {
 	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(1488224333, "_ZN9QCheckBoxC2ERK7QStringP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -160,7 +160,7 @@ func NewQCheckBox1p(text string) *QCheckBox {
 func (this *QCheckBox) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc1(539622553, "_ZNK9QCheckBox8sizeHintEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.QSizeFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -175,7 +175,7 @@ func (this *QCheckBox) SizeHint() *qtcore.QSize /*123*/ {
 func (this *QCheckBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc1(1367630296, "_ZNK9QCheckBox15minimumSizeHintEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.QSizeFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }

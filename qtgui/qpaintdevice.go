@@ -46,10 +46,10 @@ func (ptr *QPaintDevice) QPaintDevice_PTR() *QPaintDevice { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QPaintDeviceFromptr(cthis unsafe.Pointer) *QPaintDevice {
+func QPaintDeviceFromptr(cthis Voidptr) *QPaintDevice {
 	return &QPaintDevice{&qtrt.CObject{cthis}}
 }
-func (*QPaintDevice) Fromptr(cthis unsafe.Pointer) *QPaintDevice {
+func (*QPaintDevice) Fromptr(cthis Voidptr) *QPaintDevice {
 	return QPaintDeviceFromptr(cthis)
 }
 
@@ -89,7 +89,7 @@ func (this *QPaintDevice) PaintingActive() bool {
 func (this *QPaintDevice) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 	rv, err := qtrt.Qtcc1(1815356186, "_ZNK12QPaintDevice11paintEngineEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QPaintEngineFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QPaintEngineFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtGui/qpaintdevice.h:78

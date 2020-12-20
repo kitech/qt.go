@@ -45,7 +45,7 @@ import "github.com/kitech/qt.go/qtgui"
 /*
  */
 func (this *QSystemTrayIcon) SetContextMenu(menu QMenu_ITF /*777 QMenu **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if menu != nil && menu.QMenu_PTR() != nil {
 		convArg0 = menu.QMenu_PTR().GetCthis()
 	}
@@ -63,7 +63,7 @@ func (this *QSystemTrayIcon) SetContextMenu(menu QMenu_ITF /*777 QMenu **/) {
 func (this *QSystemTrayIcon) ContextMenu() *QMenu /*777 QMenu **/ {
 	rv, err := qtrt.Qtcc1(1821247260, "_ZNK15QSystemTrayIcon11contextMenuEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QMenuFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QMenuFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 //  body block end

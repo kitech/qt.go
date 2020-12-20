@@ -48,7 +48,7 @@ func (*QAbstractScrollArea) NewForInherit(parent QWidget_ITF /*777 QWidget **/) 
 	return NewQAbstractScrollArea(parent)
 }
 func NewQAbstractScrollArea(parent QWidget_ITF /*777 QWidget **/) *QAbstractScrollArea {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -72,7 +72,7 @@ func (*QAbstractScrollArea) NewForInheritp() *QAbstractScrollArea {
 }
 func NewQAbstractScrollAreap() *QAbstractScrollArea {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(538689117, "_ZN19QAbstractScrollAreaC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -91,7 +91,7 @@ func NewQAbstractScrollAreap() *QAbstractScrollArea {
 func (this *QAbstractScrollArea) CornerWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.Qtcc1(1269609790, "_ZNK19QAbstractScrollArea12cornerWidgetEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QWidgetFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QWidgetFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:85
@@ -102,7 +102,7 @@ func (this *QAbstractScrollArea) CornerWidget() *QWidget /*777 QWidget **/ {
 /*
  */
 func (this *QAbstractScrollArea) SetCornerWidget(widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
@@ -120,7 +120,7 @@ func (this *QAbstractScrollArea) SetCornerWidget(widget QWidget_ITF /*777 QWidge
 func (this *QAbstractScrollArea) Viewport() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.Qtcc1(3104358012, "_ZNK19QAbstractScrollArea8viewportEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QWidgetFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QWidgetFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:91
@@ -131,7 +131,7 @@ func (this *QAbstractScrollArea) Viewport() *QWidget /*777 QWidget **/ {
 /*
  */
 func (this *QAbstractScrollArea) SetViewport(widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}

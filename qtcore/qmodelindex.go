@@ -47,10 +47,10 @@ func (ptr *QModelIndex) QModelIndex_PTR() *QModelIndex { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QModelIndexFromptr(cthis unsafe.Pointer) *QModelIndex {
+func QModelIndexFromptr(cthis Voidptr) *QModelIndex {
 	return &QModelIndex{&qtrt.CObject{cthis}}
 }
-func (*QModelIndex) Fromptr(cthis unsafe.Pointer) *QModelIndex {
+func (*QModelIndex) Fromptr(cthis Voidptr) *QModelIndex {
 	return QModelIndexFromptr(cthis)
 }
 
@@ -122,7 +122,7 @@ func (this *QModelIndex) InternalId() uint64 {
 func (this *QModelIndex) InternalPointer() unsafe.Pointer /*666*/ {
 	rv, err := qtrt.Qtcc1(2841223468, "_ZNK11QModelIndex15internalPointerEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return unsafe.Pointer(uintptr(rv))
+	return Voidptr(uintptr(rv))
 }
 
 // /usr/include/qt/QtCore/qabstractitemmodel.h:66
@@ -137,7 +137,7 @@ func (this *QModelIndex) Parent() *QModelIndex /*123*/ {
 	rv, err := qtrt.Qtcc1(1304276158, "_ZNK11QModelIndex6parentEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := /*==*/ QModelIndexFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := /*==*/ QModelIndexFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
@@ -154,7 +154,7 @@ func (this *QModelIndex) Sibling(row int, column int) *QModelIndex /*123*/ {
 	rv, err := qtrt.Qtcc1(128912225, "_ZNK11QModelIndex7siblingEii", qtrt.FFITY_POINTER, sretobj, this.GetCthis(), row, column)
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := /*==*/ QModelIndexFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := /*==*/ QModelIndexFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
@@ -171,7 +171,7 @@ func (this *QModelIndex) SiblingAtColumn(column int) *QModelIndex /*123*/ {
 	rv, err := qtrt.Qtcc1(2281150179, "_ZNK11QModelIndex15siblingAtColumnEi", qtrt.FFITY_POINTER, sretobj, this.GetCthis(), column)
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := /*==*/ QModelIndexFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := /*==*/ QModelIndexFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }
@@ -188,7 +188,7 @@ func (this *QModelIndex) SiblingAtRow(row int) *QModelIndex /*123*/ {
 	rv, err := qtrt.Qtcc1(3167847458, "_ZNK11QModelIndex12siblingAtRowEi", qtrt.FFITY_POINTER, sretobj, this.GetCthis(), row)
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := /*==*/ QModelIndexFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := /*==*/ QModelIndexFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
 }

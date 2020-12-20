@@ -46,11 +46,11 @@ func (ptr *QCoreApplication) QCoreApplication_PTR() *QCoreApplication { return p
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QCoreApplicationFromptr(cthis unsafe.Pointer) *QCoreApplication {
+func QCoreApplicationFromptr(cthis Voidptr) *QCoreApplication {
 	bcthis0 := QObjectFromptr(cthis)
 	return &QCoreApplication{bcthis0}
 }
-func (*QCoreApplication) Fromptr(cthis unsafe.Pointer) *QCoreApplication {
+func (*QCoreApplication) Fromptr(cthis Voidptr) *QCoreApplication {
 	return QCoreApplicationFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (this *QCoreApplication) Translate(context string, key string, disambiguati
 	rv, err := qtrt.Qtcc1(2590451099, "_ZN16QCoreApplication9translateEPKcS1_S1_i", qtrt.FFITY_POINTER, sretobj, convArg0, convArg1, convArg2, n)
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := /*==*/ QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := /*==*/ QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	/*==*/ DeleteQString(rv2)
 	return rv3
@@ -91,14 +91,14 @@ func (this *QCoreApplication) Translatep(context string, key string) string {
 	var convArg0 = qtrt.CStringRef(&context)
 	var convArg1 = qtrt.CStringRef(&key)
 	// arg: 2, const char *=Pointer, =Invalid, , Invalid
-	var convArg2 unsafe.Pointer
+	var convArg2 Voidptr
 	// arg: 3, int=Int, =Invalid, , Invalid
 	n := int(-1)
 	sretobj := qtrt.Malloc(8) // QString
 	rv, err := qtrt.Qtcc1(2590451099, "_ZN16QCoreApplication9translateEPKcS1_S1_i", qtrt.FFITY_POINTER, sretobj, convArg0, convArg1, convArg2, n)
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := /*==*/ QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := /*==*/ QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	/*==*/ DeleteQString(rv2)
 	return rv3
@@ -121,7 +121,7 @@ func (this *QCoreApplication) Translatep1(context string, key string, disambigua
 	rv, err := qtrt.Qtcc1(2590451099, "_ZN16QCoreApplication9translateEPKcS1_S1_i", qtrt.FFITY_POINTER, sretobj, convArg0, convArg1, convArg2, n)
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := /*==*/ QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := /*==*/ QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	/*==*/ DeleteQString(rv2)
 	return rv3

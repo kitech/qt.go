@@ -45,10 +45,10 @@ func (ptr *QObject) QObject_PTR() *QObject { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QObjectFromptr(cthis unsafe.Pointer) *QObject {
+func QObjectFromptr(cthis Voidptr) *QObject {
 	return &QObject{&qtrt.CObject{cthis}}
 }
-func (*QObject) Fromptr(cthis unsafe.Pointer) *QObject {
+func (*QObject) Fromptr(cthis Voidptr) *QObject {
 	return QObjectFromptr(cthis)
 }
 
@@ -64,7 +64,7 @@ func (this *QObject) ObjectName() string {
 	rv, err := qtrt.Qtcc1(799704896, "_ZNK7QObject10objectNameEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := /*==*/ QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := /*==*/ QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	/*==*/ DeleteQString(rv2)
 	return rv3
@@ -146,7 +146,7 @@ func (this *QObject) BlockSignals(b bool) bool {
 func (this *QObject) Thread() *QThread /*777 QThread **/ {
 	rv, err := qtrt.Qtcc1(2989794423, "_ZNK7QObject6threadEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QThreadFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QThreadFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qobject.h:160
@@ -157,7 +157,7 @@ func (this *QObject) Thread() *QThread /*777 QThread **/ {
 /*
  */
 func (this *QObject) MoveToThread(thread QThread_ITF /*777 QThread **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if thread != nil && thread.QThread_PTR() != nil {
 		convArg0 = thread.QThread_PTR().GetCthis()
 	}
@@ -173,7 +173,7 @@ func (this *QObject) MoveToThread(thread QThread_ITF /*777 QThread **/) {
 /*
  */
 func (this *QObject) SetParent(parent QObject_ITF /*777 QObject **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}

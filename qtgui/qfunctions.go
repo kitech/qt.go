@@ -9,7 +9,7 @@ func init_unused_10167() {
 		_ = unsafe.Pointer(uintptr(0))
 	}
 	if false {
-		qtrt.KeepMe()
+		_ = Voidptr(uintptr(0))
 	}
 	if false {
 		qtrt.KeepMe()

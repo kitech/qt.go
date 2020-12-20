@@ -50,11 +50,11 @@ func (ptr *QLabel) QLabel_PTR() *QLabel { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QLabelFromptr(cthis unsafe.Pointer) *QLabel {
+func QLabelFromptr(cthis Voidptr) *QLabel {
 	bcthis0 := QFrameFromptr(cthis)
 	return &QLabel{bcthis0}
 }
-func (*QLabel) Fromptr(cthis unsafe.Pointer) *QLabel {
+func (*QLabel) Fromptr(cthis Voidptr) *QLabel {
 	return QLabelFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QLabel) NewForInherit(parent QWidget_ITF /*777 QWidget **/, f int) *QLabe
 	return NewQLabel(parent, f)
 }
 func NewQLabel(parent QWidget_ITF /*777 QWidget **/, f int) *QLabel {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QLabel) NewForInheritp() *QLabel {
 }
 func NewQLabelp() *QLabel {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	f := 0
 	cthis := qtrt.Malloc(48)
@@ -115,7 +115,7 @@ func (*QLabel) NewForInheritp1(parent QWidget_ITF /*777 QWidget **/) *QLabel {
 	return NewQLabelp1(parent)
 }
 func NewQLabelp1(parent QWidget_ITF /*777 QWidget **/) *QLabel {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -142,7 +142,7 @@ func (*QLabel) NewForInherit1(text string, parent QWidget_ITF /*777 QWidget **/,
 func NewQLabel1(text string, parent QWidget_ITF /*777 QWidget **/, f int) *QLabel {
 	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
@@ -168,7 +168,7 @@ func NewQLabel1p(text string) *QLabel {
 	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	// arg: 2, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	f := 0
 	cthis := qtrt.Malloc(48)
@@ -192,7 +192,7 @@ func (*QLabel) NewForInherit1p1(text string, parent QWidget_ITF /*777 QWidget **
 func NewQLabel1p1(text string, parent QWidget_ITF /*777 QWidget **/) *QLabel {
 	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
@@ -218,7 +218,7 @@ func (this *QLabel) Text() string {
 	rv, err := qtrt.Qtcc1(1414356847, "_ZNK6QLabel4textEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -294,7 +294,7 @@ func (this *QLabel) SetText(arg0 string) {
 /*
  */
 func (this *QLabel) SetPixmap(arg0 qtgui.QPixmap_ITF) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if arg0 != nil && arg0.QPixmap_PTR() != nil {
 		convArg0 = arg0.QPixmap_PTR().GetCthis()
 	}

@@ -45,10 +45,10 @@ func (ptr *QMetaObject) QMetaObject_PTR() *QMetaObject { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QMetaObjectFromptr(cthis unsafe.Pointer) *QMetaObject {
+func QMetaObjectFromptr(cthis Voidptr) *QMetaObject {
 	return &QMetaObject{&qtrt.CObject{cthis}}
 }
-func (*QMetaObject) Fromptr(cthis unsafe.Pointer) *QMetaObject {
+func (*QMetaObject) Fromptr(cthis Voidptr) *QMetaObject {
 	return QMetaObjectFromptr(cthis)
 }
 
@@ -75,7 +75,7 @@ func (this *QMetaObject) ClassName() string {
 func (this *QMetaObject) SuperClass() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.Qtcc1(4180358434, "_ZNK11QMetaObject10superClassEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QMetaObjectFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QMetaObjectFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qobjectdefs.h:344
@@ -86,13 +86,13 @@ func (this *QMetaObject) SuperClass() *QMetaObject /*777 const QMetaObject **/ {
 /*
  */
 func (this *QMetaObject) Cast(obj QObject_ITF /*777 QObject **/) *QObject /*777 QObject **/ {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if obj != nil && obj.QObject_PTR() != nil {
 		convArg0 = obj.QObject_PTR().GetCthis()
 	}
 	rv, err := qtrt.Qtcc1(4086969823, "_ZNK11QMetaObject4castEP7QObject", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QObjectFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QObjectFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qobjectdefs.h:345
@@ -103,13 +103,13 @@ func (this *QMetaObject) Cast(obj QObject_ITF /*777 QObject **/) *QObject /*777 
 /*
  */
 func (this *QMetaObject) Cast1(obj QObject_ITF /*777 const QObject **/) *QObject /*777 const QObject **/ {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if obj != nil && obj.QObject_PTR() != nil {
 		convArg0 = obj.QObject_PTR().GetCthis()
 	}
 	rv, err := qtrt.Qtcc1(1982383341, "_ZNK11QMetaObject4castEPK7QObject", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QObjectFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QObjectFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtCore/qobjectdefs.h:351
@@ -337,7 +337,7 @@ func (this *QMetaObject) IndexOfClassInfo(name string) int {
 func (this *QMetaObject) Constructor(index int) *QMetaMethod /*123*/ {
 	rv, err := qtrt.Qtcc1(3534876830, "_ZNK11QMetaObject11constructorEi", qtrt.FFITY_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ QMetaMethodFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := /*==*/ QMetaMethodFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaMethod)
 	return rv2
 }
@@ -352,7 +352,7 @@ func (this *QMetaObject) Constructor(index int) *QMetaMethod /*123*/ {
 func (this *QMetaObject) Method(index int) *QMetaMethod /*123*/ {
 	rv, err := qtrt.Qtcc1(981682568, "_ZNK11QMetaObject6methodEi", qtrt.FFITY_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ QMetaMethodFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := /*==*/ QMetaMethodFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaMethod)
 	return rv2
 }
@@ -367,7 +367,7 @@ func (this *QMetaObject) Method(index int) *QMetaMethod /*123*/ {
 func (this *QMetaObject) Enumerator(index int) *QMetaEnum /*123*/ {
 	rv, err := qtrt.Qtcc1(819545584, "_ZNK11QMetaObject10enumeratorEi", qtrt.FFITY_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ QMetaEnumFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := /*==*/ QMetaEnumFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaEnum)
 	return rv2
 }
@@ -384,7 +384,7 @@ func (this *QMetaObject) Property(index int) *QMetaProperty /*123*/ {
 	rv, err := qtrt.Qtcc1(588131701, "_ZNK11QMetaObject8propertyEi", qtrt.FFITY_POINTER, sretobj, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := /*==*/ QMetaPropertyFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := /*==*/ QMetaPropertyFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaProperty)
 	return rv2
 }
@@ -399,7 +399,7 @@ func (this *QMetaObject) Property(index int) *QMetaProperty /*123*/ {
 func (this *QMetaObject) ClassInfo(index int) *QMetaClassInfo /*123*/ {
 	rv, err := qtrt.Qtcc1(1372127368, "_ZNK11QMetaObject9classInfoEi", qtrt.FFITY_POINTER, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
-	rv2 := /*==*/ QMetaClassInfoFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := /*==*/ QMetaClassInfoFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaClassInfo)
 	return rv2
 }
@@ -416,7 +416,7 @@ func (this *QMetaObject) UserProperty() *QMetaProperty /*123*/ {
 	rv, err := qtrt.Qtcc1(4052217834, "_ZNK11QMetaObject12userPropertyEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := /*==*/ QMetaPropertyFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := /*==*/ QMetaPropertyFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQMetaProperty)
 	return rv2
 }

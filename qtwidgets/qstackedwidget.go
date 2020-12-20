@@ -50,11 +50,11 @@ func (ptr *QStackedWidget) QStackedWidget_PTR() *QStackedWidget { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QStackedWidgetFromptr(cthis unsafe.Pointer) *QStackedWidget {
+func QStackedWidgetFromptr(cthis Voidptr) *QStackedWidget {
 	bcthis0 := QFrameFromptr(cthis)
 	return &QStackedWidget{bcthis0}
 }
-func (*QStackedWidget) Fromptr(cthis unsafe.Pointer) *QStackedWidget {
+func (*QStackedWidget) Fromptr(cthis Voidptr) *QStackedWidget {
 	return QStackedWidgetFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QStackedWidget) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QSta
 	return NewQStackedWidget(parent)
 }
 func NewQStackedWidget(parent QWidget_ITF /*777 QWidget **/) *QStackedWidget {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QStackedWidget) NewForInheritp() *QStackedWidget {
 }
 func NewQStackedWidgetp() *QStackedWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(4054824524, "_ZN14QStackedWidgetC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -110,7 +110,7 @@ func NewQStackedWidgetp() *QStackedWidget {
 /*
  */
 func (this *QStackedWidget) AddWidget(w QWidget_ITF /*777 QWidget **/) int {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if w != nil && w.QWidget_PTR() != nil {
 		convArg0 = w.QWidget_PTR().GetCthis()
 	}
@@ -127,7 +127,7 @@ func (this *QStackedWidget) AddWidget(w QWidget_ITF /*777 QWidget **/) int {
 /*
  */
 func (this *QStackedWidget) InsertWidget(index int, w QWidget_ITF /*777 QWidget **/) int {
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if w != nil && w.QWidget_PTR() != nil {
 		convArg1 = w.QWidget_PTR().GetCthis()
 	}
@@ -144,7 +144,7 @@ func (this *QStackedWidget) InsertWidget(index int, w QWidget_ITF /*777 QWidget 
 /*
  */
 func (this *QStackedWidget) RemoveWidget(w QWidget_ITF /*777 QWidget **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if w != nil && w.QWidget_PTR() != nil {
 		convArg0 = w.QWidget_PTR().GetCthis()
 	}
@@ -162,7 +162,7 @@ func (this *QStackedWidget) RemoveWidget(w QWidget_ITF /*777 QWidget **/) {
 func (this *QStackedWidget) CurrentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.Qtcc1(4210146573, "_ZNK14QStackedWidget13currentWidgetEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QWidgetFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QWidgetFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:67
@@ -186,7 +186,7 @@ func (this *QStackedWidget) CurrentIndex() int {
 /*
  */
 func (this *QStackedWidget) IndexOf(arg0 QWidget_ITF /*777 QWidget **/) int {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
 		convArg0 = arg0.QWidget_PTR().GetCthis()
 	}
@@ -205,7 +205,7 @@ func (this *QStackedWidget) IndexOf(arg0 QWidget_ITF /*777 QWidget **/) int {
 func (this *QStackedWidget) Widget(arg0 int) *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.Qtcc1(137583665, "_ZNK14QStackedWidget6widgetEi", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QWidgetFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QWidgetFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:71
@@ -241,7 +241,7 @@ func (this *QStackedWidget) SetCurrentIndex(index int) {
 /*
  */
 func (this *QStackedWidget) SetCurrentWidget(w QWidget_ITF /*777 QWidget **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if w != nil && w.QWidget_PTR() != nil {
 		convArg0 = w.QWidget_PTR().GetCthis()
 	}

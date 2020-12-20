@@ -50,11 +50,11 @@ func (ptr *QGraphicsEffect) QGraphicsEffect_PTR() *QGraphicsEffect { return ptr 
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QGraphicsEffectFromptr(cthis unsafe.Pointer) *QGraphicsEffect {
+func QGraphicsEffectFromptr(cthis Voidptr) *QGraphicsEffect {
 	bcthis0 := qtcore.QObjectFromptr(cthis)
 	return &QGraphicsEffect{bcthis0}
 }
-func (*QGraphicsEffect) Fromptr(cthis unsafe.Pointer) *QGraphicsEffect {
+func (*QGraphicsEffect) Fromptr(cthis Voidptr) *QGraphicsEffect {
 	return QGraphicsEffectFromptr(cthis)
 }
 

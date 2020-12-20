@@ -48,11 +48,11 @@ func (ptr *QAbstractItemModel) QAbstractItemModel_PTR() *QAbstractItemModel { re
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QAbstractItemModelFromptr(cthis unsafe.Pointer) *QAbstractItemModel {
+func QAbstractItemModelFromptr(cthis Voidptr) *QAbstractItemModel {
 	bcthis0 := QObjectFromptr(cthis)
 	return &QAbstractItemModel{bcthis0}
 }
-func (*QAbstractItemModel) Fromptr(cthis unsafe.Pointer) *QAbstractItemModel {
+func (*QAbstractItemModel) Fromptr(cthis Voidptr) *QAbstractItemModel {
 	return QAbstractItemModelFromptr(cthis)
 }
 
@@ -67,7 +67,7 @@ func (*QAbstractItemModel) NewForInherit(parent QObject_ITF /*777 QObject **/) *
 	return NewQAbstractItemModel(parent)
 }
 func NewQAbstractItemModel(parent QObject_ITF /*777 QObject **/) *QAbstractItemModel {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QObject_PTR() != nil {
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
@@ -91,7 +91,7 @@ func (*QAbstractItemModel) NewForInheritp() *QAbstractItemModel {
 }
 func NewQAbstractItemModelp() *QAbstractItemModel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(16)
 	rv, err := qtrt.Qtcc1(1538334395, "_ZN18QAbstractItemModelC2EP7QObject", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)

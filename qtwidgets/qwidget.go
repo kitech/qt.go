@@ -48,23 +48,23 @@ type QWidget_ITF interface {
 
 func (ptr *QWidget) QWidget_PTR() *QWidget { return ptr }
 
-func (this *QWidget) GetCthis() unsafe.Pointer {
+func (this *QWidget) GetCthis() Voidptr {
 	if this == nil {
 		return nil
 	} else {
 		return this.QObject.GetCthis()
 	}
 }
-func (this *QWidget) SetCthis(cthis unsafe.Pointer) {
+func (this *QWidget) SetCthis(cthis Voidptr) {
 	this.QObject = qtcore.QObjectFromptr(cthis)
 	this.QPaintDevice = qtgui.QPaintDeviceFromptr(cthis)
 }
-func QWidgetFromptr(cthis unsafe.Pointer) *QWidget {
+func QWidgetFromptr(cthis Voidptr) *QWidget {
 	bcthis0 := qtcore.QObjectFromptr(cthis)
 	bcthis1 := qtgui.QPaintDeviceFromptr(cthis)
 	return &QWidget{bcthis0, bcthis1}
 }
-func (*QWidget) Fromptr(cthis unsafe.Pointer) *QWidget {
+func (*QWidget) Fromptr(cthis Voidptr) *QWidget {
 	return QWidgetFromptr(cthis)
 }
 
@@ -79,7 +79,7 @@ func (*QWidget) NewForInherit(parent QWidget_ITF /*777 QWidget **/, f int) *QWid
 	return NewQWidget(parent, f)
 }
 func NewQWidget(parent QWidget_ITF /*777 QWidget **/, f int) *QWidget {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -103,7 +103,7 @@ func (*QWidget) NewForInheritp() *QWidget {
 }
 func NewQWidgetp() *QWidget {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	f := 0
 	cthis := qtrt.Malloc(48)
@@ -125,7 +125,7 @@ func (*QWidget) NewForInheritp1(parent QWidget_ITF /*777 QWidget **/) *QWidget {
 	return NewQWidgetp1(parent)
 }
 func NewQWidgetp1(parent QWidget_ITF /*777 QWidget **/) *QWidget {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -276,7 +276,7 @@ func (this *QWidget) IsEnabled() bool {
 /*
  */
 func (this *QWidget) IsEnabledTo(arg0 QWidget_ITF /*777 const QWidget **/) bool {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
 		convArg0 = arg0.QWidget_PTR().GetCthis()
 	}
@@ -598,7 +598,7 @@ func (this *QWidget) StyleSheet() string {
 	rv, err := qtrt.Qtcc1(2046494658, "_ZNK7QWidget10styleSheetEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -616,7 +616,7 @@ func (this *QWidget) WindowTitle() string {
 	rv, err := qtrt.Qtcc1(2977210028, "_ZNK7QWidget11windowTitleEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -648,7 +648,7 @@ func (this *QWidget) WindowIconText() string {
 	rv, err := qtrt.Qtcc1(465509618, "_ZNK7QWidget14windowIconTextEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -680,7 +680,7 @@ func (this *QWidget) WindowRole() string {
 	rv, err := qtrt.Qtcc1(1153054232, "_ZNK7QWidget10windowRoleEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -712,7 +712,7 @@ func (this *QWidget) WindowFilePath() string {
 	rv, err := qtrt.Qtcc1(3270090626, "_ZNK7QWidget14windowFilePathEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -782,7 +782,7 @@ func (this *QWidget) ToolTip() string {
 	rv, err := qtrt.Qtcc1(602720826, "_ZNK7QWidget7toolTipEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -1076,7 +1076,7 @@ func (this *QWidget) IsVisible() bool {
 /*
  */
 func (this *QWidget) IsVisibleTo(arg0 QWidget_ITF /*777 const QWidget **/) bool {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
 		convArg0 = arg0.QWidget_PTR().GetCthis()
 	}
@@ -1147,7 +1147,7 @@ func (this *QWidget) IsFullScreen() bool {
 func (this *QWidget) Layout() *QLayout /*777 QLayout **/ {
 	rv, err := qtrt.Qtcc1(1365471401, "_ZNK7QWidget6layoutEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QLayoutFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QLayoutFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qwidget.h:538
@@ -1158,7 +1158,7 @@ func (this *QWidget) Layout() *QLayout /*777 QLayout **/ {
 /*
  */
 func (this *QWidget) SetLayout(arg0 QLayout_ITF /*777 QLayout **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if arg0 != nil && arg0.QLayout_PTR() != nil {
 		convArg0 = arg0.QLayout_PTR().GetCthis()
 	}
@@ -1188,7 +1188,7 @@ func (this *QWidget) UpdateGeometry() {
 func (this *QWidget) ParentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.Qtcc1(2946385333, "_ZNK7QWidget12parentWidgetEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QWidgetFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QWidgetFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qwidget.h:612

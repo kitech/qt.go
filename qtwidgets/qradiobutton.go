@@ -50,11 +50,11 @@ func (ptr *QRadioButton) QRadioButton_PTR() *QRadioButton { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QRadioButtonFromptr(cthis unsafe.Pointer) *QRadioButton {
+func QRadioButtonFromptr(cthis Voidptr) *QRadioButton {
 	bcthis0 := QAbstractButtonFromptr(cthis)
 	return &QRadioButton{bcthis0}
 }
-func (*QRadioButton) Fromptr(cthis unsafe.Pointer) *QRadioButton {
+func (*QRadioButton) Fromptr(cthis Voidptr) *QRadioButton {
 	return QRadioButtonFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QRadioButton) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QRadio
 	return NewQRadioButton(parent)
 }
 func NewQRadioButton(parent QWidget_ITF /*777 QWidget **/) *QRadioButton {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QRadioButton) NewForInheritp() *QRadioButton {
 }
 func NewQRadioButtonp() *QRadioButton {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(3516896294, "_ZN12QRadioButtonC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -115,7 +115,7 @@ func (*QRadioButton) NewForInherit1(text string, parent QWidget_ITF /*777 QWidge
 func NewQRadioButton1(text string, parent QWidget_ITF /*777 QWidget **/) *QRadioButton {
 	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
@@ -141,7 +141,7 @@ func NewQRadioButton1p(text string) *QRadioButton {
 	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(3203710175, "_ZN12QRadioButtonC2ERK7QStringP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -160,7 +160,7 @@ func NewQRadioButton1p(text string) *QRadioButton {
 func (this *QRadioButton) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc1(1977029849, "_ZNK12QRadioButton8sizeHintEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.QSizeFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -175,7 +175,7 @@ func (this *QRadioButton) SizeHint() *qtcore.QSize /*123*/ {
 func (this *QRadioButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc1(2537386903, "_ZNK12QRadioButton15minimumSizeHintEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.QSizeFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }

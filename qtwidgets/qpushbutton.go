@@ -50,11 +50,11 @@ func (ptr *QPushButton) QPushButton_PTR() *QPushButton { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QPushButtonFromptr(cthis unsafe.Pointer) *QPushButton {
+func QPushButtonFromptr(cthis Voidptr) *QPushButton {
 	bcthis0 := QAbstractButtonFromptr(cthis)
 	return &QPushButton{bcthis0}
 }
-func (*QPushButton) Fromptr(cthis unsafe.Pointer) *QPushButton {
+func (*QPushButton) Fromptr(cthis Voidptr) *QPushButton {
 	return QPushButtonFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QPushButton) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QPushBu
 	return NewQPushButton(parent)
 }
 func NewQPushButton(parent QWidget_ITF /*777 QWidget **/) *QPushButton {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QPushButton) NewForInheritp() *QPushButton {
 }
 func NewQPushButtonp() *QPushButton {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(638151916, "_ZN11QPushButtonC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -115,7 +115,7 @@ func (*QPushButton) NewForInherit1(text string, parent QWidget_ITF /*777 QWidget
 func NewQPushButton1(text string, parent QWidget_ITF /*777 QWidget **/) *QPushButton {
 	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
@@ -141,7 +141,7 @@ func NewQPushButton1p(text string) *QPushButton {
 	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(3027368468, "_ZN11QPushButtonC2ERK7QStringP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -160,7 +160,7 @@ func NewQPushButton1p(text string) *QPushButton {
 func (this *QPushButton) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc1(1743812697, "_ZNK11QPushButton8sizeHintEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.QSizeFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -175,7 +175,7 @@ func (this *QPushButton) SizeHint() *qtcore.QSize /*123*/ {
 func (this *QPushButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc1(2291737008, "_ZNK11QPushButton15minimumSizeHintEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.QSizeFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }

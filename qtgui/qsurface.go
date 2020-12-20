@@ -46,10 +46,10 @@ func (ptr *QSurface) QSurface_PTR() *QSurface { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QSurfaceFromptr(cthis unsafe.Pointer) *QSurface {
+func QSurfaceFromptr(cthis Voidptr) *QSurface {
 	return &QSurface{&qtrt.CObject{cthis}}
 }
-func (*QSurface) Fromptr(cthis unsafe.Pointer) *QSurface {
+func (*QSurface) Fromptr(cthis Voidptr) *QSurface {
 	return QSurfaceFromptr(cthis)
 }
 

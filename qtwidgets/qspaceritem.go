@@ -48,11 +48,11 @@ func (ptr *QSpacerItem) QSpacerItem_PTR() *QSpacerItem { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QSpacerItemFromptr(cthis unsafe.Pointer) *QSpacerItem {
+func QSpacerItemFromptr(cthis Voidptr) *QSpacerItem {
 	bcthis0 := QLayoutItemFromptr(cthis)
 	return &QSpacerItem{bcthis0}
 }
-func (*QSpacerItem) Fromptr(cthis unsafe.Pointer) *QSpacerItem {
+func (*QSpacerItem) Fromptr(cthis Voidptr) *QSpacerItem {
 	return QSpacerItemFromptr(cthis)
 }
 
@@ -171,7 +171,7 @@ func (this *QSpacerItem) ChangeSizep1(w int, h int, hData int) {
 func (this *QSpacerItem) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc1(602256895, "_ZNK11QSpacerItem8sizeHintEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.QSizeFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -186,7 +186,7 @@ func (this *QSpacerItem) SizeHint() *qtcore.QSize /*123*/ {
 func (this *QSpacerItem) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc1(2485939981, "_ZNK11QSpacerItem11minimumSizeEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.QSizeFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -201,7 +201,7 @@ func (this *QSpacerItem) MinimumSize() *qtcore.QSize /*123*/ {
 func (this *QSpacerItem) MaximumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc1(3563263867, "_ZNK11QSpacerItem11maximumSizeEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.QSizeFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }

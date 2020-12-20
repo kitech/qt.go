@@ -46,10 +46,10 @@ func (ptr *QPen) QPen_PTR() *QPen { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QPenFromptr(cthis unsafe.Pointer) *QPen {
+func QPenFromptr(cthis Voidptr) *QPen {
 	return &QPen{&qtrt.CObject{cthis}}
 }
-func (*QPen) Fromptr(cthis unsafe.Pointer) *QPen {
+func (*QPen) Fromptr(cthis Voidptr) *QPen {
 	return QPenFromptr(cthis)
 }
 

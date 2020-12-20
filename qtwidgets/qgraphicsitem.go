@@ -49,10 +49,10 @@ func (ptr *QGraphicsItem) QGraphicsItem_PTR() *QGraphicsItem { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QGraphicsItemFromptr(cthis unsafe.Pointer) *QGraphicsItem {
+func QGraphicsItemFromptr(cthis Voidptr) *QGraphicsItem {
 	return &QGraphicsItem{&qtrt.CObject{cthis}}
 }
-func (*QGraphicsItem) Fromptr(cthis unsafe.Pointer) *QGraphicsItem {
+func (*QGraphicsItem) Fromptr(cthis Voidptr) *QGraphicsItem {
 	return QGraphicsItemFromptr(cthis)
 }
 

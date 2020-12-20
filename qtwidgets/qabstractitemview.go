@@ -50,11 +50,11 @@ func (ptr *QAbstractItemView) QAbstractItemView_PTR() *QAbstractItemView { retur
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QAbstractItemViewFromptr(cthis unsafe.Pointer) *QAbstractItemView {
+func QAbstractItemViewFromptr(cthis Voidptr) *QAbstractItemView {
 	bcthis0 := QAbstractScrollAreaFromptr(cthis)
 	return &QAbstractItemView{bcthis0}
 }
-func (*QAbstractItemView) Fromptr(cthis unsafe.Pointer) *QAbstractItemView {
+func (*QAbstractItemView) Fromptr(cthis Voidptr) *QAbstractItemView {
 	return QAbstractItemViewFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QAbstractItemView) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *Q
 	return NewQAbstractItemView(parent)
 }
 func NewQAbstractItemView(parent QWidget_ITF /*777 QWidget **/) *QAbstractItemView {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QAbstractItemView) NewForInheritp() *QAbstractItemView {
 }
 func NewQAbstractItemViewp() *QAbstractItemView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(2582094347, "_ZN17QAbstractItemViewC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)

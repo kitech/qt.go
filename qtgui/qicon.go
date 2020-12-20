@@ -46,10 +46,10 @@ func (ptr *QIcon) QIcon_PTR() *QIcon { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QIconFromptr(cthis unsafe.Pointer) *QIcon {
+func QIconFromptr(cthis Voidptr) *QIcon {
 	return &QIcon{&qtrt.CObject{cthis}}
 }
-func (*QIcon) Fromptr(cthis unsafe.Pointer) *QIcon {
+func (*QIcon) Fromptr(cthis Voidptr) *QIcon {
 	return QIconFromptr(cthis)
 }
 

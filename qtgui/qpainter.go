@@ -46,10 +46,10 @@ func (ptr *QPainter) QPainter_PTR() *QPainter { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QPainterFromptr(cthis unsafe.Pointer) *QPainter {
+func QPainterFromptr(cthis Voidptr) *QPainter {
 	return &QPainter{&qtrt.CObject{cthis}}
 }
-func (*QPainter) Fromptr(cthis unsafe.Pointer) *QPainter {
+func (*QPainter) Fromptr(cthis Voidptr) *QPainter {
 	return QPainterFromptr(cthis)
 }
 
@@ -64,7 +64,7 @@ func (*QPainter) NewForInherit(arg0 QPaintDevice_ITF /*777 QPaintDevice **/) *QP
 	return NewQPainter(arg0)
 }
 func NewQPainter(arg0 QPaintDevice_ITF /*777 QPaintDevice **/) *QPainter {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if arg0 != nil && arg0.QPaintDevice_PTR() != nil {
 		convArg0 = arg0.QPaintDevice_PTR().GetCthis()
 	}
@@ -86,7 +86,7 @@ func NewQPainter(arg0 QPaintDevice_ITF /*777 QPaintDevice **/) *QPainter {
 func (this *QPainter) Device() *QPaintDevice /*777 QPaintDevice **/ {
 	rv, err := qtrt.Qtcc1(3490243267, "_ZNK8QPainter6deviceEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QPaintDeviceFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QPaintDeviceFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 func DeleteQPainter(this *QPainter) {

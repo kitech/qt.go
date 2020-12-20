@@ -47,10 +47,10 @@ func (ptr *QSizePolicy) QSizePolicy_PTR() *QSizePolicy { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QSizePolicyFromptr(cthis unsafe.Pointer) *QSizePolicy {
+func QSizePolicyFromptr(cthis Voidptr) *QSizePolicy {
 	return &QSizePolicy{&qtrt.CObject{cthis}}
 }
-func (*QSizePolicy) Fromptr(cthis unsafe.Pointer) *QSizePolicy {
+func (*QSizePolicy) Fromptr(cthis Voidptr) *QSizePolicy {
 	return QSizePolicyFromptr(cthis)
 }
 

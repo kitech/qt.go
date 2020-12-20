@@ -50,11 +50,11 @@ func (ptr *QButtonGroup) QButtonGroup_PTR() *QButtonGroup { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QButtonGroupFromptr(cthis unsafe.Pointer) *QButtonGroup {
+func QButtonGroupFromptr(cthis Voidptr) *QButtonGroup {
 	bcthis0 := qtcore.QObjectFromptr(cthis)
 	return &QButtonGroup{bcthis0}
 }
-func (*QButtonGroup) Fromptr(cthis unsafe.Pointer) *QButtonGroup {
+func (*QButtonGroup) Fromptr(cthis Voidptr) *QButtonGroup {
 	return QButtonGroupFromptr(cthis)
 }
 

@@ -48,11 +48,11 @@ func (ptr *QBoxLayout) QBoxLayout_PTR() *QBoxLayout { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QBoxLayoutFromptr(cthis unsafe.Pointer) *QBoxLayout {
+func QBoxLayoutFromptr(cthis Voidptr) *QBoxLayout {
 	bcthis0 := QLayoutFromptr(cthis)
 	return &QBoxLayout{bcthis0}
 }
-func (*QBoxLayout) Fromptr(cthis unsafe.Pointer) *QBoxLayout {
+func (*QBoxLayout) Fromptr(cthis Voidptr) *QBoxLayout {
 	return QBoxLayoutFromptr(cthis)
 }
 
@@ -67,7 +67,7 @@ func (*QBoxLayout) NewForInherit(arg0 int, parent QWidget_ITF /*777 QWidget **/)
 	return NewQBoxLayout(arg0, parent)
 }
 func NewQBoxLayout(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QBoxLayout {
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
@@ -91,7 +91,7 @@ func (*QBoxLayout) NewForInheritp(arg0 int) *QBoxLayout {
 }
 func NewQBoxLayoutp(arg0 int) *QBoxLayout {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	cthis := qtrt.Malloc(32)
 	rv, err := qtrt.Qtcc1(3198258420, "_ZN10QBoxLayoutC2ENS_9DirectionEP7QWidget", qtrt.FFITY_POINTER, cthis, arg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -171,7 +171,7 @@ func (this *QBoxLayout) AddStretchp() {
 /*
  */
 func (this *QBoxLayout) AddWidget(arg0 QWidget_ITF /*777 QWidget **/, stretch int, alignment int) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
 		convArg0 = arg0.QWidget_PTR().GetCthis()
 	}
@@ -187,7 +187,7 @@ func (this *QBoxLayout) AddWidget(arg0 QWidget_ITF /*777 QWidget **/, stretch in
 /*
  */
 func (this *QBoxLayout) AddWidgetp(arg0 QWidget_ITF /*777 QWidget **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
 		convArg0 = arg0.QWidget_PTR().GetCthis()
 	}
@@ -207,7 +207,7 @@ func (this *QBoxLayout) AddWidgetp(arg0 QWidget_ITF /*777 QWidget **/) {
 /*
  */
 func (this *QBoxLayout) AddWidgetp1(arg0 QWidget_ITF /*777 QWidget **/, stretch int) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
 		convArg0 = arg0.QWidget_PTR().GetCthis()
 	}
@@ -225,7 +225,7 @@ func (this *QBoxLayout) AddWidgetp1(arg0 QWidget_ITF /*777 QWidget **/, stretch 
 /*
  */
 func (this *QBoxLayout) AddLayout(layout QLayout_ITF /*777 QLayout **/, stretch int) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if layout != nil && layout.QLayout_PTR() != nil {
 		convArg0 = layout.QLayout_PTR().GetCthis()
 	}
@@ -241,7 +241,7 @@ func (this *QBoxLayout) AddLayout(layout QLayout_ITF /*777 QLayout **/, stretch 
 /*
  */
 func (this *QBoxLayout) AddLayoutp(layout QLayout_ITF /*777 QLayout **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if layout != nil && layout.QLayout_PTR() != nil {
 		convArg0 = layout.QLayout_PTR().GetCthis()
 	}

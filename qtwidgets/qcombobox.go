@@ -50,11 +50,11 @@ func (ptr *QComboBox) QComboBox_PTR() *QComboBox { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QComboBoxFromptr(cthis unsafe.Pointer) *QComboBox {
+func QComboBoxFromptr(cthis Voidptr) *QComboBox {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QComboBox{bcthis0}
 }
-func (*QComboBox) Fromptr(cthis unsafe.Pointer) *QComboBox {
+func (*QComboBox) Fromptr(cthis Voidptr) *QComboBox {
 	return QComboBoxFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QComboBox) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QComboBox
 	return NewQComboBox(parent)
 }
 func NewQComboBox(parent QWidget_ITF /*777 QWidget **/) *QComboBox {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QComboBox) NewForInheritp() *QComboBox {
 }
 func NewQComboBoxp() *QComboBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(400444357, "_ZN9QComboBoxC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -227,7 +227,7 @@ func (this *QComboBox) CurrentText() string {
 	rv, err := qtrt.Qtcc1(1212789540, "_ZNK9QComboBox11currentTextEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -245,7 +245,7 @@ func (this *QComboBox) ItemText(index int) string {
 	rv, err := qtrt.Qtcc1(2984951329, "_ZNK9QComboBox8itemTextEi", qtrt.FFITY_POINTER, sretobj, this.GetCthis(), index)
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -261,7 +261,7 @@ func (this *QComboBox) ItemText(index int) string {
 func (this *QComboBox) AddItem(text string, userData qtcore.QVariant_ITF) {
 	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if userData != nil && userData.QVariant_PTR() != nil {
 		convArg1 = userData.QVariant_PTR().GetCthis()
 	}
@@ -295,7 +295,7 @@ func (this *QComboBox) AddItemp(text string) {
 func (this *QComboBox) InsertItem(index int, text string, userData qtcore.QVariant_ITF) {
 	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	var convArg2 unsafe.Pointer
+	var convArg2 Voidptr
 	if userData != nil && userData.QVariant_PTR() != nil {
 		convArg2 = userData.QVariant_PTR().GetCthis()
 	}
@@ -355,7 +355,7 @@ func (this *QComboBox) SetItemText(index int, text string) {
 func (this *QComboBox) View() *QAbstractItemView /*777 QAbstractItemView **/ {
 	rv, err := qtrt.Qtcc1(3310046969, "_ZNK9QComboBox4viewEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QAbstractItemViewFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QAbstractItemViewFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:224

@@ -50,11 +50,11 @@ func (ptr *QMainWindow) QMainWindow_PTR() *QMainWindow { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QMainWindowFromptr(cthis unsafe.Pointer) *QMainWindow {
+func QMainWindowFromptr(cthis Voidptr) *QMainWindow {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QMainWindow{bcthis0}
 }
-func (*QMainWindow) Fromptr(cthis unsafe.Pointer) *QMainWindow {
+func (*QMainWindow) Fromptr(cthis Voidptr) *QMainWindow {
 	return QMainWindowFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QMainWindow) NewForInherit(parent QWidget_ITF /*777 QWidget **/, flags in
 	return NewQMainWindow(parent, flags)
 }
 func NewQMainWindow(parent QWidget_ITF /*777 QWidget **/, flags int) *QMainWindow {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QMainWindow) NewForInheritp() *QMainWindow {
 }
 func NewQMainWindowp() *QMainWindow {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	cthis := qtrt.Malloc(48)
@@ -115,7 +115,7 @@ func (*QMainWindow) NewForInheritp1(parent QWidget_ITF /*777 QWidget **/) *QMain
 	return NewQMainWindowp1(parent)
 }
 func NewQMainWindowp1(parent QWidget_ITF /*777 QWidget **/) *QMainWindow {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -139,7 +139,7 @@ func NewQMainWindowp1(parent QWidget_ITF /*777 QWidget **/) *QMainWindow {
 func (this *QMainWindow) IconSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc1(69313091, "_ZNK11QMainWindow8iconSizeEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.QSizeFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -152,7 +152,7 @@ func (this *QMainWindow) IconSize() *qtcore.QSize /*123*/ {
 /*
  */
 func (this *QMainWindow) SetIconSize(iconSize qtcore.QSize_ITF) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if iconSize != nil && iconSize.QSize_PTR() != nil {
 		convArg0 = iconSize.QSize_PTR().GetCthis()
 	}
@@ -170,7 +170,7 @@ func (this *QMainWindow) SetIconSize(iconSize qtcore.QSize_ITF) {
 func (this *QMainWindow) CentralWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.Qtcc1(1283551286, "_ZNK11QMainWindow13centralWidgetEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QWidgetFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QWidgetFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmainwindow.h:139
@@ -181,7 +181,7 @@ func (this *QMainWindow) CentralWidget() *QWidget /*777 QWidget **/ {
 /*
  */
 func (this *QMainWindow) SetCentralWidget(widget QWidget_ITF /*777 QWidget **/) {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}

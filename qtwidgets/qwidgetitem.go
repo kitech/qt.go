@@ -48,11 +48,11 @@ func (ptr *QWidgetItem) QWidgetItem_PTR() *QWidgetItem { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QWidgetItemFromptr(cthis unsafe.Pointer) *QWidgetItem {
+func QWidgetItemFromptr(cthis Voidptr) *QWidgetItem {
 	bcthis0 := QLayoutItemFromptr(cthis)
 	return &QWidgetItem{bcthis0}
 }
-func (*QWidgetItem) Fromptr(cthis unsafe.Pointer) *QWidgetItem {
+func (*QWidgetItem) Fromptr(cthis Voidptr) *QWidgetItem {
 	return QWidgetItemFromptr(cthis)
 }
 
@@ -67,7 +67,7 @@ func (*QWidgetItem) NewForInherit(w QWidget_ITF /*777 QWidget **/) *QWidgetItem 
 	return NewQWidgetItem(w)
 }
 func NewQWidgetItem(w QWidget_ITF /*777 QWidget **/) *QWidgetItem {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if w != nil && w.QWidget_PTR() != nil {
 		convArg0 = w.QWidget_PTR().GetCthis()
 	}
@@ -89,7 +89,7 @@ func NewQWidgetItem(w QWidget_ITF /*777 QWidget **/) *QWidgetItem {
 func (this *QWidgetItem) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc1(1339409613, "_ZNK11QWidgetItem8sizeHintEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.QSizeFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -104,7 +104,7 @@ func (this *QWidgetItem) SizeHint() *qtcore.QSize /*123*/ {
 func (this *QWidgetItem) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc1(8341184, "_ZNK11QWidgetItem11minimumSizeEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.QSizeFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -119,7 +119,7 @@ func (this *QWidgetItem) MinimumSize() *qtcore.QSize /*123*/ {
 func (this *QWidgetItem) MaximumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc1(1076903606, "_ZNK11QWidgetItem11maximumSizeEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	rv2 := qtcore.QSizeFromptr(unsafe.Pointer(uintptr(rv))) // 333
+	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -160,7 +160,7 @@ func (this *QWidgetItem) IsEmpty() bool {
 func (this *QWidgetItem) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.Qtcc1(4104848494, "_ZN11QWidgetItem6widgetEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
-	return /*==*/ QWidgetFromptr(unsafe.Pointer(uintptr(rv))) // 444
+	return /*==*/ QWidgetFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:147

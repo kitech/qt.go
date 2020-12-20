@@ -50,11 +50,11 @@ func (ptr *QSpinBox) QSpinBox_PTR() *QSpinBox { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QSpinBoxFromptr(cthis unsafe.Pointer) *QSpinBox {
+func QSpinBoxFromptr(cthis Voidptr) *QSpinBox {
 	bcthis0 := QAbstractSpinBoxFromptr(cthis)
 	return &QSpinBox{bcthis0}
 }
-func (*QSpinBox) Fromptr(cthis unsafe.Pointer) *QSpinBox {
+func (*QSpinBox) Fromptr(cthis Voidptr) *QSpinBox {
 	return QSpinBoxFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QSpinBox) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QSpinBox {
 	return NewQSpinBox(parent)
 }
 func NewQSpinBox(parent QWidget_ITF /*777 QWidget **/) *QSpinBox {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QSpinBox) NewForInheritp() *QSpinBox {
 }
 func NewQSpinBoxp() *QSpinBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(3685691689, "_ZN8QSpinBoxC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -127,7 +127,7 @@ func (this *QSpinBox) CleanText() string {
 	rv, err := qtrt.Qtcc1(1673841482, "_ZNK8QSpinBox9cleanTextEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3

@@ -50,11 +50,11 @@ func (ptr *QGroupBox) QGroupBox_PTR() *QGroupBox { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QGroupBoxFromptr(cthis unsafe.Pointer) *QGroupBox {
+func QGroupBoxFromptr(cthis Voidptr) *QGroupBox {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QGroupBox{bcthis0}
 }
-func (*QGroupBox) Fromptr(cthis unsafe.Pointer) *QGroupBox {
+func (*QGroupBox) Fromptr(cthis Voidptr) *QGroupBox {
 	return QGroupBoxFromptr(cthis)
 }
 
@@ -69,7 +69,7 @@ func (*QGroupBox) NewForInherit(parent QWidget_ITF /*777 QWidget **/) *QGroupBox
 	return NewQGroupBox(parent)
 }
 func NewQGroupBox(parent QWidget_ITF /*777 QWidget **/) *QGroupBox {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -93,7 +93,7 @@ func (*QGroupBox) NewForInheritp() *QGroupBox {
 }
 func NewQGroupBoxp() *QGroupBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(662756536, "_ZN9QGroupBoxC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)
@@ -115,7 +115,7 @@ func (*QGroupBox) NewForInherit1(title string, parent QWidget_ITF /*777 QWidget 
 func NewQGroupBox1(title string, parent QWidget_ITF /*777 QWidget **/) *QGroupBox {
 	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
@@ -141,7 +141,7 @@ func NewQGroupBox1p(title string) *QGroupBox {
 	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(2800323070, "_ZN9QGroupBoxC2ERK7QStringP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -162,7 +162,7 @@ func (this *QGroupBox) Title() string {
 	rv, err := qtrt.Qtcc1(3632320991, "_ZNK9QGroupBox5titleEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
 	qtrt.ErrPrint(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(unsafe.Pointer(uintptr(rv)))
+	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3

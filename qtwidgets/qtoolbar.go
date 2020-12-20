@@ -50,11 +50,11 @@ func (ptr *QToolBar) QToolBar_PTR() *QToolBar { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QToolBarFromptr(cthis unsafe.Pointer) *QToolBar {
+func QToolBarFromptr(cthis Voidptr) *QToolBar {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QToolBar{bcthis0}
 }
-func (*QToolBar) Fromptr(cthis unsafe.Pointer) *QToolBar {
+func (*QToolBar) Fromptr(cthis Voidptr) *QToolBar {
 	return QToolBarFromptr(cthis)
 }
 
@@ -71,7 +71,7 @@ func (*QToolBar) NewForInherit(title string, parent QWidget_ITF /*777 QWidget **
 func NewQToolBar(title string, parent QWidget_ITF /*777 QWidget **/) *QToolBar {
 	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
@@ -97,7 +97,7 @@ func NewQToolBarp(title string) *QToolBar {
 	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg1 unsafe.Pointer
+	var convArg1 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(115476381, "_ZN8QToolBarC2ERK7QStringP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0, convArg1)
 	qtrt.ErrPrint(err, rv)
@@ -117,7 +117,7 @@ func (*QToolBar) NewForInherit1(parent QWidget_ITF /*777 QWidget **/) *QToolBar 
 	return NewQToolBar1(parent)
 }
 func NewQToolBar1(parent QWidget_ITF /*777 QWidget **/) *QToolBar {
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	if parent != nil && parent.QWidget_PTR() != nil {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
@@ -141,7 +141,7 @@ func (*QToolBar) NewForInherit1p() *QToolBar {
 }
 func NewQToolBar1p() *QToolBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
-	var convArg0 unsafe.Pointer
+	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc1(2552095711, "_ZN8QToolBarC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
 	qtrt.ErrPrint(err, rv)

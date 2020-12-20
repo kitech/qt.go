@@ -45,10 +45,10 @@ func (ptr *QVariant) QVariant_PTR() *QVariant { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
-func QVariantFromptr(cthis unsafe.Pointer) *QVariant {
+func QVariantFromptr(cthis Voidptr) *QVariant {
 	return &QVariant{&qtrt.CObject{cthis}}
 }
-func (*QVariant) Fromptr(cthis unsafe.Pointer) *QVariant {
+func (*QVariant) Fromptr(cthis Voidptr) *QVariant {
 	return QVariantFromptr(cthis)
 }
 

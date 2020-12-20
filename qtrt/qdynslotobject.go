@@ -39,7 +39,7 @@ func NewQDynSlotObject(signalName string, argc int) *QDynSlotObject {
 	var cbptr_ Voidptr
 	fnptr_ := Voidptr(C.callbackAllQDynSlotObject)
 
-	rv, err := InvokeQtFunc6("QDynSlotObject_new", FFI_TYPE_POINTER,
+	rv, err := InvokeQtFunc6("QDynSlotObject_new", FFITY_POINTER,
 		fnptr_, name_, argc_, argtys_, cbptr_)
 	ErrPrint(err, rv)
 
@@ -49,13 +49,14 @@ func NewQDynSlotObject(signalName string, argc int) *QDynSlotObject {
 }
 
 func DeleteQDynSlotObject(o *QDynSlotObject) {
-	rv, err := InvokeQtFunc6("QDynSlotObject_delete", FFI_TYPE_VOID, o.cthis)
+	rv, err := InvokeQtFunc6("QDynSlotObject_delete", FFITY_VOID, o.cthis)
 	ErrPrint(err, rv)
 }
 
 type CObjectITF interface {
 	GetCthis() Voidptr
 	SetCthis(Voidptr)
+	//Addr() Voidptr
 }
 
 // 可以是signal的完整函数原型，也可以是名字
@@ -124,11 +125,11 @@ func (*QDynSlotObject) _ConnectSwitch(src Voidptr, signame string, on bool, cobj
 	}
 
 	if on {
-		rv, err := InvokeQtFunc6("QDynSlotObject_connect_switch", FFI_TYPE_VOID,
+		rv, err := InvokeQtFunc6("QDynSlotObject_connect_switch", FFITY_VOID,
 			src, signame_, subDynSlot.cthis, int(1))
 		ErrPrint(err, rv)
 	} else {
-		rv, err := InvokeQtFunc6("QDynSlotObject_connect_switch", FFI_TYPE_VOID,
+		rv, err := InvokeQtFunc6("QDynSlotObject_connect_switch", FFITY_VOID,
 			src, signame_, subDynSlot.cthis, int(0))
 		ErrPrint(err, rv)
 	}
@@ -145,7 +146,7 @@ func DisconnectAll(cobj CObjectITF) {
 	var convArg0 Voidptr
 	var convArg1 Voidptr
 	var convArg2 Voidptr
-	rv, err := InvokeQtFunc6("_ZNK7QObject10disconnectEPKcPKS_S1_", FFI_TYPE_POINTER, cobj.GetCthis(), convArg0, convArg1, convArg2)
+	rv, err := InvokeQtFunc6("_ZNK7QObject10disconnectEPKcPKS_S1_", FFITY_POINTER, cobj.GetCthis(), convArg0, convArg1, convArg2)
 	ErrPrint(err, rv)
 }
 
@@ -182,11 +183,11 @@ func connectqq_impl(sender CObjectITF, signal string, receiver CObjectITF, membe
 	var convArg3 = CString(member)
 	defer FreeMem(convArg3)
 	var arg4 int = 2 // Qt::QueuedConnection	2
-	rv, err := InvokeQtFunc6("_ZN7QObject7connectEPKS_PKcS1_S3_N2Qt14ConnectionTypeE", FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, arg4)
+	rv, err := InvokeQtFunc6("_ZN7QObject7connectEPKS_PKcS1_S3_N2Qt14ConnectionTypeE", FFITY_POINTER, convArg0, convArg1, convArg2, convArg3, arg4)
 	ErrPrint(err, rv)
 
 	// manually fix memory leak of return
-	InvokeQtFunc6("_ZN11QMetaObject10ConnectionD2Ev", FFI_TYPE_VOID, Voidptr(uintptr(rv)))
+	InvokeQtFunc6("_ZN11QMetaObject10ConnectionD2Ev", FFITY_VOID, Voidptr(uintptr(rv)))
 	// return int(rv)
 }
 
@@ -199,11 +200,11 @@ func ConnectRaw(sender Voidptr, signal string, receiver Voidptr, member string) 
 	var convArg3 = CString(member)
 	defer FreeMem(convArg3)
 	var arg4 int = 2 // Qt::QueuedConnection	2
-	rv, err := InvokeQtFunc6("_ZN7QObject7connectEPKS_PKcS1_S3_N2Qt14ConnectionTypeE", FFI_TYPE_POINTER, convArg0, convArg1, convArg2, convArg3, arg4)
+	rv, err := InvokeQtFunc6("_ZN7QObject7connectEPKS_PKcS1_S3_N2Qt14ConnectionTypeE", FFITY_POINTER, convArg0, convArg1, convArg2, convArg3, arg4)
 	ErrPrint(err, rv)
 
 	// manually fix memory leak of return
-	InvokeQtFunc6("_ZN11QMetaObject10ConnectionD2Ev", FFI_TYPE_VOID, Voidptr(uintptr(rv)))
+	InvokeQtFunc6("_ZN11QMetaObject10ConnectionD2Ev", FFITY_VOID, Voidptr(uintptr(rv)))
 	// return int(rv)
 }
 
@@ -211,7 +212,7 @@ func ConnectRaw(sender Voidptr, signal string, receiver Voidptr, member string) 
 func QObjectGetSignatureByName(qobj CObjectITF, name string) (string, error) {
 	var convArg1 = CString(name)
 	defer FreeMem(convArg1)
-	rv, err := InvokeQtFunc6("QObject_get_meta_signature_by_name", FFI_TYPE_POINTER, qobj.GetCthis(), convArg1)
+	rv, err := InvokeQtFunc6("QObject_get_meta_signature_by_name", FFITY_POINTER, qobj.GetCthis(), convArg1)
 	ErrPrint(err, rv)
 	switch rv {
 	case 0:
@@ -283,16 +284,16 @@ func init() {
 }
 func SetDebugDynSlot(on bool) {
 	debugDynSlot = on
-	InvokeQtFunc6("QDynSlotObject_set_debug", FFI_TYPE_VOID, IfElseInt(on, 1, 0))
+	InvokeQtFunc6("QDynSlotObject_set_debug", FFITY_VOID, IfElseInt(on, 1, 0))
 }
 
 // test
 func (this *QDynSlotObject) Connect_test(to *QDynSlotObject) {
-	rv, err := InvokeQtFunc6("QDynSlotObject_connect_test", FFI_TYPE_VOID, this.cthis, to.cthis)
+	rv, err := InvokeQtFunc6("QDynSlotObject_connect_test", FFITY_VOID, this.cthis, to.cthis)
 	ErrPrint(err, rv)
 }
 
 func (this *QDynSlotObject) Trigger_test() {
-	rv, err := InvokeQtFunc6("QDynSlotObject_trigger_test", FFI_TYPE_VOID, this.cthis)
+	rv, err := InvokeQtFunc6("QDynSlotObject_trigger_test", FFITY_VOID, this.cthis)
 	ErrPrint(err, rv)
 }

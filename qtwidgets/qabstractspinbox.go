@@ -50,11 +50,11 @@ func (ptr *QAbstractSpinBox) QAbstractSpinBox_PTR() *QAbstractSpinBox { return p
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
-func QAbstractSpinBoxFromptr(cthis unsafe.Pointer) *QAbstractSpinBox {
+func QAbstractSpinBoxFromptr(cthis Voidptr) *QAbstractSpinBox {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QAbstractSpinBox{bcthis0}
 }
-func (*QAbstractSpinBox) Fromptr(cthis unsafe.Pointer) *QAbstractSpinBox {
+func (*QAbstractSpinBox) Fromptr(cthis Voidptr) *QAbstractSpinBox {
 	return QAbstractSpinBoxFromptr(cthis)
 }
 
