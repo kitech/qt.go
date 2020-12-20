@@ -1,8 +1,6 @@
 package qtrt
 
 import (
-	"unsafe"
-
 	dl "github.com/kitech/dl/dl2"
 )
 
@@ -25,13 +23,13 @@ func (lib FFILibrary) Close() error {
 	return lib.handle.Close()
 }
 
-func (lib FFILibrary) Symbol(fctname string) (unsafe.Pointer, error) {
+func (lib FFILibrary) Symbol(fctname string) (Voidptr, error) {
 	//println("Fct(",fctname,")...")
 	sym, err := lib.handle.Symbol(fctname)
 	if err != nil {
 		return nil, err
 	}
 
-	addr := unsafe.Pointer(sym)
+	addr := Voidptr(sym)
 	return addr, nil
 }

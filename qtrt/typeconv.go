@@ -17,6 +17,8 @@ import (
 	"unsafe"
 )
 
+type Voidptr = unsafe.Pointer
+
 func test_123() {
 	// var a0 interface{}
 
@@ -24,32 +26,32 @@ func test_123() {
 
 func Byte2Charp(a0 interface{}) *C.uchar {
 	var p0 = a0.([]byte)
-	return (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(p0).UnsafeAddr())) // OK
+	return (*C.uchar)((Voidptr)(reflect.ValueOf(p0).UnsafeAddr())) // OK
 }
 
 /*
-cannot use arg1 (type unsafe.Pointer) as type **_Ctype_float
+cannot use arg1 (type Voidptr) as type **_Ctype_float
 cannot use arg0 (type *_Ctype_char) as type *_Ctype_wchar_t
 */
 
 func Rune2WCharp(a0 interface{}) *C.wchar_t {
-	return (*C.wchar_t)((unsafe.Pointer)(reflect.ValueOf(a0.([]rune)).UnsafeAddr())) // OK
+	return (*C.wchar_t)((Voidptr)(reflect.ValueOf(a0.([]rune)).UnsafeAddr())) // OK
 	// return (*C.wchar_t)(a0.([]rune))
 }
 
 func Float2Float(a0 interface{}) **C.float {
-	return (**C.float)((unsafe.Pointer)(reflect.ValueOf(a0.([][]float32)).UnsafeAddr())) // OK
+	return (**C.float)((Voidptr)(reflect.ValueOf(a0.([][]float32)).UnsafeAddr())) // OK
 }
 
 func Double2Double(a0 interface{}) **C.double {
-	return (**C.double)((unsafe.Pointer)(reflect.ValueOf(a0.([][]float64)).UnsafeAddr())) // OK
+	return (**C.double)((Voidptr)(reflect.ValueOf(a0.([][]float64)).UnsafeAddr())) // OK
 }
 
 func HandyConvert2c(fv interface{}, to reflect.Type) (retv interface{}, free bool) {
 	from := reflect.TypeOf(fv)
 	switch {
 	case from.Kind() == reflect.String && to.Kind() == reflect.Ptr && to.Elem().Kind() == reflect.Uint8:
-		retv = unsafe.Pointer(C.CString(fv.(string)))
+		retv = Voidptr(C.CString(fv.(string)))
 		free = true
 		return
 	default:
@@ -91,7 +93,7 @@ func PrimConv(fvi interface{}, to reflect.Type) (reti interface{}) {
 	return
 }
 
-func StringSliceToCCharPP(ss []string) unsafe.Pointer {
+func StringSliceToCCharPP(ss []string) Voidptr {
 	var tp *C.char
 	p := C.calloc(C.size_t(len(ss)+1), C.size_t(unsafe.Sizeof(tp)))
 	var pp **C.char = (**C.char)(p)
@@ -105,7 +107,7 @@ func StringSliceToCCharPP(ss []string) unsafe.Pointer {
 	return p
 }
 
-func CCharPPToStringSlice(charpp unsafe.Pointer) []string {
+func CCharPPToStringSlice(charpp Voidptr) []string {
 	ss := []string{}
 	var pp **C.char = (**C.char)(charpp)
 	for i := 0; i < math.MaxInt32; i++ {
@@ -123,7 +125,7 @@ func Cretval2go(ty string, rv uint64) interface{} {
 	case "int":
 		return int((C.int)(rv))
 	case "float64":
-		return float64(*(*C.double)(unsafe.Pointer(&rv)))
+		return float64(*(*C.double)(Voidptr(&rv)))
 	default:
 		log.Println("Unknown type:", ty)
 	}
@@ -134,14 +136,14 @@ func Cretval2go2(ty reflect.Kind, rv uint64) interface{} {
 	return rv
 }
 
-//func (rv VRetype) Ptr() unsafe.Pointer { return unsafe.Pointer(uintptr(rv)) }
+//func (rv VRetype) Ptr() Voidptr { return Voidptr(uintptr(rv)) }
 
 func Cpretval2go(ty string, rv uint64) interface{} {
 	switch ty {
 	case "int":
-		return int(*(*C.int)(unsafe.Pointer(uintptr(rv))))
+		return int(*(*C.int)(Voidptr(uintptr(rv))))
 	case "float64":
-		return float64(*(*C.double)(unsafe.Pointer(uintptr(rv))))
+		return float64(*(*C.double)(Voidptr(uintptr(rv))))
 	default:
 		log.Println("Unknown type:", ty)
 	}

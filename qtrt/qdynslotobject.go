@@ -9,7 +9,6 @@ import (
 	"log"
 	"os"
 	"strings"
-	"unsafe"
 
 	qt "github.com/kitech/qt.go/qtqt"
 )
@@ -17,14 +16,14 @@ import (
 // usage: ffiqt.Connect()
 // 也许放在qtrt包中更好，但在测试时放在了ffiqt包中，暂时放在这
 type QDynSlotObject struct {
-	cthis unsafe.Pointer
+	cthis Voidptr
 
 	//state
-	sigsrc unsafe.Pointer
+	sigsrc Voidptr
 	sigobj CObjectITF // 保存类型信息
 }
 
-func (this *QDynSlotObject) GetCthis() unsafe.Pointer {
+func (this *QDynSlotObject) GetCthis() Voidptr {
 	if this == nil {
 		return nil
 	}
@@ -37,14 +36,14 @@ func NewQDynSlotObject(signalName string, argc int) *QDynSlotObject {
 	name_ := C.CString(signalName)
 	argc_ := int(argc)
 	argtys_ := (*int)(nil)
-	var cbptr_ unsafe.Pointer
-	fnptr_ := unsafe.Pointer(C.callbackAllQDynSlotObject)
+	var cbptr_ Voidptr
+	fnptr_ := Voidptr(C.callbackAllQDynSlotObject)
 
 	rv, err := InvokeQtFunc6("QDynSlotObject_new", FFI_TYPE_POINTER,
 		fnptr_, name_, argc_, argtys_, cbptr_)
 	ErrPrint(err, rv)
 
-	this.cthis = unsafe.Pointer(uintptr(rv))
+	this.cthis = Voidptr(uintptr(rv))
 	SetFinalizer(this, DeleteQDynSlotObject)
 	return this
 }
@@ -55,8 +54,8 @@ func DeleteQDynSlotObject(o *QDynSlotObject) {
 }
 
 type CObjectITF interface {
-	GetCthis() unsafe.Pointer
-	SetCthis(unsafe.Pointer)
+	GetCthis() Voidptr
+	SetCthis(Voidptr)
 }
 
 // 可以是signal的完整函数原型，也可以是名字
@@ -83,8 +82,8 @@ func (*QDynSlotObject) _Connect(cobj CObjectITF, signame string, f interface{}) 
 		}
 
 		if signal := qt.LendSignal(cptr, signame); signal != nil {
-			qt.ConnectSignal(cptr, signame, func(argvals /* **C.uchar*/ unsafe.Pointer, sigobj interface{}) {
-				signal.(func(unsafe.Pointer, interface{}))(argvals, sigobj)
+			qt.ConnectSignal(cptr, signame, func(argvals /* **C.uchar*/ Voidptr, sigobj interface{}) {
+				signal.(func(Voidptr, interface{}))(argvals, sigobj)
 				callbackSlotInvoke(f, argvals, sigobj)
 				if false {
 					signal.(func())()
@@ -92,7 +91,7 @@ func (*QDynSlotObject) _Connect(cobj CObjectITF, signame string, f interface{}) 
 				}
 			})
 		} else {
-			qt.ConnectSignal(cptr, signame, func(argvals /* **C.uchar*/ unsafe.Pointer, sigobj interface{}) {
+			qt.ConnectSignal(cptr, signame, func(argvals /* **C.uchar*/ Voidptr, sigobj interface{}) {
 				callbackSlotInvoke(f, argvals, sigobj)
 			})
 		}
@@ -100,11 +99,11 @@ func (*QDynSlotObject) _Connect(cobj CObjectITF, signame string, f interface{}) 
 }
 
 // 可以是signal的完整函数原型，也可以是名字
-func ConnectSwitch(src unsafe.Pointer, signame string, on bool, cobj CObjectITF) {
+func ConnectSwitch(src Voidptr, signame string, on bool, cobj CObjectITF) {
 	((*QDynSlotObject)(nil))._ConnectSwitch(src, signame, on, cobj)
 }
 
-func (*QDynSlotObject) _ConnectSwitch(src unsafe.Pointer, signame string, on bool, cobj CObjectITF) {
+func (*QDynSlotObject) _ConnectSwitch(src Voidptr, signame string, on bool, cobj CObjectITF) {
 	signamep := QSIGNAL(signame)
 	signame_ := C.CString(signamep)
 	if debugDynSlot {
@@ -143,9 +142,9 @@ func Disconnect(cobj CObjectITF, signame string) {
 
 // the same as QObject.Disconnect_2_()
 func DisconnectAll(cobj CObjectITF) {
-	var convArg0 unsafe.Pointer
-	var convArg1 unsafe.Pointer
-	var convArg2 unsafe.Pointer
+	var convArg0 Voidptr
+	var convArg1 Voidptr
+	var convArg2 Voidptr
 	rv, err := InvokeQtFunc6("_ZNK7QObject10disconnectEPKcPKS_S1_", FFI_TYPE_POINTER, cobj.GetCthis(), convArg0, convArg1, convArg2)
 	ErrPrint(err, rv)
 }
@@ -187,11 +186,11 @@ func connectqq_impl(sender CObjectITF, signal string, receiver CObjectITF, membe
 	ErrPrint(err, rv)
 
 	// manually fix memory leak of return
-	InvokeQtFunc6("_ZN11QMetaObject10ConnectionD2Ev", FFI_TYPE_VOID, unsafe.Pointer(uintptr(rv)))
+	InvokeQtFunc6("_ZN11QMetaObject10ConnectionD2Ev", FFI_TYPE_VOID, Voidptr(uintptr(rv)))
 	// return int(rv)
 }
 
-func ConnectRaw(sender unsafe.Pointer, signal string, receiver unsafe.Pointer, member string) {
+func ConnectRaw(sender Voidptr, signal string, receiver Voidptr, member string) {
 
 	var convArg0 = sender
 	var convArg1 = CString(signal)
@@ -204,7 +203,7 @@ func ConnectRaw(sender unsafe.Pointer, signal string, receiver unsafe.Pointer, m
 	ErrPrint(err, rv)
 
 	// manually fix memory leak of return
-	InvokeQtFunc6("_ZN11QMetaObject10ConnectionD2Ev", FFI_TYPE_VOID, unsafe.Pointer(uintptr(rv)))
+	InvokeQtFunc6("_ZN11QMetaObject10ConnectionD2Ev", FFI_TYPE_VOID, Voidptr(uintptr(rv)))
 	// return int(rv)
 }
 
@@ -239,14 +238,14 @@ func ConnectDestroyed(senderCobj CObjectITF, className string) {
 }
 
 // disconnect obj's connected signal and cleanup
-func getOnQObjectDestroyed(senderCobj CObjectITF, className string) func(unsafe.Pointer) {
-	return func(senderCobj1 unsafe.Pointer) {
+func getOnQObjectDestroyed(senderCobj CObjectITF, className string) func(Voidptr) {
+	return func(senderCobj1 Voidptr) {
 		beforeDestroyedQObject(senderCobj.GetCthis(), nil, className)
 		if senderCobj1 != senderCobj.GetCthis() {
 			log.Println("wtf")
 		}
 		var subDynSlot *QDynSlotObject
-		var subDynSlotCthis unsafe.Pointer
+		var subDynSlotCthis Voidptr
 		if signal := qt.LendSignal(senderCobj.GetCthis(), destroyedSingalNamep); signal != nil {
 			subDynSlot = signal.(*QDynSlotObject)
 			subDynSlotCthis = subDynSlot.GetCthis()
@@ -262,12 +261,12 @@ func getOnQObjectDestroyed(senderCobj CObjectITF, className string) func(unsafe.
 	}
 }
 
-var beforeDestroyedQObject = func(senderCobj, recverCobj unsafe.Pointer, className string) {
+var beforeDestroyedQObject = func(senderCobj, recverCobj Voidptr, className string) {
 	if debugDynSlot {
 		log.Println(senderCobj, recverCobj, className)
 	}
 }
-var afterDestroyedQObject = func(senderCobj, recverCobj unsafe.Pointer, className string) {
+var afterDestroyedQObject = func(senderCobj, recverCobj Voidptr, className string) {
 	if debugDynSlot {
 		log.Println(senderCobj, recverCobj, className)
 	}

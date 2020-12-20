@@ -7,6 +7,8 @@ package qtwebchannel
 */
 // import "C"
 import (
+	"unsafe"
+
 	"github.com/kitech/qt.go/qtcore"
 )
 
@@ -17,3 +19,5 @@ func init() {
 }
 
 func KeepMe() {}
+
+type Voidptr = unsafe.Pointer

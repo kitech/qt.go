@@ -15,7 +15,6 @@ import (
 	"reflect"
 	"regexp"
 	"strings"
-	"unsafe"
 
 	qt "github.com/kitech/qt.go/qtqt"
 )
@@ -23,7 +22,7 @@ import (
 /*
  */
 // depcreated
-func SetInheritCallback2c(name string, fnptr unsafe.Pointer) {
+func SetInheritCallback2c(name string, fnptr Voidptr) {
 	symname := fmt.Sprintf("set_callback%s", name)
 	InvokeQtFunc6(symname, FFI_TYPE_VOID, fnptr)
 }
@@ -59,7 +58,7 @@ func UnsetAllInheritCallbackAll(cbobj CObjectITF) {
 
 // depcreated
 // 在go中的projected继承代理方法调用
-func CallbackAllInherits(cbobj unsafe.Pointer, name string, args ...interface{}) interface{} {
+func CallbackAllInherits(cbobj Voidptr, name string, args ...interface{}) interface{} {
 	if debugDynSlot {
 		log.Println(name, cbobj, len(args), args)
 	}
@@ -135,7 +134,7 @@ func callbackInheritInvokeDefault(f interface{}, args ...interface{}) interface{
 	return nil
 }
 
-func setAllInheritCallback2c(name string, fnptr unsafe.Pointer) {
+func setAllInheritCallback2c(name string, fnptr Voidptr) {
 	symname := fmt.Sprintf("set_callback%s", name)
 	InvokeQtFunc6(symname, FFI_TYPE_VOID, fnptr)
 }
@@ -144,7 +143,7 @@ func init_callack_inherit() { setAllInheritCallback2c("AllInherits", C.callbackA
 
 // 在C绑定中的projected继承代理方法直接调用
 //export callbackAllInherits
-func callbackAllInherits(cbobj unsafe.Pointer, iname *C.char, handled *C.int, argc C.int, p0, p1, p2, p3, p4, p5, p6, p7, p8, p9 C.uint64_t) C.uint64_t {
+func callbackAllInherits(cbobj Voidptr, iname *C.char, handled *C.int, argc C.int, p0, p1, p2, p3, p4, p5, p6, p7, p8, p9 C.uint64_t) C.uint64_t {
 	name_ := C.GoString(iname)
 	var handled_ int
 	rv := C.uint64_t(callbackAllInheritsGo(cbobj, name_, &handled_, int(argc),
@@ -174,7 +173,7 @@ func SetDebugAllinheritsFilterFunc(f func(name string) bool) {
 	debugAllInheritsFilterFunc = f
 }
 
-func callbackAllInheritsGo(cbobj unsafe.Pointer, name string, handled *int, argc int, pargs ...uint64) uint64 {
+func callbackAllInheritsGo(cbobj Voidptr, name string, handled *int, argc int, pargs ...uint64) uint64 {
 	needDebug := false
 	if debugAllInheritsFilterFunc != nil && debugAllInheritsFilterFunc(name) {
 		if debugIneritCall {
@@ -210,9 +209,9 @@ func callbackAllInheritsGo(cbobj unsafe.Pointer, name string, handled *int, argc
 			var co CObjectITF
 			if retv.Type().Implements(reflect.TypeOf(co)) {
 				crvpx := retv.MethodByName("GetCthis").Call([]reflect.Value{})
-				return uint64(uintptr(crvpx[0].Interface().(unsafe.Pointer)))
+				return uint64(uintptr(crvpx[0].Interface().(Voidptr)))
 			} else {
-				return uint64(uintptr(rv.(unsafe.Pointer)))
+				return uint64(uintptr(rv.(Voidptr)))
 			}
 		default:
 			return rv.(uint64)
@@ -253,9 +252,9 @@ func callbackInheritInvokeGo(f interface{}, args ...uint64) interface{} {
 		case reflect.Bool:
 			in = append(in, reflect.ValueOf(args[i] == 1))
 		case reflect.Float64:
-			in = append(in, reflect.ValueOf((float64)(*(*C.double)(unsafe.Pointer(uintptr(args[i]))))))
+			in = append(in, reflect.ValueOf((float64)(*(*C.double)(Voidptr(uintptr(args[i]))))))
 		case reflect.Float32:
-			in = append(in, reflect.ValueOf((float32)(*(*C.float)(unsafe.Pointer(uintptr(args[i]))))))
+			in = append(in, reflect.ValueOf((float32)(*(*C.float)(Voidptr(uintptr(args[i]))))))
 		case reflect.String:
 			in = append(in, reflect.ValueOf(GoStringI(args[i])))
 		case reflect.Ptr:
@@ -269,7 +268,7 @@ func callbackInheritInvokeGo(f interface{}, args ...uint64) interface{} {
 				if reg.MatchString(argd1ty.String()) {
 					prmval := reflect.New(argd1ty)
 					prmval.MethodByName("SetCthis").Call([]reflect.Value{
-						reflect.ValueOf(unsafe.Pointer(uintptr(args[i])))})
+						reflect.ValueOf(Voidptr(uintptr(args[i])))})
 					in = append(in, prmval)
 				} else {
 					log.Println("Unsupported:", argty.Kind().String(), argty.String())
@@ -279,7 +278,7 @@ func callbackInheritInvokeGo(f interface{}, args ...uint64) interface{} {
 			if argty.String() == "qtrel.CCret" {
 				prmval := reflect.New(argty)
 				rvs := prmval.MethodByName("FromCthis").Call([]reflect.Value{
-					reflect.ValueOf(unsafe.Pointer(uintptr(args[i])))})
+					reflect.ValueOf(Voidptr(uintptr(args[i])))})
 				prmval = rvs[0]
 				in = append(in, prmval)
 			}
@@ -306,19 +305,19 @@ func callbackInheritInvokeGo(f interface{}, args ...uint64) interface{} {
 
 // 把浮点数存储在uint64中。注意这不是强制类型转换，是原样存储，不丢失精度
 func Float64AsInt(n float64) (rv uint64) {
-	C.memcpy((unsafe.Pointer(&rv)), (unsafe.Pointer(&n)), 8)
+	C.memcpy((Voidptr(&rv)), (Voidptr(&n)), 8)
 	return
 }
 func Float32AsInt(n float32) (rv uint64) {
-	C.memcpy((unsafe.Pointer(&rv)), (unsafe.Pointer(&n)), 4)
+	C.memcpy((Voidptr(&rv)), (Voidptr(&n)), 4)
 	return
 }
 func IntAsFloat64(v uint64) (n float64) {
-	C.memcpy((unsafe.Pointer(&n)), (unsafe.Pointer(&v)), 8)
+	C.memcpy((Voidptr(&n)), (Voidptr(&v)), 8)
 	return
 }
 func IntAsFloat32(v uint64) (n float32) {
-	C.memcpy((unsafe.Pointer(&n)), (unsafe.Pointer(&v)), 4)
+	C.memcpy((Voidptr(&n)), (Voidptr(&v)), 4)
 	return
 }
 

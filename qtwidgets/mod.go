@@ -25,6 +25,8 @@ func init() {
 
 func KeepMe() {}
 
+type Voidptr = unsafe.Pointer
+
 // 阻塞的调用不能用asmcgocall,否则回调崩溃
 func (this *QApplication) Exec() int {
 	rv, err := qtrt.InvokeQtFunc6("_ZN12QApplication4execEv", qtrt.FFITY_POINTER)

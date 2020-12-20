@@ -94,7 +94,6 @@ import (
 	"runtime"
 	"strings"
 	"sync"
-	"unsafe"
 
 	"github.com/kitech/dl/asmcgocall"
 )
@@ -129,11 +128,11 @@ TODO
   argtypes int[20]
   argvals uint64_t[20]
 */
-func ffi_call_ex(fn unsafe.Pointer, retype int, rc *uint64, argc int, argtys []int, argvals []uint64) {
+func ffi_call_ex(fn Voidptr, retype int, rc *uint64, argc int, argtys []int, argvals []uint64) {
 
 	var cif C.ffi_cif
 	var ffitys = make([]*C.ffi_type, 20)
-	var ffivals = make([]unsafe.Pointer, 20)
+	var ffivals = make([]Voidptr, 20)
 	var ffirc C.ffi_arg
 	_, _, _, _ = cif, ffitys, ffivals, ffirc
 
@@ -326,7 +325,7 @@ func InvokeQtFunc7(symname string, args ...interface{}) (VRetype, error) {
 	var retype byte = FFITY_POINTER
 	log.Println("FFI Call:", symname, addr, "retype=", retype, "argc=", len(args))
 
-	var retval unsafe.Pointer = C.calloc(1, 256)
+	var retval Voidptr = C.calloc(1, 256)
 	argtys, argvals, argrefps := convArgs(args...)
 	_ = argrefps
 	// var retval C.uint64_t = 0
@@ -348,15 +347,7 @@ func Qtcc0(symname string, retype byte, args ...interface{}) (VRetype, error) {
 // with symbol cache version
 // dont use C_xxx, high level process sret, this,
 func Qtcc1(symcrc uint32, symname string, retype byte, args ...interface{}) (VRetype, error) {
-	var addr unsafe.Pointer
-	addrx, ok := symcache.Load(symcrc)
-	if ok {
-		addr = addrx.(unsafe.Pointer)
-	} else {
-		addr = GetQtSymAddrRaw(symname)
-		symcache.Store(symcrc, addr)
-	}
-
+	addr := getSymAddrRawCached(symcrc, symname)
 	if debugFFICall {
 		log.Println("FFI Call:", symname, addr, "retype=", retype, "argc=", len(args))
 	}
@@ -365,10 +356,64 @@ func Qtcc1(symcrc uint32, symname string, retype byte, args ...interface{}) (VRe
 	return cc0byaddr2(symname, addr, retype, args...)
 }
 
+// argtys 每个字节表示一个参数FFI类型，最大支持8个参数
+func Qtcc3(symcrc uint32, symname string, retype byte,
+	argtys uint64, args ...Voidptr) (VRetype, error) {
+	addr := getSymAddrRawCached(symcrc, symname)
+
+	ap := argpp.Get()
+	if ap == nil {
+		log.Panicln("empty arg pack pool")
+	}
+	// convArgs2(ap, args...)
+	for i := 0; i < len(args); i++ {
+		ffity := argtys << (7 - i) >> 7
+		ap.argtys[i] = byte(ffity)
+		ap.argvals[i] = uint64(uintptr(args[i]))
+	}
+	argtys2, argvals, argrefps := ap.argtys, ap.argvals, ap.argrefps
+
+	_ = argrefps
+	var retval C.uint64_t = 0
+	var argv = struct {
+		addr    Voidptr
+		retype  C.int
+		retval  *C.uint64_t
+		argc    C.int
+		argtys  *C.uint8_t
+		argvals *C.uint64_t
+	}{addr, C.int(retype), &retval, C.int(len(args)),
+		(*C.uint8_t)(&argtys2[0]), (*C.uint64_t)(&argvals[0])}
+	asmcgocall.Asmcc(C.ffi_call_ex_asmcc, Voidptr(&argv))
+
+	onCtorAlloc(symname)
+	argpp.Put(ap)
+	return uint64(retval), nil
+
+	return 0, nil
+}
+
+func getSymAddrRawCached(symcrc uint32, symname string) Voidptr {
+	var addr Voidptr
+	addrx, ok := symcache.Load(symcrc)
+	if ok {
+		addr = addrx.(Voidptr)
+	} else {
+		addr = GetQtSymAddrRaw(symname)
+		if addr != nil {
+			symcache.Store(symcrc, addr)
+		}
+	}
+	if addr == nil {
+		log.Panicln("Cannot get symbol addr", symcrc, symname)
+	}
+	return addr
+}
+
 // lagecy
 // compatiable with old version
 // symname just for debug
-func cc0byaddr(symname string, symaddr unsafe.Pointer, retype byte, args ...interface{}) (VRetype, error) {
+func cc0byaddr(symname string, symaddr Voidptr, retype byte, args ...interface{}) (VRetype, error) {
 	addr := symaddr
 
 	argtys, argvals, argrefps := convArgs(args...)
@@ -386,14 +431,22 @@ func cc0byaddr(symname string, symaddr unsafe.Pointer, retype byte, args ...inte
 
 // this version is 1.3x faster than cc0byaddr
 // symname just for debug
-func cc0byaddr2(symname string, symaddr unsafe.Pointer, retype byte, args ...interface{}) (VRetype, error) {
+func cc0byaddr2(symname string, symaddr Voidptr, retype byte, args ...interface{}) (VRetype, error) {
 	addr := symaddr
 
-	argtys, argvals, argrefps := convArgs(args...)
+	// 600ns/op => 400ns/op
+	// argtys, argvals, argrefps := convArgs(args...)
+	ap := argpp.Get()
+	if ap == nil {
+		log.Panicln("empty arg pack pool")
+	}
+	convArgs2(ap, args...)
+	argtys, argvals, argrefps := ap.argtys, ap.argvals, ap.argrefps
+
 	_ = argrefps
 	var retval C.uint64_t = 0
 	var argv = struct {
-		addr    unsafe.Pointer
+		addr    Voidptr
 		retype  C.int
 		retval  *C.uint64_t
 		argc    C.int
@@ -401,9 +454,10 @@ func cc0byaddr2(symname string, symaddr unsafe.Pointer, retype byte, args ...int
 		argvals *C.uint64_t
 	}{addr, C.int(retype), &retval, C.int(len(args)),
 		(*C.uint8_t)(&argtys[0]), (*C.uint64_t)(&argvals[0])}
-	asmcgocall.Asmcc(C.ffi_call_ex_asmcc, unsafe.Pointer(&argv))
+	asmcgocall.Asmcc(C.ffi_call_ex_asmcc, Voidptr(&argv))
 
 	onCtorAlloc(symname)
+	argpp.Put(ap)
 	return uint64(retval), nil
 }
 
@@ -428,12 +482,12 @@ func refmtSymbolName(symname string) string {
 }
 
 // lagecy
-func GetQtSymAddr(symname string) unsafe.Pointer {
+func GetQtSymAddr(symname string) Voidptr {
 	symname = refmtSymbolName(symname)
 	return GetQtSymAddrRaw(symname)
 }
 
-func GetQtSymAddrRaw(symname string) unsafe.Pointer {
+func GetQtSymAddrRaw(symname string) Voidptr {
 	for _, lib := range qtlibs {
 		addr, err := lib.Symbol(symname)
 		if !isUndefinedSymbolErr(err) && !isNotfoundSymbolErr(err) {
@@ -454,7 +508,7 @@ func GetQtSymAddrRaw(symname string) unsafe.Pointer {
 // midx is virtual method offset
 // bidx is virtual base class offset
 // return is the virtual method function pointer
-func getSymByVTable(ptr unsafe.Pointer, midx int, bidx int) unsafe.Pointer {
+func getSymByVTable(ptr Voidptr, midx int, bidx int) Voidptr {
 	return ptr
 }
 
@@ -475,6 +529,14 @@ func convArgs(args ...interface{}) (argtys []byte, argvals []uint64, argrefps []
 	for i, argx := range args {
 		argty, argval, argrefp := convArg(i, argx)
 		argtys[i], argvals[i], argrefps[i] = argty, argval, &argrefp
+	}
+	return
+}
+
+func convArgs2(ap *argPack, args ...interface{}) {
+	for i, argx := range args {
+		argty, argval, argrefp := convArg(i, argx)
+		ap.argtys[i], ap.argvals[i], ap.argrefps[i] = argty, argval, &argrefp
 	}
 	return
 }
@@ -548,7 +610,7 @@ func convArg(idx int, argx interface{}) (argty byte, argval uint64, argrefp refl
 
 	case reflect.String:
 		argty = FFITY_POINTER
-		argpv := unsafe.Pointer(C.CString(argx.(string))) // TODO free memory
+		argpv := Voidptr(C.CString(argx.(string))) // TODO free memory
 		argrefp = reflect.New(VoidpTy())
 		argrefp.Elem().Set(reflect.ValueOf(argpv))
 		argval = refvaluint64(&argrefp)
@@ -564,17 +626,17 @@ func convArg(idx int, argx interface{}) (argty byte, argval uint64, argrefp refl
 // emulate reflect.Value
 type emuValue struct {
 	typ *reflect.Value // placeholder struct pointer field
-	ptr unsafe.Pointer
+	ptr Voidptr
 	uint8
 }
 
 // hacked replacement of flaged depcreated  reflect.Value.Unsafe.Pointer() and reflect.Value.Pointer()
-func refvalptr(vp *reflect.Value) unsafe.Pointer  { return (*emuValue)(unsafe.Pointer(vp)).ptr }
-func refvaluintptr(vp *reflect.Value) uintptr     { return uintptr(refvalptr(vp)) }
-func refvaluint64(vp *reflect.Value) uint64       { return uint64(refvaluintptr(vp)) }
-func refvalptr_(vp *reflect.Value) unsafe.Pointer { return unsafe.Pointer(vp.UnsafeAddr()) }
-func refvaluintptr_(vp *reflect.Value) uintptr    { return uintptr(refvalptr(vp)) }
-func refvaluint64_(vp *reflect.Value) uint64      { return uint64(refvaluintptr(vp)) }
+func refvalptr(vp *reflect.Value) Voidptr      { return (*emuValue)(Voidptr(vp)).ptr }
+func refvaluintptr(vp *reflect.Value) uintptr  { return uintptr(refvalptr(vp)) }
+func refvaluint64(vp *reflect.Value) uint64    { return uint64(refvaluintptr(vp)) }
+func refvalptr_(vp *reflect.Value) Voidptr     { return Voidptr(vp.UnsafeAddr()) }
+func refvaluintptr_(vp *reflect.Value) uintptr { return uintptr(refvalptr(vp)) }
+func refvaluint64_(vp *reflect.Value) uint64   { return uint64(refvaluintptr(vp)) }
 
 func convRetval(retype byte, retval interface{}) interface{} {
 	refv := reflect.ValueOf(retval)

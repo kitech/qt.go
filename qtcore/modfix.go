@@ -10,6 +10,16 @@ func NewQString5(s string) *QString {
 	return NewQString(s)
 }
 
+func (this *QString) Length2() int {
+	conv_arg0 := this.GetCthis()
+	argtys := uint64(0)
+	argtys |= uint64(qtrt.FFITY_POINTER) << 0
+	rv, err := qtrt.Qtcc3(1867525835, "_ZNK7QString6lengthEv", qtrt.FFITY_POINTER,
+		argtys, unsafe.Pointer(&conv_arg0))
+	qtrt.ErrPrint(err, rv)
+	return qtrt.Cretval2go("int", rv).(int) // 1111
+}
+
 func (this *QByteArray) Data_fix() string {
 	rv, err := qtrt.InvokeQtFunc6("_ZN10QByteArray4dataEv", qtrt.FFITY_POINTER, this.GetCthis())
 	qtrt.ErrPrint(err, rv)

@@ -21,6 +21,8 @@ func init() {
 
 func KeepMe() {}
 
+type Voidptr = unsafe.Pointer
+
 /////
 type QWindowListx struct {
 	*qtrt.CObject

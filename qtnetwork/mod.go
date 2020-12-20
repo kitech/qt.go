@@ -6,5 +6,8 @@ package qtnetwork
 //  -lQt5Core -lQt5Gui -lQt5Widgets
 */
 import "C"
+import "unsafe"
 
 func KeepMe() {}
+
+type Voidptr = unsafe.Pointer

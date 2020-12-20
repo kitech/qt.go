@@ -15,11 +15,10 @@ import (
 	"reflect"
 	"runtime"
 	"strings"
-	"unsafe"
 )
 
-func CString(s string) unsafe.Pointer {
-	return unsafe.Pointer(C.CString(s))
+func CString(s string) Voidptr {
+	return Voidptr(C.CString(s))
 }
 
 // string null terminated
@@ -30,22 +29,22 @@ func Stringnt(s *string) *string {
 
 // note: s will change
 // ch = ch + "\x00", and it works
-func CStringRef(s *string) unsafe.Pointer {
+func CStringRef(s *string) Voidptr {
 	*s = *s + "\x00" // copy once, but still fast than C.CString/C.free
-	strhdr := (*reflect.StringHeader)(unsafe.Pointer(s))
+	strhdr := (*reflect.StringHeader)(Voidptr(s))
 	if strhdr.Len == 0 {
 		return nil
 	}
-	return unsafe.Pointer(strhdr.Data)
+	return Voidptr(strhdr.Data)
 }
-func GoString(p unsafe.Pointer) string         { return C.GoString((*C.char)(p)) }
-func GoStringN(p unsafe.Pointer, n int) string { return C.GoStringN((*C.char)(p), C.int(n)) }
-func GoStringI(p uint64) string                { return GoString(unsafe.Pointer(uintptr(p))) }
-func GoStringIN(p uint64, n int) string        { return GoStringN(unsafe.Pointer(uintptr(p)), n) }
+func GoString(p Voidptr) string         { return C.GoString((*C.char)(p)) }
+func GoStringN(p Voidptr, n int) string { return C.GoStringN((*C.char)(p), C.int(n)) }
+func GoStringI(p uint64) string         { return GoString(Voidptr(uintptr(p))) }
+func GoStringIN(p uint64, n int) string { return GoStringN(Voidptr(uintptr(p)), n) }
 
 var zeromem = C.calloc(1, 8096)
 
-func Cmemset(p unsafe.Pointer, c int, n int) {
+func Cmemset(p Voidptr, c int, n int) {
 	if p != nil {
 		// C.memset(p, C.int(c), C.size_t(n))
 	}
@@ -59,20 +58,20 @@ func Cmemset(p unsafe.Pointer, c int, n int) {
 
 // 所有的Qt绑定类必须继承自这个
 type CObject struct {
-	Cthis unsafe.Pointer
+	Cthis Voidptr
 }
 type GetCthiser interface {
-	GetCthis() unsafe.Pointer
+	GetCthis() Voidptr
 }
 
-func (this *CObject) GetCthis() unsafe.Pointer {
+func (this *CObject) GetCthis() Voidptr {
 	if this == nil {
 		return nil
 	} else {
 		return this.Cthis
 	}
 }
-func (this *CObject) SetCthis(cthis unsafe.Pointer) {
+func (this *CObject) SetCthis(cthis Voidptr) {
 	this.Cthis = cthis
 }
 
@@ -83,10 +82,10 @@ const DtorCthisName = "DtorCthis"
 const NewCthisName = "NewCthis"
 const SetInitStObjName = "C_%s_init_staticMetaObject"
 
-func GetCthis(obj interface{}) unsafe.Pointer {
+func GetCthis(obj interface{}) Voidptr {
 	objval := reflect.ValueOf(obj).Elem()
 	retx := objval.MethodByName(GetCthisName).Call(nil)
-	return retx[0].Interface().(unsafe.Pointer)
+	return retx[0].Interface().(Voidptr)
 }
 
 ///////////
@@ -237,6 +236,6 @@ func DoubleTy(pointer bool) reflect.Type {
 }
 
 func VoidpTy() reflect.Type {
-	var v unsafe.Pointer = nil
+	var v Voidptr = nil
 	return reflect.TypeOf(v)
 }

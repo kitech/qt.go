@@ -10,7 +10,6 @@ import (
 	"log"
 	"reflect"
 	"regexp"
-	"unsafe"
 
 	qt "github.com/kitech/qt.go/qtqt"
 )
@@ -23,31 +22,31 @@ func UNQSIGNAL(sigName string) string { return sigName[1:] }
 func UNQSLOT(slotName string) string  { return slotName[1:] }
 func UNQMETHOD(mthName string) string { return mthName[1:] }
 
-func DerefPtr2(ptr2 unsafe.Pointer) unsafe.Pointer { return C.derefp4dynslotcbarg(ptr2) }
+func DerefPtr2(ptr2 Voidptr) Voidptr { return C.derefp4dynslotcbarg(ptr2) }
 
 // export为C的函数，并取该export函数的C地址：
 // 在另一文件中采用extern，不能在当前文件中extern，否则会出现符号冲突
 
 //export callbackAllQDynSlotObject
-func callbackAllQDynSlotObject(obj unsafe.Pointer, callType C.int, callId C.int, argvals **C.uchar,
-	name *C.char, argc C.int, argtys *C.int, cbptr unsafe.Pointer) {
+func callbackAllQDynSlotObject(obj Voidptr, callType C.int, callId C.int, argvals **C.uchar,
+	name *C.char, argc C.int, argtys *C.int, cbptr Voidptr) {
 	if debugDynSlot {
 		log.Println("dynslot gocbslotfunc triggered:", obj, callType, callId, argvals)
 		log.Println(C.GoString(name), argc, argtys, cbptr)
 	}
 
-	var argtysSlice = (*[32]C.int)(unsafe.Pointer(argtys))
+	var argtysSlice = (*[32]C.int)(Voidptr(argtys))
 	if debugDynSlot {
 		log.Println(argtysSlice, len(argtysSlice))
 	}
 
 	callbackAllQDynSlotObjectGo(obj, int(callType), int(callId), argvals,
 		C.GoString(name), int(argc),
-		(*int)(unsafe.Pointer(argtys)), cbptr)
+		(*int)(Voidptr(argtys)), cbptr)
 }
 
-func callbackAllQDynSlotObjectGo(obj unsafe.Pointer, callType int, callId int, argvals **C.uchar,
-	name string, argc int, argtys *int, cbptr unsafe.Pointer) {
+func callbackAllQDynSlotObjectGo(obj Voidptr, callType int, callId int, argvals **C.uchar,
+	name string, argc int, argtys *int, cbptr Voidptr) {
 	if debugDynSlot {
 		log.Println(obj, callType, callId, argvals)
 		log.Println(name, argc, argtys, cbptr)
@@ -62,7 +61,7 @@ func callbackAllQDynSlotObjectGo(obj unsafe.Pointer, callType int, callId int, a
 			if false {
 				signal.(func())()
 			}
-			signal.(func(unsafe.Pointer, interface{}))(unsafe.Pointer(argvals), dsobj.sigobj)
+			signal.(func(Voidptr, interface{}))(Voidptr(argvals), dsobj.sigobj)
 			// callbackInvoke(signal, argvals, dsobj.sigobj)
 		} else {
 			log.Println("not found signal: ", obj, UNQSIGNAL(name))
@@ -70,7 +69,7 @@ func callbackAllQDynSlotObjectGo(obj unsafe.Pointer, callType int, callId int, a
 	}
 }
 
-type callbackSlotInvoker func(argvals /* **C.uchar*/ unsafe.Pointer, sigobj interface{})
+type callbackSlotInvoker func(argvals /* **C.uchar*/ Voidptr, sigobj interface{})
 
 /*
 真正回调函数的调用执行
@@ -80,9 +79,9 @@ params:
   Ptr: caller should be Qxxx* qt class pointer
   string: caller should be QString&
   bool: caller should be C++'s bool or int8 or char that have 1B length
-  unsafe.Pointer: caller should be a raw pointer
+  Voidptr: caller should be a raw pointer
 */
-func callbackSlotInvoke(f interface{}, argvalsp /* **C.uchar*/ unsafe.Pointer, sigobj interface{}) {
+func callbackSlotInvoke(f interface{}, argvalsp /* **C.uchar*/ Voidptr, sigobj interface{}) {
 	sigobjv := reflect.ValueOf(sigobj)
 	fv := reflect.ValueOf(f)
 
@@ -93,7 +92,7 @@ func callbackSlotInvoke(f interface{}, argvalsp /* **C.uchar*/ unsafe.Pointer, s
 
 	// signal函数的参数类型一般还是比较简单的，像整数，布尔，QString
 	in := []reflect.Value{} // 构造这个call in
-	argvals := (*[30]unsafe.Pointer)(argvalsp)
+	argvals := (*[30]Voidptr)(argvalsp)
 	for i := 0; i < fv.Type().NumIn(); i++ {
 		argty := fv.Type().In(i)
 		if debugDynSlot {
@@ -135,14 +134,14 @@ func callbackSlotInvoke(f interface{}, argvalsp /* **C.uchar*/ unsafe.Pointer, s
 			tmpval := C.derefp4dynslotcbarg(argvals[i+1])
 			in = append(in, reflect.ValueOf(tmpval))
 		case reflect.String: // think caller supply a QString*
-			var this_ unsafe.Pointer = argvals[i+1]
-			ret1, err := InvokeQtFunc6("_ZNKR7QString6toUtf8Ev", FFI_TYPE_POINTER, this_)
+			var this_ Voidptr = argvals[i+1]
+			ret1, err := InvokeQtFunc6("_ZNKR7QString6toUtf8Ev", FFITY_POINTER, this_)
 			ErrPrint(err, this_)
-			ret2, err := InvokeQtFunc6("_ZN10QByteArray4dataEv", FFI_TYPE_POINTER, unsafe.Pointer(uintptr(ret1)))
+			ret2, err := InvokeQtFunc6("_ZN10QByteArray4dataEv", FFITY_POINTER, Voidptr(uintptr(ret1)))
 			ErrPrint(err, ret1)
 			prmval := reflect.ValueOf(GoStringI(uint64(ret2)))
 			in = append(in, prmval)
-			InvokeQtFunc6("_ZN10QByteArrayD2Ev", FFI_TYPE_VOID, unsafe.Pointer(uintptr(ret1)))
+			InvokeQtFunc6("_ZN10QByteArrayD2Ev", FFITY_VOID, Voidptr(uintptr(ret1)))
 		case reflect.Float64:
 			in = append(in, reflect.ValueOf(float64(*(*C.double)(argvals[i+1]))))
 		case reflect.Float32:

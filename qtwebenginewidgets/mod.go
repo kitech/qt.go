@@ -1,4 +1,4 @@
-package qtwebenginecore
+package qtwebenginewidgets
 
 /*
 #cgo CFLAGS: -std=c11

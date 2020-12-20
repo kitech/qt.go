@@ -9,6 +9,7 @@ require (
 	github.com/cheekybits/genny v0.0.0-20170328200008-9127e812e1e9 // indirect
 	github.com/clbanning/mxj v1.6.1
 	github.com/emirpasic/gods v1.9.0
+	github.com/gammazero/deque v0.0.0-20201010052221-3932da5530cc
 	github.com/gonuts/dl v0.0.0-20160302100715-9a2e942d3477 // indirect
 	github.com/huandu/xstrings v1.0.0 // indirect
 	github.com/ianlancetaylor/demangle v0.0.0-20200824232613-28f6c0f3b639

@@ -15,6 +15,8 @@ import (
 
 func KeepMe() {}
 
+type Voidptr = unsafe.Pointer
+
 /////
 type QObjectListx struct {
 	*qtrt.CObject

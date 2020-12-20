@@ -7,7 +7,6 @@ import (
 	"reflect"
 	"runtime"
 	"strings"
-	"unsafe"
 )
 
 // must call in func (this *XObject) XEnumItemName()
@@ -47,13 +46,13 @@ func GetClassEnumItemName(this interface{}, val int) string {
 	return realval
 }
 
-func getClassStaticMetaObjectByObject(this interface{}) unsafe.Pointer {
+func getClassStaticMetaObjectByObject(this interface{}) Voidptr {
 	// eg. _ZN11QColumnView16staticMetaObjectE
 	clsname := getClassNameByObject(this)
 	return GetClassStaticMetaObjectByName(clsname)
 }
 
-func GetClassStaticMetaObjectByName(clsname string) unsafe.Pointer {
+func GetClassStaticMetaObjectByName(clsname string) Voidptr {
 	symname := fmt.Sprintf("_ZN%d%s16staticMetaObjectE", len(clsname), clsname)
 	addr := GetQtSymAddrRaw(symname)
 	return addr
@@ -66,9 +65,9 @@ func getClassNameByObject(this interface{}) string {
 }
 
 // must a QObject or subclass
-func getClassNameByCObject(cthis unsafe.Pointer) string {
+func getClassNameByCObject(cthis Voidptr) string {
 	rv, err := InvokeQtFunc6("_ZNK7QObject10metaObjectEv", FFI_TYPE_POINTER, cthis)
-	rv2, err2 := InvokeQtFunc6("_ZNK11QMetaObject9classNameEv", FFI_TYPE_POINTER, unsafe.Pointer(uintptr(rv)))
+	rv2, err2 := InvokeQtFunc6("_ZNK11QMetaObject9classNameEv", FFI_TYPE_POINTER, Voidptr(uintptr(rv)))
 	ErrPrint(err, cthis)
 	ErrPrint(err2, cthis)
 	return GoStringI(rv2)
