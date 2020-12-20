@@ -82,13 +82,16 @@ void ffi_call_var_ex_impl(void*fn, int retype, uint64_t* retval, int fixedargc, 
 //
 void (*ffi_call_ex_fnptr)(void*fn, int retype, uint64_t* retval, int argc,
                        uint8_t* argtys, uint64_t* argvals) = &ffi_call_ex_impl;
+void (*ffi_call_ex3_fnptr)(void*fn, void* retype, uint64_t* retval, int argc,
+                           void** argtys, void** argvals) = 0;
 void (*ffi_call_var_ex_fnptr)(void*fn, int retype, uint64_t* retval, int fixedargc, int totalargc,
                            uint8_t* argtys, uint64_t* argvals) = &ffi_call_var_ex_impl;
 
-void set_so_ffi_call_ex(void* ex_fnptr, void* varex_fnptr) {
+void set_so_ffi_call_ex(void* ex_fnptr, void* varex_fnptr, void* ex3_fnptr) {
     if (ex_fnptr != 0 && varex_fnptr != 0) {
         ffi_call_ex_fnptr = ex_fnptr;
         ffi_call_var_ex_fnptr = varex_fnptr;
+        ffi_call_ex3_fnptr = ex3_fnptr;
     }
 }
 
@@ -102,8 +105,16 @@ void ffi_call_var_ex(void*fn, int retype, uint64_t* retval, int fixedargc, int t
 
 void ffi_call_ex_asmcc(struct {void* fn; int retype; uint64_t* retval;
     int argc; uint8_t* argtys; uint64_t* argvals;} *ax) {
+    //printf("[0] %d %d %lu\n", ax->argtys[0], ax->argtys[7], *((uint64_t*)ax->argtys));
     ffi_call_ex_fnptr(ax->fn, ax->retype, ax->retval,
                       ax->argc, ax->argtys, ax->argvals);
+}
+
+void ffi_call_ex3_asmcc(struct {void* fn; void* retype; uint64_t* retval;
+    int argc; void** argtys; void** argvals;} *ax) {
+    //printf("[0] fn %p %p %d\n", ax->fn, ax->retype, ax->argc);
+    ffi_call_ex3_fnptr(ax->fn, ax->retype, ax->retval,
+                       ax->argc, ax->argtys, ax->argvals);
 }
 
 void ffi_call_var_ex_asmcc(struct {void*fn; int retype; uint64_t* retval;

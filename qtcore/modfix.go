@@ -10,12 +10,11 @@ func NewQString5(s string) *QString {
 	return NewQString(s)
 }
 
+// demo for v3 ffi call
 func (this *QString) Length2() int {
-	conv_arg0 := this.GetCthis()
-	argtys := uint64(0)
-	argtys |= uint64(qtrt.FFITY_POINTER) << 0
-	rv, err := qtrt.Qtcc3(1867525835, "_ZNK7QString6lengthEv", qtrt.FFITY_POINTER,
-		argtys, unsafe.Pointer(&conv_arg0))
+	conv_arg0 := this.Addr()
+	rv, err := qtrt.Qtcc3(1867525835, "_ZNK7QString6lengthEv",
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, conv_arg0)
 	qtrt.ErrPrint(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }

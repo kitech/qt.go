@@ -9,6 +9,7 @@ import (
 type argPack struct {
 	argtys   []byte
 	argvals  []uint64
+	argvals2 []Voidptr
 	argrefps []*reflect.Value
 }
 
@@ -17,6 +18,7 @@ func newArgPack() *argPack {
 	this := &argPack{}
 	this.argtys = make([]byte, arrcnt)
 	this.argvals = make([]uint64, arrcnt)
+	this.argvals2 = make([]Voidptr, arrcnt)
 	this.argrefps = make([]*reflect.Value, arrcnt)
 
 	return this

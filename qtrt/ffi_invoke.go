@@ -49,9 +49,11 @@ static void ffi_call_0(void*fn) {
 }
 
 extern void ffi_call_ex(void*fn, int retype, uint64_t *rc, int argc, uint8_t* argtys, uint64_t* argvals);
+extern void ffi_call_ex3(void*fn, int retype, uint64_t *rc, int argc, void** argtys, void** argvals);
 extern void ffi_call_var_ex(void*fn, int retype, uint64_t *rc, int fixedargc, int totalargc, uint8_t* argtys, uint64_t* argvals);
-extern void set_so_ffi_call_ex(void* ex_fnptr, void* varex_fnptr);
+extern void set_so_ffi_call_ex(void* ex_fnptr, void* varex_fnptr, void* ex3_fnptr);
 extern void ffi_call_ex_asmcc(); // just function name is fine, ignore parameters
+extern void ffi_call_ex3_asmcc(); // just function name is fine, ignore parameters
 extern void ffi_call_var_ex_asmcc();
 
 static void ffi_call_1(void*fn) {
@@ -98,60 +100,7 @@ import (
 	"github.com/kitech/dl/asmcgocall"
 )
 
-func itype2stype(itype byte) *C.ffi_type {
-	switch itype {
-	case FFITY_VOID:
-		return &C.ffi_type_void
-	case FFITY_POINTER:
-		return &C.ffi_type_pointer
-	case FFI_TYPE_INT:
-		return &C.ffi_type_sint32
-	case FFI_TYPE_FLOAT:
-		return &C.ffi_type_float
-	case FFI_TYPE_DOUBLE:
-		return &C.ffi_type_double
-	case FFI_TYPE_SINT16:
-		return &C.ffi_type_sint16
-	case FFI_TYPE_SINT32:
-		return &C.ffi_type_sint32
-	case FFI_TYPE_SINT64:
-		return &C.ffi_type_sint64
-	default:
-		log.Println("unknown type:", itype)
-		break
-	}
-	return &C.ffi_type_void
-}
-
-/*
-TODO
-  argtypes int[20]
-  argvals uint64_t[20]
-*/
-func ffi_call_ex(fn Voidptr, retype int, rc *uint64, argc int, argtys []int, argvals []uint64) {
-
-	var cif C.ffi_cif
-	var ffitys = make([]*C.ffi_type, 20)
-	var ffivals = make([]Voidptr, 20)
-	var ffirc C.ffi_arg
-	_, _, _, _ = cif, ffitys, ffivals, ffirc
-
-	for i := 0; i < argc; i++ {
-		switch argtys[i] {
-		case C.FFI_TYPE_VOID:
-			ffitys[i] = &C.ffi_type_void
-			ffivals[i] = nil
-		}
-	}
-
-	// C.ffi_call(&cif, fn, &ffirc, ffivals)
-}
-
-func InvokeQtFuncByName(symname string, args []uint64, types []int) uint64 {
-	return 0
-}
-
-////////
+//////// TODO seems define as uint64 is better
 type VRetype = uint64 // interface{}
 
 var debugFFICall = false
@@ -236,7 +185,7 @@ func init_ffi_invoke() {
 
 	mods := []string{"Inline"}
 	// TODO auto check static and omit load other module
-	if UseWrapSymbols { // raw c++ symbols
+	if !UseWrapSymbols { // raw c++ symbols
 		mods = append([]string{"Core", "Gui", "Widgets", "Network", "Qml", "Quick", "QuickControls2", "QuickWidgets"}, mods...)
 	}
 
@@ -249,9 +198,10 @@ func init_ffi_invoke() {
 // load ffi call wrapper from libQt5Inline.so
 func init_so_ffi_call() {
 	ex_fnptr := GetQtSymAddrRaw("ffi_call_ex")
+	ex3_fnptr := GetQtSymAddrRaw("ffi_call_ex3")
 	varex_fnptr := GetQtSymAddrRaw("ffi_call_var_ex")
 	if ex_fnptr != nil && varex_fnptr != nil {
-		C.set_so_ffi_call_ex(ex_fnptr, varex_fnptr)
+		C.set_so_ffi_call_ex(ex_fnptr, varex_fnptr, ex3_fnptr)
 	}
 }
 
@@ -356,41 +306,36 @@ func Qtcc1(symcrc uint32, symname string, retype byte, args ...interface{}) (VRe
 	return cc0byaddr2(symname, addr, retype, args...)
 }
 
-// argtys 每个字节表示一个参数FFI类型，最大支持8个参数
-func Qtcc3(symcrc uint32, symname string, retype byte,
-	argtys uint64, args ...Voidptr) (VRetype, error) {
+// args, half is ffi_type**, half is argvals
+// 直接传递类型对象，而非类型常量，不需要再做任何转换
+// Go的slice 的数据指针和C兼容
+func Qtcc3(symcrc uint32, symname string, retype Voidptr, args ...Voidptr) (VRetype, error) {
 	addr := getSymAddrRawCached(symcrc, symname)
 
-	ap := argpp.Get()
-	if ap == nil {
-		log.Panicln("empty arg pack pool")
+	if len(args)%2 != 0 {
+		log.Println("Invalid parameters", len(args))
 	}
-	// convArgs2(ap, args...)
-	for i := 0; i < len(args); i++ {
-		ffity := argtys << (7 - i) >> 7
-		ap.argtys[i] = byte(ffity)
-		ap.argvals[i] = uint64(uintptr(args[i]))
+	argc := len(args) / 2
+	var argtys *C.uintptr_t = nil
+	var argvals *C.uintptr_t = nil
+	if argc > 0 {
+		argtys = (*C.uintptr_t)(Voidptr(&args[0]))
+		argvals = (*C.uintptr_t)(Voidptr(&args[argc]))
 	}
-	argtys2, argvals, argrefps := ap.argtys, ap.argvals, ap.argrefps
-
-	_ = argrefps
 	var retval C.uint64_t = 0
 	var argv = struct {
 		addr    Voidptr
-		retype  C.int
+		retype  Voidptr
 		retval  *C.uint64_t
 		argc    C.int
-		argtys  *C.uint8_t
-		argvals *C.uint64_t
-	}{addr, C.int(retype), &retval, C.int(len(args)),
-		(*C.uint8_t)(&argtys2[0]), (*C.uint64_t)(&argvals[0])}
-	asmcgocall.Asmcc(C.ffi_call_ex_asmcc, Voidptr(&argv))
+		argtys  *C.uintptr_t
+		argvals *C.uintptr_t
+	}{addr, retype, &retval, C.int(argc), argtys, argvals}
+	asmcgocall.Asmcc(C.ffi_call_ex3_asmcc, Voidptr(&argv))
 
 	onCtorAlloc(symname)
-	argpp.Put(ap)
-	return uint64(retval), nil
 
-	return 0, nil
+	return uint64(retval), nil
 }
 
 func getSymAddrRawCached(symcrc uint32, symname string) Voidptr {
@@ -674,6 +619,22 @@ const (
 const (
 	FFITY_VOID    = byte(C.FFI_TYPE_VOID)
 	FFITY_POINTER = byte(C.FFI_TYPE_POINTER)
+)
+
+// 由于FFI调用实际使用的是对象类型，可以方便地直接使用，不需要转换
+var (
+	FFITO_VOID    = Voidptr(&C.ffi_type_void)
+	FFITO_POINTER = Voidptr(&C.ffi_type_pointer)
+	FFITO_INT     = Voidptr(&C.ffi_type_sint32)
+	FFITO_FLOAT   = Voidptr(&C.ffi_type_float)
+	FFITO_DOUBLE  = Voidptr(&C.ffi_type_double)
+	FFITO_SINT16  = Voidptr(&C.ffi_type_sint16)
+	FFITO_UINT16  = Voidptr(&C.ffi_type_uint16)
+	FFITO_SINT32  = Voidptr(&C.ffi_type_sint32)
+	FFITO_UINT32  = Voidptr(&C.ffi_type_uint32)
+	FFITO_SINT64  = Voidptr(&C.ffi_type_sint64)
+	FFITO_UINT64  = Voidptr(&C.ffi_type_uint64)
+	//FFITO_STRUCT  = Voidptr(&C.ffi_type_struct)
 )
 
 // func KeepMe() {}

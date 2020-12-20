@@ -132,11 +132,23 @@ func Cretval2go(ty string, rv uint64) interface{} {
 	return rv
 }
 
+// just faster little, about 10%
 func Cretval2go2(ty reflect.Kind, rv uint64) interface{} {
+	switch ty {
+	case reflect.Int:
+		return int((C.int)(rv))
+	case reflect.Float64:
+		return float64(*(*C.double)(Voidptr(&rv)))
+	default:
+		log.Println("Unknown type:", ty)
+	}
 	return rv
 }
 
+//func (this VRetype) Int() int { return int((C.int)(this)) }
 //func (rv VRetype) Ptr() Voidptr { return Voidptr(uintptr(rv)) }
+//func (this VRetype) Float32() int { return int((C.int)(this)) }
+//func (this VRetype) Float64() int { return int((C.int)(this)) }
 
 func Cpretval2go(ty string, rv uint64) interface{} {
 	switch ty {
