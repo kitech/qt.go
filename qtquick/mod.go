@@ -13,6 +13,7 @@ import (
 )
 
 func KeepMe() {}
+func init()   { qtrt.RegisterSubPackage("Quick") }
 
 type Voidptr = unsafe.Pointer
 

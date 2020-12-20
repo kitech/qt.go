@@ -24,6 +24,7 @@ func init() {
 }
 
 func KeepMe() {}
+func init()   { qtrt.RegisterSubPackage("Widgets") }
 
 type Voidptr = unsafe.Pointer
 

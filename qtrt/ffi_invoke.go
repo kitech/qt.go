@@ -105,6 +105,15 @@ type VRetype = uint64 // interface{}
 
 var debugFFICall = false
 var qtlibs = map[string]FFILibrary{}
+var allsubmods = map[string]int{"Inline": 1, "Core": 1, "Gui": 1, "Widgets": 1, "Network": 1, "Qml": 1, "Quick": 1, "QuickControls2": 1, "QuickWidgets": 1}
+
+// TODO move to internal package
+// call in qtcore/qtgui/... init() function
+// 这样就能知道import了哪些qt包了，选择性加载对应的so文件，而不用在这写死加载哪些so文件
+func RegisterSubPackage(name string) {
+	init_ffi_invoke(name)
+}
+func SetDebugFFICall(on bool) { debugFFICall = on }
 
 func init() {
 	dbgval := os.Getenv("QTGO_DEBUG_FFI_CALL")
@@ -112,11 +121,9 @@ func init() {
 		debugFFICall = true
 	}
 }
-
-func SetDebugFFICall(on bool) { debugFFICall = on }
 func init() {
 	log.SetFlags(log.Flags() | log.Lshortfile)
-	init_ffi_invoke()
+	init_ffi_invoke("")
 	init_so_ffi_call()
 
 	// TODO maybe run when first qtcall
@@ -124,7 +131,19 @@ func init() {
 	init_callack_inherit()
 }
 
-func init_ffi_invoke() {
+// 可用的参数值, "", Inline/Core/Gui/Widgets/Network/...
+func init_ffi_invoke(libname string) {
+	if libname == "" {
+		libname = "Inline"
+	}
+	if _, ok := allsubmods[libname]; !ok {
+		log.Fatalln("Unknown submod", libname)
+	}
+	if _, ok := qtlibs[libname]; ok {
+		log.Println("Already loaded???", libname)
+		return
+	}
+	// log.Println("Loading...", libname, len(qtlibs))
 
 	// lib dir prefix
 	// go arch name => android lib name
@@ -183,9 +202,9 @@ func init_ffi_invoke() {
 		return err
 	}
 
-	mods := []string{"Inline"}
+	mods := []string{libname}
 	// TODO auto check static and omit load other module
-	if !UseWrapSymbols { // raw c++ symbols
+	if false && !UseWrapSymbols { // raw c++ symbols
 		mods = append([]string{"Core", "Gui", "Widgets", "Network", "Qml", "Quick", "QuickControls2", "QuickWidgets"}, mods...)
 	}
 

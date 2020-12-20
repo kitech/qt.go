@@ -10,6 +10,7 @@ import (
 	"unsafe"
 
 	"github.com/kitech/qt.go/qtcore"
+	"github.com/kitech/qt.go/qtrt"
 )
 
 func init() {
@@ -19,5 +20,6 @@ func init() {
 }
 
 func KeepMe() {}
+func init()   { qtrt.RegisterSubPackage("WebEngine") }
 
 type Voidptr = unsafe.Pointer
