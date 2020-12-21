@@ -48,6 +48,7 @@ func (ptr *QBoxLayout) QBoxLayout_PTR() *QBoxLayout { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QBoxLayoutFromptr(cthis Voidptr) *QBoxLayout {
 	bcthis0 := QLayoutFromptr(cthis)
 	return &QBoxLayout{bcthis0}
@@ -72,8 +73,9 @@ func NewQBoxLayout(arg0 int, parent QWidget_ITF /*777 QWidget **/) *QBoxLayout {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(32)
-	rv, err := qtrt.Qtcc1(3198258420, "_ZN10QBoxLayoutC2ENS_9DirectionEP7QWidget", qtrt.FFITY_POINTER, cthis, arg0, convArg1)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3198258420, "_ZN10QBoxLayoutC2ENS_9DirectionEP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&arg0), Voidptr(&convArg1))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QBoxLayoutFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QBoxLayout")
 	return gothis
@@ -93,8 +95,9 @@ func NewQBoxLayoutp(arg0 int) *QBoxLayout {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 Voidptr
 	cthis := qtrt.Malloc(32)
-	rv, err := qtrt.Qtcc1(3198258420, "_ZN10QBoxLayoutC2ENS_9DirectionEP7QWidget", qtrt.FFITY_POINTER, cthis, arg0, convArg1)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3198258420, "_ZN10QBoxLayoutC2ENS_9DirectionEP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&arg0), Voidptr(&convArg1))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QBoxLayoutFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QBoxLayout")
 	return gothis
@@ -108,8 +111,9 @@ func NewQBoxLayoutp(arg0 int) *QBoxLayout {
 /*
  */
 func (this *QBoxLayout) Direction() int {
-	rv, err := qtrt.Qtcc1(2927993936, "_ZNK10QBoxLayout9directionEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2927993936, "_ZNK10QBoxLayout9directionEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return int(rv)
 }
 
@@ -121,8 +125,9 @@ func (this *QBoxLayout) Direction() int {
 /*
  */
 func (this *QBoxLayout) SetDirection(arg0 int) {
-	rv, err := qtrt.Qtcc1(1715852557, "_ZN10QBoxLayout12setDirectionENS_9DirectionE", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1715852557, "_ZN10QBoxLayout12setDirectionENS_9DirectionE", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&arg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:71
@@ -133,8 +138,9 @@ func (this *QBoxLayout) SetDirection(arg0 int) {
 /*
  */
 func (this *QBoxLayout) AddSpacing(size int) {
-	rv, err := qtrt.Qtcc1(955949330, "_ZN10QBoxLayout10addSpacingEi", qtrt.FFITY_POINTER, this.GetCthis(), size)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(955949330, "_ZN10QBoxLayout10addSpacingEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&size))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:72
@@ -145,8 +151,9 @@ func (this *QBoxLayout) AddSpacing(size int) {
 /*
  */
 func (this *QBoxLayout) AddStretch(stretch int) {
-	rv, err := qtrt.Qtcc1(1570309749, "_ZN10QBoxLayout10addStretchEi", qtrt.FFITY_POINTER, this.GetCthis(), stretch)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1570309749, "_ZN10QBoxLayout10addStretchEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&stretch))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:72
@@ -159,8 +166,9 @@ func (this *QBoxLayout) AddStretch(stretch int) {
 func (this *QBoxLayout) AddStretchp() {
 	// arg: 0, int=Int, =Invalid, , Invalid
 	stretch := int(0)
-	rv, err := qtrt.Qtcc1(1570309749, "_ZN10QBoxLayout10addStretchEi", qtrt.FFITY_POINTER, this.GetCthis(), stretch)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1570309749, "_ZN10QBoxLayout10addStretchEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&stretch))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:74
@@ -175,8 +183,9 @@ func (this *QBoxLayout) AddWidget(arg0 QWidget_ITF /*777 QWidget **/, stretch in
 	if arg0 != nil && arg0.QWidget_PTR() != nil {
 		convArg0 = arg0.QWidget_PTR().GetCthis()
 	}
-	rv, err := qtrt.Qtcc1(821085071, "_ZN10QBoxLayout9addWidgetEP7QWidgeti6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, stretch, alignment)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(821085071, "_ZN10QBoxLayout9addWidgetEP7QWidgeti6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0), Voidptr(&stretch), Voidptr(&alignment))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:74
@@ -195,8 +204,9 @@ func (this *QBoxLayout) AddWidgetp(arg0 QWidget_ITF /*777 QWidget **/) {
 	stretch := int(0)
 	// arg: 2, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>, Unexposed
 	alignment := 0
-	rv, err := qtrt.Qtcc1(821085071, "_ZN10QBoxLayout9addWidgetEP7QWidgeti6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, stretch, alignment)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(821085071, "_ZN10QBoxLayout9addWidgetEP7QWidgeti6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0), Voidptr(&stretch), Voidptr(&alignment))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:74
@@ -213,8 +223,9 @@ func (this *QBoxLayout) AddWidgetp1(arg0 QWidget_ITF /*777 QWidget **/, stretch 
 	}
 	// arg: 2, Qt::Alignment=Elaborated, Qt::Alignment=Typedef, QFlags<Qt::AlignmentFlag>, Unexposed
 	alignment := 0
-	rv, err := qtrt.Qtcc1(821085071, "_ZN10QBoxLayout9addWidgetEP7QWidgeti6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, stretch, alignment)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(821085071, "_ZN10QBoxLayout9addWidgetEP7QWidgeti6QFlagsIN2Qt13AlignmentFlagEE", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0), Voidptr(&stretch), Voidptr(&alignment))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:75
@@ -229,8 +240,9 @@ func (this *QBoxLayout) AddLayout(layout QLayout_ITF /*777 QLayout **/, stretch 
 	if layout != nil && layout.QLayout_PTR() != nil {
 		convArg0 = layout.QLayout_PTR().GetCthis()
 	}
-	rv, err := qtrt.Qtcc1(4220267810, "_ZN10QBoxLayout9addLayoutEP7QLayouti", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, stretch)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4220267810, "_ZN10QBoxLayout9addLayoutEP7QLayouti", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&convArg0), Voidptr(&stretch))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:75
@@ -247,8 +259,9 @@ func (this *QBoxLayout) AddLayoutp(layout QLayout_ITF /*777 QLayout **/) {
 	}
 	// arg: 1, int=Int, =Invalid, , Invalid
 	stretch := int(0)
-	rv, err := qtrt.Qtcc1(4220267810, "_ZN10QBoxLayout9addLayoutEP7QLayouti", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, stretch)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4220267810, "_ZN10QBoxLayout9addLayoutEP7QLayouti", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&convArg0), Voidptr(&stretch))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qboxlayout.h:76
@@ -259,13 +272,14 @@ func (this *QBoxLayout) AddLayoutp(layout QLayout_ITF /*777 QLayout **/) {
 /*
  */
 func (this *QBoxLayout) AddStrut(arg0 int) {
-	rv, err := qtrt.Qtcc1(4240054649, "_ZN10QBoxLayout8addStrutEi", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4240054649, "_ZN10QBoxLayout8addStrutEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&arg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 func DeleteQBoxLayout(this *QBoxLayout) {
 	rv, err := qtrt.Qtcc1(0, "_ZN10QBoxLayoutD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

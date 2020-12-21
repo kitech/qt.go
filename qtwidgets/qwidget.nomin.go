@@ -47,8 +47,9 @@ import "github.com/kitech/qt.go/qtgui"
 func (this *QWidget) SetStatusTip(arg0 string) {
 	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.Qtcc1(177205134, "_ZN7QWidget12setStatusTipERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(177205134, "_ZN7QWidget12setStatusTipERK7QString", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qwidget.h:395
@@ -60,8 +61,9 @@ func (this *QWidget) SetStatusTip(arg0 string) {
  */
 func (this *QWidget) StatusTip() string {
 	sretobj := qtrt.Malloc(8) // QString
-	rv, err := qtrt.Qtcc1(1121849382, "_ZNK7QWidget9statusTipEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1121849382, "_ZNK7QWidget9statusTipEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
@@ -79,8 +81,9 @@ func (this *QWidget) StatusTip() string {
 func (this *QWidget) SetWhatsThis(arg0 string) {
 	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.Qtcc1(16871603, "_ZN7QWidget12setWhatsThisERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(16871603, "_ZN7QWidget12setWhatsThisERK7QString", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qwidget.h:399
@@ -92,8 +95,9 @@ func (this *QWidget) SetWhatsThis(arg0 string) {
  */
 func (this *QWidget) WhatsThis() string {
 	sretobj := qtrt.Malloc(8) // QString
-	rv, err := qtrt.Qtcc1(3497781672, "_ZNK7QWidget9whatsThisEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3497781672, "_ZNK7QWidget9whatsThisEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()

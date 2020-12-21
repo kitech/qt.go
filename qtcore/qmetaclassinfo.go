@@ -45,6 +45,7 @@ func (ptr *QMetaClassInfo) QMetaClassInfo_PTR() *QMetaClassInfo { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QMetaClassInfoFromptr(cthis Voidptr) *QMetaClassInfo {
 	return &QMetaClassInfo{&qtrt.CObject{cthis}}
 }
@@ -54,7 +55,7 @@ func (*QMetaClassInfo) Fromptr(cthis Voidptr) *QMetaClassInfo {
 
 func DeleteQMetaClassInfo(this *QMetaClassInfo) {
 	rv, err := qtrt.Qtcc1(0, "_ZN14QMetaClassInfoD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

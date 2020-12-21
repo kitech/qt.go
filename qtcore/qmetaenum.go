@@ -45,6 +45,7 @@ func (ptr *QMetaEnum) QMetaEnum_PTR() *QMetaEnum { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QMetaEnumFromptr(cthis Voidptr) *QMetaEnum {
 	return &QMetaEnum{&qtrt.CObject{cthis}}
 }
@@ -54,7 +55,7 @@ func (*QMetaEnum) Fromptr(cthis Voidptr) *QMetaEnum {
 
 func DeleteQMetaEnum(this *QMetaEnum) {
 	rv, err := qtrt.Qtcc1(0, "_ZN9QMetaEnumD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

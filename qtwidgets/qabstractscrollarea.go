@@ -48,6 +48,7 @@ func (ptr *QAbstractScrollArea) QAbstractScrollArea_PTR() *QAbstractScrollArea {
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QAbstractScrollAreaFromptr(cthis Voidptr) *QAbstractScrollArea {
 	bcthis0 := QFrameFromptr(cthis)
 	return &QAbstractScrollArea{bcthis0}

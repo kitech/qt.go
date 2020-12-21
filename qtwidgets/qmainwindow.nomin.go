@@ -45,8 +45,9 @@ import "github.com/kitech/qt.go/qtgui"
 /*
  */
 func (this *QMainWindow) MenuBar() *QMenuBar /*777 QMenuBar **/ {
-	rv, err := qtrt.Qtcc1(3966983917, "_ZNK11QMainWindow7menuBarEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3966983917, "_ZNK11QMainWindow7menuBarEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return /*==*/ QMenuBarFromptr(Voidptr(uintptr(rv))) // 444
 }
 
@@ -62,8 +63,9 @@ func (this *QMainWindow) SetMenuBar(menubar QMenuBar_ITF /*777 QMenuBar **/) {
 	if menubar != nil && menubar.QMenuBar_PTR() != nil {
 		convArg0 = menubar.QMenuBar_PTR().GetCthis()
 	}
-	rv, err := qtrt.Qtcc1(2414944809, "_ZN11QMainWindow10setMenuBarEP8QMenuBar", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2414944809, "_ZN11QMainWindow10setMenuBarEP8QMenuBar", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmainwindow.h:129
@@ -74,8 +76,9 @@ func (this *QMainWindow) SetMenuBar(menubar QMenuBar_ITF /*777 QMenuBar **/) {
 /*
  */
 func (this *QMainWindow) MenuWidget() *QWidget /*777 QWidget **/ {
-	rv, err := qtrt.Qtcc1(350857657, "_ZNK11QMainWindow10menuWidgetEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(350857657, "_ZNK11QMainWindow10menuWidgetEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return /*==*/ QWidgetFromptr(Voidptr(uintptr(rv))) // 444
 }
 
@@ -91,8 +94,9 @@ func (this *QMainWindow) SetMenuWidget(menubar QWidget_ITF /*777 QWidget **/) {
 	if menubar != nil && menubar.QWidget_PTR() != nil {
 		convArg0 = menubar.QWidget_PTR().GetCthis()
 	}
-	rv, err := qtrt.Qtcc1(1658462860, "_ZN11QMainWindow13setMenuWidgetEP7QWidget", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1658462860, "_ZN11QMainWindow13setMenuWidgetEP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmainwindow.h:134
@@ -103,8 +107,9 @@ func (this *QMainWindow) SetMenuWidget(menubar QWidget_ITF /*777 QWidget **/) {
 /*
  */
 func (this *QMainWindow) StatusBar() *QStatusBar /*777 QStatusBar **/ {
-	rv, err := qtrt.Qtcc1(1994287522, "_ZNK11QMainWindow9statusBarEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1994287522, "_ZNK11QMainWindow9statusBarEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return /*==*/ QStatusBarFromptr(Voidptr(uintptr(rv))) // 444
 }
 
@@ -120,8 +125,9 @@ func (this *QMainWindow) SetStatusBar(statusbar QStatusBar_ITF /*777 QStatusBar 
 	if statusbar != nil && statusbar.QStatusBar_PTR() != nil {
 		convArg0 = statusbar.QStatusBar_PTR().GetCthis()
 	}
-	rv, err := qtrt.Qtcc1(2354640415, "_ZN11QMainWindow12setStatusBarEP10QStatusBar", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2354640415, "_ZN11QMainWindow12setStatusBarEP10QStatusBar", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmainwindow.h:154
@@ -134,8 +140,9 @@ func (this *QMainWindow) SetStatusBar(statusbar QStatusBar_ITF /*777 QStatusBar 
 func (this *QMainWindow) AddToolBar(title string) *QToolBar /*777 QToolBar **/ {
 	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.Qtcc1(4007182669, "_ZN11QMainWindow10addToolBarERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4007182669, "_ZN11QMainWindow10addToolBarERK7QString", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	return /*==*/ QToolBarFromptr(Voidptr(uintptr(rv))) // 444
 }
 

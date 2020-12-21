@@ -50,6 +50,7 @@ func (ptr *QGraphicsEffect) QGraphicsEffect_PTR() *QGraphicsEffect { return ptr 
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QGraphicsEffectFromptr(cthis Voidptr) *QGraphicsEffect {
 	bcthis0 := qtcore.QObjectFromptr(cthis)
 	return &QGraphicsEffect{bcthis0}
@@ -60,7 +61,7 @@ func (*QGraphicsEffect) Fromptr(cthis Voidptr) *QGraphicsEffect {
 
 func DeleteQGraphicsEffect(this *QGraphicsEffect) {
 	rv, err := qtrt.Qtcc1(0, "_ZN15QGraphicsEffectD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

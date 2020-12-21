@@ -46,6 +46,7 @@ func (ptr *QPen) QPen_PTR() *QPen { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QPenFromptr(cthis Voidptr) *QPen {
 	return &QPen{&qtrt.CObject{cthis}}
 }
@@ -65,8 +66,9 @@ func (*QPen) NewForInherit() *QPen {
 }
 func NewQPen() *QPen {
 	cthis := qtrt.Malloc(8)
-	rv, err := qtrt.Qtcc1(46253105, "_ZN4QPenC2Ev", qtrt.FFITY_POINTER, cthis)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(46253105, "_ZN4QPenC2Ev", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, Voidptr(&cthis))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QPenFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQPen)
 	return gothis
@@ -74,7 +76,7 @@ func NewQPen() *QPen {
 
 func DeleteQPen(this *QPen) {
 	rv, err := qtrt.Qtcc1(0, "_ZN4QPenD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

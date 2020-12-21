@@ -50,6 +50,7 @@ func (ptr *QComboBox) QComboBox_PTR() *QComboBox { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QComboBoxFromptr(cthis Voidptr) *QComboBox {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QComboBox{bcthis0}
@@ -74,8 +75,9 @@ func NewQComboBox(parent QWidget_ITF /*777 QWidget **/) *QComboBox {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(400444357, "_ZN9QComboBoxC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(400444357, "_ZN9QComboBoxC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QComboBoxFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QComboBox")
 	return gothis
@@ -95,8 +97,9 @@ func NewQComboBoxp() *QComboBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(400444357, "_ZN9QComboBoxC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(400444357, "_ZN9QComboBoxC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QComboBoxFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QComboBox")
 	return gothis
@@ -110,8 +113,9 @@ func NewQComboBoxp() *QComboBox {
 /*
  */
 func (this *QComboBox) MaxVisibleItems() int {
-	rv, err := qtrt.Qtcc1(2452855331, "_ZNK9QComboBox15maxVisibleItemsEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2452855331, "_ZNK9QComboBox15maxVisibleItemsEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -123,8 +127,9 @@ func (this *QComboBox) MaxVisibleItems() int {
 /*
  */
 func (this *QComboBox) SetMaxVisibleItems(maxItems int) {
-	rv, err := qtrt.Qtcc1(2605451080, "_ZN9QComboBox18setMaxVisibleItemsEi", qtrt.FFITY_POINTER, this.GetCthis(), maxItems)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2605451080, "_ZN9QComboBox18setMaxVisibleItemsEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&maxItems))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:94
@@ -135,8 +140,9 @@ func (this *QComboBox) SetMaxVisibleItems(maxItems int) {
 /*
  */
 func (this *QComboBox) Count() int {
-	rv, err := qtrt.Qtcc1(484839320, "_ZNK9QComboBox5countEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(484839320, "_ZNK9QComboBox5countEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -148,8 +154,9 @@ func (this *QComboBox) Count() int {
 /*
  */
 func (this *QComboBox) SetMaxCount(max int) {
-	rv, err := qtrt.Qtcc1(804866272, "_ZN9QComboBox11setMaxCountEi", qtrt.FFITY_POINTER, this.GetCthis(), max)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(804866272, "_ZN9QComboBox11setMaxCountEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&max))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:96
@@ -160,8 +167,9 @@ func (this *QComboBox) SetMaxCount(max int) {
 /*
  */
 func (this *QComboBox) MaxCount() int {
-	rv, err := qtrt.Qtcc1(3494713860, "_ZNK9QComboBox8maxCountEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3494713860, "_ZNK9QComboBox8maxCountEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -173,8 +181,9 @@ func (this *QComboBox) MaxCount() int {
 /*
  */
 func (this *QComboBox) DuplicatesEnabled() bool {
-	rv, err := qtrt.Qtcc1(3571501781, "_ZNK9QComboBox17duplicatesEnabledEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3571501781, "_ZNK9QComboBox17duplicatesEnabledEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return rv != 0
 }
 
@@ -186,8 +195,9 @@ func (this *QComboBox) DuplicatesEnabled() bool {
 /*
  */
 func (this *QComboBox) SetDuplicatesEnabled(enable bool) {
-	rv, err := qtrt.Qtcc1(1134441101, "_ZN9QComboBox20setDuplicatesEnabledEb", qtrt.FFITY_POINTER, this.GetCthis(), enable)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1134441101, "_ZN9QComboBox20setDuplicatesEnabledEb", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&enable))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:159
@@ -198,8 +208,9 @@ func (this *QComboBox) SetDuplicatesEnabled(enable bool) {
 /*
  */
 func (this *QComboBox) SetEditable(editable bool) {
-	rv, err := qtrt.Qtcc1(1670976916, "_ZN9QComboBox11setEditableEb", qtrt.FFITY_POINTER, this.GetCthis(), editable)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1670976916, "_ZN9QComboBox11setEditableEb", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&editable))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:184
@@ -210,8 +221,9 @@ func (this *QComboBox) SetEditable(editable bool) {
 /*
  */
 func (this *QComboBox) CurrentIndex() int {
-	rv, err := qtrt.Qtcc1(3220285656, "_ZNK9QComboBox12currentIndexEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3220285656, "_ZNK9QComboBox12currentIndexEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -224,8 +236,9 @@ func (this *QComboBox) CurrentIndex() int {
  */
 func (this *QComboBox) CurrentText() string {
 	sretobj := qtrt.Malloc(8) // QString
-	rv, err := qtrt.Qtcc1(1212789540, "_ZNK9QComboBox11currentTextEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1212789540, "_ZNK9QComboBox11currentTextEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
@@ -242,8 +255,9 @@ func (this *QComboBox) CurrentText() string {
  */
 func (this *QComboBox) ItemText(index int) string {
 	sretobj := qtrt.Malloc(8) // QString
-	rv, err := qtrt.Qtcc1(2984951329, "_ZNK9QComboBox8itemTextEi", qtrt.FFITY_POINTER, sretobj, this.GetCthis(), index)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2984951329, "_ZNK9QComboBox8itemTextEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, Voidptr(&sretobj), this.Addr(), Voidptr(&index))
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
@@ -265,8 +279,9 @@ func (this *QComboBox) AddItem(text string, userData qtcore.QVariant_ITF) {
 	if userData != nil && userData.QVariant_PTR() != nil {
 		convArg1 = userData.QVariant_PTR().GetCthis()
 	}
-	rv, err := qtrt.Qtcc1(931319215, "_ZN9QComboBox7addItemERK7QStringRK8QVariant", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(931319215, "_ZN9QComboBox7addItemERK7QStringRK8QVariant", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0), Voidptr(&convArg1))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:192
@@ -281,8 +296,9 @@ func (this *QComboBox) AddItemp(text string) {
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, const QVariant &=LValueReference, QVariant=Record, , Invalid
 	var convArg1 = qtcore.NewQVariant()
-	rv, err := qtrt.Qtcc1(931319215, "_ZN9QComboBox7addItemERK7QStringRK8QVariant", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(931319215, "_ZN9QComboBox7addItemERK7QStringRK8QVariant", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0), Voidptr(&convArg1))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:198
@@ -299,8 +315,9 @@ func (this *QComboBox) InsertItem(index int, text string, userData qtcore.QVaria
 	if userData != nil && userData.QVariant_PTR() != nil {
 		convArg2 = userData.QVariant_PTR().GetCthis()
 	}
-	rv, err := qtrt.Qtcc1(3465040126, "_ZN9QComboBox10insertItemEiRK7QStringRK8QVariant", qtrt.FFITY_POINTER, this.GetCthis(), index, convArg1, convArg2)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3465040126, "_ZN9QComboBox10insertItemEiRK7QStringRK8QVariant", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&index), Voidptr(&convArg1), Voidptr(&convArg2))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:198
@@ -315,8 +332,9 @@ func (this *QComboBox) InsertItemp(index int, text string) {
 	var convArg1 = tmpArg1.GetCthis()
 	// arg: 2, const QVariant &=LValueReference, QVariant=Record, , Invalid
 	var convArg2 = qtcore.NewQVariant()
-	rv, err := qtrt.Qtcc1(3465040126, "_ZN9QComboBox10insertItemEiRK7QStringRK8QVariant", qtrt.FFITY_POINTER, this.GetCthis(), index, convArg1, convArg2)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3465040126, "_ZN9QComboBox10insertItemEiRK7QStringRK8QVariant", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&index), Voidptr(&convArg1), Voidptr(&convArg2))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:204
@@ -327,8 +345,9 @@ func (this *QComboBox) InsertItemp(index int, text string) {
 /*
  */
 func (this *QComboBox) RemoveItem(index int) {
-	rv, err := qtrt.Qtcc1(3369550016, "_ZN9QComboBox10removeItemEi", qtrt.FFITY_POINTER, this.GetCthis(), index)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3369550016, "_ZN9QComboBox10removeItemEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:206
@@ -341,8 +360,9 @@ func (this *QComboBox) RemoveItem(index int) {
 func (this *QComboBox) SetItemText(index int, text string) {
 	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	rv, err := qtrt.Qtcc1(198468933, "_ZN9QComboBox11setItemTextEiRK7QString", qtrt.FFITY_POINTER, this.GetCthis(), index, convArg1)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(198468933, "_ZN9QComboBox11setItemTextEiRK7QString", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&index), Voidptr(&convArg1))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:210
@@ -353,8 +373,9 @@ func (this *QComboBox) SetItemText(index int, text string) {
 /*
  */
 func (this *QComboBox) View() *QAbstractItemView /*777 QAbstractItemView **/ {
-	rv, err := qtrt.Qtcc1(3310046969, "_ZNK9QComboBox4viewEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3310046969, "_ZNK9QComboBox4viewEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return /*==*/ QAbstractItemViewFromptr(Voidptr(uintptr(rv))) // 444
 }
 
@@ -366,8 +387,9 @@ func (this *QComboBox) View() *QAbstractItemView /*777 QAbstractItemView **/ {
 /*
  */
 func (this *QComboBox) Clear() {
-	rv, err := qtrt.Qtcc1(3991980318, "_ZN9QComboBox5clearEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3991980318, "_ZN9QComboBox5clearEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:225
@@ -378,8 +400,9 @@ func (this *QComboBox) Clear() {
 /*
  */
 func (this *QComboBox) ClearEditText() {
-	rv, err := qtrt.Qtcc1(2293827830, "_ZN9QComboBox13clearEditTextEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2293827830, "_ZN9QComboBox13clearEditTextEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:226
@@ -392,8 +415,9 @@ func (this *QComboBox) ClearEditText() {
 func (this *QComboBox) SetEditText(text string) {
 	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.Qtcc1(3736805172, "_ZN9QComboBox11setEditTextERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3736805172, "_ZN9QComboBox11setEditTextERK7QString", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:227
@@ -404,8 +428,9 @@ func (this *QComboBox) SetEditText(text string) {
 /*
  */
 func (this *QComboBox) SetCurrentIndex(index int) {
-	rv, err := qtrt.Qtcc1(934993843, "_ZN9QComboBox15setCurrentIndexEi", qtrt.FFITY_POINTER, this.GetCthis(), index)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(934993843, "_ZN9QComboBox15setCurrentIndexEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:228
@@ -418,8 +443,9 @@ func (this *QComboBox) SetCurrentIndex(index int) {
 func (this *QComboBox) SetCurrentText(text string) {
 	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.Qtcc1(3375923067, "_ZN9QComboBox14setCurrentTextERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3375923067, "_ZN9QComboBox14setCurrentTextERK7QString", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:231
@@ -432,8 +458,9 @@ func (this *QComboBox) SetCurrentText(text string) {
 func (this *QComboBox) EditTextChanged(arg0 string) {
 	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.Qtcc1(681558797, "_ZN9QComboBox15editTextChangedERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(681558797, "_ZN9QComboBox15editTextChangedERK7QString", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:232
@@ -444,8 +471,9 @@ func (this *QComboBox) EditTextChanged(arg0 string) {
 /*
  */
 func (this *QComboBox) Activated(index int) {
-	rv, err := qtrt.Qtcc1(3913087343, "_ZN9QComboBox9activatedEi", qtrt.FFITY_POINTER, this.GetCthis(), index)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3913087343, "_ZN9QComboBox9activatedEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:233
@@ -458,8 +486,9 @@ func (this *QComboBox) Activated(index int) {
 func (this *QComboBox) TextActivated(arg0 string) {
 	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.Qtcc1(1528827286, "_ZN9QComboBox13textActivatedERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1528827286, "_ZN9QComboBox13textActivatedERK7QString", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:234
@@ -470,8 +499,9 @@ func (this *QComboBox) TextActivated(arg0 string) {
 /*
  */
 func (this *QComboBox) Highlighted(index int) {
-	rv, err := qtrt.Qtcc1(1991475282, "_ZN9QComboBox11highlightedEi", qtrt.FFITY_POINTER, this.GetCthis(), index)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1991475282, "_ZN9QComboBox11highlightedEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:235
@@ -484,8 +514,9 @@ func (this *QComboBox) Highlighted(index int) {
 func (this *QComboBox) TextHighlighted(arg0 string) {
 	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.Qtcc1(1845413289, "_ZN9QComboBox15textHighlightedERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1845413289, "_ZN9QComboBox15textHighlightedERK7QString", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcombobox.h:236
@@ -496,13 +527,14 @@ func (this *QComboBox) TextHighlighted(arg0 string) {
 /*
  */
 func (this *QComboBox) CurrentIndexChanged(index int) {
-	rv, err := qtrt.Qtcc1(3753237607, "_ZN9QComboBox19currentIndexChangedEi", qtrt.FFITY_POINTER, this.GetCthis(), index)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3753237607, "_ZN9QComboBox19currentIndexChangedEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
+	qtrt.ErrPrint2(err, rv)
 }
 
 func DeleteQComboBox(this *QComboBox) {
 	rv, err := qtrt.Qtcc1(0, "_ZN9QComboBoxD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

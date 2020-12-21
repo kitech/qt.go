@@ -50,6 +50,7 @@ func (ptr *QAbstractSpinBox) QAbstractSpinBox_PTR() *QAbstractSpinBox { return p
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QAbstractSpinBoxFromptr(cthis Voidptr) *QAbstractSpinBox {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QAbstractSpinBox{bcthis0}
@@ -60,7 +61,7 @@ func (*QAbstractSpinBox) Fromptr(cthis Voidptr) *QAbstractSpinBox {
 
 func DeleteQAbstractSpinBox(this *QAbstractSpinBox) {
 	rv, err := qtrt.Qtcc1(0, "_ZN16QAbstractSpinBoxD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

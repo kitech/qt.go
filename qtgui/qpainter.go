@@ -46,6 +46,7 @@ func (ptr *QPainter) QPainter_PTR() *QPainter { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QPainterFromptr(cthis Voidptr) *QPainter {
 	return &QPainter{&qtrt.CObject{cthis}}
 }
@@ -69,8 +70,9 @@ func NewQPainter(arg0 QPaintDevice_ITF /*777 QPaintDevice **/) *QPainter {
 		convArg0 = arg0.QPaintDevice_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(8)
-	rv, err := qtrt.Qtcc1(1768399324, "_ZN8QPainterC2EP12QPaintDevice", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1768399324, "_ZN8QPainterC2EP12QPaintDevice", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QPainterFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQPainter)
 	return gothis
@@ -84,14 +86,15 @@ func NewQPainter(arg0 QPaintDevice_ITF /*777 QPaintDevice **/) *QPainter {
 /*
  */
 func (this *QPainter) Device() *QPaintDevice /*777 QPaintDevice **/ {
-	rv, err := qtrt.Qtcc1(3490243267, "_ZNK8QPainter6deviceEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3490243267, "_ZNK8QPainter6deviceEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return /*==*/ QPaintDeviceFromptr(Voidptr(uintptr(rv))) // 444
 }
 
 func DeleteQPainter(this *QPainter) {
 	rv, err := qtrt.Qtcc1(0, "_ZN8QPainterD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

@@ -46,6 +46,7 @@ func (ptr *QThread) QThread_PTR() *QThread { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QThreadFromptr(cthis Voidptr) *QThread {
 	bcthis0 := QObjectFromptr(cthis)
 	return &QThread{bcthis0}
@@ -56,7 +57,7 @@ func (*QThread) Fromptr(cthis Voidptr) *QThread {
 
 func DeleteQThread(this *QThread) {
 	rv, err := qtrt.Qtcc1(0, "_ZN7QThreadD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

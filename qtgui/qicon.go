@@ -46,6 +46,7 @@ func (ptr *QIcon) QIcon_PTR() *QIcon { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QIconFromptr(cthis Voidptr) *QIcon {
 	return &QIcon{&qtrt.CObject{cthis}}
 }
@@ -65,8 +66,9 @@ func (*QIcon) NewForInherit() *QIcon {
 }
 func NewQIcon() *QIcon {
 	cthis := qtrt.Malloc(8)
-	rv, err := qtrt.Qtcc1(1359309426, "_ZN5QIconC2Ev", qtrt.FFITY_POINTER, cthis)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1359309426, "_ZN5QIconC2Ev", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, Voidptr(&cthis))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QIconFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQIcon)
 	return gothis
@@ -74,7 +76,7 @@ func NewQIcon() *QIcon {
 
 func DeleteQIcon(this *QIcon) {
 	rv, err := qtrt.Qtcc1(0, "_ZN5QIconD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

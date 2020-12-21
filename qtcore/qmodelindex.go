@@ -47,6 +47,7 @@ func (ptr *QModelIndex) QModelIndex_PTR() *QModelIndex { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QModelIndexFromptr(cthis Voidptr) *QModelIndex {
 	return &QModelIndex{&qtrt.CObject{cthis}}
 }
@@ -66,8 +67,9 @@ func (*QModelIndex) NewForInherit() *QModelIndex {
 }
 func NewQModelIndex() *QModelIndex {
 	cthis := qtrt.Malloc(24)
-	rv, err := qtrt.Qtcc1(756365278, "_ZN11QModelIndexC2Ev", qtrt.FFITY_POINTER, cthis)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(756365278, "_ZN11QModelIndexC2Ev", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, Voidptr(&cthis))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QModelIndexFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQModelIndex)
 	return gothis
@@ -81,8 +83,9 @@ func NewQModelIndex() *QModelIndex {
 /*
  */
 func (this *QModelIndex) Row() int {
-	rv, err := qtrt.Qtcc1(3724840192, "_ZNK11QModelIndex3rowEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3724840192, "_ZNK11QModelIndex3rowEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -94,8 +97,9 @@ func (this *QModelIndex) Row() int {
 /*
  */
 func (this *QModelIndex) Column() int {
-	rv, err := qtrt.Qtcc1(3046022154, "_ZNK11QModelIndex6columnEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3046022154, "_ZNK11QModelIndex6columnEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -107,8 +111,9 @@ func (this *QModelIndex) Column() int {
 /*
  */
 func (this *QModelIndex) InternalId() uint64 {
-	rv, err := qtrt.Qtcc1(47055808, "_ZNK11QModelIndex10internalIdEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(47055808, "_ZNK11QModelIndex10internalIdEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return uint64(rv) // 222
 }
 
@@ -120,8 +125,9 @@ func (this *QModelIndex) InternalId() uint64 {
 /*
  */
 func (this *QModelIndex) InternalPointer() unsafe.Pointer /*666*/ {
-	rv, err := qtrt.Qtcc1(2841223468, "_ZNK11QModelIndex15internalPointerEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2841223468, "_ZNK11QModelIndex15internalPointerEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return Voidptr(uintptr(rv))
 }
 
@@ -134,8 +140,9 @@ func (this *QModelIndex) InternalPointer() unsafe.Pointer /*666*/ {
  */
 func (this *QModelIndex) Parent() *QModelIndex /*123*/ {
 	sretobj := qtrt.Malloc(24) // QModelIndex
-	rv, err := qtrt.Qtcc1(1304276158, "_ZNK11QModelIndex6parentEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1304276158, "_ZNK11QModelIndex6parentEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := /*==*/ QModelIndexFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
@@ -151,8 +158,9 @@ func (this *QModelIndex) Parent() *QModelIndex /*123*/ {
  */
 func (this *QModelIndex) Sibling(row int, column int) *QModelIndex /*123*/ {
 	sretobj := qtrt.Malloc(24) // QModelIndex
-	rv, err := qtrt.Qtcc1(128912225, "_ZNK11QModelIndex7siblingEii", qtrt.FFITY_POINTER, sretobj, this.GetCthis(), row, column)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(128912225, "_ZNK11QModelIndex7siblingEii", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_INT, Voidptr(&sretobj), this.Addr(), Voidptr(&row), Voidptr(&column))
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := /*==*/ QModelIndexFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
@@ -168,8 +176,9 @@ func (this *QModelIndex) Sibling(row int, column int) *QModelIndex /*123*/ {
  */
 func (this *QModelIndex) SiblingAtColumn(column int) *QModelIndex /*123*/ {
 	sretobj := qtrt.Malloc(24) // QModelIndex
-	rv, err := qtrt.Qtcc1(2281150179, "_ZNK11QModelIndex15siblingAtColumnEi", qtrt.FFITY_POINTER, sretobj, this.GetCthis(), column)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2281150179, "_ZNK11QModelIndex15siblingAtColumnEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, Voidptr(&sretobj), this.Addr(), Voidptr(&column))
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := /*==*/ QModelIndexFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
@@ -185,8 +194,9 @@ func (this *QModelIndex) SiblingAtColumn(column int) *QModelIndex /*123*/ {
  */
 func (this *QModelIndex) SiblingAtRow(row int) *QModelIndex /*123*/ {
 	sretobj := qtrt.Malloc(24) // QModelIndex
-	rv, err := qtrt.Qtcc1(3167847458, "_ZNK11QModelIndex12siblingAtRowEi", qtrt.FFITY_POINTER, sretobj, this.GetCthis(), row)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3167847458, "_ZNK11QModelIndex12siblingAtRowEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, Voidptr(&sretobj), this.Addr(), Voidptr(&row))
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := /*==*/ QModelIndexFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
@@ -195,7 +205,7 @@ func (this *QModelIndex) SiblingAtRow(row int) *QModelIndex /*123*/ {
 
 func DeleteQModelIndex(this *QModelIndex) {
 	rv, err := qtrt.Qtcc1(0, "_ZN11QModelIndexD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

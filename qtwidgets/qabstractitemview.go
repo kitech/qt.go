@@ -50,6 +50,7 @@ func (ptr *QAbstractItemView) QAbstractItemView_PTR() *QAbstractItemView { retur
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QAbstractItemViewFromptr(cthis Voidptr) *QAbstractItemView {
 	bcthis0 := QAbstractScrollAreaFromptr(cthis)
 	return &QAbstractItemView{bcthis0}
@@ -74,8 +75,9 @@ func NewQAbstractItemView(parent QWidget_ITF /*777 QWidget **/) *QAbstractItemVi
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(2582094347, "_ZN17QAbstractItemViewC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2582094347, "_ZN17QAbstractItemViewC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QAbstractItemViewFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QAbstractItemView")
 	return gothis
@@ -95,8 +97,9 @@ func NewQAbstractItemViewp() *QAbstractItemView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(2582094347, "_ZN17QAbstractItemViewC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2582094347, "_ZN17QAbstractItemViewC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QAbstractItemViewFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QAbstractItemView")
 	return gothis
@@ -104,7 +107,7 @@ func NewQAbstractItemViewp() *QAbstractItemView {
 
 func DeleteQAbstractItemView(this *QAbstractItemView) {
 	rv, err := qtrt.Qtcc1(0, "_ZN17QAbstractItemViewD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

@@ -48,6 +48,7 @@ func (ptr *QVBoxLayout) QVBoxLayout_PTR() *QVBoxLayout { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QVBoxLayoutFromptr(cthis Voidptr) *QVBoxLayout {
 	bcthis0 := QBoxLayoutFromptr(cthis)
 	return &QVBoxLayout{bcthis0}
@@ -68,8 +69,9 @@ func (*QVBoxLayout) NewForInherit() *QVBoxLayout {
 }
 func NewQVBoxLayout() *QVBoxLayout {
 	cthis := qtrt.Malloc(32)
-	rv, err := qtrt.Qtcc1(538351151, "_ZN11QVBoxLayoutC2Ev", qtrt.FFITY_POINTER, cthis)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(538351151, "_ZN11QVBoxLayoutC2Ev", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, Voidptr(&cthis))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QVBoxLayoutFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QVBoxLayout")
 	return gothis
@@ -91,8 +93,9 @@ func NewQVBoxLayout1(parent QWidget_ITF /*777 QWidget **/) *QVBoxLayout {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(32)
-	rv, err := qtrt.Qtcc1(368368412, "_ZN11QVBoxLayoutC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(368368412, "_ZN11QVBoxLayoutC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QVBoxLayoutFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QVBoxLayout")
 	return gothis
@@ -100,7 +103,7 @@ func NewQVBoxLayout1(parent QWidget_ITF /*777 QWidget **/) *QVBoxLayout {
 
 func DeleteQVBoxLayout(this *QVBoxLayout) {
 	rv, err := qtrt.Qtcc1(0, "_ZN11QVBoxLayoutD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

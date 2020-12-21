@@ -50,6 +50,7 @@ func (ptr *QDoubleSpinBox) QDoubleSpinBox_PTR() *QDoubleSpinBox { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QDoubleSpinBoxFromptr(cthis Voidptr) *QDoubleSpinBox {
 	bcthis0 := QAbstractSpinBoxFromptr(cthis)
 	return &QDoubleSpinBox{bcthis0}
@@ -74,8 +75,9 @@ func NewQDoubleSpinBox(parent QWidget_ITF /*777 QWidget **/) *QDoubleSpinBox {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(698183486, "_ZN14QDoubleSpinBoxC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(698183486, "_ZN14QDoubleSpinBoxC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QDoubleSpinBoxFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QDoubleSpinBox")
 	return gothis
@@ -95,8 +97,9 @@ func NewQDoubleSpinBoxp() *QDoubleSpinBox {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(698183486, "_ZN14QDoubleSpinBoxC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(698183486, "_ZN14QDoubleSpinBoxC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QDoubleSpinBoxFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QDoubleSpinBox")
 	return gothis
@@ -110,8 +113,9 @@ func NewQDoubleSpinBoxp() *QDoubleSpinBox {
 /*
  */
 func (this *QDoubleSpinBox) Value() float64 {
-	rv, err := qtrt.Qtcc1(4042644504, "_ZNK14QDoubleSpinBox5valueEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4042644504, "_ZNK14QDoubleSpinBox5valueEv", qtrt.FFITO_DOUBLE,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -124,8 +128,9 @@ func (this *QDoubleSpinBox) Value() float64 {
  */
 func (this *QDoubleSpinBox) CleanText() string {
 	sretobj := qtrt.Malloc(8) // QString
-	rv, err := qtrt.Qtcc1(3151881166, "_ZNK14QDoubleSpinBox9cleanTextEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3151881166, "_ZNK14QDoubleSpinBox9cleanTextEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
@@ -141,8 +146,9 @@ func (this *QDoubleSpinBox) CleanText() string {
 /*
  */
 func (this *QDoubleSpinBox) SetSingleStep(val float64) {
-	rv, err := qtrt.Qtcc1(1279985875, "_ZN14QDoubleSpinBox13setSingleStepEd", qtrt.FFITY_POINTER, this.GetCthis(), val)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1279985875, "_ZN14QDoubleSpinBox13setSingleStepEd", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_DOUBLE, this.Addr(), Voidptr(&val))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:152
@@ -153,8 +159,9 @@ func (this *QDoubleSpinBox) SetSingleStep(val float64) {
 /*
  */
 func (this *QDoubleSpinBox) SetMinimum(min float64) {
-	rv, err := qtrt.Qtcc1(216875734, "_ZN14QDoubleSpinBox10setMinimumEd", qtrt.FFITY_POINTER, this.GetCthis(), min)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(216875734, "_ZN14QDoubleSpinBox10setMinimumEd", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_DOUBLE, this.Addr(), Voidptr(&min))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:155
@@ -165,8 +172,9 @@ func (this *QDoubleSpinBox) SetMinimum(min float64) {
 /*
  */
 func (this *QDoubleSpinBox) SetMaximum(max float64) {
-	rv, err := qtrt.Qtcc1(3674665111, "_ZN14QDoubleSpinBox10setMaximumEd", qtrt.FFITY_POINTER, this.GetCthis(), max)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3674665111, "_ZN14QDoubleSpinBox10setMaximumEd", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_DOUBLE, this.Addr(), Voidptr(&max))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:157
@@ -177,8 +185,9 @@ func (this *QDoubleSpinBox) SetMaximum(max float64) {
 /*
  */
 func (this *QDoubleSpinBox) SetRange(min float64, max float64) {
-	rv, err := qtrt.Qtcc1(3493293011, "_ZN14QDoubleSpinBox8setRangeEdd", qtrt.FFITY_POINTER, this.GetCthis(), min, max)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3493293011, "_ZN14QDoubleSpinBox8setRangeEdd", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_DOUBLE, qtrt.FFITO_DOUBLE, this.Addr(), Voidptr(&min), Voidptr(&max))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:171
@@ -189,8 +198,9 @@ func (this *QDoubleSpinBox) SetRange(min float64, max float64) {
 /*
  */
 func (this *QDoubleSpinBox) SetValue(val float64) {
-	rv, err := qtrt.Qtcc1(747158720, "_ZN14QDoubleSpinBox8setValueEd", qtrt.FFITY_POINTER, this.GetCthis(), val)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(747158720, "_ZN14QDoubleSpinBox8setValueEd", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_DOUBLE, this.Addr(), Voidptr(&val))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:174
@@ -201,8 +211,9 @@ func (this *QDoubleSpinBox) SetValue(val float64) {
 /*
  */
 func (this *QDoubleSpinBox) ValueChanged(arg0 float64) {
-	rv, err := qtrt.Qtcc1(1552051280, "_ZN14QDoubleSpinBox12valueChangedEd", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1552051280, "_ZN14QDoubleSpinBox12valueChangedEd", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_DOUBLE, this.Addr(), Voidptr(&arg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qspinbox.h:175
@@ -215,13 +226,14 @@ func (this *QDoubleSpinBox) ValueChanged(arg0 float64) {
 func (this *QDoubleSpinBox) TextChanged(arg0 string) {
 	var tmpArg0 = qtcore.NewQString5(arg0)
 	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.Qtcc1(135358936, "_ZN14QDoubleSpinBox11textChangedERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(135358936, "_ZN14QDoubleSpinBox11textChangedERK7QString", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 func DeleteQDoubleSpinBox(this *QDoubleSpinBox) {
 	rv, err := qtrt.Qtcc1(0, "_ZN14QDoubleSpinBoxD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

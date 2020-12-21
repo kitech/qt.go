@@ -45,6 +45,7 @@ func (ptr *QSize) QSize_PTR() *QSize { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QSizeFromptr(cthis Voidptr) *QSize {
 	return &QSize{&qtrt.CObject{cthis}}
 }
@@ -64,8 +65,9 @@ func (*QSize) NewForInherit(w int, h int) *QSize {
 }
 func NewQSize(w int, h int) *QSize {
 	cthis := qtrt.Malloc(8)
-	rv, err := qtrt.Qtcc1(1650702872, "_ZN5QSizeC2Eii", qtrt.FFITY_POINTER, cthis, w, h)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1650702872, "_ZN5QSizeC2Eii", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_INT, Voidptr(&cthis), Voidptr(&w), Voidptr(&h))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QSizeFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQSize)
 	return gothis
@@ -79,8 +81,9 @@ func NewQSize(w int, h int) *QSize {
 /*
  */
 func (this *QSize) Width() int {
-	rv, err := qtrt.Qtcc1(978481712, "_ZNK5QSize5widthEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(978481712, "_ZNK5QSize5widthEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -92,8 +95,9 @@ func (this *QSize) Width() int {
 /*
  */
 func (this *QSize) Height() int {
-	rv, err := qtrt.Qtcc1(1546467447, "_ZNK5QSize6heightEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1546467447, "_ZNK5QSize6heightEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -105,8 +109,9 @@ func (this *QSize) Height() int {
 /*
  */
 func (this *QSize) Rwidth() int {
-	rv, err := qtrt.Qtcc1(1400378653, "_ZN5QSize6rwidthEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1400378653, "_ZN5QSize6rwidthEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cpretval2go("int", rv).(int) // 3331
 }
 
@@ -118,14 +123,15 @@ func (this *QSize) Rwidth() int {
 /*
  */
 func (this *QSize) Rheight() int {
-	rv, err := qtrt.Qtcc1(3486783902, "_ZN5QSize7rheightEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3486783902, "_ZN5QSize7rheightEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cpretval2go("int", rv).(int) // 3331
 }
 
 func DeleteQSize(this *QSize) {
 	rv, err := qtrt.Qtcc1(0, "_ZN5QSizeD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

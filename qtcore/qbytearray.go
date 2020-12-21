@@ -45,6 +45,7 @@ func (ptr *QByteArray) QByteArray_PTR() *QByteArray { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QByteArrayFromptr(cthis Voidptr) *QByteArray {
 	return &QByteArray{&qtrt.CObject{cthis}}
 }
@@ -65,8 +66,9 @@ func (*QByteArray) NewForInherit(arg0 string, size int) *QByteArray {
 func NewQByteArray(arg0 string, size int) *QByteArray {
 	var convArg0 = qtrt.CStringRef(&arg0)
 	cthis := qtrt.Malloc(8)
-	rv, err := qtrt.Qtcc1(1185669528, "_ZN10QByteArrayC2EPKci", qtrt.FFITY_POINTER, cthis, convArg0, size)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1185669528, "_ZN10QByteArrayC2EPKci", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&size))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QByteArrayFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQByteArray)
 	return gothis
@@ -87,8 +89,9 @@ func NewQByteArrayp(arg0 string) *QByteArray {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	size := int(-1)
 	cthis := qtrt.Malloc(8)
-	rv, err := qtrt.Qtcc1(1185669528, "_ZN10QByteArrayC2EPKci", qtrt.FFITY_POINTER, cthis, convArg0, size)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1185669528, "_ZN10QByteArrayC2EPKci", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&size))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QByteArrayFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQByteArray)
 	return gothis
@@ -102,8 +105,9 @@ func NewQByteArrayp(arg0 string) *QByteArray {
 /*
  */
 func (this *QByteArray) Size() int {
-	rv, err := qtrt.Qtcc1(2381602376, "_ZNK10QByteArray4sizeEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2381602376, "_ZNK10QByteArray4sizeEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -115,14 +119,15 @@ func (this *QByteArray) Size() int {
 /*
  */
 func (this *QByteArray) Data() string {
-	rv, err := qtrt.Qtcc1(3584956573, "_ZN10QByteArray4dataEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3584956573, "_ZN10QByteArray4dataEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.GoStringI(rv)
 }
 
 func DeleteQByteArray(this *QByteArray) {
 	rv, err := qtrt.Qtcc1(0, "_ZN10QByteArrayD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

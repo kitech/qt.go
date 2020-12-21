@@ -50,6 +50,7 @@ func (ptr *QRadioButton) QRadioButton_PTR() *QRadioButton { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QRadioButtonFromptr(cthis Voidptr) *QRadioButton {
 	bcthis0 := QAbstractButtonFromptr(cthis)
 	return &QRadioButton{bcthis0}
@@ -74,8 +75,9 @@ func NewQRadioButton(parent QWidget_ITF /*777 QWidget **/) *QRadioButton {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(3516896294, "_ZN12QRadioButtonC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3516896294, "_ZN12QRadioButtonC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QRadioButtonFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QRadioButton")
 	return gothis
@@ -95,8 +97,9 @@ func NewQRadioButtonp() *QRadioButton {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(3516896294, "_ZN12QRadioButtonC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3516896294, "_ZN12QRadioButtonC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QRadioButtonFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QRadioButton")
 	return gothis
@@ -120,8 +123,9 @@ func NewQRadioButton1(text string, parent QWidget_ITF /*777 QWidget **/) *QRadio
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(3203710175, "_ZN12QRadioButtonC2ERK7QStringP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3203710175, "_ZN12QRadioButtonC2ERK7QStringP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QRadioButtonFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QRadioButton")
 	return gothis
@@ -143,8 +147,9 @@ func NewQRadioButton1p(text string) *QRadioButton {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 Voidptr
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(3203710175, "_ZN12QRadioButtonC2ERK7QStringP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3203710175, "_ZN12QRadioButtonC2ERK7QStringP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QRadioButtonFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QRadioButton")
 	return gothis
@@ -158,8 +163,9 @@ func NewQRadioButton1p(text string) *QRadioButton {
 /*
  */
 func (this *QRadioButton) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := qtrt.Qtcc1(1977029849, "_ZNK12QRadioButton8sizeHintEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1977029849, "_ZNK12QRadioButton8sizeHintEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -173,8 +179,9 @@ func (this *QRadioButton) SizeHint() *qtcore.QSize /*123*/ {
 /*
  */
 func (this *QRadioButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
-	rv, err := qtrt.Qtcc1(2537386903, "_ZNK12QRadioButton15minimumSizeHintEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2537386903, "_ZNK12QRadioButton15minimumSizeHintEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -182,7 +189,7 @@ func (this *QRadioButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 
 func DeleteQRadioButton(this *QRadioButton) {
 	rv, err := qtrt.Qtcc1(0, "_ZN12QRadioButtonD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

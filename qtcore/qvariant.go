@@ -45,6 +45,7 @@ func (ptr *QVariant) QVariant_PTR() *QVariant { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QVariantFromptr(cthis Voidptr) *QVariant {
 	return &QVariant{&qtrt.CObject{cthis}}
 }
@@ -64,8 +65,9 @@ func (*QVariant) NewForInherit() *QVariant {
 }
 func NewQVariant() *QVariant {
 	cthis := qtrt.Malloc(16)
-	rv, err := qtrt.Qtcc1(93067653, "_ZN8QVariantC2Ev", qtrt.FFITY_POINTER, cthis)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(93067653, "_ZN8QVariantC2Ev", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, Voidptr(&cthis))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QVariantFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQVariant)
 	return gothis
@@ -73,7 +75,7 @@ func NewQVariant() *QVariant {
 
 func DeleteQVariant(this *QVariant) {
 	rv, err := qtrt.Qtcc1(0, "_ZN8QVariantD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

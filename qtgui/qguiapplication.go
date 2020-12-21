@@ -47,6 +47,7 @@ func (ptr *QGuiApplication) QGuiApplication_PTR() *QGuiApplication { return ptr 
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QGuiApplicationFromptr(cthis Voidptr) *QGuiApplication {
 	bcthis0 := qtcore.QCoreApplicationFromptr(cthis)
 	return &QGuiApplication{bcthis0}
@@ -57,7 +58,7 @@ func (*QGuiApplication) Fromptr(cthis Voidptr) *QGuiApplication {
 
 func DeleteQGuiApplication(this *QGuiApplication) {
 	rv, err := qtrt.Qtcc1(0, "_ZN15QGuiApplicationD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

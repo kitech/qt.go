@@ -46,6 +46,7 @@ func (ptr *QColor) QColor_PTR() *QColor { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QColorFromptr(cthis Voidptr) *QColor {
 	return &QColor{&qtrt.CObject{cthis}}
 }
@@ -55,7 +56,7 @@ func (*QColor) Fromptr(cthis Voidptr) *QColor {
 
 func DeleteQColor(this *QColor) {
 	rv, err := qtrt.Qtcc1(0, "_ZN6QColorD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

@@ -23,6 +23,13 @@ func ErrPrint(err error, args ...interface{}) error {
 	return err
 }
 
+// improve performance for special case
+func ErrPrint2(err error, rv uint64) {
+	if err != nil {
+		log.Output(2, fmt.Sprintf("%v: %v", err, rv))
+	}
+}
+
 func NilPrint(v interface{}, args ...interface{}) interface{} {
 	if v == nil {
 		log.Output(2, printq(v, args...))

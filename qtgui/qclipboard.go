@@ -47,6 +47,7 @@ func (ptr *QClipboard) QClipboard_PTR() *QClipboard { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QClipboardFromptr(cthis Voidptr) *QClipboard {
 	bcthis0 := qtcore.QObjectFromptr(cthis)
 	return &QClipboard{bcthis0}
@@ -63,8 +64,9 @@ func (*QClipboard) Fromptr(cthis Voidptr) *QClipboard {
 /*
  */
 func (this *QClipboard) Clear(mode int) {
-	rv, err := qtrt.Qtcc1(3673203142, "_ZN10QClipboard5clearENS_4ModeE", qtrt.FFITY_POINTER, this.GetCthis(), mode)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3673203142, "_ZN10QClipboard5clearENS_4ModeE", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&mode))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:65
@@ -77,8 +79,9 @@ func (this *QClipboard) Clear(mode int) {
 func (this *QClipboard) Clearp() {
 	// arg: 0, QClipboard::Mode=Enum, QClipboard::Mode=Enum, , Invalid
 	mode := 0
-	rv, err := qtrt.Qtcc1(3673203142, "_ZN10QClipboard5clearENS_4ModeE", qtrt.FFITY_POINTER, this.GetCthis(), mode)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3673203142, "_ZN10QClipboard5clearENS_4ModeE", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&mode))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtGui/qclipboard.h:67
@@ -89,8 +92,9 @@ func (this *QClipboard) Clearp() {
 /*
  */
 func (this *QClipboard) SupportsSelection() bool {
-	rv, err := qtrt.Qtcc1(1880697911, "_ZNK10QClipboard17supportsSelectionEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1880697911, "_ZNK10QClipboard17supportsSelectionEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return rv != 0
 }
 
@@ -102,8 +106,9 @@ func (this *QClipboard) SupportsSelection() bool {
 /*
  */
 func (this *QClipboard) SupportsFindBuffer() bool {
-	rv, err := qtrt.Qtcc1(2133879840, "_ZNK10QClipboard18supportsFindBufferEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2133879840, "_ZNK10QClipboard18supportsFindBufferEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return rv != 0
 }
 
@@ -115,8 +120,9 @@ func (this *QClipboard) SupportsFindBuffer() bool {
 /*
  */
 func (this *QClipboard) OwnsSelection() bool {
-	rv, err := qtrt.Qtcc1(317563336, "_ZNK10QClipboard13ownsSelectionEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(317563336, "_ZNK10QClipboard13ownsSelectionEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return rv != 0
 }
 
@@ -128,8 +134,9 @@ func (this *QClipboard) OwnsSelection() bool {
 /*
  */
 func (this *QClipboard) OwnsClipboard() bool {
-	rv, err := qtrt.Qtcc1(1848675440, "_ZNK10QClipboard13ownsClipboardEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1848675440, "_ZNK10QClipboard13ownsClipboardEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return rv != 0
 }
 
@@ -141,14 +148,15 @@ func (this *QClipboard) OwnsClipboard() bool {
 /*
  */
 func (this *QClipboard) OwnsFindBuffer() bool {
-	rv, err := qtrt.Qtcc1(1054311493, "_ZNK10QClipboard14ownsFindBufferEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1054311493, "_ZNK10QClipboard14ownsFindBufferEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return rv != 0
 }
 
 func DeleteQClipboard(this *QClipboard) {
 	rv, err := qtrt.Qtcc1(0, "_ZN10QClipboardD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

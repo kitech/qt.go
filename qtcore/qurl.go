@@ -45,6 +45,7 @@ func (ptr *QUrl) QUrl_PTR() *QUrl { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QUrlFromptr(cthis Voidptr) *QUrl {
 	return &QUrl{&qtrt.CObject{cthis}}
 }
@@ -64,8 +65,9 @@ func (*QUrl) NewForInherit() *QUrl {
 }
 func NewQUrl() *QUrl {
 	cthis := qtrt.Malloc(8)
-	rv, err := qtrt.Qtcc1(887786197, "_ZN4QUrlC2Ev", qtrt.FFITY_POINTER, cthis)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(887786197, "_ZN4QUrlC2Ev", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, Voidptr(&cthis))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QUrlFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQUrl)
 	return gothis
@@ -85,8 +87,9 @@ func NewQUrl1(url string, mode int) *QUrl {
 	var tmpArg0 = NewQString5(url)
 	var convArg0 = tmpArg0.GetCthis()
 	cthis := qtrt.Malloc(8)
-	rv, err := qtrt.Qtcc1(2077668047, "_ZN4QUrlC2ERK7QStringNS_11ParsingModeE", qtrt.FFITY_POINTER, cthis, convArg0, mode)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2077668047, "_ZN4QUrlC2ERK7QStringNS_11ParsingModeE", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&mode))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QUrlFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQUrl)
 	return gothis
@@ -108,8 +111,9 @@ func NewQUrl1p(url string) *QUrl {
 	// arg: 1, QUrl::ParsingMode=Enum, QUrl::ParsingMode=Enum, , Invalid
 	mode := 0
 	cthis := qtrt.Malloc(8)
-	rv, err := qtrt.Qtcc1(2077668047, "_ZN4QUrlC2ERK7QStringNS_11ParsingModeE", qtrt.FFITY_POINTER, cthis, convArg0, mode)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2077668047, "_ZN4QUrlC2ERK7QStringNS_11ParsingModeE", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&mode))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QUrlFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQUrl)
 	return gothis
@@ -125,8 +129,9 @@ func NewQUrl1p(url string) *QUrl {
 func (this *QUrl) SetUrl(url string, mode int) {
 	var tmpArg0 = NewQString5(url)
 	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.Qtcc1(241840493, "_ZN4QUrl6setUrlERK7QStringNS_11ParsingModeE", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, mode)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(241840493, "_ZN4QUrl6setUrlERK7QStringNS_11ParsingModeE", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0), Voidptr(&mode))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtCore/qurl.h:193
@@ -141,13 +146,14 @@ func (this *QUrl) SetUrlp(url string) {
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, QUrl::ParsingMode=Enum, QUrl::ParsingMode=Enum, , Invalid
 	mode := 0
-	rv, err := qtrt.Qtcc1(241840493, "_ZN4QUrl6setUrlERK7QStringNS_11ParsingModeE", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, mode)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(241840493, "_ZN4QUrl6setUrlERK7QStringNS_11ParsingModeE", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0), Voidptr(&mode))
+	qtrt.ErrPrint2(err, rv)
 }
 
 func DeleteQUrl(this *QUrl) {
 	rv, err := qtrt.Qtcc1(0, "_ZN4QUrlD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

@@ -49,6 +49,7 @@ func (ptr *QGraphicsItem) QGraphicsItem_PTR() *QGraphicsItem { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QGraphicsItemFromptr(cthis Voidptr) *QGraphicsItem {
 	return &QGraphicsItem{&qtrt.CObject{cthis}}
 }
@@ -58,7 +59,7 @@ func (*QGraphicsItem) Fromptr(cthis Voidptr) *QGraphicsItem {
 
 func DeleteQGraphicsItem(this *QGraphicsItem) {
 	rv, err := qtrt.Qtcc1(0, "_ZN13QGraphicsItemD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

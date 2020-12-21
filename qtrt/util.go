@@ -7,6 +7,7 @@ import (
 )
 
 var ErrPrint = miscutil.ErrPrint
+var ErrPrint2 = miscutil.ErrPrint2
 var NilPrint = miscutil.NilPrint
 var FileExist = miscutil.FileExist
 

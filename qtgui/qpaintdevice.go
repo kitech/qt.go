@@ -46,6 +46,7 @@ func (ptr *QPaintDevice) QPaintDevice_PTR() *QPaintDevice { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QPaintDeviceFromptr(cthis Voidptr) *QPaintDevice {
 	return &QPaintDevice{&qtrt.CObject{cthis}}
 }
@@ -61,8 +62,9 @@ func (*QPaintDevice) Fromptr(cthis Voidptr) *QPaintDevice {
 /*
  */
 func (this *QPaintDevice) DevType() int {
-	rv, err := qtrt.Qtcc1(2740044500, "_ZNK12QPaintDevice7devTypeEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2740044500, "_ZNK12QPaintDevice7devTypeEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -74,8 +76,9 @@ func (this *QPaintDevice) DevType() int {
 /*
  */
 func (this *QPaintDevice) PaintingActive() bool {
-	rv, err := qtrt.Qtcc1(4098809866, "_ZNK12QPaintDevice14paintingActiveEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4098809866, "_ZNK12QPaintDevice14paintingActiveEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return rv != 0
 }
 
@@ -87,8 +90,9 @@ func (this *QPaintDevice) PaintingActive() bool {
 /*
  */
 func (this *QPaintDevice) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
-	rv, err := qtrt.Qtcc1(1815356186, "_ZNK12QPaintDevice11paintEngineEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1815356186, "_ZNK12QPaintDevice11paintEngineEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return /*==*/ QPaintEngineFromptr(Voidptr(uintptr(rv))) // 444
 }
 
@@ -100,8 +104,9 @@ func (this *QPaintDevice) PaintEngine() *QPaintEngine /*777 QPaintEngine **/ {
 /*
  */
 func (this *QPaintDevice) Width() int {
-	rv, err := qtrt.Qtcc1(4251465228, "_ZNK12QPaintDevice5widthEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4251465228, "_ZNK12QPaintDevice5widthEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -113,8 +118,9 @@ func (this *QPaintDevice) Width() int {
 /*
  */
 func (this *QPaintDevice) Height() int {
-	rv, err := qtrt.Qtcc1(1938128564, "_ZNK12QPaintDevice6heightEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1938128564, "_ZNK12QPaintDevice6heightEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -126,8 +132,9 @@ func (this *QPaintDevice) Height() int {
 /*
  */
 func (this *QPaintDevice) WidthMM() int {
-	rv, err := qtrt.Qtcc1(4290881768, "_ZNK12QPaintDevice7widthMMEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4290881768, "_ZNK12QPaintDevice7widthMMEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -139,8 +146,9 @@ func (this *QPaintDevice) WidthMM() int {
 /*
  */
 func (this *QPaintDevice) HeightMM() int {
-	rv, err := qtrt.Qtcc1(4250480684, "_ZNK12QPaintDevice8heightMMEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4250480684, "_ZNK12QPaintDevice8heightMMEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -152,8 +160,9 @@ func (this *QPaintDevice) HeightMM() int {
 /*
  */
 func (this *QPaintDevice) LogicalDpiX() int {
-	rv, err := qtrt.Qtcc1(1690059126, "_ZNK12QPaintDevice11logicalDpiXEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1690059126, "_ZNK12QPaintDevice11logicalDpiXEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -165,8 +174,9 @@ func (this *QPaintDevice) LogicalDpiX() int {
 /*
  */
 func (this *QPaintDevice) LogicalDpiY() int {
-	rv, err := qtrt.Qtcc1(1702767425, "_ZNK12QPaintDevice11logicalDpiYEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1702767425, "_ZNK12QPaintDevice11logicalDpiYEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -178,8 +188,9 @@ func (this *QPaintDevice) LogicalDpiY() int {
 /*
  */
 func (this *QPaintDevice) PhysicalDpiX() int {
-	rv, err := qtrt.Qtcc1(1606783227, "_ZNK12QPaintDevice12physicalDpiXEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1606783227, "_ZNK12QPaintDevice12physicalDpiXEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -191,8 +202,9 @@ func (this *QPaintDevice) PhysicalDpiX() int {
 /*
  */
 func (this *QPaintDevice) PhysicalDpiY() int {
-	rv, err := qtrt.Qtcc1(1577581260, "_ZNK12QPaintDevice12physicalDpiYEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1577581260, "_ZNK12QPaintDevice12physicalDpiYEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -204,8 +216,9 @@ func (this *QPaintDevice) PhysicalDpiY() int {
 /*
  */
 func (this *QPaintDevice) DevicePixelRatio() int {
-	rv, err := qtrt.Qtcc1(2416087545, "_ZNK12QPaintDevice16devicePixelRatioEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2416087545, "_ZNK12QPaintDevice16devicePixelRatioEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -217,8 +230,9 @@ func (this *QPaintDevice) DevicePixelRatio() int {
 /*
  */
 func (this *QPaintDevice) DevicePixelRatioF() float64 {
-	rv, err := qtrt.Qtcc1(1021285250, "_ZNK12QPaintDevice17devicePixelRatioFEv", qtrt.FFI_TYPE_DOUBLE, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1021285250, "_ZNK12QPaintDevice17devicePixelRatioFEv", qtrt.FFITO_DOUBLE,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 
@@ -230,8 +244,9 @@ func (this *QPaintDevice) DevicePixelRatioF() float64 {
 /*
  */
 func (this *QPaintDevice) ColorCount() int {
-	rv, err := qtrt.Qtcc1(3927565789, "_ZNK12QPaintDevice10colorCountEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3927565789, "_ZNK12QPaintDevice10colorCountEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -243,8 +258,9 @@ func (this *QPaintDevice) ColorCount() int {
 /*
  */
 func (this *QPaintDevice) Depth() int {
-	rv, err := qtrt.Qtcc1(1241268582, "_ZNK12QPaintDevice5depthEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1241268582, "_ZNK12QPaintDevice5depthEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -256,8 +272,8 @@ func (this *QPaintDevice) Depth() int {
 /*
  */
 func (this *QPaintDevice) DevicePixelRatioFScale() float64 {
-	rv, err := qtrt.Qtcc1(3846552345, "_ZN12QPaintDevice22devicePixelRatioFScaleEv", qtrt.FFITY_POINTER)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3846552345, "_ZN12QPaintDevice22devicePixelRatioFScaleEv", qtrt.FFITO_POINTER)
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("float64", rv).(float64) // 1111
 }
 func QPaintDevice_DevicePixelRatioFScale() float64 {
@@ -268,7 +284,7 @@ func QPaintDevice_DevicePixelRatioFScale() float64 {
 
 func DeleteQPaintDevice(this *QPaintDevice) {
 	rv, err := qtrt.Qtcc1(0, "_ZN12QPaintDeviceD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

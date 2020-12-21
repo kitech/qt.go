@@ -58,6 +58,13 @@ func (this *QWindow) SetCthis(cthis Voidptr) {
 	this.QObject = qtcore.QObjectFromptr(cthis)
 	this.QSurface = QSurfaceFromptr(cthis)
 }
+func (this *QWindow) Addr() Voidptr {
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.Addr()
+	}
+}
 func QWindowFromptr(cthis Voidptr) *QWindow {
 	bcthis0 := qtcore.QObjectFromptr(cthis)
 	bcthis1 := QSurfaceFromptr(cthis)
@@ -69,7 +76,7 @@ func (*QWindow) Fromptr(cthis Voidptr) *QWindow {
 
 func DeleteQWindow(this *QWindow) {
 	rv, err := qtrt.Qtcc1(0, "_ZN7QWindowD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

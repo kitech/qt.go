@@ -18,7 +18,7 @@ package qtwidgets
 
 /*
 #include <stdlib.h>
-// extern C begin: 6
+// extern C begin: 5
 */
 // import "C"
 import "unsafe"
@@ -47,6 +47,7 @@ func (ptr *QLayoutItem) QLayoutItem_PTR() *QLayoutItem { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QLayoutItemFromptr(cthis Voidptr) *QLayoutItem {
 	return &QLayoutItem{&qtrt.CObject{cthis}}
 }
@@ -56,7 +57,7 @@ func (*QLayoutItem) Fromptr(cthis Voidptr) *QLayoutItem {
 
 func DeleteQLayoutItem(this *QLayoutItem) {
 	rv, err := qtrt.Qtcc1(0, "_ZN11QLayoutItemD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

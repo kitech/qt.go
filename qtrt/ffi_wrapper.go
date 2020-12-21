@@ -1,5 +1,9 @@
 package qtrt
 
+/*
+#include <stdint.h>
+*/
+import "C"
 import (
 	dl "github.com/kitech/dl/dl2"
 )
@@ -33,3 +37,5 @@ func (lib FFILibrary) Symbol(fctname string) (Voidptr, error) {
 	addr := Voidptr(sym)
 	return addr, nil
 }
+
+///

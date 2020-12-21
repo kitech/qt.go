@@ -49,8 +49,9 @@ func (this *QSystemTrayIcon) SetContextMenu(menu QMenu_ITF /*777 QMenu **/) {
 	if menu != nil && menu.QMenu_PTR() != nil {
 		convArg0 = menu.QMenu_PTR().GetCthis()
 	}
-	rv, err := qtrt.Qtcc1(2313850013, "_ZN15QSystemTrayIcon14setContextMenuEP5QMenu", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2313850013, "_ZN15QSystemTrayIcon14setContextMenuEP5QMenu", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qsystemtrayicon.h:83
@@ -61,8 +62,9 @@ func (this *QSystemTrayIcon) SetContextMenu(menu QMenu_ITF /*777 QMenu **/) {
 /*
  */
 func (this *QSystemTrayIcon) ContextMenu() *QMenu /*777 QMenu **/ {
-	rv, err := qtrt.Qtcc1(1821247260, "_ZNK15QSystemTrayIcon11contextMenuEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1821247260, "_ZNK15QSystemTrayIcon11contextMenuEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return /*==*/ QMenuFromptr(Voidptr(uintptr(rv))) // 444
 }
 

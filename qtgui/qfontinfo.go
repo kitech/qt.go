@@ -46,6 +46,7 @@ func (ptr *QFontInfo) QFontInfo_PTR() *QFontInfo { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QFontInfoFromptr(cthis Voidptr) *QFontInfo {
 	return &QFontInfo{&qtrt.CObject{cthis}}
 }
@@ -55,7 +56,7 @@ func (*QFontInfo) Fromptr(cthis Voidptr) *QFontInfo {
 
 func DeleteQFontInfo(this *QFontInfo) {
 	rv, err := qtrt.Qtcc1(0, "_ZN9QFontInfoD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

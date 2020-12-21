@@ -47,6 +47,7 @@ func (ptr *QPersistentModelIndex) QPersistentModelIndex_PTR() *QPersistentModelI
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QPersistentModelIndexFromptr(cthis Voidptr) *QPersistentModelIndex {
 	return &QPersistentModelIndex{&qtrt.CObject{cthis}}
 }
@@ -66,8 +67,9 @@ func (*QPersistentModelIndex) NewForInherit() *QPersistentModelIndex {
 }
 func NewQPersistentModelIndex() *QPersistentModelIndex {
 	cthis := qtrt.Malloc(8)
-	rv, err := qtrt.Qtcc1(4053232108, "_ZN21QPersistentModelIndexC2Ev", qtrt.FFITY_POINTER, cthis)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4053232108, "_ZN21QPersistentModelIndexC2Ev", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, Voidptr(&cthis))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QPersistentModelIndexFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQPersistentModelIndex)
 	return gothis
@@ -75,7 +77,7 @@ func NewQPersistentModelIndex() *QPersistentModelIndex {
 
 func DeleteQPersistentModelIndex(this *QPersistentModelIndex) {
 	rv, err := qtrt.Qtcc1(0, "_ZN21QPersistentModelIndexD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

@@ -50,6 +50,7 @@ func (ptr *QButtonGroup) QButtonGroup_PTR() *QButtonGroup { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QButtonGroupFromptr(cthis Voidptr) *QButtonGroup {
 	bcthis0 := qtcore.QObjectFromptr(cthis)
 	return &QButtonGroup{bcthis0}
@@ -60,7 +61,7 @@ func (*QButtonGroup) Fromptr(cthis Voidptr) *QButtonGroup {
 
 func DeleteQButtonGroup(this *QButtonGroup) {
 	rv, err := qtrt.Qtcc1(0, "_ZN12QButtonGroupD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

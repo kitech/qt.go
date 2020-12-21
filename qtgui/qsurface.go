@@ -46,6 +46,7 @@ func (ptr *QSurface) QSurface_PTR() *QSurface { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QSurfaceFromptr(cthis Voidptr) *QSurface {
 	return &QSurface{&qtrt.CObject{cthis}}
 }
@@ -55,7 +56,7 @@ func (*QSurface) Fromptr(cthis Voidptr) *QSurface {
 
 func DeleteQSurface(this *QSurface) {
 	rv, err := qtrt.Qtcc1(0, "_ZN8QSurfaceD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

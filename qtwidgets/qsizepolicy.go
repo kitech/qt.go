@@ -47,6 +47,7 @@ func (ptr *QSizePolicy) QSizePolicy_PTR() *QSizePolicy { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QSizePolicyFromptr(cthis Voidptr) *QSizePolicy {
 	return &QSizePolicy{&qtrt.CObject{cthis}}
 }
@@ -56,7 +57,7 @@ func (*QSizePolicy) Fromptr(cthis Voidptr) *QSizePolicy {
 
 func DeleteQSizePolicy(this *QSizePolicy) {
 	rv, err := qtrt.Qtcc1(0, "_ZN11QSizePolicyD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

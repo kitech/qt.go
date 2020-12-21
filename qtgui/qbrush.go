@@ -46,6 +46,7 @@ func (ptr *QBrush) QBrush_PTR() *QBrush { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QBrushFromptr(cthis Voidptr) *QBrush {
 	return &QBrush{&qtrt.CObject{cthis}}
 }
@@ -65,8 +66,9 @@ func (*QBrush) NewForInherit() *QBrush {
 }
 func NewQBrush() *QBrush {
 	cthis := qtrt.Malloc(8)
-	rv, err := qtrt.Qtcc1(3258578779, "_ZN6QBrushC2Ev", qtrt.FFITY_POINTER, cthis)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3258578779, "_ZN6QBrushC2Ev", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, Voidptr(&cthis))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QBrushFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQBrush)
 	return gothis
@@ -74,7 +76,7 @@ func NewQBrush() *QBrush {
 
 func DeleteQBrush(this *QBrush) {
 	rv, err := qtrt.Qtcc1(0, "_ZN6QBrushD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

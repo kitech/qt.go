@@ -45,6 +45,7 @@ func (ptr *QRect) QRect_PTR() *QRect { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QRectFromptr(cthis Voidptr) *QRect {
 	return &QRect{&qtrt.CObject{cthis}}
 }
@@ -54,7 +55,7 @@ func (*QRect) Fromptr(cthis Voidptr) *QRect {
 
 func DeleteQRect(this *QRect) {
 	rv, err := qtrt.Qtcc1(0, "_ZN5QRectD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

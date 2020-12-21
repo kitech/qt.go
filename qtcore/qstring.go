@@ -45,6 +45,7 @@ func (ptr *QString) QString_PTR() *QString { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QStringFromptr(cthis Voidptr) *QString {
 	return &QString{&qtrt.CObject{cthis}}
 }
@@ -60,8 +61,9 @@ func (*QString) Fromptr(cthis Voidptr) *QString {
 /*
  */
 func (this *QString) Length() int {
-	rv, err := qtrt.Qtcc1(1867525835, "_ZNK7QString6lengthEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1867525835, "_ZNK7QString6lengthEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -74,8 +76,9 @@ func (this *QString) Length() int {
  */
 func (this *QString) ToUtf8() *QByteArray /*123*/ {
 	sretobj := qtrt.Malloc(8) // QByteArray
-	rv, err := qtrt.Qtcc1(637795128, "_ZNKR7QString6toUtf8Ev", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(637795128, "_ZNKR7QString6toUtf8Ev", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := /*==*/ QByteArrayFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
@@ -92,8 +95,9 @@ func (this *QString) ToUtf8() *QByteArray /*123*/ {
 func (this *QString) FromUtf8(str string, size int) string {
 	var convArg0 = qtrt.CStringRef(&str)
 	sretobj := qtrt.Malloc(8) // QString
-	rv, err := qtrt.Qtcc1(2549669065, "_ZN7QString8fromUtf8EPKci", qtrt.FFITY_POINTER, sretobj, convArg0, size)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2549669065, "_ZN7QString8fromUtf8EPKci", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, Voidptr(&sretobj), Voidptr(&convArg0), Voidptr(&size))
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := /*==*/ QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
@@ -118,8 +122,9 @@ func (this *QString) FromUtf8p(str string) string {
 	// arg: 1, int=Int, =Invalid, , Invalid
 	size := int(-1)
 	sretobj := qtrt.Malloc(8) // QString
-	rv, err := qtrt.Qtcc1(2549669065, "_ZN7QString8fromUtf8EPKci", qtrt.FFITY_POINTER, sretobj, convArg0, size)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2549669065, "_ZN7QString8fromUtf8EPKci", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, Voidptr(&sretobj), Voidptr(&convArg0), Voidptr(&size))
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := /*==*/ QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
@@ -140,8 +145,9 @@ func (*QString) NewForInherit(ch string) *QString {
 func NewQString(ch string) *QString {
 	var convArg0 = qtrt.CStringRef(&ch)
 	cthis := qtrt.Malloc(8)
-	rv, err := qtrt.Qtcc1(2640353187, "_ZN7QStringC2EPKc", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2640353187, "_ZN7QStringC2EPKc", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QStringFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQString)
 	return gothis
@@ -149,7 +155,7 @@ func NewQString(ch string) *QString {
 
 func DeleteQString(this *QString) {
 	rv, err := qtrt.Qtcc1(0, "_ZN7QStringD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

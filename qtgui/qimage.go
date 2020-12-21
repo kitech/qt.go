@@ -47,6 +47,7 @@ func (ptr *QImage) QImage_PTR() *QImage { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QImageFromptr(cthis Voidptr) *QImage {
 	bcthis0 := QPaintDeviceFromptr(cthis)
 	return &QImage{bcthis0}
@@ -67,8 +68,9 @@ func (*QImage) NewForInherit() *QImage {
 }
 func NewQImage() *QImage {
 	cthis := qtrt.Malloc(32)
-	rv, err := qtrt.Qtcc1(380729056, "_ZN6QImageC2Ev", qtrt.FFITY_POINTER, cthis)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(380729056, "_ZN6QImageC2Ev", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, Voidptr(&cthis))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QImageFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQImage)
 	return gothis
@@ -90,8 +92,9 @@ func NewQImage1(size qtcore.QSize_ITF, format int) *QImage {
 		convArg0 = size.QSize_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(32)
-	rv, err := qtrt.Qtcc1(2386780666, "_ZN6QImageC2ERK5QSizeNS_6FormatE", qtrt.FFITY_POINTER, cthis, convArg0, format)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2386780666, "_ZN6QImageC2ERK5QSizeNS_6FormatE", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&format))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QImageFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQImage)
 	return gothis
@@ -109,8 +112,9 @@ func (*QImage) NewForInherit2(width int, height int, format int) *QImage {
 }
 func NewQImage2(width int, height int, format int) *QImage {
 	cthis := qtrt.Malloc(32)
-	rv, err := qtrt.Qtcc1(355905797, "_ZN6QImageC2EiiNS_6FormatE", qtrt.FFITY_POINTER, cthis, width, height, format)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(355905797, "_ZN6QImageC2EiiNS_6FormatE", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&width), Voidptr(&height), Voidptr(&format))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QImageFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQImage)
 	return gothis
@@ -118,7 +122,7 @@ func NewQImage2(width int, height int, format int) *QImage {
 
 func DeleteQImage(this *QImage) {
 	rv, err := qtrt.Qtcc1(0, "_ZN6QImageD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

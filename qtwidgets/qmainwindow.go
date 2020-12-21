@@ -50,6 +50,7 @@ func (ptr *QMainWindow) QMainWindow_PTR() *QMainWindow { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QMainWindowFromptr(cthis Voidptr) *QMainWindow {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QMainWindow{bcthis0}
@@ -74,8 +75,9 @@ func NewQMainWindow(parent QWidget_ITF /*777 QWidget **/, flags int) *QMainWindo
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(1132463102, "_ZN11QMainWindowC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFITY_POINTER, cthis, convArg0, flags)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1132463102, "_ZN11QMainWindowC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&flags))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QMainWindowFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QMainWindow")
 	return gothis
@@ -97,8 +99,9 @@ func NewQMainWindowp() *QMainWindow {
 	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(1132463102, "_ZN11QMainWindowC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFITY_POINTER, cthis, convArg0, flags)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1132463102, "_ZN11QMainWindowC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&flags))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QMainWindowFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QMainWindow")
 	return gothis
@@ -122,8 +125,9 @@ func NewQMainWindowp1(parent QWidget_ITF /*777 QWidget **/) *QMainWindow {
 	// arg: 1, Qt::WindowFlags=Elaborated, Qt::WindowFlags=Typedef, QFlags<Qt::WindowType>, Unexposed
 	flags := 0
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(1132463102, "_ZN11QMainWindowC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFITY_POINTER, cthis, convArg0, flags)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1132463102, "_ZN11QMainWindowC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&flags))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QMainWindowFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QMainWindow")
 	return gothis
@@ -137,8 +141,9 @@ func NewQMainWindowp1(parent QWidget_ITF /*777 QWidget **/) *QMainWindow {
 /*
  */
 func (this *QMainWindow) IconSize() *qtcore.QSize /*123*/ {
-	rv, err := qtrt.Qtcc1(69313091, "_ZNK11QMainWindow8iconSizeEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(69313091, "_ZNK11QMainWindow8iconSizeEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -156,8 +161,9 @@ func (this *QMainWindow) SetIconSize(iconSize qtcore.QSize_ITF) {
 	if iconSize != nil && iconSize.QSize_PTR() != nil {
 		convArg0 = iconSize.QSize_PTR().GetCthis()
 	}
-	rv, err := qtrt.Qtcc1(4268406733, "_ZN11QMainWindow11setIconSizeERK5QSize", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4268406733, "_ZN11QMainWindow11setIconSizeERK5QSize", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmainwindow.h:138
@@ -168,8 +174,9 @@ func (this *QMainWindow) SetIconSize(iconSize qtcore.QSize_ITF) {
 /*
  */
 func (this *QMainWindow) CentralWidget() *QWidget /*777 QWidget **/ {
-	rv, err := qtrt.Qtcc1(1283551286, "_ZNK11QMainWindow13centralWidgetEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1283551286, "_ZNK11QMainWindow13centralWidgetEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return /*==*/ QWidgetFromptr(Voidptr(uintptr(rv))) // 444
 }
 
@@ -185,13 +192,14 @@ func (this *QMainWindow) SetCentralWidget(widget QWidget_ITF /*777 QWidget **/) 
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
-	rv, err := qtrt.Qtcc1(422271864, "_ZN11QMainWindow16setCentralWidgetEP7QWidget", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(422271864, "_ZN11QMainWindow16setCentralWidgetEP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 func DeleteQMainWindow(this *QMainWindow) {
 	rv, err := qtrt.Qtcc1(0, "_ZN11QMainWindowD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

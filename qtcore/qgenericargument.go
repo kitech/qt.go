@@ -45,6 +45,7 @@ func (ptr *QGenericArgument) QGenericArgument_PTR() *QGenericArgument { return p
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QGenericArgumentFromptr(cthis Voidptr) *QGenericArgument {
 	return &QGenericArgument{&qtrt.CObject{cthis}}
 }
@@ -54,7 +55,7 @@ func (*QGenericArgument) Fromptr(cthis Voidptr) *QGenericArgument {
 
 func DeleteQGenericArgument(this *QGenericArgument) {
 	rv, err := qtrt.Qtcc1(0, "_ZN16QGenericArgumentD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

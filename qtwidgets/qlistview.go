@@ -50,6 +50,7 @@ func (ptr *QListView) QListView_PTR() *QListView { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QListViewFromptr(cthis Voidptr) *QListView {
 	bcthis0 := QAbstractItemViewFromptr(cthis)
 	return &QListView{bcthis0}
@@ -74,8 +75,9 @@ func NewQListView(parent QWidget_ITF /*777 QWidget **/) *QListView {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(4267936992, "_ZN9QListViewC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4267936992, "_ZN9QListViewC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QListViewFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QListView")
 	return gothis
@@ -95,8 +97,9 @@ func NewQListViewp() *QListView {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(4267936992, "_ZN9QListViewC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4267936992, "_ZN9QListViewC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QListViewFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QListView")
 	return gothis
@@ -104,7 +107,7 @@ func NewQListViewp() *QListView {
 
 func DeleteQListView(this *QListView) {
 	rv, err := qtrt.Qtcc1(0, "_ZN9QListViewD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

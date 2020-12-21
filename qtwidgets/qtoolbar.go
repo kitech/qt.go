@@ -50,6 +50,7 @@ func (ptr *QToolBar) QToolBar_PTR() *QToolBar { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QToolBarFromptr(cthis Voidptr) *QToolBar {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QToolBar{bcthis0}
@@ -76,8 +77,9 @@ func NewQToolBar(title string, parent QWidget_ITF /*777 QWidget **/) *QToolBar {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(115476381, "_ZN8QToolBarC2ERK7QStringP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(115476381, "_ZN8QToolBarC2ERK7QStringP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QToolBarFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QToolBar")
 	return gothis
@@ -99,8 +101,9 @@ func NewQToolBarp(title string) *QToolBar {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 Voidptr
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(115476381, "_ZN8QToolBarC2ERK7QStringP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(115476381, "_ZN8QToolBarC2ERK7QStringP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QToolBarFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QToolBar")
 	return gothis
@@ -122,8 +125,9 @@ func NewQToolBar1(parent QWidget_ITF /*777 QWidget **/) *QToolBar {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(2552095711, "_ZN8QToolBarC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2552095711, "_ZN8QToolBarC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QToolBarFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QToolBar")
 	return gothis
@@ -143,8 +147,9 @@ func NewQToolBar1p() *QToolBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(2552095711, "_ZN8QToolBarC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2552095711, "_ZN8QToolBarC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QToolBarFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QToolBar")
 	return gothis
@@ -158,8 +163,9 @@ func NewQToolBar1p() *QToolBar {
 /*
  */
 func (this *QToolBar) SetMovable(movable bool) {
-	rv, err := qtrt.Qtcc1(2579160314, "_ZN8QToolBar10setMovableEb", qtrt.FFITY_POINTER, this.GetCthis(), movable)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2579160314, "_ZN8QToolBar10setMovableEb", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&movable))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtoolbar.h:77
@@ -170,14 +176,15 @@ func (this *QToolBar) SetMovable(movable bool) {
 /*
  */
 func (this *QToolBar) IsMovable() bool {
-	rv, err := qtrt.Qtcc1(1223047420, "_ZNK8QToolBar9isMovableEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1223047420, "_ZNK8QToolBar9isMovableEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return rv != 0
 }
 
 func DeleteQToolBar(this *QToolBar) {
 	rv, err := qtrt.Qtcc1(0, "_ZN8QToolBarD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

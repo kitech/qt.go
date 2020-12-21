@@ -46,6 +46,7 @@ func (ptr *QCoreApplication) QCoreApplication_PTR() *QCoreApplication { return p
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QCoreApplicationFromptr(cthis Voidptr) *QCoreApplication {
 	bcthis0 := QObjectFromptr(cthis)
 	return &QCoreApplication{bcthis0}
@@ -66,8 +67,9 @@ func (this *QCoreApplication) Translate(context string, key string, disambiguati
 	var convArg1 = qtrt.CStringRef(&key)
 	var convArg2 = qtrt.CStringRef(&disambiguation)
 	sretobj := qtrt.Malloc(8) // QString
-	rv, err := qtrt.Qtcc1(2590451099, "_ZN16QCoreApplication9translateEPKcS1_S1_i", qtrt.FFITY_POINTER, sretobj, convArg0, convArg1, convArg2, n)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2590451099, "_ZN16QCoreApplication9translateEPKcS1_S1_i", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, Voidptr(&sretobj), Voidptr(&convArg0), Voidptr(&convArg1), Voidptr(&convArg2), Voidptr(&n))
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := /*==*/ QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
@@ -95,8 +97,9 @@ func (this *QCoreApplication) Translatep(context string, key string) string {
 	// arg: 3, int=Int, =Invalid, , Invalid
 	n := int(-1)
 	sretobj := qtrt.Malloc(8) // QString
-	rv, err := qtrt.Qtcc1(2590451099, "_ZN16QCoreApplication9translateEPKcS1_S1_i", qtrt.FFITY_POINTER, sretobj, convArg0, convArg1, convArg2, n)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2590451099, "_ZN16QCoreApplication9translateEPKcS1_S1_i", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, Voidptr(&sretobj), Voidptr(&convArg0), Voidptr(&convArg1), Voidptr(&convArg2), Voidptr(&n))
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := /*==*/ QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
@@ -118,8 +121,9 @@ func (this *QCoreApplication) Translatep1(context string, key string, disambigua
 	// arg: 3, int=Int, =Invalid, , Invalid
 	n := int(-1)
 	sretobj := qtrt.Malloc(8) // QString
-	rv, err := qtrt.Qtcc1(2590451099, "_ZN16QCoreApplication9translateEPKcS1_S1_i", qtrt.FFITY_POINTER, sretobj, convArg0, convArg1, convArg2, n)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2590451099, "_ZN16QCoreApplication9translateEPKcS1_S1_i", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, Voidptr(&sretobj), Voidptr(&convArg0), Voidptr(&convArg1), Voidptr(&convArg2), Voidptr(&n))
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := /*==*/ QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
@@ -129,7 +133,7 @@ func (this *QCoreApplication) Translatep1(context string, key string, disambigua
 
 func DeleteQCoreApplication(this *QCoreApplication) {
 	rv, err := qtrt.Qtcc1(0, "_ZN16QCoreApplicationD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

@@ -47,6 +47,7 @@ func (ptr *QPixmap) QPixmap_PTR() *QPixmap { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QPixmapFromptr(cthis Voidptr) *QPixmap {
 	bcthis0 := QPaintDeviceFromptr(cthis)
 	return &QPixmap{bcthis0}
@@ -67,8 +68,9 @@ func (*QPixmap) NewForInherit() *QPixmap {
 }
 func NewQPixmap() *QPixmap {
 	cthis := qtrt.Malloc(32)
-	rv, err := qtrt.Qtcc1(440989401, "_ZN7QPixmapC2Ev", qtrt.FFITY_POINTER, cthis)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(440989401, "_ZN7QPixmapC2Ev", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, Voidptr(&cthis))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QPixmapFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQPixmap)
 	return gothis
@@ -76,7 +78,7 @@ func NewQPixmap() *QPixmap {
 
 func DeleteQPixmap(this *QPixmap) {
 	rv, err := qtrt.Qtcc1(0, "_ZN7QPixmapD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

@@ -50,6 +50,7 @@ func (ptr *QMenu) QMenu_PTR() *QMenu { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QMenuFromptr(cthis Voidptr) *QMenu {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QMenu{bcthis0}
@@ -74,8 +75,9 @@ func NewQMenu(parent QWidget_ITF /*777 QWidget **/) *QMenu {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(32748694, "_ZN5QMenuC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(32748694, "_ZN5QMenuC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QMenuFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QMenu")
 	return gothis
@@ -95,8 +97,9 @@ func NewQMenup() *QMenu {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(32748694, "_ZN5QMenuC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(32748694, "_ZN5QMenuC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QMenuFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QMenu")
 	return gothis
@@ -120,8 +123,9 @@ func NewQMenu1(title string, parent QWidget_ITF /*777 QWidget **/) *QMenu {
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(2658403316, "_ZN5QMenuC2ERK7QStringP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2658403316, "_ZN5QMenuC2ERK7QStringP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QMenuFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QMenu")
 	return gothis
@@ -143,8 +147,9 @@ func NewQMenu1p(title string) *QMenu {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 Voidptr
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(2658403316, "_ZN5QMenuC2ERK7QStringP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2658403316, "_ZN5QMenuC2ERK7QStringP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QMenuFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QMenu")
 	return gothis
@@ -160,8 +165,9 @@ func NewQMenu1p(title string) *QMenu {
 func (this *QMenu) AddAction(text string) *QAction /*777 QAction **/ {
 	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.Qtcc1(1698034204, "_ZN5QMenu9addActionERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1698034204, "_ZN5QMenu9addActionERK7QString", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	return /*==*/ QActionFromptr(Voidptr(uintptr(rv))) // 444
 }
 
@@ -177,8 +183,9 @@ func (this *QMenu) AddMenu(menu QMenu_ITF /*777 QMenu **/) *QAction /*777 QActio
 	if menu != nil && menu.QMenu_PTR() != nil {
 		convArg0 = menu.QMenu_PTR().GetCthis()
 	}
-	rv, err := qtrt.Qtcc1(4017241996, "_ZN5QMenu7addMenuEPS_", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4017241996, "_ZN5QMenu7addMenuEPS_", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	return /*==*/ QActionFromptr(Voidptr(uintptr(rv))) // 444
 }
 
@@ -192,8 +199,9 @@ func (this *QMenu) AddMenu(menu QMenu_ITF /*777 QMenu **/) *QAction /*777 QActio
 func (this *QMenu) AddMenu1(title string) *QMenu /*777 QMenu **/ {
 	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.Qtcc1(2540271396, "_ZN5QMenu7addMenuERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2540271396, "_ZN5QMenu7addMenuERK7QString", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	return /*==*/ QMenuFromptr(Voidptr(uintptr(rv))) // 444
 }
 
@@ -205,8 +213,9 @@ func (this *QMenu) AddMenu1(title string) *QMenu /*777 QMenu **/ {
 /*
  */
 func (this *QMenu) AddSeparator() *QAction /*777 QAction **/ {
-	rv, err := qtrt.Qtcc1(3779268459, "_ZN5QMenu12addSeparatorEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3779268459, "_ZN5QMenu12addSeparatorEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return /*==*/ QActionFromptr(Voidptr(uintptr(rv))) // 444
 }
 
@@ -218,8 +227,9 @@ func (this *QMenu) AddSeparator() *QAction /*777 QAction **/ {
 /*
  */
 func (this *QMenu) IsEmpty() bool {
-	rv, err := qtrt.Qtcc1(1363387044, "_ZNK5QMenu7isEmptyEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1363387044, "_ZNK5QMenu7isEmptyEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return rv != 0
 }
 
@@ -231,8 +241,9 @@ func (this *QMenu) IsEmpty() bool {
 /*
  */
 func (this *QMenu) Clear() {
-	rv, err := qtrt.Qtcc1(3862211293, "_ZN5QMenu5clearEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3862211293, "_ZN5QMenu5clearEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:200
@@ -244,8 +255,9 @@ func (this *QMenu) Clear() {
  */
 func (this *QMenu) Title() string {
 	sretobj := qtrt.Malloc(8) // QString
-	rv, err := qtrt.Qtcc1(2610552010, "_ZNK5QMenu5titleEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2610552010, "_ZNK5QMenu5titleEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
@@ -263,8 +275,9 @@ func (this *QMenu) Title() string {
 func (this *QMenu) SetTitle(title string) {
 	var tmpArg0 = qtcore.NewQString5(title)
 	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.Qtcc1(841200333, "_ZN5QMenu8setTitleERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(841200333, "_ZN5QMenu8setTitleERK7QString", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:222
@@ -275,8 +288,9 @@ func (this *QMenu) SetTitle(title string) {
 /*
  */
 func (this *QMenu) AboutToShow() {
-	rv, err := qtrt.Qtcc1(1566663078, "_ZN5QMenu11aboutToShowEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1566663078, "_ZN5QMenu11aboutToShowEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:223
@@ -287,8 +301,9 @@ func (this *QMenu) AboutToShow() {
 /*
  */
 func (this *QMenu) AboutToHide() {
-	rv, err := qtrt.Qtcc1(3249752657, "_ZN5QMenu11aboutToHideEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3249752657, "_ZN5QMenu11aboutToHideEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:224
@@ -303,8 +318,9 @@ func (this *QMenu) Triggered(action QAction_ITF /*777 QAction **/) {
 	if action != nil && action.QAction_PTR() != nil {
 		convArg0 = action.QAction_PTR().GetCthis()
 	}
-	rv, err := qtrt.Qtcc1(576772310, "_ZN5QMenu9triggeredEP7QAction", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(576772310, "_ZN5QMenu9triggeredEP7QAction", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmenu.h:225
@@ -319,13 +335,14 @@ func (this *QMenu) Hovered(action QAction_ITF /*777 QAction **/) {
 	if action != nil && action.QAction_PTR() != nil {
 		convArg0 = action.QAction_PTR().GetCthis()
 	}
-	rv, err := qtrt.Qtcc1(2472517649, "_ZN5QMenu7hoveredEP7QAction", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2472517649, "_ZN5QMenu7hoveredEP7QAction", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 func DeleteQMenu(this *QMenu) {
 	rv, err := qtrt.Qtcc1(0, "_ZN5QMenuD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

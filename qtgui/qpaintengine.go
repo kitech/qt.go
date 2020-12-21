@@ -46,6 +46,7 @@ func (ptr *QPaintEngine) QPaintEngine_PTR() *QPaintEngine { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QPaintEngineFromptr(cthis Voidptr) *QPaintEngine {
 	return &QPaintEngine{&qtrt.CObject{cthis}}
 }
@@ -55,7 +56,7 @@ func (*QPaintEngine) Fromptr(cthis Voidptr) *QPaintEngine {
 
 func DeleteQPaintEngine(this *QPaintEngine) {
 	rv, err := qtrt.Qtcc1(0, "_ZN12QPaintEngineD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

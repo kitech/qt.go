@@ -48,54 +48,13 @@ func (ptr *QApplication) QApplication_PTR() *QApplication { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QApplicationFromptr(cthis Voidptr) *QApplication {
 	bcthis0 := qtgui.QGuiApplicationFromptr(cthis)
 	return &QApplication{bcthis0}
 }
 func (*QApplication) Fromptr(cthis Voidptr) *QApplication {
 	return QApplicationFromptr(cthis)
-}
-
-// /usr/include/qt/QtWidgets/qapplication.h:96
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void QApplication(int &, char **, int)
-
-/*
- */
-func (*QApplication) NewForInherit(argc int, argv []string, arg2 int) *QApplication {
-	return NewQApplication(argc, argv, arg2)
-}
-func NewQApplication(argc int, argv []string, arg2 int) *QApplication {
-	var convArg1 = qtrt.StringSliceToCCharPP(argv)
-	cthis := qtrt.Malloc(16)
-	rv, err := qtrt.Qtcc1(3158502489, "_ZN12QApplicationC2ERiPPci", qtrt.FFITY_POINTER, cthis, &argc, convArg1, arg2)
-	qtrt.ErrPrint(err, rv)
-	gothis := QApplicationFromptr(cthis)
-	qtrt.ConnectDestroyed(gothis, "QApplication")
-	return gothis
-}
-
-// /usr/include/qt/QtWidgets/qapplication.h:96
-// index:0
-// Public Visibility=Default Availability=Available
-// [-2] void QApplication(int &, char **, int)
-
-/*
- */
-func (*QApplication) NewForInheritp(argc int, argv []string) *QApplication {
-	return NewQApplicationp(argc, argv)
-}
-func NewQApplicationp(argc int, argv []string) *QApplication {
-	var convArg1 = qtrt.StringSliceToCCharPP(argv)
-	// arg: 2, int=Int, =Invalid, , Invalid
-	arg2 := 0
-	cthis := qtrt.Malloc(16)
-	rv, err := qtrt.Qtcc1(3158502489, "_ZN12QApplicationC2ERiPPci", qtrt.FFITY_POINTER, cthis, &argc, convArg1, arg2)
-	qtrt.ErrPrint(err, rv)
-	gothis := QApplicationFromptr(cthis)
-	qtrt.ConnectDestroyed(gothis, "QApplication")
-	return gothis
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:147
@@ -106,8 +65,8 @@ func NewQApplicationp(argc int, argv []string) *QApplication {
 /*
  */
 func (this *QApplication) Beep() {
-	rv, err := qtrt.Qtcc1(3241209511, "_ZN12QApplication4beepEv", qtrt.FFITY_POINTER)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3241209511, "_ZN12QApplication4beepEv", qtrt.FFITO_POINTER)
+	qtrt.ErrPrint2(err, rv)
 }
 func QApplication_Beep() {
 	var nilthis *QApplication
@@ -130,8 +89,9 @@ func (this *QApplication) FocusChanged(old QWidget_ITF /*777 QWidget **/, now QW
 	if now != nil && now.QWidget_PTR() != nil {
 		convArg1 = now.QWidget_PTR().GetCthis()
 	}
-	rv, err := qtrt.Qtcc1(299776149, "_ZN12QApplication12focusChangedEP7QWidgetS1_", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(299776149, "_ZN12QApplication12focusChangedEP7QWidgetS1_", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0), Voidptr(&convArg1))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:201
@@ -143,8 +103,9 @@ func (this *QApplication) FocusChanged(old QWidget_ITF /*777 QWidget **/, now QW
  */
 func (this *QApplication) StyleSheet() string {
 	sretobj := qtrt.Malloc(8) // QString
-	rv, err := qtrt.Qtcc1(306547508, "_ZNK12QApplication10styleSheetEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(306547508, "_ZNK12QApplication10styleSheetEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
@@ -162,8 +123,9 @@ func (this *QApplication) StyleSheet() string {
 func (this *QApplication) SetStyleSheet(sheet string) {
 	var tmpArg0 = qtcore.NewQString5(sheet)
 	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.Qtcc1(412095265, "_ZN12QApplication13setStyleSheetERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(412095265, "_ZN12QApplication13setStyleSheetERK7QString", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:209
@@ -174,8 +136,8 @@ func (this *QApplication) SetStyleSheet(sheet string) {
 /*
  */
 func (this *QApplication) AboutQt() {
-	rv, err := qtrt.Qtcc1(799315374, "_ZN12QApplication7aboutQtEv", qtrt.FFITY_POINTER)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(799315374, "_ZN12QApplication7aboutQtEv", qtrt.FFITO_POINTER)
+	qtrt.ErrPrint2(err, rv)
 }
 func QApplication_AboutQt() {
 	var nilthis *QApplication
@@ -184,7 +146,7 @@ func QApplication_AboutQt() {
 
 func DeleteQApplication(this *QApplication) {
 	rv, err := qtrt.Qtcc1(0, "_ZN12QApplicationD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

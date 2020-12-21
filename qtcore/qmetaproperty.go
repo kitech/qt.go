@@ -45,6 +45,7 @@ func (ptr *QMetaProperty) QMetaProperty_PTR() *QMetaProperty { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QMetaPropertyFromptr(cthis Voidptr) *QMetaProperty {
 	return &QMetaProperty{&qtrt.CObject{cthis}}
 }
@@ -54,7 +55,7 @@ func (*QMetaProperty) Fromptr(cthis Voidptr) *QMetaProperty {
 
 func DeleteQMetaProperty(this *QMetaProperty) {
 	rv, err := qtrt.Qtcc1(0, "_ZN13QMetaPropertyD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

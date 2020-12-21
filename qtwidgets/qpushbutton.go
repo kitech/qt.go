@@ -50,6 +50,7 @@ func (ptr *QPushButton) QPushButton_PTR() *QPushButton { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QPushButtonFromptr(cthis Voidptr) *QPushButton {
 	bcthis0 := QAbstractButtonFromptr(cthis)
 	return &QPushButton{bcthis0}
@@ -74,8 +75,9 @@ func NewQPushButton(parent QWidget_ITF /*777 QWidget **/) *QPushButton {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(638151916, "_ZN11QPushButtonC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(638151916, "_ZN11QPushButtonC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QPushButtonFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QPushButton")
 	return gothis
@@ -95,8 +97,9 @@ func NewQPushButtonp() *QPushButton {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(638151916, "_ZN11QPushButtonC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(638151916, "_ZN11QPushButtonC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QPushButtonFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QPushButton")
 	return gothis
@@ -120,8 +123,9 @@ func NewQPushButton1(text string, parent QWidget_ITF /*777 QWidget **/) *QPushBu
 		convArg1 = parent.QWidget_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(3027368468, "_ZN11QPushButtonC2ERK7QStringP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3027368468, "_ZN11QPushButtonC2ERK7QStringP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QPushButtonFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QPushButton")
 	return gothis
@@ -143,8 +147,9 @@ func NewQPushButton1p(text string) *QPushButton {
 	// arg: 1, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg1 Voidptr
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(3027368468, "_ZN11QPushButtonC2ERK7QStringP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0, convArg1)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3027368468, "_ZN11QPushButtonC2ERK7QStringP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QPushButtonFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QPushButton")
 	return gothis
@@ -158,8 +163,9 @@ func NewQPushButton1p(text string) *QPushButton {
 /*
  */
 func (this *QPushButton) SizeHint() *qtcore.QSize /*123*/ {
-	rv, err := qtrt.Qtcc1(1743812697, "_ZNK11QPushButton8sizeHintEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1743812697, "_ZNK11QPushButton8sizeHintEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -173,8 +179,9 @@ func (this *QPushButton) SizeHint() *qtcore.QSize /*123*/ {
 /*
  */
 func (this *QPushButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
-	rv, err := qtrt.Qtcc1(2291737008, "_ZNK11QPushButton15minimumSizeHintEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2291737008, "_ZNK11QPushButton15minimumSizeHintEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
@@ -188,8 +195,9 @@ func (this *QPushButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 /*
  */
 func (this *QPushButton) AutoDefault() bool {
-	rv, err := qtrt.Qtcc1(627767004, "_ZNK11QPushButton11autoDefaultEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(627767004, "_ZNK11QPushButton11autoDefaultEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return rv != 0
 }
 
@@ -201,8 +209,9 @@ func (this *QPushButton) AutoDefault() bool {
 /*
  */
 func (this *QPushButton) SetAutoDefault(arg0 bool) {
-	rv, err := qtrt.Qtcc1(2921668158, "_ZN11QPushButton14setAutoDefaultEb", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2921668158, "_ZN11QPushButton14setAutoDefaultEb", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&arg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qpushbutton.h:74
@@ -213,8 +222,9 @@ func (this *QPushButton) SetAutoDefault(arg0 bool) {
 /*
  */
 func (this *QPushButton) IsDefault() bool {
-	rv, err := qtrt.Qtcc1(1488522037, "_ZNK11QPushButton9isDefaultEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1488522037, "_ZNK11QPushButton9isDefaultEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return rv != 0
 }
 
@@ -226,8 +236,9 @@ func (this *QPushButton) IsDefault() bool {
 /*
  */
 func (this *QPushButton) SetDefault(arg0 bool) {
-	rv, err := qtrt.Qtcc1(2236558823, "_ZN11QPushButton10setDefaultEb", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2236558823, "_ZN11QPushButton10setDefaultEb", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&arg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qpushbutton.h:82
@@ -238,13 +249,14 @@ func (this *QPushButton) SetDefault(arg0 bool) {
 /*
  */
 func (this *QPushButton) SetFlat(arg0 bool) {
-	rv, err := qtrt.Qtcc1(167659761, "_ZN11QPushButton7setFlatEb", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(167659761, "_ZN11QPushButton7setFlatEb", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&arg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 func DeleteQPushButton(this *QPushButton) {
 	rv, err := qtrt.Qtcc1(0, "_ZN11QPushButtonD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

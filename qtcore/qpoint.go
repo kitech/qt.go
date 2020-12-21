@@ -45,6 +45,7 @@ func (ptr *QPoint) QPoint_PTR() *QPoint { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
+// ignore GetCthis for 0 base
 func QPointFromptr(cthis Voidptr) *QPoint {
 	return &QPoint{&qtrt.CObject{cthis}}
 }
@@ -54,7 +55,7 @@ func (*QPoint) Fromptr(cthis Voidptr) *QPoint {
 
 func DeleteQPoint(this *QPoint) {
 	rv, err := qtrt.Qtcc1(0, "_ZN6QPointD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

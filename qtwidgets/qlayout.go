@@ -59,6 +59,13 @@ func (this *QLayout) SetCthis(cthis Voidptr) {
 	this.QObject = qtcore.QObjectFromptr(cthis)
 	this.QLayoutItem = QLayoutItemFromptr(cthis)
 }
+func (this *QLayout) Addr() Voidptr {
+	if this == nil {
+		return nil
+	} else {
+		return this.QObject.Addr()
+	}
+}
 func QLayoutFromptr(cthis Voidptr) *QLayout {
 	bcthis0 := qtcore.QObjectFromptr(cthis)
 	bcthis1 := QLayoutItemFromptr(cthis)
@@ -70,7 +77,7 @@ func (*QLayout) Fromptr(cthis Voidptr) *QLayout {
 
 func DeleteQLayout(this *QLayout) {
 	rv, err := qtrt.Qtcc1(0, "_ZN7QLayoutD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

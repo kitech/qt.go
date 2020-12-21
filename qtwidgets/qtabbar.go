@@ -50,6 +50,7 @@ func (ptr *QTabBar) QTabBar_PTR() *QTabBar { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QTabBarFromptr(cthis Voidptr) *QTabBar {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QTabBar{bcthis0}
@@ -74,8 +75,9 @@ func NewQTabBar(parent QWidget_ITF /*777 QWidget **/) *QTabBar {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(963516406, "_ZN7QTabBarC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(963516406, "_ZN7QTabBarC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QTabBarFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QTabBar")
 	return gothis
@@ -95,8 +97,9 @@ func NewQTabBarp() *QTabBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(963516406, "_ZN7QTabBarC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(963516406, "_ZN7QTabBarC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QTabBarFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QTabBar")
 	return gothis
@@ -112,8 +115,9 @@ func NewQTabBarp() *QTabBar {
 func (this *QTabBar) AddTab(text string) int {
 	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.Qtcc1(3484311115, "_ZN7QTabBar6addTabERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3484311115, "_ZN7QTabBar6addTabERK7QString", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -127,8 +131,9 @@ func (this *QTabBar) AddTab(text string) int {
 func (this *QTabBar) InsertTab(index int, text string) int {
 	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	rv, err := qtrt.Qtcc1(998099698, "_ZN7QTabBar9insertTabEiRK7QString", qtrt.FFITY_POINTER, this.GetCthis(), index, convArg1)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(998099698, "_ZN7QTabBar9insertTabEiRK7QString", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&index), Voidptr(&convArg1))
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -140,8 +145,9 @@ func (this *QTabBar) InsertTab(index int, text string) int {
 /*
  */
 func (this *QTabBar) RemoveTab(index int) {
-	rv, err := qtrt.Qtcc1(3929345163, "_ZN7QTabBar9removeTabEi", qtrt.FFITY_POINTER, this.GetCthis(), index)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3929345163, "_ZN7QTabBar9removeTabEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtabbar.h:103
@@ -152,8 +158,9 @@ func (this *QTabBar) RemoveTab(index int) {
 /*
  */
 func (this *QTabBar) MoveTab(from int, to int) {
-	rv, err := qtrt.Qtcc1(4289803665, "_ZN7QTabBar7moveTabEii", qtrt.FFITY_POINTER, this.GetCthis(), from, to)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4289803665, "_ZN7QTabBar7moveTabEii", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_INT, this.Addr(), Voidptr(&from), Voidptr(&to))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtabbar.h:105
@@ -164,8 +171,9 @@ func (this *QTabBar) MoveTab(from int, to int) {
 /*
  */
 func (this *QTabBar) IsTabEnabled(index int) bool {
-	rv, err := qtrt.Qtcc1(1651733622, "_ZNK7QTabBar12isTabEnabledEi", qtrt.FFITY_POINTER, this.GetCthis(), index)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1651733622, "_ZNK7QTabBar12isTabEnabledEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
+	qtrt.ErrPrint2(err, rv)
 	return rv != 0
 }
 
@@ -177,8 +185,9 @@ func (this *QTabBar) IsTabEnabled(index int) bool {
 /*
  */
 func (this *QTabBar) SetTabEnabled(index int, enabled bool) {
-	rv, err := qtrt.Qtcc1(3388050708, "_ZN7QTabBar13setTabEnabledEib", qtrt.FFITY_POINTER, this.GetCthis(), index, enabled)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3388050708, "_ZN7QTabBar13setTabEnabledEib", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&index), Voidptr(&enabled))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtabbar.h:108
@@ -189,8 +198,9 @@ func (this *QTabBar) SetTabEnabled(index int, enabled bool) {
 /*
  */
 func (this *QTabBar) IsTabVisible(index int) bool {
-	rv, err := qtrt.Qtcc1(2760369443, "_ZNK7QTabBar12isTabVisibleEi", qtrt.FFITY_POINTER, this.GetCthis(), index)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2760369443, "_ZNK7QTabBar12isTabVisibleEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
+	qtrt.ErrPrint2(err, rv)
 	return rv != 0
 }
 
@@ -202,8 +212,9 @@ func (this *QTabBar) IsTabVisible(index int) bool {
 /*
  */
 func (this *QTabBar) SetTabVisible(index int, visible bool) {
-	rv, err := qtrt.Qtcc1(3526810878, "_ZN7QTabBar13setTabVisibleEib", qtrt.FFITY_POINTER, this.GetCthis(), index, visible)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3526810878, "_ZN7QTabBar13setTabVisibleEib", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&index), Voidptr(&visible))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtabbar.h:111
@@ -215,8 +226,9 @@ func (this *QTabBar) SetTabVisible(index int, visible bool) {
  */
 func (this *QTabBar) TabText(index int) string {
 	sretobj := qtrt.Malloc(8) // QString
-	rv, err := qtrt.Qtcc1(438043380, "_ZNK7QTabBar7tabTextEi", qtrt.FFITY_POINTER, sretobj, this.GetCthis(), index)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(438043380, "_ZNK7QTabBar7tabTextEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, Voidptr(&sretobj), this.Addr(), Voidptr(&index))
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
@@ -234,8 +246,9 @@ func (this *QTabBar) TabText(index int) string {
 func (this *QTabBar) SetTabText(index int, text string) {
 	var tmpArg1 = qtcore.NewQString5(text)
 	var convArg1 = tmpArg1.GetCthis()
-	rv, err := qtrt.Qtcc1(794153379, "_ZN7QTabBar10setTabTextEiRK7QString", qtrt.FFITY_POINTER, this.GetCthis(), index, convArg1)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(794153379, "_ZN7QTabBar10setTabTextEiRK7QString", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&index), Voidptr(&convArg1))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtabbar.h:139
@@ -246,8 +259,9 @@ func (this *QTabBar) SetTabText(index int, text string) {
 /*
  */
 func (this *QTabBar) CurrentIndex() int {
-	rv, err := qtrt.Qtcc1(4235078822, "_ZNK7QTabBar12currentIndexEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4235078822, "_ZNK7QTabBar12currentIndexEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -259,8 +273,9 @@ func (this *QTabBar) CurrentIndex() int {
 /*
  */
 func (this *QTabBar) Count() int {
-	rv, err := qtrt.Qtcc1(2981223135, "_ZNK7QTabBar5countEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2981223135, "_ZNK7QTabBar5countEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -272,8 +287,9 @@ func (this *QTabBar) Count() int {
 /*
  */
 func (this *QTabBar) IsMovable() bool {
-	rv, err := qtrt.Qtcc1(2296874387, "_ZNK7QTabBar9isMovableEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2296874387, "_ZNK7QTabBar9isMovableEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return rv != 0
 }
 
@@ -285,8 +301,9 @@ func (this *QTabBar) IsMovable() bool {
 /*
  */
 func (this *QTabBar) SetMovable(movable bool) {
-	rv, err := qtrt.Qtcc1(1730991207, "_ZN7QTabBar10setMovableEb", qtrt.FFITY_POINTER, this.GetCthis(), movable)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1730991207, "_ZN7QTabBar10setMovableEb", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&movable))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtabbar.h:172
@@ -297,8 +314,9 @@ func (this *QTabBar) SetMovable(movable bool) {
 /*
  */
 func (this *QTabBar) AutoHide() bool {
-	rv, err := qtrt.Qtcc1(3583682459, "_ZNK7QTabBar8autoHideEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3583682459, "_ZNK7QTabBar8autoHideEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return rv != 0
 }
 
@@ -310,8 +328,9 @@ func (this *QTabBar) AutoHide() bool {
 /*
  */
 func (this *QTabBar) SetAutoHide(hide bool) {
-	rv, err := qtrt.Qtcc1(975943713, "_ZN7QTabBar11setAutoHideEb", qtrt.FFITY_POINTER, this.GetCthis(), hide)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(975943713, "_ZN7QTabBar11setAutoHideEb", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&hide))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtabbar.h:184
@@ -322,8 +341,9 @@ func (this *QTabBar) SetAutoHide(hide bool) {
 /*
  */
 func (this *QTabBar) SetCurrentIndex(index int) {
-	rv, err := qtrt.Qtcc1(2237102313, "_ZN7QTabBar15setCurrentIndexEi", qtrt.FFITY_POINTER, this.GetCthis(), index)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2237102313, "_ZN7QTabBar15setCurrentIndexEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtabbar.h:187
@@ -334,8 +354,9 @@ func (this *QTabBar) SetCurrentIndex(index int) {
 /*
  */
 func (this *QTabBar) CurrentChanged(index int) {
-	rv, err := qtrt.Qtcc1(1804836883, "_ZN7QTabBar14currentChangedEi", qtrt.FFITY_POINTER, this.GetCthis(), index)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1804836883, "_ZN7QTabBar14currentChangedEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtabbar.h:188
@@ -346,8 +367,9 @@ func (this *QTabBar) CurrentChanged(index int) {
 /*
  */
 func (this *QTabBar) TabCloseRequested(index int) {
-	rv, err := qtrt.Qtcc1(1827543677, "_ZN7QTabBar17tabCloseRequestedEi", qtrt.FFITY_POINTER, this.GetCthis(), index)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1827543677, "_ZN7QTabBar17tabCloseRequestedEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtabbar.h:189
@@ -358,8 +380,9 @@ func (this *QTabBar) TabCloseRequested(index int) {
 /*
  */
 func (this *QTabBar) TabMoved(from int, to int) {
-	rv, err := qtrt.Qtcc1(747402176, "_ZN7QTabBar8tabMovedEii", qtrt.FFITY_POINTER, this.GetCthis(), from, to)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(747402176, "_ZN7QTabBar8tabMovedEii", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_INT, this.Addr(), Voidptr(&from), Voidptr(&to))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtabbar.h:190
@@ -370,8 +393,9 @@ func (this *QTabBar) TabMoved(from int, to int) {
 /*
  */
 func (this *QTabBar) TabBarClicked(index int) {
-	rv, err := qtrt.Qtcc1(3685740000, "_ZN7QTabBar13tabBarClickedEi", qtrt.FFITY_POINTER, this.GetCthis(), index)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3685740000, "_ZN7QTabBar13tabBarClickedEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtabbar.h:191
@@ -382,13 +406,14 @@ func (this *QTabBar) TabBarClicked(index int) {
 /*
  */
 func (this *QTabBar) TabBarDoubleClicked(index int) {
-	rv, err := qtrt.Qtcc1(2502640271, "_ZN7QTabBar19tabBarDoubleClickedEi", qtrt.FFITY_POINTER, this.GetCthis(), index)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2502640271, "_ZN7QTabBar19tabBarDoubleClickedEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
+	qtrt.ErrPrint2(err, rv)
 }
 
 func DeleteQTabBar(this *QTabBar) {
 	rv, err := qtrt.Qtcc1(0, "_ZN7QTabBarD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

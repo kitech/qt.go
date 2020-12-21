@@ -50,6 +50,7 @@ func (ptr *QProgressBar) QProgressBar_PTR() *QProgressBar { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QProgressBarFromptr(cthis Voidptr) *QProgressBar {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QProgressBar{bcthis0}
@@ -74,8 +75,9 @@ func NewQProgressBar(parent QWidget_ITF /*777 QWidget **/) *QProgressBar {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(572852642, "_ZN12QProgressBarC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(572852642, "_ZN12QProgressBarC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QProgressBarFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QProgressBar")
 	return gothis
@@ -95,8 +97,9 @@ func NewQProgressBarp() *QProgressBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(572852642, "_ZN12QProgressBarC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(572852642, "_ZN12QProgressBarC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QProgressBarFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QProgressBar")
 	return gothis
@@ -110,8 +113,9 @@ func NewQProgressBarp() *QProgressBar {
 /*
  */
 func (this *QProgressBar) Minimum() int {
-	rv, err := qtrt.Qtcc1(4052484470, "_ZNK12QProgressBar7minimumEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4052484470, "_ZNK12QProgressBar7minimumEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -123,8 +127,9 @@ func (this *QProgressBar) Minimum() int {
 /*
  */
 func (this *QProgressBar) Maximum() int {
-	rv, err := qtrt.Qtcc1(644330295, "_ZNK12QProgressBar7maximumEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(644330295, "_ZNK12QProgressBar7maximumEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -136,8 +141,9 @@ func (this *QProgressBar) Maximum() int {
 /*
  */
 func (this *QProgressBar) Value() int {
-	rv, err := qtrt.Qtcc1(504073427, "_ZNK12QProgressBar5valueEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(504073427, "_ZNK12QProgressBar5valueEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -150,8 +156,9 @@ func (this *QProgressBar) Value() int {
  */
 func (this *QProgressBar) Text() string {
 	sretobj := qtrt.Malloc(8) // QString
-	rv, err := qtrt.Qtcc1(4022741238, "_ZNK12QProgressBar4textEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4022741238, "_ZNK12QProgressBar4textEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
@@ -167,8 +174,9 @@ func (this *QProgressBar) Text() string {
 /*
  */
 func (this *QProgressBar) SetTextVisible(visible bool) {
-	rv, err := qtrt.Qtcc1(2485447105, "_ZN12QProgressBar14setTextVisibleEb", qtrt.FFITY_POINTER, this.GetCthis(), visible)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2485447105, "_ZN12QProgressBar14setTextVisibleEb", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&visible))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:81
@@ -179,8 +187,9 @@ func (this *QProgressBar) SetTextVisible(visible bool) {
 /*
  */
 func (this *QProgressBar) IsTextVisible() bool {
-	rv, err := qtrt.Qtcc1(1900994530, "_ZNK12QProgressBar13isTextVisibleEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1900994530, "_ZNK12QProgressBar13isTextVisibleEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return rv != 0
 }
 
@@ -192,8 +201,9 @@ func (this *QProgressBar) IsTextVisible() bool {
 /*
  */
 func (this *QProgressBar) Reset() {
-	rv, err := qtrt.Qtcc1(2829967089, "_ZN12QProgressBar5resetEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2829967089, "_ZN12QProgressBar5resetEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:102
@@ -204,8 +214,9 @@ func (this *QProgressBar) Reset() {
 /*
  */
 func (this *QProgressBar) SetRange(minimum int, maximum int) {
-	rv, err := qtrt.Qtcc1(277876671, "_ZN12QProgressBar8setRangeEii", qtrt.FFITY_POINTER, this.GetCthis(), minimum, maximum)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(277876671, "_ZN12QProgressBar8setRangeEii", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_INT, this.Addr(), Voidptr(&minimum), Voidptr(&maximum))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:103
@@ -216,8 +227,9 @@ func (this *QProgressBar) SetRange(minimum int, maximum int) {
 /*
  */
 func (this *QProgressBar) SetMinimum(minimum int) {
-	rv, err := qtrt.Qtcc1(192492712, "_ZN12QProgressBar10setMinimumEi", qtrt.FFITY_POINTER, this.GetCthis(), minimum)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(192492712, "_ZN12QProgressBar10setMinimumEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&minimum))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:104
@@ -228,8 +240,9 @@ func (this *QProgressBar) SetMinimum(minimum int) {
 /*
  */
 func (this *QProgressBar) SetMaximum(maximum int) {
-	rv, err := qtrt.Qtcc1(3700590313, "_ZN12QProgressBar10setMaximumEi", qtrt.FFITY_POINTER, this.GetCthis(), maximum)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3700590313, "_ZN12QProgressBar10setMaximumEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&maximum))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:105
@@ -240,8 +253,9 @@ func (this *QProgressBar) SetMaximum(maximum int) {
 /*
  */
 func (this *QProgressBar) SetValue(value int) {
-	rv, err := qtrt.Qtcc1(830504370, "_ZN12QProgressBar8setValueEi", qtrt.FFITY_POINTER, this.GetCthis(), value)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(830504370, "_ZN12QProgressBar8setValueEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&value))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:106
@@ -252,8 +266,9 @@ func (this *QProgressBar) SetValue(value int) {
 /*
  */
 func (this *QProgressBar) SetOrientation(arg0 int) {
-	rv, err := qtrt.Qtcc1(2370329577, "_ZN12QProgressBar14setOrientationEN2Qt11OrientationE", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2370329577, "_ZN12QProgressBar14setOrientationEN2Qt11OrientationE", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&arg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qprogressbar.h:109
@@ -264,13 +279,14 @@ func (this *QProgressBar) SetOrientation(arg0 int) {
 /*
  */
 func (this *QProgressBar) ValueChanged(value int) {
-	rv, err := qtrt.Qtcc1(573637723, "_ZN12QProgressBar12valueChangedEi", qtrt.FFITY_POINTER, this.GetCthis(), value)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(573637723, "_ZN12QProgressBar12valueChangedEi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&value))
+	qtrt.ErrPrint2(err, rv)
 }
 
 func DeleteQProgressBar(this *QProgressBar) {
 	rv, err := qtrt.Qtcc1(0, "_ZN12QProgressBarD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

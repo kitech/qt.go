@@ -330,6 +330,9 @@ func Qtcc1(symcrc uint32, symname string, retype byte, args ...interface{}) (VRe
 // Go的slice 的数据指针和C兼容
 func Qtcc3(symcrc uint32, symname string, retype Voidptr, args ...Voidptr) (VRetype, error) {
 	addr := getSymAddrRawCached(symcrc, symname)
+	if debugFFICall {
+		log.Println("FFI Call:", symcrc, symname, addr, "retype=", retype, "argc=", len(args)/2)
+	}
 
 	if len(args)%2 != 0 {
 		log.Println("Invalid parameters", len(args))

@@ -50,6 +50,7 @@ func (ptr *QStatusBar) QStatusBar_PTR() *QStatusBar { return ptr }
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QStatusBarFromptr(cthis Voidptr) *QStatusBar {
 	bcthis0 := QWidgetFromptr(cthis)
 	return &QStatusBar{bcthis0}
@@ -74,8 +75,9 @@ func NewQStatusBar(parent QWidget_ITF /*777 QWidget **/) *QStatusBar {
 		convArg0 = parent.QWidget_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(2740779997, "_ZN10QStatusBarC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2740779997, "_ZN10QStatusBarC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QStatusBarFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QStatusBar")
 	return gothis
@@ -95,8 +97,9 @@ func NewQStatusBarp() *QStatusBar {
 	// arg: 0, QWidget *=Pointer, QWidget=Record, , Invalid
 	var convArg0 Voidptr
 	cthis := qtrt.Malloc(48)
-	rv, err := qtrt.Qtcc1(2740779997, "_ZN10QStatusBarC2EP7QWidget", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2740779997, "_ZN10QStatusBarC2EP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QStatusBarFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QStatusBar")
 	return gothis
@@ -114,8 +117,9 @@ func (this *QStatusBar) AddWidget(widget QWidget_ITF /*777 QWidget **/, stretch 
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
-	rv, err := qtrt.Qtcc1(2690176878, "_ZN10QStatusBar9addWidgetEP7QWidgeti", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, stretch)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2690176878, "_ZN10QStatusBar9addWidgetEP7QWidgeti", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&convArg0), Voidptr(&stretch))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:62
@@ -132,8 +136,9 @@ func (this *QStatusBar) AddWidgetp(widget QWidget_ITF /*777 QWidget **/) {
 	}
 	// arg: 1, int=Int, =Invalid, , Invalid
 	stretch := int(0)
-	rv, err := qtrt.Qtcc1(2690176878, "_ZN10QStatusBar9addWidgetEP7QWidgeti", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, stretch)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2690176878, "_ZN10QStatusBar9addWidgetEP7QWidgeti", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&convArg0), Voidptr(&stretch))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:63
@@ -148,8 +153,9 @@ func (this *QStatusBar) InsertWidget(index int, widget QWidget_ITF /*777 QWidget
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg1 = widget.QWidget_PTR().GetCthis()
 	}
-	rv, err := qtrt.Qtcc1(4143092170, "_ZN10QStatusBar12insertWidgetEiP7QWidgeti", qtrt.FFITY_POINTER, this.GetCthis(), index, convArg1, stretch)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4143092170, "_ZN10QStatusBar12insertWidgetEiP7QWidgeti", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index), Voidptr(&convArg1), Voidptr(&stretch))
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -167,8 +173,9 @@ func (this *QStatusBar) InsertWidgetp(index int, widget QWidget_ITF /*777 QWidge
 	}
 	// arg: 2, int=Int, =Invalid, , Invalid
 	stretch := int(0)
-	rv, err := qtrt.Qtcc1(4143092170, "_ZN10QStatusBar12insertWidgetEiP7QWidgeti", qtrt.FFITY_POINTER, this.GetCthis(), index, convArg1, stretch)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(4143092170, "_ZN10QStatusBar12insertWidgetEiP7QWidgeti", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index), Voidptr(&convArg1), Voidptr(&stretch))
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -184,8 +191,9 @@ func (this *QStatusBar) AddPermanentWidget(widget QWidget_ITF /*777 QWidget **/,
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
-	rv, err := qtrt.Qtcc1(1375597379, "_ZN10QStatusBar18addPermanentWidgetEP7QWidgeti", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, stretch)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1375597379, "_ZN10QStatusBar18addPermanentWidgetEP7QWidgeti", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&convArg0), Voidptr(&stretch))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:64
@@ -202,8 +210,9 @@ func (this *QStatusBar) AddPermanentWidgetp(widget QWidget_ITF /*777 QWidget **/
 	}
 	// arg: 1, int=Int, =Invalid, , Invalid
 	stretch := int(0)
-	rv, err := qtrt.Qtcc1(1375597379, "_ZN10QStatusBar18addPermanentWidgetEP7QWidgeti", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, stretch)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1375597379, "_ZN10QStatusBar18addPermanentWidgetEP7QWidgeti", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&convArg0), Voidptr(&stretch))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:65
@@ -218,8 +227,9 @@ func (this *QStatusBar) InsertPermanentWidget(index int, widget QWidget_ITF /*77
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg1 = widget.QWidget_PTR().GetCthis()
 	}
-	rv, err := qtrt.Qtcc1(2100641601, "_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti", qtrt.FFITY_POINTER, this.GetCthis(), index, convArg1, stretch)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2100641601, "_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index), Voidptr(&convArg1), Voidptr(&stretch))
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -237,8 +247,9 @@ func (this *QStatusBar) InsertPermanentWidgetp(index int, widget QWidget_ITF /*7
 	}
 	// arg: 2, int=Int, =Invalid, , Invalid
 	stretch := int(0)
-	rv, err := qtrt.Qtcc1(2100641601, "_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti", qtrt.FFITY_POINTER, this.GetCthis(), index, convArg1, stretch)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2100641601, "_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index), Voidptr(&convArg1), Voidptr(&stretch))
+	qtrt.ErrPrint2(err, rv)
 	return qtrt.Cretval2go("int", rv).(int) // 1111
 }
 
@@ -254,8 +265,9 @@ func (this *QStatusBar) RemoveWidget(widget QWidget_ITF /*777 QWidget **/) {
 	if widget != nil && widget.QWidget_PTR() != nil {
 		convArg0 = widget.QWidget_PTR().GetCthis()
 	}
-	rv, err := qtrt.Qtcc1(1858783838, "_ZN10QStatusBar12removeWidgetEP7QWidget", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1858783838, "_ZN10QStatusBar12removeWidgetEP7QWidget", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:68
@@ -266,8 +278,9 @@ func (this *QStatusBar) RemoveWidget(widget QWidget_ITF /*777 QWidget **/) {
 /*
  */
 func (this *QStatusBar) SetSizeGripEnabled(arg0 bool) {
-	rv, err := qtrt.Qtcc1(2512257864, "_ZN10QStatusBar18setSizeGripEnabledEb", qtrt.FFITY_POINTER, this.GetCthis(), arg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2512257864, "_ZN10QStatusBar18setSizeGripEnabledEb", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&arg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:69
@@ -278,8 +291,9 @@ func (this *QStatusBar) SetSizeGripEnabled(arg0 bool) {
 /*
  */
 func (this *QStatusBar) IsSizeGripEnabled() bool {
-	rv, err := qtrt.Qtcc1(1342450037, "_ZNK10QStatusBar17isSizeGripEnabledEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(1342450037, "_ZNK10QStatusBar17isSizeGripEnabledEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	return rv != 0
 }
 
@@ -292,8 +306,9 @@ func (this *QStatusBar) IsSizeGripEnabled() bool {
  */
 func (this *QStatusBar) CurrentMessage() string {
 	sretobj := qtrt.Malloc(8) // QString
-	rv, err := qtrt.Qtcc1(3358295982, "_ZNK10QStatusBar14currentMessageEv", qtrt.FFITY_POINTER, sretobj, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3358295982, "_ZNK10QStatusBar14currentMessageEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
+	qtrt.ErrPrint2(err, rv)
 	rv = qtrt.VRetype(uintptr(sretobj))
 	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
 	rv3 := rv2.ToUtf8().Data()
@@ -311,8 +326,9 @@ func (this *QStatusBar) CurrentMessage() string {
 func (this *QStatusBar) ShowMessage(text string, timeout int) {
 	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.Qtcc1(3756771496, "_ZN10QStatusBar11showMessageERK7QStringi", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, timeout)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3756771496, "_ZN10QStatusBar11showMessageERK7QStringi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&convArg0), Voidptr(&timeout))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:74
@@ -327,8 +343,9 @@ func (this *QStatusBar) ShowMessagep(text string) {
 	var convArg0 = tmpArg0.GetCthis()
 	// arg: 1, int=Int, =Invalid, , Invalid
 	timeout := int(0)
-	rv, err := qtrt.Qtcc1(3756771496, "_ZN10QStatusBar11showMessageERK7QStringi", qtrt.FFITY_POINTER, this.GetCthis(), convArg0, timeout)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(3756771496, "_ZN10QStatusBar11showMessageERK7QStringi", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&convArg0), Voidptr(&timeout))
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:75
@@ -339,8 +356,9 @@ func (this *QStatusBar) ShowMessagep(text string) {
 /*
  */
 func (this *QStatusBar) ClearMessage() {
-	rv, err := qtrt.Qtcc1(2515226392, "_ZN10QStatusBar12clearMessageEv", qtrt.FFITY_POINTER, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2515226392, "_ZN10QStatusBar12clearMessageEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint2(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstatusbar.h:79
@@ -353,13 +371,14 @@ func (this *QStatusBar) ClearMessage() {
 func (this *QStatusBar) MessageChanged(text string) {
 	var tmpArg0 = qtcore.NewQString5(text)
 	var convArg0 = tmpArg0.GetCthis()
-	rv, err := qtrt.Qtcc1(2199278426, "_ZN10QStatusBar14messageChangedERK7QString", qtrt.FFITY_POINTER, this.GetCthis(), convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2199278426, "_ZN10QStatusBar14messageChangedERK7QString", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 }
 
 func DeleteQStatusBar(this *QStatusBar) {
 	rv, err := qtrt.Qtcc1(0, "_ZN10QStatusBarD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 

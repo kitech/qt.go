@@ -48,6 +48,7 @@ func (ptr *QAbstractTableModel) QAbstractTableModel_PTR() *QAbstractTableModel {
 
 // ignore GetCthis for 1 base
 // ignore SetCthis for 1 base
+// ignore GetCthis for 1 base
 func QAbstractTableModelFromptr(cthis Voidptr) *QAbstractTableModel {
 	bcthis0 := QAbstractItemModelFromptr(cthis)
 	return &QAbstractTableModel{bcthis0}
@@ -72,8 +73,9 @@ func NewQAbstractTableModel(parent QObject_ITF /*777 QObject **/) *QAbstractTabl
 		convArg0 = parent.QObject_PTR().GetCthis()
 	}
 	cthis := qtrt.Malloc(16)
-	rv, err := qtrt.Qtcc1(2295160465, "_ZN19QAbstractTableModelC2EP7QObject", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2295160465, "_ZN19QAbstractTableModelC2EP7QObject", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QAbstractTableModelFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QAbstractTableModel")
 	return gothis
@@ -93,8 +95,9 @@ func NewQAbstractTableModelp() *QAbstractTableModel {
 	// arg: 0, QObject *=Pointer, QObject=Record, , Invalid
 	var convArg0 Voidptr
 	cthis := qtrt.Malloc(16)
-	rv, err := qtrt.Qtcc1(2295160465, "_ZN19QAbstractTableModelC2EP7QObject", qtrt.FFITY_POINTER, cthis, convArg0)
-	qtrt.ErrPrint(err, rv)
+	rv, err := qtrt.Qtcc3(2295160465, "_ZN19QAbstractTableModelC2EP7QObject", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint2(err, rv)
 	gothis := QAbstractTableModelFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QAbstractTableModel")
 	return gothis
@@ -102,7 +105,7 @@ func NewQAbstractTableModelp() *QAbstractTableModel {
 
 func DeleteQAbstractTableModel(this *QAbstractTableModel) {
 	rv, err := qtrt.Qtcc1(0, "_ZN19QAbstractTableModelD2Ev", qtrt.FFITY_VOID, this.GetCthis())
-	qtrt.ErrPrint(err, rv)
+	qtrt.ErrPrint2(err, rv)
 	this.SetCthis(nil)
 }
 
