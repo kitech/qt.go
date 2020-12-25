@@ -8,6 +8,7 @@
 #include <sys/types.h>
 #include <stddef.h>
 #include <stdio.h>
+#include <string.h>
 
 /* AbstractClass may have several different concrete implementations.  */
 /*

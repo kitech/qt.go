@@ -110,6 +110,12 @@ void ffi_call_ex_asmcc(struct {void* fn; int retype; uint64_t* retval;
                       ax->argc, ax->argtys, ax->argvals);
 }
 
+void ffi_call_ex3(void* fn, void* retype, uint64_t* retval,
+                  int argc, void** argtys, void** argvals) {
+    //printf("[0] fn %p %p %d\n", ax->fn, ax->retype, ax->argc);
+    ffi_call_ex3_fnptr(fn, retype, retval, argc, argtys, argvals);
+}
+
 void ffi_call_ex3_asmcc(struct {void* fn; void* retype; uint64_t* retval;
     int argc; void** argtys; void** argvals;} *ax) {
     //printf("[0] fn %p %p %d\n", ax->fn, ax->retype, ax->argc);
@@ -123,4 +129,38 @@ void ffi_call_var_ex_asmcc(struct {void*fn; int retype; uint64_t* retval;
                           ax->fixedargc, ax->totalargc, ax->argtys, ax->argvals);
 }
 
+///// ffi closure
+typedef struct { void* cbfn; } cppvm_ffi_closure_header;
+// can only binding one extra data, if need more, use struct
+static void cppvm_ffi_closure_tmplfn(ffi_cif *cif, void *ret, void* args[],
+                                     void* capdata) {
+    printf("%s:%d: ok1 %p\n", __FILE__, __LINE__, capdata);
+    cppvm_ffi_closure_header* cbhdr = (cppvm_ffi_closure_header*)capdata;
+    void (*cbfn)(void*, void**) = cbhdr->cbfn;
+    printf("%s:%d: ok1 %p\n", __FILE__, __LINE__, cbfn);
+    cbfn(capdata, args);
+    printf("%s:%d: ok1 %p\n", __FILE__, __LINE__, capdata);
+}
 
+// callback func: void (*)(void* capdata, void**argvals)
+ffi_closure*
+make_cppvm_ffi_closure(ffi_cif* cif, void** closfnaddr, void* capdata,
+                       ffi_type* retype, int argc, ffi_type** argtys) {
+
+    ffi_closure* closure = ffi_closure_alloc(sizeof(ffi_closure), closfnaddr);
+    int prepok = ffi_prep_cif(cif, FFI_DEFAULT_ABI, argc, retype, argtys);
+    int prepok2 = ffi_prep_closure_loc(closure, cif, cppvm_ffi_closure_tmplfn,
+                                          capdata, *closfnaddr);
+    printf("%s:%d: ok1 %d, ok2 %d\n", __FILE__, __LINE__, prepok, prepok2);
+    return closure;
+}
+
+void release_ffi_closure(ffi_closure* clos) {
+    ffi_closure_free(clos);
+}
+
+void test_call_empty_closure(void* closfn) {
+    printf("%s:%d: ok1 %p\n", __FILE__, __LINE__, closfn);
+    int val = 5678;
+    ((void(*)())closfn)(&val, &val);
+}

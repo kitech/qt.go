@@ -378,6 +378,8 @@ func getSymAddrRawCached(symcrc uint32, symname string) Voidptr {
 }
 
 // lagecy
+// 使用C.uint64_t参数，避免 cgo 调用指针检查的问题，都忘记了
+// 也可以使用C.uintptr_t代替吧
 // compatiable with old version
 // symname just for debug
 func cc0byaddr(symname string, symaddr Voidptr, retype byte, args ...interface{}) (VRetype, error) {
