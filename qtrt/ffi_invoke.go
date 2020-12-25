@@ -214,8 +214,11 @@ func init_ffi_invoke(libname string) {
 	}
 }
 
+var cxa_demangle_fnptr Voidptr
+
 // load ffi call wrapper from libQt5Inline.so
 func init_so_ffi_call() {
+	cxa_demangle_fnptr = GetQtSymAddrRaw("qil_cxa_demangle")
 	ex_fnptr := GetQtSymAddrRaw("ffi_call_ex")
 	ex3_fnptr := GetQtSymAddrRaw("ffi_call_ex3")
 	varex_fnptr := GetQtSymAddrRaw("ffi_call_var_ex")

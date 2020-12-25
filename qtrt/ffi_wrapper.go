@@ -127,6 +127,8 @@ func cppvm_ffi_closure_callback(cthis Voidptr, argvals *Voidptr) {
 		log.Println("arg", i, p2[i], *val, uintptr(*val))
 	}
 	log.Println("reflect.Call", this.upcbfn, reflect.ValueOf(this.upcbfn).String())
+
+	callbackHookInherits2(this, argvals)
 }
 
 func NewCppvmClosure(clsname, mthname string, upcbfn interface{}) *CppvmClosure {
@@ -139,8 +141,9 @@ func NewCppvmClosure(clsname, mthname string, upcbfn interface{}) *CppvmClosure 
 
 	// make_cppvm_ffi_closure(ffi_cif* cif, void** closfnaddr, void* capdata,
 	// ffi_type* retype, int argc, ffi_type** argtys) {
-	goproto2ffitype(upcbfn)
 	argtys := []Voidptr{(FFITO_POINTER), (FFITO_POINTER)}
+	// this + ...
+	argtys = append([]Voidptr{FFITO_POINTER}, goproto2ffitype(upcbfn)...)
 	argtys2 := (*C.uintptr_t)(Voidptr(&argtys[0]))
 	this.argtys2 = (uintptr(Voidptr(argtys2)))
 	this.argc = len(argtys)

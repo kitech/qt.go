@@ -27,10 +27,22 @@ func Stringnt(s *string) *string {
 	return s
 }
 
+func Stringzt(s string) string { return s + "\x00" }
+
 // note: s will change
 // ch = ch + "\x00", and it works
 func CStringRef(s *string) Voidptr {
 	*s = *s + "\x00" // copy once, but still fast than C.CString/C.free
+	strhdr := (*reflect.StringHeader)(Voidptr(s))
+	if strhdr.Len == 0 {
+		return nil
+	}
+	return Voidptr(strhdr.Data)
+}
+
+// caller add null tail
+func CStringRefRaw(s *string) Voidptr {
+	// *s = *s + "\x00" // copy once, but still fast than C.CString/C.free
 	strhdr := (*reflect.StringHeader)(Voidptr(s))
 	if strhdr.Len == 0 {
 		return nil

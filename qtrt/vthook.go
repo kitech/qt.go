@@ -9,6 +9,15 @@ extern void test_vthook(void* app);
 extern void* find_f_address(void* aClass, void* memfnptr);
 extern void dump_vtable_entry(void* elfvtptr);
 extern int fillin_vtable_entry(void* elfvtptr, void** arr);
+
+void
+cxa_demangle_asmcc(struct {void* fnptr; const char *mangled; char *buf; size_t *len; int *status;} *ax) {
+   void* (*fnptr2)() = ax->fnptr;
+   char* res = fnptr2(ax->mangled, ax->buf, ax->len, ax->status);
+   // printf("%p ***%s***\n", res, ax->mangled);
+   *(ax->len) = res == NULL ? 0 : strlen(res);
+}
+
 */
 import "C"
 import (
@@ -19,7 +28,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/ianlancetaylor/demangle"
+	"github.com/kitech/dl/asmcgocall"
 )
 
 func TestVthook(app Voidptr) {
@@ -43,17 +52,19 @@ func DumpVtableEntry(clsname string) {
 func GetVtableEntry(clsname string) []string {
 	vtname := fmt.Sprintf("_ZTV%d%s", len(clsname), clsname)
 	ptr := GetQtSymAddrRaw(vtname)
-	log.Println(vtname, ptr)
+	// log.Println(vtname, ptr)
 
 	items := make([]Voidptr, 128)
 	cnt := C.fillin_vtable_entry(ptr, (*Voidptr)(&items[0]))
-	log.Println(cnt)
+	// log.Println(cnt)
 	items = items[:int(cnt)]
 
 	items2 := make([]string, int(cnt))
 	for idx, item := range items {
 		s := C.GoString((*C.char)(item))
-		log.Println(cnt, idx, s)
+		if false {
+			log.Println(cnt, idx, s)
+		}
 		items2[idx] = s
 	}
 
@@ -69,18 +80,21 @@ type virtualTable struct {
 
 type vtableEntry struct {
 	clsname string
-	items   []string // mangled name
-	names   []string // just pure func name like `mouseMoveEvent`
-	hooks   map[string]*hookEntry
+	items   []string              // mangled name
+	names   []string              // just pure func name like `mouseMoveEvent`
+	hooks   map[string]*hookEntry // mthname =>
 }
 
 type hookEntry struct {
 	mgname  string
 	rawname string
 	index   int
-	oldval  Voidptr
-	newval  Voidptr
+	oldfn   Voidptr
+	newfn   Voidptr
+	vmclos  *CppvmClosure
 }
+
+var virtab = newVirtualTable()
 
 func newVirtualTable() *virtualTable {
 	this := &virtualTable{}
@@ -88,7 +102,8 @@ func newVirtualTable() *virtualTable {
 	return this
 }
 
-func (this *virtualTable) hookit(clsname, mthname string, obj Voidptr, fnptr Voidptr) {
+// fn for under closure types resolve
+func (this *virtualTable) hookit(clsname, mthname string, obj Voidptr, fn interface{}) {
 	if this.hookExist(clsname, mthname) {
 		return
 	}
@@ -98,14 +113,19 @@ func (this *virtualTable) hookit(clsname, mthname string, obj Voidptr, fnptr Voi
 		return
 	}
 
+	vmclos := NewCppvmClosure(clsname, mthname, fn)
+	fnptr := vmclos.Func()
+
 	//hookimpl()
-	oldval := C.vtablehook_hook(obj, fnptr, C.int(idx))
+	oldfn := C.vtablehook_hook(obj, fnptr, C.int(idx))
 	he := &hookEntry{}
 	he.mgname = ""
 	he.rawname = mthname
 	he.index = idx
-	he.oldval = oldval
-	he.newval = fnptr
+	he.oldfn = oldfn
+	he.newfn = fnptr
+	he.vmclos = vmclos
+
 	vte, ok := this.tables[clsname]
 	if !ok { //wtt
 	}
@@ -123,8 +143,8 @@ func (this *virtualTable) unhookit(clsname, mthname string, obj Voidptr) {
 	he, ok := vte.hooks[mthname]
 	if !ok { // wtt
 	}
-	oldval := C.vtablehook_hook(obj, he.oldval, C.int(he.index))
-	if oldval != he.newval {
+	oldfn := C.vtablehook_hook(obj, he.oldfn, C.int(he.index))
+	if oldfn != he.newfn {
 		// wtt
 	}
 	delete(vte.hooks, mthname)
@@ -175,6 +195,7 @@ func (this *virtualTable) fillinClassVtable(clsname string) error {
 	e.names = make([]string, len(items))
 
 	for idx, item := range items {
+		// log.Println(idx, item)
 		cmo := cppfilt(item)
 		e.names[idx] = cmo.mth
 	}
@@ -212,10 +233,47 @@ func (this *cppmethod) argisptr(idx int) bool {
 	return strings.Count(this.types[idx], "*") == 1
 }
 
+// char* qil_cxa_demangle(const char *mangled, char *buf, size_t *len, int *status)
+
+func cxa_demangle(mgname string) (string, error) {
+	mgname2 := mgname + "\x00"
+	mgnameref := CStringRefRaw(&mgname2)
+
+	blen := len(mgname)*3 + 3
+	buf := make([]byte, blen)
+	status := 0
+
+	var argv = struct {
+		fnptr   Voidptr
+		mangled Voidptr
+		buf     Voidptr
+		len     *C.size_t
+		status  *C.int
+	}{cxa_demangle_fnptr, mgnameref, Voidptr(&buf[0]),
+		(*C.size_t)(Voidptr(&blen)), (*C.int)(Voidptr(&status))}
+	asmcgocall.Asmcc(C.cxa_demangle_asmcc, Voidptr(&argv))
+	if status != 0 {
+		return "", fmt.Errorf("demangle error %d", status)
+	}
+	res := string(buf[:blen])
+	hintpfx := "non-virtual thunk to " // _ZThn
+	if strings.HasPrefix(res, hintpfx) {
+		res = res[len(hintpfx):]
+	}
+	hintpfx = "typeinfo for "
+	if strings.HasPrefix(res, hintpfx) {
+		res = res[len(hintpfx):]
+	}
+	return res, nil
+}
+
+// seems make execute binary size increase 600KB
+// the demangle package too big
 func cppfilt(mgname string) *cppmethod {
 	cmo := &cppmethod{}
-	line, err := demangle.ToString(mgname)
-	ErrPrint(err)
+	// line, err := demangle.ToString(mgname)
+	line, err := cxa_demangle(mgname)
+	ErrPrint(err, mgname)
 	// log.Println(mgname, line)
 
 	{
@@ -273,7 +331,12 @@ func cppfilt(mgname string) *cppmethod {
 			case token.GTR:
 				idts = append(idts, tok.String())
 			default:
-				log.Println("wtt", fset.Position(pos), tok, lit, mgname)
+				if lit == "~" {
+					idts = append(idts, tok.String())
+				} else {
+					log.Printf("wtt [%v] [%v] [%v]%v [%v] [%v]\n",
+						fset.Position(pos), tok, lit, lit[0], mgname, line)
+				}
 			}
 		}
 		// log.Printf("%#v\n", cmo)

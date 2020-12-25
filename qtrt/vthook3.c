@@ -105,8 +105,8 @@ int fillin_vtable_entry(void* elfvtptr, void** arr) {
     union classvtable_mem* vtablep = elfvtptr;
     fptr *vtvirtfuncs = vtablep->cat1.virtfuncs;
     const char* vttypeinfo = vtablep->cat1.typeinfo;
-    printf("baseoffset %d, typeinfo %p, virtfuncs %p\n",
-           vtablep->cat1.baseoffset, vttypeinfo, vtvirtfuncs);
+    //printf("baseoffset %d, typeinfo %p, virtfuncs %p\n",
+    //       vtablep->cat1.baseoffset, vttypeinfo, vtvirtfuncs);
 
     int step = sizeof(ptrdiff_t);
     int offset = 0;
@@ -114,7 +114,7 @@ int fillin_vtable_entry(void* elfvtptr, void** arr) {
     Dl_info dlainfo;
 
     dladdr(vttypeinfo, &dlainfo);
-    printf("typeinfo %s\n", dlainfo.dli_sname);
+    // printf("typeinfo %s\n", dlainfo.dli_sname);
     offset += step;
 
     int haszti = 0;
@@ -134,7 +134,7 @@ int fillin_vtable_entry(void* elfvtptr, void** arr) {
             haszti = 1;
             //break;
         }
-        printf("%d r%d %d %s\n", i, rv, offset, dlainfo.dli_sname);
+        // printf("%d r%d %d %s\n", i, rv, offset, dlainfo.dli_sname);
         arr[offset/8] = (char*)sname;
     }
     return offset/8;

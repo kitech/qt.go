@@ -270,6 +270,11 @@ func callbackInheritInvokeGo(f interface{}, args ...uint64) interface{} {
 					prmval.MethodByName("SetCthis").Call([]reflect.Value{
 						reflect.ValueOf(Voidptr(uintptr(args[i])))})
 					in = append(in, prmval)
+				} else if argd1ty.String() == "qtrt.CObject" {
+					prmval := reflect.New(argd1ty)
+					prmval.Elem().FieldByName("Cthis").Set(
+						reflect.ValueOf(Voidptr(uintptr(args[i]))))
+					in = append(in, prmval)
 				} else {
 					log.Println("Unsupported:", argty.Kind().String(), argty.String())
 				}
