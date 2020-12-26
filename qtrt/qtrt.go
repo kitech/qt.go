@@ -79,10 +79,11 @@ type GetCthiser interface {
 func (this *CObject) GetCthis() Voidptr {
 	if this == nil {
 		return nil
-	} else {
-		return this.Cthis
 	}
+	return this.Cthis
 }
+
+// TODO deprecated
 func (this *CObject) SetCthis(cthis Voidptr) {
 	this.Cthis = cthis
 }
@@ -91,6 +92,7 @@ func (this *CObject) Addr() Voidptr { return Voidptr(&this.Cthis) }
 // some fixed internal names
 const GetCthisName = "GetCthis"
 const SetCthisName = "SetCthis"
+const FromptrName = "Fromptr"
 const DtorCthisName = "DtorCthis"
 const NewCthisName = "NewCthis"
 const SetInitStObjName = "C_%s_init_staticMetaObject"

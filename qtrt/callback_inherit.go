@@ -267,8 +267,16 @@ func callbackInheritInvokeGo(f interface{}, args ...uint64) interface{} {
 				reg := regexp.MustCompile(`^(qt.*\.)?Q[A-Z](.+)`)
 				if reg.MatchString(argd1ty.String()) {
 					prmval := reflect.New(argd1ty)
-					prmval.MethodByName("SetCthis").Call([]reflect.Value{
+					// impl1: new(QObject).Fromptr()
+					prmval2 := prmval.MethodByName("Fromptr").Call([]reflect.Value{
 						reflect.ValueOf(Voidptr(uintptr(args[i])))})
+					prmval = prmval2[0]
+
+					// TODO drop SetCthis
+					// impl0: new(QObject).SetCthis()
+					// prmval.MethodByName("SetCthis").Call([]reflect.Value{
+					//	reflect.ValueOf(Voidptr(uintptr(args[i])))})
+
 					in = append(in, prmval)
 				} else if argd1ty.String() == "qtrt.CObject" {
 					prmval := reflect.New(argd1ty)
