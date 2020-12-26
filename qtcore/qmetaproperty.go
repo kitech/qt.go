@@ -63,7 +63,7 @@ func DeleteQMetaProperty(this *QMetaProperty) {
 
 //  keep block begin
 
-func init_unused_10035() {
+func init_unused_10045() {
 	if false {
 		reflect.TypeOf(123)
 	}

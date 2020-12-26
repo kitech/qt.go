@@ -168,7 +168,7 @@ func QToolButton_ToolButtonPopupModeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10161() {
+func init_unused_10247() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -64,7 +64,7 @@ func DeleteQFontInfo(this *QFontInfo) {
 
 //  keep block begin
 
-func init_unused_10071() {
+func init_unused_10157() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -603,7 +603,7 @@ func QComboBox_SizeAdjustPolicyItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10123() {
+func init_unused_10209() {
 	if false {
 		reflect.TypeOf(123)
 	}

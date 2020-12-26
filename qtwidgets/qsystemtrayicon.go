@@ -453,7 +453,7 @@ func QSystemTrayIcon_MessageIconItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10157() {
+func init_unused_10243() {
 	if false {
 		reflect.TypeOf(123)
 	}

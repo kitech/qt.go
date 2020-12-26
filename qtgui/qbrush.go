@@ -84,7 +84,7 @@ func DeleteQBrush(this *QBrush) {
 
 //  keep block begin
 
-func init_unused_10057() {
+func init_unused_10143() {
 	if false {
 		reflect.TypeOf(123)
 	}

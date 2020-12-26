@@ -109,7 +109,7 @@ func (this *QWidget) WhatsThis() string {
 
 //  keep block begin
 
-func init_unused_10084() {
+func init_unused_10170() {
 	if false {
 		reflect.TypeOf(123)
 	}

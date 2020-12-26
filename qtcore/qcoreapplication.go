@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 3
+// extern C begin: 0
 */
 // import "C"
 import "unsafe"
@@ -158,7 +158,7 @@ func QCoreApplication_ItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10027() {
+func init_unused_10037() {
 	if false {
 		reflect.TypeOf(123)
 	}

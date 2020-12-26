@@ -155,7 +155,7 @@ func QAbstractSpinBox_StepTypeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10087() {
+func init_unused_10173() {
 	if false {
 		reflect.TypeOf(123)
 	}

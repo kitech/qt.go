@@ -383,7 +383,7 @@ func QPainter_CompositionModeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10077() {
+func init_unused_10163() {
 	if false {
 		reflect.TypeOf(123)
 	}

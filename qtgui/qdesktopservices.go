@@ -130,7 +130,7 @@ func DeleteQDesktopServices(this *QDesktopServices) {
 
 //  keep block begin
 
-func init_unused_10069() {
+func init_unused_10155() {
 	if false {
 		reflect.TypeOf(123)
 	}

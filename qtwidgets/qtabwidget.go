@@ -512,7 +512,7 @@ func QTabWidget_TabShapeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10091() {
+func init_unused_10177() {
 	if false {
 		reflect.TypeOf(123)
 	}

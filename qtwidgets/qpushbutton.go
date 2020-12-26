@@ -264,7 +264,7 @@ func DeleteQPushButton(this *QPushButton) {
 
 //  keep block begin
 
-func init_unused_10125() {
+func init_unused_10211() {
 	if false {
 		reflect.TypeOf(123)
 	}

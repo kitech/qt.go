@@ -1341,7 +1341,7 @@ func QFont_ResolvePropertiesItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10049() {
+func init_unused_10135() {
 	if false {
 		reflect.TypeOf(123)
 	}

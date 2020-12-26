@@ -1329,7 +1329,7 @@ func QWidget_RenderFlagItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10083() {
+func init_unused_10169() {
 	if false {
 		reflect.TypeOf(123)
 	}

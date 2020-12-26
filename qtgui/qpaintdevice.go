@@ -369,7 +369,7 @@ func QPaintDevice_PaintDeviceMetricItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10051() {
+func init_unused_10137() {
 	if false {
 		reflect.TypeOf(123)
 	}

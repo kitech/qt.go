@@ -177,7 +177,7 @@ func QApplication_ColorSpecItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10101() {
+func init_unused_10187() {
 	if false {
 		reflect.TypeOf(123)
 	}

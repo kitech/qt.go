@@ -318,7 +318,7 @@ func QPlainTextEdit_LineWrapModeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10143() {
+func init_unused_10229() {
 	if false {
 		reflect.TypeOf(123)
 	}

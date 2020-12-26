@@ -484,7 +484,7 @@ func QGraphicsItem_ExtensionItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10127() {
+func init_unused_10213() {
 	if false {
 		reflect.TypeOf(123)
 	}

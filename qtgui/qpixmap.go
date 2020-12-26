@@ -86,7 +86,7 @@ func DeleteQPixmap(this *QPixmap) {
 
 //  keep block begin
 
-func init_unused_10055() {
+func init_unused_10141() {
 	if false {
 		reflect.TypeOf(123)
 	}

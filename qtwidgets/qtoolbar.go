@@ -192,7 +192,7 @@ func DeleteQToolBar(this *QToolBar) {
 
 //  keep block begin
 
-func init_unused_10159() {
+func init_unused_10245() {
 	if false {
 		reflect.TypeOf(123)
 	}

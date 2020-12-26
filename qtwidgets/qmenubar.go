@@ -299,7 +299,7 @@ func DeleteQMenuBar(this *QMenuBar) {
 
 //  keep block begin
 
-func init_unused_10141() {
+func init_unused_10227() {
 	if false {
 		reflect.TypeOf(123)
 	}

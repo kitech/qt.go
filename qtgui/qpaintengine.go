@@ -422,7 +422,7 @@ func QPaintEngine_TypeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10079() {
+func init_unused_10165() {
 	if false {
 		reflect.TypeOf(123)
 	}

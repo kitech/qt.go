@@ -190,7 +190,7 @@ func QClipboard_ModeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10067() {
+func init_unused_10153() {
 	if false {
 		reflect.TypeOf(123)
 	}

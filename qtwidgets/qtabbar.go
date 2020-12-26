@@ -502,7 +502,7 @@ func QTabBar_SelectionBehaviorItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10089() {
+func init_unused_10175() {
 	if false {
 		reflect.TypeOf(123)
 	}

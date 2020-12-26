@@ -84,7 +84,7 @@ func DeleteQPen(this *QPen) {
 
 //  keep block begin
 
-func init_unused_10059() {
+func init_unused_10145() {
 	if false {
 		reflect.TypeOf(123)
 	}

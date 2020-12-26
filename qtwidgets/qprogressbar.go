@@ -314,7 +314,7 @@ func QProgressBar_DirectionItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10145() {
+func init_unused_10231() {
 	if false {
 		reflect.TypeOf(123)
 	}

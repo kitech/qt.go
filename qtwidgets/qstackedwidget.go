@@ -298,7 +298,7 @@ func DeleteQStackedWidget(this *QStackedWidget) {
 
 //  keep block begin
 
-func init_unused_10153() {
+func init_unused_10239() {
 	if false {
 		reflect.TypeOf(123)
 	}

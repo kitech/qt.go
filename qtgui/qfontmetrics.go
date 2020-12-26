@@ -64,7 +64,7 @@ func DeleteQFontMetrics(this *QFontMetrics) {
 
 //  keep block begin
 
-func init_unused_10073() {
+func init_unused_10159() {
 	if false {
 		reflect.TypeOf(123)
 	}

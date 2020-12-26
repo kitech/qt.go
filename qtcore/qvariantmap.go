@@ -23,7 +23,7 @@ import "github.com/kitech/qt.go/qtrt"
 
 //  keep block begin
 
-func init_unused_10235() {
+func init_unused_10321() {
 	if false {
 		reflect.TypeOf(123)
 	}

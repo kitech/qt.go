@@ -66,7 +66,7 @@ func DeleteQGuiApplication(this *QGuiApplication) {
 
 //  keep block begin
 
-func init_unused_10075() {
+func init_unused_10161() {
 	if false {
 		reflect.TypeOf(123)
 	}
