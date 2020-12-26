@@ -132,9 +132,9 @@ func (this *QCoreApplication) Translatep1(context string, key string, disambigua
 }
 
 func DeleteQCoreApplication(this *QCoreApplication) {
-	rv, err := qtrt.Qtcc1(0, "_ZN16QCoreApplicationD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(1209240029, "_ZN16QCoreApplicationD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 /*

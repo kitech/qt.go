@@ -283,9 +283,9 @@ func QPaintDevice_DevicePixelRatioFScale() float64 {
 }
 
 func DeleteQPaintDevice(this *QPaintDevice) {
-	rv, err := qtrt.Qtcc1(0, "_ZN12QPaintDeviceD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(1245730511, "_ZN12QPaintDeviceD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 /*

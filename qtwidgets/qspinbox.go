@@ -232,9 +232,9 @@ func (this *QSpinBox) TextChanged(arg0 string) {
 }
 
 func DeleteQSpinBox(this *QSpinBox) {
-	rv, err := qtrt.Qtcc1(0, "_ZN8QSpinBoxD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(4123635640, "_ZN8QSpinBoxD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 //  body block end

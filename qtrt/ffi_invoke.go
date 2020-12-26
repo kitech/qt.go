@@ -364,6 +364,9 @@ func Qtcc3(symcrc uint32, symname string, retype Voidptr, args ...Voidptr) (VRet
 }
 
 func getSymAddrRawCached(symcrc uint32, symname string) Voidptr {
+	if symcrc == 0 || symname == "" {
+		log.Println("Some mistake here", symcrc, symname)
+	}
 	var addr Voidptr
 	addrx, ok := symcache.Load(symcrc)
 	if ok {

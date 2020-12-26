@@ -76,9 +76,9 @@ func (*QLayout) Fromptr(cthis Voidptr) *QLayout {
 }
 
 func DeleteQLayout(this *QLayout) {
-	rv, err := qtrt.Qtcc1(0, "_ZN7QLayoutD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(925367012, "_ZN7QLayoutD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 /*

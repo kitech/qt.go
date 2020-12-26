@@ -75,9 +75,9 @@ func NewQPen() *QPen {
 }
 
 func DeleteQPen(this *QPen) {
-	rv, err := qtrt.Qtcc1(0, "_ZN4QPenD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(2669083784, "_ZN4QPenD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 //  body block end

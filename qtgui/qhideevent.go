@@ -57,9 +57,9 @@ func (*QHideEvent) Fromptr(cthis Voidptr) *QHideEvent {
 }
 
 func DeleteQHideEvent(this *QHideEvent) {
-	rv, err := qtrt.Qtcc1(0, "_ZN10QHideEventD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(4019755370, "_ZN10QHideEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 //  body block end

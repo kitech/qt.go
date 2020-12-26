@@ -136,9 +136,9 @@ func (this *QToolButton) Triggered(arg0 QAction_ITF /*777 QAction **/) {
 }
 
 func DeleteQToolButton(this *QToolButton) {
-	rv, err := qtrt.Qtcc1(0, "_ZN11QToolButtonD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(804693516, "_ZN11QToolButtonD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 /*

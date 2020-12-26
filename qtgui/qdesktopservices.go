@@ -121,9 +121,9 @@ func QDesktopServices_UnsetUrlHandler(scheme string) {
 }
 
 func DeleteQDesktopServices(this *QDesktopServices) {
-	rv, err := qtrt.Qtcc1(0, "_ZN16QDesktopServicesD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(1858443276, "_ZN16QDesktopServicesD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 //  body block end

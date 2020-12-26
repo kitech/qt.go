@@ -55,9 +55,9 @@ func (*QColor) Fromptr(cthis Voidptr) *QColor {
 }
 
 func DeleteQColor(this *QColor) {
-	rv, err := qtrt.Qtcc1(0, "_ZN6QColorD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(53046149, "_ZN6QColorD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 /*

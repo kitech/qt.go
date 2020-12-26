@@ -192,9 +192,9 @@ func (this *QObject) SetParent(parent QObject_ITF /*777 QObject **/) {
 }
 
 func DeleteQObject(this *QObject) {
-	rv, err := qtrt.Qtcc1(0, "_ZN7QObjectD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(1716974882, "_ZN7QObjectD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 //  body block end

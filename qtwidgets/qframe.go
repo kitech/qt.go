@@ -189,9 +189,9 @@ func (this *QFrame) SizeHint() *qtcore.QSize /*123*/ {
 }
 
 func DeleteQFrame(this *QFrame) {
-	rv, err := qtrt.Qtcc1(0, "_ZN6QFrameD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(1356824937, "_ZN6QFrameD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 /*

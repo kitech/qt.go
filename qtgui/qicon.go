@@ -75,9 +75,9 @@ func NewQIcon() *QIcon {
 }
 
 func DeleteQIcon(this *QIcon) {
-	rv, err := qtrt.Qtcc1(0, "_ZN5QIconD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(3436335819, "_ZN5QIconD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 /*

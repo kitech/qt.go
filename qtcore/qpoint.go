@@ -54,9 +54,9 @@ func (*QPoint) Fromptr(cthis Voidptr) *QPoint {
 }
 
 func DeleteQPoint(this *QPoint) {
-	rv, err := qtrt.Qtcc1(0, "_ZN6QPointD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(2151685267, "_ZN6QPointD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 //  body block end

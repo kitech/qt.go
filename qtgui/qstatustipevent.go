@@ -57,9 +57,9 @@ func (*QStatusTipEvent) Fromptr(cthis Voidptr) *QStatusTipEvent {
 }
 
 func DeleteQStatusTipEvent(this *QStatusTipEvent) {
-	rv, err := qtrt.Qtcc1(0, "_ZN15QStatusTipEventD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(223208154, "_ZN15QStatusTipEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 //  body block end

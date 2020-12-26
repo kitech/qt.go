@@ -60,9 +60,9 @@ func (*QGraphicsEffect) Fromptr(cthis Voidptr) *QGraphicsEffect {
 }
 
 func DeleteQGraphicsEffect(this *QGraphicsEffect) {
-	rv, err := qtrt.Qtcc1(0, "_ZN15QGraphicsEffectD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(2205524303, "_ZN15QGraphicsEffectD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 /*

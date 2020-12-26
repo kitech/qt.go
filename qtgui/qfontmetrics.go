@@ -55,9 +55,9 @@ func (*QFontMetrics) Fromptr(cthis Voidptr) *QFontMetrics {
 }
 
 func DeleteQFontMetrics(this *QFontMetrics) {
-	rv, err := qtrt.Qtcc1(0, "_ZN12QFontMetricsD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(1609985194, "_ZN12QFontMetricsD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 //  body block end

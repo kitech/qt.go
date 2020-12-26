@@ -356,9 +356,9 @@ func (this *QLabel) Clear() {
 }
 
 func DeleteQLabel(this *QLabel) {
-	rv, err := qtrt.Qtcc1(0, "_ZN6QLabelD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(3882796990, "_ZN6QLabelD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 //  body block end

@@ -188,9 +188,9 @@ func (this *QRadioButton) MinimumSizeHint() *qtcore.QSize /*123*/ {
 }
 
 func DeleteQRadioButton(this *QRadioButton) {
-	rv, err := qtrt.Qtcc1(0, "_ZN12QRadioButtonD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(3108312079, "_ZN12QRadioButtonD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 //  body block end

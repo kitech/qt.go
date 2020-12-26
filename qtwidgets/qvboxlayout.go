@@ -102,9 +102,9 @@ func NewQVBoxLayout1(parent QWidget_ITF /*777 QWidget **/) *QVBoxLayout {
 }
 
 func DeleteQVBoxLayout(this *QVBoxLayout) {
-	rv, err := qtrt.Qtcc1(0, "_ZN11QVBoxLayoutD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(3183586966, "_ZN11QVBoxLayoutD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 //  body block end

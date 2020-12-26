@@ -56,9 +56,9 @@ func (*QTimerEvent) Fromptr(cthis Voidptr) *QTimerEvent {
 }
 
 func DeleteQTimerEvent(this *QTimerEvent) {
-	rv, err := qtrt.Qtcc1(0, "_ZN11QTimerEventD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(1009211296, "_ZN11QTimerEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 //  body block end

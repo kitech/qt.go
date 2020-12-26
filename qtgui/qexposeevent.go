@@ -57,9 +57,9 @@ func (*QExposeEvent) Fromptr(cthis Voidptr) *QExposeEvent {
 }
 
 func DeleteQExposeEvent(this *QExposeEvent) {
-	rv, err := qtrt.Qtcc1(0, "_ZN12QExposeEventD2Ev", qtrt.FFITY_VOID, this.GetCthis())
+	rv, err := qtrt.Qtcc3(1889365036, "_ZN12QExposeEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint2(err, rv)
-	this.SetCthis(nil)
+	//this.SetCthis(nil)
 }
 
 //  body block end
