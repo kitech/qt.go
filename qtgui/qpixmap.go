@@ -76,6 +76,104 @@ func NewQPixmap() *QPixmap {
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qpixmap.h:66
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QPixmap(int, int)
+
+/*
+ */
+func (*QPixmap) NewForInherit1(w int, h int) *QPixmap {
+	return NewQPixmap1(w, h)
+}
+func NewQPixmap1(w int, h int) *QPixmap {
+	cthis := qtrt.Malloc(32)
+	rv, err := qtrt.Qtcc3(3559070313, "_ZN7QPixmapC2Eii", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_INT, Voidptr(&cthis), Voidptr(&w), Voidptr(&h))
+	qtrt.ErrPrint3(err, rv)
+	gothis := QPixmapFromptr(cthis)
+	qtrt.SetFinalizer(gothis, DeleteQPixmap)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qpixmap.h:86
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [4] int width() const
+
+/*
+ */
+func (this *QPixmap) Width() int {
+	rv, err := qtrt.Qtcc3(494131390, "_ZNK7QPixmap5widthEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
+}
+
+// /usr/include/qt/QtGui/qpixmap.h:87
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [4] int height() const
+
+/*
+ */
+func (this *QPixmap) Height() int {
+	rv, err := qtrt.Qtcc3(1443543034, "_ZNK7QPixmap6heightEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
+}
+
+// /usr/include/qt/QtGui/qpixmap.h:89
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [16] QRect rect() const
+
+/*
+ */
+func (this *QPixmap) Rect() *qtcore.QRect /*123*/ {
+	rv, err := qtrt.Qtcc3(4207271430, "_ZNK7QPixmap4rectEv", qtrt.FFITO_UINT128,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(16)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 16)
+	rv2 := qtcore.QRectFromptr(cthis) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQRect)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qpixmap.h:94
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void fill(const QColor &)
+
+/*
+ */
+func (this *QPixmap) Fill(fillColor QColor_ITF) {
+	var convArg0 Voidptr
+	if fillColor != nil && fillColor.QColor_PTR() != nil {
+		convArg0 = fillColor.QColor_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc3(2168313289, "_ZN7QPixmap4fillERK6QColor", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint3(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpixmap.h:94
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void fill(const QColor &)
+
+/*
+ */
+func (this *QPixmap) Fillp() {
+	// arg: 0, const QColor &=LValueReference, QColor=Record, , Invalid
+	var convArg0 Voidptr
+	rv, err := qtrt.Qtcc3(2168313289, "_ZN7QPixmap4fillERK6QColor", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint3(err, rv)
+}
+
 func DeleteQPixmap(this *QPixmap) {
 	rv, err := qtrt.Qtcc3(2275397216, "_ZN7QPixmapD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint3(err, rv)

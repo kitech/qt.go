@@ -201,7 +201,7 @@ func DeleteQRadioButton(this *QRadioButton) {
 
 //  keep block begin
 
-func init_unused_10241() {
+func init_unused_10243() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -18,7 +18,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 3
 */
 // import "C"
 import "unsafe"
@@ -136,7 +136,7 @@ func QWindow_AncestorModeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10159() {
+func init_unused_10161() {
 	if false {
 		reflect.TypeOf(123)
 	}

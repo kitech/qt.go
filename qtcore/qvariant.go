@@ -654,7 +654,7 @@ func (this *QVariant) ToPoint() *QPoint /*123*/ {
 /*
  */
 func (this *QVariant) ToPointF() *QPointF /*123*/ {
-	rv, err := qtrt.Qtcc3(512643617, "_ZNK8QVariant8toPointFEv", qtrt.FFITO_POINTER,
+	rv, err := qtrt.Qtcc3(512643617, "_ZNK8QVariant8toPointFEv", qtrt.FFITO_UINT128,
 		qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint3(err, rv)
 	cthis := qtrt.Malloc(16)
@@ -672,7 +672,7 @@ func (this *QVariant) ToPointF() *QPointF /*123*/ {
 /*
  */
 func (this *QVariant) ToRect() *QRect /*123*/ {
-	rv, err := qtrt.Qtcc3(4043762194, "_ZNK8QVariant6toRectEv", qtrt.FFITO_POINTER,
+	rv, err := qtrt.Qtcc3(4043762194, "_ZNK8QVariant6toRectEv", qtrt.FFITO_UINT128,
 		qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint3(err, rv)
 	cthis := qtrt.Malloc(16)
@@ -708,7 +708,7 @@ func (this *QVariant) ToSize() *QSize /*123*/ {
 /*
  */
 func (this *QVariant) ToSizeF() *QSizeF /*123*/ {
-	rv, err := qtrt.Qtcc3(3575902903, "_ZNK8QVariant7toSizeFEv", qtrt.FFITO_POINTER,
+	rv, err := qtrt.Qtcc3(3575902903, "_ZNK8QVariant7toSizeFEv", qtrt.FFITO_UINT128,
 		qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint3(err, rv)
 	cthis := qtrt.Malloc(16)
@@ -726,7 +726,7 @@ func (this *QVariant) ToSizeF() *QSizeF /*123*/ {
 /*
  */
 func (this *QVariant) ToLine() *QLine /*123*/ {
-	rv, err := qtrt.Qtcc3(3802428770, "_ZNK8QVariant6toLineEv", qtrt.FFITO_POINTER,
+	rv, err := qtrt.Qtcc3(3802428770, "_ZNK8QVariant6toLineEv", qtrt.FFITO_UINT128,
 		qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint3(err, rv)
 	cthis := qtrt.Malloc(16)

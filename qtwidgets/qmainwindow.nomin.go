@@ -150,7 +150,7 @@ func (this *QMainWindow) AddToolBar(title string) *QToolBar /*777 QToolBar **/ {
 
 //  keep block begin
 
-func init_unused_10232() {
+func init_unused_10234() {
 	if false {
 		reflect.TypeOf(123)
 	}

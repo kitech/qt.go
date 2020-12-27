@@ -321,7 +321,7 @@ func DeleteQGroupBox(this *QGroupBox) {
 
 //  keep block begin
 
-func init_unused_10225() {
+func init_unused_10227() {
 	if false {
 		reflect.TypeOf(123)
 	}

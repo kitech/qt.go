@@ -201,7 +201,7 @@ func DeleteQWidgetItem(this *QWidgetItem) {
 
 //  keep block begin
 
-func init_unused_10201() {
+func init_unused_10203() {
 	if false {
 		reflect.TypeOf(123)
 	}

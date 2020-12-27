@@ -356,7 +356,7 @@ func (this *QMetaObject) IndexOfClassInfo(name string) int {
 /*
  */
 func (this *QMetaObject) Constructor(index int) *QMetaMethod /*123*/ {
-	rv, err := qtrt.Qtcc3(3534876830, "_ZNK11QMetaObject11constructorEi", qtrt.FFITO_POINTER,
+	rv, err := qtrt.Qtcc3(3534876830, "_ZNK11QMetaObject11constructorEi", qtrt.FFITO_UINT128,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
 	qtrt.ErrPrint3(err, rv)
 	cthis := qtrt.Malloc(16)
@@ -374,7 +374,7 @@ func (this *QMetaObject) Constructor(index int) *QMetaMethod /*123*/ {
 /*
  */
 func (this *QMetaObject) Method(index int) *QMetaMethod /*123*/ {
-	rv, err := qtrt.Qtcc3(981682568, "_ZNK11QMetaObject6methodEi", qtrt.FFITO_POINTER,
+	rv, err := qtrt.Qtcc3(981682568, "_ZNK11QMetaObject6methodEi", qtrt.FFITO_UINT128,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
 	qtrt.ErrPrint3(err, rv)
 	cthis := qtrt.Malloc(16)
@@ -392,7 +392,7 @@ func (this *QMetaObject) Method(index int) *QMetaMethod /*123*/ {
 /*
  */
 func (this *QMetaObject) Enumerator(index int) *QMetaEnum /*123*/ {
-	rv, err := qtrt.Qtcc3(819545584, "_ZNK11QMetaObject10enumeratorEi", qtrt.FFITO_POINTER,
+	rv, err := qtrt.Qtcc3(819545584, "_ZNK11QMetaObject10enumeratorEi", qtrt.FFITO_UINT128,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
 	qtrt.ErrPrint3(err, rv)
 	cthis := qtrt.Malloc(16)
@@ -428,7 +428,7 @@ func (this *QMetaObject) Property(index int) *QMetaProperty /*123*/ {
 /*
  */
 func (this *QMetaObject) ClassInfo(index int) *QMetaClassInfo /*123*/ {
-	rv, err := qtrt.Qtcc3(1372127368, "_ZNK11QMetaObject9classInfoEi", qtrt.FFITO_POINTER,
+	rv, err := qtrt.Qtcc3(1372127368, "_ZNK11QMetaObject9classInfoEi", qtrt.FFITO_UINT128,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
 	qtrt.ErrPrint3(err, rv)
 	cthis := qtrt.Malloc(16)

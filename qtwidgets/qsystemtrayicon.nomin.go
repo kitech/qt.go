@@ -72,7 +72,7 @@ func (this *QSystemTrayIcon) ContextMenu() *QMenu /*777 QMenu **/ {
 
 //  keep block begin
 
-func init_unused_10252() {
+func init_unused_10254() {
 	if false {
 		reflect.TypeOf(123)
 	}

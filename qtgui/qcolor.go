@@ -54,6 +54,68 @@ func (*QColor) Fromptr(cthis Voidptr) *QColor {
 	return QColorFromptr(cthis)
 }
 
+// /usr/include/qt/QtGui/qcolor.h:70
+// index:0
+// Public inline Visibility=Default Availability=Available
+// [-2] void QColor()
+
+/*
+ */
+func (*QColor) NewForInherit() *QColor {
+	return NewQColor()
+}
+func NewQColor() *QColor {
+	cthis := qtrt.Malloc(16)
+	rv, err := qtrt.Qtcc3(2667467580, "_ZN6QColorC2Ev", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, Voidptr(&cthis))
+	qtrt.ErrPrint3(err, rv)
+	gothis := QColorFromptr(cthis)
+	qtrt.SetFinalizer(gothis, DeleteQColor)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qcolor.h:73
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [-2] void QColor(int, int, int, int)
+
+/*
+ */
+func (*QColor) NewForInherit1(r int, g int, b int, a int) *QColor {
+	return NewQColor1(r, g, b, a)
+}
+func NewQColor1(r int, g int, b int, a int) *QColor {
+	cthis := qtrt.Malloc(16)
+	rv, err := qtrt.Qtcc3(3599673984, "_ZN6QColorC2Eiiii", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_INT, Voidptr(&cthis), Voidptr(&r), Voidptr(&g), Voidptr(&b), Voidptr(&a))
+	qtrt.ErrPrint3(err, rv)
+	gothis := QColorFromptr(cthis)
+	qtrt.SetFinalizer(gothis, DeleteQColor)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qcolor.h:73
+// index:1
+// Public inline Visibility=Default Availability=Available
+// [-2] void QColor(int, int, int, int)
+
+/*
+ */
+func (*QColor) NewForInherit1p(r int, g int, b int) *QColor {
+	return NewQColor1p(r, g, b)
+}
+func NewQColor1p(r int, g int, b int) *QColor {
+	// arg: 3, int=Int, =Invalid, , Invalid
+	a := int(255)
+	cthis := qtrt.Malloc(16)
+	rv, err := qtrt.Qtcc3(3599673984, "_ZN6QColorC2Eiiii", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_INT, Voidptr(&cthis), Voidptr(&r), Voidptr(&g), Voidptr(&b), Voidptr(&a))
+	qtrt.ErrPrint3(err, rv)
+	gothis := QColorFromptr(cthis)
+	qtrt.SetFinalizer(gothis, DeleteQColor)
+	return gothis
+}
+
 func DeleteQColor(this *QColor) {
 	rv, err := qtrt.Qtcc3(53046149, "_ZN6QColorD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint3(err, rv)

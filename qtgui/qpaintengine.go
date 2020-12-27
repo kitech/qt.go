@@ -18,7 +18,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 2
+// extern C begin: 5
 */
 // import "C"
 import "unsafe"
@@ -422,7 +422,7 @@ func QPaintEngine_TypeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10173() {
+func init_unused_10175() {
 	if false {
 		reflect.TypeOf(123)
 	}

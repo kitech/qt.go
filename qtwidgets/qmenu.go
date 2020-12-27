@@ -350,7 +350,7 @@ func DeleteQMenu(this *QMenu) {
 
 //  keep block begin
 
-func init_unused_10233() {
+func init_unused_10235() {
 	if false {
 		reflect.TypeOf(123)
 	}

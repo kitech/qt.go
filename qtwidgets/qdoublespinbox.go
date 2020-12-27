@@ -241,7 +241,7 @@ func DeleteQDoubleSpinBox(this *QDoubleSpinBox) {
 
 //  keep block begin
 
-func init_unused_10245() {
+func init_unused_10247() {
 	if false {
 		reflect.TypeOf(123)
 	}

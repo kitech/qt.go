@@ -155,7 +155,7 @@ func DeleteQAbstractScrollArea(this *QAbstractScrollArea) {
 
 //  keep block begin
 
-func init_unused_10190() {
+func init_unused_10192() {
 	if false {
 		reflect.TypeOf(123)
 	}

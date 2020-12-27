@@ -38,6 +38,16 @@ func (this *QAbstractItemModel) InheritCreateIndex(f func(row int, column int, d
 	qtrt.SetAllInheritCallback(this, "createIndex", f)
 }
 
+// void beginResetModel()
+func (this *QAbstractItemModel) InheritBeginResetModel(f func() /*void*/) {
+	qtrt.SetAllInheritCallback(this, "beginResetModel", f)
+}
+
+// void endResetModel()
+func (this *QAbstractItemModel) InheritEndResetModel(f func() /*void*/) {
+	qtrt.SetAllInheritCallback(this, "endResetModel", f)
+}
+
 /*
  */
 // size 16
@@ -876,6 +886,32 @@ func (this *QAbstractItemModel) CreateIndex1(row int, column int, id uint64) *QM
 	rv2 := /*==*/ QModelIndexFromptr(rv.Ptr()) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQModelIndex)
 	return rv2
+}
+
+// /usr/include/qt/QtCore/qabstractitemmodel.h:344
+// index:0
+// Protected Ignore Visibility=Default Availability=Available
+// [-2] void beginResetModel()
+
+/*
+ */
+func (this *QAbstractItemModel) BeginResetModel() {
+	rv, err := qtrt.Qtcc3(2958635407, "_ZN18QAbstractItemModel15beginResetModelEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+}
+
+// /usr/include/qt/QtCore/qabstractitemmodel.h:345
+// index:0
+// Protected Ignore Visibility=Default Availability=Available
+// [-2] void endResetModel()
+
+/*
+ */
+func (this *QAbstractItemModel) EndResetModel() {
+	rv, err := qtrt.Qtcc3(2568843013, "_ZN18QAbstractItemModel13endResetModelEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
 }
 
 func DeleteQAbstractItemModel(this *QAbstractItemModel) {

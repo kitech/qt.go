@@ -241,7 +241,7 @@ func QMainWindow_DockOptionItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10231() {
+func init_unused_10233() {
 	if false {
 		reflect.TypeOf(123)
 	}

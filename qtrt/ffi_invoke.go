@@ -96,6 +96,7 @@ import (
 	"runtime"
 	"strings"
 	"sync"
+	"unsafe"
 
 	"github.com/kitech/dl/asmcgocall"
 )
@@ -697,23 +698,38 @@ const (
 const (
 	FFITY_VOID    = byte(C.FFI_TYPE_VOID)
 	FFITY_POINTER = byte(C.FFI_TYPE_POINTER)
+	FFITY_STRUCT  = byte(C.FFI_TYPE_STRUCT)
 )
 
 // 由于FFI调用实际使用的是对象类型，可以方便地直接使用，不需要转换
 var (
-	FFITO_VOID    = Voidptr(&C.ffi_type_void)
-	FFITO_POINTER = Voidptr(&C.ffi_type_pointer)
-	FFITO_INT     = Voidptr(&C.ffi_type_sint32)
-	FFITO_FLOAT   = Voidptr(&C.ffi_type_float)
-	FFITO_DOUBLE  = Voidptr(&C.ffi_type_double)
-	FFITO_SINT16  = Voidptr(&C.ffi_type_sint16)
-	FFITO_UINT16  = Voidptr(&C.ffi_type_uint16)
-	FFITO_SINT32  = Voidptr(&C.ffi_type_sint32)
-	FFITO_UINT32  = Voidptr(&C.ffi_type_uint32)
-	FFITO_SINT64  = Voidptr(&C.ffi_type_sint64)
-	FFITO_UINT64  = Voidptr(&C.ffi_type_uint64)
+	FFITO_VOID       = Voidptr(&C.ffi_type_void)
+	FFITO_POINTER    = Voidptr(&C.ffi_type_pointer)
+	FFITO_INT        = Voidptr(&C.ffi_type_sint32)
+	FFITO_FLOAT      = Voidptr(&C.ffi_type_float)
+	FFITO_DOUBLE     = Voidptr(&C.ffi_type_double)
+	FFITO_LONGDOUBLE = Voidptr(&C.ffi_type_longdouble)
+	FFITO_SINT16     = Voidptr(&C.ffi_type_sint16)
+	FFITO_UINT16     = Voidptr(&C.ffi_type_uint16)
+	FFITO_SINT32     = Voidptr(&C.ffi_type_sint32)
+	FFITO_UINT32     = Voidptr(&C.ffi_type_uint32)
+	FFITO_SINT64     = Voidptr(&C.ffi_type_sint64)
+	FFITO_UINT64     = Voidptr(&C.ffi_type_uint64)
 	//FFITO_STRUCT  = Voidptr(&C.ffi_type_struct)
+	FFITO_UINT128 = Voidptr(uintptr(0))
+
+	retype_elems = [3]Voidptr{FFITO_UINT64, FFITO_UINT64, Voidptr(uintptr(0))}
 )
+
+func init() { init_ffi_type_uint128() }
+func init_ffi_type_uint128() {
+	ftu128 := &C.ffi_type{}
+	ftu128.size = C.ulong(unsafe.Sizeof(RetypeU128{}))
+	ftu128.alignment = 0
+	ftu128._type = C.ushort(FFITY_STRUCT)
+	ftu128.elements = (**C.ffi_type)(Voidptr(&retype_elems[0]))
+	FFITO_UINT128 = Voidptr(ftu128)
+}
 
 // func KeepMe() {}
 

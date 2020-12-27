@@ -3,7 +3,7 @@ package qtcore
 import "unsafe"
 import "github.com/kitech/qt.go/qtrt"
 
-func init_unused_10259() {
+func init_unused_10261() {
 	if false {
 		_ = unsafe.Pointer(uintptr(0))
 	}

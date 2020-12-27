@@ -386,7 +386,7 @@ func DeleteQStatusBar(this *QStatusBar) {
 
 //  keep block begin
 
-func init_unused_10249() {
+func init_unused_10251() {
 	if false {
 		reflect.TypeOf(123)
 	}

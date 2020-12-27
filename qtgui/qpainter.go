@@ -92,6 +92,130 @@ func (this *QPainter) Device() *QPaintDevice /*777 QPaintDevice **/ {
 	return /*==*/ QPaintDeviceFromptr(rv.Ptr()) // 444
 }
 
+// /usr/include/qt/QtGui/qpainter.h:442
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void drawText(const QRect &, int, const QString &, QRect *)
+
+/*
+ */
+func (this *QPainter) DrawText(r qtcore.QRect_ITF, flags int, text string, br qtcore.QRect_ITF /*777 QRect **/) {
+	var convArg0 Voidptr
+	if r != nil && r.QRect_PTR() != nil {
+		convArg0 = r.QRect_PTR().GetCthis()
+	}
+	var tmpArg2 = qtcore.NewQString5(text)
+	var convArg2 = tmpArg2.GetCthis()
+	var convArg3 Voidptr
+	if br != nil && br.QRect_PTR() != nil {
+		convArg3 = br.QRect_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc3(2115100769, "_ZN8QPainter8drawTextERK5QRectiRK7QStringPS0_", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0), Voidptr(&flags), Voidptr(&convArg2), Voidptr(&convArg3))
+	qtrt.ErrPrint3(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpainter.h:442
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void drawText(const QRect &, int, const QString &, QRect *)
+
+/*
+ */
+func (this *QPainter) DrawTextp(r qtcore.QRect_ITF, flags int, text string) {
+	var convArg0 Voidptr
+	if r != nil && r.QRect_PTR() != nil {
+		convArg0 = r.QRect_PTR().GetCthis()
+	}
+	var tmpArg2 = qtcore.NewQString5(text)
+	var convArg2 = tmpArg2.GetCthis()
+	// arg: 3, QRect *=Pointer, QRect=Record, , Invalid
+	var convArg3 Voidptr
+	rv, err := qtrt.Qtcc3(2115100769, "_ZN8QPainter8drawTextERK5QRectiRK7QStringPS0_", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0), Voidptr(&flags), Voidptr(&convArg2), Voidptr(&convArg3))
+	qtrt.ErrPrint3(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpainter.h:443
+// index:1
+// Public inline Ignore Visibility=Default Availability=Available
+// [-2] void drawText(int, int, int, int, int, const QString &, QRect *)
+
+/*
+ */
+func (this *QPainter) DrawText1(x int, y int, w int, h int, flags int, text string, br qtcore.QRect_ITF /*777 QRect **/) {
+	var tmpArg5 = qtcore.NewQString5(text)
+	var convArg5 = tmpArg5.GetCthis()
+	var convArg6 Voidptr
+	if br != nil && br.QRect_PTR() != nil {
+		convArg6 = br.QRect_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc3(4132837198, "_ZN8QPainter8drawTextEiiiiiRK7QStringP5QRect", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&x), Voidptr(&y), Voidptr(&w), Voidptr(&h), Voidptr(&flags), Voidptr(&convArg5), Voidptr(&convArg6))
+	qtrt.ErrPrint3(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpainter.h:443
+// index:1
+// Public inline Ignore Visibility=Default Availability=Available
+// [-2] void drawText(int, int, int, int, int, const QString &, QRect *)
+
+/*
+ */
+func (this *QPainter) DrawText1p(x int, y int, w int, h int, flags int, text string) {
+	var tmpArg5 = qtcore.NewQString5(text)
+	var convArg5 = tmpArg5.GetCthis()
+	// arg: 6, QRect *=Pointer, QRect=Record, , Invalid
+	var convArg6 Voidptr
+	rv, err := qtrt.Qtcc3(4132837198, "_ZN8QPainter8drawTextEiiiiiRK7QStringP5QRect", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&x), Voidptr(&y), Voidptr(&w), Voidptr(&h), Voidptr(&flags), Voidptr(&convArg5), Voidptr(&convArg6))
+	qtrt.ErrPrint3(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpainter.h:445
+// index:2
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void drawText(const QRectF &, const QString &, const QTextOption &)
+
+/*
+ */
+func (this *QPainter) DrawText2(r qtcore.QRectF_ITF, text string, o QTextOption_ITF) {
+	var convArg0 Voidptr
+	if r != nil && r.QRectF_PTR() != nil {
+		convArg0 = r.QRectF_PTR().GetCthis()
+	}
+	var tmpArg1 = qtcore.NewQString5(text)
+	var convArg1 = tmpArg1.GetCthis()
+	var convArg2 Voidptr
+	if o != nil && o.QTextOption_PTR() != nil {
+		convArg2 = o.QTextOption_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc3(1906770236, "_ZN8QPainter8drawTextERK6QRectFRK7QStringRK11QTextOption", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0), Voidptr(&convArg1), Voidptr(&convArg2))
+	qtrt.ErrPrint3(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpainter.h:445
+// index:2
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void drawText(const QRectF &, const QString &, const QTextOption &)
+
+/*
+ */
+func (this *QPainter) DrawText2p(r qtcore.QRectF_ITF, text string) {
+	var convArg0 Voidptr
+	if r != nil && r.QRectF_PTR() != nil {
+		convArg0 = r.QRectF_PTR().GetCthis()
+	}
+	var tmpArg1 = qtcore.NewQString5(text)
+	var convArg1 = tmpArg1.GetCthis()
+	// arg: 2, const QTextOption &=LValueReference, QTextOption=Record, , Invalid
+	var convArg2 Voidptr
+	rv, err := qtrt.Qtcc3(1906770236, "_ZN8QPainter8drawTextERK6QRectFRK7QStringRK11QTextOption", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0), Voidptr(&convArg1), Voidptr(&convArg2))
+	qtrt.ErrPrint3(err, rv)
+}
+
 func DeleteQPainter(this *QPainter) {
 	rv, err := qtrt.Qtcc3(2229242048, "_ZN8QPainterD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint3(err, rv)
@@ -383,7 +507,7 @@ func QPainter_CompositionModeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10171() {
+func init_unused_10173() {
 	if false {
 		reflect.TypeOf(123)
 	}

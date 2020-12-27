@@ -278,7 +278,7 @@ func QFrame_StyleMaskItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10187() {
+func init_unused_10189() {
 	if false {
 		reflect.TypeOf(123)
 	}

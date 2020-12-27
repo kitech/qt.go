@@ -418,7 +418,7 @@ func DeleteQAbstractButton(this *QAbstractButton) {
 
 //  keep block begin
 
-func init_unused_10179() {
+func init_unused_10181() {
 	if false {
 		reflect.TypeOf(123)
 	}

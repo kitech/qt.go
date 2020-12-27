@@ -365,7 +365,7 @@ func DeleteQLabel(this *QLabel) {
 
 //  keep block begin
 
-func init_unused_10227() {
+func init_unused_10229() {
 	if false {
 		reflect.TypeOf(123)
 	}

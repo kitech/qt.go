@@ -64,7 +64,7 @@ func (*QWheelEvent) Fromptr(cthis Voidptr) *QWheelEvent {
 /*
  */
 func (this *QWheelEvent) Position() *qtcore.QPointF /*123*/ {
-	rv, err := qtrt.Qtcc3(1239393956, "_ZNK11QWheelEvent8positionEv", qtrt.FFITO_POINTER,
+	rv, err := qtrt.Qtcc3(1239393956, "_ZNK11QWheelEvent8positionEv", qtrt.FFITO_UINT128,
 		qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint3(err, rv)
 	cthis := qtrt.Malloc(16)
@@ -82,7 +82,7 @@ func (this *QWheelEvent) Position() *qtcore.QPointF /*123*/ {
 /*
  */
 func (this *QWheelEvent) GlobalPosition() *qtcore.QPointF /*123*/ {
-	rv, err := qtrt.Qtcc3(3973060595, "_ZNK11QWheelEvent14globalPositionEv", qtrt.FFITO_POINTER,
+	rv, err := qtrt.Qtcc3(3973060595, "_ZNK11QWheelEvent14globalPositionEv", qtrt.FFITO_UINT128,
 		qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint3(err, rv)
 	cthis := qtrt.Malloc(16)

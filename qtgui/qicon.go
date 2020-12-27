@@ -74,6 +74,52 @@ func NewQIcon() *QIcon {
 	return gothis
 }
 
+// /usr/include/qt/QtGui/qicon.h:62
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QIcon(const QPixmap &)
+
+/*
+ */
+func (*QIcon) NewForInherit1(pixmap QPixmap_ITF) *QIcon {
+	return NewQIcon1(pixmap)
+}
+func NewQIcon1(pixmap QPixmap_ITF) *QIcon {
+	var convArg0 Voidptr
+	if pixmap != nil && pixmap.QPixmap_PTR() != nil {
+		convArg0 = pixmap.QPixmap_PTR().GetCthis()
+	}
+	cthis := qtrt.Malloc(8)
+	rv, err := qtrt.Qtcc3(2794313597, "_ZN5QIconC2ERK7QPixmap", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint3(err, rv)
+	gothis := QIconFromptr(cthis)
+	qtrt.SetFinalizer(gothis, DeleteQIcon)
+	return gothis
+}
+
+// /usr/include/qt/QtGui/qicon.h:67
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QIcon(const QString &)
+
+/*
+ */
+func (*QIcon) NewForInherit2(fileName string) *QIcon {
+	return NewQIcon2(fileName)
+}
+func NewQIcon2(fileName string) *QIcon {
+	var tmpArg0 = qtcore.NewQString5(fileName)
+	var convArg0 = tmpArg0.GetCthis()
+	cthis := qtrt.Malloc(8)
+	rv, err := qtrt.Qtcc3(3566610256, "_ZN5QIconC2ERK7QString", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint3(err, rv)
+	gothis := QIconFromptr(cthis)
+	qtrt.SetFinalizer(gothis, DeleteQIcon)
+	return gothis
+}
+
 func DeleteQIcon(this *QIcon) {
 	rv, err := qtrt.Qtcc3(3436335819, "_ZN5QIconD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint3(err, rv)
@@ -148,7 +194,7 @@ func QIcon_StateItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10157() {
+func init_unused_10159() {
 	if false {
 		reflect.TypeOf(123)
 	}
