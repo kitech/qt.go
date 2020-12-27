@@ -64,9 +64,9 @@ func (this *QObject) ObjectName() string {
 	sretobj := qtrt.Malloc(8) // QString
 	rv, err := qtrt.Qtcc3(799704896, "_ZNK7QObject10objectNameEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := /*==*/ QStringFromptr(Voidptr(uintptr(rv)))
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := /*==*/ QStringFromptr(rv.Ptr())
 	rv3 := rv2.ToUtf8().Data()
 	/*==*/ DeleteQString(rv2)
 	return rv3
@@ -84,7 +84,7 @@ func (this *QObject) SetObjectName(name string) {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc3(2393916980, "_ZN7QObject13setObjectNameERK7QString", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtCore/qobject.h:153
@@ -97,8 +97,8 @@ func (this *QObject) SetObjectName(name string) {
 func (this *QObject) IsWidgetType() bool {
 	rv, err := qtrt.Qtcc3(4140218935, "_ZNK7QObject12isWidgetTypeEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtCore/qobject.h:154
@@ -111,8 +111,8 @@ func (this *QObject) IsWidgetType() bool {
 func (this *QObject) IsWindowType() bool {
 	rv, err := qtrt.Qtcc3(2017529966, "_ZNK7QObject12isWindowTypeEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtCore/qobject.h:156
@@ -125,8 +125,8 @@ func (this *QObject) IsWindowType() bool {
 func (this *QObject) SignalsBlocked() bool {
 	rv, err := qtrt.Qtcc3(2511842610, "_ZNK7QObject14signalsBlockedEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtCore/qobject.h:157
@@ -139,8 +139,8 @@ func (this *QObject) SignalsBlocked() bool {
 func (this *QObject) BlockSignals(b bool) bool {
 	rv, err := qtrt.Qtcc3(2150786866, "_ZN7QObject12blockSignalsEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&b))
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtCore/qobject.h:159
@@ -153,8 +153,8 @@ func (this *QObject) BlockSignals(b bool) bool {
 func (this *QObject) Thread() *QThread /*777 QThread **/ {
 	rv, err := qtrt.Qtcc3(2989794423, "_ZNK7QObject6threadEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return /*==*/ QThreadFromptr(Voidptr(uintptr(rv))) // 444
+	qtrt.ErrPrint3(err, rv)
+	return /*==*/ QThreadFromptr(rv.Ptr()) // 444
 }
 
 // /usr/include/qt/QtCore/qobject.h:160
@@ -171,7 +171,7 @@ func (this *QObject) MoveToThread(thread QThread_ITF /*777 QThread **/) {
 	}
 	rv, err := qtrt.Qtcc3(2881015986, "_ZN7QObject12moveToThreadEP7QThread", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtCore/qobject.h:218
@@ -188,12 +188,12 @@ func (this *QObject) SetParent(parent QObject_ITF /*777 QObject **/) {
 	}
 	rv, err := qtrt.Qtcc3(600858033, "_ZN7QObject9setParentEPS_", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 func DeleteQObject(this *QObject) {
 	rv, err := qtrt.Qtcc3(1716974882, "_ZN7QObjectD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 

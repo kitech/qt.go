@@ -77,7 +77,7 @@ func NewQLabel(parent QWidget_ITF /*777 QWidget **/, f int) *QLabel {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(3619358992, "_ZN6QLabelC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&f))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QLabelFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QLabel")
 	return gothis
@@ -101,7 +101,7 @@ func NewQLabelp() *QLabel {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(3619358992, "_ZN6QLabelC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&f))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QLabelFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QLabel")
 	return gothis
@@ -127,7 +127,7 @@ func NewQLabelp1(parent QWidget_ITF /*777 QWidget **/) *QLabel {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(3619358992, "_ZN6QLabelC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&f))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QLabelFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QLabel")
 	return gothis
@@ -153,7 +153,7 @@ func NewQLabel1(text string, parent QWidget_ITF /*777 QWidget **/, f int) *QLabe
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(199160535, "_ZN6QLabelC2ERK7QStringP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1), Voidptr(&f))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QLabelFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QLabel")
 	return gothis
@@ -179,7 +179,7 @@ func NewQLabel1p(text string) *QLabel {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(199160535, "_ZN6QLabelC2ERK7QStringP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1), Voidptr(&f))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QLabelFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QLabel")
 	return gothis
@@ -207,7 +207,7 @@ func NewQLabel1p1(text string, parent QWidget_ITF /*777 QWidget **/) *QLabel {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(199160535, "_ZN6QLabelC2ERK7QStringP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1), Voidptr(&f))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QLabelFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QLabel")
 	return gothis
@@ -224,9 +224,9 @@ func (this *QLabel) Text() string {
 	sretobj := qtrt.Malloc(8) // QString
 	rv, err := qtrt.Qtcc3(1414356847, "_ZNK6QLabel4textEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(rv.Ptr())
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -242,7 +242,7 @@ func (this *QLabel) Text() string {
 func (this *QLabel) SetWordWrap(on bool) {
 	rv, err := qtrt.Qtcc3(405278513, "_ZN6QLabel11setWordWrapEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&on))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlabel.h:109
@@ -255,7 +255,7 @@ func (this *QLabel) SetWordWrap(on bool) {
 func (this *QLabel) SetIndent(arg0 int) {
 	rv, err := qtrt.Qtcc3(3589004144, "_ZN6QLabel9setIndentEi", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlabel.h:125
@@ -268,7 +268,7 @@ func (this *QLabel) SetIndent(arg0 int) {
 func (this *QLabel) SetOpenExternalLinks(open bool) {
 	rv, err := qtrt.Qtcc3(496473961, "_ZN6QLabel20setOpenExternalLinksEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&open))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlabel.h:127
@@ -281,7 +281,7 @@ func (this *QLabel) SetOpenExternalLinks(open bool) {
 func (this *QLabel) SetTextInteractionFlags(flags int) {
 	rv, err := qtrt.Qtcc3(844288563, "_ZN6QLabel23setTextInteractionFlagsE6QFlagsIN2Qt19TextInteractionFlagEE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&flags))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlabel.h:136
@@ -296,7 +296,7 @@ func (this *QLabel) SetText(arg0 string) {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc3(1605932811, "_ZN6QLabel7setTextERK7QString", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlabel.h:137
@@ -313,7 +313,7 @@ func (this *QLabel) SetPixmap(arg0 qtgui.QPixmap_ITF) {
 	}
 	rv, err := qtrt.Qtcc3(261774113, "_ZN6QLabel9setPixmapERK7QPixmap", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlabel.h:144
@@ -326,7 +326,7 @@ func (this *QLabel) SetPixmap(arg0 qtgui.QPixmap_ITF) {
 func (this *QLabel) SetNum(arg0 int) {
 	rv, err := qtrt.Qtcc3(711141672, "_ZN6QLabel6setNumEi", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlabel.h:145
@@ -339,7 +339,7 @@ func (this *QLabel) SetNum(arg0 int) {
 func (this *QLabel) SetNum1(arg0 float64) {
 	rv, err := qtrt.Qtcc3(1423070613, "_ZN6QLabel6setNumEd", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_DOUBLE, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlabel.h:146
@@ -352,12 +352,12 @@ func (this *QLabel) SetNum1(arg0 float64) {
 func (this *QLabel) Clear() {
 	rv, err := qtrt.Qtcc3(2401623602, "_ZN6QLabel5clearEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 func DeleteQLabel(this *QLabel) {
 	rv, err := qtrt.Qtcc3(3882796990, "_ZN6QLabelD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -365,7 +365,7 @@ func DeleteQLabel(this *QLabel) {
 
 //  keep block begin
 
-func init_unused_10219() {
+func init_unused_10227() {
 	if false {
 		reflect.TypeOf(123)
 	}

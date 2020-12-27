@@ -60,7 +60,7 @@ func (*QDragLeaveEvent) Fromptr(cthis Voidptr) *QDragLeaveEvent {
 
 //  keep block begin
 
-func init_unused_10107() {
+func init_unused_10115() {
 	if false {
 		reflect.TypeOf(123)
 	}

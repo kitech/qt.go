@@ -18,7 +18,7 @@ package qtgui
 
 /*
 #include <stdlib.h>
-// extern C begin: 0
+// extern C begin: 9
 */
 // import "C"
 import "unsafe"
@@ -58,7 +58,7 @@ func (*QHoverEvent) Fromptr(cthis Voidptr) *QHoverEvent {
 
 func DeleteQHoverEvent(this *QHoverEvent) {
 	rv, err := qtrt.Qtcc3(2903469262, "_ZN11QHoverEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -66,7 +66,7 @@ func DeleteQHoverEvent(this *QHoverEvent) {
 
 //  keep block begin
 
-func init_unused_10065() {
+func init_unused_10073() {
 	if false {
 		reflect.TypeOf(123)
 	}

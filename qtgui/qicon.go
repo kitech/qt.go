@@ -68,7 +68,7 @@ func NewQIcon() *QIcon {
 	cthis := qtrt.Malloc(8)
 	rv, err := qtrt.Qtcc3(1359309426, "_ZN5QIconC2Ev", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, Voidptr(&cthis))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QIconFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQIcon)
 	return gothis
@@ -76,7 +76,7 @@ func NewQIcon() *QIcon {
 
 func DeleteQIcon(this *QIcon) {
 	rv, err := qtrt.Qtcc3(3436335819, "_ZN5QIconD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -148,7 +148,7 @@ func QIcon_StateItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10149() {
+func init_unused_10157() {
 	if false {
 		reflect.TypeOf(123)
 	}

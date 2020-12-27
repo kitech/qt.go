@@ -75,7 +75,7 @@ func NewQAbstractListModel(parent QObject_ITF /*777 QObject **/) *QAbstractListM
 	cthis := qtrt.Malloc(16)
 	rv, err := qtrt.Qtcc3(3627761914, "_ZN18QAbstractListModelC2EP7QObject", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QAbstractListModelFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QAbstractListModel")
 	return gothis
@@ -97,7 +97,7 @@ func NewQAbstractListModelp() *QAbstractListModel {
 	cthis := qtrt.Malloc(16)
 	rv, err := qtrt.Qtcc3(3627761914, "_ZN18QAbstractListModelC2EP7QObject", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QAbstractListModelFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QAbstractListModel")
 	return gothis
@@ -105,7 +105,7 @@ func NewQAbstractListModelp() *QAbstractListModel {
 
 func DeleteQAbstractListModel(this *QAbstractListModel) {
 	rv, err := qtrt.Qtcc3(319317266, "_ZN18QAbstractListModelD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 

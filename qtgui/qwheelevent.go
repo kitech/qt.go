@@ -56,6 +56,42 @@ func (*QWheelEvent) Fromptr(cthis Voidptr) *QWheelEvent {
 	return QWheelEventFromptr(cthis)
 }
 
+// /usr/include/qt/QtGui/qevent.h:243
+// index:0
+// Public inline Direct Visibility=Default Availability=Available
+// [16] QPointF position() const
+
+/*
+ */
+func (this *QWheelEvent) Position() *qtcore.QPointF /*123*/ {
+	rv, err := qtrt.Qtcc3(1239393956, "_ZNK11QWheelEvent8positionEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(16)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 16)
+	rv2 := qtcore.QPointFFromptr(cthis) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
+	return rv2
+}
+
+// /usr/include/qt/QtGui/qevent.h:244
+// index:0
+// Public inline Direct Visibility=Default Availability=Available
+// [16] QPointF globalPosition() const
+
+/*
+ */
+func (this *QWheelEvent) GlobalPosition() *qtcore.QPointF /*123*/ {
+	rv, err := qtrt.Qtcc3(3973060595, "_ZNK11QWheelEvent14globalPositionEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(16)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 16)
+	rv2 := qtcore.QPointFFromptr(cthis) // 333
+	qtrt.SetFinalizer(rv2, qtcore.DeleteQPointF)
+	return rv2
+}
+
 // /usr/include/qt/QtGui/qevent.h:249
 // index:0
 // Public inline Extend Visibility=Default Availability=Available
@@ -66,8 +102,8 @@ func (*QWheelEvent) Fromptr(cthis Voidptr) *QWheelEvent {
 func (this *QWheelEvent) Inverted() bool {
 	rv, err := qtrt.Qtcc3(643606857, "_ZNK11QWheelEvent8invertedEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 /*
@@ -96,7 +132,7 @@ func QWheelEvent_ItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10067() {
+func init_unused_10075() {
 	if false {
 		reflect.TypeOf(123)
 	}

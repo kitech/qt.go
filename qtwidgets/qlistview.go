@@ -77,7 +77,7 @@ func NewQListView(parent QWidget_ITF /*777 QWidget **/) *QListView {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(4267936992, "_ZN9QListViewC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QListViewFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QListView")
 	return gothis
@@ -99,7 +99,7 @@ func NewQListViewp() *QListView {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(4267936992, "_ZN9QListViewC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QListViewFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QListView")
 	return gothis
@@ -107,7 +107,7 @@ func NewQListViewp() *QListView {
 
 func DeleteQListView(this *QListView) {
 	rv, err := qtrt.Qtcc3(3088598195, "_ZN9QListViewD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -218,7 +218,7 @@ func QListView_ViewModeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10221() {
+func init_unused_10229() {
 	if false {
 		reflect.TypeOf(123)
 	}

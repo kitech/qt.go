@@ -58,7 +58,7 @@ func (*QActionEvent) Fromptr(cthis Voidptr) *QActionEvent {
 
 func DeleteQActionEvent(this *QActionEvent) {
 	rv, err := qtrt.Qtcc3(2699258947, "_ZN12QActionEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -66,7 +66,7 @@ func DeleteQActionEvent(this *QActionEvent) {
 
 //  keep block begin
 
-func init_unused_10115() {
+func init_unused_10123() {
 	if false {
 		reflect.TypeOf(123)
 	}

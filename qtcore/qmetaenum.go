@@ -55,7 +55,7 @@ func (*QMetaEnum) Fromptr(cthis Voidptr) *QMetaEnum {
 
 func DeleteQMetaEnum(this *QMetaEnum) {
 	rv, err := qtrt.Qtcc3(859374498, "_ZN9QMetaEnumD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -63,7 +63,7 @@ func DeleteQMetaEnum(this *QMetaEnum) {
 
 //  keep block begin
 
-func init_unused_10043() {
+func init_unused_10049() {
 	if false {
 		reflect.TypeOf(123)
 	}

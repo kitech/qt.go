@@ -55,7 +55,7 @@ func NewQAbstractScrollArea(parent QWidget_ITF /*777 QWidget **/) *QAbstractScro
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(538689117, "_ZN19QAbstractScrollAreaC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QAbstractScrollAreaFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QAbstractScrollArea")
 	return gothis
@@ -77,7 +77,7 @@ func NewQAbstractScrollAreap() *QAbstractScrollArea {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(538689117, "_ZN19QAbstractScrollAreaC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QAbstractScrollAreaFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QAbstractScrollArea")
 	return gothis
@@ -93,8 +93,8 @@ func NewQAbstractScrollAreap() *QAbstractScrollArea {
 func (this *QAbstractScrollArea) CornerWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.Qtcc3(1269609790, "_ZNK19QAbstractScrollArea12cornerWidgetEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return /*==*/ QWidgetFromptr(Voidptr(uintptr(rv))) // 444
+	qtrt.ErrPrint3(err, rv)
+	return /*==*/ QWidgetFromptr(rv.Ptr()) // 444
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:85
@@ -111,7 +111,7 @@ func (this *QAbstractScrollArea) SetCornerWidget(widget QWidget_ITF /*777 QWidge
 	}
 	rv, err := qtrt.Qtcc3(322961687, "_ZN19QAbstractScrollArea15setCornerWidgetEP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:90
@@ -124,8 +124,8 @@ func (this *QAbstractScrollArea) SetCornerWidget(widget QWidget_ITF /*777 QWidge
 func (this *QAbstractScrollArea) Viewport() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.Qtcc3(3104358012, "_ZNK19QAbstractScrollArea8viewportEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return /*==*/ QWidgetFromptr(Voidptr(uintptr(rv))) // 444
+	qtrt.ErrPrint3(err, rv)
+	return /*==*/ QWidgetFromptr(rv.Ptr()) // 444
 }
 
 // /usr/include/qt/QtWidgets/qabstractscrollarea.h:91
@@ -142,12 +142,12 @@ func (this *QAbstractScrollArea) SetViewport(widget QWidget_ITF /*777 QWidget **
 	}
 	rv, err := qtrt.Qtcc3(2564963984, "_ZN19QAbstractScrollArea11setViewportEP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 func DeleteQAbstractScrollArea(this *QAbstractScrollArea) {
 	rv, err := qtrt.Qtcc3(1253198226, "_ZN19QAbstractScrollAreaD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -155,7 +155,7 @@ func DeleteQAbstractScrollArea(this *QAbstractScrollArea) {
 
 //  keep block begin
 
-func init_unused_10182() {
+func init_unused_10190() {
 	if false {
 		reflect.TypeOf(123)
 	}

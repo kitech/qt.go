@@ -58,7 +58,7 @@ func (*QHideEvent) Fromptr(cthis Voidptr) *QHideEvent {
 
 func DeleteQHideEvent(this *QHideEvent) {
 	rv, err := qtrt.Qtcc3(4019755370, "_ZN10QHideEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -66,7 +66,7 @@ func DeleteQHideEvent(this *QHideEvent) {
 
 //  keep block begin
 
-func init_unused_10093() {
+func init_unused_10101() {
 	if false {
 		reflect.TypeOf(123)
 	}

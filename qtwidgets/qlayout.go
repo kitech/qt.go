@@ -77,7 +77,7 @@ func (*QLayout) Fromptr(cthis Voidptr) *QLayout {
 
 func DeleteQLayout(this *QLayout) {
 	rv, err := qtrt.Qtcc3(925367012, "_ZN7QLayoutD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -117,7 +117,7 @@ func QLayout_SizeConstraintItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10197() {
+func init_unused_10205() {
 	if false {
 		reflect.TypeOf(123)
 	}

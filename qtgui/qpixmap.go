@@ -70,7 +70,7 @@ func NewQPixmap() *QPixmap {
 	cthis := qtrt.Malloc(32)
 	rv, err := qtrt.Qtcc3(440989401, "_ZN7QPixmapC2Ev", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, Voidptr(&cthis))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QPixmapFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQPixmap)
 	return gothis
@@ -78,7 +78,7 @@ func NewQPixmap() *QPixmap {
 
 func DeleteQPixmap(this *QPixmap) {
 	rv, err := qtrt.Qtcc3(2275397216, "_ZN7QPixmapD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -86,7 +86,7 @@ func DeleteQPixmap(this *QPixmap) {
 
 //  keep block begin
 
-func init_unused_10141() {
+func init_unused_10149() {
 	if false {
 		reflect.TypeOf(123)
 	}

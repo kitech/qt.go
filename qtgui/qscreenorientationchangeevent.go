@@ -60,7 +60,7 @@ func (*QScreenOrientationChangeEvent) Fromptr(cthis Voidptr) *QScreenOrientation
 
 func DeleteQScreenOrientationChangeEvent(this *QScreenOrientationChangeEvent) {
 	rv, err := qtrt.Qtcc3(375093733, "_ZN29QScreenOrientationChangeEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -68,7 +68,7 @@ func DeleteQScreenOrientationChangeEvent(this *QScreenOrientationChangeEvent) {
 
 //  keep block begin
 
-func init_unused_10131() {
+func init_unused_10139() {
 	if false {
 		reflect.TypeOf(123)
 	}

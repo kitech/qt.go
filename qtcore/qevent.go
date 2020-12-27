@@ -63,8 +63,8 @@ func (*QEvent) Fromptr(cthis Voidptr) *QEvent {
 func (this *QEvent) Type() int {
 	rv, err := qtrt.Qtcc3(4240343207, "_ZNK6QEvent4typeEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return int(rv)
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int()
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:302
@@ -77,8 +77,8 @@ func (this *QEvent) Type() int {
 func (this *QEvent) Spontaneous() bool {
 	rv, err := qtrt.Qtcc3(3979599173, "_ZNK6QEvent11spontaneousEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:304
@@ -91,7 +91,7 @@ func (this *QEvent) Spontaneous() bool {
 func (this *QEvent) SetAccepted(accepted bool) {
 	rv, err := qtrt.Qtcc3(2738784580, "_ZN6QEvent11setAcceptedEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&accepted))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:305
@@ -104,8 +104,8 @@ func (this *QEvent) SetAccepted(accepted bool) {
 func (this *QEvent) IsAccepted() bool {
 	rv, err := qtrt.Qtcc3(608985925, "_ZNK6QEvent10isAcceptedEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:307
@@ -118,7 +118,7 @@ func (this *QEvent) IsAccepted() bool {
 func (this *QEvent) Accept() {
 	rv, err := qtrt.Qtcc3(1915523935, "_ZN6QEvent6acceptEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:308
@@ -131,7 +131,7 @@ func (this *QEvent) Accept() {
 func (this *QEvent) Ignore() {
 	rv, err := qtrt.Qtcc3(340108874, "_ZN6QEvent6ignoreEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtCore/qcoreevent.h:310
@@ -144,8 +144,8 @@ func (this *QEvent) Ignore() {
 func (this *QEvent) RegisterEventType(hint int) int {
 	rv, err := qtrt.Qtcc3(3887961503, "_ZN6QEvent17registerEventTypeEi", qtrt.FFITO_POINTER,
 		qtrt.FFITO_INT, Voidptr(&hint))
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 func QEvent_RegisterEventType(hint int) int {
 	var nilthis *QEvent
@@ -165,13 +165,13 @@ func (this *QEvent) RegisterEventTypep() int {
 	hint := int(-1)
 	rv, err := qtrt.Qtcc3(3887961503, "_ZN6QEvent17registerEventTypeEi", qtrt.FFITO_POINTER,
 		qtrt.FFITO_INT, Voidptr(&hint))
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 func DeleteQEvent(this *QEvent) {
 	rv, err := qtrt.Qtcc3(3259194329, "_ZN6QEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 

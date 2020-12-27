@@ -55,7 +55,7 @@ func (*QMetaProperty) Fromptr(cthis Voidptr) *QMetaProperty {
 
 func DeleteQMetaProperty(this *QMetaProperty) {
 	rv, err := qtrt.Qtcc3(1340264886, "_ZN13QMetaPropertyD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -63,7 +63,7 @@ func DeleteQMetaProperty(this *QMetaProperty) {
 
 //  keep block begin
 
-func init_unused_10045() {
+func init_unused_10051() {
 	if false {
 		reflect.TypeOf(123)
 	}

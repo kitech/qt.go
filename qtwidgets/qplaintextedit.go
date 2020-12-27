@@ -77,7 +77,7 @@ func NewQPlainTextEdit(parent QWidget_ITF /*777 QWidget **/) *QPlainTextEdit {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(396516486, "_ZN14QPlainTextEditC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QPlainTextEditFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QPlainTextEdit")
 	return gothis
@@ -99,7 +99,7 @@ func NewQPlainTextEditp() *QPlainTextEdit {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(396516486, "_ZN14QPlainTextEditC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QPlainTextEditFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QPlainTextEdit")
 	return gothis
@@ -125,7 +125,7 @@ func NewQPlainTextEdit1(text string, parent QWidget_ITF /*777 QWidget **/) *QPla
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(2780232515, "_ZN14QPlainTextEditC2ERK7QStringP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QPlainTextEditFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QPlainTextEdit")
 	return gothis
@@ -149,7 +149,7 @@ func NewQPlainTextEdit1p(text string) *QPlainTextEdit {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(2780232515, "_ZN14QPlainTextEditC2ERK7QStringP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QPlainTextEditFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QPlainTextEdit")
 	return gothis
@@ -167,7 +167,7 @@ func (this *QPlainTextEdit) SetPlaceholderText(placeholderText string) {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc3(3191527676, "_ZN14QPlainTextEdit18setPlaceholderTextERK7QString", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:103
@@ -181,9 +181,9 @@ func (this *QPlainTextEdit) PlaceholderText() string {
 	sretobj := qtrt.Malloc(8) // QString
 	rv, err := qtrt.Qtcc3(388573047, "_ZNK14QPlainTextEdit15placeholderTextEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(rv.Ptr())
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -199,7 +199,7 @@ func (this *QPlainTextEdit) PlaceholderText() string {
 func (this *QPlainTextEdit) SetReadOnly(ro bool) {
 	rv, err := qtrt.Qtcc3(3324855670, "_ZN14QPlainTextEdit11setReadOnlyEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&ro))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:111
@@ -212,7 +212,7 @@ func (this *QPlainTextEdit) SetReadOnly(ro bool) {
 func (this *QPlainTextEdit) SetTextInteractionFlags(flags int) {
 	rv, err := qtrt.Qtcc3(400835228, "_ZN14QPlainTextEdit23setTextInteractionFlagsE6QFlagsIN2Qt19TextInteractionFlagEE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&flags))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:143
@@ -225,7 +225,7 @@ func (this *QPlainTextEdit) SetTextInteractionFlags(flags int) {
 func (this *QPlainTextEdit) SetBackgroundVisible(visible bool) {
 	rv, err := qtrt.Qtcc3(957632610, "_ZN14QPlainTextEdit20setBackgroundVisibleEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&visible))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:157
@@ -239,9 +239,9 @@ func (this *QPlainTextEdit) ToPlainText() string {
 	sretobj := qtrt.Malloc(8) // QString
 	rv, err := qtrt.Qtcc3(4142553692, "_ZNK14QPlainTextEdit11toPlainTextEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(rv.Ptr())
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -257,7 +257,7 @@ func (this *QPlainTextEdit) ToPlainText() string {
 func (this *QPlainTextEdit) EnsureCursorVisible() {
 	rv, err := qtrt.Qtcc3(3070872959, "_ZN14QPlainTextEdit19ensureCursorVisibleEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:203
@@ -272,7 +272,7 @@ func (this *QPlainTextEdit) SetPlainText(text string) {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc3(2634248857, "_ZN14QPlainTextEdit12setPlainTextERK7QString", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qplaintextedit.h:228
@@ -285,12 +285,12 @@ func (this *QPlainTextEdit) SetPlainText(text string) {
 func (this *QPlainTextEdit) TextChanged() {
 	rv, err := qtrt.Qtcc3(4250366701, "_ZN14QPlainTextEdit11textChangedEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 func DeleteQPlainTextEdit(this *QPlainTextEdit) {
 	rv, err := qtrt.Qtcc3(2127496755, "_ZN14QPlainTextEditD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -318,7 +318,7 @@ func QPlainTextEdit_LineWrapModeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10229() {
+func init_unused_10237() {
 	if false {
 		reflect.TypeOf(123)
 	}

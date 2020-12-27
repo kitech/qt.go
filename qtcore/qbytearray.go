@@ -68,7 +68,7 @@ func NewQByteArray(arg0 string, size int) *QByteArray {
 	cthis := qtrt.Malloc(8)
 	rv, err := qtrt.Qtcc3(1185669528, "_ZN10QByteArrayC2EPKci", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&size))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QByteArrayFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQByteArray)
 	return gothis
@@ -91,7 +91,7 @@ func NewQByteArrayp(arg0 string) *QByteArray {
 	cthis := qtrt.Malloc(8)
 	rv, err := qtrt.Qtcc3(1185669528, "_ZN10QByteArrayC2EPKci", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&size))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QByteArrayFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQByteArray)
 	return gothis
@@ -107,8 +107,8 @@ func NewQByteArrayp(arg0 string) *QByteArray {
 func (this *QByteArray) Size() int {
 	rv, err := qtrt.Qtcc3(2381602376, "_ZNK10QByteArray4sizeEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtCore/qbytearray.h:210
@@ -121,13 +121,13 @@ func (this *QByteArray) Size() int {
 func (this *QByteArray) Data() string {
 	rv, err := qtrt.Qtcc3(3584956573, "_ZN10QByteArray4dataEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.GoStringI(rv)
+	qtrt.ErrPrint3(err, rv)
+	return qtrt.GoStringI(rv.Uint64())
 }
 
 func DeleteQByteArray(this *QByteArray) {
 	rv, err := qtrt.Qtcc3(87055785, "_ZN10QByteArrayD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 

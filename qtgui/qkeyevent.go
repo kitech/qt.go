@@ -66,8 +66,8 @@ func (*QKeyEvent) Fromptr(cthis Voidptr) *QKeyEvent {
 func (this *QKeyEvent) Key() int {
 	rv, err := qtrt.Qtcc3(3921584077, "_ZNK9QKeyEvent3keyEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:392
@@ -81,9 +81,9 @@ func (this *QKeyEvent) Text() string {
 	sretobj := qtrt.Malloc(8) // QString
 	rv, err := qtrt.Qtcc3(3489740836, "_ZNK9QKeyEvent4textEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(rv.Ptr())
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -99,8 +99,8 @@ func (this *QKeyEvent) Text() string {
 func (this *QKeyEvent) IsAutoRepeat() bool {
 	rv, err := qtrt.Qtcc3(3618180515, "_ZNK9QKeyEvent12isAutoRepeatEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtGui/qevent.h:394
@@ -113,8 +113,8 @@ func (this *QKeyEvent) IsAutoRepeat() bool {
 func (this *QKeyEvent) Count() int {
 	rv, err := qtrt.Qtcc3(2383005192, "_ZNK9QKeyEvent5countEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtGui/qevent.h:396
@@ -127,8 +127,8 @@ func (this *QKeyEvent) Count() int {
 func (this *QKeyEvent) NativeScanCode() uint {
 	rv, err := qtrt.Qtcc3(1110117359, "_ZNK9QKeyEvent14nativeScanCodeEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return uint(rv) // 222
+	qtrt.ErrPrint3(err, rv)
+	return rv.Uint() // 222
 }
 
 // /usr/include/qt/QtGui/qevent.h:397
@@ -141,8 +141,8 @@ func (this *QKeyEvent) NativeScanCode() uint {
 func (this *QKeyEvent) NativeVirtualKey() uint {
 	rv, err := qtrt.Qtcc3(3927640315, "_ZNK9QKeyEvent16nativeVirtualKeyEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return uint(rv) // 222
+	qtrt.ErrPrint3(err, rv)
+	return rv.Uint() // 222
 }
 
 // /usr/include/qt/QtGui/qevent.h:398
@@ -155,13 +155,13 @@ func (this *QKeyEvent) NativeVirtualKey() uint {
 func (this *QKeyEvent) NativeModifiers() uint {
 	rv, err := qtrt.Qtcc3(2110805296, "_ZNK9QKeyEvent15nativeModifiersEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return uint(rv) // 222
+	qtrt.ErrPrint3(err, rv)
+	return rv.Uint() // 222
 }
 
 func DeleteQKeyEvent(this *QKeyEvent) {
 	rv, err := qtrt.Qtcc3(4215536018, "_ZN9QKeyEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -169,7 +169,7 @@ func DeleteQKeyEvent(this *QKeyEvent) {
 
 //  keep block begin
 
-func init_unused_10073() {
+func init_unused_10081() {
 	if false {
 		reflect.TypeOf(123)
 	}

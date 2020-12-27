@@ -57,7 +57,7 @@ func (*QLayoutItem) Fromptr(cthis Voidptr) *QLayoutItem {
 
 func DeleteQLayoutItem(this *QLayoutItem) {
 	rv, err := qtrt.Qtcc3(2677748963, "_ZN11QLayoutItemD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -65,7 +65,7 @@ func DeleteQLayoutItem(this *QLayoutItem) {
 
 //  keep block begin
 
-func init_unused_10189() {
+func init_unused_10197() {
 	if false {
 		reflect.TypeOf(123)
 	}

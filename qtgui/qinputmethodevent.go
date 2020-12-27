@@ -58,7 +58,7 @@ func (*QInputMethodEvent) Fromptr(cthis Voidptr) *QInputMethodEvent {
 
 func DeleteQInputMethodEvent(this *QInputMethodEvent) {
 	rv, err := qtrt.Qtcc3(2759769397, "_ZN17QInputMethodEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -108,7 +108,7 @@ func QInputMethodEvent_AttributeTypeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10097() {
+func init_unused_10105() {
 	if false {
 		reflect.TypeOf(123)
 	}

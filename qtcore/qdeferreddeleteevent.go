@@ -57,7 +57,7 @@ func (*QDeferredDeleteEvent) Fromptr(cthis Voidptr) *QDeferredDeleteEvent {
 
 func DeleteQDeferredDeleteEvent(this *QDeferredDeleteEvent) {
 	rv, err := qtrt.Qtcc3(1062849289, "_ZN20QDeferredDeleteEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 

@@ -67,7 +67,7 @@ func NewQSize(w int, h int) *QSize {
 	cthis := qtrt.Malloc(8)
 	rv, err := qtrt.Qtcc3(1650702872, "_ZN5QSizeC2Eii", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_INT, Voidptr(&cthis), Voidptr(&w), Voidptr(&h))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QSizeFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQSize)
 	return gothis
@@ -83,8 +83,8 @@ func NewQSize(w int, h int) *QSize {
 func (this *QSize) Width() int {
 	rv, err := qtrt.Qtcc3(978481712, "_ZNK5QSize5widthEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtCore/qsize.h:64
@@ -97,8 +97,8 @@ func (this *QSize) Width() int {
 func (this *QSize) Height() int {
 	rv, err := qtrt.Qtcc3(1546467447, "_ZNK5QSize6heightEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtCore/qsize.h:83
@@ -111,8 +111,8 @@ func (this *QSize) Height() int {
 func (this *QSize) Rwidth() int {
 	rv, err := qtrt.Qtcc3(1400378653, "_ZN5QSize6rwidthEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cpretval2go("int", rv).(int) // 3331
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 3331
 }
 
 // /usr/include/qt/QtCore/qsize.h:84
@@ -125,13 +125,13 @@ func (this *QSize) Rwidth() int {
 func (this *QSize) Rheight() int {
 	rv, err := qtrt.Qtcc3(3486783902, "_ZN5QSize7rheightEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cpretval2go("int", rv).(int) // 3331
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 3331
 }
 
 func DeleteQSize(this *QSize) {
 	rv, err := qtrt.Qtcc3(2702344799, "_ZN5QSizeD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -139,7 +139,7 @@ func DeleteQSize(this *QSize) {
 
 //  keep block begin
 
-func init_unused_10049() {
+func init_unused_10055() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -57,7 +57,7 @@ func (*QChildEvent) Fromptr(cthis Voidptr) *QChildEvent {
 
 func DeleteQChildEvent(this *QChildEvent) {
 	rv, err := qtrt.Qtcc3(2956324060, "_ZN11QChildEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 

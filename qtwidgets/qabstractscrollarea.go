@@ -84,7 +84,7 @@ func QAbstractScrollArea_SizeAdjustPolicyItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10181() {
+func init_unused_10189() {
 	if false {
 		reflect.TypeOf(123)
 	}

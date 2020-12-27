@@ -66,8 +66,8 @@ func (*QInputEvent) Fromptr(cthis Voidptr) *QInputEvent {
 func (this *QInputEvent) Timestamp() uint {
 	rv, err := qtrt.Qtcc3(3682385401, "_ZNK11QInputEvent9timestampEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return uint(rv) // 222
+	qtrt.ErrPrint3(err, rv)
+	return rv.Uint() // 222
 }
 
 // /usr/include/qt/QtGui/qevent.h:76
@@ -80,12 +80,12 @@ func (this *QInputEvent) Timestamp() uint {
 func (this *QInputEvent) SetTimestamp(atimestamp uint) {
 	rv, err := qtrt.Qtcc3(1066347960, "_ZN11QInputEvent12setTimestampEm", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&atimestamp))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 func DeleteQInputEvent(this *QInputEvent) {
 	rv, err := qtrt.Qtcc3(2705540433, "_ZN11QInputEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -93,7 +93,7 @@ func DeleteQInputEvent(this *QInputEvent) {
 
 //  keep block begin
 
-func init_unused_10059() {
+func init_unused_10067() {
 	if false {
 		reflect.TypeOf(123)
 	}

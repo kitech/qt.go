@@ -56,7 +56,7 @@ func (*QPaintEngine) Fromptr(cthis Voidptr) *QPaintEngine {
 
 func DeleteQPaintEngine(this *QPaintEngine) {
 	rv, err := qtrt.Qtcc3(727220551, "_ZN12QPaintEngineD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -422,7 +422,7 @@ func QPaintEngine_TypeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10165() {
+func init_unused_10173() {
 	if false {
 		reflect.TypeOf(123)
 	}

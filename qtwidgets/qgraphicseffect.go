@@ -61,7 +61,7 @@ func (*QGraphicsEffect) Fromptr(cthis Voidptr) *QGraphicsEffect {
 
 func DeleteQGraphicsEffect(this *QGraphicsEffect) {
 	rv, err := qtrt.Qtcc3(2205524303, "_ZN15QGraphicsEffectD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -118,7 +118,7 @@ func QGraphicsEffect_PixmapPadModeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10215() {
+func init_unused_10223() {
 	if false {
 		reflect.TypeOf(123)
 	}

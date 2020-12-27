@@ -8,6 +8,7 @@ import (
 
 var ErrPrint = miscutil.ErrPrint
 var ErrPrint2 = miscutil.ErrPrint2
+var ErrPrint3 = miscutil.ErrPrint3
 var NilPrint = miscutil.NilPrint
 var FileExist = miscutil.FileExist
 

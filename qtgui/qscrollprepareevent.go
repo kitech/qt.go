@@ -58,7 +58,7 @@ func (*QScrollPrepareEvent) Fromptr(cthis Voidptr) *QScrollPrepareEvent {
 
 func DeleteQScrollPrepareEvent(this *QScrollPrepareEvent) {
 	rv, err := qtrt.Qtcc3(684418620, "_ZN19QScrollPrepareEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -66,7 +66,7 @@ func DeleteQScrollPrepareEvent(this *QScrollPrepareEvent) {
 
 //  keep block begin
 
-func init_unused_10127() {
+func init_unused_10135() {
 	if false {
 		reflect.TypeOf(123)
 	}

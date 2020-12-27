@@ -77,7 +77,7 @@ func NewQGroupBox(parent QWidget_ITF /*777 QWidget **/) *QGroupBox {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(662756536, "_ZN9QGroupBoxC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QGroupBoxFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QGroupBox")
 	return gothis
@@ -99,7 +99,7 @@ func NewQGroupBoxp() *QGroupBox {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(662756536, "_ZN9QGroupBoxC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QGroupBoxFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QGroupBox")
 	return gothis
@@ -125,7 +125,7 @@ func NewQGroupBox1(title string, parent QWidget_ITF /*777 QWidget **/) *QGroupBo
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(2800323070, "_ZN9QGroupBoxC2ERK7QStringP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QGroupBoxFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QGroupBox")
 	return gothis
@@ -149,7 +149,7 @@ func NewQGroupBox1p(title string) *QGroupBox {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(2800323070, "_ZN9QGroupBoxC2ERK7QStringP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QGroupBoxFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QGroupBox")
 	return gothis
@@ -166,9 +166,9 @@ func (this *QGroupBox) Title() string {
 	sretobj := qtrt.Malloc(8) // QString
 	rv, err := qtrt.Qtcc3(3632320991, "_ZNK9QGroupBox5titleEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(rv.Ptr())
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -186,7 +186,7 @@ func (this *QGroupBox) SetTitle(title string) {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc3(2779866592, "_ZN9QGroupBox8setTitleERK7QString", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:74
@@ -199,8 +199,8 @@ func (this *QGroupBox) SetTitle(title string) {
 func (this *QGroupBox) IsFlat() bool {
 	rv, err := qtrt.Qtcc3(2002744521, "_ZNK9QGroupBox6isFlatEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:75
@@ -213,7 +213,7 @@ func (this *QGroupBox) IsFlat() bool {
 func (this *QGroupBox) SetFlat(flat bool) {
 	rv, err := qtrt.Qtcc3(2689482562, "_ZN9QGroupBox7setFlatEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&flat))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:76
@@ -226,8 +226,8 @@ func (this *QGroupBox) SetFlat(flat bool) {
 func (this *QGroupBox) IsCheckable() bool {
 	rv, err := qtrt.Qtcc3(2216875125, "_ZNK9QGroupBox11isCheckableEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:77
@@ -240,7 +240,7 @@ func (this *QGroupBox) IsCheckable() bool {
 func (this *QGroupBox) SetCheckable(checkable bool) {
 	rv, err := qtrt.Qtcc3(2495419631, "_ZN9QGroupBox12setCheckableEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&checkable))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:78
@@ -253,8 +253,8 @@ func (this *QGroupBox) SetCheckable(checkable bool) {
 func (this *QGroupBox) IsChecked() bool {
 	rv, err := qtrt.Qtcc3(3230016360, "_ZNK9QGroupBox9isCheckedEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:81
@@ -267,7 +267,7 @@ func (this *QGroupBox) IsChecked() bool {
 func (this *QGroupBox) SetChecked(checked bool) {
 	rv, err := qtrt.Qtcc3(2906849573, "_ZN9QGroupBox10setCheckedEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&checked))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:84
@@ -280,7 +280,7 @@ func (this *QGroupBox) SetChecked(checked bool) {
 func (this *QGroupBox) Clicked(checked bool) {
 	rv, err := qtrt.Qtcc3(1674438564, "_ZN9QGroupBox7clickedEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&checked))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:84
@@ -295,7 +295,7 @@ func (this *QGroupBox) Clickedp() {
 	checked := false
 	rv, err := qtrt.Qtcc3(1674438564, "_ZN9QGroupBox7clickedEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&checked))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qgroupbox.h:85
@@ -308,12 +308,12 @@ func (this *QGroupBox) Clickedp() {
 func (this *QGroupBox) Toggled(arg0 bool) {
 	rv, err := qtrt.Qtcc3(1550658212, "_ZN9QGroupBox7toggledEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 func DeleteQGroupBox(this *QGroupBox) {
 	rv, err := qtrt.Qtcc3(3218891799, "_ZN9QGroupBoxD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -321,7 +321,7 @@ func DeleteQGroupBox(this *QGroupBox) {
 
 //  keep block begin
 
-func init_unused_10217() {
+func init_unused_10225() {
 	if false {
 		reflect.TypeOf(123)
 	}

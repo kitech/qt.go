@@ -60,7 +60,7 @@ func (*QApplicationStateChangeEvent) Fromptr(cthis Voidptr) *QApplicationStateCh
 
 func DeleteQApplicationStateChangeEvent(this *QApplicationStateChangeEvent) {
 	rv, err := qtrt.Qtcc3(2579810998, "_ZN28QApplicationStateChangeEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -68,7 +68,7 @@ func DeleteQApplicationStateChangeEvent(this *QApplicationStateChangeEvent) {
 
 //  keep block begin
 
-func init_unused_10133() {
+func init_unused_10141() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -58,7 +58,7 @@ func (*QScrollEvent) Fromptr(cthis Voidptr) *QScrollEvent {
 
 func DeleteQScrollEvent(this *QScrollEvent) {
 	rv, err := qtrt.Qtcc3(2663943836, "_ZN12QScrollEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -98,7 +98,7 @@ func QScrollEvent_ScrollStateItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10129() {
+func init_unused_10137() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -58,7 +58,7 @@ func (*QInputMethodQueryEvent) Fromptr(cthis Voidptr) *QInputMethodQueryEvent {
 
 func DeleteQInputMethodQueryEvent(this *QInputMethodQueryEvent) {
 	rv, err := qtrt.Qtcc3(3676154321, "_ZN22QInputMethodQueryEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -66,7 +66,7 @@ func DeleteQInputMethodQueryEvent(this *QInputMethodQueryEvent) {
 
 //  keep block begin
 
-func init_unused_10099() {
+func init_unused_10107() {
 	if false {
 		reflect.TypeOf(123)
 	}

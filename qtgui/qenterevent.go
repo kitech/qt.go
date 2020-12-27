@@ -58,7 +58,7 @@ func (*QEnterEvent) Fromptr(cthis Voidptr) *QEnterEvent {
 
 func DeleteQEnterEvent(this *QEnterEvent) {
 	rv, err := qtrt.Qtcc3(727210895, "_ZN11QEnterEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -66,7 +66,7 @@ func DeleteQEnterEvent(this *QEnterEvent) {
 
 //  keep block begin
 
-func init_unused_10061() {
+func init_unused_10069() {
 	if false {
 		reflect.TypeOf(123)
 	}

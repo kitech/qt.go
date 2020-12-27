@@ -66,7 +66,7 @@ func (*QApplication) Fromptr(cthis Voidptr) *QApplication {
  */
 func (this *QApplication) Beep() {
 	rv, err := qtrt.Qtcc3(3241209511, "_ZN12QApplication4beepEv", qtrt.FFITO_POINTER)
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 func QApplication_Beep() {
 	var nilthis *QApplication
@@ -91,7 +91,7 @@ func (this *QApplication) FocusChanged(old QWidget_ITF /*777 QWidget **/, now QW
 	}
 	rv, err := qtrt.Qtcc3(299776149, "_ZN12QApplication12focusChangedEP7QWidgetS1_", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0), Voidptr(&convArg1))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:201
@@ -105,9 +105,9 @@ func (this *QApplication) StyleSheet() string {
 	sretobj := qtrt.Malloc(8) // QString
 	rv, err := qtrt.Qtcc3(306547508, "_ZNK12QApplication10styleSheetEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(rv.Ptr())
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -125,7 +125,7 @@ func (this *QApplication) SetStyleSheet(sheet string) {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc3(412095265, "_ZN12QApplication13setStyleSheetERK7QString", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qapplication.h:209
@@ -137,7 +137,7 @@ func (this *QApplication) SetStyleSheet(sheet string) {
  */
 func (this *QApplication) AboutQt() {
 	rv, err := qtrt.Qtcc3(799315374, "_ZN12QApplication7aboutQtEv", qtrt.FFITO_POINTER)
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 func QApplication_AboutQt() {
 	var nilthis *QApplication
@@ -146,7 +146,7 @@ func QApplication_AboutQt() {
 
 func DeleteQApplication(this *QApplication) {
 	rv, err := qtrt.Qtcc3(1156959137, "_ZN12QApplicationD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -177,7 +177,7 @@ func QApplication_ColorSpecItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10187() {
+func init_unused_10195() {
 	if false {
 		reflect.TypeOf(123)
 	}

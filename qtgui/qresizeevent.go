@@ -58,7 +58,7 @@ func (*QResizeEvent) Fromptr(cthis Voidptr) *QResizeEvent {
 
 func DeleteQResizeEvent(this *QResizeEvent) {
 	rv, err := qtrt.Qtcc3(1460422629, "_ZN12QResizeEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -66,7 +66,7 @@ func DeleteQResizeEvent(this *QResizeEvent) {
 
 //  keep block begin
 
-func init_unused_10085() {
+func init_unused_10093() {
 	if false {
 		reflect.TypeOf(123)
 	}

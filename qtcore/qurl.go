@@ -67,7 +67,7 @@ func NewQUrl() *QUrl {
 	cthis := qtrt.Malloc(8)
 	rv, err := qtrt.Qtcc3(887786197, "_ZN4QUrlC2Ev", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, Voidptr(&cthis))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QUrlFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQUrl)
 	return gothis
@@ -89,7 +89,7 @@ func NewQUrl1(url string, mode int) *QUrl {
 	cthis := qtrt.Malloc(8)
 	rv, err := qtrt.Qtcc3(2077668047, "_ZN4QUrlC2ERK7QStringNS_11ParsingModeE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&mode))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QUrlFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQUrl)
 	return gothis
@@ -113,7 +113,7 @@ func NewQUrl1p(url string) *QUrl {
 	cthis := qtrt.Malloc(8)
 	rv, err := qtrt.Qtcc3(2077668047, "_ZN4QUrlC2ERK7QStringNS_11ParsingModeE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&mode))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QUrlFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQUrl)
 	return gothis
@@ -131,7 +131,7 @@ func (this *QUrl) SetUrl(url string, mode int) {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc3(241840493, "_ZN4QUrl6setUrlERK7QStringNS_11ParsingModeE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0), Voidptr(&mode))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtCore/qurl.h:193
@@ -148,12 +148,12 @@ func (this *QUrl) SetUrlp(url string) {
 	mode := 0
 	rv, err := qtrt.Qtcc3(241840493, "_ZN4QUrl6setUrlERK7QStringNS_11ParsingModeE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0), Voidptr(&mode))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 func DeleteQUrl(this *QUrl) {
 	rv, err := qtrt.Qtcc3(2839392876, "_ZN4QUrlD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 

@@ -20,7 +20,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 1
+// extern C begin: 27
 */
 // import "C"
 import "unsafe"
@@ -75,7 +75,7 @@ func NewQAbstractTableModel(parent QObject_ITF /*777 QObject **/) *QAbstractTabl
 	cthis := qtrt.Malloc(16)
 	rv, err := qtrt.Qtcc3(2295160465, "_ZN19QAbstractTableModelC2EP7QObject", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QAbstractTableModelFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QAbstractTableModel")
 	return gothis
@@ -97,7 +97,7 @@ func NewQAbstractTableModelp() *QAbstractTableModel {
 	cthis := qtrt.Malloc(16)
 	rv, err := qtrt.Qtcc3(2295160465, "_ZN19QAbstractTableModelC2EP7QObject", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QAbstractTableModelFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QAbstractTableModel")
 	return gothis
@@ -105,7 +105,7 @@ func NewQAbstractTableModelp() *QAbstractTableModel {
 
 func DeleteQAbstractTableModel(this *QAbstractTableModel) {
 	rv, err := qtrt.Qtcc3(2737077743, "_ZN19QAbstractTableModelD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 

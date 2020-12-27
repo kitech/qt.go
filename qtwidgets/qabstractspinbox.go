@@ -61,7 +61,7 @@ func (*QAbstractSpinBox) Fromptr(cthis Voidptr) *QAbstractSpinBox {
 
 func DeleteQAbstractSpinBox(this *QAbstractSpinBox) {
 	rv, err := qtrt.Qtcc3(1472121571, "_ZN16QAbstractSpinBoxD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -155,7 +155,7 @@ func QAbstractSpinBox_StepTypeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10173() {
+func init_unused_10181() {
 	if false {
 		reflect.TypeOf(123)
 	}

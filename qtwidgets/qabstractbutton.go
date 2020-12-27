@@ -77,7 +77,7 @@ func NewQAbstractButton(parent QWidget_ITF /*777 QWidget **/) *QAbstractButton {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(1746901202, "_ZN15QAbstractButtonC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QAbstractButtonFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QAbstractButton")
 	return gothis
@@ -99,7 +99,7 @@ func NewQAbstractButtonp() *QAbstractButton {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(1746901202, "_ZN15QAbstractButtonC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QAbstractButtonFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QAbstractButton")
 	return gothis
@@ -117,7 +117,7 @@ func (this *QAbstractButton) SetText(text string) {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc3(199757402, "_ZN15QAbstractButton7setTextERK7QString", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:79
@@ -131,9 +131,9 @@ func (this *QAbstractButton) Text() string {
 	sretobj := qtrt.Malloc(8) // QString
 	rv, err := qtrt.Qtcc3(786980147, "_ZNK15QAbstractButton4textEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(rv.Ptr())
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -149,7 +149,7 @@ func (this *QAbstractButton) Text() string {
 func (this *QAbstractButton) SetCheckable(arg0 bool) {
 	rv, err := qtrt.Qtcc3(2802838592, "_ZN15QAbstractButton12setCheckableEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:92
@@ -162,8 +162,8 @@ func (this *QAbstractButton) SetCheckable(arg0 bool) {
 func (this *QAbstractButton) IsCheckable() bool {
 	rv, err := qtrt.Qtcc3(1736830991, "_ZNK15QAbstractButton11isCheckableEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:94
@@ -176,8 +176,8 @@ func (this *QAbstractButton) IsCheckable() bool {
 func (this *QAbstractButton) IsChecked() bool {
 	rv, err := qtrt.Qtcc3(3862269578, "_ZNK15QAbstractButton9isCheckedEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:96
@@ -190,7 +190,7 @@ func (this *QAbstractButton) IsChecked() bool {
 func (this *QAbstractButton) SetDown(arg0 bool) {
 	rv, err := qtrt.Qtcc3(2815823766, "_ZN15QAbstractButton7setDownEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:97
@@ -203,8 +203,8 @@ func (this *QAbstractButton) SetDown(arg0 bool) {
 func (this *QAbstractButton) IsDown() bool {
 	rv, err := qtrt.Qtcc3(1977163016, "_ZNK15QAbstractButton6isDownEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:99
@@ -217,7 +217,7 @@ func (this *QAbstractButton) IsDown() bool {
 func (this *QAbstractButton) SetAutoRepeat(arg0 bool) {
 	rv, err := qtrt.Qtcc3(1398880692, "_ZN15QAbstractButton13setAutoRepeatEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:100
@@ -230,8 +230,8 @@ func (this *QAbstractButton) SetAutoRepeat(arg0 bool) {
 func (this *QAbstractButton) AutoRepeat() bool {
 	rv, err := qtrt.Qtcc3(3492544815, "_ZNK15QAbstractButton10autoRepeatEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:102
@@ -244,7 +244,7 @@ func (this *QAbstractButton) AutoRepeat() bool {
 func (this *QAbstractButton) SetAutoRepeatDelay(arg0 int) {
 	rv, err := qtrt.Qtcc3(2923678386, "_ZN15QAbstractButton18setAutoRepeatDelayEi", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:103
@@ -257,8 +257,8 @@ func (this *QAbstractButton) SetAutoRepeatDelay(arg0 int) {
 func (this *QAbstractButton) AutoRepeatDelay() int {
 	rv, err := qtrt.Qtcc3(4206853868, "_ZNK15QAbstractButton15autoRepeatDelayEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:105
@@ -271,7 +271,7 @@ func (this *QAbstractButton) AutoRepeatDelay() int {
 func (this *QAbstractButton) SetAutoRepeatInterval(arg0 int) {
 	rv, err := qtrt.Qtcc3(477848196, "_ZN15QAbstractButton21setAutoRepeatIntervalEi", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:106
@@ -284,8 +284,8 @@ func (this *QAbstractButton) SetAutoRepeatInterval(arg0 int) {
 func (this *QAbstractButton) AutoRepeatInterval() int {
 	rv, err := qtrt.Qtcc3(94216004, "_ZNK15QAbstractButton18autoRepeatIntervalEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:108
@@ -298,7 +298,7 @@ func (this *QAbstractButton) AutoRepeatInterval() int {
 func (this *QAbstractButton) SetAutoExclusive(arg0 bool) {
 	rv, err := qtrt.Qtcc3(3712112795, "_ZN15QAbstractButton16setAutoExclusiveEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:109
@@ -311,8 +311,8 @@ func (this *QAbstractButton) SetAutoExclusive(arg0 bool) {
 func (this *QAbstractButton) AutoExclusive() bool {
 	rv, err := qtrt.Qtcc3(3776291618, "_ZNK15QAbstractButton13autoExclusiveEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:119
@@ -325,7 +325,7 @@ func (this *QAbstractButton) AutoExclusive() bool {
 func (this *QAbstractButton) Toggle() {
 	rv, err := qtrt.Qtcc3(3222906074, "_ZN15QAbstractButton6toggleEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:120
@@ -338,7 +338,7 @@ func (this *QAbstractButton) Toggle() {
 func (this *QAbstractButton) SetChecked(arg0 bool) {
 	rv, err := qtrt.Qtcc3(1138771998, "_ZN15QAbstractButton10setCheckedEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:123
@@ -351,7 +351,7 @@ func (this *QAbstractButton) SetChecked(arg0 bool) {
 func (this *QAbstractButton) Pressed() {
 	rv, err := qtrt.Qtcc3(2025725746, "_ZN15QAbstractButton7pressedEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:124
@@ -364,7 +364,7 @@ func (this *QAbstractButton) Pressed() {
 func (this *QAbstractButton) Released() {
 	rv, err := qtrt.Qtcc3(868254391, "_ZN15QAbstractButton8releasedEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:125
@@ -377,7 +377,7 @@ func (this *QAbstractButton) Released() {
 func (this *QAbstractButton) Clicked(checked bool) {
 	rv, err := qtrt.Qtcc3(184427086, "_ZN15QAbstractButton7clickedEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&checked))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:125
@@ -392,7 +392,7 @@ func (this *QAbstractButton) Clickedp() {
 	checked := false
 	rv, err := qtrt.Qtcc3(184427086, "_ZN15QAbstractButton7clickedEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&checked))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qabstractbutton.h:126
@@ -405,12 +405,12 @@ func (this *QAbstractButton) Clickedp() {
 func (this *QAbstractButton) Toggled(checked bool) {
 	rv, err := qtrt.Qtcc3(895414094, "_ZN15QAbstractButton7toggledEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&checked))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 func DeleteQAbstractButton(this *QAbstractButton) {
 	rv, err := qtrt.Qtcc3(1663717769, "_ZN15QAbstractButtonD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -418,7 +418,7 @@ func DeleteQAbstractButton(this *QAbstractButton) {
 
 //  keep block begin
 
-func init_unused_10171() {
+func init_unused_10179() {
 	if false {
 		reflect.TypeOf(123)
 	}

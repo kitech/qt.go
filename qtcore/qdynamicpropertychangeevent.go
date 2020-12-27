@@ -59,7 +59,7 @@ func (*QDynamicPropertyChangeEvent) Fromptr(cthis Voidptr) *QDynamicPropertyChan
 
 func DeleteQDynamicPropertyChangeEvent(this *QDynamicPropertyChangeEvent) {
 	rv, err := qtrt.Qtcc3(3558902021, "_ZN27QDynamicPropertyChangeEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 

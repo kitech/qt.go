@@ -68,7 +68,7 @@ func NewQPen() *QPen {
 	cthis := qtrt.Malloc(8)
 	rv, err := qtrt.Qtcc3(46253105, "_ZN4QPenC2Ev", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, Voidptr(&cthis))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QPenFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQPen)
 	return gothis
@@ -76,7 +76,7 @@ func NewQPen() *QPen {
 
 func DeleteQPen(this *QPen) {
 	rv, err := qtrt.Qtcc3(2669083784, "_ZN4QPenD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -84,7 +84,7 @@ func DeleteQPen(this *QPen) {
 
 //  keep block begin
 
-func init_unused_10145() {
+func init_unused_10153() {
 	if false {
 		reflect.TypeOf(123)
 	}

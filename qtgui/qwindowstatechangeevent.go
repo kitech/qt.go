@@ -60,7 +60,7 @@ func (*QWindowStateChangeEvent) Fromptr(cthis Voidptr) *QWindowStateChangeEvent 
 
 func DeleteQWindowStateChangeEvent(this *QWindowStateChangeEvent) {
 	rv, err := qtrt.Qtcc3(3837143262, "_ZN23QWindowStateChangeEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -68,7 +68,7 @@ func DeleteQWindowStateChangeEvent(this *QWindowStateChangeEvent) {
 
 //  keep block begin
 
-func init_unused_10123() {
+func init_unused_10131() {
 	if false {
 		reflect.TypeOf(123)
 	}

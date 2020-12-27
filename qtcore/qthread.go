@@ -57,7 +57,7 @@ func (*QThread) Fromptr(cthis Voidptr) *QThread {
 
 func DeleteQThread(this *QThread) {
 	rv, err := qtrt.Qtcc3(2923436468, "_ZN7QThreadD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -103,7 +103,7 @@ func QThread_PriorityItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10055() {
+func init_unused_10063() {
 	if false {
 		reflect.TypeOf(123)
 	}

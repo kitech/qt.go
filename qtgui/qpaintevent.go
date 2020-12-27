@@ -58,7 +58,7 @@ func (*QPaintEvent) Fromptr(cthis Voidptr) *QPaintEvent {
 
 func DeleteQPaintEvent(this *QPaintEvent) {
 	rv, err := qtrt.Qtcc3(1387382698, "_ZN11QPaintEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -66,7 +66,7 @@ func DeleteQPaintEvent(this *QPaintEvent) {
 
 //  keep block begin
 
-func init_unused_10077() {
+func init_unused_10085() {
 	if false {
 		reflect.TypeOf(123)
 	}

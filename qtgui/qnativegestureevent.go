@@ -58,7 +58,7 @@ func (*QNativeGestureEvent) Fromptr(cthis Voidptr) *QNativeGestureEvent {
 
 func DeleteQNativeGestureEvent(this *QNativeGestureEvent) {
 	rv, err := qtrt.Qtcc3(1178069565, "_ZN19QNativeGestureEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -66,7 +66,7 @@ func DeleteQNativeGestureEvent(this *QNativeGestureEvent) {
 
 //  keep block begin
 
-func init_unused_10071() {
+func init_unused_10079() {
 	if false {
 		reflect.TypeOf(123)
 	}

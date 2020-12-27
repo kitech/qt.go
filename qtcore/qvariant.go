@@ -67,15 +67,714 @@ func NewQVariant() *QVariant {
 	cthis := qtrt.Malloc(16)
 	rv, err := qtrt.Qtcc3(93067653, "_ZN8QVariantC2Ev", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, Voidptr(&cthis))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QVariantFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQVariant)
 	return gothis
 }
 
+// /usr/include/qt/QtCore/qvariant.h:210
+// index:1
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(QVariant::Type)
+
+/*
+ */
+func (*QVariant) NewForInherit1(type_ int) *QVariant {
+	return NewQVariant1(type_)
+}
+func NewQVariant1(type_ int) *QVariant {
+	cthis := qtrt.Malloc(16)
+	rv, err := qtrt.Qtcc3(3094501539, "_ZN8QVariantC2ENS_4TypeE", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&type_))
+	qtrt.ErrPrint3(err, rv)
+	gothis := QVariantFromptr(cthis)
+	qtrt.SetFinalizer(gothis, DeleteQVariant)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qvariant.h:211
+// index:2
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(int, const void *)
+
+/*
+ */
+func (*QVariant) NewForInherit2(typeId int, copy unsafe.Pointer /*666*/) *QVariant {
+	return NewQVariant2(typeId, copy)
+}
+func NewQVariant2(typeId int, copy unsafe.Pointer /*666*/) *QVariant {
+	cthis := qtrt.Malloc(16)
+	rv, err := qtrt.Qtcc3(2845593041, "_ZN8QVariantC2EiPKv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&typeId), Voidptr(&copy))
+	qtrt.ErrPrint3(err, rv)
+	gothis := QVariantFromptr(cthis)
+	qtrt.SetFinalizer(gothis, DeleteQVariant)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qvariant.h:212
+// index:3
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(int, const void *, uint)
+
+/*
+ */
+func (*QVariant) NewForInherit3(typeId int, copy unsafe.Pointer /*666*/, flags uint) *QVariant {
+	return NewQVariant3(typeId, copy, flags)
+}
+func NewQVariant3(typeId int, copy unsafe.Pointer /*666*/, flags uint) *QVariant {
+	cthis := qtrt.Malloc(16)
+	rv, err := qtrt.Qtcc3(2383944132, "_ZN8QVariantC2EiPKvj", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&typeId), Voidptr(&copy), Voidptr(&flags))
+	qtrt.ErrPrint3(err, rv)
+	gothis := QVariantFromptr(cthis)
+	qtrt.SetFinalizer(gothis, DeleteQVariant)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qvariant.h:219
+// index:4
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(int)
+
+/*
+ */
+func (*QVariant) NewForInherit4(i int) *QVariant {
+	return NewQVariant4(i)
+}
+func NewQVariant4(i int) *QVariant {
+	cthis := qtrt.Malloc(16)
+	rv, err := qtrt.Qtcc3(2290357360, "_ZN8QVariantC2Ei", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_INT, Voidptr(&cthis), Voidptr(&i))
+	qtrt.ErrPrint3(err, rv)
+	gothis := QVariantFromptr(cthis)
+	qtrt.SetFinalizer(gothis, DeleteQVariant)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qvariant.h:220
+// index:5
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(uint)
+
+/*
+ */
+func (*QVariant) NewForInherit5(ui uint) *QVariant {
+	return NewQVariant5(ui)
+}
+func NewQVariant5(ui uint) *QVariant {
+	cthis := qtrt.Malloc(16)
+	rv, err := qtrt.Qtcc3(294471114, "_ZN8QVariantC2Ej", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&ui))
+	qtrt.ErrPrint3(err, rv)
+	gothis := QVariantFromptr(cthis)
+	qtrt.SetFinalizer(gothis, DeleteQVariant)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qvariant.h:221
+// index:6
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(qlonglong)
+
+/*
+ */
+func (*QVariant) NewForInherit6(ll int64) *QVariant {
+	return NewQVariant6(ll)
+}
+func NewQVariant6(ll int64) *QVariant {
+	cthis := qtrt.Malloc(16)
+	rv, err := qtrt.Qtcc3(3795072130, "_ZN8QVariantC2Ex", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&ll))
+	qtrt.ErrPrint3(err, rv)
+	gothis := QVariantFromptr(cthis)
+	qtrt.SetFinalizer(gothis, DeleteQVariant)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qvariant.h:222
+// index:7
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(qulonglong)
+
+/*
+ */
+func (*QVariant) NewForInherit7(ull uint64) *QVariant {
+	return NewQVariant7(ull)
+}
+func NewQVariant7(ull uint64) *QVariant {
+	cthis := qtrt.Malloc(16)
+	rv, err := qtrt.Qtcc3(2503148564, "_ZN8QVariantC2Ey", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&ull))
+	qtrt.ErrPrint3(err, rv)
+	gothis := QVariantFromptr(cthis)
+	qtrt.SetFinalizer(gothis, DeleteQVariant)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qvariant.h:223
+// index:8
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(bool)
+
+/*
+ */
+func (*QVariant) NewForInherit8(b bool) *QVariant {
+	return NewQVariant8(b)
+}
+func NewQVariant8(b bool) *QVariant {
+	cthis := qtrt.Malloc(16)
+	rv, err := qtrt.Qtcc3(525782520, "_ZN8QVariantC2Eb", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&b))
+	qtrt.ErrPrint3(err, rv)
+	gothis := QVariantFromptr(cthis)
+	qtrt.SetFinalizer(gothis, DeleteQVariant)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qvariant.h:224
+// index:9
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(double)
+
+/*
+ */
+func (*QVariant) NewForInherit9(d float64) *QVariant {
+	return NewQVariant9(d)
+}
+func NewQVariant9(d float64) *QVariant {
+	cthis := qtrt.Malloc(16)
+	rv, err := qtrt.Qtcc3(4130695373, "_ZN8QVariantC2Ed", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_DOUBLE, Voidptr(&cthis), Voidptr(&d))
+	qtrt.ErrPrint3(err, rv)
+	gothis := QVariantFromptr(cthis)
+	qtrt.SetFinalizer(gothis, DeleteQVariant)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qvariant.h:225
+// index:10
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(float)
+
+/*
+ */
+func (*QVariant) NewForInherit10(f float32) *QVariant {
+	return NewQVariant10(f)
+}
+func NewQVariant10(f float32) *QVariant {
+	cthis := qtrt.Malloc(16)
+	rv, err := qtrt.Qtcc3(406522337, "_ZN8QVariantC2Ef", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_FLOAT, Voidptr(&cthis), Voidptr(&f))
+	qtrt.ErrPrint3(err, rv)
+	gothis := QVariantFromptr(cthis)
+	qtrt.SetFinalizer(gothis, DeleteQVariant)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qvariant.h:227
+// index:11
+// Public Visibility=Default Availability=Available
+// [-2] void QVariant(const char *)
+
+/*
+ */
+func (*QVariant) NewForInherit11(str string) *QVariant {
+	return NewQVariant11(str)
+}
+func NewQVariant11(str string) *QVariant {
+	var convArg0 = qtrt.CStringRef(&str)
+	cthis := qtrt.Malloc(16)
+	rv, err := qtrt.Qtcc3(2561691587, "_ZN8QVariantC2EPKc", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
+	qtrt.ErrPrint3(err, rv)
+	gothis := QVariantFromptr(cthis)
+	qtrt.SetFinalizer(gothis, DeleteQVariant)
+	return gothis
+}
+
+// /usr/include/qt/QtCore/qvariant.h:283
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [4] QVariant::Type type() const
+
+/*
+ */
+func (this *QVariant) Type() int {
+	rv, err := qtrt.Qtcc3(1071828666, "_ZNK8QVariant4typeEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int()
+}
+
+// /usr/include/qt/QtCore/qvariant.h:284
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [4] int userType() const
+
+/*
+ */
+func (this *QVariant) UserType() int {
+	rv, err := qtrt.Qtcc3(2949716066, "_ZNK8QVariant8userTypeEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
+}
+
+// /usr/include/qt/QtCore/qvariant.h:285
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [8] const char * typeName() const
+
+/*
+ */
+func (this *QVariant) TypeName() string {
+	rv, err := qtrt.Qtcc3(330372657, "_ZNK8QVariant8typeNameEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	return qtrt.GoStringI(rv.Uint64())
+}
+
+// /usr/include/qt/QtCore/qvariant.h:290
+// index:0
+// Public inline Extend Visibility=Default Availability=Available
+// [1] bool isValid() const
+
+/*
+ */
+func (this *QVariant) IsValid() bool {
+	rv, err := qtrt.Qtcc3(2204930347, "_ZNK8QVariant7isValidEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
+}
+
+// /usr/include/qt/QtCore/qvariant.h:291
+// index:0
+// Public Extend Visibility=Default Availability=Available
+// [1] bool isNull() const
+
+/*
+ */
+func (this *QVariant) IsNull() bool {
+	rv, err := qtrt.Qtcc3(3898904494, "_ZNK8QVariant6isNullEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
+}
+
+// /usr/include/qt/QtCore/qvariant.h:293
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void clear()
+
+/*
+ */
+func (this *QVariant) Clear() {
+	rv, err := qtrt.Qtcc3(126984843, "_ZN8QVariant5clearEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+}
+
+// /usr/include/qt/QtCore/qvariant.h:295
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void detach()
+
+/*
+ */
+func (this *QVariant) Detach() {
+	rv, err := qtrt.Qtcc3(1393086918, "_ZN8QVariant6detachEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+}
+
+// /usr/include/qt/QtCore/qvariant.h:296
+// index:0
+// Public inline Extend Visibility=Default Availability=Available
+// [1] bool isDetached() const
+
+/*
+ */
+func (this *QVariant) IsDetached() bool {
+	rv, err := qtrt.Qtcc3(3109827116, "_ZNK8QVariant10isDetachedEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
+}
+
+// /usr/include/qt/QtCore/qvariant.h:298
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [4] int toInt(bool *) const
+
+/*
+ */
+func (this *QVariant) ToInt(ok *bool) int {
+	rv, err := qtrt.Qtcc3(323143542, "_ZNK8QVariant5toIntEPb", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&ok))
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
+}
+
+// /usr/include/qt/QtCore/qvariant.h:298
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [4] int toInt(bool *) const
+
+/*
+ */
+func (this *QVariant) ToIntp() int {
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
+	var ok Voidptr
+	rv, err := qtrt.Qtcc3(323143542, "_ZNK8QVariant5toIntEPb", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&ok))
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
+}
+
+// /usr/include/qt/QtCore/qvariant.h:299
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [4] uint toUInt(bool *) const
+
+/*
+ */
+func (this *QVariant) ToUInt(ok *bool) uint {
+	rv, err := qtrt.Qtcc3(208741389, "_ZNK8QVariant6toUIntEPb", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&ok))
+	qtrt.ErrPrint3(err, rv)
+	return rv.Uint() // 222
+}
+
+// /usr/include/qt/QtCore/qvariant.h:299
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [4] uint toUInt(bool *) const
+
+/*
+ */
+func (this *QVariant) ToUIntp() uint {
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
+	var ok Voidptr
+	rv, err := qtrt.Qtcc3(208741389, "_ZNK8QVariant6toUIntEPb", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&ok))
+	qtrt.ErrPrint3(err, rv)
+	return rv.Uint() // 222
+}
+
+// /usr/include/qt/QtCore/qvariant.h:300
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [8] qlonglong toLongLong(bool *) const
+
+/*
+ */
+func (this *QVariant) ToLongLong(ok *bool) int64 {
+	rv, err := qtrt.Qtcc3(1775070467, "_ZNK8QVariant10toLongLongEPb", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&ok))
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int64() // 222
+}
+
+// /usr/include/qt/QtCore/qvariant.h:300
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [8] qlonglong toLongLong(bool *) const
+
+/*
+ */
+func (this *QVariant) ToLongLongp() int64 {
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
+	var ok Voidptr
+	rv, err := qtrt.Qtcc3(1775070467, "_ZNK8QVariant10toLongLongEPb", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&ok))
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int64() // 222
+}
+
+// /usr/include/qt/QtCore/qvariant.h:301
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [8] qulonglong toULongLong(bool *) const
+
+/*
+ */
+func (this *QVariant) ToULongLong(ok *bool) uint64 {
+	rv, err := qtrt.Qtcc3(4247319954, "_ZNK8QVariant11toULongLongEPb", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&ok))
+	qtrt.ErrPrint3(err, rv)
+	return rv.Uint64() // 222
+}
+
+// /usr/include/qt/QtCore/qvariant.h:301
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [8] qulonglong toULongLong(bool *) const
+
+/*
+ */
+func (this *QVariant) ToULongLongp() uint64 {
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
+	var ok Voidptr
+	rv, err := qtrt.Qtcc3(4247319954, "_ZNK8QVariant11toULongLongEPb", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&ok))
+	qtrt.ErrPrint3(err, rv)
+	return rv.Uint64() // 222
+}
+
+// /usr/include/qt/QtCore/qvariant.h:302
+// index:0
+// Public Extend Visibility=Default Availability=Available
+// [1] bool toBool() const
+
+/*
+ */
+func (this *QVariant) ToBool() bool {
+	rv, err := qtrt.Qtcc3(3766730072, "_ZNK8QVariant6toBoolEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
+}
+
+// /usr/include/qt/QtCore/qvariant.h:303
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [8] double toDouble(bool *) const
+
+/*
+ */
+func (this *QVariant) ToDouble(ok *bool) float64 {
+	rv, err := qtrt.Qtcc3(982518782, "_ZNK8QVariant8toDoubleEPb", qtrt.FFITO_DOUBLE,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&ok))
+	qtrt.ErrPrint3(err, rv)
+	return rv.Float64() // 1111
+}
+
+// /usr/include/qt/QtCore/qvariant.h:303
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [8] double toDouble(bool *) const
+
+/*
+ */
+func (this *QVariant) ToDoublep() float64 {
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
+	var ok Voidptr
+	rv, err := qtrt.Qtcc3(982518782, "_ZNK8QVariant8toDoubleEPb", qtrt.FFITO_DOUBLE,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&ok))
+	qtrt.ErrPrint3(err, rv)
+	return rv.Float64() // 1111
+}
+
+// /usr/include/qt/QtCore/qvariant.h:304
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [4] float toFloat(bool *) const
+
+/*
+ */
+func (this *QVariant) ToFloat(ok *bool) float32 {
+	rv, err := qtrt.Qtcc3(2104130602, "_ZNK8QVariant7toFloatEPb", qtrt.FFITO_DOUBLE,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&ok))
+	qtrt.ErrPrint3(err, rv)
+	return rv.Float32() // 1111
+}
+
+// /usr/include/qt/QtCore/qvariant.h:304
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [4] float toFloat(bool *) const
+
+/*
+ */
+func (this *QVariant) ToFloatp() float32 {
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
+	var ok Voidptr
+	rv, err := qtrt.Qtcc3(2104130602, "_ZNK8QVariant7toFloatEPb", qtrt.FFITO_DOUBLE,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&ok))
+	qtrt.ErrPrint3(err, rv)
+	return rv.Float32() // 1111
+}
+
+// /usr/include/qt/QtCore/qvariant.h:305
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [8] qreal toReal(bool *) const
+
+/*
+ */
+func (this *QVariant) ToReal(ok *bool) float64 {
+	rv, err := qtrt.Qtcc3(2923771759, "_ZNK8QVariant6toRealEPb", qtrt.FFITO_DOUBLE,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&ok))
+	qtrt.ErrPrint3(err, rv)
+	return rv.Float64() // 1111
+}
+
+// /usr/include/qt/QtCore/qvariant.h:305
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [8] qreal toReal(bool *) const
+
+/*
+ */
+func (this *QVariant) ToRealp() float64 {
+	// arg: 0, bool *=Pointer, =Invalid, , Invalid
+	var ok Voidptr
+	rv, err := qtrt.Qtcc3(2923771759, "_ZNK8QVariant6toRealEPb", qtrt.FFITO_DOUBLE,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&ok))
+	qtrt.ErrPrint3(err, rv)
+	return rv.Float64() // 1111
+}
+
+// /usr/include/qt/QtCore/qvariant.h:319
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [8] QPoint toPoint() const
+
+/*
+ */
+func (this *QVariant) ToPoint() *QPoint /*123*/ {
+	rv, err := qtrt.Qtcc3(3845935258, "_ZNK8QVariant7toPointEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(8)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 8)
+	rv2 := /*==*/ QPointFromptr(cthis) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPoint)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qvariant.h:320
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [16] QPointF toPointF() const
+
+/*
+ */
+func (this *QVariant) ToPointF() *QPointF /*123*/ {
+	rv, err := qtrt.Qtcc3(512643617, "_ZNK8QVariant8toPointFEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(16)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 16)
+	rv2 := /*==*/ QPointFFromptr(cthis) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQPointF)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qvariant.h:321
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [16] QRect toRect() const
+
+/*
+ */
+func (this *QVariant) ToRect() *QRect /*123*/ {
+	rv, err := qtrt.Qtcc3(4043762194, "_ZNK8QVariant6toRectEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(16)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 16)
+	rv2 := /*==*/ QRectFromptr(cthis) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRect)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qvariant.h:322
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [8] QSize toSize() const
+
+/*
+ */
+func (this *QVariant) ToSize() *QSize /*123*/ {
+	rv, err := qtrt.Qtcc3(3479111140, "_ZNK8QVariant6toSizeEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(8)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 8)
+	rv2 := /*==*/ QSizeFromptr(cthis) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSize)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qvariant.h:323
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [16] QSizeF toSizeF() const
+
+/*
+ */
+func (this *QVariant) ToSizeF() *QSizeF /*123*/ {
+	rv, err := qtrt.Qtcc3(3575902903, "_ZNK8QVariant7toSizeFEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(16)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 16)
+	rv2 := /*==*/ QSizeFFromptr(cthis) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQSizeF)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qvariant.h:324
+// index:0
+// Public Direct Visibility=Default Availability=Available
+// [16] QLine toLine() const
+
+/*
+ */
+func (this *QVariant) ToLine() *QLine /*123*/ {
+	rv, err := qtrt.Qtcc3(3802428770, "_ZNK8QVariant6toLineEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(16)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 16)
+	rv2 := /*==*/ QLineFromptr(cthis) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLine)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qvariant.h:325
+// index:0
+// Public Indirect Visibility=Default Availability=Available
+// [32] QLineF toLineF() const
+
+/*
+ */
+func (this *QVariant) ToLineF() *QLineF /*123*/ {
+	sretobj := qtrt.Malloc(32) // QLineF
+	rv, err := qtrt.Qtcc3(3520409554, "_ZNK8QVariant7toLineFEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := /*==*/ QLineFFromptr(rv.Ptr()) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQLineF)
+	return rv2
+}
+
+// /usr/include/qt/QtCore/qvariant.h:326
+// index:0
+// Public Indirect Visibility=Default Availability=Available
+// [32] QRectF toRectF() const
+
+/*
+ */
+func (this *QVariant) ToRectF() *QRectF /*123*/ {
+	sretobj := qtrt.Malloc(32) // QRectF
+	rv, err := qtrt.Qtcc3(2177105009, "_ZNK8QVariant7toRectFEv", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := /*==*/ QRectFFromptr(rv.Ptr()) // 333
+	qtrt.SetFinalizer(rv2 /*==*/, DeleteQRectF)
+	return rv2
+}
+
 func DeleteQVariant(this *QVariant) {
 	rv, err := qtrt.Qtcc3(2556109116, "_ZN8QVariantD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 

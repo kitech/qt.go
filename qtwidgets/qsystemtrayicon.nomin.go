@@ -51,7 +51,7 @@ func (this *QSystemTrayIcon) SetContextMenu(menu QMenu_ITF /*777 QMenu **/) {
 	}
 	rv, err := qtrt.Qtcc3(2313850013, "_ZN15QSystemTrayIcon14setContextMenuEP5QMenu", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qsystemtrayicon.h:83
@@ -64,15 +64,15 @@ func (this *QSystemTrayIcon) SetContextMenu(menu QMenu_ITF /*777 QMenu **/) {
 func (this *QSystemTrayIcon) ContextMenu() *QMenu /*777 QMenu **/ {
 	rv, err := qtrt.Qtcc3(1821247260, "_ZNK15QSystemTrayIcon11contextMenuEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return /*==*/ QMenuFromptr(Voidptr(uintptr(rv))) // 444
+	qtrt.ErrPrint3(err, rv)
+	return /*==*/ QMenuFromptr(rv.Ptr()) // 444
 }
 
 //  body block end
 
 //  keep block begin
 
-func init_unused_10244() {
+func init_unused_10252() {
 	if false {
 		reflect.TypeOf(123)
 	}

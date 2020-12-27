@@ -75,7 +75,7 @@ func NewQAction(parent qtcore.QObject_ITF /*777 QObject **/) *QAction {
 	cthis := qtrt.Malloc(16)
 	rv, err := qtrt.Qtcc3(218008137, "_ZN7QActionC2EP7QObject", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QActionFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QAction")
 	return gothis
@@ -97,7 +97,7 @@ func NewQActionp() *QAction {
 	cthis := qtrt.Malloc(16)
 	rv, err := qtrt.Qtcc3(218008137, "_ZN7QActionC2EP7QObject", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QActionFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QAction")
 	return gothis
@@ -123,7 +123,7 @@ func NewQAction1(text string, parent qtcore.QObject_ITF /*777 QObject **/) *QAct
 	cthis := qtrt.Malloc(16)
 	rv, err := qtrt.Qtcc3(237064025, "_ZN7QActionC2ERK7QStringP7QObject", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QActionFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QAction")
 	return gothis
@@ -147,7 +147,7 @@ func NewQAction1p(text string) *QAction {
 	cthis := qtrt.Malloc(16)
 	rv, err := qtrt.Qtcc3(237064025, "_ZN7QActionC2ERK7QStringP7QObject", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QActionFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QAction")
 	return gothis
@@ -165,7 +165,7 @@ func (this *QAction) SetText(text string) {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc3(3016118847, "_ZN7QAction7setTextERK7QString", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:107
@@ -179,9 +179,9 @@ func (this *QAction) Text() string {
 	sretobj := qtrt.Malloc(8) // QString
 	rv, err := qtrt.Qtcc3(2317398157, "_ZNK7QAction4textEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(rv.Ptr())
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -199,7 +199,7 @@ func (this *QAction) SetIconText(text string) {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc3(4066431650, "_ZN7QAction11setIconTextERK7QString", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:110
@@ -213,9 +213,9 @@ func (this *QAction) IconText() string {
 	sretobj := qtrt.Malloc(8) // QString
 	rv, err := qtrt.Qtcc3(1536229387, "_ZNK7QAction8iconTextEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(rv.Ptr())
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -233,7 +233,7 @@ func (this *QAction) SetToolTip(tip string) {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc3(1685067186, "_ZN7QAction10setToolTipERK7QString", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:113
@@ -247,9 +247,9 @@ func (this *QAction) ToolTip() string {
 	sretobj := qtrt.Malloc(8) // QString
 	rv, err := qtrt.Qtcc3(3413091492, "_ZNK7QAction7toolTipEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(rv.Ptr())
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -267,7 +267,7 @@ func (this *QAction) SetStatusTip(statusTip string) {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc3(4184243817, "_ZN7QAction12setStatusTipERK7QString", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:116
@@ -281,9 +281,9 @@ func (this *QAction) StatusTip() string {
 	sretobj := qtrt.Malloc(8) // QString
 	rv, err := qtrt.Qtcc3(118887278, "_ZNK7QAction9statusTipEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(rv.Ptr())
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -299,7 +299,7 @@ func (this *QAction) StatusTip() string {
 func (this *QAction) SetCheckable(arg0 bool) {
 	rv, err := qtrt.Qtcc3(1026958800, "_ZN7QAction12setCheckableEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:151
@@ -312,8 +312,8 @@ func (this *QAction) SetCheckable(arg0 bool) {
 func (this *QAction) IsCheckable() bool {
 	rv, err := qtrt.Qtcc3(3197261506, "_ZNK7QAction11isCheckableEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:156
@@ -326,8 +326,8 @@ func (this *QAction) IsCheckable() bool {
 func (this *QAction) IsChecked() bool {
 	rv, err := qtrt.Qtcc3(939532047, "_ZNK7QAction9isCheckedEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:158
@@ -340,8 +340,8 @@ func (this *QAction) IsChecked() bool {
 func (this *QAction) IsEnabled() bool {
 	rv, err := qtrt.Qtcc3(4605092, "_ZNK7QAction9isEnabledEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:160
@@ -354,8 +354,8 @@ func (this *QAction) IsEnabled() bool {
 func (this *QAction) IsVisible() bool {
 	rv, err := qtrt.Qtcc3(3333608945, "_ZNK7QAction9isVisibleEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:187
@@ -368,7 +368,7 @@ func (this *QAction) IsVisible() bool {
 func (this *QAction) Trigger() {
 	rv, err := qtrt.Qtcc3(3248071529, "_ZN7QAction7triggerEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:188
@@ -381,7 +381,7 @@ func (this *QAction) Trigger() {
 func (this *QAction) Hover() {
 	rv, err := qtrt.Qtcc3(606202509, "_ZN7QAction5hoverEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:189
@@ -394,7 +394,7 @@ func (this *QAction) Hover() {
 func (this *QAction) SetChecked(arg0 bool) {
 	rv, err := qtrt.Qtcc3(3927186894, "_ZN7QAction10setCheckedEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:190
@@ -407,7 +407,7 @@ func (this *QAction) SetChecked(arg0 bool) {
 func (this *QAction) Toggle() {
 	rv, err := qtrt.Qtcc3(612007024, "_ZN7QAction6toggleEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:191
@@ -420,7 +420,7 @@ func (this *QAction) Toggle() {
 func (this *QAction) SetEnabled(arg0 bool) {
 	rv, err := qtrt.Qtcc3(3528607333, "_ZN7QAction10setEnabledEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:192
@@ -433,7 +433,7 @@ func (this *QAction) SetEnabled(arg0 bool) {
 func (this *QAction) SetDisabled(b bool) {
 	rv, err := qtrt.Qtcc3(964827636, "_ZN7QAction11setDisabledEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&b))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:193
@@ -446,7 +446,7 @@ func (this *QAction) SetDisabled(b bool) {
 func (this *QAction) SetVisible(arg0 bool) {
 	rv, err := qtrt.Qtcc3(346478384, "_ZN7QAction10setVisibleEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:196
@@ -459,7 +459,7 @@ func (this *QAction) SetVisible(arg0 bool) {
 func (this *QAction) Changed() {
 	rv, err := qtrt.Qtcc3(3892863327, "_ZN7QAction7changedEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:197
@@ -472,7 +472,7 @@ func (this *QAction) Changed() {
 func (this *QAction) Triggered(checked bool) {
 	rv, err := qtrt.Qtcc3(3257549264, "_ZN7QAction9triggeredEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&checked))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:197
@@ -487,7 +487,7 @@ func (this *QAction) Triggeredp() {
 	checked := false
 	rv, err := qtrt.Qtcc3(3257549264, "_ZN7QAction9triggeredEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&checked))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:198
@@ -500,7 +500,7 @@ func (this *QAction) Triggeredp() {
 func (this *QAction) Hovered() {
 	rv, err := qtrt.Qtcc3(2538730, "_ZN7QAction7hoveredEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qaction.h:199
@@ -513,12 +513,12 @@ func (this *QAction) Hovered() {
 func (this *QAction) Toggled(arg0 bool) {
 	rv, err := qtrt.Qtcc3(62506592, "_ZN7QAction7toggledEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 func DeleteQAction(this *QAction) {
 	rv, err := qtrt.Qtcc3(2632439783, "_ZN7QActionD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -604,7 +604,7 @@ func QAction_ActionEventItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10185() {
+func init_unused_10193() {
 	if false {
 		reflect.TypeOf(123)
 	}

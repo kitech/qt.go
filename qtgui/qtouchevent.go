@@ -58,7 +58,7 @@ func (*QTouchEvent) Fromptr(cthis Voidptr) *QTouchEvent {
 
 func DeleteQTouchEvent(this *QTouchEvent) {
 	rv, err := qtrt.Qtcc3(1324337181, "_ZN11QTouchEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -66,7 +66,7 @@ func DeleteQTouchEvent(this *QTouchEvent) {
 
 //  keep block begin
 
-func init_unused_10125() {
+func init_unused_10133() {
 	if false {
 		reflect.TypeOf(123)
 	}

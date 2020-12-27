@@ -64,9 +64,9 @@ func (this *QMetaMethod) MethodSignature() *QByteArray /*123*/ {
 	sretobj := qtrt.Malloc(8) // QByteArray
 	rv, err := qtrt.Qtcc3(2549705587, "_ZNK11QMetaMethod15methodSignatureEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := /*==*/ QByteArrayFromptr(Voidptr(uintptr(rv))) // 333
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := /*==*/ QByteArrayFromptr(rv.Ptr()) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
@@ -82,9 +82,9 @@ func (this *QMetaMethod) Name() *QByteArray /*123*/ {
 	sretobj := qtrt.Malloc(8) // QByteArray
 	rv, err := qtrt.Qtcc3(2756351335, "_ZNK11QMetaMethod4nameEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := /*==*/ QByteArrayFromptr(Voidptr(uintptr(rv))) // 333
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := /*==*/ QByteArrayFromptr(rv.Ptr()) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
@@ -99,8 +99,8 @@ func (this *QMetaMethod) Name() *QByteArray /*123*/ {
 func (this *QMetaMethod) TypeName() string {
 	rv, err := qtrt.Qtcc3(1716461499, "_ZNK11QMetaMethod8typeNameEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.GoStringI(rv)
+	qtrt.ErrPrint3(err, rv)
+	return qtrt.GoStringI(rv.Uint64())
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:62
@@ -113,8 +113,8 @@ func (this *QMetaMethod) TypeName() string {
 func (this *QMetaMethod) ReturnType() int {
 	rv, err := qtrt.Qtcc3(857633469, "_ZNK11QMetaMethod10returnTypeEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:63
@@ -127,8 +127,8 @@ func (this *QMetaMethod) ReturnType() int {
 func (this *QMetaMethod) ParameterCount() int {
 	rv, err := qtrt.Qtcc3(3953292363, "_ZNK11QMetaMethod14parameterCountEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:64
@@ -141,8 +141,8 @@ func (this *QMetaMethod) ParameterCount() int {
 func (this *QMetaMethod) ParameterType(index int) int {
 	rv, err := qtrt.Qtcc3(1621940323, "_ZNK11QMetaMethod13parameterTypeEi", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:65
@@ -155,7 +155,7 @@ func (this *QMetaMethod) ParameterType(index int) int {
 func (this *QMetaMethod) GetParameterTypes(types unsafe.Pointer /*666*/) {
 	rv, err := qtrt.Qtcc3(4219375380, "_ZNK11QMetaMethod17getParameterTypesEPi", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&types))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:68
@@ -168,8 +168,8 @@ func (this *QMetaMethod) GetParameterTypes(types unsafe.Pointer /*666*/) {
 func (this *QMetaMethod) Tag() string {
 	rv, err := qtrt.Qtcc3(2225931727, "_ZNK11QMetaMethod3tagEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.GoStringI(rv)
+	qtrt.ErrPrint3(err, rv)
+	return qtrt.GoStringI(rv.Uint64())
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:70
@@ -182,8 +182,8 @@ func (this *QMetaMethod) Tag() string {
 func (this *QMetaMethod) Access() int {
 	rv, err := qtrt.Qtcc3(1453354162, "_ZNK11QMetaMethod6accessEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return int(rv)
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int()
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:72
@@ -196,8 +196,8 @@ func (this *QMetaMethod) Access() int {
 func (this *QMetaMethod) MethodType() int {
 	rv, err := qtrt.Qtcc3(1406394018, "_ZNK11QMetaMethod10methodTypeEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return int(rv)
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int()
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:74
@@ -210,8 +210,8 @@ func (this *QMetaMethod) MethodType() int {
 func (this *QMetaMethod) Attributes() int {
 	rv, err := qtrt.Qtcc3(4009498167, "_ZNK11QMetaMethod10attributesEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:75
@@ -224,8 +224,8 @@ func (this *QMetaMethod) Attributes() int {
 func (this *QMetaMethod) MethodIndex() int {
 	rv, err := qtrt.Qtcc3(2608998004, "_ZNK11QMetaMethod11methodIndexEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:76
@@ -238,8 +238,8 @@ func (this *QMetaMethod) MethodIndex() int {
 func (this *QMetaMethod) Revision() int {
 	rv, err := qtrt.Qtcc3(245548466, "_ZNK11QMetaMethod8revisionEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtCore/qmetaobject.h:78
@@ -252,13 +252,13 @@ func (this *QMetaMethod) Revision() int {
 func (this *QMetaMethod) EnclosingMetaObject() *QMetaObject /*777 const QMetaObject **/ {
 	rv, err := qtrt.Qtcc3(2832786517, "_ZNK11QMetaMethod19enclosingMetaObjectEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return /*==*/ QMetaObjectFromptr(Voidptr(uintptr(rv))) // 444
+	qtrt.ErrPrint3(err, rv)
+	return /*==*/ QMetaObjectFromptr(rv.Ptr()) // 444
 }
 
 func DeleteQMetaMethod(this *QMetaMethod) {
 	rv, err := qtrt.Qtcc3(3696685076, "_ZN11QMetaMethodD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -367,7 +367,7 @@ func QMetaMethod_AttributesItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10041() {
+func init_unused_10047() {
 	if false {
 		reflect.TypeOf(123)
 	}

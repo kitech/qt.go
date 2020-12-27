@@ -75,7 +75,7 @@ func NewQWidgetItemV2(widget QWidget_ITF /*777 QWidget **/) *QWidgetItemV2 {
 	cthis := qtrt.Malloc(88)
 	rv, err := qtrt.Qtcc3(1692828260, "_ZN13QWidgetItemV2C2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QWidgetItemV2Fromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQWidgetItemV2)
 	return gothis
@@ -91,8 +91,10 @@ func NewQWidgetItemV2(widget QWidget_ITF /*777 QWidget **/) *QWidgetItemV2 {
 func (this *QWidgetItemV2) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc3(3325180898, "_ZNK13QWidgetItemV28sizeHintEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(8)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 8)
+	rv2 := qtcore.QSizeFromptr(cthis) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -107,8 +109,10 @@ func (this *QWidgetItemV2) SizeHint() *qtcore.QSize /*123*/ {
 func (this *QWidgetItemV2) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc3(3287127018, "_ZNK13QWidgetItemV211minimumSizeEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(8)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 8)
+	rv2 := qtcore.QSizeFromptr(cthis) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -123,8 +127,10 @@ func (this *QWidgetItemV2) MinimumSize() *qtcore.QSize /*123*/ {
 func (this *QWidgetItemV2) MaximumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc3(2208492444, "_ZNK13QWidgetItemV211maximumSizeEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(8)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 8)
+	rv2 := qtcore.QSizeFromptr(cthis) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -139,13 +145,13 @@ func (this *QWidgetItemV2) MaximumSize() *qtcore.QSize /*123*/ {
 func (this *QWidgetItemV2) HeightForWidth(width int) int {
 	rv, err := qtrt.Qtcc3(4230616517, "_ZNK13QWidgetItemV214heightForWidthEi", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&width))
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 func DeleteQWidgetItemV2(this *QWidgetItemV2) {
 	rv, err := qtrt.Qtcc3(1368758239, "_ZN13QWidgetItemV2D2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -180,7 +186,7 @@ func QWidgetItemV2_ItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10195() {
+func init_unused_10203() {
 	if false {
 		reflect.TypeOf(123)
 	}

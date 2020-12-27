@@ -58,7 +58,7 @@ func (*QHelpEvent) Fromptr(cthis Voidptr) *QHelpEvent {
 
 func DeleteQHelpEvent(this *QHelpEvent) {
 	rv, err := qtrt.Qtcc3(2446753538, "_ZN10QHelpEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -66,7 +66,7 @@ func DeleteQHelpEvent(this *QHelpEvent) {
 
 //  keep block begin
 
-func init_unused_10109() {
+func init_unused_10117() {
 	if false {
 		reflect.TypeOf(123)
 	}

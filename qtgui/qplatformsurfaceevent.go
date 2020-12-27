@@ -58,7 +58,7 @@ func (*QPlatformSurfaceEvent) Fromptr(cthis Voidptr) *QPlatformSurfaceEvent {
 
 func DeleteQPlatformSurfaceEvent(this *QPlatformSurfaceEvent) {
 	rv, err := qtrt.Qtcc3(2664255028, "_ZN21QPlatformSurfaceEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -93,7 +93,7 @@ func QPlatformSurfaceEvent_SurfaceEventTypeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10083() {
+func init_unused_10091() {
 	if false {
 		reflect.TypeOf(123)
 	}

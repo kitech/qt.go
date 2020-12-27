@@ -75,7 +75,7 @@ func NewQFrame(parent QWidget_ITF /*777 QWidget **/, f int) *QFrame {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(3925201311, "_ZN6QFrameC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&f))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QFrameFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QFrame")
 	return gothis
@@ -99,7 +99,7 @@ func NewQFramep() *QFrame {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(3925201311, "_ZN6QFrameC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&f))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QFrameFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QFrame")
 	return gothis
@@ -125,7 +125,7 @@ func NewQFramep1(parent QWidget_ITF /*777 QWidget **/) *QFrame {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(3925201311, "_ZN6QFrameC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&f))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QFrameFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QFrame")
 	return gothis
@@ -141,8 +141,8 @@ func NewQFramep1(parent QWidget_ITF /*777 QWidget **/) *QFrame {
 func (this *QFrame) FrameStyle() int {
 	rv, err := qtrt.Qtcc3(226051958, "_ZNK6QFrame10frameStyleEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:68
@@ -155,7 +155,7 @@ func (this *QFrame) FrameStyle() int {
 func (this *QFrame) SetFrameStyle(arg0 int) {
 	rv, err := qtrt.Qtcc3(1788913065, "_ZN6QFrame13setFrameStyleEi", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:70
@@ -168,8 +168,8 @@ func (this *QFrame) SetFrameStyle(arg0 int) {
 func (this *QFrame) FrameWidth() int {
 	rv, err := qtrt.Qtcc3(1132186928, "_ZNK6QFrame10frameWidthEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtWidgets/qframe.h:72
@@ -182,15 +182,17 @@ func (this *QFrame) FrameWidth() int {
 func (this *QFrame) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc3(2037293193, "_ZNK6QFrame8sizeHintEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(8)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 8)
+	rv2 := qtcore.QSizeFromptr(cthis) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
 
 func DeleteQFrame(this *QFrame) {
 	rv, err := qtrt.Qtcc3(1356824937, "_ZN6QFrameD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -276,7 +278,7 @@ func QFrame_StyleMaskItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10179() {
+func init_unused_10187() {
 	if false {
 		reflect.TypeOf(123)
 	}

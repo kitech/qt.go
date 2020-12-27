@@ -59,7 +59,7 @@ func (*QGraphicsItem) Fromptr(cthis Voidptr) *QGraphicsItem {
 
 func DeleteQGraphicsItem(this *QGraphicsItem) {
 	rv, err := qtrt.Qtcc3(3272780784, "_ZN13QGraphicsItemD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -484,7 +484,7 @@ func QGraphicsItem_ExtensionItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10213() {
+func init_unused_10221() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -67,9 +67,9 @@ func (this *QFileOpenEvent) File() string {
 	sretobj := qtrt.Malloc(8) // QString
 	rv, err := qtrt.Qtcc3(1192897722, "_ZNK14QFileOpenEvent4fileEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := qtcore.QStringFromptr(Voidptr(uintptr(rv)))
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := qtcore.QStringFromptr(rv.Ptr())
 	rv3 := rv2.ToUtf8().Data()
 	qtcore.DeleteQString(rv2)
 	return rv3
@@ -77,7 +77,7 @@ func (this *QFileOpenEvent) File() string {
 
 func DeleteQFileOpenEvent(this *QFileOpenEvent) {
 	rv, err := qtrt.Qtcc3(3021811242, "_ZN14QFileOpenEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -85,7 +85,7 @@ func DeleteQFileOpenEvent(this *QFileOpenEvent) {
 
 //  keep block begin
 
-func init_unused_10117() {
+func init_unused_10125() {
 	if false {
 		reflect.TypeOf(123)
 	}

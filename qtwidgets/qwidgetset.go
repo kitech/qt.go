@@ -25,7 +25,7 @@ import "github.com/kitech/qt.go/qtgui"
 
 //  keep block begin
 
-func init_unused_10337() {
+func init_unused_10345() {
 	if false {
 		reflect.TypeOf(123)
 	}

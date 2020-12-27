@@ -58,7 +58,7 @@ func (*QMoveEvent) Fromptr(cthis Voidptr) *QMoveEvent {
 
 func DeleteQMoveEvent(this *QMoveEvent) {
 	rv, err := qtrt.Qtcc3(3943756435, "_ZN10QMoveEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -66,7 +66,7 @@ func DeleteQMoveEvent(this *QMoveEvent) {
 
 //  keep block begin
 
-func init_unused_10079() {
+func init_unused_10087() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -1,7 +1,7 @@
 package qtcore
 
-// /usr/include/qt/QtCore/qobjectdefs.h
-// #include <qobjectdefs.h>
+// /usr/include/qt/QtCore/qline.h
+// #include <qline.h>
 // #include <QtCore>
 
 //  header block end
@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 0
+// extern C begin: 6
 */
 // import "C"
 import "unsafe"
@@ -34,27 +34,27 @@ import "github.com/kitech/qt.go/qtrt"
 /*
  */
 // size 16
-type QGenericArgument struct {
+type QLine struct {
 	*qtrt.CObject
 }
-type QGenericArgument_ITF interface {
-	QGenericArgument_PTR() *QGenericArgument
+type QLine_ITF interface {
+	QLine_PTR() *QLine
 }
 
-func (ptr *QGenericArgument) QGenericArgument_PTR() *QGenericArgument { return ptr }
+func (ptr *QLine) QLine_PTR() *QLine { return ptr }
 
 // ignore GetCthis for 0 base
 // ignore SetCthis for 0 base
 // ignore GetCthis for 0 base
-func QGenericArgumentFromptr(cthis Voidptr) *QGenericArgument {
-	return &QGenericArgument{&qtrt.CObject{cthis}}
+func QLineFromptr(cthis Voidptr) *QLine {
+	return &QLine{&qtrt.CObject{cthis}}
 }
-func (*QGenericArgument) Fromptr(cthis Voidptr) *QGenericArgument {
-	return QGenericArgumentFromptr(cthis)
+func (*QLine) Fromptr(cthis Voidptr) *QLine {
+	return QLineFromptr(cthis)
 }
 
-func DeleteQGenericArgument(this *QGenericArgument) {
-	rv, err := qtrt.Qtcc3(2610054240, "_ZN16QGenericArgumentD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
+func DeleteQLine(this *QLine) {
+	rv, err := qtrt.Qtcc3(2630803797, "_ZN5QLineD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
@@ -63,7 +63,7 @@ func DeleteQGenericArgument(this *QGenericArgument) {
 
 //  keep block begin
 
-func init_unused_10001() {
+func init_unused_10043() {
 	if false {
 		reflect.TypeOf(123)
 	}

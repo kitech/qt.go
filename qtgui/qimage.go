@@ -70,7 +70,7 @@ func NewQImage() *QImage {
 	cthis := qtrt.Malloc(32)
 	rv, err := qtrt.Qtcc3(380729056, "_ZN6QImageC2Ev", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, Voidptr(&cthis))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QImageFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQImage)
 	return gothis
@@ -94,7 +94,7 @@ func NewQImage1(size qtcore.QSize_ITF, format int) *QImage {
 	cthis := qtrt.Malloc(32)
 	rv, err := qtrt.Qtcc3(2386780666, "_ZN6QImageC2ERK5QSizeNS_6FormatE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&format))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QImageFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQImage)
 	return gothis
@@ -114,7 +114,7 @@ func NewQImage2(width int, height int, format int) *QImage {
 	cthis := qtrt.Malloc(32)
 	rv, err := qtrt.Qtcc3(355905797, "_ZN6QImageC2EiiNS_6FormatE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&width), Voidptr(&height), Voidptr(&format))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QImageFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQImage)
 	return gothis
@@ -122,7 +122,7 @@ func NewQImage2(width int, height int, format int) *QImage {
 
 func DeleteQImage(this *QImage) {
 	rv, err := qtrt.Qtcc3(2338737753, "_ZN6QImageD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -329,7 +329,7 @@ func QImage_FormatItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10139() {
+func init_unused_10147() {
 	if false {
 		reflect.TypeOf(123)
 	}

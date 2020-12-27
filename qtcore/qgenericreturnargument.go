@@ -57,7 +57,7 @@ func (*QGenericReturnArgument) Fromptr(cthis Voidptr) *QGenericReturnArgument {
 
 func DeleteQGenericReturnArgument(this *QGenericReturnArgument) {
 	rv, err := qtrt.Qtcc3(2739045802, "_ZN22QGenericReturnArgumentD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 

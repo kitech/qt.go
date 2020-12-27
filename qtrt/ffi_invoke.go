@@ -101,8 +101,54 @@ import (
 )
 
 //////// TODO seems define as uint64 is better
+// TODO uint64 is not enough size
 type VRetype = uint64 // interface{}
+type RetypeU128 struct {
+	High uint64
+	Low  uint64
+}
+type RetypeF128 struct {
+	High float64
+	Low  float64
+}
 
+func (this *RetypeU128) Old() VRetype {
+	return VRetype(this.High)
+}
+func (this *RetypeU128) Bool() bool {
+	return this.High != 0 || this.Low != 0
+}
+func (this *RetypeU128) Int() int {
+	return int(this.High)
+}
+func (this *RetypeU128) Uint() uint {
+	return uint(this.High)
+}
+func (this *RetypeU128) Int64() int64 {
+	return int64(this.High)
+}
+func (this *RetypeU128) Uint64() uint64 {
+	return uint64(this.High)
+}
+func (this *RetypeU128) Float32() float32 {
+	that := (*RetypeF128)(Voidptr(this))
+	return float32(that.High)
+}
+func (this *RetypeU128) Float64() float64 {
+	that := (*RetypeF128)(Voidptr(this))
+	return that.High
+}
+func (this *RetypeU128) Ptr() Voidptr {
+	return Voidptr(uintptr(this.High))
+}
+func (this *RetypeU128) Addr() Voidptr {
+	return Voidptr(this)
+}
+func (this *RetypeU128) String() string {
+	return fmt.Sprintf("%#v", *this)
+}
+
+/////////////
 var debugFFICall = false
 var qtlibs = map[string]FFILibrary{}
 var allsubmods = map[string]int{"Inline": 1, "Core": 1, "Gui": 1, "Widgets": 1, "Network": 1, "Qml": 1, "Quick": 1, "QuickControls2": 1, "QuickWidgets": 1}
@@ -331,7 +377,7 @@ func Qtcc1(symcrc uint32, symname string, retype byte, args ...interface{}) (VRe
 // args, half is ffi_type**, half is argvals
 // 直接传递类型对象，而非类型常量，不需要再做任何转换
 // Go的slice 的数据指针和C兼容
-func Qtcc3(symcrc uint32, symname string, retype Voidptr, args ...Voidptr) (VRetype, error) {
+func Qtcc3(symcrc uint32, symname string, retype Voidptr, args ...Voidptr) (RetypeU128, error) {
 	addr := getSymAddrRawCached(symcrc, symname)
 	if debugFFICall {
 		log.Println("FFI Call:", symcrc, symname, addr, "retype=", retype, "argc=", len(args)/2)
@@ -347,7 +393,8 @@ func Qtcc3(symcrc uint32, symname string, retype Voidptr, args ...Voidptr) (VRet
 		argtys = (*C.uintptr_t)(Voidptr(&args[0]))
 		argvals = (*C.uintptr_t)(Voidptr(&args[argc]))
 	}
-	var retval C.uint64_t = 0
+	//var retval C.uint64_t = 0
+	var retval RetypeU128
 	var argv = struct {
 		addr    Voidptr
 		retype  Voidptr
@@ -355,12 +402,13 @@ func Qtcc3(symcrc uint32, symname string, retype Voidptr, args ...Voidptr) (VRet
 		argc    C.int
 		argtys  *C.uintptr_t
 		argvals *C.uintptr_t
-	}{addr, retype, &retval, C.int(argc), argtys, argvals}
+	}{addr, retype, (*C.uint64_t)(Voidptr(&retval)), C.int(argc), argtys, argvals}
 	asmcgocall.Asmcc(C.ffi_call_ex3_asmcc, Voidptr(&argv))
 
 	onCtorAlloc(symname)
 
-	return uint64(retval), nil
+	return (retval), nil
+	//return uint64(retval), nil
 }
 
 func getSymAddrRawCached(symcrc uint32, symname string) Voidptr {
@@ -669,6 +717,7 @@ var (
 
 // func KeepMe() {}
 
+// 这是做什么用的
 var ctorAllocStacks = map[string][]uintptr{}
 var ctorAllocStacksMu sync.Mutex
 

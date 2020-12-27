@@ -77,7 +77,7 @@ func NewQTreeView(parent QWidget_ITF /*777 QWidget **/) *QTreeView {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(2330190834, "_ZN9QTreeViewC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QTreeViewFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QTreeView")
 	return gothis
@@ -99,7 +99,7 @@ func NewQTreeViewp() *QTreeView {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(2330190834, "_ZN9QTreeViewC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QTreeViewFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QTreeView")
 	return gothis
@@ -119,7 +119,7 @@ func (this *QTreeView) SetModel(model qtcore.QAbstractItemModel_ITF /*777 QAbstr
 	}
 	rv, err := qtrt.Qtcc3(2108085925, "_ZN9QTreeView8setModelEP18QAbstractItemModel", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtreeview.h:155
@@ -132,7 +132,7 @@ func (this *QTreeView) SetModel(model qtcore.QAbstractItemModel_ITF /*777 QAbstr
 func (this *QTreeView) HideColumn(column int) {
 	rv, err := qtrt.Qtcc3(3246213577, "_ZN9QTreeView10hideColumnEi", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&column))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtreeview.h:156
@@ -145,7 +145,7 @@ func (this *QTreeView) HideColumn(column int) {
 func (this *QTreeView) ShowColumn(column int) {
 	rv, err := qtrt.Qtcc3(128929531, "_ZN9QTreeView10showColumnEi", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&column))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtreeview.h:157
@@ -162,7 +162,7 @@ func (this *QTreeView) Expand(index qtcore.QModelIndex_ITF) {
 	}
 	rv, err := qtrt.Qtcc3(2194613163, "_ZN9QTreeView6expandERK11QModelIndex", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtreeview.h:158
@@ -179,7 +179,7 @@ func (this *QTreeView) Collapse(index qtcore.QModelIndex_ITF) {
 	}
 	rv, err := qtrt.Qtcc3(1002132025, "_ZN9QTreeView8collapseERK11QModelIndex", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtreeview.h:159
@@ -192,12 +192,12 @@ func (this *QTreeView) Collapse(index qtcore.QModelIndex_ITF) {
 func (this *QTreeView) ResizeColumnToContents(column int) {
 	rv, err := qtrt.Qtcc3(3203152354, "_ZN9QTreeView22resizeColumnToContentsEi", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&column))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 func DeleteQTreeView(this *QTreeView) {
 	rv, err := qtrt.Qtcc3(2932882339, "_ZN9QTreeViewD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -205,7 +205,7 @@ func DeleteQTreeView(this *QTreeView) {
 
 //  keep block begin
 
-func init_unused_10249() {
+func init_unused_10257() {
 	if false {
 		reflect.TypeOf(123)
 	}

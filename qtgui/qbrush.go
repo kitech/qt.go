@@ -68,7 +68,7 @@ func NewQBrush() *QBrush {
 	cthis := qtrt.Malloc(8)
 	rv, err := qtrt.Qtcc3(3258578779, "_ZN6QBrushC2Ev", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, Voidptr(&cthis))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QBrushFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQBrush)
 	return gothis
@@ -76,7 +76,7 @@ func NewQBrush() *QBrush {
 
 func DeleteQBrush(this *QBrush) {
 	rv, err := qtrt.Qtcc3(1609486306, "_ZN6QBrushD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -84,7 +84,7 @@ func DeleteQBrush(this *QBrush) {
 
 //  keep block begin
 
-func init_unused_10143() {
+func init_unused_10151() {
 	if false {
 		reflect.TypeOf(123)
 	}

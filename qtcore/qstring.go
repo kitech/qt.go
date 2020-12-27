@@ -63,8 +63,8 @@ func (*QString) Fromptr(cthis Voidptr) *QString {
 func (this *QString) Length() int {
 	rv, err := qtrt.Qtcc3(1867525835, "_ZNK7QString6lengthEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtCore/qstring.h:683
@@ -78,9 +78,9 @@ func (this *QString) ToUtf8() *QByteArray /*123*/ {
 	sretobj := qtrt.Malloc(8) // QByteArray
 	rv, err := qtrt.Qtcc3(637795128, "_ZNKR7QString6toUtf8Ev", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&sretobj), this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := /*==*/ QByteArrayFromptr(Voidptr(uintptr(rv))) // 333
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := /*==*/ QByteArrayFromptr(rv.Ptr()) // 333
 	qtrt.SetFinalizer(rv2 /*==*/, DeleteQByteArray)
 	return rv2
 }
@@ -97,9 +97,9 @@ func (this *QString) FromUtf8(str string, size int) string {
 	sretobj := qtrt.Malloc(8) // QString
 	rv, err := qtrt.Qtcc3(2549669065, "_ZN7QString8fromUtf8EPKci", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, Voidptr(&sretobj), Voidptr(&convArg0), Voidptr(&size))
-	qtrt.ErrPrint2(err, rv)
-	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := /*==*/ QStringFromptr(Voidptr(uintptr(rv)))
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := /*==*/ QStringFromptr(rv.Ptr())
 	rv3 := rv2.ToUtf8().Data()
 	/*==*/ DeleteQString(rv2)
 	return rv3
@@ -124,9 +124,9 @@ func (this *QString) FromUtf8p(str string) string {
 	sretobj := qtrt.Malloc(8) // QString
 	rv, err := qtrt.Qtcc3(2549669065, "_ZN7QString8fromUtf8EPKci", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_INT, Voidptr(&sretobj), Voidptr(&convArg0), Voidptr(&size))
-	qtrt.ErrPrint2(err, rv)
-	rv = qtrt.VRetype(uintptr(sretobj))
-	rv2 := /*==*/ QStringFromptr(Voidptr(uintptr(rv)))
+	qtrt.ErrPrint3(err, rv)
+	rv.High = uint64(uintptr(sretobj))
+	rv2 := /*==*/ QStringFromptr(rv.Ptr())
 	rv3 := rv2.ToUtf8().Data()
 	/*==*/ DeleteQString(rv2)
 	return rv3
@@ -147,7 +147,7 @@ func NewQString(ch string) *QString {
 	cthis := qtrt.Malloc(8)
 	rv, err := qtrt.Qtcc3(2640353187, "_ZN7QStringC2EPKc", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QStringFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQString)
 	return gothis
@@ -155,7 +155,7 @@ func NewQString(ch string) *QString {
 
 func DeleteQString(this *QString) {
 	rv, err := qtrt.Qtcc3(2000556505, "_ZN7QStringD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 

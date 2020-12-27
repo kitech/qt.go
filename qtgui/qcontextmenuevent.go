@@ -58,7 +58,7 @@ func (*QContextMenuEvent) Fromptr(cthis Voidptr) *QContextMenuEvent {
 
 func DeleteQContextMenuEvent(this *QContextMenuEvent) {
 	rv, err := qtrt.Qtcc3(3486689009, "_ZN17QContextMenuEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -98,7 +98,7 @@ func QContextMenuEvent_ReasonItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10095() {
+func init_unused_10103() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -58,7 +58,7 @@ func (*QToolBarChangeEvent) Fromptr(cthis Voidptr) *QToolBarChangeEvent {
 
 func DeleteQToolBarChangeEvent(this *QToolBarChangeEvent) {
 	rv, err := qtrt.Qtcc3(1334881248, "_ZN19QToolBarChangeEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -66,7 +66,7 @@ func DeleteQToolBarChangeEvent(this *QToolBarChangeEvent) {
 
 //  keep block begin
 
-func init_unused_10119() {
+func init_unused_10127() {
 	if false {
 		reflect.TypeOf(123)
 	}

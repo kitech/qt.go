@@ -58,7 +58,7 @@ func (*QFocusEvent) Fromptr(cthis Voidptr) *QFocusEvent {
 
 func DeleteQFocusEvent(this *QFocusEvent) {
 	rv, err := qtrt.Qtcc3(3004894295, "_ZN11QFocusEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -66,7 +66,7 @@ func DeleteQFocusEvent(this *QFocusEvent) {
 
 //  keep block begin
 
-func init_unused_10075() {
+func init_unused_10083() {
 	if false {
 		reflect.TypeOf(123)
 	}

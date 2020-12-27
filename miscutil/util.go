@@ -29,6 +29,11 @@ func ErrPrint2(err error, rv uint64) {
 		log.Output(2, fmt.Sprintf("%v: %v", err, rv))
 	}
 }
+func ErrPrint3(err error, rv interface{}) {
+	if err != nil {
+		log.Output(2, fmt.Sprintf("%v: %v", err, rv))
+	}
+}
 
 func NilPrint(v interface{}, args ...interface{}) interface{} {
 	if v == nil {

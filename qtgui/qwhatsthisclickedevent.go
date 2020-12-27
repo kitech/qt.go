@@ -60,7 +60,7 @@ func (*QWhatsThisClickedEvent) Fromptr(cthis Voidptr) *QWhatsThisClickedEvent {
 
 //  keep block begin
 
-func init_unused_10113() {
+func init_unused_10121() {
 	if false {
 		reflect.TypeOf(123)
 	}

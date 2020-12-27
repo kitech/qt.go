@@ -57,7 +57,7 @@ func (*QSizePolicy) Fromptr(cthis Voidptr) *QSizePolicy {
 
 func DeleteQSizePolicy(this *QSizePolicy) {
 	rv, err := qtrt.Qtcc3(331919931, "_ZN11QSizePolicyD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -246,7 +246,7 @@ func QSizePolicy_ControlTypeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10167() {
+func init_unused_10175() {
 	if false {
 		reflect.TypeOf(123)
 	}

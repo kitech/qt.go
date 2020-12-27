@@ -77,7 +77,7 @@ func NewQStackedWidget(parent QWidget_ITF /*777 QWidget **/) *QStackedWidget {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(4054824524, "_ZN14QStackedWidgetC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QStackedWidgetFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QStackedWidget")
 	return gothis
@@ -99,7 +99,7 @@ func NewQStackedWidgetp() *QStackedWidget {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(4054824524, "_ZN14QStackedWidgetC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QStackedWidgetFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QStackedWidget")
 	return gothis
@@ -119,8 +119,8 @@ func (this *QStackedWidget) AddWidget(w QWidget_ITF /*777 QWidget **/) int {
 	}
 	rv, err := qtrt.Qtcc3(1249653093, "_ZN14QStackedWidget9addWidgetEP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:63
@@ -137,8 +137,8 @@ func (this *QStackedWidget) InsertWidget(index int, w QWidget_ITF /*777 QWidget 
 	}
 	rv, err := qtrt.Qtcc3(2385140436, "_ZN14QStackedWidget12insertWidgetEiP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&index), Voidptr(&convArg1))
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:64
@@ -155,7 +155,7 @@ func (this *QStackedWidget) RemoveWidget(w QWidget_ITF /*777 QWidget **/) {
 	}
 	rv, err := qtrt.Qtcc3(598937263, "_ZN14QStackedWidget12removeWidgetEP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:66
@@ -168,8 +168,8 @@ func (this *QStackedWidget) RemoveWidget(w QWidget_ITF /*777 QWidget **/) {
 func (this *QStackedWidget) CurrentWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.Qtcc3(4210146573, "_ZNK14QStackedWidget13currentWidgetEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return /*==*/ QWidgetFromptr(Voidptr(uintptr(rv))) // 444
+	qtrt.ErrPrint3(err, rv)
+	return /*==*/ QWidgetFromptr(rv.Ptr()) // 444
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:67
@@ -182,8 +182,8 @@ func (this *QStackedWidget) CurrentWidget() *QWidget /*777 QWidget **/ {
 func (this *QStackedWidget) CurrentIndex() int {
 	rv, err := qtrt.Qtcc3(2777648257, "_ZNK14QStackedWidget12currentIndexEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:69
@@ -200,8 +200,8 @@ func (this *QStackedWidget) IndexOf(arg0 QWidget_ITF /*777 QWidget **/) int {
 	}
 	rv, err := qtrt.Qtcc3(2588077492, "_ZNK14QStackedWidget7indexOfEP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:70
@@ -214,8 +214,8 @@ func (this *QStackedWidget) IndexOf(arg0 QWidget_ITF /*777 QWidget **/) int {
 func (this *QStackedWidget) Widget(arg0 int) *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.Qtcc3(137583665, "_ZNK14QStackedWidget6widgetEi", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
-	return /*==*/ QWidgetFromptr(Voidptr(uintptr(rv))) // 444
+	qtrt.ErrPrint3(err, rv)
+	return /*==*/ QWidgetFromptr(rv.Ptr()) // 444
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:71
@@ -228,8 +228,8 @@ func (this *QStackedWidget) Widget(arg0 int) *QWidget /*777 QWidget **/ {
 func (this *QStackedWidget) Count() int {
 	rv, err := qtrt.Qtcc3(3735907962, "_ZNK14QStackedWidget5countEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:74
@@ -242,7 +242,7 @@ func (this *QStackedWidget) Count() int {
 func (this *QStackedWidget) SetCurrentIndex(index int) {
 	rv, err := qtrt.Qtcc3(3030298062, "_ZN14QStackedWidget15setCurrentIndexEi", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:75
@@ -259,7 +259,7 @@ func (this *QStackedWidget) SetCurrentWidget(w QWidget_ITF /*777 QWidget **/) {
 	}
 	rv, err := qtrt.Qtcc3(1926882632, "_ZN14QStackedWidget16setCurrentWidgetEP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:78
@@ -272,7 +272,7 @@ func (this *QStackedWidget) SetCurrentWidget(w QWidget_ITF /*777 QWidget **/) {
 func (this *QStackedWidget) CurrentChanged(arg0 int) {
 	rv, err := qtrt.Qtcc3(3435686077, "_ZN14QStackedWidget14currentChangedEi", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qstackedwidget.h:79
@@ -285,12 +285,12 @@ func (this *QStackedWidget) CurrentChanged(arg0 int) {
 func (this *QStackedWidget) WidgetRemoved(index int) {
 	rv, err := qtrt.Qtcc3(3890011385, "_ZN14QStackedWidget13widgetRemovedEi", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&index))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 func DeleteQStackedWidget(this *QStackedWidget) {
 	rv, err := qtrt.Qtcc3(2840884496, "_ZN14QStackedWidgetD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -298,7 +298,7 @@ func DeleteQStackedWidget(this *QStackedWidget) {
 
 //  keep block begin
 
-func init_unused_10239() {
+func init_unused_10247() {
 	if false {
 		reflect.TypeOf(123)
 	}

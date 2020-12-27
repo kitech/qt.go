@@ -75,7 +75,7 @@ func NewQWidgetItem(w QWidget_ITF /*777 QWidget **/) *QWidgetItem {
 	cthis := qtrt.Malloc(24)
 	rv, err := qtrt.Qtcc3(3510836749, "_ZN11QWidgetItemC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QWidgetItemFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQWidgetItem)
 	return gothis
@@ -91,8 +91,10 @@ func NewQWidgetItem(w QWidget_ITF /*777 QWidget **/) *QWidgetItem {
 func (this *QWidgetItem) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc3(1339409613, "_ZNK11QWidgetItem8sizeHintEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(8)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 8)
+	rv2 := qtcore.QSizeFromptr(cthis) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -107,8 +109,10 @@ func (this *QWidgetItem) SizeHint() *qtcore.QSize /*123*/ {
 func (this *QWidgetItem) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc3(8341184, "_ZNK11QWidgetItem11minimumSizeEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(8)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 8)
+	rv2 := qtcore.QSizeFromptr(cthis) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -123,8 +127,10 @@ func (this *QWidgetItem) MinimumSize() *qtcore.QSize /*123*/ {
 func (this *QWidgetItem) MaximumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc3(1076903606, "_ZNK11QWidgetItem11maximumSizeEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(8)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 8)
+	rv2 := qtcore.QSizeFromptr(cthis) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -139,8 +145,8 @@ func (this *QWidgetItem) MaximumSize() *qtcore.QSize /*123*/ {
 func (this *QWidgetItem) ExpandingDirections() int {
 	rv, err := qtrt.Qtcc3(531281421, "_ZNK11QWidgetItem19expandingDirectionsEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return int(rv)
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int()
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:137
@@ -153,8 +159,8 @@ func (this *QWidgetItem) ExpandingDirections() int {
 func (this *QWidgetItem) IsEmpty() bool {
 	rv, err := qtrt.Qtcc3(3246172656, "_ZNK11QWidgetItem7isEmptyEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:141
@@ -167,8 +173,8 @@ func (this *QWidgetItem) IsEmpty() bool {
 func (this *QWidgetItem) Widget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.Qtcc3(4104848494, "_ZN11QWidgetItem6widgetEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return /*==*/ QWidgetFromptr(Voidptr(uintptr(rv))) // 444
+	qtrt.ErrPrint3(err, rv)
+	return /*==*/ QWidgetFromptr(rv.Ptr()) // 444
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:147
@@ -181,13 +187,13 @@ func (this *QWidgetItem) Widget() *QWidget /*777 QWidget **/ {
 func (this *QWidgetItem) HeightForWidth(arg0 int) int {
 	rv, err := qtrt.Qtcc3(733877506, "_ZNK11QWidgetItem14heightForWidthEi", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
-	return qtrt.Cretval2go("int", rv).(int) // 1111
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int() // 1111
 }
 
 func DeleteQWidgetItem(this *QWidgetItem) {
 	rv, err := qtrt.Qtcc3(3821563056, "_ZN11QWidgetItemD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -195,7 +201,7 @@ func DeleteQWidgetItem(this *QWidgetItem) {
 
 //  keep block begin
 
-func init_unused_10193() {
+func init_unused_10201() {
 	if false {
 		reflect.TypeOf(123)
 	}

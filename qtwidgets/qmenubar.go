@@ -77,7 +77,7 @@ func NewQMenuBar(parent QWidget_ITF /*777 QWidget **/) *QMenuBar {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(4217600900, "_ZN8QMenuBarC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QMenuBarFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QMenuBar")
 	return gothis
@@ -99,7 +99,7 @@ func NewQMenuBarp() *QMenuBar {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(4217600900, "_ZN8QMenuBarC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QMenuBarFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QMenuBar")
 	return gothis
@@ -117,8 +117,8 @@ func (this *QMenuBar) AddAction(text string) *QAction /*777 QAction **/ {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc3(524583219, "_ZN8QMenuBar9addActionERK7QString", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
-	return /*==*/ QActionFromptr(Voidptr(uintptr(rv))) // 444
+	qtrt.ErrPrint3(err, rv)
+	return /*==*/ QActionFromptr(rv.Ptr()) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:96
@@ -135,8 +135,8 @@ func (this *QMenuBar) AddMenu(menu QMenu_ITF /*777 QMenu **/) *QAction /*777 QAc
 	}
 	rv, err := qtrt.Qtcc3(1432639305, "_ZN8QMenuBar7addMenuEP5QMenu", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
-	return /*==*/ QActionFromptr(Voidptr(uintptr(rv))) // 444
+	qtrt.ErrPrint3(err, rv)
+	return /*==*/ QActionFromptr(rv.Ptr()) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:97
@@ -151,8 +151,8 @@ func (this *QMenuBar) AddMenu1(title string) *QMenu /*777 QMenu **/ {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc3(3209398129, "_ZN8QMenuBar7addMenuERK7QString", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
-	return /*==*/ QMenuFromptr(Voidptr(uintptr(rv))) // 444
+	qtrt.ErrPrint3(err, rv)
+	return /*==*/ QMenuFromptr(rv.Ptr()) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:98
@@ -171,8 +171,8 @@ func (this *QMenuBar) AddMenu2(icon qtgui.QIcon_ITF, title string) *QMenu /*777 
 	var convArg1 = tmpArg1.GetCthis()
 	rv, err := qtrt.Qtcc3(3402422444, "_ZN8QMenuBar7addMenuERK5QIconRK7QString", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0), Voidptr(&convArg1))
-	qtrt.ErrPrint2(err, rv)
-	return /*==*/ QMenuFromptr(Voidptr(uintptr(rv))) // 444
+	qtrt.ErrPrint3(err, rv)
+	return /*==*/ QMenuFromptr(rv.Ptr()) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:101
@@ -185,8 +185,8 @@ func (this *QMenuBar) AddMenu2(icon qtgui.QIcon_ITF, title string) *QMenu /*777 
 func (this *QMenuBar) AddSeparator() *QAction /*777 QAction **/ {
 	rv, err := qtrt.Qtcc3(2911490074, "_ZN8QMenuBar12addSeparatorEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return /*==*/ QActionFromptr(Voidptr(uintptr(rv))) // 444
+	qtrt.ErrPrint3(err, rv)
+	return /*==*/ QActionFromptr(rv.Ptr()) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:102
@@ -203,8 +203,8 @@ func (this *QMenuBar) InsertSeparator(before QAction_ITF /*777 QAction **/) *QAc
 	}
 	rv, err := qtrt.Qtcc3(136532056, "_ZN8QMenuBar15insertSeparatorEP7QAction", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
-	return /*==*/ QActionFromptr(Voidptr(uintptr(rv))) // 444
+	qtrt.ErrPrint3(err, rv)
+	return /*==*/ QActionFromptr(rv.Ptr()) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:104
@@ -225,8 +225,8 @@ func (this *QMenuBar) InsertMenu(before QAction_ITF /*777 QAction **/, menu QMen
 	}
 	rv, err := qtrt.Qtcc3(2471833135, "_ZN8QMenuBar10insertMenuEP7QActionP5QMenu", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0), Voidptr(&convArg1))
-	qtrt.ErrPrint2(err, rv)
-	return /*==*/ QActionFromptr(Voidptr(uintptr(rv))) // 444
+	qtrt.ErrPrint3(err, rv)
+	return /*==*/ QActionFromptr(rv.Ptr()) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:106
@@ -239,7 +239,7 @@ func (this *QMenuBar) InsertMenu(before QAction_ITF /*777 QAction **/, menu QMen
 func (this *QMenuBar) Clear() {
 	rv, err := qtrt.Qtcc3(1047224492, "_ZN8QMenuBar5clearEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:132
@@ -252,7 +252,7 @@ func (this *QMenuBar) Clear() {
 func (this *QMenuBar) SetVisible(visible bool) {
 	rv, err := qtrt.Qtcc3(1756387468, "_ZN8QMenuBar10setVisibleEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&visible))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:135
@@ -269,7 +269,7 @@ func (this *QMenuBar) Triggered(action QAction_ITF /*777 QAction **/) {
 	}
 	rv, err := qtrt.Qtcc3(961109853, "_ZN8QMenuBar9triggeredEP7QAction", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmenubar.h:136
@@ -286,12 +286,12 @@ func (this *QMenuBar) Hovered(action QAction_ITF /*777 QAction **/) {
 	}
 	rv, err := qtrt.Qtcc3(3004656425, "_ZN8QMenuBar7hoveredEP7QAction", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 func DeleteQMenuBar(this *QMenuBar) {
 	rv, err := qtrt.Qtcc3(4257493948, "_ZN8QMenuBarD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -299,7 +299,7 @@ func DeleteQMenuBar(this *QMenuBar) {
 
 //  keep block begin
 
-func init_unused_10227() {
+func init_unused_10235() {
 	if false {
 		reflect.TypeOf(123)
 	}

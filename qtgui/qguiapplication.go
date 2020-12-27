@@ -58,7 +58,7 @@ func (*QGuiApplication) Fromptr(cthis Voidptr) *QGuiApplication {
 
 func DeleteQGuiApplication(this *QGuiApplication) {
 	rv, err := qtrt.Qtcc3(2140321792, "_ZN15QGuiApplicationD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -66,7 +66,7 @@ func DeleteQGuiApplication(this *QGuiApplication) {
 
 //  keep block begin
 
-func init_unused_10161() {
+func init_unused_10169() {
 	if false {
 		reflect.TypeOf(123)
 	}

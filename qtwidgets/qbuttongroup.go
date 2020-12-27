@@ -61,7 +61,7 @@ func (*QButtonGroup) Fromptr(cthis Voidptr) *QButtonGroup {
 
 func DeleteQButtonGroup(this *QButtonGroup) {
 	rv, err := qtrt.Qtcc3(788836440, "_ZN12QButtonGroupD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -69,7 +69,7 @@ func DeleteQButtonGroup(this *QButtonGroup) {
 
 //  keep block begin
 
-func init_unused_10205() {
+func init_unused_10213() {
 	if false {
 		reflect.TypeOf(123)
 	}

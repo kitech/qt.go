@@ -71,7 +71,7 @@ func NewQSpacerItem(w int, h int, hData int, vData int) *QSpacerItem {
 	cthis := qtrt.Malloc(40)
 	rv, err := qtrt.Qtcc3(886124047, "_ZN11QSpacerItemC2EiiN11QSizePolicy6PolicyES1_", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&w), Voidptr(&h), Voidptr(&hData), Voidptr(&vData))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QSpacerItemFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQSpacerItem)
 	return gothis
@@ -95,7 +95,7 @@ func NewQSpacerItemp(w int, h int) *QSpacerItem {
 	cthis := qtrt.Malloc(40)
 	rv, err := qtrt.Qtcc3(886124047, "_ZN11QSpacerItemC2EiiN11QSizePolicy6PolicyES1_", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&w), Voidptr(&h), Voidptr(&hData), Voidptr(&vData))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QSpacerItemFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQSpacerItem)
 	return gothis
@@ -117,7 +117,7 @@ func NewQSpacerItemp1(w int, h int, hData int) *QSpacerItem {
 	cthis := qtrt.Malloc(40)
 	rv, err := qtrt.Qtcc3(886124047, "_ZN11QSpacerItemC2EiiN11QSizePolicy6PolicyES1_", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&w), Voidptr(&h), Voidptr(&hData), Voidptr(&vData))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QSpacerItemFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQSpacerItem)
 	return gothis
@@ -133,7 +133,7 @@ func NewQSpacerItemp1(w int, h int, hData int) *QSpacerItem {
 func (this *QSpacerItem) ChangeSize(w int, h int, hData int, vData int) {
 	rv, err := qtrt.Qtcc3(2168887114, "_ZN11QSpacerItem10changeSizeEiiN11QSizePolicy6PolicyES1_", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&w), Voidptr(&h), Voidptr(&hData), Voidptr(&vData))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:105
@@ -150,7 +150,7 @@ func (this *QSpacerItem) ChangeSizep(w int, h int) {
 	vData := 0
 	rv, err := qtrt.Qtcc3(2168887114, "_ZN11QSpacerItem10changeSizeEiiN11QSizePolicy6PolicyES1_", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&w), Voidptr(&h), Voidptr(&hData), Voidptr(&vData))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:105
@@ -165,7 +165,7 @@ func (this *QSpacerItem) ChangeSizep1(w int, h int, hData int) {
 	vData := 0
 	rv, err := qtrt.Qtcc3(2168887114, "_ZN11QSpacerItem10changeSizeEiiN11QSizePolicy6PolicyES1_", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, qtrt.FFITO_INT, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&w), Voidptr(&h), Voidptr(&hData), Voidptr(&vData))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:108
@@ -178,8 +178,10 @@ func (this *QSpacerItem) ChangeSizep1(w int, h int, hData int) {
 func (this *QSpacerItem) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc3(602256895, "_ZNK11QSpacerItem8sizeHintEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(8)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 8)
+	rv2 := qtcore.QSizeFromptr(cthis) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -194,8 +196,10 @@ func (this *QSpacerItem) SizeHint() *qtcore.QSize /*123*/ {
 func (this *QSpacerItem) MinimumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc3(2485939981, "_ZNK11QSpacerItem11minimumSizeEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(8)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 8)
+	rv2 := qtcore.QSizeFromptr(cthis) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -210,8 +214,10 @@ func (this *QSpacerItem) MinimumSize() *qtcore.QSize /*123*/ {
 func (this *QSpacerItem) MaximumSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc3(3563263867, "_ZNK11QSpacerItem11maximumSizeEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(8)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 8)
+	rv2 := qtcore.QSizeFromptr(cthis) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -226,8 +232,8 @@ func (this *QSpacerItem) MaximumSize() *qtcore.QSize /*123*/ {
 func (this *QSpacerItem) ExpandingDirections() int {
 	rv, err := qtrt.Qtcc3(179331885, "_ZNK11QSpacerItem19expandingDirectionsEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return int(rv)
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int()
 }
 
 // /usr/include/qt/QtWidgets/qlayoutitem.h:112
@@ -240,13 +246,13 @@ func (this *QSpacerItem) ExpandingDirections() int {
 func (this *QSpacerItem) IsEmpty() bool {
 	rv, err := qtrt.Qtcc3(4153964196, "_ZNK11QSpacerItem7isEmptyEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 func DeleteQSpacerItem(this *QSpacerItem) {
 	rv, err := qtrt.Qtcc3(2459316865, "_ZN11QSpacerItemD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -254,7 +260,7 @@ func DeleteQSpacerItem(this *QSpacerItem) {
 
 //  keep block begin
 
-func init_unused_10191() {
+func init_unused_10199() {
 	if false {
 		reflect.TypeOf(123)
 	}

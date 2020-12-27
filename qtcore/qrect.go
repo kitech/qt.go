@@ -18,7 +18,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 5
+// extern C begin: 0
 */
 // import "C"
 import "unsafe"
@@ -55,7 +55,7 @@ func (*QRect) Fromptr(cthis Voidptr) *QRect {
 
 func DeleteQRect(this *QRect) {
 	rv, err := qtrt.Qtcc3(3544253908, "_ZN5QRectD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -63,7 +63,7 @@ func DeleteQRect(this *QRect) {
 
 //  keep block begin
 
-func init_unused_10051() {
+func init_unused_10059() {
 	if false {
 		reflect.TypeOf(123)
 	}

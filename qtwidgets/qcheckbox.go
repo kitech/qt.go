@@ -77,7 +77,7 @@ func NewQCheckBox(parent QWidget_ITF /*777 QWidget **/) *QCheckBox {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(421980486, "_ZN9QCheckBoxC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QCheckBoxFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QCheckBox")
 	return gothis
@@ -99,7 +99,7 @@ func NewQCheckBoxp() *QCheckBox {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(421980486, "_ZN9QCheckBoxC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QCheckBoxFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QCheckBox")
 	return gothis
@@ -125,7 +125,7 @@ func NewQCheckBox1(text string, parent QWidget_ITF /*777 QWidget **/) *QCheckBox
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(1488224333, "_ZN9QCheckBoxC2ERK7QStringP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QCheckBoxFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QCheckBox")
 	return gothis
@@ -149,7 +149,7 @@ func NewQCheckBox1p(text string) *QCheckBox {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(1488224333, "_ZN9QCheckBoxC2ERK7QStringP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QCheckBoxFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QCheckBox")
 	return gothis
@@ -165,8 +165,10 @@ func NewQCheckBox1p(text string) *QCheckBox {
 func (this *QCheckBox) SizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc3(539622553, "_ZNK9QCheckBox8sizeHintEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(8)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 8)
+	rv2 := qtcore.QSizeFromptr(cthis) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -181,8 +183,10 @@ func (this *QCheckBox) SizeHint() *qtcore.QSize /*123*/ {
 func (this *QCheckBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc3(1367630296, "_ZNK9QCheckBox15minimumSizeHintEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(8)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 8)
+	rv2 := qtcore.QSizeFromptr(cthis) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -197,7 +201,7 @@ func (this *QCheckBox) MinimumSizeHint() *qtcore.QSize /*123*/ {
 func (this *QCheckBox) SetTristate(y bool) {
 	rv, err := qtrt.Qtcc3(4240076077, "_ZN9QCheckBox11setTristateEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&y))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcheckbox.h:68
@@ -212,7 +216,7 @@ func (this *QCheckBox) SetTristatep() {
 	y := true
 	rv, err := qtrt.Qtcc3(4240076077, "_ZN9QCheckBox11setTristateEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&y))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcheckbox.h:69
@@ -225,8 +229,8 @@ func (this *QCheckBox) SetTristatep() {
 func (this *QCheckBox) IsTristate() bool {
 	rv, err := qtrt.Qtcc3(4236192185, "_ZNK9QCheckBox10isTristateEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 // /usr/include/qt/QtWidgets/qcheckbox.h:71
@@ -239,8 +243,8 @@ func (this *QCheckBox) IsTristate() bool {
 func (this *QCheckBox) CheckState() int {
 	rv, err := qtrt.Qtcc3(713884546, "_ZNK9QCheckBox10checkStateEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return int(rv)
+	qtrt.ErrPrint3(err, rv)
+	return rv.Int()
 }
 
 // /usr/include/qt/QtWidgets/qcheckbox.h:72
@@ -253,7 +257,7 @@ func (this *QCheckBox) CheckState() int {
 func (this *QCheckBox) SetCheckState(state int) {
 	rv, err := qtrt.Qtcc3(847293468, "_ZN9QCheckBox13setCheckStateEN2Qt10CheckStateE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&state))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qcheckbox.h:75
@@ -266,12 +270,12 @@ func (this *QCheckBox) SetCheckState(state int) {
 func (this *QCheckBox) StateChanged(arg0 int) {
 	rv, err := qtrt.Qtcc3(977411577, "_ZN9QCheckBox12stateChangedEi", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_INT, this.Addr(), Voidptr(&arg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 func DeleteQCheckBox(this *QCheckBox) {
 	rv, err := qtrt.Qtcc3(430589288, "_ZN9QCheckBoxD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -279,7 +283,7 @@ func DeleteQCheckBox(this *QCheckBox) {
 
 //  keep block begin
 
-func init_unused_10207() {
+func init_unused_10215() {
 	if false {
 		reflect.TypeOf(123)
 	}

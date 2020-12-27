@@ -19,6 +19,8 @@ import (
 
 type Voidptr = unsafe.Pointer
 
+const IsX64 = unsafe.Sizeof(uintptr(0)) == 8
+
 func test_123() {
 	// var a0 interface{}
 

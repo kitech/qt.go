@@ -55,7 +55,7 @@ func (*QMetaClassInfo) Fromptr(cthis Voidptr) *QMetaClassInfo {
 
 func DeleteQMetaClassInfo(this *QMetaClassInfo) {
 	rv, err := qtrt.Qtcc3(1030872570, "_ZN14QMetaClassInfoD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -63,7 +63,7 @@ func DeleteQMetaClassInfo(this *QMetaClassInfo) {
 
 //  keep block begin
 
-func init_unused_10047() {
+func init_unused_10053() {
 	if false {
 		reflect.TypeOf(123)
 	}

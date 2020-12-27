@@ -68,8 +68,8 @@ func (this *QDesktopServices) OpenUrl(url qtcore.QUrl_ITF) bool {
 	}
 	rv, err := qtrt.Qtcc3(2434727476, "_ZN16QDesktopServices7openUrlERK4QUrl", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 func QDesktopServices_OpenUrl(url qtcore.QUrl_ITF) bool {
 	var nilthis *QDesktopServices
@@ -94,7 +94,7 @@ func (this *QDesktopServices) SetUrlHandler(scheme string, receiver qtcore.QObje
 	var convArg2 = qtrt.CStringRef(&method)
 	rv, err := qtrt.Qtcc3(254877298, "_ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&convArg0), Voidptr(&convArg1), Voidptr(&convArg2))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 func QDesktopServices_SetUrlHandler(scheme string, receiver qtcore.QObject_ITF /*777 QObject **/, method string) {
 	var nilthis *QDesktopServices
@@ -113,7 +113,7 @@ func (this *QDesktopServices) UnsetUrlHandler(scheme string) {
 	var convArg0 = tmpArg0.GetCthis()
 	rv, err := qtrt.Qtcc3(1369796868, "_ZN16QDesktopServices15unsetUrlHandlerERK7QString", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 func QDesktopServices_UnsetUrlHandler(scheme string) {
 	var nilthis *QDesktopServices
@@ -122,7 +122,7 @@ func QDesktopServices_UnsetUrlHandler(scheme string) {
 
 func DeleteQDesktopServices(this *QDesktopServices) {
 	rv, err := qtrt.Qtcc3(1858443276, "_ZN16QDesktopServicesD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -130,7 +130,7 @@ func DeleteQDesktopServices(this *QDesktopServices) {
 
 //  keep block begin
 
-func init_unused_10155() {
+func init_unused_10163() {
 	if false {
 		reflect.TypeOf(123)
 	}

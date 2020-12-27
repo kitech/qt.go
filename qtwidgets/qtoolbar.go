@@ -79,7 +79,7 @@ func NewQToolBar(title string, parent QWidget_ITF /*777 QWidget **/) *QToolBar {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(115476381, "_ZN8QToolBarC2ERK7QStringP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QToolBarFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QToolBar")
 	return gothis
@@ -103,7 +103,7 @@ func NewQToolBarp(title string) *QToolBar {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(115476381, "_ZN8QToolBarC2ERK7QStringP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&convArg1))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QToolBarFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QToolBar")
 	return gothis
@@ -127,7 +127,7 @@ func NewQToolBar1(parent QWidget_ITF /*777 QWidget **/) *QToolBar {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(2552095711, "_ZN8QToolBarC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QToolBarFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QToolBar")
 	return gothis
@@ -149,7 +149,7 @@ func NewQToolBar1p() *QToolBar {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(2552095711, "_ZN8QToolBarC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QToolBarFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QToolBar")
 	return gothis
@@ -165,7 +165,7 @@ func NewQToolBar1p() *QToolBar {
 func (this *QToolBar) SetMovable(movable bool) {
 	rv, err := qtrt.Qtcc3(2579160314, "_ZN8QToolBar10setMovableEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&movable))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtoolbar.h:77
@@ -178,13 +178,13 @@ func (this *QToolBar) SetMovable(movable bool) {
 func (this *QToolBar) IsMovable() bool {
 	rv, err := qtrt.Qtcc3(1223047420, "_ZNK8QToolBar9isMovableEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return rv != 0
+	qtrt.ErrPrint3(err, rv)
+	return rv.Bool()
 }
 
 func DeleteQToolBar(this *QToolBar) {
 	rv, err := qtrt.Qtcc3(1272080248, "_ZN8QToolBarD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -192,7 +192,7 @@ func DeleteQToolBar(this *QToolBar) {
 
 //  keep block begin
 
-func init_unused_10245() {
+func init_unused_10253() {
 	if false {
 		reflect.TypeOf(123)
 	}

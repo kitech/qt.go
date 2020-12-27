@@ -56,7 +56,7 @@ func (*QSurface) Fromptr(cthis Voidptr) *QSurface {
 
 func DeleteQSurface(this *QSurface) {
 	rv, err := qtrt.Qtcc3(4285993900, "_ZN8QSurfaceD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -138,7 +138,7 @@ func QSurface_SurfaceTypeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10147() {
+func init_unused_10155() {
 	if false {
 		reflect.TypeOf(123)
 	}

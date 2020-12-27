@@ -71,7 +71,7 @@ func NewQHBoxLayout() *QHBoxLayout {
 	cthis := qtrt.Malloc(32)
 	rv, err := qtrt.Qtcc3(2369781699, "_ZN11QHBoxLayoutC2Ev", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, Voidptr(&cthis))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QHBoxLayoutFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QHBoxLayout")
 	return gothis
@@ -95,7 +95,7 @@ func NewQHBoxLayout1(parent QWidget_ITF /*777 QWidget **/) *QHBoxLayout {
 	cthis := qtrt.Malloc(32)
 	rv, err := qtrt.Qtcc3(2008149469, "_ZN11QHBoxLayoutC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QHBoxLayoutFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QHBoxLayout")
 	return gothis
@@ -103,7 +103,7 @@ func NewQHBoxLayout1(parent QWidget_ITF /*777 QWidget **/) *QHBoxLayout {
 
 func DeleteQHBoxLayout(this *QHBoxLayout) {
 	rv, err := qtrt.Qtcc3(283690874, "_ZN11QHBoxLayoutD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -111,7 +111,7 @@ func DeleteQHBoxLayout(this *QHBoxLayout) {
 
 //  keep block begin
 
-func init_unused_10201() {
+func init_unused_10209() {
 	if false {
 		reflect.TypeOf(123)
 	}

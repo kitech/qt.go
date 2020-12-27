@@ -77,7 +77,7 @@ func NewQToolButton(parent QWidget_ITF /*777 QWidget **/) *QToolButton {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(719486503, "_ZN11QToolButtonC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QToolButtonFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QToolButton")
 	return gothis
@@ -99,7 +99,7 @@ func NewQToolButtonp() *QToolButton {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(719486503, "_ZN11QToolButtonC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QToolButtonFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QToolButton")
 	return gothis
@@ -115,7 +115,7 @@ func NewQToolButtonp() *QToolButton {
 func (this *QToolButton) SetAutoRaise(enable bool) {
 	rv, err := qtrt.Qtcc3(2791407414, "_ZN11QToolButton12setAutoRaiseEb", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&enable))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qtoolbutton.h:106
@@ -132,12 +132,12 @@ func (this *QToolButton) Triggered(arg0 QAction_ITF /*777 QAction **/) {
 	}
 	rv, err := qtrt.Qtcc3(784990465, "_ZN11QToolButton9triggeredEP7QAction", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 func DeleteQToolButton(this *QToolButton) {
 	rv, err := qtrt.Qtcc3(804693516, "_ZN11QToolButtonD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -168,7 +168,7 @@ func QToolButton_ToolButtonPopupModeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10247() {
+func init_unused_10255() {
 	if false {
 		reflect.TypeOf(123)
 	}

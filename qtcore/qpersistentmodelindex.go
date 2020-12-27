@@ -20,7 +20,7 @@ package qtcore
 
 /*
 #include <stdlib.h>
-// extern C begin: 9
+// extern C begin: 12
 */
 // import "C"
 import "unsafe"
@@ -69,7 +69,7 @@ func NewQPersistentModelIndex() *QPersistentModelIndex {
 	cthis := qtrt.Malloc(8)
 	rv, err := qtrt.Qtcc3(4053232108, "_ZN21QPersistentModelIndexC2Ev", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, Voidptr(&cthis))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QPersistentModelIndexFromptr(cthis)
 	qtrt.SetFinalizer(gothis, DeleteQPersistentModelIndex)
 	return gothis
@@ -77,7 +77,7 @@ func NewQPersistentModelIndex() *QPersistentModelIndex {
 
 func DeleteQPersistentModelIndex(this *QPersistentModelIndex) {
 	rv, err := qtrt.Qtcc3(1816154453, "_ZN21QPersistentModelIndexD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 

@@ -58,7 +58,7 @@ func (*QShortcutEvent) Fromptr(cthis Voidptr) *QShortcutEvent {
 
 func DeleteQShortcutEvent(this *QShortcutEvent) {
 	rv, err := qtrt.Qtcc3(4005859061, "_ZN14QShortcutEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -66,7 +66,7 @@ func DeleteQShortcutEvent(this *QShortcutEvent) {
 
 //  keep block begin
 
-func init_unused_10121() {
+func init_unused_10129() {
 	if false {
 		reflect.TypeOf(123)
 	}

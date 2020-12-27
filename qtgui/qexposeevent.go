@@ -58,7 +58,7 @@ func (*QExposeEvent) Fromptr(cthis Voidptr) *QExposeEvent {
 
 func DeleteQExposeEvent(this *QExposeEvent) {
 	rv, err := qtrt.Qtcc3(1889365036, "_ZN12QExposeEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -66,7 +66,7 @@ func DeleteQExposeEvent(this *QExposeEvent) {
 
 //  keep block begin
 
-func init_unused_10081() {
+func init_unused_10089() {
 	if false {
 		reflect.TypeOf(123)
 	}

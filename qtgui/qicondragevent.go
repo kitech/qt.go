@@ -58,7 +58,7 @@ func (*QIconDragEvent) Fromptr(cthis Voidptr) *QIconDragEvent {
 
 func DeleteQIconDragEvent(this *QIconDragEvent) {
 	rv, err := qtrt.Qtcc3(2673315635, "_ZN14QIconDragEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -66,7 +66,7 @@ func DeleteQIconDragEvent(this *QIconDragEvent) {
 
 //  keep block begin
 
-func init_unused_10089() {
+func init_unused_10097() {
 	if false {
 		reflect.TypeOf(123)
 	}

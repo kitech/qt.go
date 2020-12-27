@@ -77,7 +77,7 @@ func NewQMainWindow(parent QWidget_ITF /*777 QWidget **/, flags int) *QMainWindo
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(1132463102, "_ZN11QMainWindowC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&flags))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QMainWindowFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QMainWindow")
 	return gothis
@@ -101,7 +101,7 @@ func NewQMainWindowp() *QMainWindow {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(1132463102, "_ZN11QMainWindowC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&flags))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QMainWindowFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QMainWindow")
 	return gothis
@@ -127,7 +127,7 @@ func NewQMainWindowp1(parent QWidget_ITF /*777 QWidget **/) *QMainWindow {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(1132463102, "_ZN11QMainWindowC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0), Voidptr(&flags))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QMainWindowFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QMainWindow")
 	return gothis
@@ -143,8 +143,10 @@ func NewQMainWindowp1(parent QWidget_ITF /*777 QWidget **/) *QMainWindow {
 func (this *QMainWindow) IconSize() *qtcore.QSize /*123*/ {
 	rv, err := qtrt.Qtcc3(69313091, "_ZNK11QMainWindow8iconSizeEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	rv2 := qtcore.QSizeFromptr(Voidptr(uintptr(rv))) // 333
+	qtrt.ErrPrint3(err, rv)
+	cthis := qtrt.Malloc(8)
+	qtrt.Cmemcpy(cthis, rv.Addr(), 8)
+	rv2 := qtcore.QSizeFromptr(cthis) // 333
 	qtrt.SetFinalizer(rv2, qtcore.DeleteQSize)
 	return rv2
 }
@@ -163,7 +165,7 @@ func (this *QMainWindow) SetIconSize(iconSize qtcore.QSize_ITF) {
 	}
 	rv, err := qtrt.Qtcc3(4268406733, "_ZN11QMainWindow11setIconSizeERK5QSize", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 // /usr/include/qt/QtWidgets/qmainwindow.h:138
@@ -176,8 +178,8 @@ func (this *QMainWindow) SetIconSize(iconSize qtcore.QSize_ITF) {
 func (this *QMainWindow) CentralWidget() *QWidget /*777 QWidget **/ {
 	rv, err := qtrt.Qtcc3(1283551286, "_ZNK11QMainWindow13centralWidgetEv", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
-	return /*==*/ QWidgetFromptr(Voidptr(uintptr(rv))) // 444
+	qtrt.ErrPrint3(err, rv)
+	return /*==*/ QWidgetFromptr(rv.Ptr()) // 444
 }
 
 // /usr/include/qt/QtWidgets/qmainwindow.h:139
@@ -194,12 +196,12 @@ func (this *QMainWindow) SetCentralWidget(widget QWidget_ITF /*777 QWidget **/) 
 	}
 	rv, err := qtrt.Qtcc3(422271864, "_ZN11QMainWindow16setCentralWidgetEP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 }
 
 func DeleteQMainWindow(this *QMainWindow) {
 	rv, err := qtrt.Qtcc3(3330525862, "_ZN11QMainWindowD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -239,7 +241,7 @@ func QMainWindow_DockOptionItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10223() {
+func init_unused_10231() {
 	if false {
 		reflect.TypeOf(123)
 	}

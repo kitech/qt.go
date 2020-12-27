@@ -55,7 +55,7 @@ func (*QRectF) Fromptr(cthis Voidptr) *QRectF {
 
 func DeleteQRectF(this *QRectF) {
 	rv, err := qtrt.Qtcc3(3802840456, "_ZN6QRectFD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -63,7 +63,7 @@ func DeleteQRectF(this *QRectF) {
 
 //  keep block begin
 
-func init_unused_10053() {
+func init_unused_10061() {
 	if false {
 		reflect.TypeOf(123)
 	}

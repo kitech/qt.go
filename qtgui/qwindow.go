@@ -76,7 +76,7 @@ func (*QWindow) Fromptr(cthis Voidptr) *QWindow {
 
 func DeleteQWindow(this *QWindow) {
 	rv, err := qtrt.Qtcc3(3257210118, "_ZN7QWindowD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -136,7 +136,7 @@ func QWindow_AncestorModeItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10151() {
+func init_unused_10159() {
 	if false {
 		reflect.TypeOf(123)
 	}

@@ -56,7 +56,7 @@ func (*QColor) Fromptr(cthis Voidptr) *QColor {
 
 func DeleteQColor(this *QColor) {
 	rv, err := qtrt.Qtcc3(53046149, "_ZN6QColorD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -138,7 +138,7 @@ func QColor_NameFormatItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10057() {
+func init_unused_10065() {
 	if false {
 		reflect.TypeOf(123)
 	}

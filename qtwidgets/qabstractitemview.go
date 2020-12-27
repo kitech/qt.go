@@ -77,7 +77,7 @@ func NewQAbstractItemView(parent QWidget_ITF /*777 QWidget **/) *QAbstractItemVi
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(2582094347, "_ZN17QAbstractItemViewC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QAbstractItemViewFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QAbstractItemView")
 	return gothis
@@ -99,7 +99,7 @@ func NewQAbstractItemViewp() *QAbstractItemView {
 	cthis := qtrt.Malloc(48)
 	rv, err := qtrt.Qtcc3(2582094347, "_ZN17QAbstractItemViewC2EP7QWidget", qtrt.FFITO_POINTER,
 		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, Voidptr(&cthis), Voidptr(&convArg0))
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	gothis := QAbstractItemViewFromptr(cthis)
 	qtrt.ConnectDestroyed(gothis, "QAbstractItemView")
 	return gothis
@@ -107,7 +107,7 @@ func NewQAbstractItemViewp() *QAbstractItemView {
 
 func DeleteQAbstractItemView(this *QAbstractItemView) {
 	rv, err := qtrt.Qtcc3(423019845, "_ZN17QAbstractItemViewD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -382,7 +382,7 @@ func QAbstractItemView_DropIndicatorPositionItemName(val int) string {
 
 //  keep block begin
 
-func init_unused_10183() {
+func init_unused_10191() {
 	if false {
 		reflect.TypeOf(123)
 	}

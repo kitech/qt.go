@@ -58,7 +58,7 @@ func (*QCloseEvent) Fromptr(cthis Voidptr) *QCloseEvent {
 
 func DeleteQCloseEvent(this *QCloseEvent) {
 	rv, err := qtrt.Qtcc3(1300068505, "_ZN11QCloseEventD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
-	qtrt.ErrPrint2(err, rv)
+	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }
 
@@ -66,7 +66,7 @@ func DeleteQCloseEvent(this *QCloseEvent) {
 
 //  keep block begin
 
-func init_unused_10087() {
+func init_unused_10095() {
 	if false {
 		reflect.TypeOf(123)
 	}
