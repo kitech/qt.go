@@ -232,7 +232,7 @@ func (this *QRect) SetHeight(h int) {
 }
 
 func DeleteQRect(this *QRect) {
-	rv, err := qtrt.Qtcc3(3544253908, "_ZN5QRectD2Ev", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
+	rv, err := qtrt.Qtcc3(3544253908, "_ZdlPv", qtrt.FFITO_VOID, qtrt.FFITO_POINTER, this.Addr())
 	qtrt.ErrPrint3(err, rv)
 	//this.SetCthis(nil)
 }

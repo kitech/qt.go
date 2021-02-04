@@ -92,6 +92,53 @@ func (this *QPainter) Device() *QPaintDevice /*777 QPaintDevice **/ {
 	return /*==*/ QPaintDeviceFromptr(rv.Ptr()) // 444
 }
 
+// /usr/include/qt/QtGui/qpainter.h:194
+// index:0
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setPen(const QColor &)
+
+/*
+ */
+func (this *QPainter) SetPen(color QColor_ITF) {
+	var convArg0 Voidptr
+	if color != nil && color.QColor_PTR() != nil {
+		convArg0 = color.QColor_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc3(3639192824, "_ZN8QPainter6setPenERK6QColor", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint3(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpainter.h:195
+// index:1
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setPen(const QPen &)
+
+/*
+ */
+func (this *QPainter) SetPen1(pen QPen_ITF) {
+	var convArg0 Voidptr
+	if pen != nil && pen.QPen_PTR() != nil {
+		convArg0 = pen.QPen_PTR().GetCthis()
+	}
+	rv, err := qtrt.Qtcc3(2622452835, "_ZN8QPainter6setPenERK4QPen", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&convArg0))
+	qtrt.ErrPrint3(err, rv)
+}
+
+// /usr/include/qt/QtGui/qpainter.h:196
+// index:2
+// Public Ignore Visibility=Default Availability=Available
+// [-2] void setPen(Qt::PenStyle)
+
+/*
+ */
+func (this *QPainter) SetPen2(style int) {
+	rv, err := qtrt.Qtcc3(1129551355, "_ZN8QPainter6setPenEN2Qt8PenStyleE", qtrt.FFITO_POINTER,
+		qtrt.FFITO_POINTER, qtrt.FFITO_POINTER, this.Addr(), Voidptr(&style))
+	qtrt.ErrPrint3(err, rv)
+}
+
 // /usr/include/qt/QtGui/qpainter.h:442
 // index:0
 // Public Ignore Visibility=Default Availability=Available

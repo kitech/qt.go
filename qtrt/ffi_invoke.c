@@ -142,6 +142,7 @@ static void cppvm_ffi_closure_tmplfn(ffi_cif *cif, void *ret, void* args[],
     printf("%s:%d: ok1 %p\n", __FILE__, __LINE__, capdata);
 }
 
+// eg. https://www.chiark.greenend.org.uk/doc/libffi-dev/html/Closure-Example.html
 // callback func: void (*)(void* capdata, void**argvals)
 ffi_closure*
 make_cppvm_ffi_closure(ffi_cif* cif, void** closfnaddr, void* capdata,
