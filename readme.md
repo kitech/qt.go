@@ -32,7 +32,7 @@ All platforms should be supported, for now some of them are tested:
 
 ##### requirement
 
-* go 1.9+
+* go 1.9+ (GO111MODULE=off for go 1.16+)
 * libffi
 * dlfcn (windows)
 
@@ -78,7 +78,7 @@ MacOS: `brew install libffi`
         app.Exec()
     }
 
-More complex examples: https://github.com/kitech/qt.go/examples/ https://github.com/qtchina/qt.go.demos/ 
+More examples: https://github.com/kitech/qt.go/examples/ https://github.com/qtchina/qt.go.demos/ 
 
 Go side signal/slot: [syntax document](https://github.com/kitech/qt.go/blob/master/docs/qt_meta_data_mark_syntax_for_go.md) [usage demo](https://github.com/kitech/qt.go/blob/master/qtmeta/tests/meta_data_test_.go)
 
