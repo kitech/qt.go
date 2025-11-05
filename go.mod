@@ -12,8 +12,8 @@ require (
 	github.com/gonuts/dl v0.0.0-20160302100715-9a2e942d3477 // indirect
 	github.com/huandu/xstrings v1.0.0 // indirect
 	github.com/ianlancetaylor/demangle v0.0.0-20200824232613-28f6c0f3b639
-	github.com/kitech/dl v0.0.0-20160302100715-9a2e942d3477
-	github.com/kitech/goplusplus v0.0.0-20171220130708-3b7427a37be0
+	github.com/kitech/dl v0.0.0-20201225001532-be4f4faa4070
+	github.com/kitech/goplusplus v0.0.0-20200219022248-7bdcd4ae9305
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/lytics/base62 v0.0.0-20180122174218-827c93e361de // indirect
 	github.com/petermattis/goid v0.0.0-20180202154549-b0b1615b78e5 // indirect
